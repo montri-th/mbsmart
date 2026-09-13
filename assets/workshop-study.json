@@ -1,0 +1,16 @@
+{
+  "revision":"v09-r3",
+  "status":"PROPOSED COORDINATION STUDY — not as-built, MB/smart approval or engineering certification",
+  "sources":[{"id":"D01","pages":[2,24,25,26,27],"title":"smart SiS/WiW Requirement Summary V3, 1 September 2026"},{"id":"D02","pages":[2,203,207,260],"title":"MB Retail Experience Volume 2, 2023"}],
+  "layoutBasis":"Legacy grid A–B6.5m bay row / B–C7m manoeuvring zone / C–D6.5m row / D–E6m interface. These are grid bands, not approved clearances.",
+  "clearDriveBand":{"xMin":8,"xMax":49.2,"yMin":28.5,"yMax":35.5,"status":"Concept band kept free of model equipment, NOT verified swept path"},
+  "smartBays":[{"id":"SMART-HV","label":"ช่องงานแรงดันสูง · รออนุมัติ","type":"HV","xMin":32,"xMax":36,"yMin":35.5,"yMax":42},{"id":"SMART-ME","label":"ช่องงาน M/E · รออนุมัติ","type":"ME","xMin":36,"xMax":40,"yMin":35.5,"yMax":42}],
+  "bayDimensionsStatus":"Two 4 × 6.5m grid allocations are a planning trial; operational clear width/depth, doors, lifts and safety envelope are NOT approved",
+  "mbPlanningCells":{"xMin":8,"xMax":32,"pitch":4,"rows":[[22,28.5],[35.5,42]],"status":"12 illustrative MB allocation cells, NOT surveyed lift count, committed capacity or permission to convert existing MB bays"},
+  "sharedParts":{"xMin":2.5,"xMax":7.3,"yMin":35.8,"yMax":41.3,"shelfSeparation":"MB and smart distinct labelled shelves; not battery/quarantine storage"},
+  "serviceReception":{"xMin":32,"xMax":36,"yMin":16,"yMax":22,"floorLevel":-0.3,"status":"Legacy service strip approximate; shared reception subject to MAR20/MPS II applicability"},
+  "hvProtection":{"matRating":null,"approvedMatDimensions":null,"approvedBarrierHeight":null,"status":"Mat and barrier represented as placeholders; technical design and access/isolation/rescue procedures require approved HV specialist"},
+  "charger":{"brand":null,"power":null,"status":"RFI: D01 p2 item25 MB/shared vs p25 smart-branded wallbox; generic reserved wallbox only"},
+  "lighting":{"orientation":"Continuous rows parallel to lift/workbench axis","source":"D02 PDF p260 LP32","lux":null,"calculationStatus":"not performed"},
+  "openGates":["Current workshop survey and retained MB capacity","smart/MB site-specific technical criteria and conversion approval","HV risk assessment and certified protection products","Lift/slab/anchorage structural assessment","Electric power, charging, data/VLAN and commissioning","Approved local-language sign artwork and fonts","Accessible routes, fire egress and vehicle swept paths","Real browser/GPU and mobile visual review"]
+}

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="Benz Chitchai v08 — surrounding-site context to public road edge, preserving smart 3B and showroom v07. Photo-traced context, not survey or approved exterior design.">
-  <script>{const r=new URLSearchParams(location.search).get('rev');if(['v04','v06','v07'].includes(r))location.replace('./versions/'+r+'/index.html'+location.search+location.hash);}</script>
+  <meta name="description" content="Benz Chitchai v09 — compare photo-reconciled existing exterior and smart arrival proposal. Retained MB identity, flags and shrine. Not survey or approved construction.">
+  <script>{const r=new URLSearchParams(location.search).get('rev');if(['v04','v06','v07','v08'].includes(r))location.replace('./versions/'+r+'/index.html'+location.search+location.hash);}</script>
   <title>Benz Chitchai · แบบโชว์รูมและความเห็น</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./viewer.css">
@@ -13,20 +13,21 @@
 <body>
   <main id="bc-interior">
     <header class="topbar">
-      <div><h1>Benz Chitchai</h1><p class="project-caption">โมเดล v08 · พื้นที่รอบอาคารถึงริมถนน · คงผังภายใน v07</p>
+      <div><h1>Benz Chitchai</h1><p class="project-caption">โมเดล v09-r3 · อาคารเดิม + แผนโรงซ่อม · คงผังโชว์รูม v07</p>
 </div>
 
       <label class="mode-label">การใช้พื้นที่ Flex<select id="mode"><option value="handover">1 · Vehicle handover — แบบหลัก</option><option value="consulting">2 · Consulting area</option><option value="lounge">3 · Customer waiting annex</option></select></label>
     </header>
-    <section class="smart-brief" aria-labelledby="site-focus-title"><div><p class="eyebrow">EXISTING CONTEXT · EXTERIOR BASE</p>
-<h2 id="site-focus-title">บริเวณรอบโชว์รูม</h2>
-<p>ลาน ทางเข้า รั้ว ทางเท้า และริมถนน — ฐานสำหรับออกแบบ exterior ในรอบถัดไป</p>
+    <section class="smart-brief" aria-labelledby="site-focus-title"><div><p class="eyebrow">SMART ARRIVAL · EXTERIOR STUDY</p>
+<h2 id="site-focus-title">ต้อนรับ smart · คงเอกลักษณ์เดิม</h2>
+<p>เปรียบเทียบภายนอกเดิมจากภาพ กับข้อเสนอป้าย ธง และที่จอด smart</p>
 </div>
-<div class="smart-facts"><p>คง smart 3B / #5 และ Flex 3 โหมด<span>แนวภายนอกอ้างอิงแบบเก่าและภาพถ่าย ยังไม่ใช่ค่ารังวัด</span></p>
+<div class="smart-facts"><p>คง pylon MB · ธง MB 3 + ไทย 2 · ศาลเจ้า<span>ยืนยันตำแหน่งสัมพันธ์โดยเจ้าของ · ระยะและระดับยังประมาณจากภาพ</span></p>
 <a href="#site-basis">ดูมิติและข้อที่ยังต้องยืนยัน ↓</a></div>
 </section>
 
     <div class="review-workspace"><div class="model-pane">
+    <div class="exterior-switch"><label for="exterior-scheme">เปรียบเทียบภายนอก</label><select id="exterior-scheme"><option value="proposed">ข้อเสนอ smart เพิ่มเติม</option><option value="existing">ภายนอกเดิม · อ้างอิงภาพ</option></select><p id="exterior-status" role="status">ข้อเสนอรอ smart / เจ้าของ / supplier ตรวจ · ภายในคงแบบเดิม</p></div>
     <nav class="toolbar" aria-label="มุมมอง 3 มิติ">
       <button type="button" data-view="site" aria-pressed="true">บริเวณรอบอาคาร</button>
       <button type="button" data-view="frontage">มองจากริมถนน</button>
@@ -35,6 +36,7 @@
       <button type="button" data-view="smart">มุม smart</button>
       <button type="button" data-view="handover">ส่งมอบ / โลโก้กระจก</button>
       <button type="button" data-view="service">ทางไป service</button>
+      <button type="button" data-view="workshop">โรงซ่อม / smart WiW</button>
       <button type="button" data-view="overview">ภาพรวม 3D</button>
       <button type="button" data-view="plan">ผังภายใน</button>
       <label class="check"><input type="checkbox" id="site-context" checked> พื้นที่โดยรอบ</label>
@@ -106,12 +108,12 @@
 
         <div class="honeypot" aria-hidden="true"><label>Website<input name="website" id="comment-website" tabindex="-1" autocomplete="off"></label></div>
 
-        <p id="comment-context" class="context-line">ร่างแบบหลัก Handover · โมเดล v08 · ยังไม่บันทึก</p>
+        <p id="comment-context" class="context-line">ร่างแบบหลัก Handover · โมเดล v09 · ยังไม่บันทึก</p>
 
         <p class="privacy-note">ความเห็นส่งถึงทีมงาน ไม่แสดงสาธารณะบนเว็บนี้ กรุณาไม่ใส่ชื่อเจ้าของรถ ทะเบียน เบอร์โทร หรือข้อมูลส่วนตัวของลูกค้า</p>
 
         <button class="primary" id="submit-comment" type="submit" disabled>ส่งความเห็น</button>
-        <p id="submit-status" class="submit-status" role="status" aria-live="polite">v08 ยังไม่เปิดส่งหรือบันทึกออนไลน์</p>
+        <p id="submit-status" class="submit-status" role="status" aria-live="polite">กำลังตรวจการเชื่อมต่อเพื่อส่งความเห็น v09</p>
 
       </form>
     </aside></div>
@@ -121,7 +123,7 @@
 <p>อ่านคู่มือครบ 33 หน้าแล้ว · รายการนี้แยกสิ่งที่แสดงในแบบ สิ่งที่ใช้ร่วม และสิ่งที่ยังต้องตรวจ ไม่ใช่ใบรับรอง compliance</p>
 <div class="review-questions"><p><strong>01 · จำนวนรถ</strong> 3B หนึ่งชุด / #5 หนึ่งคันตาม brief — ต้องมีหลักฐานยกเว้นขั้นต่ำสองคันแยกจากการยอมรับ 3B-only</p>
 <p><strong>02 · Accessory wall</strong> คู่มือกำหนด แต่ภาพ 3B ไม่มีผนังนี้แยกไว้ — รอยืนยันวิธีรวมเข้าชุดหรือข้อยกเว้น โดยไม่เพิ่ม 3A อัตโนมัติ</p>
-<p><strong>03 · ขอบเขต</strong> คงข้อเสนอ smart จาก v07; v08 เพิ่มบริบทภายนอกเดิมถึงริมถนน ยังไม่ใช่แบบ exterior ใหม่หรือการรับรอง facade, parking, workshop และระบบงาน</p>
+<p><strong>03 · Exterior</strong> v09 เพิ่มข้อเสนอป้าย ธงและที่จอด smart ตามคู่มือ โดยคง MB และศาลเจ้าเดิม — ต้องยืนยันโควตาที่จอด MB ก่อนจัด smart เพิ่ม และตรวจระยะห่างโลโก้ / ฐานป้าย / ระบบงาน ยังไม่ใช่การรับรอง compliance</p>
 </div>
 <div id="requirement-groups"><p><a href="./assets/smart-review-matrix.json">เปิดทะเบียนข้อกำหนดและแหล่งอ้างอิงทั้งหมด</a></p>
 </div>
@@ -158,31 +160,44 @@
 </div>
 </details>
 
-    <details id="site-basis" class="notes" open><summary>v08 · มิติและขอบเขตภายนอกที่เพิ่ม</summary>
+    <details id="site-basis" class="notes" open><summary>v09 · ภายนอกเดิม / ข้อเสนอ smart / มิติรอยืนยัน</summary>
 <div class="note-grid"><div><h2>จากอาคารถึงริมถนน</h2>
-<p>เพิ่มลานคอนกรีต บันไดหน้าทางเข้า กันสาดโครงท่อ แปลงต้นไม้ ป้ายเดิม แนวรั้วบนผนังกั้นดิน ทางเท้า ขอบคันหิน และผิวถนนแถบริม ไม่ใช่การออกแบบ exterior ใหม่</p>
-<p>มวลอาคารชั้นบน กระจกริบบิ้นสีน้ำเงิน และระดับภายนอกประมาณจากภาพเพื่อดูบริบท ปิดแยกได้ โดยผังภายในและตำแหน่งรถคงเดิม</p>
+<p>ปรับตำแหน่งธง MB 3 ต้นไปฝั่งหน้าซ้าย เพิ่มธงชาติ 2 ต้น คง pylon และเพิ่มศาลเจ้าในมุมรั้วโค้ง ป้ายบอกทางกลับไปข้างทางรถเข้าซ้าย เพิ่มพื้นลาดยาง คันหินดำ–ขาว / แดง–ขาว และร่องระบายน้ำอ้างอิงภาพ</p>
+<p>ป้าย pylon และ directional ของ MB หันตั้งฉากกับแนวถนนที่ฐานเดิม เพิ่มห้องประชุมกระจกโค้งมุมใต้แยกอยู่นอก Sales และอาคารโรงซ่อมหลังคาเมทัลชีทเชื่อมหลังโชว์รูม พร้อมกันสาดด้านข้าง ไม่ใช่อาคารกันสาดเล็กแยกหลังเดิม</p>
+<p>คงผัง Sales รถ และ Flex เดิม ห้องประชุมเป็นขอบเขตอาคารเพิ่มเติม: ขนาด รัศมี ตำแหน่งประตูและจำนวนเฟอร์นิเจอร์ยังประมาณเพื่อแสดงการใช้งาน ไม่ใช่พื้นที่สุทธิหรือจำนวนที่นั่งยืนยัน</p>
 </div>
 <div><h2>ระยะที่อ่านจากแบบ</h2>
 <p>แผ่น 10 อ่านระยะหน้าลานเป็น 7.20 ม. จากขอบแถบหน้าอาคาร ไม่ใช่ 17.20 ม. และไม่เริ่มจากกริด H โดยตรง เมื่อใช้แถบประมาณ 1.20 ม. จะได้แนวลานชั่วคราว Y ≈ −8.40 ม.</p>
-<p>ช่องทางเข้า 8.00 ม. เป็นค่าที่อ่านจากแบบ แต่ตำแหน่งผูกกริดยังประมาณ ส่วนบันไดกว้าง 10.40 ม. ในแผ่น 13 อยู่ในแบบอีกชุด จึงไม่รวมทับบันไดปัจจุบัน</p>
+<p>8.00 ม. เป็นช่องทางในแบบเก่า แต่ภาพปัจจุบันเห็นทางลาดกว้างกว่า: รอบนี้ทดลองขอบ X−7.2 ถึง 11.3 (18.5 ม. ตามแกน X สมมติ) ไม่ใช่ความกว้างที่วัดแล้ว. มุมรั้วทดลอง R≈6 ม. จากภาพ ไม่ได้อ้างว่าเป็น R6 ที่พิมพ์ในแบบ. บันได 10.40 ม. แผ่น 13 เป็นอีกชุดแบบ</p>
 </div>
-<div><h2>ก่อนเริ่มออกแบบ exterior</h2>
-<p>ต้องยืนยันแนวเขตที่ดิน ขอบถนน ระดับและความลาด ทางระบายน้ำ ทางเข้า–ออก จุดเสาไฟ/สายไฟ และมิติอาคารจากหน้างาน ภาพ Street View มีทั้งปี 2017 และ 2024 ไม่ยืนยันสภาพวันนี้</p>
-<p>ด้านหลังโมเดลตัดที่ Y30 เพื่อแสดงบริบท ไม่ใช่แนวเขตหรือระยะ A–H. ค่า +0.80 เป็นระดับอ้างอิงที่ยังไม่ทราบ benchmark</p>
-<p><a href="./assets/site-context.json">ทะเบียนบริบทภายนอก</a> · <a href="./versions/v07/index.html">เปิด v07 เดิม</a></p>
+<div><h2>ขนาดข้อเสนอ smart</h2>
+<p>Pylon 1.466 × 4.515 ม. / ธง 1.20 × 4.50 ม. ใช้รูปทรงสัญลักษณ์และ wordmark จาก smart ทางการ โดยช่องไฟชุดป้ายยังรอ supplier ยืนยัน; ขยับสองชิ้นออกจากขอบห้องประชุมที่เติมใหม่</p>
+<p><strong>ป้ายบอกทาง smart: ไม่ใส่ / WAIVER PENDING</strong> — ใช้ป้าย MB ร่วมตามเจ้าของ ข้อกำหนดยังเปิดอยู่และยังไม่ได้รับอนุมัติยกเว้น. smart care 2.07 × 0.30 ม. ทดลองติดที่หน้ากันสาดซึ่งเชื่อมกับโรงซ่อม รอยืนยันจุด inspection ไม่ใช่ป้ายเหนือทางเข้า sales</p>
+<p>ที่จอดด้านข้าง 2.80 × 5.50 ม. จำนวน 3 ช่อง: ลูกค้า 1 + ทดลองขับ 2. รอตรวจโควตา MB และทางเลี้ยวก่อนจัดจริง. ใช้ข้อเสนอโลโก้กระจก Type 4 / SL2 เดิม ไม่เพิ่มโลโก้ซ้ำ; ต้องตรวจระยะห่างและขนาดให้สัมพันธ์กับป้าย MB</p>
+<p>เจ้าของยืนยันสภาพและการใช้งาน ภาพหลัก มิ.ย. 2024; ภาพ ต.ค. 2023 และ ก.พ. 2019 ใช้ประกอบรูปทรงย้อนหลัง ไม่ถือว่าทุกรายละเอียดเป็นปัจจุบัน. ระยะ ระดับ รัศมี แนวเขตและสาธารณูปโภคยังต้องสำรวจ ไม่ใช้ความสูงกล้อง Google Earth เป็นระดับพื้น</p>
+<p>r3: แบบระบุ A–H รวม 42 ม. และ E–A 26 ม. จึงแก้ขอบกริดหลังเป็น Y42 พร้อมด้านซ้ายสอบเข้า; LX0–5 ตรงกริดเดิม 1/4/5/6/7/8 โดยไม่ย้ายผังโชว์รูม. มวล tower ใช้มุมร่วมกับห้องประชุมและกระจกหน้าถอยจากผิวบนทดลอง 1.90 ม. ระยะถอย รัศมีและความสูงยังเป็นการเทียบภาพ ไม่ใช่มิติสำรวจ</p>
+<p>ภาพปัจจุบัน: เสาธงทั้ง 5 ต้นชิดแนวรั้วด้านใน มีร่องน้ำและแผ่นฐานยึด; ป้ายด้านหน้า Entrance และลูกศรซ้ายทุกบรรทัด ด้านหลัง Exit ซ้าย / รายการอื่นขวา. กันสาดและประตูโรงซ่อมคร่อมทางด้านข้าง เป็นประตูภายใน ไม่ใช่ช่องเปิดรั้วติดถนน</p>
+<p><strong>โรงซ่อม / smart WiW เป็นข้อเสนอประสานงาน</strong>: แบ่ง smart HV 1 + M/E 1, ลิฟต์ แผ่นฉนวนและรั้ว HV แบบตัวแทน, เครื่องมือทั่วไปใช้ร่วม, เครื่องมือเฉพาะ/diagnosis และชั้นอะไหล่แยก MB/smart. จำนวนช่อง MB และขนาดอุปกรณ์เป็น test fit ไม่ใช่ของเดิมยืนยัน. คู่มือ p2 กับ p25 ระบุยี่ห้อเครื่องชาร์จต่างกัน จึงเว้น brand TBC; ยังขาดข้อกำหนด MB technical / MPS II ที่ใช้กับโครงการนี้และการตรวจระบบความปลอดภัย</p>
+<p>ระดับโรงซ่อมทดลอง −0.60 และ service −0.30 เทียบ showroom 0 ตามระดับแบบเก่า +0.90/+1.20/+1.50; ไม่ใช่ระดับถนนปัจจุบัน. รั้ว/ถนนที่เห็นยังหยุดในขอบภาพ Y30 ส่วนพื้นที่ด้านหลังถึง Y50 เป็นขอบโมเดลเท่านั้น</p>
+<p><a href="./assets/legacy-drawing-controls.json">กริดแบบเก่าและสถานะมิติ</a> · <a href="./assets/workshop-study.json">ผังโรงซ่อมและประเด็นรอยืนยัน</a> · <a href="./assets/geometry-register.json">ข้อมูล geometry สำหรับทีมออกแบบ</a></p>
+<p><a href="./assets/site-context.json">ทะเบียนภายนอกเดิม</a> · <a href="./assets/exterior-proposal.json">ข้อเสนอและจุดรออนุมัติ</a> · <a href="./versions/v08/index.html">เปิด v08 เดิม</a> · <a href="./versions/v07/index.html">v07</a></p>
 </div>
 </div>
 </details>
 
     <noscript><p>กรุณาเปิด JavaScript เพื่อหมุนโมเดล. ยังอ่านมิติ ขอบเขต และเปิดทะเบียนข้อมูลจากลิงก์หน้านี้ได้</p>
 </noscript>
-    <footer>13 SEP 2026 · OWNER REVIEW FIRST · ยังไม่ใช่แบบอนุมัติหรือแบบก่อสร้าง<br>Existing exterior context v08 · Interior v07 retained · No cadastral or engineering certification</footer>
+    <footer>13 SEP 2026 · OWNER REVIEW FIRST · ยังไม่ใช่แบบอนุมัติหรือแบบก่อสร้าง<br>Exterior study v09 · Interior v07 retained · No cadastral or engineering certification</footer>
   </main>
   <script src="./vendor/three.min.js"></script>
   <script src="./vendor/Reflector.source.js"></script>
   <script src="./layout.js"></script>
   <script src="./smart.js"></script>
+  <script src="./smart-brand.js"></script>
+  <script src="./building-annexes.js"></script>
+  <script src="./workshop-interior.js"></script>
+  <script src="./shrine.js"></script>
+  <script src="./exterior-design.js"></script>
   <script src="./site.js"></script>
   <script src="./exterior-massing.js"></script>
   <script src="./scene.js"></script>

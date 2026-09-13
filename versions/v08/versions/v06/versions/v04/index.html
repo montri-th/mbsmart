@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Benz Chitchai — Option B / smart Module 3B. Interactive schematic interior review with handover and optional service lounge.">
+  <title>Benz Chitchai · แบบโชว์รูมและความเห็น</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./viewer.css">
+</head>
+<body>
+  <main id="bc-interior">
+    <header class="topbar">
+      <div><h1>Benz Chitchai</h1><p class="project-caption">แบบโชว์รูม B / smart 3B · โมเดล v04</p></div>
+      <label class="mode-label">พื้นที่ส่งมอบรถ<select id="mode"><option value="handover">Vehicle Handover — แบบหลัก</option><option value="lounge-ac">ห้องรับรองแอร์ส่วนขยาย — Optional</option></select></label>
+    </header>
+    <div class="review-workspace"><div class="model-pane">
+    <nav class="toolbar" aria-label="มุมมอง 3 มิติ">
+      <button type="button" data-view="interior" aria-pressed="true">จากทางเข้า</button>
+      <button type="button" data-view="smart">มุม smart</button>
+      <button type="button" data-view="handover">มุมส่งมอบ</button>
+      <button type="button" data-view="service">ทางไป service</button>
+      <button type="button" data-view="overview">ภาพรวม 3D</button>
+      <button type="button" data-view="plan">มองจากด้านบน</button>
+      <label class="check"><input type="checkbox" id="ceiling" checked> ฝ้า / ชั้นลอย</label>
+      <label class="check"><input type="checkbox" id="labels"> ป้าย / แนวควบคุม</label>
+    </nav>
+    <section class="stage" aria-label="โมเดลโชว์รูมสามมิติ">
+      <div id="viewport"></div>
+      <div id="loading" role="status">กำลังเตรียมโมเดล 3 มิติ…</div>
+      <div id="no-webgl" hidden>เครื่องนี้เปิด 3 มิติไม่ได้ <a href="./renders/interior-handover.jpg">ดูภาพจากโมเดล</a></div>
+      <div class="stage-caption"><span id="view-title">จากทางเข้า</span><span>ลากเพื่อหมุน · Scroll / pinch เพื่อซูม · คลิกขวาลากเพื่อเลื่อน</span></div>
+      <div id="labels-layer" aria-hidden="true"></div>
+    </section>
+    <div class="statusline" aria-live="polite"><span id="state-status">MB 4 แสดง + 1 Handover · smart 1 / 3B · ห้องแอร์เดิม 10 ที่</span><span class="issue">MB5: หน้า–ท้าย ~15 ซม. / รอตรวจระยะใช้งาน</span></div>
+    <p class="model-hint">แบบเดิมยังไม่เปลี่ยนตามคอมเมนต์ · เลือกมุมดู แล้วฝากความเห็นให้ทีมพิจารณาร่วมกัน</p>
+    </div>
+    <aside class="review-panel" aria-labelledby="review-title">
+      <h2 id="review-title">ฝากความเห็นถึงทีมออกแบบ</h2>
+      <p class="intro">บอกสิ่งที่อยากปรับ และเลือกพื้นที่ที่เกี่ยวข้อง<br>ทีมจะรวบรวมไว้คุยกันก่อนแก้แบบ</p>
+      <p id="connection-notice" class="privacy-note">ตัวอย่างฟอร์มสำหรับตรวจดู — ยังไม่เปิดรับความเห็นออนไลน์ รอยืนยันการเชื่อมต่อ Google ของโครงการ</p>
+      <form id="comment-form">
+        <label for="comment-area">เกี่ยวกับพื้นที่ไหน</label>
+        <select id="comment-area" name="area"><option value="general">ภาพรวม / ไม่ระบุพื้นที่</option><option value="smart">smart Module 3B</option><option value="handover">ส่งมอบรถ / ห้องรับรองส่วนขยาย</option><option value="lounge">ห้องรับรองแอร์เดิม</option><option value="service">ทางเข้า–ออกศูนย์บริการ</option><option value="counter">Counter เดิม / พื้นที่ปรึกษา</option><option value="mb-display">พื้นที่แสดงรถ Mercedes-Benz</option><option value="entrance">ทางเข้าด้านหน้า</option><option value="stair">บันได / หน้าบันได</option><option value="other">พื้นที่อื่น</option></select>
+        <details class="location-details"><summary>ระบุจุดหรือวงพื้นที่บนผัง <span>(ไม่จำเป็น)</span></summary>
+          <div class="location-tools" role="group" aria-label="วิธีระบุตำแหน่ง"><button type="button" data-loc-tool="point" aria-pressed="true">ปักหมุด</button><button type="button" data-loc-tool="rectangle" aria-pressed="false">วงพื้นที่</button><button type="button" id="clear-location">ล้างจุด</button></div>
+          <p id="map-help" class="small">แตะจุดบนผัง หรือใช้ปุ่มลูกศรแล้วกด Enter</p>
+          <svg id="review-map" viewBox="-1.5 -1.5 43 20" role="application" aria-label="ผังสำหรับระบุตำแหน่งความเห็น" aria-describedby="map-help" tabindex="0"></svg>
+          <div class="map-zoom"><button type="button" id="zoom-map">ขยายจุดนี้</button><button type="button" id="reset-map" hidden>ดูเต็มผัง</button><span id="zoom-help">เลือกจุด แล้วขยายเพื่อชี้ให้แม่นขึ้น</span></div>
+          <p class="small">ด้านล่างผังคือด้านหน้าอาคาร · พิกัดอ้างอิงโมเดล ไม่ใช่ค่ารังวัด</p>
+        </details>
+        <div class="location-readout"><span id="location-summary">ยังไม่ระบุจุดเฉพาะ</span><button type="button" id="show-location" hidden>ดูจุดใน 3D</button></div>
+        <label for="comment-text">ความเห็น <span class="required-note">จำเป็น</span></label>
+        <textarea id="comment-text" name="comment" rows="4" maxlength="3000" required placeholder="เช่น อยากให้ทางเดินจากห้องรับรองไปศูนย์บริการกว้างขึ้น เพราะ…"></textarea>
+        <div class="text-counter"><span>หนึ่งประเด็นต่อหนึ่งความเห็น ช่วยให้ติดตามง่าย</span><output id="comment-count" for="comment-text">0 / 3,000</output></div>
+        <details class="author-details"><summary>ชื่อและฝ่ายของผู้ให้ความเห็น <span>(ไม่จำเป็น)</span></summary><label for="comment-name">ชื่อ</label><input id="comment-name" name="name" maxlength="80" autocomplete="name"><label for="comment-team">ฝ่าย / ศูนย์บริการ</label><input id="comment-team" name="team" maxlength="100" autocomplete="organization"></details>
+        <div class="honeypot" aria-hidden="true"><label>Website<input name="website" id="comment-website" tabindex="-1" autocomplete="off"></label></div>
+        <p id="comment-context" class="context-line">แนบแบบหลัก Handover · โมเดล v04</p>
+        <p class="privacy-note">ความเห็นส่งถึงทีมงาน ไม่แสดงสาธารณะบนเว็บนี้ กรุณาไม่ใส่ชื่อเจ้าของรถ ทะเบียน เบอร์โทร หรือข้อมูลส่วนตัวของลูกค้า</p>
+        <button class="primary" id="submit-comment" type="submit" disabled>ส่งความเห็น</button>
+        <p id="submit-status" class="submit-status" role="status" aria-live="polite">กำลังตรวจการเชื่อมต่อ…</p>
+      </form>
+    </aside></div>
+    <details class="notes"><summary>ขอบเขตโมเดลและจุดที่ต้องยืนยัน</summary><div class="note-grid"><div><h2>ปรับจาก B เดิม</h2><p>ใช้ 3B ครบชุดเดียว · MB5 หันตั้งฉาก จมูกรถสู่ด้านหน้า entrance · ยกเลิก ST และเปิดแนวทางไป service · ไม่เพิ่มแอร์ให้โถงหลัก</p><p>Optional ย้าย MB5 กลับช่องแสดง และปิดแนวกระจกใหม่ เปิดช่องเชื่อมห้องแอร์เดิม เพิ่มระบบแอร์ที่คำนวณใหม่. ที่เก็บโต๊ะ/เก้าอี้นอกโมเดลยังรอยืนยัน</p></div><div><h2>ยังเป็น schematic</h2><p>วัสดุจำลองเทียบภาพหน้างาน ไม่ใช่ texture scan. รถและเฟอร์นิเจอร์เป็นโมเดลแทน ไม่ใช่รุ่นสินค้าจริง. ความสูงทั้งหมดและแนว X ยังรอสำรวจ; Y: E–F 8.00 / F–G 5.50 / G–H 2.50 ม. ตามเจ้าของ</p><p>MB5 ยาวสมมติ 5.20 ม. ในช่อง 5.50 ม. เหลือหน้า–ท้ายด้านละ 0.15 ม. จึงยังไม่ผ่านการใช้งาน Handover. ทางอ้อมใน Optional มีระยะเผื่อน้อย ต้องตรวจการเข้าถึงและเส้นทางรถ. การซ่อนฝ้าเป็นมุมตัดดู ไม่ใช่เสนอรื้อถอน</p></div><div><h2>ขอบเขตที่ smart ยอมรับ</h2><p>เจ้าของแจ้งว่า 3B อย่างเดียวได้ / 3A อย่างเดียวไม่ได้ จึงใช้ 3B เป็นฐาน. ยังไม่ตีความว่าอนุมัติทุกองค์ประกอบของ site; ต้องยืนยันเงื่อนไข Grand Stage, จำนวน/ประเภท MB และรายละเอียดจากผู้ผลิต</p><p>โมเดลนี้ไม่ใช่แบบก่อสร้าง ไม่รับรองทางหนีไฟ/ทางเข้าบันได/ระยะเปิดประตูรถ/กำลังแอร์. <a href="./renders/interior-handover.jpg">ดูภาพมุมทางเข้า</a> · <a href="./renders/handover.jpg">มุมส่งมอบ</a> · <a href="./renders/optional-lounge.jpg">Optional ห้องรับรอง</a></p></div></div></details>
+    <details class="notes"><summary>เงื่อนไขเพิ่มเติมก่อนอนุมัติแบบ</summary><div class="note-grid"><div><h2>จำนวน smart</h2><p>เก็บหลักฐานยืนยัน scope/เงื่อนไขจาก smart ให้ครอบคลุมการใช้ 3B กับ smart 1 คันสำหรับ site นี้ โดยคงข้อกำหนดในเอกสารเดิมเป็นประวัติอ้างอิง</p></div><div><h2>ทางไป service</h2><p>เสาเดิมสมมติยื่นเข้าขอบพื้นที่กันไว้ 0.25 ม. ความกว้างพื้นที่จึงไม่ใช่ช่องทางสุทธิที่รับรองแล้ว. เส้นทางร่วมคน/รถและการเลี้ยวรถยังต้องตรวจ swept-path</p></div><div><h2>ภาพและวัสดุ</h2><p>สี พื้นผิว และป้ายในโมเดลเป็นตัวแทนสำหรับ review ไม่ใช่รายการวัสดุหรือ artwork ที่อนุมัติจัดซื้อ. ภาพนี้ยังเป็น schematic ไม่ใช่ภาพ photorealistic ของรถรุ่นจริง</p></div></div></details>
+    <footer>13 SEP 2026 · OWNER REVIEW · ภาพออกแบบเบื้องต้น ไม่ใช่แบบก่อสร้าง<br>UI อ้างอิงเว็บไซต์ Mercedes-Benz ทางการ ไม่ใช่ระบบที่แบรนด์รับรอง · โมเดล v04 / ระบบรับความเห็น v05</footer>
+  </main>
+  <script src="./vendor/three.min.js"></script>
+  <script src="./vendor/Reflector.source.js"></script>
+  <script src="./layout.js"></script>
+  <script src="./scene.js"></script>
+  <script src="./feedback-config.js"></script>
+  <script src="./feedback.js"></script>
+</body>
+</html>

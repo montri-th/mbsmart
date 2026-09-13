@@ -1,0 +1,13 @@
+{
+  "revision":"v09-r3",
+  "units":"metres; plan X,Y to world X,height,-Y",
+  "authority":"Printed legacy grid distances, NOT current surveyed wall faces or certified as-built",
+  "sources":["LINE_ALBUM_Showroom_260913_1.jpg","LINE_ALBUM_Showroom_260913_2.jpg","LINE_ALBUM_Showroom_260913_3.jpg","S__78577701_0.jpg","S__78577723_0.jpg","S__78577728_0.jpg"],
+  "letterGrid":{"H":0,"G":2.5,"F":8,"E":16,"D":22,"C":28.5,"B":35.5,"A":42},
+  "numericGrid":{"1":0,"2":1.11,"3":2.02,"4":8,"5":16,"6":24,"7":32,"8":40,"9":48},
+  "localAliasToOriginal":{"LX0":"1","LX1":"4","LX2":"5","LX3":"6","LX4":"7","LX5":"8"},
+  "nestedSpans":{"1-4":8,"2-4":6.89,"3-4":5.98},
+  "overall":{"A-H":42,"E-A":26,"1-9":48},
+  "datum":{"modelShowroom":0,"legacyShowroom":1.5,"legacyWorkshop":0.9,"legacyServiceReception":1.2,"legacySideService":1,"currentRoadBenchmark":null},
+  "limitations":["Three full-sheet photographs are views of the same legacy sheet, not independent surveyed revisions","Historical spot levels do not establish current road or apron levels","Retain local aliases and showroom coordinates so existing comment pins do not move","Dimensions control grids only; roof overhangs, wall thicknesses and exterior heights remain inferred"]
+}

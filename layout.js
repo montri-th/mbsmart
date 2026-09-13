@@ -1,6 +1,6 @@
-/* v08 adds surrounding-site context; interior states are unchanged from frozen v07. */
+/* v09 exterior existing/proposed comparison; all v07 interior states retained. */
 window.BC_LAYOUT = {
-  "revision": "v08",
+  "revision": "v09",
   "defaultState": "handover",
   "states": [
     {
@@ -2988,12 +2988,12 @@ window.BC_LAYOUT = {
     "Main hall unconditioned; flex/old lounge enclosure and HVAC require engineer review",
     "Official raster assets not redistributed without permission",
     "X grid remains assumed: LX0..5=0,8,16,24,32,40; exterior registration inherits this uncertainty",
-    "Street View is historical; no assertion that utilities/fences/access match today's site",
     "Coloured dashed lines indicate model evidence controls, not proposed paint or title-deed boundaries",
     "No confirmed north arrow, parcel area, setback compliance, road reserve or boundary ownership",
     "A-D, D-E and A-H are not derived; rear edge of scene is an explicit model crop",
     "No driveway turning/sightline/drainage/accessibility/electrical-clearance approval",
-    "Original photos and drawings remain private; this public JSON contains derived coordinates only"
+    "Original photos and drawings remain private; this public JSON contains derived coordinates only",
+    "v09 separates reconstructed existing exterior from proposed smart additions. Proposed items are not compliance, engineering or supplier approvals."
   ],
   "smartVehicle": {
     "model": "smart #5",
@@ -3304,8 +3304,8 @@ window.BC_LAYOUT = {
   },
   "site": {
     "schema": 1,
-    "revision": "v08",
-    "purpose": "Existing-condition schematic context for future exterior design; no new exterior proposal",
+    "revision": "v09",
+    "purpose": "Photo-reconciled existing context, separate from proposed smart exterior",
     "coordinateFrame": "Same as v07: plan X,Y metres; world X,height,-Y; H=Y0; local interior FFL=height0",
     "status": "legacy-unverified / photo-traced / assumed; NOT cadastral boundary or measured as-built",
     "basis": "Photographed sheet 10 for compact forecourt, checked against supplied exterior photographs; sheet 13 retained as an alternative issue, not overlaid as current construction",
@@ -3350,17 +3350,92 @@ window.BC_LAYOUT = {
         "kind": "one owner-supplied Street View capture",
         "date": "2017-03",
         "use": "historical context only, not assumed current condition"
+      },
+      {
+        "id": "N01",
+        "date": "date-label-cropped",
+        "role": "corner-shrine-pylon-retaining"
+      },
+      {
+        "id": "N02",
+        "date": "2024-06",
+        "role": "side-fence-sidewalk"
+      },
+      {
+        "id": "N03",
+        "date": "2024-06",
+        "role": "main-frontage"
+      },
+      {
+        "id": "N04",
+        "date": "2024-06",
+        "role": "left-driveway"
+      },
+      {
+        "id": "N05",
+        "date": "2024-06",
+        "role": "five-flags-direction-sign"
+      },
+      {
+        "id": "N06",
+        "date": "2024-06",
+        "role": "frontal-order-and-driveway"
+      },
+      {
+        "id": "N07",
+        "date": "2023-10",
+        "role": "shrine-close-detail-historical-support"
+      },
+      {
+        "id": "N08",
+        "date": "2024-06",
+        "role": "reverse-corner-detail"
+      },
+      {
+        "id": "R2-01",
+        "date": "2024-06",
+        "role": "south curved-glass corner"
+      },
+      {
+        "id": "R2-02",
+        "date": "2023-10",
+        "role": "corner and workshop connection, historical support"
+      },
+      {
+        "id": "R2-03",
+        "date": "2024-06",
+        "role": "attached workshop side elevation"
+      },
+      {
+        "id": "R2-04",
+        "date": "2019-02",
+        "role": "historical rear workshop form only"
+      },
+      {
+        "id": "A02",
+        "file": "LINE_ALBUM_Showroom_260912_11.jpg",
+        "role": "legacy whole plan, issue/date unresolved"
+      },
+      {
+        "id": "R3-DRAWINGS",
+        "file": "LINE_ALBUM_Showroom_260913_1.jpg",
+        "role": "42m A–H / 48m numeric grid chain with closeup corroboration"
+      },
+      {
+        "id": "R3-NIGHT",
+        "file": "S__78577753_0.jpg",
+        "role": "owner-supplied current condition, capture date unverified; recessed glazing and fence-adjacent flags"
       }
     ],
     "bounds": {
       "xMin": -14,
       "xMax": 58,
       "yMin": -15.4,
-      "yMax": 30
+      "yMax": 50
     },
     "rearClip": {
-      "y": 30,
-      "status": "arbitrary context crop, not rear boundary, not derived A-H length"
+      "y": 50,
+      "status": "arbitrary expanded context crop, NOT rear property edge or measured A–H"
     },
     "front": {
       "plinthProjection": {
@@ -3380,10 +3455,11 @@ window.BC_LAYOUT = {
         "status": "derived candidate using A01 printed 6.00 to same edge"
       },
       "gate": {
-        "xMin": -5.5,
-        "xMax": 2.5,
-        "width": 8,
-        "status": "8.00 printed width; centre X=-1.50 photo-traced"
+        "xMin": -7.2,
+        "xMax": 11.3,
+        "width": 18.5,
+        "status": "broad-photo-envelope-in-assumed-X-frame; NOT measured current gate width; owner visual review needed",
+        "legacyPrintedWidth": 8
       },
       "gateReturnRadius": {
         "value": 3,
@@ -3396,32 +3472,32 @@ window.BC_LAYOUT = {
         -8.4
       ],
       [
-        31,
+        44.5,
         -8.4
       ],
       [
-        34.5,
-        -8.2
+        46.0529,
+        -8.1956
       ],
       [
-        39,
-        -7.2
+        47.5,
+        -7.5962
       ],
       [
-        43,
-        -5
+        48.7426,
+        -6.6426
       ],
       [
-        46.5,
-        -1.5
+        49.6962,
+        -5.4
       ],
       [
-        48.7,
-        3
+        50.2956,
+        -3.9529
       ],
       [
-        50.2,
-        8.5
+        50.5,
+        -2.4
       ],
       [
         50.5,
@@ -3432,7 +3508,7 @@ window.BC_LAYOUT = {
         30
       ]
     ],
-    "edgeStatus": "A01 photo-traced front/east edge against assumed X frame; rounded corner is a trace, not a certified circular arc. Segment Y16 to30 is context extrapolation only.",
+    "edgeStatus": "localized-photo-fit-fillet; front/east controls inherited-unverified; NOT printed A01 R6.00 or authenticated A04 R15.00",
     "leftContextEdge": [
       [
         -7.2,
@@ -3458,7 +3534,8 @@ window.BC_LAYOUT = {
         17,
         25
       ],
-      "status": "road-side edge traced against assumed 40m X grid; service opening position/width unmeasured"
+      "status": "Continuous photographed fence through current crop; v08 side curb cut removed because not evidenced, not a claim about access beyond crop",
+      "openingEnabled": false
     },
     "sidewalk": {
       "width": 2,
@@ -3469,7 +3546,7 @@ window.BC_LAYOUT = {
       "status": "near-edge context strip only; not full carriageway width or legal road reserve; no traffic lanes certified"
     },
     "gateTransitions": {
-      "frontInnerY": -2.4,
+      "frontInnerY": -6.9,
       "eastInnerX": 46,
       "status": "render-only continuity to assumed grades, not measured or designed ramps; verify slope, drainage, turning and footway crossing"
     },
@@ -3535,28 +3612,256 @@ window.BC_LAYOUT = {
     },
     "markers": {
       "pylon": [
-        42.5,
-        -3.4
+        41.5,
+        -7.05
       ],
+      "pylonData": {
+        "id": "MB-PYLON",
+        "type": "thin-two-sided-pylon",
+        "xy": [
+          41.5,
+          -7.05
+        ],
+        "width": 1.6,
+        "depth": 0.42,
+        "heightAboveApron": 8.8,
+        "plinthHeight": 0.18,
+        "rotationRadians": 1.5707963267948966,
+        "yawStatus": "owner-confirmed: broad faces perpendicular to main road; centre retained",
+        "sources": [
+          "N01",
+          "N03",
+          "N05",
+          "N06",
+          "N08"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "retainInProposal": true
+      },
       "flags": [
         [
-          34,
-          -3.4
+          13.2,
+          -7.75
         ],
         [
-          35.4,
-          -3.4
+          16.8,
+          -7.75
         ],
         [
-          36.8,
-          -3.4
+          20.4,
+          -7.75
         ]
       ],
-      "directionSign": [
-        40.5,
-        -4.2
+      "flagData": [
+        {
+          "id": "MB-FLAG-1",
+          "type": "mercedes-banner",
+          "xy": [
+            13.2,
+            -7.75
+          ],
+          "poleHeightAboveApron": 7,
+          "clothWidth": 1,
+          "clothHeight": 3,
+          "sources": [
+            "N04",
+            "N05",
+            "N06"
+          ],
+          "positionStatus": "photo-fit-not-surveyed",
+          "countStatus": "owner-confirmed"
+        },
+        {
+          "id": "MB-FLAG-2",
+          "type": "mercedes-banner",
+          "xy": [
+            16.8,
+            -7.75
+          ],
+          "poleHeightAboveApron": 7,
+          "clothWidth": 1,
+          "clothHeight": 3,
+          "sources": [
+            "N04",
+            "N05",
+            "N06"
+          ],
+          "positionStatus": "photo-fit-not-surveyed",
+          "countStatus": "owner-confirmed"
+        },
+        {
+          "id": "MB-FLAG-3",
+          "type": "mercedes-banner",
+          "xy": [
+            20.4,
+            -7.75
+          ],
+          "poleHeightAboveApron": 7,
+          "clothWidth": 1,
+          "clothHeight": 3,
+          "sources": [
+            "N04",
+            "N05",
+            "N06"
+          ],
+          "positionStatus": "photo-fit-not-surveyed",
+          "countStatus": "owner-confirmed"
+        },
+        {
+          "id": "TH-FLAG-1",
+          "type": "thai-national-flag",
+          "xy": [
+            28.2,
+            -7.75
+          ],
+          "poleHeightAboveApron": 8.2,
+          "clothWidth": 1.6,
+          "clothHeight": 1.07,
+          "sources": [
+            "N03",
+            "N05",
+            "N06",
+            "N08"
+          ],
+          "positionStatus": "photo-fit-not-surveyed",
+          "countStatus": "owner-confirmed"
+        },
+        {
+          "id": "TH-FLAG-2",
+          "type": "thai-national-flag",
+          "xy": [
+            37.2,
+            -7.75
+          ],
+          "poleHeightAboveApron": 8.2,
+          "clothWidth": 1.6,
+          "clothHeight": 1.07,
+          "sources": [
+            "N03",
+            "N05",
+            "N06",
+            "N08"
+          ],
+          "positionStatus": "photo-fit-not-surveyed",
+          "countStatus": "owner-confirmed"
+        }
       ],
-      "status": "photo-traced context proxies adjusted clear of other proxy objects; no physical relocation or new smart exterior branding proposed"
+      "shrine": {
+        "id": "SHRINE",
+        "type": "existing-chinese-shrine",
+        "xy": [
+          46.7,
+          -2.8
+        ],
+        "terraceWidth": 3.5,
+        "terraceDepth": 3.2,
+        "terraceRise": 0.43,
+        "roofWidth": 4,
+        "roofDepth": 3.48,
+        "topAboveApron": 4.79,
+        "sources": [
+          "N01",
+          "N07",
+          "N08"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "retainInProposal": true,
+        "keepApproachFromInside": true,
+        "notPublicGateway": true,
+        "preliminaryPhotoEnvelope": {
+          "terraceWidth": 4.1,
+          "terraceDepth": 4.1,
+          "terraceRise": 0.18,
+          "roofWidth": 4.3,
+          "roofDepth": 4.3,
+          "topAboveApron": 4.6,
+          "status": "initial research candidate, superseded by authored mesh dimensions below; neither surveyed"
+        },
+        "renderedEnvelope": {
+          "width": 3.9958,
+          "depth": 3.706,
+          "height": 4.79,
+          "rotationRadians": 3.141592653589793,
+          "status": "authored mesh bounds, NOT measured shrine dimensions"
+        }
+      },
+      "directionSign": [
+        12.1,
+        -7.5
+      ],
+      "status": "Object counts/order/topology have higher confidence than all numeric XY/heights/yaw; numeric values are adjustable photo-fit candidates, never measured as-built",
+      "directionData": {
+        "id": "EXISTING-DIRECTION",
+        "type": "driveway-direction-board",
+        "xy": [
+          12.1,
+          -7.5
+        ],
+        "width": 1.25,
+        "depth": 0.25,
+        "heightAboveApron": 2,
+        "rotationRadians": 1.5707963267948966,
+        "yawStatus": "owner-confirmed: broad faces perpendicular to main road; two-face wayfinding study, arrow artwork needs on-site check",
+        "text": [
+          "Entrance ←",
+          "Parking ←",
+          "Sales ←",
+          "Service ←",
+          "Spare Parts ←"
+        ],
+        "sources": [
+          "N04",
+          "N05"
+        ],
+        "positionStatus": "right-edge-of-left-driveway-photo-fit",
+        "retainInProposal": true,
+        "faces": {
+          "frontEntrance": [
+            [
+              "Entrance",
+              "left"
+            ],
+            [
+              "Parking",
+              "left"
+            ],
+            [
+              "Sales",
+              "left"
+            ],
+            [
+              "Service",
+              "left"
+            ],
+            [
+              "Spare Parts",
+              "left"
+            ]
+          ],
+          "reverseExit": [
+            [
+              "Exit",
+              "left"
+            ],
+            [
+              "Parking",
+              "right"
+            ],
+            [
+              "Sales",
+              "right"
+            ],
+            [
+              "Service",
+              "right"
+            ],
+            [
+              "Spare Parts",
+              "right"
+            ]
+          ]
+        }
+      }
     },
     "utilityPoles": [
       [
@@ -3597,7 +3902,24 @@ window.BC_LAYOUT = {
         "lowerChordHeight": 3.6,
         "trussDepth": 0.4
       },
-      "status": "ALL numbers are visual assumptions: rounded stepped massing and ribbon windows from photographs; not measured storeys or structural member sizes"
+      "status": "ALL numbers are visual assumptions: rounded stepped massing and ribbon windows from photographs; not measured storeys or structural member sizes",
+      "masterCorner": {
+        "center": [
+          -1.9,
+          0
+        ],
+        "radius": 1.9,
+        "leftX": -3.8,
+        "frontY": -1.9,
+        "status": "Shared quarter-circle upper profile and semicircular ground pocket; photo/plan-fit, not printed radius"
+      },
+      "southBalcony": {
+        "yMin": 9,
+        "yMax": 12.8,
+        "recessX": -0.5,
+        "status": "Recessed south-side upper opening from current and June2024 photographs; dimensions approximate"
+      },
+      "lowerWingFrontY": 0.6
     },
     "alternativeA04": {
       "frontStairWidthReading": 10.4,
@@ -3605,17 +3927,1014 @@ window.BC_LAYOUT = {
       "status": "10.40 and R15.00 readable on alternative sheet13; not applied to current canopy entrance; other endpoint/radius readings unresolved"
     },
     "limitations": [
-      "X grid remains assumed: LX0..5=0,8,16,24,32,40; exterior registration inherits this uncertainty",
-      "Street View is historical; no assertion that utilities/fences/access match today's site",
       "Coloured dashed lines indicate model evidence controls, not proposed paint or title-deed boundaries",
       "No confirmed north arrow, parcel area, setback compliance, road reserve or boundary ownership",
       "A-D, D-E and A-H are not derived; rear edge of scene is an explicit model crop",
       "No driveway turning/sightline/drainage/accessibility/electrical-clearance approval",
-      "Original photos and drawings remain private; this public JSON contains derived coordinates only"
+      "Original photos and drawings remain private; this public JSON contains derived coordinates only",
+      "Rear workshop follows legacy E–A26m grid envelope / Y16–42; current as-built unverified. Street fence stops at observed Y30 context. Meeting room shares the tall tower corner, separate only in interior use from Sales.",
+      "Owner confirms current relative positions and 3 MB + 2 Thai flag count; ALL metric coordinates, heights, curve radius and levels remain photo-fit assumptions. One detail screenshot is October 2023, not June 2024."
+    ],
+    "ownerConfirmation": {
+      "positionsRemainCurrent": true,
+      "mbFlagCount": 3,
+      "thaiFlagCount": 2,
+      "metricDimensionsConfirmed": false,
+      "dateOfConfirmation": "2026-09-13"
+    },
+    "previousV08": {
+      "edgeControlPoints": [
+        [
+          -7.2,
+          -8.4
+        ],
+        [
+          31,
+          -8.4
+        ],
+        [
+          34.5,
+          -8.2
+        ],
+        [
+          39,
+          -7.2
+        ],
+        [
+          43,
+          -5
+        ],
+        [
+          46.5,
+          -1.5
+        ],
+        [
+          48.7,
+          3
+        ],
+        [
+          50.2,
+          8.5
+        ],
+        [
+          50.5,
+          16
+        ],
+        [
+          50.5,
+          30
+        ]
+      ],
+      "gate": {
+        "xMin": -5.5,
+        "xMax": 2.5,
+        "width": 8,
+        "status": "8.00 printed width; centre X=-1.50 photo-traced"
+      },
+      "sideOpening": [
+        17,
+        25
+      ]
+    },
+    "corner": {
+      "frontY": -8.4,
+      "sideX": 50.5,
+      "filletCentre": [
+        44.5,
+        -2.4
+      ],
+      "filletRadius": 6,
+      "renderTrialRadiusRange": [
+        5,
+        9
+      ],
+      "frontTangent": [
+        44.5,
+        -8.4
+      ],
+      "sideTangent": [
+        50.5,
+        -2.4
+      ],
+      "points": [
+        [
+          -7.2,
+          -8.4
+        ],
+        [
+          44.5,
+          -8.4
+        ],
+        [
+          46.0529,
+          -8.1956
+        ],
+        [
+          47.5,
+          -7.5962
+        ],
+        [
+          48.7426,
+          -6.6426
+        ],
+        [
+          49.6962,
+          -5.4
+        ],
+        [
+          50.2956,
+          -3.9529
+        ],
+        [
+          50.5,
+          -2.4
+        ],
+        [
+          50.5,
+          16
+        ],
+        [
+          50.5,
+          30
+        ]
+      ],
+      "status": "localized-photo-fit-fillet; front/east controls inherited-unverified; NOT printed A01 R6.00 or authenticated A04 R15.00",
+      "sources": [
+        "N01",
+        "N02",
+        "N07",
+        "N08"
+      ],
+      "notCadastralBoundary": true,
+      "rearY30IsCropOnly": true,
+      "keepV08TraceAsEvidence": true
+    },
+    "annexes": {
+      "revision": "v09",
+      "iteration": "r3",
+      "status": "Owner-confirmed uses and attachment; legacy grids recovered, exterior faces/photo-fit NOT measured as-built",
+      "units": "metres, local plan X,Y to world X,height,-Y",
+      "sources": [
+        {
+          "id": "R2-01",
+          "date": "2024-06",
+          "role": "south curved-glass corner"
+        },
+        {
+          "id": "R2-02",
+          "date": "2023-10",
+          "role": "corner and workshop connection, historical support"
+        },
+        {
+          "id": "R2-03",
+          "date": "2024-06",
+          "role": "attached workshop side elevation"
+        },
+        {
+          "id": "R2-04",
+          "date": "2019-02",
+          "role": "historical rear workshop form only"
+        },
+        {
+          "id": "A02",
+          "file": "LINE_ALBUM_Showroom_260912_11.jpg",
+          "role": "legacy whole plan, issue/date unresolved"
+        },
+        {
+          "id": "R3-DRAWINGS",
+          "file": "LINE_ALBUM_Showroom_260913_1.jpg",
+          "role": "42m A–H / 48m numeric grid chain with closeup corroboration"
+        },
+        {
+          "id": "R3-NIGHT",
+          "file": "S__78577753_0.jpg",
+          "role": "owner-supplied current condition, capture date unverified; recessed glazing and fence-adjacent flags"
+        }
+      ],
+      "meeting": {
+        "id": "EXISTING-SOUTH-MEETING",
+        "use": "Small meeting room, separate from Sales, confirmed by owner",
+        "frontArc": {
+          "center": [
+            -1.9,
+            0
+          ],
+          "radius": 1.9,
+          "startRadians": 3.141592653589793,
+          "endRadians": 6.283185307179586,
+          "segments": 32
+        },
+        "rearPoints": [
+          [
+            0,
+            8
+          ],
+          [
+            -2.3,
+            8
+          ],
+          [
+            -3.8,
+            5.7
+          ]
+        ],
+        "sharedSalesEdge": {
+          "x": 0,
+          "yMin": 0,
+          "yMax": 8,
+          "doorYMin": 6.2,
+          "doorYMax": 7.3
+        },
+        "floorLevel": 0,
+        "ceilingHeight": 3.2,
+        "upperBandTop": 7.2,
+        "masterTowerCorner": {
+          "center": [
+            -1.9,
+            0
+          ],
+          "radius": 1.9,
+          "leftX": -3.8,
+          "frontY": -1.9,
+          "status": "Shared quarter-circle upper profile and semicircular ground pocket; photo/plan-fit, not printed radius"
+        },
+        "fitEnvelope": {
+          "xMin": -3.8,
+          "xMax": 0,
+          "yMin": -1.9,
+          "yMax": 8
+        },
+        "geometryStatus": "Outer envelope only; radius, taper, heights, internal subdivisions and door position approximate. Not certified net room area or egress width.",
+        "furnitureStatus": "Six meeting seats illustrate use, not surveyed furniture or certified capacity"
+      },
+      "workshop": {
+        "id": "EXISTING-ATTACHED-WORKSHOP",
+        "footprint": {
+          "xMin": 0,
+          "xMax": 40,
+          "yMin": 16,
+          "yMax": 42
+        },
+        "gridEnvelope": [
+          [
+            0,
+            16
+          ],
+          [
+            40,
+            16
+          ],
+          [
+            40,
+            42
+          ],
+          [
+            2.02,
+            42
+          ],
+          [
+            1.11,
+            35.5
+          ],
+          [
+            0,
+            28.5
+          ],
+          [
+            0,
+            22
+          ]
+        ],
+        "attachment": {
+          "edge": "showroom rear / E",
+          "y": 16,
+          "status": "Attachment confirmed by owner and side photographs; openings not measured"
+        },
+        "floorLevel": -0.6,
+        "floorDatumStatus": "Legacy +0.90 relative to showroom +1.50; current levels require survey",
+        "eavesHeight": 6.2,
+        "ridgeHeight": 8.2,
+        "ridgeY": 29,
+        "awning": {
+          "xMin": 40,
+          "xMax": 49.2,
+          "yMin": 16,
+          "yMax": 42,
+          "wallHeight": 3.55,
+          "outerHeight": 3.35,
+          "status": "Broad cross-passage roof front confirmed by current photos50/51; width and rear continuation are editable trials"
+        },
+        "sideGate": {
+          "xMin": 40.2,
+          "xMax": 49,
+          "y": 16.4,
+          "height": 2.35,
+          "status": "Existing internal cross-passage mesh gate, photo-fit; NOT an opening in road fence"
+        },
+        "material": "Light warm-grey corrugated metal, blue-grey ribbon windows, dark open/screened lower bays, steel awning",
+        "geometryStatus": "E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Interior equipment belongs to a separate proposed coordination layer, not existing/as-built."
+      },
+      "contextCropY": 50,
+      "limitations": [
+        "Legacy A–H42m grid chain is not a current surveyed external wall dimension",
+        "Workshop roof slopes, levels and setbacks need field survey",
+        "Historical 2019 image supports form only, not current detail",
+        "No property or public road boundary certified"
+      ]
+    },
+    "legacyDrawingControls": {
+      "revision": "v09-r3",
+      "units": "metres; plan X,Y to world X,height,-Y",
+      "authority": "Printed legacy grid distances, NOT current surveyed wall faces or certified as-built",
+      "sources": [
+        "LINE_ALBUM_Showroom_260913_1.jpg",
+        "LINE_ALBUM_Showroom_260913_2.jpg",
+        "LINE_ALBUM_Showroom_260913_3.jpg",
+        "S__78577701_0.jpg",
+        "S__78577723_0.jpg",
+        "S__78577728_0.jpg"
+      ],
+      "letterGrid": {
+        "H": 0,
+        "G": 2.5,
+        "F": 8,
+        "E": 16,
+        "D": 22,
+        "C": 28.5,
+        "B": 35.5,
+        "A": 42
+      },
+      "numericGrid": {
+        "1": 0,
+        "2": 1.11,
+        "3": 2.02,
+        "4": 8,
+        "5": 16,
+        "6": 24,
+        "7": 32,
+        "8": 40,
+        "9": 48
+      },
+      "localAliasToOriginal": {
+        "LX0": "1",
+        "LX1": "4",
+        "LX2": "5",
+        "LX3": "6",
+        "LX4": "7",
+        "LX5": "8"
+      },
+      "nestedSpans": {
+        "1-4": 8,
+        "2-4": 6.89,
+        "3-4": 5.98
+      },
+      "overall": {
+        "A-H": 42,
+        "E-A": 26,
+        "1-9": 48
+      },
+      "datum": {
+        "modelShowroom": 0,
+        "legacyShowroom": 1.5,
+        "legacyWorkshop": 0.9,
+        "legacyServiceReception": 1.2,
+        "legacySideService": 1,
+        "currentRoadBenchmark": null
+      },
+      "limitations": [
+        "Three full-sheet photographs are views of the same legacy sheet, not independent surveyed revisions",
+        "Historical spot levels do not establish current road or apron levels",
+        "Retain local aliases and showroom coordinates so existing comment pins do not move",
+        "Dimensions control grids only; roof overhangs, wall thicknesses and exterior heights remain inferred"
+      ]
+    },
+    "workshopStudy": {
+      "revision": "v09-r3",
+      "status": "PROPOSED COORDINATION STUDY — not as-built, MB/smart approval or engineering certification",
+      "sources": [
+        {
+          "id": "D01",
+          "pages": [
+            2,
+            24,
+            25,
+            26,
+            27
+          ],
+          "title": "smart SiS/WiW Requirement Summary V3, 1 September 2026"
+        },
+        {
+          "id": "D02",
+          "pages": [
+            2,
+            203,
+            207,
+            260
+          ],
+          "title": "MB Retail Experience Volume 2, 2023"
+        }
+      ],
+      "layoutBasis": "Legacy grid A–B6.5m bay row / B–C7m manoeuvring zone / C–D6.5m row / D–E6m interface. These are grid bands, not approved clearances.",
+      "clearDriveBand": {
+        "xMin": 8,
+        "xMax": 49.2,
+        "yMin": 28.5,
+        "yMax": 35.5,
+        "status": "Concept band kept free of model equipment, NOT verified swept path"
+      },
+      "smartBays": [
+        {
+          "id": "SMART-HV",
+          "label": "ช่องงานแรงดันสูง · รออนุมัติ",
+          "type": "HV",
+          "xMin": 32,
+          "xMax": 36,
+          "yMin": 35.5,
+          "yMax": 42
+        },
+        {
+          "id": "SMART-ME",
+          "label": "ช่องงาน M/E · รออนุมัติ",
+          "type": "ME",
+          "xMin": 36,
+          "xMax": 40,
+          "yMin": 35.5,
+          "yMax": 42
+        }
+      ],
+      "bayDimensionsStatus": "Two 4 × 6.5m grid allocations are a planning trial; operational clear width/depth, doors, lifts and safety envelope are NOT approved",
+      "mbPlanningCells": {
+        "xMin": 8,
+        "xMax": 32,
+        "pitch": 4,
+        "rows": [
+          [
+            22,
+            28.5
+          ],
+          [
+            35.5,
+            42
+          ]
+        ],
+        "status": "12 illustrative MB allocation cells, NOT surveyed lift count, committed capacity or permission to convert existing MB bays"
+      },
+      "sharedParts": {
+        "xMin": 2.5,
+        "xMax": 7.3,
+        "yMin": 35.8,
+        "yMax": 41.3,
+        "shelfSeparation": "MB and smart distinct labelled shelves; not battery/quarantine storage"
+      },
+      "serviceReception": {
+        "xMin": 32,
+        "xMax": 36,
+        "yMin": 16,
+        "yMax": 22,
+        "floorLevel": -0.3,
+        "status": "Legacy service strip approximate; shared reception subject to MAR20/MPS II applicability"
+      },
+      "hvProtection": {
+        "matRating": null,
+        "approvedMatDimensions": null,
+        "approvedBarrierHeight": null,
+        "status": "Mat and barrier represented as placeholders; technical design and access/isolation/rescue procedures require approved HV specialist"
+      },
+      "charger": {
+        "brand": null,
+        "power": null,
+        "status": "RFI: D01 p2 item25 MB/shared vs p25 smart-branded wallbox; generic reserved wallbox only"
+      },
+      "lighting": {
+        "orientation": "Continuous rows parallel to lift/workbench axis",
+        "source": "D02 PDF p260 LP32",
+        "lux": null,
+        "calculationStatus": "not performed"
+      },
+      "openGates": [
+        "Current workshop survey and retained MB capacity",
+        "smart/MB site-specific technical criteria and conversion approval",
+        "HV risk assessment and certified protection products",
+        "Lift/slab/anchorage structural assessment",
+        "Electric power, charging, data/VLAN and commissioning",
+        "Approved local-language sign artwork and fonts",
+        "Accessible routes, fire egress and vehicle swept paths",
+        "Real browser/GPU and mobile visual review"
+      ]
+    },
+    "frontDrain": {
+      "insideOffset": 0.3,
+      "width": 0.3,
+      "visualDepth": 0.12,
+      "status": "Open channel inside fence seen in current photos; visible recess proxy, not drainage engineering"
+    },
+    "kerb": {
+      "front": "worn-black-white",
+      "junctionCurve": "worn-red-white",
+      "colourTransitionNearX": 40,
+      "transitionStatus": "approximate-photo-fit-not-proposed-paint",
+      "sources": [
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08"
+      ]
+    },
+    "cameraMetadataWarning": "Earth view coordinates and Camera 10m/11m are not model survey points or authenticated ground/structure levels",
+    "existingInventory": [
+      {
+        "id": "MB-FLAG-1",
+        "type": "mercedes-banner",
+        "xy": [
+          13.2,
+          -7.75
+        ],
+        "poleHeightAboveApron": 7,
+        "clothWidth": 1,
+        "clothHeight": 3,
+        "sources": [
+          "N04",
+          "N05",
+          "N06"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "countStatus": "owner-confirmed"
+      },
+      {
+        "id": "MB-FLAG-2",
+        "type": "mercedes-banner",
+        "xy": [
+          16.8,
+          -7.75
+        ],
+        "poleHeightAboveApron": 7,
+        "clothWidth": 1,
+        "clothHeight": 3,
+        "sources": [
+          "N04",
+          "N05",
+          "N06"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "countStatus": "owner-confirmed"
+      },
+      {
+        "id": "MB-FLAG-3",
+        "type": "mercedes-banner",
+        "xy": [
+          20.4,
+          -7.75
+        ],
+        "poleHeightAboveApron": 7,
+        "clothWidth": 1,
+        "clothHeight": 3,
+        "sources": [
+          "N04",
+          "N05",
+          "N06"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "countStatus": "owner-confirmed"
+      },
+      {
+        "id": "TH-FLAG-1",
+        "type": "thai-national-flag",
+        "xy": [
+          28.2,
+          -7.75
+        ],
+        "poleHeightAboveApron": 8.2,
+        "clothWidth": 1.6,
+        "clothHeight": 1.07,
+        "sources": [
+          "N03",
+          "N05",
+          "N06",
+          "N08"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "countStatus": "owner-confirmed"
+      },
+      {
+        "id": "TH-FLAG-2",
+        "type": "thai-national-flag",
+        "xy": [
+          37.2,
+          -7.75
+        ],
+        "poleHeightAboveApron": 8.2,
+        "clothWidth": 1.6,
+        "clothHeight": 1.07,
+        "sources": [
+          "N03",
+          "N05",
+          "N06",
+          "N08"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "countStatus": "owner-confirmed"
+      },
+      {
+        "id": "MB-PYLON",
+        "type": "thin-two-sided-pylon",
+        "xy": [
+          41.5,
+          -7.05
+        ],
+        "width": 1.6,
+        "depth": 0.42,
+        "heightAboveApron": 8.8,
+        "plinthHeight": 0.18,
+        "rotationRadians": 1.5707963267948966,
+        "yawStatus": "owner-confirmed: broad faces perpendicular to main road; centre retained",
+        "sources": [
+          "N01",
+          "N03",
+          "N05",
+          "N06",
+          "N08"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "retainInProposal": true
+      },
+      {
+        "id": "SHRINE",
+        "type": "existing-chinese-shrine",
+        "xy": [
+          46.7,
+          -2.8
+        ],
+        "terraceWidth": 3.5,
+        "terraceDepth": 3.2,
+        "terraceRise": 0.43,
+        "roofWidth": 4,
+        "roofDepth": 3.48,
+        "topAboveApron": 4.79,
+        "sources": [
+          "N01",
+          "N07",
+          "N08"
+        ],
+        "positionStatus": "photo-fit-not-surveyed",
+        "retainInProposal": true,
+        "keepApproachFromInside": true,
+        "notPublicGateway": true,
+        "preliminaryPhotoEnvelope": {
+          "terraceWidth": 4.1,
+          "terraceDepth": 4.1,
+          "terraceRise": 0.18,
+          "roofWidth": 4.3,
+          "roofDepth": 4.3,
+          "topAboveApron": 4.6,
+          "status": "initial research candidate, superseded by authored mesh dimensions below; neither surveyed"
+        },
+        "renderedEnvelope": {
+          "width": 3.9958,
+          "depth": 3.706,
+          "height": 4.79,
+          "rotationRadians": 3.141592653589793,
+          "status": "authored mesh bounds, NOT measured shrine dimensions"
+        }
+      },
+      {
+        "id": "EXISTING-DIRECTION",
+        "type": "driveway-direction-board",
+        "xy": [
+          12.1,
+          -7.5
+        ],
+        "width": 1.25,
+        "depth": 0.25,
+        "heightAboveApron": 2,
+        "rotationRadians": 1.5707963267948966,
+        "yawStatus": "owner-confirmed: broad faces perpendicular to main road; two-face wayfinding study, arrow artwork needs on-site check",
+        "text": [
+          "Entrance ←",
+          "Parking ←",
+          "Sales ←",
+          "Service ←",
+          "Spare Parts ←"
+        ],
+        "sources": [
+          "N04",
+          "N05"
+        ],
+        "positionStatus": "right-edge-of-left-driveway-photo-fit",
+        "retainInProposal": true,
+        "faces": {
+          "frontEntrance": [
+            [
+              "Entrance",
+              "left"
+            ],
+            [
+              "Parking",
+              "left"
+            ],
+            [
+              "Sales",
+              "left"
+            ],
+            [
+              "Service",
+              "left"
+            ],
+            [
+              "Spare Parts",
+              "left"
+            ]
+          ],
+          "reverseExit": [
+            [
+              "Exit",
+              "left"
+            ],
+            [
+              "Parking",
+              "right"
+            ],
+            [
+              "Sales",
+              "right"
+            ],
+            [
+              "Service",
+              "right"
+            ],
+            [
+              "Spare Parts",
+              "right"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "FACADE-MB",
+        "type": "existing-facade-lettering",
+        "xy": [
+          8.5,
+          -0.1
+        ],
+        "text": "Mercedes-Benz",
+        "width": 11,
+        "textHeight": 0.7,
+        "centreHeight": 3.85,
+        "sources": [
+          "N03",
+          "N04",
+          "N06"
+        ],
+        "positionStatus": "retain-v08-photo-approximate-zone",
+        "retainInProposal": true,
+        "typography": "generic-approximation-unless-official-vector-sourced"
+      },
+      {
+        "id": "FACADE-DEALER",
+        "type": "existing-facade-lettering",
+        "xy": [
+          19.65,
+          -0.1
+        ],
+        "text": "Chitchai Chonburi",
+        "width": 7.4,
+        "textHeight": 0.65,
+        "centreHeight": 3.85,
+        "sources": [
+          "N03",
+          "N04",
+          "N06"
+        ],
+        "positionStatus": "retain-v08-photo-approximate-zone",
+        "retainInProposal": true,
+        "typography": "generic-approximation-unless-official-vector-sourced"
+      }
     ]
   },
   "feedbackPolicy": {
     "submissionEnabled": true,
-    "reason": "Owner-authorized v08 feedback; live capability check and matching receipt required. Interior map remains interior-only; exterior comments use named area and view context."
-  }
+    "reason": "Live backend must explicitly support v09 modes/views and exteriorScheme. Exterior comments use named area and view, pins remain interior-only."
+  },
+  "exterior": {
+    "schema": 1,
+    "revision": "v09",
+    "status": "DESIGN PROPOSAL — supplier / smart / owner review pending; NOT approved for construction",
+    "concept": "A restrained smart arrival marker at the left driveway; retain MB identity and shrine corner; concentrate smart parking on the side apron",
+    "source": "Requirement summary for SMART Shop in Shop, version 3.0, 1 September 2026, PDF pages 2 and 4–13",
+    "units": "metres; X,Y in unchanged local building grid; world X,height,-Y",
+    "pylon": {
+      "id": "SP1",
+      "x": -1.8,
+      "y": -3.3,
+      "width": 1.466,
+      "height": 4.515,
+      "depth": 0.28,
+      "status": "D01 p4–5 small size; shifted forward to clear restored meeting room, not an existing-object relocation. Depth/foundation/access provisional. Original smart UK symbol and wordmark paths; stacked spacing and production artwork pending supplier approval."
+    },
+    "flag": {
+      "id": "SF1",
+      "x": -4,
+      "y": -3.5,
+      "width": 1.2,
+      "height": 4.5,
+      "poleHeight": 7.2,
+      "status": "D01 p4/6 flag dimensions; moved forward to clear meeting room. Pole height/base/circulation provisional; separate from existing MB 3 + Thai 2"
+    },
+    "directionBoard": {
+      "id": "SD1",
+      "enabled": false,
+      "approval": "waiver_pending",
+      "width": 0.75,
+      "height": 1.7,
+      "depth": 0.05,
+      "status": "OMITTED by owner: share retained MB directional sign to avoid duplication. D01 p4/10 remains required (flexible); owner will request waiver. No waiver granted or submitted by this model."
+    },
+    "facadeLogo": {
+      "id": "S-FACADE",
+      "type": "Type 4 indoor window / SL2-sized study retained from v07",
+      "center": [
+        35.97,
+        2.73
+      ],
+      "width": 0.98,
+      "height": 1.32,
+      "status": "Existing v07 proposal, NOT an installed existing smart logo; keep row6-directed location. D01 p7–9 brand spacing needs real MB wordmark width, sightline and supplier artwork verification. No duplicate logo added."
+    },
+    "careLogo": {
+      "id": "SC1",
+      "x": 41.5,
+      "y": 15.96,
+      "centerHeight": 3.36,
+      "width": 2.07,
+      "height": 0.3,
+      "depth": 0.025,
+      "status": "D01 p4/13 size on front-end fascia of EXISTING ATTACHED WORKSHOP AWNING, not sales entrance. Exact service inspection point, artwork and mounting pending operator/supplier confirmation."
+    },
+    "serviceCanopy": {
+      "replacedBy": "site.annexes.workshop.awning",
+      "status": "Detached canopy proxy removed. Existing awning is integrated with attached rear workshop; no new standalone canopy proposed."
+    },
+    "parking": [
+      {
+        "id": "SC-P1",
+        "use": "smart customer",
+        "x": 47.9,
+        "y": 5.75,
+        "width": 2.8,
+        "length": 5.5
+      },
+      {
+        "id": "ST-P1",
+        "use": "smart test drive 1",
+        "x": 47.9,
+        "y": 11.45,
+        "width": 2.8,
+        "length": 5.5
+      },
+      {
+        "id": "ST-P2",
+        "use": "smart test drive 2",
+        "x": 47.9,
+        "y": 17.15,
+        "width": 2.8,
+        "length": 5.5
+      }
+    ],
+    "parkingStatus": "D01 p12: 1 customer + 2 test-drive bays, white delineation without floor logo. Candidate side allocation only; must preserve required MB allocation FIRST. Full-site MB inventory, turn/swept paths, exits and levels not validated. This is not a parking-capacity approval.",
+    "sharedCharging": "Retain the v07 shared existing MB wallbox concept. No new charger or capacity invented; operating reach, electrical compatibility and safe cable route need verification.",
+    "retained": [
+      "Existing MB pylon",
+      "Three existing MB flags",
+      "Two existing Thai flags",
+      "Chinese shrine",
+      "Existing Mercedes-Benz and dealer signs",
+      "Existing main entry canopy",
+      "Existing interior v07 geometry and three Flex modes"
+    ],
+    "approvalGates": [
+      "smart review of pylon/flag location; SD1 omitted per owner and uses shared MB wayfinding, WAIVER PENDING, not an approved exception",
+      "Facade mark method/size and D01 p7 clear spacing relative to actual MB wordmarks",
+      "Field survey of grid X, kerb/fence curves, levels and property/public-road boundaries",
+      "Utilities clearance, sign foundations, wind load, lighting/power and permissions by qualified local team",
+      "Retain MB parking minimum before assigning smart 1+2; validate vehicle movement and pedestrian access",
+      "Operator confirms side/rear canopy as smart service inspection point before care sign installation"
+    ],
+    "workshopStudy": {
+      "revision": "v09-r3",
+      "status": "PROPOSED COORDINATION STUDY — not as-built, MB/smart approval or engineering certification",
+      "sources": [
+        {
+          "id": "D01",
+          "pages": [
+            2,
+            24,
+            25,
+            26,
+            27
+          ],
+          "title": "smart SiS/WiW Requirement Summary V3, 1 September 2026"
+        },
+        {
+          "id": "D02",
+          "pages": [
+            2,
+            203,
+            207,
+            260
+          ],
+          "title": "MB Retail Experience Volume 2, 2023"
+        }
+      ],
+      "layoutBasis": "Legacy grid A–B6.5m bay row / B–C7m manoeuvring zone / C–D6.5m row / D–E6m interface. These are grid bands, not approved clearances.",
+      "clearDriveBand": {
+        "xMin": 8,
+        "xMax": 49.2,
+        "yMin": 28.5,
+        "yMax": 35.5,
+        "status": "Concept band kept free of model equipment, NOT verified swept path"
+      },
+      "smartBays": [
+        {
+          "id": "SMART-HV",
+          "label": "ช่องงานแรงดันสูง · รออนุมัติ",
+          "type": "HV",
+          "xMin": 32,
+          "xMax": 36,
+          "yMin": 35.5,
+          "yMax": 42
+        },
+        {
+          "id": "SMART-ME",
+          "label": "ช่องงาน M/E · รออนุมัติ",
+          "type": "ME",
+          "xMin": 36,
+          "xMax": 40,
+          "yMin": 35.5,
+          "yMax": 42
+        }
+      ],
+      "bayDimensionsStatus": "Two 4 × 6.5m grid allocations are a planning trial; operational clear width/depth, doors, lifts and safety envelope are NOT approved",
+      "mbPlanningCells": {
+        "xMin": 8,
+        "xMax": 32,
+        "pitch": 4,
+        "rows": [
+          [
+            22,
+            28.5
+          ],
+          [
+            35.5,
+            42
+          ]
+        ],
+        "status": "12 illustrative MB allocation cells, NOT surveyed lift count, committed capacity or permission to convert existing MB bays"
+      },
+      "sharedParts": {
+        "xMin": 2.5,
+        "xMax": 7.3,
+        "yMin": 35.8,
+        "yMax": 41.3,
+        "shelfSeparation": "MB and smart distinct labelled shelves; not battery/quarantine storage"
+      },
+      "serviceReception": {
+        "xMin": 32,
+        "xMax": 36,
+        "yMin": 16,
+        "yMax": 22,
+        "floorLevel": -0.3,
+        "status": "Legacy service strip approximate; shared reception subject to MAR20/MPS II applicability"
+      },
+      "hvProtection": {
+        "matRating": null,
+        "approvedMatDimensions": null,
+        "approvedBarrierHeight": null,
+        "status": "Mat and barrier represented as placeholders; technical design and access/isolation/rescue procedures require approved HV specialist"
+      },
+      "charger": {
+        "brand": null,
+        "power": null,
+        "status": "RFI: D01 p2 item25 MB/shared vs p25 smart-branded wallbox; generic reserved wallbox only"
+      },
+      "lighting": {
+        "orientation": "Continuous rows parallel to lift/workbench axis",
+        "source": "D02 PDF p260 LP32",
+        "lux": null,
+        "calculationStatus": "not performed"
+      },
+      "openGates": [
+        "Current workshop survey and retained MB capacity",
+        "smart/MB site-specific technical criteria and conversion approval",
+        "HV risk assessment and certified protection products",
+        "Lift/slab/anchorage structural assessment",
+        "Electric power, charging, data/VLAN and commissioning",
+        "Approved local-language sign artwork and fonts",
+        "Accessible routes, fire egress and vehicle swept paths",
+        "Real browser/GPU and mobile visual review"
+      ]
+    }
+  },
+  "defaultExteriorScheme": "proposed",
+  "iteration": "r3"
 };

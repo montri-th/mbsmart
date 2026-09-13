@@ -17,6 +17,7 @@
   let clientId = uuid();
   try {const saved = localStorage.getItem('bc-review-device');if (/^[0-9a-f-]{36}$/i.test(saved || '')) clientId = saved; else localStorage.setItem('bc-review-device', clientId);} catch (_) { /* Memory-only works on shared/restricted browsers. */ }
   const currentMode = () => $('mode').value;
+  const currentExterior = () => $('exterior-scheme').value;
   const currentView = () => window.BC_VIEWER?.inspect().view || document.querySelector('[data-view][aria-pressed=true]')?.dataset.view || 'interior';
   const inside = (x,y) => Number.isFinite(x) && Number.isFinite(y) && x>=0 && x<=40 && y>=0 && y<=16 && !(x>24 && y<2.5);
   const validLocation = q => q.type === 'area' || (['point','rectangle'].includes(q.type) && inside(q.x,q.y) && (q.type !== 'rectangle' || (inside(q.x2,q.y2) && inside(q.x2,q.y) && inside(q.x,q.y2) && q.x2-q.x>=.05 && q.y2-q.y>=.05)));
@@ -64,7 +65,7 @@
     $('location-summary').textContent=location.type==='area'?'ยังไม่ระบุจุดเฉพาะ':location.type==='point'?`${grid(location.x,location.y)} · ${coord(location.x,location.y)}`:`${coord(location.x,location.y)} ถึง ${coord(location.x2,location.y2)}`;
     $('show-location').hidden=location.type==='area' || !window.BC_VIEWER;
     const viewLabel=document.querySelector(`[data-view="${currentView()}"]`)?.textContent||currentView();
-    $('comment-context').textContent=`ร่าง ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision} · ${viewLabel}${location.type==='area'?'':' · หมุดภายในอาคาร'}`;
+    $('comment-context').textContent=`ร่าง ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision} · ${currentExterior()==='proposed'?'ข้อเสนอ exterior smart':'ภายนอกเดิม'} · ${viewLabel}${location.type==='area'?'':' · หมุดภายในอาคาร'}`;
     window.BC_VIEWER?.setReviewLocation(location);
   }
   function pick(p) {
@@ -87,8 +88,9 @@
   $('mode').addEventListener('change',()=>{changed();sync();});
   $('flex-ac').addEventListener('change',()=>{changed();sync();});
   document.addEventListener('bc:viewchange',()=>{changed();sync();});
+  document.addEventListener('bc:exteriorchange',()=>{changed();sync();});
   form.addEventListener('input',()=>{changed();$('comment-count').textContent=`${$('comment-text').value.length.toLocaleString('en-US')} / 3,000`;});
-  function payload() {return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:currentMode(),modelRevision:revision,ac:$('flex-ac').checked,view:currentView(),website:$('comment-website').value};}
+  function payload() {return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:currentMode(),modelRevision:revision,ac:$('flex-ac').checked,exteriorScheme:currentExterior(),view:currentView(),website:$('comment-website').value};}
   const comparable=p=>JSON.stringify({...p,id:''});
   form.addEventListener('submit',async e=>{
     e.preventDefault();if(sending || !submissionEnabled || !validEndpoint)return;
@@ -123,6 +125,7 @@
     const type=query.get('loc');
     if(['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(validNumericParam('x')&&validNumericParam('y')&&(type!=='rectangle'||validNumericParam('x2')&&validNumericParam('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
     if(views.includes(query.get('view')))window.BC_VIEWER?.setView(query.get('view'));
+    if(['existing','proposed'].includes(query.get('exterior'))){$('exterior-scheme').value=query.get('exterior');$('exterior-scheme').dispatchEvent(new Event('change'));}
   }
   sync();$('submit-comment').disabled=!validEndpoint;
   $('connection-notice').hidden=validEndpoint;
@@ -132,7 +135,7 @@
     status('กำลังตรวจว่าระบบรับความเห็นรองรับ '+revision+'…');
     const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
     fetch(endpoint,{credentials:'omit',signal:controller.signal}).then(r=>{if(!r.ok)throw Error('health');return r.json();}).then(h=>{
-      validEndpoint=h.ok===true&&h.schema===1&&h.service==='mbsmart-comments'&&Array.isArray(h.revisions)&&h.revisions.includes(revision)&&Array.isArray(h.modesByRevision?.[revision])&&modes.every(m=>h.modesByRevision[revision].includes(m))&&Array.isArray(h.viewsByRevision?.[revision])&&views.every(v=>h.viewsByRevision[revision].includes(v));
+      validEndpoint=h.ok===true&&h.schema===1&&h.service==='mbsmart-comments'&&Array.isArray(h.revisions)&&h.revisions.includes(revision)&&Array.isArray(h.modesByRevision?.[revision])&&modes.every(m=>h.modesByRevision[revision].includes(m))&&Array.isArray(h.viewsByRevision?.[revision])&&views.every(v=>h.viewsByRevision[revision].includes(v))&&Array.isArray(h.exteriorSchemesByRevision?.[revision])&&['existing','proposed'].every(s=>h.exteriorSchemesByRevision[revision].includes(s));
       $('submit-comment').disabled=!validEndpoint;$('connection-notice').hidden=validEndpoint&&!revisionWarning;
       if(validEndpoint&&revisionWarning)$('connection-notice').textContent=revisionWarning;
       if(!validEndpoint)$('connection-notice').textContent='เปิดตรวจแบบ '+revision+' ได้แล้ว — ยังไม่เปิดส่งความเห็นรุ่นนี้ ระหว่างรออัปเดตระบบ Google ของโครงการ ข้อความที่พิมพ์ยังไม่ถูกบันทึก กรุณาคัดลอกเก็บไว้ก่อนปิดหน้า';

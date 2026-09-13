@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "modelRevision": "v07",
-  "title": "smart SiS / WiW review matrix - Benz Chitchai v07 intent",
+  "modelRevision": "v09",
+  "title": "smart SiS / WiW review matrix — v09 exterior proposal + retained interior",
   "auditState": "source_review_complete_model_implementation_not_audited",
   "approvalState": "not_approved",
   "source": {
@@ -14,15 +14,57 @@
     "pageReferenceConvention": "1-based PDF page number",
     "masterNumberingPage": 2,
     "confidentiality": "Document marked Strictly confidential. Keep original PDF and page renders out of the public site; this matrix is a task-derived review summary, not a reproduction of the manual.",
-    "readCoverage": {"extractedTextPages": "1-33", "visualPages": [2,8,9,11,16,20,21,22,23,24,25,27,29,30,31,32]}
+    "readCoverage": {
+      "extractedTextPages": "1-33",
+      "visualPages": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        29,
+        30,
+        31,
+        32
+      ]
+    }
   },
   "scope": {
-    "focus": "smart display interior, source-driven geometry/material intent and review questions",
-    "userSelections": {"module": "one complete 3B only; no 3A", "displayVehicles": 1, "vehicle": "smart #5", "exterior": "Saturn Beige Matte", "interior": "Shadow Black"},
+    "focus": "Separate exterior proposal from photo-reconciled existing condition; retain v07 interior",
+    "userSelections": {
+      "module": "one complete 3B only; no 3A",
+      "displayVehicles": 1,
+      "vehicle": "smart #5",
+      "exterior": "Saturn Beige Matte",
+      "interior": "Shadow Black"
+    },
     "userReportedDiscussion": "Owner reported smart accepts 3B alone but not 3A alone. This is not recorded documentary approval of the separate two-vehicle minimum, accessory wall exception, dimensions, finishes or complete site compliance.",
     "ownerAdoptedChanges": "Add installation-type4 indoor-window logo at the owner pin with proposed SL2 size; represent a real-use iPad E-price stand; reuse the existing MB wallbox and remove the newly proposed standalone smart charger. Adoption is project design direction, not smart compliance acceptance. Private comment-row evidence is retained only in the internal companion report, not in this JSON or public projection.",
     "frozenOtherWork": "Mercedes detail upgrades are out of this iteration. Existing shared counter/lounge and handover alternatives remain subject to geometry/operational review.",
-    "notDemonstratedByRender": ["written exceptions", "MB site classification and display compliance", "Grand Stage eligibility", "electrical safety and charger commissioning", "clearances and vehicle movement", "exterior identity and parking", "workshop facilities and equipment", "operational systems, staffing and VLAN separation"]
+    "notDemonstratedByRender": [
+      "written exceptions",
+      "MB site classification and display compliance",
+      "Grand Stage eligibility",
+      "electrical safety and charger commissioning",
+      "clearances and vehicle movement",
+      "exterior identity and parking",
+      "workshop facilities and equipment",
+      "operational systems, staffing and VLAN separation"
+    ]
   },
   "standards": {
     "required": "Required in master p2",
@@ -38,85 +80,1214 @@
     "not_modelled_exterior": "Exterior/parking requirement not modelled in this interior-focused iteration",
     "not_modelled_workshop": "Workshop requirement not modelled or commissioned",
     "not_modelled_operation": "Operational evidence required outside the 3D model",
-    "optional_not_added": "Optional standalone item not added; not a compliance failure by itself"
+    "optional_not_added": "Optional standalone item not added; not a compliance failure by itself",
+    "proposed_review": "Modelled exterior design intent in v09, not an approval or complete compliance finding",
+    "waiver_pending": "Omitted at owner's request; requirement remains open pending written smart waiver, not approved"
   },
   "rows": [
-    {"id":"1","area":"exterior","title":"smart pylon","standard":"required_flexible","sourcePages":[2,4,5,28],"status":"not_modelled_exterior","requirement":"Black pylon with illuminated upper logo and lower lettering; existing large pylon substructure may be reused subject to fit.","dimensionsMm":{"variants":[{"height":4515,"width":1466},{"height":8000,"width":2020}]},"review":"Confirm site position, variant, structural reuse and coexistence with MB identity."},
-    {"id":"2","area":"exterior","title":"smart flag","standard":"required_flexible","sourcePages":[2,4,6,28],"status":"not_modelled_exterior","requirement":"Black flag, white logo, lime strip at bottom.","dimensionsMm":{"height":4500,"width":1200},"review":"Confirm flag location and attachment with site owner and smart."},
-    {"id":"3","area":"exterior","title":"Façade logo","standard":"required","sourcePages":[2,4,7,8,9,28],"status":"intended_review","requirement":"Select a source-standard logo size matched to the existing MB logo; location is flexible and MB logo/lettering relocation may be needed. p8 installation type4 places the logo on the indoor display window; this installation-type number is not a size code.","dimensionsMm":{"heightWidthVariants":[[1320,980],[1770,1310],[2210,1630],[2650,1960]],"proposed":{"sizeCode":"SL2","height":1320,"width":980,"matchingMBSize":"360SM","matchingMBSizeVerified":false}},"v07Intent":"Owner-adopted installation type4 indoor-display-window logo, proposed SL2 0.98m wide x1.32m high, at owner pin X35.97,Y2.73. Type4 does not mean SL4.","placement":{"planXMetres":35.97,"planYMetres":2.73,"basis":"owner comment pin; placement instruction, not an as-built survey","installationType":4},"review":"RFI: verify existing MB size/matching SL2, mounting elevation and supports, actual window/frame location, outward visibility and complete exterior identity. A proposed indoor-window logo does not establish site-wide exterior compliance."},
-    {"id":"4","area":"exterior","title":"Direction signboard","standard":"required_flexible","sourcePages":[2,4,10,28],"status":"not_modelled_exterior","requirement":"Black painted steel frame with 2.5 mm front aluminium panel.","dimensionsMm":{"height":1700,"width":750,"frontPanelThickness":2.5},"review":"Confirm approach visibility, foundation and pedestrian/vehicle clearances."},
-    {"id":"5","area":"exterior","title":"AC charger","standard":"shared_mb","sourcePages":[2,4,11,28],"status":"review_question","requirement":"Master permits sharing the MB-brand charger.","sourceConflict":"C01","review":"p11 calls the additional charger Optional. Confirm which existing charger is shared; do not treat display charger item10 as optional."},
-    {"id":"6","area":"exterior","title":"Customer and test-drive parking","standard":"required","sourcePages":[2,4,12,28],"status":"not_modelled_exterior","requirement":"Fulfil MB parking first; smart parking is additional. No painted logo is required on parking floor.","dimensionsMm":{"bayLength":5500,"bayWidth":2800},"subitems":[{"id":"6.1","title":"smart customer parking","standard":"required","sourcePages":[2,12,28],"minimumUnits":1},{"id":"6.2","title":"smart test-drive parking","standard":"required","sourcePages":[2,12,28],"minimumUnits":2}],"mbParkingByType":[{"type":"Urban","customer":10,"testDrive":8},{"type":"Rural","customer":5,"testDrive":6},{"type":"Small","customer":3,"testDrive":4}],"review":"Confirm dealership classification and count/site allocation; showroom display cars cannot substitute for parking bays."},
-    {"id":"7","area":"exterior","title":"smart care logo on canopy","standard":"required_flexible","sourcePages":[2,4,13,28],"status":"not_modelled_exterior","requirement":"Matt silver sandblasted stainless shell, acrylic front and internal LED illumination.","dimensionsMm":{"height":300,"width":2070,"steelShell":1,"transparentAcrylic":5,"opalAcrylic":5},"review":"Submit canopy location and mounting detail separately."},
-    {"id":"8","area":"display","title":"smart display module and vehicle count","standard":"required","sourcePages":[2,15,16,17,18,19,20,21,28],"status":"review_question","requirement":"Minimum two smart display vehicles; meet MB count and visibility first; Grand Stage cannot host smart.","v07Intent":"One complete Module3B with one smart #5 in owner-selected Saturn Beige Matte / Shadow Black. Do not add3A or a second car without owner direction.","subitems":[{"id":"8.vehicle_minimum","title":"smart count","standard":"required","sourcePages":[2,16],"requiredCount":2,"intendedCount":1,"status":"written_exception_required"},{"id":"8.mb_priority","title":"MB count and visibility priority","standard":"required","sourcePages":[16],"counts":[{"type":"Urban","new":7,"certified":1},{"type":"Rural","new":4,"certified":1},{"type":"Small","new":4,"certified":1}],"review":"MB5 display layout and temporary handover MB6 are not proof of MB classification or Certified inventory."},{"id":"8.grand_stage","title":"Grand Stage exclusion","standard":"required","sourcePages":[16],"review":"Owner/compliance must identify Grand Stage boundary before declaring smart placement eligible."},{"id":"8.module_3b","title":"Complete Module3B arrangement","standard":"required_selected_variant","sourcePages":[20],"review":"Review complete platform, edge/light, carpet, wall/screen, furniture, price stand and real charger; do not interpret this as3A+3B."}],"review":"Obtain written confirmation of one-car exception independently from owner-reported3B-alone acceptance; confirm exact variant, vehicle fit and full component set."},
-    {"id":"9","area":"display","title":"E-price stand","standard":"required","sourcePages":[2,20,21,28],"status":"intended_review","requirement":"Module3B includes one E-price stand; functional tablet/iPad is required and tablet is excluded from listed module package.","v07Intent":"Owner-adopted real-use iPad requirement represented by one E-price stand beside smart#5 with visible product information and iPad. The 3D representation is not a commissioned physical device.","review":"Verify actual working iPad, approved local product/price content, power/data and accessible placement; rendered screen is not commissioning."},
-    {"id":"10","area":"display","title":"Charging pile / AC charger","standard":"required","sourcePages":[2,20,21,22,28],"status":"review_question","requirement":"Real-use AC charger at display remains Required in master p2 and p22; photo examples show wall-box on a vertical stand. Sharing permissions for exterior item5 and workshop item25 do not by themselves establish an exception to display item10.","v07Intent":"Owner-adopted reuse of the existing MB wallbox. Remove the newly proposed standalone smart charger; represent SHARED-EV at model-only proxy X32.85,Y7.45 after clash avoidance against folded glass in AC-off mode. This is not a physical relocation or a surveyed existing position, and reuse is not yet accepted compliance.","existingCharger":{"id":"SHARED-EV","brand":"MB existing wallbox","planXMetres":32.85,"planYMetres":7.45,"basisPhotos":["LINE_ALBUM_Showroom_260912_8.jpg","LINE_ALBUM_Showroom_260912_9.jpg"],"positionStatus":"model_clash_avoidance_proxy_only_not_surveyed","actualSurveyedPosition":null,"physicalRelocationProposed":false,"commissioningStatus":"not_verified"},"sourceConflict":"C06","review":"RFI: confirm smart acceptance of this shared existing charger for required item10, surveyed location, actual capacity/availability, connection side and cable reach, safe charging workflow, electrical condition and commissioning. Do not imply the remote wallbox can charge the displayed#5 in place or draw a long cable as proof of compliance. The clash-adjusted model proxy must not be issued as installation coordinates."},
-    {"id":"11","area":"display","title":"Accessory display wall","standard":"required","sourcePages":[2,20,28],"status":"review_question","requirement":"Master and investment summary require an accessory display wall; p28 says included in item8.","v07Intent":"Keep one3B only. p20 product-display-wall callout8 is shown on3A; a separate accessory wall is not clearly shown on3B.","review":"For3B-only approval, may an approved accessory wall be integrated into3B, or is a written item11 exception needed? Do not silently omit and claim approval; do not add3A."},
-    {"id":"12","area":"display","title":"smart reception stand","standard":"shared_mb","sourcePages":[2,15,23,28],"status":"retained_shared_review","requirement":"Master allows sharing with MB; a separate smart stand is Optional on p23.","v07Intent":"Retain original shared counter; no second freestanding reception stand automatically added.","review":"Confirm shared reception visibility and operation; distinction is optional separate stand, not optional reception function."},
-    {"id":"13","area":"display","title":"smart logo, standalone wall type","standard":"optional","sourcePages":[2,28],"status":"optional_not_added","requirement":"Standalone wall-type logo is optional in master.","v07Intent":"Brand logo embedded in selected3B backdrop follows item8; no additional standalone building-wall logo is assumed.","review":"Do not confuse this optional standalone item with the selected module's logo/branding."},
-    {"id":"14","area":"display","title":"New-car delivery","standard":"shared_mb","sourcePages":[2,15,28],"status":"retained_shared_review","requirement":"Delivery can be shared with MB.","v07Intent":"Default vehicle handover in existing flex bay; consulting/waiting are alternate uses and MB6 is absent in those alternatives.","review":"Confirm booking/changeover, vehicle path and availability. Rendered default MB6 is not a second smart display vehicle."},
-    {"id":"15","area":"aftersales","title":"Service reception counter","standard":"shared_mb","sourcePages":[2,24,28],"status":"retained_shared_review","requirement":"Shared with MB, subject to MAR20 or MPSII per master.","v07Intent":"Existing service access/counter function retained; detailed Mercedes fit-out not improved in this iteration.","review":"Operations team must identify the real service reception and demonstrate applicable counter standard and service route."},
-    {"id":"16","area":"aftersales","title":"smart care signage logo","standard":"required","sourcePages":[2,24,28],"status":"review_question","requirement":"Required in master; p24 illustrates smartcare identity at service reception.","sourceConflict":"C03","review":"Confirm final aftersales logo location/artwork; p24 Optional heading must not silently override master required status."},
-    {"id":"17","area":"aftersales","title":"Customer lounge and café","standard":"shared_mb","sourcePages":[2,15,24,28],"status":"retained_shared_review","requirement":"Can share with MB; p24 illustrates shared lounge with smart signboard/table card/flag.","v07Intent":"Existing air-conditioned lounge retained; optional waiting-annex use of flex bay connects to it.","review":"Confirm café service, capacity, accessible route, smart identification and HVAC/changeover. No whole-showroom AC is implied."},
-    {"id":"18","area":"aftersales","title":"Signboard and table card","standard":"required","sourcePages":[2,24,28],"status":"review_question","requirement":"Required in master; p24 shows service/reception directional sign and branded table cards.","subitems":[{"id":"18.signboard","title":"Aftersales directional signboard","standard":"required","sourcePages":[2,24]},{"id":"18.table_card","title":"smart table card","standard":"required","sourcePages":[2,24]},{"id":"18.flag_example","title":"Small flag in shared-service examples","standard":"illustrated_guidance","sourcePages":[24],"note":"Flag is named in p24 captions, not a separate numbered required item in master18."}],"sourceConflict":"C03","review":"Review approved sign and card positions without blocking service entry; avoid claiming p24 makes required items optional."},
-    {"id":"19","area":"aftersales","title":"Pickup area with direction signboard and smart care logo","standard":"shared_mb","sourcePages":[2,24,28],"status":"review_question","requirement":"Shared pickup function still needs directional sign and smartcare identification.","review":"Identify actual service vehicle pickup area and route; new-car handover alone does not establish aftersales pickup compliance."},
-    {"id":"20","area":"workshop","title":"Two dedicated work bays","standard":"required","sourcePages":[2,25,28],"status":"not_modelled_workshop","requirement":"One high-voltage bay and one mechanical/electrical bay; p25 calls for local-language bay signage and HV protection.","subitems":[{"id":"20.high_voltage","title":"Dedicated high-voltage bay","standard":"required","sourcePages":[2,25],"units":1,"details":"Insulating floor mat and protective fence noted on p25; safety design must be reviewed professionally."},{"id":"20.mechanical_electrical","title":"Dedicated M/E bay","standard":"required","sourcePages":[2,25],"units":1},{"id":"20.fitout_guidance","title":"Workshop identity fit-out","standard":"source_guidance","sourcePages":[25],"details":"smartcare wall logo, grey/green hoist colour scheme and local-language signage in fit-out suggestions."}],"review":"Separate workshop plan, equipment allocation and safety/commissioning review required."},
-    {"id":"21","area":"workshop","title":"General tools","standard":"shared_mb","sourcePages":[2,26,28],"status":"not_modelled_workshop","requirement":"General tools can be shared with MB.","review":"Provide inventory, availability and condition evidence; render does not demonstrate tools."},
-    {"id":"22","area":"workshop","title":"Special tools","standard":"required","sourcePages":[2,26,28],"status":"not_modelled_workshop","requirement":"smart special tools are required.","review":"Obtain model-specific approved tool list and inventory; no itemized tool dimensions supplied in this summary."},
-    {"id":"23","area":"workshop","title":"smart diagnosis","standard":"required","sourcePages":[2,26,28],"status":"not_modelled_workshop","requirement":"smart diagnosis equipment/system is required.","review":"Verify authorized equipment, licences, software and operating access separately."},
-    {"id":"24","area":"workshop","title":"smart technical system","standard":"required","sourcePages":[2,28],"status":"not_modelled_operation","requirement":"smart technical system is required; source summary does not define the complete technical-system specification.","review":"Obtain smart system specification, subscription/access and validation evidence."},
-    {"id":"25","area":"workshop","title":"Workshop AC charger","standard":"shared_mb","sourcePages":[2,25,28],"status":"review_question","requirement":"Master permits sharing an MB-brand AC charger; p25 suggestions refer to smart-branded wall boxes.","sourceConflict":"C04","review":"Resolve device/branding expectation and provide workshop charging availability, electrical and commissioning evidence."},
-    {"id":"26","area":"workshop","title":"smart workshop signage","standard":"required","sourcePages":[2,25,27,28],"status":"not_modelled_workshop","requirement":"Workshop bay signage required; p27 says detailed drawings/fonts come from smart network SharePoint assets.","dimensionsMm":{"illustrativeSignWidth":1000,"illustrativeSignHeight":280,"illustrativeThickness":10,"illustrativeBottomHeightAboveFloor":3300},"review":"Treat p27 dimensions as reference illustration; obtain approved local-language artwork, exact fabrication details and safe mounting height."},
-    {"id":"27","area":"workshop","title":"Parts storage","standard":"shared_mb","sourcePages":[2,26,28],"status":"not_modelled_workshop","requirement":"Shared storage allowed, with clearly separated smart shelves.","review":"Provide warehouse layout, labelled shelf allocation and operational controls."},
-    {"id":"28","area":"operations","title":"Corporate entity","standard":"separate_mb","sourcePages":[2,29],"status":"not_modelled_operation","requirement":"Separate from MB; p29 identifies this as required by MBTh.","sourceConflict":"C05","review":"Provide entity evidence; retain master28 ID despite p29 table's older row27."},
-    {"id":"29","area":"operations","title":"Trade-name communication","standard":"separate_mb","sourcePages":[2,29],"status":"not_modelled_operation","requirement":"Trade-name communication separate from MB; required by MBTh on p29.","sourceConflict":"C05","review":"Confirm trade name and customer-facing communication; model branding is not corporate communication approval."},
-    {"id":"30","area":"operations","title":"Social-media communication","standard":"separate_mb","sourcePages":[2,29],"status":"not_modelled_operation","requirement":"Separate from MB; required by MBTh on p29.","sourceConflict":"C05","review":"Provide channels, ownership and communication policy evidence."},
-    {"id":"31","area":"operations","title":"Systems, including DMS","standard":"separate_mb","sourcePages":[2,30],"status":"not_modelled_operation","requirement":"Separate from MB; p30 identifies systems as required by MBTh.","subitems":[{"id":"31.dms","title":"Sales and service system (DMS)","standard":"separate_mb","sourcePages":[30]},{"id":"31.customer_service","title":"Customer-service system","standard":"separate_mb","sourcePages":[30]}],"sourceConflict":"C05","review":"Provide actual system setup/access/data separation evidence. The project comment Sheet is not a substitute for either system."},
-    {"id":"32","area":"operations","title":"Manpower","standard":"separate_mb","sourcePages":[2,31],"status":"not_modelled_operation","requirement":"Separation applies only to dedicated positions; p31 provides the position-by-position allocation required by MBTh.","subitems":[{"id":"32.1","title":"General Manager","standard":"shared_mb","sourcePages":[31]},{"id":"32.2","title":"Sales Manager","standard":"dedicated","sourcePages":[31]},{"id":"32.3","title":"Service Manager","standard":"dedicated","sourcePages":[31]},{"id":"32.4","title":"Sales Consultant","standard":"dedicated","sourcePages":[31]},{"id":"32.5","title":"Product Expert","standard":"shared_mb","sourcePages":[31],"note":"Not required by smart."},{"id":"32.6","title":"Star Assistant","standard":"shared_mb","sourcePages":[31],"note":"Not required by smart."},{"id":"32.7","title":"Service Advisor","standard":"dedicated","sourcePages":[31]},{"id":"32.8","title":"Technician","standard":"shared_mb","sourcePages":[31]},{"id":"32.9","title":"Customer Service team","standard":"shared_mb","sourcePages":[31]},{"id":"32.10","title":"Other positions","standard":"shared_mb","sourcePages":[31]}],"review":"Provide staffing roster, role allocation and coverage. 3D people are scale/activity proxies, not proof of dedicated staffing."},
-    {"id":"33","area":"operations","title":"Uniform","standard":"separate_mb","sourcePages":[2,32],"status":"not_modelled_operation","requirement":"Separate for dedicated positions; p32 sales-consultant and service-advisor uniforms are explicitly Sample, TBC.","subitems":[{"id":"33.sales_consultant","title":"Sales-consultant uniform example","standard":"sample_tbc","sourcePages":[32]},{"id":"33.service_advisor","title":"Service-advisor uniform example","standard":"sample_tbc","sourcePages":[32]}],"review":"Obtain approved final uniform/artwork; rendered people must not be labelled as final approved uniform."},
-    {"id":"34","area":"operations","title":"Stock parking","standard":"shared_mb","sourcePages":[2],"status":"not_modelled_operation","requirement":"Shared with MB; fulfil 0.8 months stock first.","review":"Confirm whose/which stock basis and current inventory/capacity with compliance; not established by display-car or test-drive counts."},
-    {"id":"35","area":"operations","title":"VLANs","standard":"separate_mb","sourcePages":[2],"status":"not_modelled_operation","requirement":"VLANs separate from MB.","review":"Provide IT network design, VLAN assignment and segregation validation; no network topology specified by summary."}
+    {
+      "id": "1",
+      "area": "exterior",
+      "title": "smart pylon",
+      "standard": "required_flexible",
+      "sourcePages": [
+        2,
+        4,
+        5,
+        28
+      ],
+      "status": "proposed_review",
+      "requirement": "Black pylon with illuminated upper logo and lower lettering; existing large pylon substructure may be reused subject to fit.",
+      "dimensionsMm": {
+        "variants": [
+          {
+            "height": 4515,
+            "width": 1466
+          },
+          {
+            "height": 8000,
+            "width": 2020
+          }
+        ]
+      },
+      "review": "SP1 1.466×4.515m shifted forward to clear restored meeting room; original smart UK symbol and wordmark paths replace reconstructed logo. Stacked spacing remains study composition; supplier production artwork, foundations, utilities, height, circulation and MB coexistence still require approval.",
+      "v09Intent": "SP1 small pylon 1.466×4.515m at left arrival apron; retain MB pylon. Review foundations, utilities, sign height and coexistence."
+    },
+    {
+      "id": "2",
+      "area": "exterior",
+      "title": "smart flag",
+      "standard": "required_flexible",
+      "sourcePages": [
+        2,
+        4,
+        6,
+        28
+      ],
+      "status": "proposed_review",
+      "requirement": "Black flag, white logo, lime strip at bottom.",
+      "dimensionsMm": {
+        "height": 4500,
+        "width": 1200
+      },
+      "review": "SF1 smart flag 1.2×4.5m at separate left arrival position; all three MB and two Thai flags retained. Pole/base design pending. Confirm flag location and attachment with site owner and smart.",
+      "v09Intent": "SF1 smart flag 1.2×4.5m at separate left arrival position; all three MB and two Thai flags retained. Pole/base design pending."
+    },
+    {
+      "id": "3",
+      "area": "exterior",
+      "title": "Façade logo",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        4,
+        7,
+        8,
+        9,
+        28
+      ],
+      "status": "intended_review",
+      "requirement": "Select a source-standard logo size matched to the existing MB logo; location is flexible and MB logo/lettering relocation may be needed. p8 installation type4 places the logo on the indoor display window; this installation-type number is not a size code.",
+      "dimensionsMm": {
+        "heightWidthVariants": [
+          [
+            1320,
+            980
+          ],
+          [
+            1770,
+            1310
+          ],
+          [
+            2210,
+            1630
+          ],
+          [
+            2650,
+            1960
+          ]
+        ],
+        "proposed": {
+          "sizeCode": "SL2",
+          "height": 1320,
+          "width": 980,
+          "matchingMBSize": "360SM",
+          "matchingMBSizeVerified": false
+        }
+      },
+      "v07Intent": "Owner-adopted installation type4 indoor-display-window logo, proposed SL2 0.98m wide x1.32m high, at owner pin X35.97,Y2.73. Type4 does not mean SL4.",
+      "placement": {
+        "planXMetres": 35.97,
+        "planYMetres": 2.73,
+        "basis": "owner comment pin; placement instruction, not an as-built survey",
+        "installationType": 4
+      },
+      "review": "RFI: verify existing MB size/matching SL2, mounting elevation and supports, actual window/frame location, outward visibility and complete exterior identity. A proposed indoor-window logo does not establish site-wide exterior compliance."
+    },
+    {
+      "id": "4",
+      "area": "exterior",
+      "title": "Direction signboard",
+      "standard": "required_flexible",
+      "sourcePages": [
+        2,
+        4,
+        10,
+        28
+      ],
+      "status": "waiver_pending",
+      "requirement": "Black painted steel frame with 2.5 mm front aluminium panel.",
+      "dimensionsMm": {
+        "height": 1700,
+        "width": 750,
+        "frontPanelThickness": 2.5
+      },
+      "review": "WAIVER PENDING — เจ้าของขอใช้ป้ายบอกทาง MB ร่วมเพื่อไม่ซ้ำซ้อน จึงไม่นำ SD1 ลงโมเดลรอบนี้ ข้อกำหนด D01 ยังเปิดอยู่และต้องขออนุมัติจาก smart; ยังไม่ได้ส่งหรือรับอนุมัติ waiver.",
+      "v09Intent": "SD1 omitted at owner's direction; retain shared MB directional sign, broad faces perpendicular to main road. Written smart waiver required."
+    },
+    {
+      "id": "5",
+      "area": "exterior",
+      "title": "AC charger",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        4,
+        11,
+        28
+      ],
+      "status": "review_question",
+      "requirement": "Master permits sharing the MB-brand charger.",
+      "sourceConflict": "C01",
+      "review": "p11 calls the additional charger Optional. Confirm which existing charger is shared; do not treat display charger item10 as optional."
+    },
+    {
+      "id": "6",
+      "area": "exterior",
+      "title": "Customer and test-drive parking",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        4,
+        12,
+        28
+      ],
+      "status": "proposed_review",
+      "requirement": "Fulfil MB parking first; smart parking is additional. No painted logo is required on parking floor.",
+      "dimensionsMm": {
+        "bayLength": 5500,
+        "bayWidth": 2800
+      },
+      "subitems": [
+        {
+          "id": "6.1",
+          "title": "smart customer parking",
+          "standard": "required",
+          "sourcePages": [
+            2,
+            12,
+            28
+          ],
+          "minimumUnits": 1
+        },
+        {
+          "id": "6.2",
+          "title": "smart test-drive parking",
+          "standard": "required",
+          "sourcePages": [
+            2,
+            12,
+            28
+          ],
+          "minimumUnits": 2
+        }
+      ],
+      "mbParkingByType": [
+        {
+          "type": "Urban",
+          "customer": 10,
+          "testDrive": 8
+        },
+        {
+          "type": "Rural",
+          "customer": 5,
+          "testDrive": 6
+        },
+        {
+          "type": "Small",
+          "customer": 3,
+          "testDrive": 4
+        }
+      ],
+      "review": "Three proposed parallel side bays 2.80×5.50m, smart customer1 + test2. Allocation remains HOLD until required MB parking count is confirmed and preserved, then vehicle paths checked. Confirm dealership classification and count/site allocation; showroom display cars cannot substitute for parking bays.",
+      "v09Intent": "Three proposed parallel side bays 2.80×5.50m, smart customer1 + test2. Allocation remains HOLD until required MB parking count is confirmed and preserved, then vehicle paths checked."
+    },
+    {
+      "id": "7",
+      "area": "exterior",
+      "title": "smart care logo on canopy",
+      "standard": "required_flexible",
+      "sourcePages": [
+        2,
+        4,
+        13,
+        28
+      ],
+      "status": "proposed_review",
+      "requirement": "Matt silver sandblasted stainless shell, acrylic front and internal LED illumination.",
+      "dimensionsMm": {
+        "height": 300,
+        "width": 2070,
+        "steelShell": 1,
+        "transparentAcrylic": 5,
+        "opalAcrylic": 5
+      },
+      "review": "SC1 2.07×0.30m now on front-end fascia of the attached workshop awning, not sales entrance; detached canopy proxy removed. Operator must confirm this as actual inspection point and supplier must verify artwork/mounting.",
+      "v09Intent": "Use the existing workshop's attached awning as a proposed care-logo mounting study; not an approved inspection function."
+    },
+    {
+      "id": "8",
+      "area": "display",
+      "title": "smart display module and vehicle count",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        28
+      ],
+      "status": "review_question",
+      "requirement": "Minimum two smart display vehicles; meet MB count and visibility first; Grand Stage cannot host smart.",
+      "v07Intent": "One complete Module3B with one smart #5 in owner-selected Saturn Beige Matte / Shadow Black. Do not add3A or a second car without owner direction.",
+      "subitems": [
+        {
+          "id": "8.vehicle_minimum",
+          "title": "smart count",
+          "standard": "required",
+          "sourcePages": [
+            2,
+            16
+          ],
+          "requiredCount": 2,
+          "intendedCount": 1,
+          "status": "written_exception_required"
+        },
+        {
+          "id": "8.mb_priority",
+          "title": "MB count and visibility priority",
+          "standard": "required",
+          "sourcePages": [
+            16
+          ],
+          "counts": [
+            {
+              "type": "Urban",
+              "new": 7,
+              "certified": 1
+            },
+            {
+              "type": "Rural",
+              "new": 4,
+              "certified": 1
+            },
+            {
+              "type": "Small",
+              "new": 4,
+              "certified": 1
+            }
+          ],
+          "review": "MB5 display layout and temporary handover MB6 are not proof of MB classification or Certified inventory."
+        },
+        {
+          "id": "8.grand_stage",
+          "title": "Grand Stage exclusion",
+          "standard": "required",
+          "sourcePages": [
+            16
+          ],
+          "review": "Owner/compliance must identify Grand Stage boundary before declaring smart placement eligible."
+        },
+        {
+          "id": "8.module_3b",
+          "title": "Complete Module3B arrangement",
+          "standard": "required_selected_variant",
+          "sourcePages": [
+            20
+          ],
+          "review": "Review complete platform, edge/light, carpet, wall/screen, furniture, price stand and real charger; do not interpret this as3A+3B."
+        }
+      ],
+      "review": "Obtain written confirmation of one-car exception independently from owner-reported3B-alone acceptance; confirm exact variant, vehicle fit and full component set."
+    },
+    {
+      "id": "9",
+      "area": "display",
+      "title": "E-price stand",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        20,
+        21,
+        28
+      ],
+      "status": "intended_review",
+      "requirement": "Module3B includes one E-price stand; functional tablet/iPad is required and tablet is excluded from listed module package.",
+      "v07Intent": "Owner-adopted real-use iPad requirement represented by one E-price stand beside smart#5 with visible product information and iPad. The 3D representation is not a commissioned physical device.",
+      "review": "Verify actual working iPad, approved local product/price content, power/data and accessible placement; rendered screen is not commissioning."
+    },
+    {
+      "id": "10",
+      "area": "display",
+      "title": "Charging pile / AC charger",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        20,
+        21,
+        22,
+        28
+      ],
+      "status": "review_question",
+      "requirement": "Real-use AC charger at display remains Required in master p2 and p22; photo examples show wall-box on a vertical stand. Sharing permissions for exterior item5 and workshop item25 do not by themselves establish an exception to display item10.",
+      "v07Intent": "Owner-adopted reuse of the existing MB wallbox. Remove the newly proposed standalone smart charger; represent SHARED-EV at model-only proxy X32.85,Y7.45 after clash avoidance against folded glass in AC-off mode. This is not a physical relocation or a surveyed existing position, and reuse is not yet accepted compliance.",
+      "existingCharger": {
+        "id": "SHARED-EV",
+        "brand": "MB existing wallbox",
+        "planXMetres": 32.85,
+        "planYMetres": 7.45,
+        "basisPhotos": [
+          "LINE_ALBUM_Showroom_260912_8.jpg",
+          "LINE_ALBUM_Showroom_260912_9.jpg"
+        ],
+        "positionStatus": "model_clash_avoidance_proxy_only_not_surveyed",
+        "actualSurveyedPosition": null,
+        "physicalRelocationProposed": false,
+        "commissioningStatus": "not_verified"
+      },
+      "sourceConflict": "C06",
+      "review": "RFI: confirm smart acceptance of this shared existing charger for required item10, surveyed location, actual capacity/availability, connection side and cable reach, safe charging workflow, electrical condition and commissioning. Do not imply the remote wallbox can charge the displayed#5 in place or draw a long cable as proof of compliance. The clash-adjusted model proxy must not be issued as installation coordinates."
+    },
+    {
+      "id": "11",
+      "area": "display",
+      "title": "Accessory display wall",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        20,
+        28
+      ],
+      "status": "review_question",
+      "requirement": "Master and investment summary require an accessory display wall; p28 says included in item8.",
+      "v07Intent": "Keep one3B only. p20 product-display-wall callout8 is shown on3A; a separate accessory wall is not clearly shown on3B.",
+      "review": "For3B-only approval, may an approved accessory wall be integrated into3B, or is a written item11 exception needed? Do not silently omit and claim approval; do not add3A."
+    },
+    {
+      "id": "12",
+      "area": "display",
+      "title": "smart reception stand",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        15,
+        23,
+        28
+      ],
+      "status": "retained_shared_review",
+      "requirement": "Master allows sharing with MB; a separate smart stand is Optional on p23.",
+      "v07Intent": "Retain original shared counter; no second freestanding reception stand automatically added.",
+      "review": "Confirm shared reception visibility and operation; distinction is optional separate stand, not optional reception function."
+    },
+    {
+      "id": "13",
+      "area": "display",
+      "title": "smart logo, standalone wall type",
+      "standard": "optional",
+      "sourcePages": [
+        2,
+        28
+      ],
+      "status": "optional_not_added",
+      "requirement": "Standalone wall-type logo is optional in master.",
+      "v07Intent": "Brand logo embedded in selected3B backdrop follows item8; no additional standalone building-wall logo is assumed.",
+      "review": "Do not confuse this optional standalone item with the selected module's logo/branding."
+    },
+    {
+      "id": "14",
+      "area": "display",
+      "title": "New-car delivery",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        15,
+        28
+      ],
+      "status": "retained_shared_review",
+      "requirement": "Delivery can be shared with MB.",
+      "v07Intent": "Default vehicle handover in existing flex bay; consulting/waiting are alternate uses and MB6 is absent in those alternatives.",
+      "review": "Confirm booking/changeover, vehicle path and availability. Rendered default MB6 is not a second smart display vehicle."
+    },
+    {
+      "id": "15",
+      "area": "aftersales",
+      "title": "Service reception counter",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        24,
+        28
+      ],
+      "status": "retained_shared_review",
+      "requirement": "Shared with MB, subject to MAR20 or MPSII per master.",
+      "v07Intent": "Existing service access/counter function retained; detailed Mercedes fit-out not improved in this iteration.",
+      "review": "Operations team must identify the real service reception and demonstrate applicable counter standard and service route."
+    },
+    {
+      "id": "16",
+      "area": "aftersales",
+      "title": "smart care signage logo",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        24,
+        28
+      ],
+      "status": "review_question",
+      "requirement": "Required in master; p24 illustrates smartcare identity at service reception.",
+      "sourceConflict": "C03",
+      "review": "Confirm final aftersales logo location/artwork; p24 Optional heading must not silently override master required status."
+    },
+    {
+      "id": "17",
+      "area": "aftersales",
+      "title": "Customer lounge and café",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        15,
+        24,
+        28
+      ],
+      "status": "retained_shared_review",
+      "requirement": "Can share with MB; p24 illustrates shared lounge with smart signboard/table card/flag.",
+      "v07Intent": "Existing air-conditioned lounge retained; optional waiting-annex use of flex bay connects to it.",
+      "review": "Confirm café service, capacity, accessible route, smart identification and HVAC/changeover. No whole-showroom AC is implied."
+    },
+    {
+      "id": "18",
+      "area": "aftersales",
+      "title": "Signboard and table card",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        24,
+        28
+      ],
+      "status": "review_question",
+      "requirement": "Required in master; p24 shows service/reception directional sign and branded table cards.",
+      "subitems": [
+        {
+          "id": "18.signboard",
+          "title": "Aftersales directional signboard",
+          "standard": "required",
+          "sourcePages": [
+            2,
+            24
+          ]
+        },
+        {
+          "id": "18.table_card",
+          "title": "smart table card",
+          "standard": "required",
+          "sourcePages": [
+            2,
+            24
+          ]
+        },
+        {
+          "id": "18.flag_example",
+          "title": "Small flag in shared-service examples",
+          "standard": "illustrated_guidance",
+          "sourcePages": [
+            24
+          ],
+          "note": "Flag is named in p24 captions, not a separate numbered required item in master18."
+        }
+      ],
+      "sourceConflict": "C03",
+      "review": "Review approved sign and card positions without blocking service entry; avoid claiming p24 makes required items optional."
+    },
+    {
+      "id": "19",
+      "area": "aftersales",
+      "title": "Pickup area with direction signboard and smart care logo",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        24,
+        28
+      ],
+      "status": "review_question",
+      "requirement": "Shared pickup function still needs directional sign and smartcare identification.",
+      "review": "Identify actual service vehicle pickup area and route; new-car handover alone does not establish aftersales pickup compliance."
+    },
+    {
+      "id": "20",
+      "area": "workshop",
+      "title": "Two dedicated work bays",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        25,
+        28
+      ],
+      "status": "not_modelled_workshop",
+      "requirement": "One high-voltage bay and one mechanical/electrical bay; p25 calls for local-language bay signage and HV protection.",
+      "subitems": [
+        {
+          "id": "20.high_voltage",
+          "title": "Dedicated high-voltage bay",
+          "standard": "required",
+          "sourcePages": [
+            2,
+            25
+          ],
+          "units": 1,
+          "details": "Insulating floor mat and protective fence noted on p25; safety design must be reviewed professionally."
+        },
+        {
+          "id": "20.mechanical_electrical",
+          "title": "Dedicated M/E bay",
+          "standard": "required",
+          "sourcePages": [
+            2,
+            25
+          ],
+          "units": 1
+        },
+        {
+          "id": "20.fitout_guidance",
+          "title": "Workshop identity fit-out",
+          "standard": "source_guidance",
+          "sourcePages": [
+            25
+          ],
+          "details": "smartcare wall logo, grey/green hoist colour scheme and local-language signage in fit-out suggestions."
+        }
+      ],
+      "review": "Separate workshop plan, equipment allocation and safety/commissioning review required."
+    },
+    {
+      "id": "21",
+      "area": "workshop",
+      "title": "General tools",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        26,
+        28
+      ],
+      "status": "not_modelled_workshop",
+      "requirement": "General tools can be shared with MB.",
+      "review": "Provide inventory, availability and condition evidence; render does not demonstrate tools."
+    },
+    {
+      "id": "22",
+      "area": "workshop",
+      "title": "Special tools",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        26,
+        28
+      ],
+      "status": "not_modelled_workshop",
+      "requirement": "smart special tools are required.",
+      "review": "Obtain model-specific approved tool list and inventory; no itemized tool dimensions supplied in this summary."
+    },
+    {
+      "id": "23",
+      "area": "workshop",
+      "title": "smart diagnosis",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        26,
+        28
+      ],
+      "status": "not_modelled_workshop",
+      "requirement": "smart diagnosis equipment/system is required.",
+      "review": "Verify authorized equipment, licences, software and operating access separately."
+    },
+    {
+      "id": "24",
+      "area": "workshop",
+      "title": "smart technical system",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        28
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "smart technical system is required; source summary does not define the complete technical-system specification.",
+      "review": "Obtain smart system specification, subscription/access and validation evidence."
+    },
+    {
+      "id": "25",
+      "area": "workshop",
+      "title": "Workshop AC charger",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        25,
+        28
+      ],
+      "status": "review_question",
+      "requirement": "Master permits sharing an MB-brand AC charger; p25 suggestions refer to smart-branded wall boxes.",
+      "sourceConflict": "C04",
+      "review": "Resolve device/branding expectation and provide workshop charging availability, electrical and commissioning evidence."
+    },
+    {
+      "id": "26",
+      "area": "workshop",
+      "title": "smart workshop signage",
+      "standard": "required",
+      "sourcePages": [
+        2,
+        25,
+        27,
+        28
+      ],
+      "status": "not_modelled_workshop",
+      "requirement": "Workshop bay signage required; p27 says detailed drawings/fonts come from smart network SharePoint assets.",
+      "dimensionsMm": {
+        "illustrativeSignWidth": 1000,
+        "illustrativeSignHeight": 280,
+        "illustrativeThickness": 10,
+        "illustrativeBottomHeightAboveFloor": 3300
+      },
+      "review": "Treat p27 dimensions as reference illustration; obtain approved local-language artwork, exact fabrication details and safe mounting height."
+    },
+    {
+      "id": "27",
+      "area": "workshop",
+      "title": "Parts storage",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2,
+        26,
+        28
+      ],
+      "status": "not_modelled_workshop",
+      "requirement": "Shared storage allowed, with clearly separated smart shelves.",
+      "review": "Provide warehouse layout, labelled shelf allocation and operational controls."
+    },
+    {
+      "id": "28",
+      "area": "operations",
+      "title": "Corporate entity",
+      "standard": "separate_mb",
+      "sourcePages": [
+        2,
+        29
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "Separate from MB; p29 identifies this as required by MBTh.",
+      "sourceConflict": "C05",
+      "review": "Provide entity evidence; retain master28 ID despite p29 table's older row27."
+    },
+    {
+      "id": "29",
+      "area": "operations",
+      "title": "Trade-name communication",
+      "standard": "separate_mb",
+      "sourcePages": [
+        2,
+        29
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "Trade-name communication separate from MB; required by MBTh on p29.",
+      "sourceConflict": "C05",
+      "review": "Confirm trade name and customer-facing communication; model branding is not corporate communication approval."
+    },
+    {
+      "id": "30",
+      "area": "operations",
+      "title": "Social-media communication",
+      "standard": "separate_mb",
+      "sourcePages": [
+        2,
+        29
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "Separate from MB; required by MBTh on p29.",
+      "sourceConflict": "C05",
+      "review": "Provide channels, ownership and communication policy evidence."
+    },
+    {
+      "id": "31",
+      "area": "operations",
+      "title": "Systems, including DMS",
+      "standard": "separate_mb",
+      "sourcePages": [
+        2,
+        30
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "Separate from MB; p30 identifies systems as required by MBTh.",
+      "subitems": [
+        {
+          "id": "31.dms",
+          "title": "Sales and service system (DMS)",
+          "standard": "separate_mb",
+          "sourcePages": [
+            30
+          ]
+        },
+        {
+          "id": "31.customer_service",
+          "title": "Customer-service system",
+          "standard": "separate_mb",
+          "sourcePages": [
+            30
+          ]
+        }
+      ],
+      "sourceConflict": "C05",
+      "review": "Provide actual system setup/access/data separation evidence. The project comment Sheet is not a substitute for either system."
+    },
+    {
+      "id": "32",
+      "area": "operations",
+      "title": "Manpower",
+      "standard": "separate_mb",
+      "sourcePages": [
+        2,
+        31
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "Separation applies only to dedicated positions; p31 provides the position-by-position allocation required by MBTh.",
+      "subitems": [
+        {
+          "id": "32.1",
+          "title": "General Manager",
+          "standard": "shared_mb",
+          "sourcePages": [
+            31
+          ]
+        },
+        {
+          "id": "32.2",
+          "title": "Sales Manager",
+          "standard": "dedicated",
+          "sourcePages": [
+            31
+          ]
+        },
+        {
+          "id": "32.3",
+          "title": "Service Manager",
+          "standard": "dedicated",
+          "sourcePages": [
+            31
+          ]
+        },
+        {
+          "id": "32.4",
+          "title": "Sales Consultant",
+          "standard": "dedicated",
+          "sourcePages": [
+            31
+          ]
+        },
+        {
+          "id": "32.5",
+          "title": "Product Expert",
+          "standard": "shared_mb",
+          "sourcePages": [
+            31
+          ],
+          "note": "Not required by smart."
+        },
+        {
+          "id": "32.6",
+          "title": "Star Assistant",
+          "standard": "shared_mb",
+          "sourcePages": [
+            31
+          ],
+          "note": "Not required by smart."
+        },
+        {
+          "id": "32.7",
+          "title": "Service Advisor",
+          "standard": "dedicated",
+          "sourcePages": [
+            31
+          ]
+        },
+        {
+          "id": "32.8",
+          "title": "Technician",
+          "standard": "shared_mb",
+          "sourcePages": [
+            31
+          ]
+        },
+        {
+          "id": "32.9",
+          "title": "Customer Service team",
+          "standard": "shared_mb",
+          "sourcePages": [
+            31
+          ]
+        },
+        {
+          "id": "32.10",
+          "title": "Other positions",
+          "standard": "shared_mb",
+          "sourcePages": [
+            31
+          ]
+        }
+      ],
+      "review": "Provide staffing roster, role allocation and coverage. 3D people are scale/activity proxies, not proof of dedicated staffing."
+    },
+    {
+      "id": "33",
+      "area": "operations",
+      "title": "Uniform",
+      "standard": "separate_mb",
+      "sourcePages": [
+        2,
+        32
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "Separate for dedicated positions; p32 sales-consultant and service-advisor uniforms are explicitly Sample, TBC.",
+      "subitems": [
+        {
+          "id": "33.sales_consultant",
+          "title": "Sales-consultant uniform example",
+          "standard": "sample_tbc",
+          "sourcePages": [
+            32
+          ]
+        },
+        {
+          "id": "33.service_advisor",
+          "title": "Service-advisor uniform example",
+          "standard": "sample_tbc",
+          "sourcePages": [
+            32
+          ]
+        }
+      ],
+      "review": "Obtain approved final uniform/artwork; rendered people must not be labelled as final approved uniform."
+    },
+    {
+      "id": "34",
+      "area": "operations",
+      "title": "Stock parking",
+      "standard": "shared_mb",
+      "sourcePages": [
+        2
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "Shared with MB; fulfil 0.8 months stock first.",
+      "review": "Confirm whose/which stock basis and current inventory/capacity with compliance; not established by display-car or test-drive counts."
+    },
+    {
+      "id": "35",
+      "area": "operations",
+      "title": "VLANs",
+      "standard": "separate_mb",
+      "sourcePages": [
+        2
+      ],
+      "status": "not_modelled_operation",
+      "requirement": "VLANs separate from MB.",
+      "review": "Provide IT network design, VLAN assignment and segregation validation; no network topology specified by summary."
+    }
   ],
   "module3B": {
-    "sourcePages": [20,21],
-    "selectedCount": 1,
-    "dimensionsMm": {"overallWidth":8650,"overallDepth":6630,"backWallWidth":5300,"bottomChain":[6300,2350],"leftDepthChain":[3380,3250],"rightDepthChain":[2550,4080]},
-    "dimensionResolution": "Visual reading of p20: 2550, not2250. Both depth chains total6630; width chain totals8650. Previous apparent6.33/6.63 mismatch is resolved, not an open discrepancy.",
-    "notDimensionedOnPage": ["platform height", "background wall height/thickness", "corner radii", "precise free-form platform vertex coordinates", "chair/table manufacturing dimensions", "floor lamp dimensions", "charger pedestal dimensions"],
-    "componentIntent": [
-      {"id":"8.legend1","name":"Display vehicle","source":"p20 drawing legend1","selected3B":"One vehicle location shown; user selects#5, not the example vehicle."},
-      {"id":"8.legend2","name":"Platform","source":"p20 drawing legend2","selected3B":"Full irregular3B platform, 8650x6630 overall; do not shrink to car-only pad."},
-      {"id":"8.legend3","name":"Floor lamp","source":"p20 drawing legend3","selected3B":"Shown at front vehicle side; rendered shape/size needs fabrication asset verification."},
-      {"id":"8.legend4","name":"Platform edging","source":"p20 drawing legend4; p21 LED strip photo","selected3B":"Rounded silver/light edge; exact profile/height/light specification not provided."},
-      {"id":"8.legend5","name":"Carpet","source":"p20 drawing legend5","selected3B":"Dark/grey carpet at consultation, not a replacement of whole showroom floor."},
-      {"id":"8.legend6","name":"Finished background wall","source":"p20 drawing legend6","selected3B":"5300 mm wall, rounded grey/silver visual reference with embedded smart logo and display."},
-      {"id":"8.legend7","name":"Negotiation desk and chairs","source":"p20 drawing legend7 and3B bill","selected3B":"One light-wood consultation table, one consultant chair, two customer chairs. Owner requests customer pair toward façade."},
-      {"id":"8.legend8","name":"Product display wall","source":"p20 drawing legend8","selected3B":"Callout visible on3A, not separately on3B; resolve required master11 for3B-only instead of adding3A."},
-      {"id":"8.legend9","name":"Vertical charging pile","source":"p20 drawing legend9; p21-22 real-use charger","selected3B":"Owner direction removes the new standalone smart charger and reuses the existing MB wallbox. SHARED-EV is represented at X32.85,Y7.45 solely as a model clash-avoidance proxy, not physical relocation or surveyed position. Master10 remains Required; acceptance, measured location/capacity, cable reach/workflow and commissioning remain RFI."},
-      {"id":"8.screen75","name":"75-inch display","source":"p20 Module3B bill","selected3B":"One 75-inch LED screen; licensed/approved smart#5 media. Physical panel shape derived from selected panel/aspect ratio, not hidden dimension in manual."},
-      {"id":"9.stand1","name":"E-price stand and live tablet","source":"p20 Module3B bill; p21","selected3B":"One stand with iPad represented per owner-adopted direction. Tablet excluded from package and still required for real use; verify actual device and content."}
+    "sourcePages": [
+      20,
+      21
     ],
-    "materialEvidence": {"observed":"Neutral light platform; rounded grey/silver wall; bright metal/illuminated edge; dark consultation carpet; light wood table; neutral chairs; illuminated white smart logo and vehicle-focused media.","status":"Visual reference inferred from p20-22, not numeric colour/material specification. Do not claim exact RAL, paint roughness, light output or factory finishes from this summary."}
+    "selectedCount": 1,
+    "dimensionsMm": {
+      "overallWidth": 8650,
+      "overallDepth": 6630,
+      "backWallWidth": 5300,
+      "bottomChain": [
+        6300,
+        2350
+      ],
+      "leftDepthChain": [
+        3380,
+        3250
+      ],
+      "rightDepthChain": [
+        2550,
+        4080
+      ]
+    },
+    "dimensionResolution": "Visual reading of p20: 2550, not2250. Both depth chains total6630; width chain totals8650. Previous apparent6.33/6.63 mismatch is resolved, not an open discrepancy.",
+    "notDimensionedOnPage": [
+      "platform height",
+      "background wall height/thickness",
+      "corner radii",
+      "precise free-form platform vertex coordinates",
+      "chair/table manufacturing dimensions",
+      "floor lamp dimensions",
+      "charger pedestal dimensions"
+    ],
+    "componentIntent": [
+      {
+        "id": "8.legend1",
+        "name": "Display vehicle",
+        "source": "p20 drawing legend1",
+        "selected3B": "One vehicle location shown; user selects#5, not the example vehicle."
+      },
+      {
+        "id": "8.legend2",
+        "name": "Platform",
+        "source": "p20 drawing legend2",
+        "selected3B": "Full irregular3B platform, 8650x6630 overall; do not shrink to car-only pad."
+      },
+      {
+        "id": "8.legend3",
+        "name": "Floor lamp",
+        "source": "p20 drawing legend3",
+        "selected3B": "Shown at front vehicle side; rendered shape/size needs fabrication asset verification."
+      },
+      {
+        "id": "8.legend4",
+        "name": "Platform edging",
+        "source": "p20 drawing legend4; p21 LED strip photo",
+        "selected3B": "Rounded silver/light edge; exact profile/height/light specification not provided."
+      },
+      {
+        "id": "8.legend5",
+        "name": "Carpet",
+        "source": "p20 drawing legend5",
+        "selected3B": "Dark/grey carpet at consultation, not a replacement of whole showroom floor."
+      },
+      {
+        "id": "8.legend6",
+        "name": "Finished background wall",
+        "source": "p20 drawing legend6",
+        "selected3B": "5300 mm wall, rounded grey/silver visual reference with embedded smart logo and display."
+      },
+      {
+        "id": "8.legend7",
+        "name": "Negotiation desk and chairs",
+        "source": "p20 drawing legend7 and3B bill",
+        "selected3B": "One light-wood consultation table, one consultant chair, two customer chairs. Owner requests customer pair toward façade."
+      },
+      {
+        "id": "8.legend8",
+        "name": "Product display wall",
+        "source": "p20 drawing legend8",
+        "selected3B": "Callout visible on3A, not separately on3B; resolve required master11 for3B-only instead of adding3A."
+      },
+      {
+        "id": "8.legend9",
+        "name": "Vertical charging pile",
+        "source": "p20 drawing legend9; p21-22 real-use charger",
+        "selected3B": "Owner direction removes the new standalone smart charger and reuses the existing MB wallbox. SHARED-EV is represented at X32.85,Y7.45 solely as a model clash-avoidance proxy, not physical relocation or surveyed position. Master10 remains Required; acceptance, measured location/capacity, cable reach/workflow and commissioning remain RFI."
+      },
+      {
+        "id": "8.screen75",
+        "name": "75-inch display",
+        "source": "p20 Module3B bill",
+        "selected3B": "One 75-inch LED screen; licensed/approved smart#5 media. Physical panel shape derived from selected panel/aspect ratio, not hidden dimension in manual."
+      },
+      {
+        "id": "9.stand1",
+        "name": "E-price stand and live tablet",
+        "source": "p20 Module3B bill; p21",
+        "selected3B": "One stand with iPad represented per owner-adopted direction. Tablet excluded from package and still required for real use; verify actual device and content."
+      }
+    ],
+    "materialEvidence": {
+      "observed": "Neutral light platform; rounded grey/silver wall; bright metal/illuminated edge; dark consultation carpet; light wood table; neutral chairs; illuminated white smart logo and vehicle-focused media.",
+      "status": "Visual reference inferred from p20-22, not numeric colour/material specification. Do not claim exact RAL, paint roughness, light output or factory finishes from this summary."
+    }
   },
   "sourceConflicts": [
-    {"id":"C01","items":["5"],"sourcePages":[2,4,11,28],"issue":"Master: shared MB-brand AC charger. p11: Optional ABB wallbox. p4 lists different estimated price and uses22kWh wording; p11 shows power ratings in kW.","handling":"Keep shared existing function as master baseline; confirm optional new purchase, technical specification and current quote. Do not propagate kWh typo as power."},
-    {"id":"C02","items":["12"],"sourcePages":[2,15,23,28],"issue":"Master: shared reception; p23 standalone smart stand Optional.","handling":"Can retain shared reception without adding optional stand; review functional adequacy."},
-    {"id":"C03","items":["16","17","18","19"],"sourcePages":[2,24,28],"issue":"p24 has page-level Optional heading while master still requires16/18 and allows shared17/19.","handling":"Do not downgrade individual master requirements. Request interpretation of optional pictured treatment versus required identity/functions."},
-    {"id":"C04","items":["25"],"sourcePages":[2,25,28],"issue":"Master allows MB-brand shared charger; p25 fit-out suggestion says smart-branded wallbox.","handling":"Reviewer to confirm shared device/branding treatment; no automatic demand for duplicate charger."},
-    {"id":"C05","items":["28","29","30","31"],"sourcePages":[2,29,30],"issue":"p29 internal table rows27/28/29 and p30 row30 lag master numbering. Circular callouts show28/29/30 and31.","handling":"Use p2 master IDs28-31; do not shift parts storage27 or renumber operational requirements."},
-    {"id":"C06","items":["10"],"sourcePages":[2,21,22],"issue":"Owner adopts reuse of the existing MB wallbox instead of a newly proposed standalone smart charger. Display item10 remains Required and is not marked Shared with MB in the master.","handling":"Represent the owner's reuse intent; request smart acceptance and verify measured location, capacity/availability, charging workflow/cable reach, electrical condition and commissioning. Source status stays Required."}
+    {
+      "id": "C01",
+      "items": [
+        "5"
+      ],
+      "sourcePages": [
+        2,
+        4,
+        11,
+        28
+      ],
+      "issue": "Master: shared MB-brand AC charger. p11: Optional ABB wallbox. p4 lists different estimated price and uses22kWh wording; p11 shows power ratings in kW.",
+      "handling": "Keep shared existing function as master baseline; confirm optional new purchase, technical specification and current quote. Do not propagate kWh typo as power."
+    },
+    {
+      "id": "C02",
+      "items": [
+        "12"
+      ],
+      "sourcePages": [
+        2,
+        15,
+        23,
+        28
+      ],
+      "issue": "Master: shared reception; p23 standalone smart stand Optional.",
+      "handling": "Can retain shared reception without adding optional stand; review functional adequacy."
+    },
+    {
+      "id": "C03",
+      "items": [
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
+      "sourcePages": [
+        2,
+        24,
+        28
+      ],
+      "issue": "p24 has page-level Optional heading while master still requires16/18 and allows shared17/19.",
+      "handling": "Do not downgrade individual master requirements. Request interpretation of optional pictured treatment versus required identity/functions."
+    },
+    {
+      "id": "C04",
+      "items": [
+        "25"
+      ],
+      "sourcePages": [
+        2,
+        25,
+        28
+      ],
+      "issue": "Master allows MB-brand shared charger; p25 fit-out suggestion says smart-branded wallbox.",
+      "handling": "Reviewer to confirm shared device/branding treatment; no automatic demand for duplicate charger."
+    },
+    {
+      "id": "C05",
+      "items": [
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "sourcePages": [
+        2,
+        29,
+        30
+      ],
+      "issue": "p29 internal table rows27/28/29 and p30 row30 lag master numbering. Circular callouts show28/29/30 and31.",
+      "handling": "Use p2 master IDs28-31; do not shift parts storage27 or renumber operational requirements."
+    },
+    {
+      "id": "C06",
+      "items": [
+        "10"
+      ],
+      "sourcePages": [
+        2,
+        21,
+        22
+      ],
+      "issue": "Owner adopts reuse of the existing MB wallbox instead of a newly proposed standalone smart charger. Display item10 remains Required and is not marked Shared with MB in the master.",
+      "handling": "Represent the owner's reuse intent; request smart acceptance and verify measured location, capacity/availability, charging workflow/cable reach, electrical condition and commissioning. Source status stays Required."
+    }
   ],
   "reviewQuestions": [
-    {"id":"Q01","items":["8"],"priority":"blocking_before_compliance_claim","question":"Does written approval cover one smart#5 instead of the minimum two smart display vehicles, independently of accepting one complete3B without3A?","neededEvidence":"smart/MBTh/China Network exception decision tied to this layout and revision"},
-    {"id":"Q02","items":["11","8"],"priority":"blocking_before_compliance_claim","question":"How must required accessory display wall11 be handled with3B-only: approved integration or explicit exception?","neededEvidence":"approved component/shop drawing or written exception; do not add3A without owner decision"},
-    {"id":"Q03","items":["8"],"priority":"blocking_before_compliance_claim","question":"Which MB classification, Certified allocation and Grand Stage boundary apply, and is the smart location eligible?","neededEvidence":"MB designation, inventory requirement and marked plan"},
-    {"id":"Q04","items":["9","10"],"priority":"before_installation","question":"Does smart accept reuse of the existing MB wallbox for required display item10, and are its measured location, capacity, safe cable reach/charging workflow and commissioned condition adequate? Is the E-price iPad functional with accepted local smart#5 content?","neededEvidence":"written sharing interpretation, site survey, charger/device records, electrical and workflow review, content sign-off and commissioning"},
-    {"id":"Q05","items":["16","18","19","25"],"priority":"review_interpretation","question":"How should p24 Optional heading and workshop charger-brand example be applied against p2 master statuses?","neededEvidence":"compliance interpretation and marked service/pickup locations"},
-    {"id":"Q06","items":["1","2","3","4","5","6","7","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35"],"priority":"separate_site_signoff","question":"Who will provide exterior, workshop and operational evidence that this interior render does not demonstrate?","neededEvidence":"separate scoped submissions and evidence owners"},
-    {"id":"Q07","items":["3"],"priority":"before_fabrication","question":"Does the existing MB logo correspond to the proposed SL2 smart logo, and is installation type4 at owner pinX35.97,Y2.73 acceptable with verified window supports, mounting elevation and external visibility?","neededEvidence":"MB logo size survey, coordinated façade/window elevation and supplier installation drawing; type4 is not SL4"}
+    {
+      "id": "Q01",
+      "items": [
+        "8"
+      ],
+      "priority": "blocking_before_compliance_claim",
+      "question": "Does written approval cover one smart#5 instead of the minimum two smart display vehicles, independently of accepting one complete3B without3A?",
+      "neededEvidence": "smart/MBTh/China Network exception decision tied to this layout and revision"
+    },
+    {
+      "id": "Q02",
+      "items": [
+        "11",
+        "8"
+      ],
+      "priority": "blocking_before_compliance_claim",
+      "question": "How must required accessory display wall11 be handled with3B-only: approved integration or explicit exception?",
+      "neededEvidence": "approved component/shop drawing or written exception; do not add3A without owner decision"
+    },
+    {
+      "id": "Q03",
+      "items": [
+        "8"
+      ],
+      "priority": "blocking_before_compliance_claim",
+      "question": "Which MB classification, Certified allocation and Grand Stage boundary apply, and is the smart location eligible?",
+      "neededEvidence": "MB designation, inventory requirement and marked plan"
+    },
+    {
+      "id": "Q04",
+      "items": [
+        "9",
+        "10"
+      ],
+      "priority": "before_installation",
+      "question": "Does smart accept reuse of the existing MB wallbox for required display item10, and are its measured location, capacity, safe cable reach/charging workflow and commissioned condition adequate? Is the E-price iPad functional with accepted local smart#5 content?",
+      "neededEvidence": "written sharing interpretation, site survey, charger/device records, electrical and workflow review, content sign-off and commissioning"
+    },
+    {
+      "id": "Q05",
+      "items": [
+        "16",
+        "18",
+        "19",
+        "25"
+      ],
+      "priority": "review_interpretation",
+      "question": "How should p24 Optional heading and workshop charger-brand example be applied against p2 master statuses?",
+      "neededEvidence": "compliance interpretation and marked service/pickup locations"
+    },
+    {
+      "id": "Q06",
+      "items": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35"
+      ],
+      "priority": "separate_site_signoff",
+      "question": "Who will provide exterior, workshop and operational evidence that this interior render does not demonstrate?",
+      "neededEvidence": "separate scoped submissions and evidence owners"
+    },
+    {
+      "id": "Q07",
+      "items": [
+        "3"
+      ],
+      "priority": "before_fabrication",
+      "question": "Does the existing MB logo correspond to the proposed SL2 smart logo, and is installation type4 at owner pinX35.97,Y2.73 acceptable with verified window supports, mounting elevation and external visibility?",
+      "neededEvidence": "MB logo size survey, coordinated façade/window elevation and supplier installation drawing; type4 is not SL4"
+    }
   ],
   "changeLog": [
-    {"id":"SHARED-EV-PROXY-01","modelRevision":"v07","item":"10","object":"SHARED-EV","changeType":"model_proxy_clash_avoidance_only","previousModelPointMetres":{"x":32.42,"y":7.45},"currentModelPointMetres":{"x":32.85,"y":7.45},"deltaMetres":{"x":0.43,"y":0},"reason":"Previous unmeasured charger placeholder overlapped folded glass in AC-off mode; move only its representation clear of that modelled obstruction.","notEvidenceOf":["physical charger relocation","surveyed existing charger coordinates","installation approval","commissioning"],"sourceRequirementChanged":false}
+    {
+      "id": "SHARED-EV-PROXY-01",
+      "modelRevision": "v07",
+      "item": "10",
+      "object": "SHARED-EV",
+      "changeType": "model_proxy_clash_avoidance_only",
+      "previousModelPointMetres": {
+        "x": 32.42,
+        "y": 7.45
+      },
+      "currentModelPointMetres": {
+        "x": 32.85,
+        "y": 7.45
+      },
+      "deltaMetres": {
+        "x": 0.43,
+        "y": 0
+      },
+      "reason": "Previous unmeasured charger placeholder overlapped folded glass in AC-off mode; move only its representation clear of that modelled obstruction.",
+      "notEvidenceOf": [
+        "physical charger relocation",
+        "surveyed existing charger coordinates",
+        "installation approval",
+        "commissioning"
+      ],
+      "sourceRequirementChanged": false
+    }
   ],
   "reviewNotice": "This is an intent and open-issues register, not certification. The rendered arrangement, colour impression, digital vehicle and people do not establish dimensions as-built, manufacturer exactness, functioning equipment, legal/safety compliance, or acceptance of exceptions. All source requirements remain reviewable; no row has a pass/approved state."
 }

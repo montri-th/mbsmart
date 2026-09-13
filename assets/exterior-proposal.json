@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "revision": "v09",
+  "status": "DESIGN PROPOSAL — supplier / smart / owner review pending; NOT approved for construction",
+  "concept": "A restrained smart arrival marker at the left driveway; retain MB identity and shrine corner; concentrate smart parking on the side apron",
+  "source": "Requirement summary for SMART Shop in Shop, version 3.0, 1 September 2026, PDF pages 2 and 4–13",
+  "units": "metres; X,Y in unchanged local building grid; world X,height,-Y",
+  "pylon": {"id":"SP1","x":-1.8,"y":-3.3,"width":1.466,"height":4.515,"depth":0.28,"status":"D01 p4–5 small size; shifted forward to clear restored meeting room, not an existing-object relocation. Depth/foundation/access provisional. Original smart UK symbol and wordmark paths; stacked spacing and production artwork pending supplier approval."},
+  "flag": {"id":"SF1","x":-4,"y":-3.5,"width":1.2,"height":4.5,"poleHeight":7.2,"status":"D01 p4/6 flag dimensions; moved forward to clear meeting room. Pole height/base/circulation provisional; separate from existing MB 3 + Thai 2"},
+  "directionBoard": {"id":"SD1","enabled":false,"approval":"waiver_pending","width":0.75,"height":1.7,"depth":0.05,"status":"OMITTED by owner: share retained MB directional sign to avoid duplication. D01 p4/10 remains required (flexible); owner will request waiver. No waiver granted or submitted by this model."},
+  "facadeLogo": {"id":"S-FACADE","type":"Type 4 indoor window / SL2-sized study retained from v07","center":[35.97,2.73],"width":0.98,"height":1.32,"status":"Existing v07 proposal, NOT an installed existing smart logo; keep row6-directed location. D01 p7–9 brand spacing needs real MB wordmark width, sightline and supplier artwork verification. No duplicate logo added."},
+  "careLogo": {"id":"SC1","x":41.5,"y":15.96,"centerHeight":3.36,"width":2.07,"height":0.3,"depth":0.025,"status":"D01 p4/13 size on front-end fascia of EXISTING ATTACHED WORKSHOP AWNING, not sales entrance. Exact service inspection point, artwork and mounting pending operator/supplier confirmation."},
+  "serviceCanopy": {"replacedBy":"site.annexes.workshop.awning","status":"Detached canopy proxy removed. Existing awning is integrated with attached rear workshop; no new standalone canopy proposed."},
+  "parking": [
+    {"id":"SC-P1","use":"smart customer","x":47.9,"y":5.75,"width":2.8,"length":5.5},
+    {"id":"ST-P1","use":"smart test drive 1","x":47.9,"y":11.45,"width":2.8,"length":5.5},
+    {"id":"ST-P2","use":"smart test drive 2","x":47.9,"y":17.15,"width":2.8,"length":5.5}
+  ],
+  "parkingStatus": "D01 p12: 1 customer + 2 test-drive bays, white delineation without floor logo. Candidate side allocation only; must preserve required MB allocation FIRST. Full-site MB inventory, turn/swept paths, exits and levels not validated. This is not a parking-capacity approval.",
+  "sharedCharging": "Retain the v07 shared existing MB wallbox concept. No new charger or capacity invented; operating reach, electrical compatibility and safe cable route need verification.",
+  "retained": ["Existing MB pylon", "Three existing MB flags", "Two existing Thai flags", "Chinese shrine", "Existing Mercedes-Benz and dealer signs", "Existing main entry canopy", "Existing interior v07 geometry and three Flex modes"],
+  "approvalGates": [
+    "smart review of pylon/flag location; SD1 omitted per owner and uses shared MB wayfinding, WAIVER PENDING, not an approved exception",
+    "Facade mark method/size and D01 p7 clear spacing relative to actual MB wordmarks",
+    "Field survey of grid X, kerb/fence curves, levels and property/public-road boundaries",
+    "Utilities clearance, sign foundations, wind load, lighting/power and permissions by qualified local team",
+    "Retain MB parking minimum before assigning smart 1+2; validate vehicle movement and pedestrian access",
+    "Operator confirms side/rear canopy as smart service inspection point before care sign installation"
+  ]
+}

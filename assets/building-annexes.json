@@ -1,0 +1,41 @@
+{
+  "revision": "v09",
+  "iteration": "r3",
+  "status": "Owner-confirmed uses and attachment; legacy grids recovered, exterior faces/photo-fit NOT measured as-built",
+  "units": "metres, local plan X,Y to world X,height,-Y",
+  "sources": [
+    {"id":"R2-01","date":"2024-06","role":"south curved-glass corner"},
+    {"id":"R2-02","date":"2023-10","role":"corner and workshop connection, historical support"},
+    {"id":"R2-03","date":"2024-06","role":"attached workshop side elevation"},
+    {"id":"R2-04","date":"2019-02","role":"historical rear workshop form only"},
+    {"id":"A02","file":"LINE_ALBUM_Showroom_260912_11.jpg","role":"legacy whole plan, issue/date unresolved"},
+    {"id":"R3-DRAWINGS","file":"LINE_ALBUM_Showroom_260913_1.jpg","role":"42m A–H / 48m numeric grid chain with closeup corroboration"},
+    {"id":"R3-NIGHT","file":"S__78577753_0.jpg","role":"owner-supplied current condition, capture date unverified; recessed glazing and fence-adjacent flags"}
+  ],
+  "meeting": {
+    "id":"EXISTING-SOUTH-MEETING",
+    "use":"Small meeting room, separate from Sales, confirmed by owner",
+    "frontArc":{"center":[-1.9,0],"radius":1.9,"startRadians":3.141592653589793,"endRadians":6.283185307179586,"segments":32},
+    "rearPoints":[[0,8],[-2.3,8],[-3.8,5.7]],
+    "sharedSalesEdge":{"x":0,"yMin":0,"yMax":8,"doorYMin":6.2,"doorYMax":7.3},
+    "floorLevel":0,"ceilingHeight":3.2,"upperBandTop":7.2,
+    "masterTowerCorner":{"center":[-1.9,0],"radius":1.9,"leftX":-3.8,"frontY":-1.9,"status":"Shared quarter-circle upper profile and semicircular ground pocket; photo/plan-fit, not printed radius"},
+    "fitEnvelope":{"xMin":-3.8,"xMax":0,"yMin":-1.9,"yMax":8},
+    "geometryStatus":"Outer envelope only; radius, taper, heights, internal subdivisions and door position approximate. Not certified net room area or egress width.",
+    "furnitureStatus":"Six meeting seats illustrate use, not surveyed furniture or certified capacity"
+  },
+  "workshop": {
+    "id":"EXISTING-ATTACHED-WORKSHOP",
+    "footprint":{"xMin":0,"xMax":40,"yMin":16,"yMax":42},
+    "gridEnvelope":[[0,16],[40,16],[40,42],[2.02,42],[1.11,35.5],[0,28.5],[0,22]],
+    "attachment":{"edge":"showroom rear / E","y":16,"status":"Attachment confirmed by owner and side photographs; openings not measured"},
+    "floorLevel":-0.6,"floorDatumStatus":"Legacy +0.90 relative to showroom +1.50; current levels require survey",
+    "eavesHeight":6.2,"ridgeHeight":8.2,"ridgeY":29,
+    "awning":{"xMin":40,"xMax":49.2,"yMin":16,"yMax":42,"wallHeight":3.55,"outerHeight":3.35,"status":"Broad cross-passage roof front confirmed by current photos50/51; width and rear continuation are editable trials"},
+    "sideGate":{"xMin":40.2,"xMax":49,"y":16.4,"height":2.35,"status":"Existing internal cross-passage mesh gate, photo-fit; NOT an opening in road fence"},
+    "material":"Light warm-grey corrugated metal, blue-grey ribbon windows, dark open/screened lower bays, steel awning",
+    "geometryStatus":"E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Interior equipment belongs to a separate proposed coordination layer, not existing/as-built."
+  },
+  "contextCropY":50,
+  "limitations":["Legacy A–H42m grid chain is not a current surveyed external wall dimension","Workshop roof slopes, levels and setbacks need field survey","Historical 2019 image supports form only, not current detail","No property or public road boundary certified"]
+}

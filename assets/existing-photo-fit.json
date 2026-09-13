@@ -1,0 +1,433 @@
+{
+  "schema": 1,
+  "revision": "v09-existing-candidate",
+  "purpose": "Photo-reconciled existing context; parent must review before integration",
+  "units": "m",
+  "coordinateFrame": "plan X,Y -> world X,height,-Y; H=Y0; interior FFL0. LX aliases map to legacy original 1/4/5/6/7/8; see legacy-drawing-controls.json. Current wall faces unverified.",
+  "surveyed": false,
+  "ownerConfirmation": {
+    "positionsRemainCurrent": true,
+    "mbFlagCount": 3,
+    "thaiFlagCount": 2,
+    "metricDimensionsConfirmed": false,
+    "dateOfConfirmation": "2026-09-13"
+  },
+  "confidenceRule": "Object counts/order/topology have higher confidence than all numeric XY/heights/yaw; numeric values are adjustable photo-fit candidates, never measured as-built",
+  "sources": [
+    {
+      "id": "N01",
+      "date": "date-label-cropped",
+      "role": "corner-shrine-pylon-retaining"
+    },
+    {
+      "id": "N02",
+      "date": "2024-06",
+      "role": "side-fence-sidewalk"
+    },
+    {
+      "id": "N03",
+      "date": "2024-06",
+      "role": "main-frontage"
+    },
+    {
+      "id": "N04",
+      "date": "2024-06",
+      "role": "left-driveway"
+    },
+    {
+      "id": "N05",
+      "date": "2024-06",
+      "role": "five-flags-direction-sign"
+    },
+    {
+      "id": "N06",
+      "date": "2024-06",
+      "role": "frontal-order-and-driveway"
+    },
+    {
+      "id": "N07",
+      "date": "2023-10",
+      "role": "shrine-close-detail-historical-support"
+    },
+    {
+      "id": "N08",
+      "date": "2024-06",
+      "role": "reverse-corner-detail"
+    },
+    {
+      "id": "A01",
+      "date": "unknown-issue",
+      "role": "legacy-controls-only"
+    },
+    {
+      "id": "A04",
+      "date": "unknown-alternative-issue",
+      "role": "not-merged-as-current-built"
+    }
+  ],
+  "cameraMetadataWarning": "Earth view coordinates and Camera 10m/11m are not model survey points or authenticated ground/structure levels",
+  "preserveExisting": [
+    {
+      "id": "MB-FLAG-1",
+      "type": "mercedes-banner",
+      "xy": [
+        13.2,
+        -7.75
+      ],
+      "poleHeightAboveApron": 7,
+      "clothWidth": 1,
+      "clothHeight": 3,
+      "sources": [
+        "N04",
+        "N05",
+        "N06"
+      ],
+      "positionStatus": "photo-fit-not-surveyed",
+      "countStatus": "owner-confirmed"
+    },
+    {
+      "id": "MB-FLAG-2",
+      "type": "mercedes-banner",
+      "xy": [
+        16.8,
+        -7.75
+      ],
+      "poleHeightAboveApron": 7,
+      "clothWidth": 1,
+      "clothHeight": 3,
+      "sources": [
+        "N04",
+        "N05",
+        "N06"
+      ],
+      "positionStatus": "photo-fit-not-surveyed",
+      "countStatus": "owner-confirmed"
+    },
+    {
+      "id": "MB-FLAG-3",
+      "type": "mercedes-banner",
+      "xy": [
+        20.4,
+        -7.75
+      ],
+      "poleHeightAboveApron": 7,
+      "clothWidth": 1,
+      "clothHeight": 3,
+      "sources": [
+        "N04",
+        "N05",
+        "N06"
+      ],
+      "positionStatus": "photo-fit-not-surveyed",
+      "countStatus": "owner-confirmed"
+    },
+    {
+      "id": "TH-FLAG-1",
+      "type": "thai-national-flag",
+      "xy": [
+        28.2,
+        -7.75
+      ],
+      "poleHeightAboveApron": 8.2,
+      "clothWidth": 1.6,
+      "clothHeight": 1.07,
+      "sources": [
+        "N03",
+        "N05",
+        "N06",
+        "N08"
+      ],
+      "positionStatus": "photo-fit-not-surveyed",
+      "countStatus": "owner-confirmed"
+    },
+    {
+      "id": "TH-FLAG-2",
+      "type": "thai-national-flag",
+      "xy": [
+        37.2,
+        -7.75
+      ],
+      "poleHeightAboveApron": 8.2,
+      "clothWidth": 1.6,
+      "clothHeight": 1.07,
+      "sources": [
+        "N03",
+        "N05",
+        "N06",
+        "N08"
+      ],
+      "positionStatus": "photo-fit-not-surveyed",
+      "countStatus": "owner-confirmed"
+    },
+    {
+      "id": "MB-PYLON",
+      "type": "thin-two-sided-pylon",
+      "xy": [
+        41.5,
+        -7.05
+      ],
+      "width": 1.6,
+      "depth": 0.42,
+      "heightAboveApron": 8.8,
+      "plinthHeight": 0.18,
+      "rotationRadians": 1.5707963267948966,
+      "yawStatus": "owner-confirmed: broad faces perpendicular to main road; centre retained",
+      "sources": [
+        "N01",
+        "N03",
+        "N05",
+        "N06",
+        "N08"
+      ],
+      "positionStatus": "photo-fit-not-surveyed",
+      "retainInProposal": true
+    },
+    {
+      "id": "SHRINE",
+      "type": "existing-chinese-shrine",
+      "xy": [
+        46.7,
+        -2.8
+      ],
+      "terraceWidth": 4.1,
+      "terraceDepth": 4.1,
+      "terraceRise": 0.18,
+      "roofWidth": 4.3,
+      "roofDepth": 4.3,
+      "topAboveApron": 4.6,
+      "sources": [
+        "N01",
+        "N07",
+        "N08"
+      ],
+      "positionStatus": "photo-fit-not-surveyed",
+      "retainInProposal": true,
+      "keepApproachFromInside": true,
+      "notPublicGateway": true
+    },
+    {
+      "id": "EXISTING-DIRECTION",
+      "type": "driveway-direction-board",
+      "xy": [
+        12.1,
+        -7.5
+      ],
+      "width": 1.25,
+      "depth": 0.25,
+      "heightAboveApron": 2,
+      "rotationRadians": 1.5707963267948966,
+      "yawStatus": "owner-confirmed: broad faces perpendicular to main road; two-face wayfinding study, arrow artwork needs on-site check",
+      "text": [
+        "Entrance ←",
+        "Parking ←",
+        "Sales ←",
+        "Service ←",
+        "Spare Parts ←"
+      ],
+      "sources": [
+        "N04",
+        "N05"
+      ],
+      "positionStatus": "right-edge-of-left-driveway-photo-fit",
+      "retainInProposal": true
+    },
+    {
+      "id": "FACADE-MB",
+      "type": "existing-facade-lettering",
+      "xy": [
+        8.5,
+        -0.1
+      ],
+      "text": "Mercedes-Benz",
+      "width": 11,
+      "textHeight": 0.7,
+      "centreHeight": 3.85,
+      "sources": [
+        "N03",
+        "N04",
+        "N06"
+      ],
+      "positionStatus": "retain-v08-photo-approximate-zone",
+      "retainInProposal": true,
+      "typography": "generic-approximation-unless-official-vector-sourced"
+    },
+    {
+      "id": "FACADE-DEALER",
+      "type": "existing-facade-lettering",
+      "xy": [
+        19.65,
+        -0.1
+      ],
+      "text": "Chitchai Chonburi",
+      "width": 7.4,
+      "textHeight": 0.65,
+      "centreHeight": 3.85,
+      "sources": [
+        "N03",
+        "N04",
+        "N06"
+      ],
+      "positionStatus": "retain-v08-photo-approximate-zone",
+      "retainInProposal": true,
+      "typography": "generic-approximation-unless-official-vector-sourced"
+    }
+  ],
+  "physicalEdgeCandidate": {
+    "frontY": -8.4,
+    "sideX": 50.5,
+    "filletCentre": [
+      44.5,
+      -2.4
+    ],
+    "filletRadius": 6,
+    "renderTrialRadiusRange": [
+      5,
+      9
+    ],
+    "frontTangent": [
+      44.5,
+      -8.4
+    ],
+    "sideTangent": [
+      50.5,
+      -2.4
+    ],
+    "points": [
+      [
+        -7.2,
+        -8.4
+      ],
+      [
+        44.5,
+        -8.4
+      ],
+      [
+        46.0529,
+        -8.1956
+      ],
+      [
+        47.5,
+        -7.5962
+      ],
+      [
+        48.7426,
+        -6.6426
+      ],
+      [
+        49.6962,
+        -5.4
+      ],
+      [
+        50.2956,
+        -3.9529
+      ],
+      [
+        50.5,
+        -2.4
+      ],
+      [
+        50.5,
+        16
+      ],
+      [
+        50.5,
+        30
+      ]
+    ],
+    "status": "localized-photo-fit-fillet; front/east controls inherited-unverified; NOT printed A01 R6.00 or authenticated A04 R15.00",
+    "sources": [
+      "N01",
+      "N02",
+      "N07",
+      "N08"
+    ],
+    "notCadastralBoundary": true,
+    "rearY30IsCropOnly": true,
+    "keepV08TraceAsEvidence": true
+  },
+  "mainDrivewayCandidate": {
+    "xMin": -7.2,
+    "xMax": 11.3,
+    "visualEnvelopeWidth": 18.5,
+    "rampTopY": -6.9,
+    "bottomAtRoadKerb": true,
+    "surface": "weathered-asphalt-threshold; concrete-apron-behind",
+    "status": "broad-photo-envelope-in-assumed-X-frame; NOT measured current gate width; owner visual review needed",
+    "legacyThroatWidth": 8,
+    "legacyDimensionStatus": "A01 printed but present-ramp-equivalence-unverified",
+    "sources": [
+      "N04",
+      "N05",
+      "N06"
+    ]
+  },
+  "sideOpening": {
+    "v08GapY": [
+      17,
+      25
+    ],
+    "status": "not-evidenced-in-new-photos",
+    "recommendedRepresentation": "do-not-certify-visible-curb-cut; retain uncertainty overlay or continuous photographed fence extent",
+    "sources": [
+      "N02",
+      "N08"
+    ],
+    "noClaimOfAbsenceBeyondFrame": true
+  },
+  "kerb": {
+    "front": "worn-black-white",
+    "junctionCurve": "worn-red-white",
+    "colourTransitionNearX": 40,
+    "transitionStatus": "approximate-photo-fit-not-proposed-paint",
+    "sources": [
+      "N03",
+      "N04",
+      "N05",
+      "N06",
+      "N07",
+      "N08"
+    ]
+  },
+  "relativeLevels": {
+    "interiorFFL": 0,
+    "frontApron": -0.8,
+    "frontSidewalk": -1.45,
+    "frontRoad": -1.6,
+    "status": "retained-render-baseline-not-measured-RL; +0.80 datum unresolved",
+    "optionalSideGroundDrop": [
+      0.15,
+      0.2
+    ],
+    "optionalDropStatus": "photo-appearance-only; no drainage/slope quantities",
+    "visualRanges": {
+      "fenceHeightAboveCoping": [
+        1,
+        1.1
+      ],
+      "retainingFrontExposed": [
+        0.55,
+        0.75
+      ],
+      "retainingCornerSideExposed": [
+        0.75,
+        0.95
+      ],
+      "sidewalkWidth": [
+        1.8,
+        2.5
+      ],
+      "kerbAboveRoad": [
+        0.12,
+        0.18
+      ]
+    }
+  },
+  "proposalGuardrails": [
+    "Keep existing pylon, shrine, five flags and facade-lettering groups visible and unmoved in proposed comparison state",
+    "Separate proposed smart objects from photographed existing inventory",
+    "Do not place smart signage on the public sidewalk, shrine terrace, main ramp or in unverified utility-clearance space",
+    "Do not copy the temporary 2024 event banner as permanent current signage",
+    "Do not fabricate unreadable upper-wing wording",
+    "No public original photo textures; no cadastral, engineering, accessibility, clearance or construction approval inferred"
+  ]
+}

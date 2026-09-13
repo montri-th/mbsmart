@@ -24,6 +24,9 @@
     const middle = n('middleHeight', 18), low = n('rightHeight', 11);
     const rearY = n('rearY', 16), middleX = n('middleX', 24), rightX = n('rightX', 32), endX = n('endX', 40);
     const recessY = n('recessY', 2.5), radius = n('cornerRadius', 1.25);
+    const corner=data.masterCorner||{center:[-1.9,0],radius:1.9,leftX:-3.8,frontY:-1.9};
+    const frontY=corner.frontY,leftX=corner.leftX,wingY=n('lowerWingFrontY',.6);
+    const balcony=data.southBalcony||{yMin:9,yMax:12.8,recessX:-.5};
     if (!(base < low && low < middle && middle < high && 0 < middleX && middleX < rightX && rightX < endX && recessY > 0 && rearY > recessY)) {
       throw new Error('Exterior visual-proxy heights/footprints must be ordered and positive.');
     }
@@ -59,8 +62,17 @@
       shape.closePath();
       return shape;
     }
-    function footprint(width) {
-      return width > middleX ? [[0, 0], [middleX, 0], [middleX, recessY], [width, recessY], [width, rearY], [0, rearY]] : [[0, 0], [width, 0], [width, rearY], [0, rearY]];
+    function footprint(width,isWindow=false) {
+      // One explicit master quarter-circle is shared with the ground meeting room.
+      // The ground pocket returns to glass Y0; the tall facade continues along Y-1.9.
+      const shape=new T.Shape(),cx=corner.center[0],cy=corner.center[1],r=corner.radius;
+      shape.moveTo(leftX,cy);shape.absarc(cx,cy,r,Math.PI,Math.PI*1.5,false);
+      const leading=width>middleX?wingY:frontY;
+      if(width>middleX){shape.lineTo(middleX,frontY);shape.lineTo(middleX,wingY);}
+      shape.lineTo(width-radius,leading);shape.quadraticCurveTo(width,leading,width,leading+radius);
+      shape.lineTo(width,rearY);shape.lineTo(leftX,rearY);
+      if(isWindow){shape.lineTo(leftX,balcony.yMax);shape.lineTo(balcony.recessX,balcony.yMax);shape.lineTo(balcony.recessX,balcony.yMin);shape.lineTo(leftX,balcony.yMin);}
+      shape.lineTo(leftX,cy);shape.closePath();return shape;
     }
     function prism(shape, y, height, mat, parent, name) {
       const o = h.mesh(new T.ExtrudeGeometry(shape, { depth: height, bevelEnabled: false, curveSegments: 8 }), mat, parent);
@@ -97,9 +109,13 @@
       const bottom = levels[i], top = levels[i + 1], mid = (bottom + top) / 2;
       const width = mid < low ? endX : mid < middle ? rightX : middleX;
       const isWindow = windows.some(([a, b]) => mid > a && mid < b);
-      const shape = roundedShape(footprint(width), radius);
+      const shape = footprint(width,isWindow);
       prism(shape, bottom, top - bottom, isWindow ? blue : cladding, upper, `PHOTO-ASSUMED-${isWindow ? 'BLUE-RIBBON' : 'LIGHT-SPANDREL'}-${i}`);
       if (isWindow) {
+        // Open/recessed side balcony, not a blue stripe painted on a solid box.
+        const railHeight=Math.min(1.05,top-bottom-.1),railX=leftX+.11;
+        for(const hh of [bottom+.12,bottom+railHeight])box(railX,hh,-(balcony.yMin+balcony.yMax)/2,.05,.045,balcony.yMax-balcony.yMin,trim,upper,'SOUTH-RECESSED-BALCONY-RAIL');
+        for(let by=balcony.yMin+.15;by<balcony.yMax;by+=.18)mullions.push([[railX,bottom+.12,-by],[railX,bottom+railHeight,-by],.015]);
         // Dark, fine vertical divisions follow the rounded perimeter; one batch.
         const path = shape.getPoints(18);
         let carry = 0;
@@ -115,13 +131,13 @@
       }
     }
     rods(mullions, trim, upper, 'UPPER-RIBBON-MULLIONS-INSTANCED');
-    upper.userData.assumptions = { base, heights: { main: high, middle, right: low }, XSteps: [0, middleX, rightX, endX], rearY, recessY, radius, windowRowsAreNotFloorCount: true, upperInteriorNotModelled: true };
+    upper.userData.assumptions = { base, heights: { main: high, middle, right: low }, XSteps: [leftX, middleX, rightX, endX], rearY, recessY, radius, masterCorner:corner,mainGlazingSetback:0-frontY,balcony,windowRowsAreNotFloorCount: true, upperInteriorNotModelled: true };
+    upper.userData.integralMeetingTower=true;
 
     // Existing showroom frontage additions only. Ground glazing/columns remain
     // owned by the base interior scene; this module does not replace or move them.
     const soffitY = n('showroomSoffit', 7.02);
-    box(middleX / 2, soffitY, -.25, middleX, .20, 1.45, silver, facade, 'EXISTING-FRONT-SOFFIT-PHOTO-ASSUMED');
-    box((middleX + endX) / 2, soffitY, -recessY + .12, endX - middleX, .20, .9, silver, facade, 'EXISTING-RECESSED-SOFFIT-PHOTO-ASSUMED');
+    prism(footprint(endX),soffitY-.1,.2,silver,facade,'CONTINUOUS-TOWER-SOFFIT-OVER-MEETING-AND-RECESSED-GLAZING');
     const signHeight = n('fasciaHeight', 3.82);
     box(middleX / 2, signHeight, .056, middleX, .64, .13, fasciaMat, facade, 'EXISTING-CHARCOAL-SIGN-FASCIA');
     box((middleX + endX) / 2, 3.39, -recessY + .056, endX - middleX, .40, .13, silver, facade, 'EXISTING-LOW-WING-HEADER-PHOTO-ASSUMED');
