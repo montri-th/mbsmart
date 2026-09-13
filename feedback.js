@@ -20,13 +20,15 @@
   const currentExterior = () => $('exterior-scheme').value;
   const currentView = () => window.BC_EXPERIENCE?.inspect().view || window.BC_VIEWER?.inspect().view || document.querySelector('[data-view][aria-pressed=true]')?.dataset.view || 'interior';
   const experience = () => window.BC_EXPERIENCE?.inspect();
+  const section = () => experience()?.section || 'showroom';
+  const mapSettings = () => ({showroom:{bounds:[0,40,0,16],plot:[-6,43,-4,20],id:'showroom-plan',view:'plan'},exterior:{bounds:[-15,60,-30,50],plot:[-15,60,-30,50.8],id:'groundfloor-site-plan',view:'siteplan'},workshop:{bounds:[0,49.2,16,42],plot:[-3,54,12,46],id:'workshop-plan',view:'workshop-plan'}}[section()]);
   const referenceFields = () => {const c=experience();return c?{experienceRevision:c.experienceRevision,section:c.section,referenceKind:c.referenceKind,referenceId:c.referenceId}:{};};
   const draftKey = () => JSON.stringify({...referenceFields(),mode:currentMode(),ac:$('flex-ac').checked,exterior:currentExterior()});
   const drafts=new Map();let activeDraftKey=draftKey(),restoring=true;
   function saveDraft(){drafts.set(activeDraftKey,{comment:$('comment-text').value,area:$('comment-area').value,location:{...location},corner:corner?{...corner}:null,pending,sequence,signature:comparable(payload())});}
   function restoreDraft(){activeDraftKey=draftKey();const draft=drafts.get(activeDraftKey);$('comment-text').value=draft?.comment||'';$('comment-area').value=draft?.area||'general';location=draft?.location?{...draft.location}:{type:'area'};corner=draft?.corner?{...draft.corner}:null;pending=draft?.pending||null;sequence++;$('comment-count').textContent=`${$('comment-text').value.length.toLocaleString('en-US')} / 3,000`;$('comment-text').setCustomValidity('');window.BC_EXPERIENCE?.scope();sync();if(!sending)status(validEndpoint?'พร้อมรับความเห็นในส่วนและมุมนี้':offlineNotice);}
   function contextChanged(){if(restoring||window.BC_EXPERIENCE?.isChanging())return;saveDraft();restoreDraft();window.BC_EXPERIENCE?.syncURL();}
-  const inside = (x,y) => Number.isFinite(x) && Number.isFinite(y) && x>=0 && x<=40 && y>=0 && y<=16 && !(x>24 && y<2.5);
+  const inside = (x,y) => {const [a,b,c,d]=mapSettings().bounds;return Number.isFinite(x)&&Number.isFinite(y)&&x>=a&&x<=b&&y>=c&&y<=d&&(section()!=='showroom'||!(x>24&&y<2.5));};
   const validLocation = q => q.type === 'area' || (['point','rectangle'].includes(q.type) && inside(q.x,q.y) && (q.type !== 'rectangle' || (inside(q.x2,q.y2) && inside(q.x2,q.y) && inside(q.x,q.y2) && q.x2-q.x>=.05 && q.y2-q.y>=.05)));
   const grid = (x,y) => `Lx${Math.min(4,Math.floor(x/8))}–${Math.min(5,Math.floor(x/8)+1)} / ${y<2.5?'G–H':y<8?'F–G':'E–F'}`;
   const coord = (x,y) => `X ${x.toFixed(2)}, Y ${y.toFixed(2)} ม.`;
@@ -37,11 +39,20 @@
   function mapText(x,y,text,attrs={}) {return element('text',{x,y:16-y,'text-anchor':'middle',...attrs},text);}
   function drawMap() {
     map.replaceChildren();
-    const vw=43/mapZoom,vh=20/mapZoom;
-    map.setAttribute('viewBox',mapZoom===1?'-1.5 -1.5 43 20':`${mapCenter.x-vw/2} ${16-mapCenter.y-vh/2} ${vw} ${vh}`);
+    const cfg=mapSettings(),[a,b,c,d]=cfg.plot,vw=(b-a)/mapZoom,vh=(d-c)/mapZoom;
+    map.setAttribute('viewBox',mapZoom===1?`${a} ${16-d} ${b-a} ${d-c}`:`${mapCenter.x-vw/2} ${16-mapCenter.y-vh/2} ${vw} ${vh}`);
     map.style.touchAction=mapZoom===1?'manipulation':'none';
     $('reset-map').hidden=mapZoom===1;
     $('zoom-help').textContent=mapZoom===1?'เลือกจุด แล้วขยายเพื่อชี้ให้แม่นขึ้น':'ลากเพื่อเลื่อนผัง · แตะเพื่อเลือกจุด';
+    if(section()!=='showroom'){
+      const plot=section()==='exterior'?[-14,58,-15.4,50.8]:[-3,54,12,46];
+      element('image',{href:`./assets/plans/${cfg.id}-review-map-v11.svg`,x:plot[0],y:16-plot[3],width:plot[1]-plot[0],height:plot[3]-plot[2]});
+      if(location.type==='rectangle')rect(location.x,location.y,location.x2-location.x,location.y2-location.y,{class:'range'});
+      if(location.type!=='area')element('circle',{cx:location.x,cy:16-location.y,r:.65,class:'pin'});
+      if(corner)element('circle',{cx:corner.x,cy:16-corner.y,r:.5,class:'pin'});
+      if(keyboard)element('circle',{cx:cursor.x,cy:16-cursor.y,r:.8,class:'keyboard-cursor'});
+      return;
+    }
     const s=window.BC_LAYOUT.states.find(q=>q.mode===currentMode());
     element('polygon',{points:s.floor.map(p=>`${p[0]},${16-p[1]}`).join(' '),fill:'#eee',stroke:'#777','stroke-width':.12});
     rect(32,8,8,8,{fill:'#dce9ed',stroke:'#8d9b9f','stroke-width':.1});
@@ -69,38 +80,40 @@
   function help() {$('map-help').textContent=tool==='point'?'แตะจุดบนผัง หรือใช้ปุ่มลูกศรแล้วกด Enter':corner?'แตะมุมตรงข้ามเพื่อจบพื้นที่ · Escape ยกเลิก':'แตะสองมุมตรงข้ามเพื่อวงพื้นที่ · ใช้ลูกศร + Enter ได้';}
   function sync() {
     drawMap();help();
-    $('location-summary').textContent=location.type==='area'?'ยังไม่ระบุจุดเฉพาะ':location.type==='point'?`${grid(location.x,location.y)} · ${coord(location.x,location.y)}`:`${coord(location.x,location.y)} ถึง ${coord(location.x2,location.y2)}`;
+    $('location-summary').textContent=location.type==='area'?'ยังไม่ระบุจุดเฉพาะ':location.type==='point'?`${section()==='showroom'?grid(location.x,location.y)+' · ':''}${coord(location.x,location.y)}`:`${coord(location.x,location.y)} ถึง ${coord(location.x2,location.y2)}`;
+    $('location-basis').textContent=`ระบุตำแหน่งบนผัง ${experience()?.title||'Showroom interior'} · หมุดแนบกับภาพหรือมุมที่เลือก เป็นพิกัดโมเดล ไม่ใช่ค่ารังวัด`;
     $('show-location').hidden=location.type==='area' || !window.BC_VIEWER;
     const viewLabel=document.querySelector(`[data-view="${currentView()}"]`)?.textContent||currentView();
     const c=experience();
-    $('comment-context').textContent=(c?`${c.title} · ${c.referenceKind==='artist-impression'?'ภาพแนวคิด':'โมเดล 3D'}: ${c.referenceTitle} · `:'')+`ร่าง ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision} · ${currentExterior()==='proposed'?'ข้อเสนอเพิ่มเติม':'ภายนอกเดิม'} · ${viewLabel}${location.type==='area'?'':' · หมุดภายในอาคาร'}`;
+    $('comment-context').textContent=(c?`${c.title} · ${{'artist-impression':'ภาพแนวคิด',plan:'ผัง Smart SiS',model:'โมเดล 3D'}[c.referenceKind]}: ${c.referenceTitle} · `:'')+`ร่าง ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision} · ${currentExterior()==='proposed'?'ข้อเสนอเพิ่มเติม':'ภายนอกเดิม'} · ${viewLabel}${location.type==='area'?'':' · แนบตำแหน่งบนผัง'}`;
     window.BC_VIEWER?.setReviewLocation(location);
+    if(!restoring&&!window.BC_EXPERIENCE?.isChanging())window.BC_EXPERIENCE?.syncURL();
   }
   function pick(p) {
-    if(!inside(p.x,p.y)) {$('map-help').textContent='เลือกจุดภายในขอบอาคารสีเทา';return;}
+    if(!inside(p.x,p.y)) {$('map-help').textContent='เลือกจุดภายในขอบเขตโมเดลของส่วนนี้';return;}
     if(tool==='rectangle' && !corner) {corner=p;drawMap();help();return;}
     const next=tool==='point'?{type:'point',...p}:{type:'rectangle',x:Math.min(corner.x,p.x),y:Math.min(corner.y,p.y),x2:Math.max(corner.x,p.x),y2:Math.max(corner.y,p.y)};
-    if(!validLocation(next)) {$('map-help').textContent='พื้นที่ต้องอยู่ในอาคารและมีขนาดมากกว่า 5 ซม. กรุณาเลือกมุมตรงข้ามใหม่';return;}
+    if(!validLocation(next)) {$('map-help').textContent='พื้นที่ต้องอยู่ในขอบเขตส่วนนี้และมีขนาดอย่างน้อย 5 ซม. กรุณาเลือกมุมตรงข้ามใหม่';return;}
     location=next;corner=null;changed();sync();
   }
   map.addEventListener('pointerdown',e=>{if(e.button!==0)return;map.setPointerCapture(e.pointerId);drag={id:e.pointerId,x:e.clientX,y:e.clientY,center:{...mapCenter},moved:false};});
-  map.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>6)drag.moved=true;if(drag.moved&&mapZoom>1){const k=43/mapZoom/map.clientWidth;mapCenter={x:Math.max(0,Math.min(40,drag.center.x-dx*k)),y:Math.max(0,Math.min(16,drag.center.y+dy*k))};drawMap();}});
+  map.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>6)drag.moved=true;if(drag.moved&&mapZoom>1){const [a,b,c,d]=mapSettings().bounds,plot=mapSettings().plot,k=(plot[1]-plot[0])/mapZoom/map.clientWidth;mapCenter={x:Math.max(a,Math.min(b,drag.center.x-dx*k)),y:Math.max(c,Math.min(d,drag.center.y+dy*k))};drawMap();}});
   map.addEventListener('pointerup',e=>{if(!drag||e.pointerId!==drag.id)return;const moved=drag.moved;drag=null;if(moved)return;const matrix=map.getScreenCTM();if(!matrix)return;const p=new DOMPoint(e.clientX,e.clientY).matrixTransform(matrix.inverse());keyboard=false;cursor={x:Math.round(p.x*100)/100,y:Math.round((16-p.y)*100)/100};pick({...cursor});});
   map.addEventListener('pointercancel',()=>{drag=null;});
-  map.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Enter',' ','Escape'].includes(e.key))return;e.preventDefault();keyboard=true;const delta=e.shiftKey?.1:.5;if(e.key==='Escape'){corner=null;help();}else if(['Enter',' '].includes(e.key)){pick({...cursor});return;}else {cursor.x=Math.max(0,Math.min(40,cursor.x+(e.key==='ArrowRight'?delta:e.key==='ArrowLeft'?-delta:0)));cursor.y=Math.max(0,Math.min(16,cursor.y+(e.key==='ArrowUp'?delta:e.key==='ArrowDown'?-delta:0)));$('map-help').textContent=`เคอร์เซอร์ ${coord(cursor.x,cursor.y)} · Enter เพื่อเลือก`;}drawMap();});
+  map.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Enter',' ','Escape'].includes(e.key))return;e.preventDefault();keyboard=true;const delta=e.shiftKey?.1:.5,[a,b,c,d]=mapSettings().bounds;if(e.key==='Escape'){corner=null;help();}else if(['Enter',' '].includes(e.key)){pick({...cursor});return;}else {cursor.x=Math.max(a,Math.min(b,cursor.x+(e.key==='ArrowRight'?delta:e.key==='ArrowLeft'?-delta:0)));cursor.y=Math.max(c,Math.min(d,cursor.y+(e.key==='ArrowUp'?delta:e.key==='ArrowDown'?-delta:0)));$('map-help').textContent=`เคอร์เซอร์ ${coord(cursor.x,cursor.y)} · Enter เพื่อเลือก`;}drawMap();});
   document.querySelectorAll('[data-loc-tool]').forEach(b=>b.addEventListener('click',()=>{tool=b.dataset.locTool;corner=null;document.querySelectorAll('[data-loc-tool]').forEach(q=>q.setAttribute('aria-pressed',String(q===b)));drawMap();help();}));
   $('zoom-map').addEventListener('click',()=>{mapZoom=2.5;mapCenter=location.type==='area'?{...cursor}:{x:location.x,y:location.y};drawMap();});
   $('reset-map').addEventListener('click',()=>{mapZoom=1;drawMap();});
   $('clear-location').addEventListener('click',()=>{location={type:'area'};corner=null;changed();sync();});
-  $('show-location').addEventListener('click',()=>{const selected={...location};window.BC_VIEWER?.setView('plan');location=selected;corner=null;changed();sync();document.querySelector('.stage').scrollIntoView({block:'center',behavior:'instant'});});
+  $('show-location').addEventListener('click',()=>{const selected={...location};window.BC_VIEWER?.setView(mapSettings().view);location=selected;corner=null;changed();sync();document.querySelector('.stage').scrollIntoView({block:'center',behavior:'instant'});});
   $('mode').addEventListener('change',()=>{if(experience())contextChanged();else{changed();sync();}});
   $('flex-ac').addEventListener('change',()=>{if(experience())contextChanged();else{changed();sync();}});
   document.addEventListener('bc:viewchange',()=>{if(!experience()){changed();sync();}});
   document.addEventListener('bc:exteriorchange',()=>{if(experience())contextChanged();else{changed();sync();}});
   document.addEventListener('bc:contextwillchange',()=>{if(!restoring)saveDraft();});
-  document.addEventListener('bc:contextchange',()=>{if(!restoring)restoreDraft();});
+  document.addEventListener('bc:contextchange',()=>{if(!restoring){mapZoom=1;drag=null;keyboard=false;const [a,b,c,d]=mapSettings().bounds;cursor={x:(a+b)/2,y:(c+d)/2};mapCenter={...cursor};restoreDraft();}});
   form.addEventListener('input',()=>{changed();$('comment-count').textContent=`${$('comment-text').value.length.toLocaleString('en-US')} / 3,000`;});
-  function payload() {const c=experience(),artist=c?.referenceKind==='artist-impression';return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:c&&(c.section!=='showroom'||artist)?{type:'area'}:{...location},mode:artist?'handover':currentMode(),modelRevision:revision,ac:artist?false:$('flex-ac').checked,exteriorScheme:artist?'proposed':currentExterior(),view:currentView(),website:$('comment-website').value,...referenceFields()};}
+  function payload() {const c=experience(),artist=c&&c.referenceKind!=='model';return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:artist?'handover':currentMode(),modelRevision:revision,ac:artist?false:$('flex-ac').checked,exteriorScheme:artist?'proposed':currentExterior(),view:currentView(),website:$('comment-website').value,...referenceFields()};}
   const comparable=p=>JSON.stringify({...p,id:''});
   form.addEventListener('submit',async e=>{
     e.preventDefault();if(sending || !submissionEnabled || !validEndpoint)return;
@@ -131,14 +144,15 @@
   const validNumericParam=k=>query.has(k)&&query.get(k).trim()!==''&&Number.isFinite(Number(query.get(k)));
   if(query.get('rev') && query.get('rev')!==revision)status('ลิงก์นี้อ้างอิงแบบคนละรุ่น กรุณาตรวจตำแหน่งก่อนส่ง','error');
   else {
-    if(experience()?.referenceKind!=='artist-impression'&&modes.includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
-    if(experience()?.referenceKind!=='artist-impression'&&['0','1'].includes(query.get('ac'))){$('flex-ac').checked=query.get('ac')==='1';$('flex-ac').dispatchEvent(new Event('change'));}
+    if((!experience()||experience().referenceKind==='model')&&modes.includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
+    if((!experience()||experience().referenceKind==='model')&&['0','1'].includes(query.get('ac'))){$('flex-ac').checked=query.get('ac')==='1';$('flex-ac').dispatchEvent(new Event('change'));}
     if(areas.includes(query.get('area')))$('comment-area').value=query.get('area');
     const type=query.get('loc');
-    if((!experience()||(experience().section==='showroom'&&experience().referenceKind==='model'))&&['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(validNumericParam('x')&&validNumericParam('y')&&(type!=='rectangle'||validNumericParam('x2')&&validNumericParam('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
+    if(['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(validNumericParam('x')&&validNumericParam('y')&&(type!=='rectangle'||validNumericParam('x2')&&validNumericParam('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
     if(!experience()&&views.includes(query.get('view')))window.BC_VIEWER?.setView(query.get('view'));
-    if(experience()?.referenceKind!=='artist-impression'&&['existing','proposed'].includes(query.get('exterior'))){$('exterior-scheme').value=query.get('exterior');$('exterior-scheme').dispatchEvent(new Event('change'));}
+    if((!experience()||experience().referenceKind==='model')&&['existing','proposed'].includes(query.get('exterior'))){$('exterior-scheme').value=query.get('exterior');$('exterior-scheme').dispatchEvent(new Event('change'));}
   }
+  window.BC_REVIEW={inspect:()=>({location:{...location},area:$('comment-area').value,mode:currentMode(),ac:$('flex-ac').checked,modelRevision:revision,...referenceFields(),configured:validEndpoint,sending})};
   activeDraftKey=draftKey();restoring=false;window.BC_EXPERIENCE?.scope();sync();$('submit-comment').disabled=!validEndpoint;
   $('connection-notice').hidden=validEndpoint;
   status(validEndpoint?'พร้อมรับความเห็น':offlineNotice);
@@ -147,9 +161,11 @@
     status('กำลังตรวจว่าระบบรับความเห็นรองรับ '+revision+'…');
     const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
     fetch(endpoint,{credentials:'omit',signal:controller.signal}).then(r=>{if(!r.ok)throw Error('health');return r.json();}).then(h=>{
-      const cap=h.experienceCapabilitiesByRevision?.v10,app=window.BC_EXPERIENCE;
-      if(app&&(cap?.artistImpressionState?.mode!=='handover'||cap?.artistImpressionState?.ac!==false||cap?.artistImpressionState?.exteriorScheme!=='proposed'))throw Error('health');
-      const viewSupport=app?Array.isArray(h.experienceRevisions)&&h.experienceRevisions.includes('v10')&&cap?.modelRevision===revision&&cap.pinSection==='showroom'&&cap.pinReferenceKind==='model'&&['model','artist-impression'].every(k=>cap.referenceKinds?.includes(k))&&Object.entries(app.sections).every(([key,s])=>cap.sections?.includes(key)&&Array.isArray(cap.viewsBySection?.[key])&&s.views.every(v=>cap.viewsBySection[key].includes(v)))&&Array.isArray(cap.artistImpressions)&&app.images.every(i=>cap.artistImpressions.some(r=>r.id===i.id&&r.section===i.section&&r.view===i.view))&&['exterior','parking','identity','workshop','hv','me','parts'].every(a=>h.additionalAreasByExperienceRevision?.v10?.includes(a)):Array.isArray(h.viewsByRevision?.[revision])&&views.every(v=>h.viewsByRevision[revision].includes(v));
+      const cap=h.experienceCapabilitiesByRevision?.v11,app=window.BC_EXPERIENCE;
+      if(app&&(cap?.staticReferenceState?.mode!=='handover'||cap?.staticReferenceState?.ac!==false||cap?.staticReferenceState?.exteriorScheme!=='proposed'))throw Error('health');
+      if(app&&(cap?.locationSupportBySection?.showroom?.excludedNotch?.xGreaterThan!==24||cap?.locationSupportBySection?.showroom?.excludedNotch?.yLessThan!==2.5))throw Error('health');
+      const locationSupport=app&&Object.entries({showroom:[0,40,0,16],exterior:[-15,60,-30,50],workshop:[0,49.2,16,42]}).every(([key,values])=>{const s=cap?.locationSupportBySection?.[key],b=s?.bounds;return cap.pinSections?.includes(key)&&s?.unit==='m'&&s?.coordinateFrame==='model-plan-xy'&&b&&[b.minX,b.maxX,b.minY,b.maxY].every((v,i)=>v===values[i]);})&&['model','artist-impression','plan'].every(k=>cap?.pinReferenceKinds?.includes(k));
+      const viewSupport=app?Array.isArray(h.experienceRevisions)&&h.experienceRevisions.includes('v11')&&cap?.modelRevision===revision&&locationSupport&&['model','artist-impression','plan'].every(k=>cap.referenceKinds?.includes(k))&&Object.entries(app.sections).every(([key,s])=>cap.sections?.includes(key)&&Array.isArray(cap.viewsBySection?.[key])&&s.views.every(v=>cap.viewsBySection[key].includes(v)))&&Array.isArray(cap.artistImpressions)&&app.images.every(i=>cap.artistImpressions.some(r=>r.id===i.id&&r.section===i.section&&r.view===i.view))&&Array.isArray(cap.plans)&&app.plans.every(i=>cap.plans.some(r=>r.id===i.id&&r.section===i.section&&r.view===i.view))&&['exterior','parking','identity','workshop','hv','me','parts'].every(a=>h.additionalAreasByExperienceRevision?.v11?.includes(a)):Array.isArray(h.viewsByRevision?.[revision])&&views.every(v=>h.viewsByRevision[revision].includes(v));
       validEndpoint=h.ok===true&&h.schema===1&&h.service==='mbsmart-comments'&&Array.isArray(h.revisions)&&h.revisions.includes(revision)&&Array.isArray(h.modesByRevision?.[revision])&&modes.every(m=>h.modesByRevision[revision].includes(m))&&viewSupport&&Array.isArray(h.exteriorSchemesByRevision?.[revision])&&['existing','proposed'].every(s=>h.exteriorSchemesByRevision[revision].includes(s));
       $('submit-comment').disabled=!validEndpoint;$('connection-notice').hidden=validEndpoint&&!revisionWarning;
       if(validEndpoint&&revisionWarning)$('connection-notice').textContent=revisionWarning;

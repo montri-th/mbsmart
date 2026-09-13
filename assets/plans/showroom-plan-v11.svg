@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1450" viewBox="0 0 2200 1450" role="img" aria-labelledby="title desc"><title id="title">ผังภายในโชว์รูม</title><desc id="desc">Module 3B + พื้นที่ส่งมอบใช้ร่วม · แสดงโหมดส่งมอบรถ · ชั้นล่างเท่านั้น แบบเวกเตอร์จากพิกัด v09-r4 สีเขียวคือข้อเสนอ smart สีส้มเส้นประคือพื้นที่ใช้ร่วมและประเด็นรอประสาน สีเทาคือบริบทเดิม ทุกระยะเป็นเมตรในโมเดล ไม่ใช่แบบสำรวจ</desc><defs><pattern id="coord-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#c48b22" stroke-width="1" opacity=".15"/></pattern><marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c8583"/></marker><style>text{font-family:Thonburi,'Noto Sans Thai',Tahoma,Arial,sans-serif;fill:#263532}.txt{paint-order:stroke;stroke:white;stroke-width:5;stroke-linejoin:round}.tiny{font-size:17px}.small{font-size:21px}.label{font-size:24px}.key-title{font-size:27px;font-weight:700}.key-body{font-size:22px}.dim{font-size:20px;fill:#7c8583}.grid{stroke:#d8ddda;stroke-width:1;stroke-dasharray:11 7 2 7}</style></defs><rect width="2200" height="1450" fill="white"/>
+<text x="70" y="63" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="600" >BENZ CHITCHAI  /  smart SiS + WiW</text>
+<text x="70" y="132" font-size="49" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >ผังภายในโชว์รูม</text>
+<text x="70" y="181" font-size="25" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >Module 3B + พื้นที่ส่งมอบใช้ร่วม · แสดงโหมดส่งมอบรถ · ชั้นล่างเท่านั้น</text>
+<line x1="70" y1="216" x2="2130" y2="216" stroke="#263532" stroke-width="2"/>
+<line x1="70" y1="254" x2="132" y2="254" stroke="#7c8583" stroke-width="2" fill="none"/>
+<text x="148" y="262" font-size="23" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="400" >บริบทเดิม / คงไว้</text>
+<line x1="575" y1="254" x2="637" y2="254" stroke="#087348" stroke-width="3.5" fill="#e5f3ea"/>
+<text x="653" y="262" font-size="23" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="400" >smart ใหม่ / ข้อเสนอ</text>
+<line x1="1080" y1="254" x2="1142" y2="254" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc"/>
+<text x="1158" y="262" font-size="23" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="400" >ใช้ร่วม / รอประสาน</text>
+<line x1="1585" y1="254" x2="1647" y2="254" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none"/>
+<text x="1663" y="262" font-size="23" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="400" >เส้นเหนือศีรษะเดิม</text>
+<text x="2125" y="64" font-size="19" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >V11 · VECTOR PLAN</text>
+<text x="2125" y="96" font-size="19" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >SOURCE GEOMETRY  v09-r4</text>
+<line x1="235.469" y1="954.184" x2="1479.224" y2="954.184" class="grid"/>
+<text x="220.469" y="960.184" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >H</text>
+<line x1="235.469" y1="879.439" x2="1479.224" y2="879.439" class="grid"/>
+<text x="220.469" y="885.439" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >G</text>
+<line x1="235.469" y1="715" x2="1479.224" y2="715" class="grid"/>
+<text x="220.469" y="721" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >F</text>
+<line x1="235.469" y1="475.816" x2="1479.224" y2="475.816" class="grid"/>
+<text x="220.469" y="481.816" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >E</text>
+<line x1="259.388" y1="975.112" x2="259.388" y2="422" class="grid"/>
+<text x="259.388" y="405" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >1</text>
+<line x1="498.571" y1="975.112" x2="498.571" y2="422" class="grid"/>
+<text x="498.571" y="405" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >4</text>
+<line x1="737.755" y1="975.112" x2="737.755" y2="422" class="grid"/>
+<text x="737.755" y="405" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >5</text>
+<line x1="976.939" y1="975.112" x2="976.939" y2="422" class="grid"/>
+<text x="976.939" y="405" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >6</text>
+<line x1="1216.122" y1="975.112" x2="1216.122" y2="422" class="grid"/>
+<text x="1216.122" y="405" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >7</text>
+<line x1="1455.306" y1="975.112" x2="1455.306" y2="422" class="grid"/>
+<text x="1455.306" y="405" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >8</text>
+<polygon id="SHOWROOM-GROUND-FLOOR" data-status="existing" data-source="layout.js states[handover].floor" points="259.388,954.184 976.939,954.184 976.939,879.439 1455.306,879.439 1455.306,475.816 259.388,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#fafbf9"/>
+<polygon id="EXISTING-SOUTH-MEETING" data-status="existing" data-source="building-annexes.json meeting" points="145.776,954.184 146.049,959.752 146.867,965.266 148.222,970.674 150.1,975.922 152.483,980.962 155.349,985.743 158.67,990.221 162.414,994.352 166.544,998.095 171.022,1001.416 175.803,1004.282 180.843,1006.666 186.092,1008.544 191.499,1009.898 197.014,1010.716 202.582,1010.99 208.15,1010.716 213.664,1009.898 219.072,1008.544 224.32,1006.666 229.36,1004.282 234.141,1001.416 238.619,998.095 242.75,994.352 246.493,990.221 249.814,985.743 252.68,980.962 255.064,975.922 256.942,970.674 258.296,965.266 259.114,959.752 259.388,954.184 259.388,715 190.622,715 145.776,783.765" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#f1f3f0"/>
+<polygon id="ADMIN" data-status="existing" data-source="geometry-register.json building.admin" points="498.571,610.357 737.755,610.357 737.755,475.816 498.571,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eef0ed"/>
+<polygon id="ADMIN-CORE" data-status="existing" data-source="geometry-register.json building.admin.core" points="498.571,538.602 567.337,538.602 567.337,475.816 498.571,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#e5e8e4"/>
+<polygon id="MANAGER" data-status="existing" data-source="geometry-register.json building.manager" points="737.755,610.357 1036.735,610.357 1041.946,610.13 1047.118,609.449 1052.211,608.32 1057.186,606.751 1062.006,604.755 1066.633,602.346 1071.032,599.543 1075.171,596.368 1079.017,592.843 1082.541,588.997 1085.717,584.859 1088.519,580.459 1090.928,575.832 1092.924,571.013 1094.493,566.038 1095.622,560.945 1096.303,555.773 1096.531,550.561 1096.531,475.816 737.755,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eef0ed"/>
+<polygon id="EXISTING-SERVICE-LOUNGE" data-status="existing" data-source="scene.js line123" points="1216.122,715 1455.306,715 1455.306,475.816 1216.122,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#f1f3f0"/>
+<polygon id="SHARED-HANDOVER-FLEX" data-status="shared" data-source="layout.js optionalPackage G1/F1" points="1216.122,879.439 1455.306,879.439 1455.306,715 1216.122,715" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polyline id="G1-FLEX-GLASS" data-status="shared" data-source="layout.js optionalPackage.G1" points="1216.122,879.439 1216.122,715" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polyline id="F1-FLEX-PARTITION" data-status="shared" data-source="scene.js flexRoom" points="1216.122,715 1455.306,715" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polyline id="entrance-east-service" data-status="shared" data-source="layout.js states[handover].routes" data-plan-width="1" points="1102.51,879.439 1102.51,857.015 1171.276,857.015 1171.276,649.224 1171.276,499.735" fill="none" stroke="#9b6200" stroke-opacity=".10" stroke-width="29.898" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline id="entrance-east-service-CENTRELINE" data-status="shared" data-source="layout.js states[handover].routes" points="1102.51,879.439 1102.51,857.015 1171.276,857.015 1171.276,649.224 1171.276,499.735" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polyline id="mb5-rear-pedestrian" data-status="shared" data-source="layout.js states[handover].routes" data-plan-width="1" points="976.939,691.082 1041.219,685.102 1059.158,657.596 1078.592,649.224 1171.276,649.224" fill="none" stroke="#9b6200" stroke-opacity=".10" stroke-width="29.898" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline id="mb5-rear-pedestrian-CENTRELINE" data-status="shared" data-source="layout.js states[handover].routes" points="976.939,691.082 1041.219,685.102 1059.158,657.596 1078.592,649.224 1171.276,649.224" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polygon id="SMART-3B-ENVELOPE" data-status="shared" data-source="layout.js module.envelopePolygon" points="477.045,943.719 477.045,685.102 278.821,685.102 278.821,943.719" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none"/>
+<polygon id="SMART-3B-PLATFORM" data-status="new" data-source="layout.js module.shape" points="278.821,943.719 278.821,685.102 355.061,685.102 477.045,755.362 379.877,943.719" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-3B-CARPET" data-status="new" data-source="layout.js module.carpet" points="294.667,921.296 294.667,785.26 363.433,827.117 363.433,921.296" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" style="fill:#cde5d6"/>
+<polygon id="S1" data-status="new" data-source="layout.js states[handover].cars" points="314.841,751.34 436.406,821.525 468.83,765.364 347.265,695.179" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<text x="391.836" y="758.352" font-size="19" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >S1</text>
+<polygon id="MB1" data-status="existing" data-source="layout.js states[handover].cars" points="540.429,936.245 695.898,936.245 695.898,873.459 540.429,873.459" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<text x="618.163" y="904.852" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB1</text>
+<polygon id="MB2" data-status="existing" data-source="layout.js states[handover].cars" points="779.612,936.245 935.082,936.245 935.082,873.459 779.612,873.459" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<text x="857.347" y="904.852" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB2</text>
+<polygon id="MB3" data-status="existing" data-source="layout.js states[handover].cars" points="540.429,786.755 695.898,786.755 695.898,723.969 540.429,723.969" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<text x="618.163" y="755.362" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB3</text>
+<polygon id="MB4" data-status="existing" data-source="layout.js states[handover].cars" points="779.612,786.755 935.082,786.755 935.082,723.969 779.612,723.969" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<text x="857.347" y="755.362" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB4</text>
+<polygon id="MB5" data-status="existing" data-source="layout.js states[handover].cars" points="1071.117,670.153 1071.117,825.622 1133.903,825.622 1133.903,670.153" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<text x="1102.51" y="747.888" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB5</text>
+<polygon id="MB6" data-status="existing" data-source="layout.js states[handover].cars" points="1413.449,765.827 1257.98,765.827 1257.98,828.612 1413.449,828.612" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<text x="1335.714" y="797.219" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB6</text>
+<polygon id="P" data-status="existing" data-source="layout.js states[handover].furniture" points="516.51,677.628 695.898,677.628 695.898,653.709 516.51,653.709" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="MB1-EP" data-status="existing" data-source="layout.js states[handover].furniture" points="681.696,951.194 692.161,951.194 692.161,940.73 681.696,940.73" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="MB2-EP" data-status="existing" data-source="layout.js states[handover].furniture" points="920.88,951.194 931.344,951.194 931.344,940.73 920.88,940.73" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="MB3-EP" data-status="existing" data-source="layout.js states[handover].furniture" points="681.696,801.704 692.161,801.704 692.161,791.24 681.696,791.24" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="MB4-EP" data-status="existing" data-source="layout.js states[handover].furniture" points="920.88,801.704 931.344,801.704 931.344,791.24 920.88,791.24" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="MB5-EP" data-status="existing" data-source="layout.js states[handover].furniture" points="1056.168,811.421 1056.168,821.885 1066.633,821.885 1066.633,811.421" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="P-ST0" data-status="existing" data-source="layout.js states[handover].furniture" points="538.934,649.224 559.862,649.224 559.862,628.296 538.934,628.296" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="P-CU0" data-status="existing" data-source="layout.js states[handover].furniture" points="538.934,703.041 559.862,703.041 559.862,682.112 538.934,682.112" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="P-ST1" data-status="existing" data-source="layout.js states[handover].furniture" points="646.566,649.224 667.495,649.224 667.495,628.296 646.566,628.296" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="P-CU1" data-status="existing" data-source="layout.js states[handover].furniture" points="646.566,703.041 667.495,703.041 667.495,682.112 646.566,682.112" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="VM" data-status="existing" data-source="layout.js states[handover].furniture" points="963.485,634.276 1017.301,634.276 1017.301,619.327 963.485,619.327" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="W" data-status="new" data-source="layout.js states[handover].furniture" points="290.183,924.286 290.183,765.827 284.203,765.827 284.203,924.286" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="LED" data-status="new" data-source="layout.js states[handover].furniture" points="294.219,845.953 294.219,796.322 290.332,796.322 290.332,845.953" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SC" data-status="new" data-source="layout.js states[handover].furniture" points="355.958,893.64 355.958,868.227 308.121,868.227 308.121,893.64" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SC-S" data-status="new" data-source="layout.js states[handover].furniture" points="340.262,862.247 340.262,845.804 323.818,845.804 323.818,862.247" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SC-C1" data-status="new" data-source="layout.js states[handover].furniture" points="353.716,916.064 353.716,899.62 337.272,899.62 337.272,916.064" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SC-C2" data-status="new" data-source="layout.js states[handover].furniture" points="326.808,916.064 326.808,899.62 310.364,899.62 310.364,916.064" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="EP" data-status="new" data-source="layout.js states[handover].furniture" points="334.282,708.273 334.282,697.809 323.818,697.809 323.818,708.273" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="LP" data-status="new" data-source="layout.js states[handover].furniture" points="405.29,842.066 405.29,830.107 393.331,830.107 393.331,842.066" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="C1" data-status="existing" data-source="layout.js states[handover].furniture" points="830.439,678.375 926.112,678.375 926.112,652.962 830.439,652.962" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C1-U0" data-status="existing" data-source="layout.js states[handover].furniture" points="834.923,647.73 855.852,647.73 855.852,626.801 834.923,626.801" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C1-L0" data-status="existing" data-source="layout.js states[handover].furniture" points="834.923,704.536 855.852,704.536 855.852,683.607 834.923,683.607" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C1-U1" data-status="existing" data-source="layout.js states[handover].furniture" points="867.811,647.73 888.74,647.73 888.74,626.801 867.811,626.801" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C1-L1" data-status="existing" data-source="layout.js states[handover].furniture" points="867.811,704.536 888.74,704.536 888.74,683.607 867.811,683.607" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C1-U2" data-status="existing" data-source="layout.js states[handover].furniture" points="900.699,647.73 921.628,647.73 921.628,626.801 900.699,626.801" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C1-L2" data-status="existing" data-source="layout.js states[handover].furniture" points="900.699,704.536 921.628,704.536 921.628,683.607 900.699,683.607" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C2" data-status="existing" data-source="layout.js states[handover].furniture" points="740.745,677.628 764.663,677.628 764.663,653.709 740.745,653.709" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C2-C1" data-status="existing" data-source="layout.js states[handover].furniture" points="742.24,648.627 763.168,648.627 763.168,627.698 742.24,627.698" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="C2-C2" data-status="existing" data-source="layout.js states[handover].furniture" points="742.24,703.639 763.168,703.639 763.168,682.71 742.24,682.71" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="AS1" data-status="existing" data-source="layout.js states[handover].furniture" points="1313.291,696.314 1385.046,696.314 1385.046,670.901 1313.291,670.901" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="AS2" data-status="existing" data-source="layout.js states[handover].furniture" points="1313.291,515.431 1385.046,515.431 1385.046,490.018 1313.291,490.018" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="AA1" data-status="existing" data-source="layout.js states[handover].furniture" points="1296.099,636.518 1321.513,636.518 1321.513,611.105 1296.099,611.105" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="AA2" data-status="existing" data-source="layout.js states[handover].furniture" points="1376.824,636.518 1402.237,636.518 1402.237,611.105 1376.824,611.105" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="AA3" data-status="existing" data-source="layout.js states[handover].furniture" points="1296.099,572.237 1321.513,572.237 1321.513,546.824 1296.099,546.824" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="AA4" data-status="existing" data-source="layout.js states[handover].furniture" points="1376.824,572.237 1402.237,572.237 1402.237,546.824 1376.824,546.824" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="AT1" data-status="existing" data-source="layout.js states[handover].furniture" points="1332.724,657.446 1365.612,657.446 1365.612,641.003 1332.724,641.003" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="AT2" data-status="existing" data-source="layout.js states[handover].furniture" points="1332.724,539.349 1365.612,539.349 1365.612,522.906 1332.724,522.906" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="N" data-status="existing" data-source="layout.js states[handover].furniture" points="1421.671,535.612 1438.115,535.612 1438.115,493.755 1421.671,493.755" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="TV" data-status="existing" data-source="layout.js states[handover].furniture" points="1446.486,608.862 1450.971,608.862 1450.971,572.985 1446.486,572.985" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="SHARED-EV" data-status="shared" data-source="layout.js states[handover].furniture" points="1235.556,738.171 1247.515,738.171 1247.515,724.717 1235.556,724.717" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polygon id="SMART-WINDOW-LOGO" data-status="new" data-source="layout.js states[handover].furniture" points="1320.167,882.279 1349.467,882.279 1349.467,862.845 1320.167,862.845" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="MB6-EP" data-status="existing" data-source="layout.js states[handover].furniture" points="1272.181,750.878 1261.717,750.878 1261.717,761.342 1272.181,761.342" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<circle id="DECORATIVE-FOLIAGE-1" data-status="overhead" data-source="layout.js decorativePlanters; conservative foliage envelope" cx="1011.321" cy="653.709" r="14.949" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none" />
+<circle id="DECORATIVE-PLANTER-1" data-status="existing" data-source="layout.js decorativePlanters" cx="1011.321" cy="653.709" r="8.969" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eef0eb"/>
+<circle id="DECORATIVE-FOLIAGE-2" data-status="overhead" data-source="layout.js decorativePlanters; conservative foliage envelope" cx="1036.735" cy="634.276" r="14.949" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none" />
+<circle id="DECORATIVE-PLANTER-2" data-status="existing" data-source="layout.js decorativePlanters" cx="1036.735" cy="634.276" r="8.969" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eef0eb"/>
+<circle id="DECORATIVE-FOLIAGE-3" data-status="overhead" data-source="layout.js decorativePlanters; conservative foliage envelope" cx="1246.02" cy="495.25" r="14.949" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none" />
+<circle id="DECORATIVE-PLANTER-3" data-status="existing" data-source="layout.js decorativePlanters" cx="1246.02" cy="495.25" r="8.969" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eef0eb"/>
+<circle id="DECORATIVE-FOLIAGE-4" data-status="overhead" data-source="layout.js decorativePlanters; conservative foliage envelope" cx="1267.547" cy="495.25" r="14.949" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none" />
+<circle id="DECORATIVE-PLANTER-4" data-status="existing" data-source="layout.js decorativePlanters" cx="1267.547" cy="495.25" r="8.969" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eef0eb"/>
+<circle id="PERSON-gallery-customer" data-status="existing" data-source="layout.js standing people; illustrative only" cx="779.612" cy="830.107" r="4.784" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#c4ccc7"/>
+<circle id="PERSON-arrival" data-status="existing" data-source="layout.js standing people; illustrative only" cx="1175.76" cy="807.684" r="4.784" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#c4ccc7"/>
+<circle id="PERSON-handover-specialist" data-status="existing" data-source="layout.js standing people; illustrative only" cx="1293.857" cy="737.423" r="4.784" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#c4ccc7"/>
+<circle id="PERSON-handover-client" data-status="existing" data-source="layout.js standing people; illustrative only" cx="1328.24" cy="740.413" r="4.784" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#c4ccc7"/>
+<polyline id="S1-FRONT" data-status="new" data-source="layout.js car heading" points="434.493,782.98 449.511,791.651" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" style="fill:none" marker-end="url(#arrow-grey)"/>
+<polyline id="MB1-FRONT" data-status="existing" data-source="layout.js car heading" points="674.969,904.852 692.31,904.852" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" marker-end="url(#arrow-grey)"/>
+<polyline id="MB2-FRONT" data-status="existing" data-source="layout.js car heading" points="914.153,904.852 931.494,904.852" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" marker-end="url(#arrow-grey)"/>
+<polyline id="MB3-FRONT" data-status="existing" data-source="layout.js car heading" points="674.969,755.362 692.31,755.362" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" marker-end="url(#arrow-grey)"/>
+<polyline id="MB4-FRONT" data-status="existing" data-source="layout.js car heading" points="914.153,755.362 931.494,755.362" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" marker-end="url(#arrow-grey)"/>
+<polyline id="MB5-FRONT" data-status="existing" data-source="layout.js car heading" points="1102.51,804.694 1102.51,822.035" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" marker-end="url(#arrow-grey)"/>
+<polyline id="MB6-FRONT" data-status="existing" data-source="layout.js car heading" points="1278.908,797.219 1261.567,797.219" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" marker-end="url(#arrow-grey)"/>
+<polygon id="COLUMN-0" data-status="existing" data-source="layout.js columns" points="251.913,961.658 266.862,961.658 266.862,946.709 251.913,946.709" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-1" data-status="existing" data-source="layout.js columns" points="251.913,722.474 266.862,722.474 266.862,707.526 251.913,707.526" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-2" data-status="existing" data-source="layout.js columns" points="251.913,483.291 266.862,483.291 266.862,468.342 251.913,468.342" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-3" data-status="existing" data-source="layout.js columns" points="491.097,961.658 506.046,961.658 506.046,946.709 491.097,946.709" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-4" data-status="existing" data-source="layout.js columns" points="491.097,722.474 506.046,722.474 506.046,707.526 491.097,707.526" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-5" data-status="existing" data-source="layout.js columns" points="491.097,483.291 506.046,483.291 506.046,468.342 491.097,468.342" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-6" data-status="existing" data-source="layout.js columns" points="730.281,961.658 745.23,961.658 745.23,946.709 730.281,946.709" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-7" data-status="existing" data-source="layout.js columns" points="730.281,722.474 745.23,722.474 745.23,707.526 730.281,707.526" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-8" data-status="existing" data-source="layout.js columns" points="730.281,483.291 745.23,483.291 745.23,468.342 730.281,468.342" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-9" data-status="existing" data-source="layout.js columns" points="969.464,961.658 984.413,961.658 984.413,946.709 969.464,946.709" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-10" data-status="existing" data-source="layout.js columns" points="969.464,722.474 984.413,722.474 984.413,707.526 969.464,707.526" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-11" data-status="existing" data-source="layout.js columns" points="969.464,483.291 984.413,483.291 984.413,468.342 969.464,468.342" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-12" data-status="existing" data-source="layout.js columns" points="1208.648,722.474 1223.597,722.474 1223.597,707.526 1208.648,707.526" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-13" data-status="existing" data-source="layout.js columns" points="1208.648,483.291 1223.597,483.291 1223.597,468.342 1208.648,468.342" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-14" data-status="existing" data-source="layout.js columns" points="1447.832,722.474 1462.781,722.474 1462.781,707.526 1447.832,707.526" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="COLUMN-15" data-status="existing" data-source="layout.js columns" points="1447.832,483.291 1462.781,483.291 1462.781,468.342 1447.832,468.342" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#697570"/>
+<polygon id="STAIR-lower" data-status="existing" data-source="geometry-register.json building.stair" points="387.949,583.449 447.745,583.449 447.745,538.602 387.949,538.602" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="STAIR-west" data-status="existing" data-source="geometry-register.json building.stair" points="337.122,538.602 387.949,538.602 387.949,517.673 337.122,517.673" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="STAIR-upper" data-status="existing" data-source="geometry-register.json building.stair" points="387.949,517.673 447.745,517.673 447.745,475.816 387.949,475.816" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="STAIR-well" data-status="existing" data-source="geometry-register.json building.stair" points="387.949,538.602 447.745,538.602 447.745,517.673 387.949,517.673" stroke="#7c8583" stroke-width="2" fill="none" />
+<polyline data-status="existing" data-source="" points="395.423,583.449 395.423,538.602" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="395.423,517.673 395.423,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="402.898,583.449 402.898,538.602" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="402.898,517.673 402.898,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="410.372,583.449 410.372,538.602" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="410.372,517.673 410.372,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="417.847,583.449 417.847,538.602" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="417.847,517.673 417.847,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="425.321,583.449 425.321,538.602" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="425.321,517.673 425.321,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="432.796,583.449 432.796,538.602" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="432.796,517.673 432.796,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="440.27,583.449 440.27,538.602" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="440.27,517.673 440.27,475.816" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polygon id="REAR-SERVICE-STEPS" data-status="existing" data-source="geometry-register.json building.rearSteps" points="447.745,475.816 498.571,475.816 498.571,395.092 447.745,395.092" stroke="#7c8583" stroke-width="2" fill="none" />
+<polyline id="ENTRY-OPENING" data-status="existing" data-source="scene.js glassWall entrance" points="1054.673,879.439 1150.347,879.439" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" stroke-dasharray="3 4"/>
+<text x="645.071" y="531.128" font-size="23" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >ธุรการ</text>
+<text x="917.143" y="532.622" font-size="23" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >ผู้จัดการ</text>
+<text x="1335.714" y="593.913" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >ห้องรับรองเดิม</text>
+<text x="204.077" y="803.199" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >ประชุม</text>
+<text x="386.454" y="611.852" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >บันไดเดิม</text>
+<text x="782.602" y="825.622" font-size="24" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >พื้นที่รถ MB</text>
+<text x="794.561" y="671.648" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" ></text>
+<text x="1151.842" y="601.388" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1151.842 601.388)">ทางเข้าศูนย์บริการ</text>
+<text x="1335.714" y="842.664" font-size="18" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >ส่งมอบ / Flex ใช้ร่วม</text>
+<text x="1102.51" y="906.347" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >ทางเข้าหลัก</text>
+<line x1="259.388" y1="395.092" x2="1455.306" y2="395.092" stroke="#7c8583" stroke-width="1"/><path d="M254.388,390.092l10,10 M1450.306,390.092l10,10" fill="none" stroke="#7c8583"/>
+<text x="857.347" y="385.092" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" class="txt">40.00 ม. · กริดเดิม 1–8</text>
+<text x="857.347" y="1033.413" font-size="25" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >ด้านหน้าอาคาร / ไปถนนด้านหน้า ↓</text>
+<line x1="355.061" y1="685.102" x2="456.714" y2="638.76" stroke="white" stroke-width="7"/><line x1="355.061" y1="685.102" x2="456.714" y2="638.76" stroke="#087348" stroke-width="1.7"/><circle cx="456.714" cy="638.76" r="20" fill="white" stroke="#087348" stroke-width="3" />
+<text x="456.714" y="645.76" font-size="19" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="700" >01</text>
+<line x1="332.04" y1="880.934" x2="432.796" y2="907.842" stroke="white" stroke-width="7"/><line x1="332.04" y1="880.934" x2="432.796" y2="907.842" stroke="#087348" stroke-width="1.7"/><circle cx="432.796" cy="907.842" r="20" fill="white" stroke="#087348" stroke-width="3" />
+<text x="432.796" y="914.842" font-size="19" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="700" >02</text>
+<line x1="391.836" y1="758.352" x2="453.724" y2="830.107" stroke="white" stroke-width="7"/><line x1="391.836" y1="758.352" x2="453.724" y2="830.107" stroke="#087348" stroke-width="1.7"/><circle cx="453.724" cy="830.107" r="20" fill="white" stroke="#087348" stroke-width="3" />
+<text x="453.724" y="837.107" font-size="19" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="700" >03</text>
+<line x1="1334.817" y1="872.562" x2="1419.429" y2="933.255" stroke="white" stroke-width="7"/><line x1="1334.817" y1="872.562" x2="1419.429" y2="933.255" stroke="#087348" stroke-width="1.7"/><circle cx="1419.429" cy="933.255" r="20" fill="white" stroke="#087348" stroke-width="3" />
+<text x="1419.429" y="940.255" font-size="19" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="700" >04</text>
+<line x1="606.204" y1="665.668" x2="576.306" y2="619.327" stroke="white" stroke-width="7"/><line x1="606.204" y1="665.668" x2="576.306" y2="619.327" stroke="#9b6200" stroke-width="1.7"/><circle cx="576.306" cy="619.327" r="20" fill="white" stroke="#9b6200" stroke-width="3" stroke-dasharray="5 3"/>
+<text x="576.306" y="626.327" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="700" >05</text>
+<line x1="1335.714" y1="797.219" x2="1491.184" y2="774.796" stroke="white" stroke-width="7"/><line x1="1335.714" y1="797.219" x2="1491.184" y2="774.796" stroke="#9b6200" stroke-width="1.7"/><circle cx="1491.184" cy="774.796" r="20" fill="white" stroke="#9b6200" stroke-width="3" stroke-dasharray="5 3"/>
+<text x="1491.184" y="781.796" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="700" >06</text>
+<line x1="1241.536" y1="731.444" x2="1250.505" y2="658.194" stroke="white" stroke-width="7"/><line x1="1241.536" y1="731.444" x2="1250.505" y2="658.194" stroke="#9b6200" stroke-width="1.7"/><circle cx="1250.505" cy="658.194" r="20" fill="white" stroke="#9b6200" stroke-width="3" stroke-dasharray="5 3"/>
+<text x="1250.505" y="665.194" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="700" >07</text>
+<line x1="1171.276" y1="595.408" x2="1150.347" y2="426.485" stroke="white" stroke-width="7"/><line x1="1171.276" y1="595.408" x2="1150.347" y2="426.485" stroke="#9b6200" stroke-width="1.7"/><circle cx="1150.347" cy="426.485" r="20" fill="white" stroke="#9b6200" stroke-width="3" stroke-dasharray="5 3"/>
+<text x="1150.347" y="433.485" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="700" >08</text>
+<line x1="1102.51" y1="825.622" x2="1045.704" y2="927.276" stroke="white" stroke-width="7"/><line x1="1102.51" y1="825.622" x2="1045.704" y2="927.276" stroke="#7c8583" stroke-width="1.7"/><circle cx="1045.704" cy="927.276" r="20" fill="white" stroke="#7c8583" stroke-width="3" />
+<text x="1045.704" y="934.276" font-size="19" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="700" >09</text>
+<line x1="1061.401" y1="816.653" x2="997.867" y2="840.571" stroke="white" stroke-width="7"/><line x1="1061.401" y1="816.653" x2="997.867" y2="840.571" stroke="#7c8583" stroke-width="1.7"/><circle cx="997.867" cy="840.571" r="20" fill="white" stroke="#7c8583" stroke-width="3" />
+<text x="997.867" y="847.571" font-size="19" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="700" >10</text>
+<text x="1640" y="317" font-size="28" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >จุดปรับปรุงและการใช้ร่วม</text>
+<line x1="1602" y1="294" x2="1602" y2="1310" stroke="#d8ddda"/>
+<text x="1640" y="352" font-size="24" fill="#087348" style="fill:#087348" text-anchor="start" font-weight="700" >01</text>
+<text x="1689" y="352" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >smart Module 3B</text>
+<text x="1689" y="385" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >แพลตฟอร์มหนึ่งชุด หมุน 90°</text>
+<text x="1689" y="414" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >กรอบโมดูล 8.65 × 6.63 ม.</text>
+<text x="1640" y="450" font-size="24" fill="#087348" style="fill:#087348" text-anchor="start" font-weight="700" >02</text>
+<text x="1689" y="450" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >ชุดเฟอร์นิเจอร์ smart</text>
+<text x="1689" y="483" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ฉากหลัง จอ 75 นิ้ว โต๊ะและเก้าอี้</text>
+<text x="1689" y="512" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >แท่นราคา พรม และไฟพื้น</text>
+<text x="1640" y="548" font-size="24" fill="#087348" style="fill:#087348" text-anchor="start" font-weight="700" >03</text>
+<text x="1689" y="548" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >รถจัดแสดง smart #5</text>
+<text x="1689" y="581" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ใช้ขนาดรวมกระจกตามโมเดล</text>
+<text x="1689" y="610" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ข้อยกเว้นรถหนึ่งคันรอยืนยัน</text>
+<text x="1640" y="646" font-size="24" fill="#087348" style="fill:#087348" text-anchor="start" font-weight="700" >04</text>
+<text x="1689" y="646" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >โลโก้กระจก smart</text>
+<text x="1689" y="679" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >Type 4 ตำแหน่งตามหมุดเจ้าของ</text>
+<text x="1689" y="708" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ขนาดและวิธีติดตั้งรอผู้ผลิต</text>
+<text x="1640" y="744" font-size="24" fill="#9b6200" style="fill:#9b6200" text-anchor="start" font-weight="700" >05</text>
+<text x="1689" y="744" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >เคาน์เตอร์ต้อนรับเดิม</text>
+<text x="1689" y="777" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ใช้ร่วมและเพิ่มข้อมูล smart care</text>
+<text x="1689" y="806" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ไม่ใช่เคาน์เตอร์ใหม่ทั้งชุด</text>
+<text x="1640" y="842" font-size="24" fill="#9b6200" style="fill:#9b6200" text-anchor="start" font-weight="700" >06</text>
+<text x="1689" y="842" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >ส่งมอบรถ / ห้อง Flex</text>
+<text x="1689" y="875" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ห้องร่วม MB–smart + กระจก G1/F1</text>
+<text x="1689" y="904" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ภาพนี้แสดงรถ MB6; ผังยังรอประสาน</text>
+<text x="1640" y="940" font-size="24" fill="#9b6200" style="fill:#9b6200" text-anchor="start" font-weight="700" >07</text>
+<text x="1689" y="940" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >เครื่องชาร์จ MB เดิม</text>
+<text x="1689" y="973" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >แนวคิดนำมาใช้ร่วม ตำแหน่งรอวัด</text>
+<text x="1689" y="1002" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >กำลังไฟ ระยะสายและสิทธิใช้รอตรวจ</text>
+<text x="1640" y="1038" font-size="24" fill="#9b6200" style="fill:#9b6200" text-anchor="start" font-weight="700" >08</text>
+<text x="1689" y="1038" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >ทางเดินอ้อมข้าง–หลัง MB5</text>
+<text x="1689" y="1071" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >แนวศึกษาแถบ 1.00 ม. ตามเส้นทาง</text>
+<text x="1689" y="1100" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ต้องวัดบานประตูและตรวจทางเดินจริง</text>
+<text x="1640" y="1136" font-size="24" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="700" >09</text>
+<text x="1689" y="1136" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >MB5 ปรับตามเจ้าของ</text>
+<text x="1689" y="1169" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >หน้ารถ (28.20,4.30) หันทางเข้า</text>
+<text x="1689" y="1198" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ห่างแนวประตู 1.80 ม. / หลัง Y9.50</text>
+<text x="1640" y="1234" font-size="24" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="700" >10</text>
+<text x="1689" y="1234" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >แท่นราคา MB ฝั่งขวาผู้ขับ</text>
+<text x="1689" y="1267" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >จุดกลางถอย 0.30 ม. จากหน้ารถ</text>
+<text x="1689" y="1296" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >6 แท่นโหมดส่งมอบ / อีกสองโหมด 5</text>
+<rect x="105" y="1138" width="149.49" height="10" fill="#263532"/><rect x="254.49" y="1138" width="149.49" height="10" fill="white" stroke="#263532"/>
+<text x="105" y="1126" font-size="20" fill="#263532" style="fill:#263532" text-anchor="middle" font-weight="400" >0</text>
+<text x="254.49" y="1126" font-size="20" fill="#263532" style="fill:#263532" text-anchor="middle" font-weight="400" >5</text>
+<text x="403.98" y="1126" font-size="20" fill="#263532" style="fill:#263532" text-anchor="middle" font-weight="400" >10</text>
+<text x="105" y="1181" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >มาตราส่วนกราฟิก · เมตรในโมเดล (ไม่ใช่ระยะสำรวจ)</text>
+<text x="800" y="1145" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >รุ่นรถตามช่อง · กรอบวางแผน MB 5.20 × 2.10 ม.</text>
+<text x="105" y="1210" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >MB1 · GLS</text>
+<text x="105" y="1242" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >MB2 · GLC</text>
+<text x="105" y="1274" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >MB3 · E-Class</text>
+<text x="800" y="1210" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >MB4 · GLC</text>
+<text x="800" y="1242" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >MB5 · C-Class</text>
+<text x="800" y="1274" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >MB6 · AMG coupé (รุ่นย่อยยังไม่ยืนยัน)</text>
+<line x1="70" y1="1327" x2="2130" y2="1327" stroke="#d8ddda"/>
+<text x="70" y="1358" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >แบบประสานจาก v09-r4 · ตัวเลขเป็นเมตรในโมเดล ไม่ใช่แบบสำรวจหรือแบบก่อสร้าง</text>
+<text x="70" y="1389" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >สีใช้แยกขอบเขตงาน ไม่ใช่สีวัสดุจริง · ข้อเสนอทั้งหมดรอสำรวจ ประสานแบรนด์ และตรวจวิศวกรรม</text>
+<text x="2130" y="1421" font-size="17" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >showroom-plan.svg</text>
+</svg>

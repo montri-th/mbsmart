@@ -279,8 +279,8 @@
           "testDrive": 4
         }
       ],
-      "review": "Three proposed parallel side bays 2.80×5.50m, smart customer1 + test2. Allocation remains HOLD until required MB parking count is confirmed and preserved, then vehicle paths checked. Confirm dealership classification and count/site allocation; showroom display cars cannot substitute for parking bays.",
-      "v09Intent": "Three proposed parallel side bays 2.80×5.50m, smart customer1 + test2. Allocation remains HOLD until required MB parking count is confirmed and preserved, then vehicle paths checked."
+      "review": "Target remains smart customer1 + test2. Night-photo reconstruction reuses two existing side cells S-1/S-2 as candidate customer1/test1 assignments with no duplicate paint. Test-drive2 is UNASSIGNED / HOLD: former proxy crossed workshop gate approach. Required MB allocation, dealership classification, exact paint and vehicle paths must be confirmed before any assignment; showroom cars cannot substitute for parking.",
+      "v09Intent": "R4 night-photo correction: two candidate existing-cell assignments, one unassigned requirement. No full-site inventory or capacity approval."
     },
     {
       "id": "7",

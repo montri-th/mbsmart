@@ -23,6 +23,7 @@ s.workshopStudy=JSON.parse(fs.readFileSync(path.join(root,'assets/workshop-study
 s.upperBuilding.masterCorner=s.annexes.meeting.masterTowerCorner;
 s.upperBuilding.southBalcony={yMin:9,yMax:12.8,recessX:-.5,status:'Recessed south-side upper opening from current and June2024 photographs; dimensions approximate'};
 s.upperBuilding.lowerWingFrontY=.6;
+s.upperBuilding.signBeam={xMin:0,xMax:24,centreHeight:3.82,height:.64,depth:.24,worldZ:.04,letterWorldZ:.22,color:'#17191b',roughness:.86,metalness:0,source:'Owner close-up supplied14Sep2026: continuous opaque black concrete beam behind first/third facade lettering',status:'Observed continuity/material character; dimensions and structure not surveyed'};
 s.frontDrain={insideOffset:.30,width:.30,visualDepth:.12,status:'Open channel inside fence seen in current photos; visible recess proxy, not drainage engineering'};
 s.sources.push(...s.annexes.sources);s.bounds.yMax=s.annexes.contextCropY;
 s.rearClip={y:s.annexes.contextCropY,status:'arbitrary expanded context crop, NOT rear property edge or measured A–H'};
@@ -33,10 +34,48 @@ s.kerb=c.kerb;s.cameraMetadataWarning=c.cameraMetadataWarning;s.existingInventor
 s.limitations=s.limitations.filter(q=>!q.startsWith('Street View is historical'));
 s.limitations.push('Owner confirms current relative positions and 3 MB + 2 Thai flag count; ALL metric coordinates, heights, curve radius and levels remain photo-fit assumptions. One detail screenshot is October 2023, not June 2024.');
 d.revision='v09';d.exterior=JSON.parse(fs.readFileSync(path.join(root,'assets/exterior-proposal.json'),'utf8'));d.defaultExteriorScheme='proposed';
-d.iteration='r3';d.exterior.workshopStudy=s.workshopStudy;
-d.feedbackPolicy={submissionEnabled:true,reason:'Live backend must explicitly support v09 modes/views and exteriorScheme. Exterior comments use named area and view, pins remain interior-only.'};
+d.iteration='r4';d.exterior.workshopStudy=s.workshopStudy;
+// v11 review adoption: appearance is observed from the supplied 12 Sep showroom
+// photographs, not a live stock feed or manufacturer CAD. Preserve planning boxes.
+d.mbVehicles=[
+ {id:'MB1',model:'Mercedes-Benz GLS',bodyStyle:'gls',paint:'#11171b',photoReference:'Showroom 260912 / 3',familyConfirmed:true},
+ {id:'MB2',model:'Mercedes-Benz GLC',bodyStyle:'glc',paint:'#eeeFEb',photoReference:'Showroom 260912 / 3',familyConfirmed:true},
+ {id:'MB3',model:'Mercedes-Benz E-Class',bodyStyle:'e-class',paint:'#eceeea',photoReference:'Showroom 260912 / 1,4',familyConfirmed:true},
+ {id:'MB4',model:'Mercedes-Benz GLC',bodyStyle:'glc-sport',paint:'#f0f0eb',photoReference:'Showroom 260912 / 2,4',familyConfirmed:true},
+ {id:'MB5',model:'Mercedes-Benz C-Class',bodyStyle:'c-class',paint:'#252a2e',photoReference:'Showroom 260912 / 8',familyConfirmed:true},
+ {id:'MB6',model:'Mercedes-AMG coupe · exact family unconfirmed',bodyStyle:'amg-coupe',paint:'#101419',photoReference:'Showroom 260912 / 6,9',familyConfirmed:false}
+];
+d.vehicleAppearanceStatus='Photographed vehicle appearances; MB slot assignment is illustrative, not original photo order. Model year/trim unverified. 5.20 × 2.10 m planning envelopes retained, not physical vehicle specifications.';
+d.decorativePlanters=[{x:25.15,y:10.05,radius:.30,height:.90,foliageRadius:.50},{x:26,y:10.7,radius:.30,height:.68,foliageRadius:.50},{x:33,y:15.35,radius:.30,height:.90,foliageRadius:.50},{x:33.72,y:15.35,radius:.30,height:.68,foliageRadius:.50}];
+for(const state of d.states){
+ for(const car of state.cars.filter(q=>q.brand==='MB'))Object.assign(car,d.mbVehicles.find(q=>q.id===car.id));
+ const mb5=state.cars.find(q=>q.id==='MB5');Object.assign(mb5,{cx:28.2,cy:6.9,angle:-90,frontCentre:[28.2,4.3],clearanceStatus:'Owner review adopted: centred to entrance, adjusted setback. Door line gap1.80m; rear circulation and swept paths remain HOLD pending measured door swing and full route validation.'});
+ for(const car of state.cars.filter(q=>q.brand==='MB')){
+  let stand=state.furniture.find(q=>q.id===car.id+'-EP');
+  if(!stand){stand={id:car.id+'-EP',type:'price-stand',w:.35,h:.35,zone:'MB-price',retained:false};state.furniture.push(stand);}
+  const a=car.angle*Math.PI/180,forward=[Math.cos(a),Math.sin(a)],right=[Math.sin(a),-Math.cos(a)],long=car.l/2-.30,side=car.w/2+stand.w/2+.15;
+  Object.assign(stand,{cx:+(car.cx+forward[0]*long+right[0]*side).toFixed(4),cy:+(car.cy+forward[1]*long+right[1]*side).toFixed(4),angle:car.angle,relocated:true,placement:'Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope',note:'Owner review adopted; verify actual stand and door clearances'});
+  delete stand.corners;
+ }
+ for(const q of state.furniture){if(q.type==='plant'||q.type==='planter'){if(Math.abs(q.cx-25.8)<.001&&Math.abs(q.cy-10.7)<.001){q.cx=25.15;q.cy=10.05;}else if(Math.abs(q.cx-26.55)<.001&&Math.abs(q.cy-10.7)<.001){q.cx=26;q.cy=10.7;}}}
+ const arrival=state.people.find(q=>q.id==='arrival');if(arrival)Object.assign(arrival,{x:30.65,y:4.9});
+ const specialist=state.people.find(q=>q.id==='handover-specialist');if(specialist)Object.assign(specialist,{x:34.6,y:7.25});
+ const client=state.people.find(q=>q.id==='handover-client');if(client)Object.assign(client,{x:35.75,y:7.15});
+ state.serviceAccessReserve={x:29.6,y:8,w:2.4,h:8,status:'Concept route east of relocated MB5; column/door projections and continuous accessible/egress width not certified'};
+ state.routes=state.routes.filter(q=>!['entrance-east-service','service-approach-pedestrian'].includes(q.id));
+ state.routes.push({id:'entrance-east-service',path:[[28.2,2.5],[28.2,3.25],[30.5,3.25],[30.5,10.2],[30.5,15.2]],planningWidth:1,status:'Concept east pedestrian route around MB5; actual door sweep and egress/accessibility validation pending'},
+ {id:'mb5-rear-pedestrian',path:[[24,8.8],[26.15,9],[26.75,9.92],[27.4,10.2],[30.5,10.2]],planningWidth:1,status:'Illustrative rear route; conservative foliage pinch approx1.16m. Not a vehicle path or certified egress route'});
+}
+for(const q of s.existingInventory){
+ if(q.id==='FACADE-MB')Object.assign(q,{xy:[4.05,-.22],width:7.55,textHeight:.93,centreHeight:3.85,positionStatus:'first glazed bay, near-frontal June2024 Street View checked13Sep2026; metric photo-fit only',typography:'raised serif lettering silhouette on continuous black concrete beam; supplier vector pending'});
+ if(q.id==='FACADE-DEALER')Object.assign(q,{xy:[20,-.22],width:7.35,textHeight:.72,centreHeight:3.85,positionStatus:'third glazed bay before canopy, June2024 Street View checked13Sep2026; metric photo-fit only',typography:'raised sans-serif dealer lettering silhouette on continuous black concrete beam'});
+}
+d.reviewAdoptions={revision:'v11',ownerReviewDate:'2026-09-13',mb5:'Front-centre interpretation, aligned to entrance centreX28.2 with setback adjusted toY4.3',priceStands:'All MB including MB6 handover: RHD front-right,0.30m setback',status:'Adopted in model; not compliance approval'};
+s.exteriorParking={...JSON.parse(fs.readFileSync(path.join(root,'assets/parking-photo-fit.json'),'utf8')),level:s.levels.forecourt};
+d.limitations=d.limitations.map(q=>q.startsWith('MB5 circulation HOLD')?'MB5 owner relocation adopted; actual door swing, rear passage and vehicle swept path remain HOLD':q);
+d.feedbackPolicy={submissionEnabled:true,reason:'Live backend must explicitly support v11 section, image/plan/model and point/rectangle contracts. Each review retains its section, reference, state and metric plan location; receipt verification is required.'};
 d.limitations=d.limitations.filter(q=>!q.startsWith('Street View is historical'));
 d.limitations.push('v09 separates reconstructed existing exterior from proposed smart additions. Proposed items are not compliance, engineering or supplier approvals.');
 fs.writeFileSync(path.join(root,'assets/site-context.json'),JSON.stringify(s,null,2)+'\n');
-fs.writeFileSync(path.join(root,'layout.js'),'/* v09 exterior existing/proposed comparison; all v07 interior states retained. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
+fs.writeFileSync(path.join(root,'layout.js'),'/* v09-r4 / v11 owner review adoption; coordinate frame and archived v08 preserved. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
 console.log('v09 layout generated; existing inventory separated from smart proposal');

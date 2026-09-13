@@ -1,4 +1,16 @@
-# Benz Chitchai · v10 three-section design review
+# Benz Chitchai · v11 three-section design review
+
+Current presentation: four Showroom interior impressions, two Exterior impressions and two workshop impressions, three highlighted Smart SiS vector plans, twelve locked model views and native-resolution downloads (AI PNG 1672×941, plan PNG 4400px wide and SVG). Soft-light photographic interpretations are not measured conditions or compliance proof; native plans and model govern geometry.
+
+Model v09-r4 adopts the owner's MB5 entrance-centre/setback and all-MB RHD price-stand changes. MB appearances follow the supplied showroom photographs: GLS, two GLC, E-Class, C-Class and a black two-door AMG coupe with exact family unconfirmed. Planning envelopes are not manufacturer CAD or verified vehicle dimensions. Existing facade lettering follows the June2024 Street View: Mercedes-Benz in first glazed bay, dealer name in third. The owner's latest close-up confirms a continuous opaque charcoal-black beam behind both signs and the intervening bay, now explicit in the model and exterior artists; dimensions, substrate construction and typefaces are not independently surveyed or certified.
+
+Night-photo parking supersedes the former uniform perpendicular array and rejected four-of-nine composition. `assets/parking-photo-fit.json` owns named polylines for main-road-parallel, corner-perpendicular and side-road-parallel runs plus an incomplete building-side fragment. Two illustrative saloons occupy two of five individually identified complete photo cells (40% of that reference set only); incomplete continuations do not establish a whole-site total. Proposed smart customer/test-drive assignments reuse S-1/S-2. The required second test-drive bay is unassigned/HOLD; its former proxy crossed the workshop gate approach. Exact paint, usable capacity, access and swept paths require survey and operator/brand review.
+
+Point and rectangle comments work across all three sections and artist/plan/model references. Drafts stay in page memory per context, not across reloads. Comment parties are showroom owner and compliance (Smart or Mercedes-Benz), with optional free text. The existing private endpoint now advertises the complete v11 contract. A labelled native-plan rectangle test and exact-ID retry returned the same receipt; no client comment content is public. Adoption does not mark any compliance issue approved.
+
+Public asset provenance is `assets/presentation-v11.json`. All original photos, drawings, private comment records and credentials remain excluded. The official Mercedes-Benz ICO is retained at owner request. Source/CPU, asset and endpoint checks do not certify physical devices, GPU appearance, engineering or compliance. Build and deployment use the existing GitHub Pages workflow.
+
+## Historical v10 presentation (superseded above)
 
 Showroom interior, Exterior and อู่ซ่อม each have two soft-light photorealistic artist impressions, captions, and their own image/model feedback context. Eleven model presets are locked by default; the owner can unlock the selected camera. Model geometry remains v09-r3. Images are AI-assisted interpretations, not measured conditions, approved design, specified equipment, or engineering evidence. Compare with the linked source model before decisions.
 
@@ -6,13 +18,13 @@ Draft comments are separated in page memory by section, image/model view and mod
 
 The favicon is the exact official Mercedes-Benz ICO, used at the owner's request. Public provenance is in `assets/presentation-v10.json`. No original private photos, drawings, log contents or credentials are shipped. Static/CPU checks and asset review are not rendered cross-device, survey, engineering or brand-compliance acceptance.
 
-## Retained v09-r3 geometry basis
+## Historical v09-r3 geometry basis (r4 deltas above)
 
 R3 supersedes earlier exterior assumptions below where explicitly stated. Legacy A–H=42m, E–A=26m, original1–9=48m; original3 is X2.02, NOT LX0. Original1/4/5/6/7/8 map to LX0..5. All showroom states remain byte-equivalent as data. Tower master corner X−3.8/frontY−1.9 now covers the separate-use meeting room with a continuous upper mass; setback/radius remain photo-fit. Workshop rear grid is Y42 with tapered west boundary; broad side awning X40..49.2 and internal gate are current-photo trials, not a curb opening. All five front poles now Y−7.75; pylon Y−7.05; two sign faces have distinct arrows/header.
 
 The workshop view adds a PROPOSED coordination layer: two smart dedicated bays (HV/ME), indicative MB allocations, lifts, protection placeholders, tools, diagnostics, separated parts shelves and LP32 lighting proxies. Quantities of MB bays and technical equipment dimensions are not verified existing capacity or compliance. D01 p2/p25 charger branding conflicts remain open, as do unavailable site-applicable MB technical/HV/MPS II criteria. Use assets/workshop-study.json and assets/legacy-drawing-controls.json. Browser/GPU, survey, access, fire, structural/electrical/HV and supplier gates remain open. Published v08 is NOT this candidate.
 
-## Retained v09-r3 — owner-authorized public coordination release
+## Historical v09-r3 — owner-authorized public coordination release
 
 Compare `exterior=existing` and `exterior=proposed` with the exterior selector. Ten camera views and three interior Flex uses are available. All v07 interior states, vehicles, furniture, geometry controls and smart #5 factory are unchanged. The selector changes proposed exterior objects; the v07 proposed window logo is hidden in exterior existing-condition views only, not removed from the interior design.
 
@@ -32,7 +44,7 @@ Feedback v09 adds required `exteriorScheme` (`existing` or `proposed`) to privat
 
 [Open v08 site context](https://montri-th.github.io/mbsmart/?rev=v08&mode=handover&view=site). This revision extends the existing model to the front and side public-road edge for later exterior design. No new exterior proposal, cadastral model or surveyed as-built is claimed.
 
-## Current v08
+## Historical v08 details
 
 Nine camera presets: the six interior views are retained, plus site overview, street frontage and site plan. Toggle surrounding context, upper-building massing, trees/utilities and evidence guides independently. The blue-ribbon stepped building, canopy, entry stair, planted strips, original signs, raised apron, retaining face, white fence, sidewalk and near-edge road strip are authored condition proxies from owner-supplied photos. The road strip does not assert a full carriageway width.
 

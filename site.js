@@ -63,8 +63,12 @@ window.BC_SITE=(T,h,data)=>{
   // Surface recess is a visual proxy; no excavation depth or outfall is certified.
   const drain=data.frontDrain;
   segments(fenceEdge,.7,(x,y,len,a)=>{if(x<raw[0][0]||openGate(x,y))return;const ix=x-Math.sin(a)*drain.insideOffset,iy=y+Math.cos(a)*drain.insideOffset;ibox(ix,L.forecourt+.009,-iy,len+.008,.015,drain.width,black,ground,a);});
-  for(const x of [13.2,16.8,20.4,24,28.2,32.5,37.2])ibox(x,L.forecourt+.016,5.65,.08,.014,4.1,fenceMat,ground);
-  ibox(26,L.forecourt+.017,3.62,27,.016,.08,fenceMat,ground);
+  // Named photographed white polylines, NOT a repeated bay/pole-spacing array.
+  // Incomplete spans intentionally stop where correspondence is unresolved.
+  for(const paint of data.exteriorParking.paint){
+    const g=new T.Group();g.name='PARKING-PAINT-'+paint.id;g.userData={...paint,coordinateStatus:data.exteriorParking.coordinateStatus};ground.add(g);
+    for(let i=1;i<paint.points.length;i++){const a=paint.points[i-1],b=paint.points[i],dx=b[0]-a[0],dy=b[1]-a[1];ibox((a[0]+b[0])/2,L.forecourt+.017,-(a[1]+b[1])/2,Math.hypot(dx,dy),.014,.08,fenceMat,g,Math.atan2(dy,dx));}
+  }
   const fadedRed=new T.MeshStandardMaterial({color:'#a96563',roughness:1});
   segments(kerbEdge,.78,(x,y,len,a,s)=>{if(openGate(x,y,SW))return;ibox(x,L.road+.085,-y,len-.016,.17,.2,Math.floor(s/.78)%2?fenceMat:x>data.kerb.colourTransitionNearX?fadedRed:black,objects,a);});
   // Paver seams and existing concrete joints only; these are not parking capacity claims.

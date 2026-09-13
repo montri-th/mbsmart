@@ -1,0 +1,34 @@
+{
+  "revision": "night-photo-r1",
+  "coordinateStatus": "Photo-fit geometry, NOT surveyed. Orientation and topology follow supplied nighttime photographs; metric endpoints remain approximate.",
+  "referenceRoad": "Main Sukhumvit frontage runs along local X; side-road parking along Y is perpendicular to Sukhumvit.",
+  "identifiedCompleteCells": 5,
+  "siteCapacity": null,
+  "illustrationOccupancy": {"occupied": 2, "identifiedCompleteCells": 5, "ratio": 0.4, "scope": "Two cars in five individually identified complete photo cells. Other incomplete/continuing markings are not a full-site inventory; this is NOT site occupancy or usable capacity."},
+  "status": "Night-photo reconstruction: mixed parallel/main-road-perpendicular runs and an incomplete building-side marking. Two illustrative photographed Mercedes; smart allocation, exact bay endpoints, access and turning remain HOLD.",
+  "cells": [
+    {"id":"F-D","run":"front-roadside","orientation":"parallel-to-Sukhumvit","bounds":[13.2,-7.65,20.4,-5.2],"sources":["43_0","44_0","45_0","46_0"],"status":"One long cell between outer MB flag poles; middle pole is NOT a divider. Metric photo-fit."},
+    {"id":"F-T","run":"front-roadside","orientation":"parallel-to-Sukhumvit","bounds":[28.2,-7.65,34.4,-5.2],"sources":["47_0"],"status":"Complete interval ends at genuine white T-divider. X34.4 is an unmeasured visual fit, not a pole midpoint or a concrete joint."},
+    {"id":"C-P","run":"pylon-shrine-corner","orientation":"perpendicular-to-Sukhumvit","bounds":[42.15,-7.6,44.45,-2.5],"sources":["41_0","53_0"],"status":"Separate U-shaped corner cell; kept empty for identity and shrine access study. Dimensions/clearances unverified."},
+    {"id":"S-1","run":"side-roadside","orientation":"perpendicular-to-Sukhumvit","bounds":[46.5,2.9,49.3,8.4],"sources":["34","40_0","50_0","51_0"],"status":"First complete side-run interval, parallel to SIDE road. Metric photo-fit."},
+    {"id":"S-2","run":"side-roadside","orientation":"perpendicular-to-Sukhumvit","bounds":[46.5,8.4,49.3,13.9],"sources":["34","40_0","50_0","51_0"],"status":"Second consecutive side-run interval. Stops before modeled workshop gate approach; movement not certified."}
+  ],
+  "paint": [
+    {"id":"F-D-outline","sources":["43_0","46_0"],"points":[[13.2,-7.65],[13.2,-5.2],[20.4,-5.2],[20.4,-7.65]]},
+    {"id":"F-D-continuation","sources":["42_0","48","52_0"],"incomplete":true,"points":[[20.4,-5.2],[23,-5.2]]},
+    {"id":"F-T-outline","sources":["47_0"],"points":[[28.2,-7.65],[28.2,-5.2],[34.4,-5.2],[34.4,-7.65]]},
+    {"id":"F-T-continuation","sources":["47_0","53_0"],"incomplete":true,"points":[[34.4,-5.2],[39,-5.2]]},
+    {"id":"C-P-outline","sources":["41_0","53_0"],"points":[[42.15,-7.6],[42.15,-2.5],[44.45,-2.5],[44.45,-7.6]]},
+    {"id":"B-1-fragment","sources":["48","52_0"],"incomplete":true,"orientation":"likely-parallel-to-Sukhumvit","points":[[8.2,-3.9],[13.8,-3.9],[13.8,-1.6]],"status":"Observed building-side fragment only; cropped end is NOT closed and no repeated row is inferred."},
+    {"id":"S-1-S-2-aisle","sources":["34","40_0","50_0","51_0"],"points":[[46.5,2.9],[46.5,13.9]]},
+    {"id":"S-start","sources":["34","40_0"],"points":[[46.5,2.9],[49.3,2.9]]},
+    {"id":"S-middle","sources":["34","40_0"],"points":[[46.5,8.4],[49.3,8.4]]},
+    {"id":"S-end","sources":["34","40_0"],"points":[[46.5,13.9],[49.3,13.9]]},
+    {"id":"S-shrine-continuation","sources":["34","40_0"],"incomplete":true,"points":[[46.5,2.9],[46.5,1.1]],"status":"Shrine-end continuation has no confirmed far closing line."}
+  ],
+  "unknownPaintSpans": ["Front run between photographed endpoints: missing exact intermediate positions; no uniform grid interpolated.","Building-side cropped end and side-run shrine-end closure are not established.","Dark joints and flag pole centres are not additional parking dividers."],
+  "cars": [
+    {"id":"EXT-MB-FD","bayId":"F-D","model":"Mercedes-Benz E-Class","profile":"eclass","brand":"MB","paint":"#eceeea","photoReference":"Showroom 260912 / 1,4","cx":16.8,"cy":-6.425,"l":5.05,"w":2.15,"heightCap":1.55,"angle":0},
+    {"id":"EXT-MB-FT","bayId":"F-T","model":"Mercedes-Benz C-Class","profile":"cclass","brand":"MB","paint":"#252a2e","photoReference":"Showroom 260912 / 8","cx":31.3,"cy":-6.425,"l":4.8,"w":2.1,"heightCap":1.55,"angle":180}
+  ]
+}

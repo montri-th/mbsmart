@@ -12,11 +12,11 @@
   "careLogo": {"id":"SC1","x":41.5,"y":15.96,"centerHeight":3.36,"width":2.07,"height":0.3,"depth":0.025,"status":"D01 p4/13 size on front-end fascia of EXISTING ATTACHED WORKSHOP AWNING, not sales entrance. Exact service inspection point, artwork and mounting pending operator/supplier confirmation."},
   "serviceCanopy": {"replacedBy":"site.annexes.workshop.awning","status":"Detached canopy proxy removed. Existing awning is integrated with attached rear workshop; no new standalone canopy proposed."},
   "parking": [
-    {"id":"SC-P1","use":"smart customer","x":47.9,"y":5.75,"width":2.8,"length":5.5},
-    {"id":"ST-P1","use":"smart test drive 1","x":47.9,"y":11.45,"width":2.8,"length":5.5},
-    {"id":"ST-P2","use":"smart test drive 2","x":47.9,"y":17.15,"width":2.8,"length":5.5}
+    {"id":"SC-P1","use":"smart customer","existingBayId":"S-1","render":true,"x":47.9,"y":5.65,"width":2.8,"length":5.5,"status":"Candidate assignment to photographed existing interval, NOT an additional bay. MB allocation review pending."},
+    {"id":"ST-P1","use":"smart test drive 1","existingBayId":"S-2","render":true,"x":47.9,"y":11.15,"width":2.8,"length":5.5,"status":"Candidate assignment to photographed existing interval, NOT an additional bay. MB allocation review pending."},
+    {"id":"ST-P2","use":"smart test drive 2","existingBayId":null,"render":false,"x":null,"y":null,"width":2.8,"length":5.5,"status":"HOLD — unassigned. Former Y17.15 proxy crossed the workshop gate approach and is removed from physical paint, not relocated without evidence."}
   ],
-  "parkingStatus": "D01 p12: 1 customer + 2 test-drive bays, white delineation without floor logo. Candidate side allocation only; must preserve required MB allocation FIRST. Full-site MB inventory, turn/swept paths, exits and levels not validated. This is not a parking-capacity approval.",
+  "parkingStatus": "D01 p12 target: 1 customer + 2 test-drive bays. Two candidate assignments reuse photographed side cells S-1/S-2 with no duplicate paint. Second test-drive space is UNASSIGNED / HOLD: former proxy crossed workshop gate approach. Preserve MB allocation FIRST. Full-site inventory, measured paint, swept paths, exits and levels not validated; not a capacity or compliance approval.",
   "sharedCharging": "Retain the v07 shared existing MB wallbox concept. No new charger or capacity invented; operating reach, electrical compatibility and safe cable route need verification.",
   "retained": ["Existing MB pylon", "Three existing MB flags", "Two existing Thai flags", "Chinese shrine", "Existing Mercedes-Benz and dealer signs", "Existing main entry canopy", "Existing interior v07 geometry and three Flex modes"],
   "approvalGates": [

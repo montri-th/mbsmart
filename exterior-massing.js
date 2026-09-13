@@ -41,7 +41,9 @@
     const blue = new T.MeshPhysicalMaterial({ color: '#327898', roughness: .19, metalness: .24, clearcoat: .8, clearcoatRoughness: .15 });
     const trim = new T.MeshStandardMaterial({ color: '#616f75', roughness: .37, metalness: .7 });
     const silver = new T.MeshStandardMaterial({ color: '#b0b6b6', roughness: .42, metalness: .62 });
-    const fasciaMat = new T.MeshStandardMaterial({ color: '#303b42', roughness: .43, metalness: .25 });
+    const beamData=data.signBeam||{};
+    const fasciaMat = new T.MeshStandardMaterial({ color: beamData.color||'#17191b', roughness: beamData.roughness??.86, metalness: beamData.metalness??0 });
+    const beamEdgeMat = new T.MeshStandardMaterial({ color:'#0b0d0e',roughness:.88,metalness:0 });
     const roofGlass = new T.MeshPhysicalMaterial({ color: '#bfd6d4', roughness: .17, metalness: .04, transparent: true, opacity: .30, depthWrite: false, side: T.DoubleSide });
     blue.envMapIntensity = .65;
     roofGlass.envMapIntensity = .35;
@@ -139,15 +141,34 @@
     const soffitY = n('showroomSoffit', 7.02);
     prism(footprint(endX),soffitY-.1,.2,silver,facade,'CONTINUOUS-TOWER-SOFFIT-OVER-MEETING-AND-RECESSED-GLAZING');
     const signHeight = n('fasciaHeight', 3.82);
-    box(middleX / 2, signHeight, .056, middleX, .64, .13, fasciaMat, facade, 'EXISTING-CHARCOAL-SIGN-FASCIA');
+    // Owner's close-up: one opaque black concrete band through the first three
+    // bays, not two floating signboards or dark transparent glazing.
+    const bx0=beamData.xMin??0,bx1=beamData.xMax??middleX,bh=beamData.height??.64,bz=beamData.worldZ??.04,bd=beamData.depth??.24;
+    const signBeam=box((bx0+bx1)/2,signHeight,bz,bx1-bx0,bh,bd,fasciaMat,facade,'EXISTING-CHARCOAL-SIGN-FASCIA');
+    signBeam.userData={...signBeam.userData,form:'continuous opaque concrete beam, not isolated signboards',source:['OWNER-CLOSEUP-20260914'],dimensionsVerified:false};
+    box((bx0+bx1)/2,signHeight-bh/2-.018,bz+bd/2+.005,bx1-bx0,.065,.06,beamEdgeMat,facade,'EXISTING-BLACK-BEAM-LOWER-EDGE');
     box((middleX + endX) / 2, 3.39, -recessY + .056, endX - middleX, .40, .13, silver, facade, 'EXISTING-LOW-WING-HEADER-PHOTO-ASSUMED');
-    // Text-only labels preserve the photographed wording. The supplied helper
-    // uses generic type: these are NOT authenticated Mercedes-Benz logo vectors.
-    if (data.branding !== false && h.sign) {
-      tag(h.sign('Mercedes-Benz', 8.5, signHeight + .03, .128, 11.0, .84, 0, facade, '#edf0ed', '#303b42'), 'EXISTING-MERCEDES-BENZ-TEXT-APPROXIMATION', ['P10', 'P12 (undated)']);
-      tag(h.sign('Chitchai Chonburi', 19.65, signHeight + .03, .129, 7.4, .76, 0, facade, '#edf0ed', '#303b42'), 'EXISTING-DEALER-TEXT-APPROXIMATION', ['P10', 'P12 (undated)']);
+    // June 2024 near-frontal Street View, checked 13 Sep 2026, and current photos:
+    // MB occupies the FIRST glazed bay; dealer lettering the THIRD, before canopy.
+    // Transparent raised-letter silhouettes replace the former boxed Arial labels.
+    function facadeLetters(q){
+      const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=256;
+      const ctx=canvas.getContext('2d');ctx.clearRect(0,0,2048,256);
+      ctx.fillStyle='#f4f4ef';ctx.font=`400 196px ${q.serif?'"Times New Roman", Georgia, serif':'Arial, sans-serif'}`;
+      ctx.textBaseline='alphabetic';ctx.textAlign='left';
+      const m=ctx.measureText(q.text),height=(m.actualBoundingBoxAscent||145)+(m.actualBoundingBoxDescent||40);
+      ctx.save();ctx.translate(20,16);ctx.scale(2008/m.width,224/height);ctx.fillText(q.text,0,m.actualBoundingBoxAscent||145);ctx.restore();
+      const tx=new T.CanvasTexture(canvas);tx.colorSpace=T.SRGBColorSpace;
+      const mat=new T.MeshStandardMaterial({map:tx,transparent:true,alphaTest:.08,roughness:.38,metalness:.18,emissive:'#e4e4dc',emissiveIntensity:.10,side:T.DoubleSide});
+      const o=h.mesh(new T.PlaneGeometry(q.width,q.height),mat,facade);o.position.set(q.x,signHeight+.03,beamData.letterWorldZ??.22);
+      tag(o,q.id,['SV-FRONT-JUN2024-checked-20260913','current-night-photos']);
+      o.userData.lettering='photo-matched typographic silhouette; not supplier artwork';return o;
     }
-    facade.userData.assumptions = { soffitY, signHeight, exactSignPositionsUnverified: true, typography: 'generic text approximation, not official wordmark', existingGroundGlazingUntouched: true };
+    if(data.branding!==false){
+      facadeLetters({id:'EXISTING-MERCEDES-BENZ-TEXT-APPROXIMATION',text:'Mercedes-Benz',x:4.05,width:7.55,height:.93,serif:true});
+      facadeLetters({id:'EXISTING-DEALER-TEXT-APPROXIMATION',text:'Chitchai Chonburi',x:20,width:7.35,height:.72,serif:false});
+    }
+    facade.userData.assumptions = { soffitY, signHeight, signBeam:{...beamData,continuous:true,opaque:true,metricDimensionsVerified:false},exactSignPositionsUnverified: true, placement:'first / third glazed bays confirmed against near-frontal Street View; black concrete backdrop from owner close-up14Sep2026; metric fit not survey', typography: 'serif MB / sans-serif dealer, raised silhouette on black beam, supplier artwork pending', existingGroundGlazingUntouched: true };
     // Shallow exposed double-layer truss canopy. This is a visual proxy only:
     // do not infer cantilever capacity, connections, member sizes or drainage.
     const canopyData = data.canopy || {};

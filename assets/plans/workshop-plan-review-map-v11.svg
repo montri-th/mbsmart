@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -46 57 34" width="1600" height="954.386" role="img" aria-label="ผังโรงซ่อมและพื้นที่บริการร่วม · ผังปักตำแหน่งความคิดเห็น">
+<defs><pattern id="coord-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#c48b22" stroke-width="1" opacity=".15"/></pattern><marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c8583"/></marker><style>text{font-family:Thonburi,'Noto Sans Thai',Tahoma,Arial,sans-serif;fill:#263532}.txt{paint-order:stroke;stroke:white;stroke-width:5;stroke-linejoin:round}.tiny{font-size:17px}.small{font-size:21px}.label{font-size:24px}.key-title{font-size:27px;font-weight:700}.key-body{font-size:22px}.dim{font-size:20px;fill:#7c8583}.grid{stroke:#d8ddda;stroke-width:1;stroke-dasharray:11 7 2 7}</style></defs>
+<rect x="-3" y="-46" width="57" height="34" fill="white"/>
+<g transform="matrix(0.038513513513513516 0 0 0.038513513513513516 -5.888513513513514 -59.92635135135134)"><line x1="132.123" y1="1140.544" x2="1440.754" y2="1140.544" class="grid"/>
+<text x="117.123" y="1146.544" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >E</text>
+<line x1="132.123" y1="984.754" x2="1440.754" y2="984.754" class="grid"/>
+<text x="117.123" y="990.754" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >D</text>
+<line x1="132.123" y1="815.982" x2="1440.754" y2="815.982" class="grid"/>
+<text x="117.123" y="821.982" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >C</text>
+<line x1="132.123" y1="634.228" x2="1440.754" y2="634.228" class="grid"/>
+<text x="117.123" y="640.228" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >B</text>
+<line x1="132.123" y1="465.456" x2="1440.754" y2="465.456" class="grid"/>
+<text x="117.123" y="471.456" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >A</text>
+<line x1="152.895" y1="1166.509" x2="152.895" y2="421.316" class="grid"/>
+<text x="152.895" y="404.316" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >1</text>
+<line x1="360.614" y1="1166.509" x2="360.614" y2="421.316" class="grid"/>
+<text x="360.614" y="404.316" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >4</text>
+<line x1="568.333" y1="1166.509" x2="568.333" y2="421.316" class="grid"/>
+<text x="568.333" y="404.316" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >5</text>
+<line x1="776.053" y1="1166.509" x2="776.053" y2="421.316" class="grid"/>
+<text x="776.053" y="404.316" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >6</text>
+<line x1="983.772" y1="1166.509" x2="983.772" y2="421.316" class="grid"/>
+<text x="983.772" y="404.316" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >7</text>
+<line x1="1191.491" y1="1166.509" x2="1191.491" y2="421.316" class="grid"/>
+<text x="1191.491" y="404.316" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >8</text>
+<line x1="1399.211" y1="1166.509" x2="1399.211" y2="421.316" class="grid"/>
+<text x="1399.211" y="404.316" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >9</text>
+<polygon id="EXISTING-ATTACHED-WORKSHOP" data-status="existing" data-source="building-annexes.json workshop.gridEnvelope" points="152.895,1140.544 1191.491,1140.544 1191.491,465.456 205.344,465.456 181.716,634.228 152.895,815.982 152.895,984.754" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#fafbf9"/>
+<polygon id="EXISTING-AWNING-OVERHEAD" data-status="overhead" data-source="building-annexes.json workshop.awning" points="1191.491,1140.544 1430.368,1140.544 1430.368,465.456 1191.491,465.456" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none" />
+<polygon id="MB-ALLOCATION-1" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="360.614,984.754 464.474,984.754 464.474,815.982 360.614,815.982" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="412.544" y="900.368" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-2" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="464.474,984.754 568.333,984.754 568.333,815.982 464.474,815.982" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="516.404" y="900.368" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-3" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="568.333,984.754 672.193,984.754 672.193,815.982 568.333,815.982" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="620.263" y="900.368" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-4" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="672.193,984.754 776.053,984.754 776.053,815.982 672.193,815.982" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="724.123" y="900.368" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-5" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="776.053,984.754 879.912,984.754 879.912,815.982 776.053,815.982" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="827.982" y="900.368" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-6" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="879.912,984.754 983.772,984.754 983.772,815.982 879.912,815.982" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="931.842" y="900.368" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-7" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="360.614,634.228 464.474,634.228 464.474,465.456 360.614,465.456" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="412.544" y="549.842" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-8" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="464.474,634.228 568.333,634.228 568.333,465.456 464.474,465.456" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="516.404" y="549.842" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-9" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="568.333,634.228 672.193,634.228 672.193,465.456 568.333,465.456" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="620.263" y="549.842" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-10" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="672.193,634.228 776.053,634.228 776.053,465.456 672.193,465.456" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="724.123" y="549.842" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-11" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="776.053,634.228 879.912,634.228 879.912,465.456 776.053,465.456" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="827.982" y="549.842" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="MB-ALLOCATION-12" data-status="shared" data-source="workshop-study.json mbPlanningCells" points="879.912,634.228 983.772,634.228 983.772,465.456 879.912,465.456" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:#faf9f5"/>
+<text x="931.842" y="549.842" font-size="18" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >MB</text>
+<polygon id="SHARED-DRIVE-BAND" data-status="shared" data-source="workshop-study.json clearDriveBand" points="360.614,815.982 1430.368,815.982 1430.368,634.228 360.614,634.228" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:url(#coord-hatch)"/>
+<polygon id="SHARED-PARTS-ENVELOPE" data-status="shared" data-source="workshop-study.json sharedParts" points="217.807,626.439 342.439,626.439 342.439,483.632 217.807,483.632" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polygon id="MB-PARTS-3.2" data-status="existing" data-source="workshop-interior.js shared parts shelves" points="221.702,616.053 250.263,616.053 250.263,569.316 221.702,569.316" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="MB-PARTS-6.5" data-status="existing" data-source="workshop-interior.js shared parts shelves" points="307.386,616.053 335.947,616.053 335.947,569.316 307.386,569.316" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="SMART-PARTS-3.2" data-status="new" data-source="workshop-interior.js shared parts shelves" points="221.702,548.544 250.263,548.544 250.263,501.807 221.702,501.807" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-PARTS-6.5" data-status="new" data-source="workshop-interior.js shared parts shelves" points="307.386,548.544 335.947,548.544 335.947,501.807 307.386,501.807" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SHARED-SERVICE-RECEPTION" data-status="shared" data-source="workshop-study.json serviceReception" points="983.772,1140.544 1087.632,1140.544 1087.632,984.754 983.772,984.754" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polygon id="SHARED-RECEPTION-DESK" data-status="shared" data-source="workshop-interior.js" points="1016.228,1101.596 1055.175,1101.596 1055.175,1023.702 1016.228,1023.702" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polygon id="SMART-HV" data-status="new" data-source="workshop-study.json smartBays" points="983.772,634.228 1087.632,634.228 1087.632,465.456 983.772,465.456" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-HV-LIFT-32.75" data-status="new" data-source="workshop-interior.js lift()" points="996.105,558.281 1010.386,558.281 1010.386,541.404 996.105,541.404" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-HV-LIFT-35.25" data-status="new" data-source="workshop-interior.js lift()" points="1061.018,558.281 1075.298,558.281 1075.298,541.404 1061.018,541.404" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-HV-BENCH" data-status="new" data-source="workshop-interior.js lift()" points="1011.684,510.375 1059.719,510.375 1059.719,493.239 1011.684,493.239" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<text x="1035.702" y="614.754" font-size="22" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >HV</text>
+<polygon id="SMART-ME" data-status="new" data-source="workshop-study.json smartBays" points="1087.632,634.228 1191.491,634.228 1191.491,465.456 1087.632,465.456" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-ME-LIFT-36.75" data-status="new" data-source="workshop-interior.js lift()" points="1099.965,558.281 1114.246,558.281 1114.246,541.404 1099.965,541.404" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-ME-LIFT-39.25" data-status="new" data-source="workshop-interior.js lift()" points="1164.877,558.281 1179.158,558.281 1179.158,541.404 1164.877,541.404" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-ME-BENCH" data-status="new" data-source="workshop-interior.js lift()" points="1115.544,510.375 1163.579,510.375 1163.579,493.239 1115.544,493.239" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<text x="1139.561" y="614.754" font-size="22" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >M/E</text>
+<polygon id="HV-MAT-PLACEHOLDER" data-status="shared" data-source="workshop-interior.js HV insulating mat" points="1000.649,603.07 1070.754,603.07 1070.754,509.596 1000.649,509.596" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none"/>
+<polyline id="HV-BARRIER-32.22" data-status="shared" data-source="workshop-interior.js HV barrier" points="989.484,625.14 989.484,471.947" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polyline id="HV-BARRIER-35.78" data-status="shared" data-source="workshop-interior.js HV barrier" points="1081.919,625.14 1081.919,471.947" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polygon id="AC-WALLBOX-TBC" data-status="shared" data-source="workshop-interior.js HV wallbox" points="1071.793,474.804 1080.102,474.804 1080.102,469.091 1071.793,469.091" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polygon id="SHARED-GENERAL-TOOLS" data-status="shared" data-source="workshop-interior.js tools" points="284.667,936.07 317.123,936.07 317.123,919.193 284.667,919.193" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polygon id="SMART-SPECIAL-TOOLS" data-status="new" data-source="workshop-interior.js tools" points="284.667,886.737 317.123,886.737 317.123,869.86 284.667,869.86" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-DIAGNOSTICS" data-status="new" data-source="workshop-interior.js tools" points="1118.14,920.491 1150.596,920.491 1150.596,903.614 1118.14,903.614" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polyline id="INTERNAL-WORKSHOP-GATE" data-status="shared" data-source="building-annexes.json workshop.sideGate" points="1196.684,1130.158 1425.175,1130.158" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polygon id="GATE-LEAF-40.2" data-status="existing" data-source="building-annexes.js gate" points="1195.386,1150.93 1197.982,1150.93 1197.982,1109.386 1195.386,1109.386" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="GATE-LEAF-49" data-status="existing" data-source="building-annexes.js gate" points="1423.877,1150.93 1426.474,1150.93 1426.474,1109.386 1423.877,1109.386" stroke="#7c8583" stroke-width="2" fill="none" />
+<text x="744.895" y="710.825" font-size="25" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >ช่องทางเคลื่อนรถร่วม · แถบกริด 7.00 ม.</text>
+<text x="750.088" y="745.877" font-size="21" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >ต้องตรวจวงเลี้ยวและระยะใช้งานจริง</text>
+<text x="667" y="1052.263" font-size="24" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >ช่วงเชื่อมโชว์รูม–โรงซ่อมเดิม</text>
+<text x="1313.526" y="880.895" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1313.526 880.895)">ทางบริการใต้กันสาดเดิม</text>
+<text x="277.526" y="656.298" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >อะไหล่ร่วม</text>
+<polygon id="SC1-CARE-SIGN" data-status="new" data-source="exterior-proposal.json careLogo" points="1203.565,1143.14 1257.312,1143.14 1257.312,1140.025 1203.565,1140.025" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<line x1="152.895" y1="392.754" x2="1191.491" y2="392.754" stroke="#7c8583" stroke-width="1"/><path d="M147.895,387.754l10,10 M1186.491,387.754l10,10" fill="none" stroke="#7c8583"/>
+<text x="672.193" y="382.754" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" class="txt">40.00 ม. · กริดเดิม 1–8</text>
+<line x1="1497.877" y1="1140.544" x2="1497.877" y2="465.456" stroke="#7c8583" stroke-width="1"/><path d="M1492.877,1135.544l10,10 M1492.877,460.456l10,10" fill="none" stroke="#7c8583"/>
+<text x="1497.877" y="793" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" class="txt">26.00 ม.</text>
+<text x="672.193" y="1200.263" font-size="24" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" >เชื่อมโชว์รูม / ด้านหน้าถนนอยู่ด้านล่าง ↓</text></g>
+</svg>

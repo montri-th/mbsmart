@@ -25,12 +25,9 @@ window.BC_EXTERIOR_DESIGN=(T,h,data,siteData)=>{
   // Existing awning belongs to the attached workshop module, never a second detached shed.
   const care=data.careLogo,cg=tag(new T.Group(),care);cg.position.set(care.x,care.centerHeight,-care.y);proposed.add(cg);
   box(0,0,0,care.width,care.height,care.depth,silver,cg);sign('smart care',0,0,care.depth/2+.007,care.width,.30,0,cg,'#f7f9f3','#999d99');
-  // Parallel side bays preserve a clear longitudinal access lane in this candidate.
-  // No smart floor logo, no claimed MB parking quota, no implied turning approval.
-  for(const bay of data.parking){const g=tag(new T.Group(),bay);proposed.add(g);const {x,y,width:w,length:l}=bay;
-    for(const xx of [x-w/2,x+w/2])planBox(xx,y,.075,l,.006,white,base+.008,g);
-    for(const yy of [y-l/2,y+l/2])planBox(x,yy,w,.075,.006,white,base+.008,g);
-    planBox(x,y+l/2-.32,1.6,.14,.09,M.dark,base+.01,g);
+  // Assignments reuse existing photo-traced paint; no second painted row.
+  // Unassigned ST-P2 stays HOLD off-model, clear of the workshop gate.
+  for(const bay of data.parking.filter(b=>b.render!==false)){const g=tag(new T.Group(),bay);proposed.add(g);const {y,length:l}=bay;
     // Small edge sign gives bay use without creating an invented branded floor graphic.
     const sy=y+l/2-.18;tube([49.6,base,-sy],[49.6,base+1.35,-sy],.025,silver,g);
     box(49.6,base+1.22,-sy,.60,.34,.035,dark,g);sign(bay.use==='smart customer'?'Customer':'Test drive',49.6,base+1.22,-sy+.019,.56,.20,0,g,'#f4f5ee','#262724');

@@ -1,4 +1,4 @@
-/* v09 exterior existing/proposed comparison; all v07 interior states retained. */
+/* v09-r4 / v11 owner review adoption; coordinate frame and archived v08 preserved. */
 window.BC_LAYOUT = {
   "revision": "v09",
   "defaultState": "handover",
@@ -248,7 +248,12 @@ window.BC_LAYOUT = {
           "cy": 1.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLS",
+          "bodyStyle": "gls",
+          "paint": "#11171b",
+          "photoReference": "Showroom 260912 / 3",
+          "familyConfirmed": true
         },
         {
           "id": "MB2",
@@ -257,7 +262,12 @@ window.BC_LAYOUT = {
           "cy": 1.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLC",
+          "bodyStyle": "glc",
+          "paint": "#eeeFEb",
+          "photoReference": "Showroom 260912 / 3",
+          "familyConfirmed": true
         },
         {
           "id": "MB3",
@@ -266,7 +276,12 @@ window.BC_LAYOUT = {
           "cy": 6.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz E-Class",
+          "bodyStyle": "e-class",
+          "paint": "#eceeea",
+          "photoReference": "Showroom 260912 / 1,4",
+          "familyConfirmed": true
         },
         {
           "id": "MB4",
@@ -275,18 +290,32 @@ window.BC_LAYOUT = {
           "cy": 6.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLC",
+          "bodyStyle": "glc-sport",
+          "paint": "#f0f0eb",
+          "photoReference": "Showroom 260912 / 2,4",
+          "familyConfirmed": true
         },
         {
           "id": "MB5",
           "brand": "MB",
-          "cx": 26.2,
-          "cy": 5.25,
+          "cx": 28.2,
+          "cy": 6.9,
           "l": 5.2,
           "w": 2.1,
           "angle": -90,
           "noseDirection": "toward entrance / negative Y",
-          "clearanceStatus": "HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"
+          "clearanceStatus": "Owner review adopted: centred to entrance, adjusted setback. Door line gap1.80m; rear circulation and swept paths remain HOLD pending measured door swing and full route validation.",
+          "model": "Mercedes-Benz C-Class",
+          "bodyStyle": "c-class",
+          "paint": "#252a2e",
+          "photoReference": "Showroom 260912 / 8",
+          "familyConfirmed": true,
+          "frontCentre": [
+            28.2,
+            4.3
+          ]
         },
         {
           "id": "MB6",
@@ -297,7 +326,12 @@ window.BC_LAYOUT = {
           "w": 2.1,
           "angle": 180,
           "noseDirection": "toward smart / negative X",
-          "purpose": "vehicle handover"
+          "purpose": "vehicle handover",
+          "model": "Mercedes-AMG coupe · exact family unconfirmed",
+          "bodyStyle": "amg-coupe",
+          "paint": "#101419",
+          "photoReference": "Showroom 260912 / 6,9",
+          "familyConfirmed": false
         }
       ],
       "furniture": [
@@ -316,58 +350,72 @@ window.BC_LAYOUT = {
         {
           "id": "MB1-EP",
           "type": "price-stand",
-          "cx": 15.3,
-          "cy": 1.65,
+          "cx": 14.3,
+          "cy": 0.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB2-EP",
           "type": "price-stand",
-          "cx": 23.3,
-          "cy": 1.65,
+          "cx": 22.3,
+          "cy": 0.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB3-EP",
           "type": "price-stand",
-          "cx": 15.3,
-          "cy": 6.65,
+          "cx": 14.3,
+          "cy": 5.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB4-EP",
           "type": "price-stand",
-          "cx": 23.3,
-          "cy": 6.65,
+          "cx": 22.3,
+          "cy": 5.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB5-EP",
           "type": "price-stand",
-          "cx": 24.65,
-          "cy": 6.65,
+          "cx": 26.825,
+          "cy": 4.6,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Retained price stand beside MB5, outside service reserve",
-          "relocated": true
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "relocated": true,
+          "angle": -90,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "P-ST0",
@@ -766,33 +814,84 @@ window.BC_LAYOUT = {
           "logoSize": "SL2 candidate, 0.98 W x 1.32 H m; not SL4",
           "centerHeight": 2.05,
           "status": "Owner-selected plan pin; h is conservative plan-depth reservation including glass standoffs; height/size/attachments/MB alignment require supplier approval"
+        },
+        {
+          "id": "MB6-EP",
+          "type": "price-stand",
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": false,
+          "cx": 33.7,
+          "cy": 6.625,
+          "angle": 180,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope",
+          "note": "Owner review adopted; verify actual stand and door clearances"
         }
       ],
       "routes": [
         {
           "id": "entrance-east-service",
-          "x": 28,
-          "y": 2.5,
-          "w": 3.5,
-          "h": 5.5,
-          "planningWidth": 3.5,
-          "status": "Schematic clear eastern approach only; full cross-showroom route unresolved"
+          "path": [
+            [
+              28.2,
+              2.5
+            ],
+            [
+              28.2,
+              3.25
+            ],
+            [
+              30.5,
+              3.25
+            ],
+            [
+              30.5,
+              10.2
+            ],
+            [
+              30.5,
+              15.2
+            ]
+          ],
+          "planningWidth": 1,
+          "status": "Concept east pedestrian route around MB5; actual door sweep and egress/accessibility validation pending"
         },
         {
-          "id": "service-approach-pedestrian",
-          "x": 28,
-          "y": 8,
-          "w": 4,
-          "h": 8,
-          "status": "nominal reservation, not code-approved clearance"
+          "id": "mb5-rear-pedestrian",
+          "path": [
+            [
+              24,
+              8.8
+            ],
+            [
+              26.15,
+              9
+            ],
+            [
+              26.75,
+              9.92
+            ],
+            [
+              27.4,
+              10.2
+            ],
+            [
+              30.5,
+              10.2
+            ]
+          ],
+          "planningWidth": 1,
+          "status": "Illustrative rear route; conservative foliage pinch approx1.16m. Not a vehicle path or certified egress route"
         }
       ],
       "serviceAccessReserve": {
-        "x": 28,
+        "x": 29.6,
         "y": 8,
-        "w": 4,
+        "w": 2.4,
         "h": 8,
-        "status": "Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"
+        "status": "Concept route east of relocated MB5; column/door projections and continuous accessible/egress width not certified"
       },
       "optionalPackage": {
         "active": true,
@@ -910,8 +1009,8 @@ window.BC_LAYOUT = {
         },
         {
           "id": "arrival",
-          "x": 29.2,
-          "y": 5.6,
+          "x": 30.65,
+          "y": 4.9,
           "height": 1.78,
           "facing": 20,
           "pose": "stand",
@@ -921,8 +1020,8 @@ window.BC_LAYOUT = {
         },
         {
           "id": "handover-specialist",
-          "x": 33.7,
-          "y": 6.95,
+          "x": 34.6,
+          "y": 7.25,
           "height": 1.76,
           "facing": 115,
           "pose": "gesture",
@@ -932,8 +1031,8 @@ window.BC_LAYOUT = {
         },
         {
           "id": "handover-client",
-          "x": 35.1,
-          "y": 6.95,
+          "x": 35.75,
+          "y": 7.15,
           "height": 1.68,
           "facing": -40,
           "pose": "stand",
@@ -1188,7 +1287,12 @@ window.BC_LAYOUT = {
           "cy": 1.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLS",
+          "bodyStyle": "gls",
+          "paint": "#11171b",
+          "photoReference": "Showroom 260912 / 3",
+          "familyConfirmed": true
         },
         {
           "id": "MB2",
@@ -1197,7 +1301,12 @@ window.BC_LAYOUT = {
           "cy": 1.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLC",
+          "bodyStyle": "glc",
+          "paint": "#eeeFEb",
+          "photoReference": "Showroom 260912 / 3",
+          "familyConfirmed": true
         },
         {
           "id": "MB3",
@@ -1206,7 +1315,12 @@ window.BC_LAYOUT = {
           "cy": 6.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz E-Class",
+          "bodyStyle": "e-class",
+          "paint": "#eceeea",
+          "photoReference": "Showroom 260912 / 1,4",
+          "familyConfirmed": true
         },
         {
           "id": "MB4",
@@ -1215,18 +1329,32 @@ window.BC_LAYOUT = {
           "cy": 6.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLC",
+          "bodyStyle": "glc-sport",
+          "paint": "#f0f0eb",
+          "photoReference": "Showroom 260912 / 2,4",
+          "familyConfirmed": true
         },
         {
           "id": "MB5",
           "brand": "MB",
-          "cx": 26.2,
-          "cy": 5.25,
+          "cx": 28.2,
+          "cy": 6.9,
           "l": 5.2,
           "w": 2.1,
           "angle": -90,
           "noseDirection": "toward entrance / negative Y",
-          "clearanceStatus": "HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"
+          "clearanceStatus": "Owner review adopted: centred to entrance, adjusted setback. Door line gap1.80m; rear circulation and swept paths remain HOLD pending measured door swing and full route validation.",
+          "model": "Mercedes-Benz C-Class",
+          "bodyStyle": "c-class",
+          "paint": "#252a2e",
+          "photoReference": "Showroom 260912 / 8",
+          "familyConfirmed": true,
+          "frontCentre": [
+            28.2,
+            4.3
+          ]
         }
       ],
       "furniture": [
@@ -1245,58 +1373,72 @@ window.BC_LAYOUT = {
         {
           "id": "MB1-EP",
           "type": "price-stand",
-          "cx": 15.3,
-          "cy": 1.65,
+          "cx": 14.3,
+          "cy": 0.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB2-EP",
           "type": "price-stand",
-          "cx": 23.3,
-          "cy": 1.65,
+          "cx": 22.3,
+          "cy": 0.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB3-EP",
           "type": "price-stand",
-          "cx": 15.3,
-          "cy": 6.65,
+          "cx": 14.3,
+          "cy": 5.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB4-EP",
           "type": "price-stand",
-          "cx": 23.3,
-          "cy": 6.65,
+          "cx": 22.3,
+          "cy": 5.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB5-EP",
           "type": "price-stand",
-          "cx": 24.65,
-          "cy": 6.65,
+          "cx": 26.825,
+          "cy": 4.6,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Retained price stand beside MB5, outside service reserve",
-          "relocated": true
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "relocated": true,
+          "angle": -90,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "P-ST0",
@@ -1787,28 +1929,65 @@ window.BC_LAYOUT = {
       "routes": [
         {
           "id": "entrance-east-service",
-          "x": 28,
-          "y": 2.5,
-          "w": 3.5,
-          "h": 5.5,
-          "planningWidth": 3.5,
-          "status": "Schematic clear eastern approach only; full cross-showroom route unresolved"
+          "path": [
+            [
+              28.2,
+              2.5
+            ],
+            [
+              28.2,
+              3.25
+            ],
+            [
+              30.5,
+              3.25
+            ],
+            [
+              30.5,
+              10.2
+            ],
+            [
+              30.5,
+              15.2
+            ]
+          ],
+          "planningWidth": 1,
+          "status": "Concept east pedestrian route around MB5; actual door sweep and egress/accessibility validation pending"
         },
         {
-          "id": "service-approach-pedestrian",
-          "x": 28,
-          "y": 8,
-          "w": 4,
-          "h": 8,
-          "status": "nominal reservation, not code-approved clearance"
+          "id": "mb5-rear-pedestrian",
+          "path": [
+            [
+              24,
+              8.8
+            ],
+            [
+              26.15,
+              9
+            ],
+            [
+              26.75,
+              9.92
+            ],
+            [
+              27.4,
+              10.2
+            ],
+            [
+              30.5,
+              10.2
+            ]
+          ],
+          "planningWidth": 1,
+          "status": "Illustrative rear route; conservative foliage pinch approx1.16m. Not a vehicle path or certified egress route"
         }
       ],
       "serviceAccessReserve": {
-        "x": 28,
+        "x": 29.6,
         "y": 8,
-        "w": 4,
+        "w": 2.4,
         "h": 8,
-        "status": "Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"
+        "status": "Concept route east of relocated MB5; column/door projections and continuous accessible/egress width not certified"
       },
       "optionalPackage": {
         "active": true,
@@ -1926,8 +2105,8 @@ window.BC_LAYOUT = {
         },
         {
           "id": "arrival",
-          "x": 29.2,
-          "y": 5.6,
+          "x": 30.65,
+          "y": 4.9,
           "height": 1.78,
           "facing": 20,
           "pose": "stand",
@@ -2214,7 +2393,12 @@ window.BC_LAYOUT = {
           "cy": 1.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLS",
+          "bodyStyle": "gls",
+          "paint": "#11171b",
+          "photoReference": "Showroom 260912 / 3",
+          "familyConfirmed": true
         },
         {
           "id": "MB2",
@@ -2223,7 +2407,12 @@ window.BC_LAYOUT = {
           "cy": 1.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLC",
+          "bodyStyle": "glc",
+          "paint": "#eeeFEb",
+          "photoReference": "Showroom 260912 / 3",
+          "familyConfirmed": true
         },
         {
           "id": "MB3",
@@ -2232,7 +2421,12 @@ window.BC_LAYOUT = {
           "cy": 6.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz E-Class",
+          "bodyStyle": "e-class",
+          "paint": "#eceeea",
+          "photoReference": "Showroom 260912 / 1,4",
+          "familyConfirmed": true
         },
         {
           "id": "MB4",
@@ -2241,18 +2435,32 @@ window.BC_LAYOUT = {
           "cy": 6.65,
           "l": 5.2,
           "w": 2.1,
-          "angle": 0
+          "angle": 0,
+          "model": "Mercedes-Benz GLC",
+          "bodyStyle": "glc-sport",
+          "paint": "#f0f0eb",
+          "photoReference": "Showroom 260912 / 2,4",
+          "familyConfirmed": true
         },
         {
           "id": "MB5",
           "brand": "MB",
-          "cx": 26.2,
-          "cy": 5.25,
+          "cx": 28.2,
+          "cy": 6.9,
           "l": 5.2,
           "w": 2.1,
           "angle": -90,
           "noseDirection": "toward entrance / negative Y",
-          "clearanceStatus": "HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"
+          "clearanceStatus": "Owner review adopted: centred to entrance, adjusted setback. Door line gap1.80m; rear circulation and swept paths remain HOLD pending measured door swing and full route validation.",
+          "model": "Mercedes-Benz C-Class",
+          "bodyStyle": "c-class",
+          "paint": "#252a2e",
+          "photoReference": "Showroom 260912 / 8",
+          "familyConfirmed": true,
+          "frontCentre": [
+            28.2,
+            4.3
+          ]
         }
       ],
       "furniture": [
@@ -2271,58 +2479,72 @@ window.BC_LAYOUT = {
         {
           "id": "MB1-EP",
           "type": "price-stand",
-          "cx": 15.3,
-          "cy": 1.65,
+          "cx": 14.3,
+          "cy": 0.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB2-EP",
           "type": "price-stand",
-          "cx": 23.3,
-          "cy": 1.65,
+          "cx": 22.3,
+          "cy": 0.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB3-EP",
           "type": "price-stand",
-          "cx": 15.3,
-          "cy": 6.65,
+          "cx": 14.3,
+          "cy": 5.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB4-EP",
           "type": "price-stand",
-          "cx": 23.3,
-          "cy": 6.65,
+          "cx": 22.3,
+          "cy": 5.275,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Reuse existing display stand"
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "angle": 0,
+          "relocated": true,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "MB5-EP",
           "type": "price-stand",
-          "cx": 24.65,
-          "cy": 6.65,
+          "cx": 26.825,
+          "cy": 4.6,
           "w": 0.35,
           "h": 0.35,
           "zone": "MB-price",
           "retained": true,
-          "note": "Retained price stand beside MB5, outside service reserve",
-          "relocated": true
+          "note": "Owner review adopted; verify actual stand and door clearances",
+          "relocated": true,
+          "angle": -90,
+          "placement": "Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope"
         },
         {
           "id": "P-ST0",
@@ -2796,28 +3018,65 @@ window.BC_LAYOUT = {
       "routes": [
         {
           "id": "entrance-east-service",
-          "x": 28,
-          "y": 2.5,
-          "w": 3.5,
-          "h": 5.5,
-          "planningWidth": 3.5,
-          "status": "Schematic clear eastern approach only; full cross-showroom route unresolved"
+          "path": [
+            [
+              28.2,
+              2.5
+            ],
+            [
+              28.2,
+              3.25
+            ],
+            [
+              30.5,
+              3.25
+            ],
+            [
+              30.5,
+              10.2
+            ],
+            [
+              30.5,
+              15.2
+            ]
+          ],
+          "planningWidth": 1,
+          "status": "Concept east pedestrian route around MB5; actual door sweep and egress/accessibility validation pending"
         },
         {
-          "id": "service-approach-pedestrian",
-          "x": 28,
-          "y": 8,
-          "w": 4,
-          "h": 8,
-          "status": "nominal reservation, not code-approved clearance"
+          "id": "mb5-rear-pedestrian",
+          "path": [
+            [
+              24,
+              8.8
+            ],
+            [
+              26.15,
+              9
+            ],
+            [
+              26.75,
+              9.92
+            ],
+            [
+              27.4,
+              10.2
+            ],
+            [
+              30.5,
+              10.2
+            ]
+          ],
+          "planningWidth": 1,
+          "status": "Illustrative rear route; conservative foliage pinch approx1.16m. Not a vehicle path or certified egress route"
         }
       ],
       "serviceAccessReserve": {
-        "x": 28,
+        "x": 29.6,
         "y": 8,
-        "w": 4,
+        "w": 2.4,
         "h": 8,
-        "status": "Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"
+        "status": "Concept route east of relocated MB5; column/door projections and continuous accessible/egress width not certified"
       },
       "optionalPackage": {
         "active": true,
@@ -2935,8 +3194,8 @@ window.BC_LAYOUT = {
         },
         {
           "id": "arrival",
-          "x": 29.2,
-          "y": 5.6,
+          "x": 30.65,
+          "y": 4.9,
           "height": 1.78,
           "facing": 20,
           "pose": "stand",
@@ -2984,7 +3243,7 @@ window.BC_LAYOUT = {
     "Accessory display wall requirement unresolved for standalone 3B; no second 3A inserted",
     "Outer smart dimensions sourced; authored sculpted geometry is approximate",
     "Plan-traced staircase and office boundaries require site validation; all heights assumed",
-    "MB5 circulation HOLD; entrance swept path unresolved",
+    "MB5 owner relocation adopted; actual door swing, rear passage and vehicle swept path remain HOLD",
     "Main hall unconditioned; flex/old lounge enclosure and HVAC require engineer review",
     "Official raster assets not redistributed without permission",
     "X grid remains assumed: LX0..5=0,8,16,24,32,40; exterior registration inherits this uncertainty",
@@ -3919,7 +4178,21 @@ window.BC_LAYOUT = {
         "recessX": -0.5,
         "status": "Recessed south-side upper opening from current and June2024 photographs; dimensions approximate"
       },
-      "lowerWingFrontY": 0.6
+      "lowerWingFrontY": 0.6,
+      "signBeam": {
+        "xMin": 0,
+        "xMax": 24,
+        "centreHeight": 3.82,
+        "height": 0.64,
+        "depth": 0.24,
+        "worldZ": 0.04,
+        "letterWorldZ": 0.22,
+        "color": "#17191b",
+        "roughness": 0.86,
+        "metalness": 0,
+        "source": "Owner close-up supplied14Sep2026: continuous opaque black concrete beam behind first/third facade lettering",
+        "status": "Observed continuity/material character; dimensions and structure not surveyed"
+      }
     },
     "alternativeA04": {
       "frontStairWidthReading": 10.4,
@@ -4674,47 +4947,412 @@ window.BC_LAYOUT = {
         "id": "FACADE-MB",
         "type": "existing-facade-lettering",
         "xy": [
-          8.5,
-          -0.1
+          4.05,
+          -0.22
         ],
         "text": "Mercedes-Benz",
-        "width": 11,
-        "textHeight": 0.7,
+        "width": 7.55,
+        "textHeight": 0.93,
         "centreHeight": 3.85,
         "sources": [
           "N03",
           "N04",
           "N06"
         ],
-        "positionStatus": "retain-v08-photo-approximate-zone",
+        "positionStatus": "first glazed bay, near-frontal June2024 Street View checked13Sep2026; metric photo-fit only",
         "retainInProposal": true,
-        "typography": "generic-approximation-unless-official-vector-sourced"
+        "typography": "raised serif lettering silhouette on continuous black concrete beam; supplier vector pending"
       },
       {
         "id": "FACADE-DEALER",
         "type": "existing-facade-lettering",
         "xy": [
-          19.65,
-          -0.1
+          20,
+          -0.22
         ],
         "text": "Chitchai Chonburi",
-        "width": 7.4,
-        "textHeight": 0.65,
+        "width": 7.35,
+        "textHeight": 0.72,
         "centreHeight": 3.85,
         "sources": [
           "N03",
           "N04",
           "N06"
         ],
-        "positionStatus": "retain-v08-photo-approximate-zone",
+        "positionStatus": "third glazed bay before canopy, June2024 Street View checked13Sep2026; metric photo-fit only",
         "retainInProposal": true,
-        "typography": "generic-approximation-unless-official-vector-sourced"
+        "typography": "raised sans-serif dealer lettering silhouette on continuous black concrete beam"
       }
-    ]
+    ],
+    "exteriorParking": {
+      "revision": "night-photo-r1",
+      "coordinateStatus": "Photo-fit geometry, NOT surveyed. Orientation and topology follow supplied nighttime photographs; metric endpoints remain approximate.",
+      "referenceRoad": "Main Sukhumvit frontage runs along local X; side-road parking along Y is perpendicular to Sukhumvit.",
+      "identifiedCompleteCells": 5,
+      "siteCapacity": null,
+      "illustrationOccupancy": {
+        "occupied": 2,
+        "identifiedCompleteCells": 5,
+        "ratio": 0.4,
+        "scope": "Two cars in five individually identified complete photo cells. Other incomplete/continuing markings are not a full-site inventory; this is NOT site occupancy or usable capacity."
+      },
+      "status": "Night-photo reconstruction: mixed parallel/main-road-perpendicular runs and an incomplete building-side marking. Two illustrative photographed Mercedes; smart allocation, exact bay endpoints, access and turning remain HOLD.",
+      "cells": [
+        {
+          "id": "F-D",
+          "run": "front-roadside",
+          "orientation": "parallel-to-Sukhumvit",
+          "bounds": [
+            13.2,
+            -7.65,
+            20.4,
+            -5.2
+          ],
+          "sources": [
+            "43_0",
+            "44_0",
+            "45_0",
+            "46_0"
+          ],
+          "status": "One long cell between outer MB flag poles; middle pole is NOT a divider. Metric photo-fit."
+        },
+        {
+          "id": "F-T",
+          "run": "front-roadside",
+          "orientation": "parallel-to-Sukhumvit",
+          "bounds": [
+            28.2,
+            -7.65,
+            34.4,
+            -5.2
+          ],
+          "sources": [
+            "47_0"
+          ],
+          "status": "Complete interval ends at genuine white T-divider. X34.4 is an unmeasured visual fit, not a pole midpoint or a concrete joint."
+        },
+        {
+          "id": "C-P",
+          "run": "pylon-shrine-corner",
+          "orientation": "perpendicular-to-Sukhumvit",
+          "bounds": [
+            42.15,
+            -7.6,
+            44.45,
+            -2.5
+          ],
+          "sources": [
+            "41_0",
+            "53_0"
+          ],
+          "status": "Separate U-shaped corner cell; kept empty for identity and shrine access study. Dimensions/clearances unverified."
+        },
+        {
+          "id": "S-1",
+          "run": "side-roadside",
+          "orientation": "perpendicular-to-Sukhumvit",
+          "bounds": [
+            46.5,
+            2.9,
+            49.3,
+            8.4
+          ],
+          "sources": [
+            "34",
+            "40_0",
+            "50_0",
+            "51_0"
+          ],
+          "status": "First complete side-run interval, parallel to SIDE road. Metric photo-fit."
+        },
+        {
+          "id": "S-2",
+          "run": "side-roadside",
+          "orientation": "perpendicular-to-Sukhumvit",
+          "bounds": [
+            46.5,
+            8.4,
+            49.3,
+            13.9
+          ],
+          "sources": [
+            "34",
+            "40_0",
+            "50_0",
+            "51_0"
+          ],
+          "status": "Second consecutive side-run interval. Stops before modeled workshop gate approach; movement not certified."
+        }
+      ],
+      "paint": [
+        {
+          "id": "F-D-outline",
+          "sources": [
+            "43_0",
+            "46_0"
+          ],
+          "points": [
+            [
+              13.2,
+              -7.65
+            ],
+            [
+              13.2,
+              -5.2
+            ],
+            [
+              20.4,
+              -5.2
+            ],
+            [
+              20.4,
+              -7.65
+            ]
+          ]
+        },
+        {
+          "id": "F-D-continuation",
+          "sources": [
+            "42_0",
+            "48",
+            "52_0"
+          ],
+          "incomplete": true,
+          "points": [
+            [
+              20.4,
+              -5.2
+            ],
+            [
+              23,
+              -5.2
+            ]
+          ]
+        },
+        {
+          "id": "F-T-outline",
+          "sources": [
+            "47_0"
+          ],
+          "points": [
+            [
+              28.2,
+              -7.65
+            ],
+            [
+              28.2,
+              -5.2
+            ],
+            [
+              34.4,
+              -5.2
+            ],
+            [
+              34.4,
+              -7.65
+            ]
+          ]
+        },
+        {
+          "id": "F-T-continuation",
+          "sources": [
+            "47_0",
+            "53_0"
+          ],
+          "incomplete": true,
+          "points": [
+            [
+              34.4,
+              -5.2
+            ],
+            [
+              39,
+              -5.2
+            ]
+          ]
+        },
+        {
+          "id": "C-P-outline",
+          "sources": [
+            "41_0",
+            "53_0"
+          ],
+          "points": [
+            [
+              42.15,
+              -7.6
+            ],
+            [
+              42.15,
+              -2.5
+            ],
+            [
+              44.45,
+              -2.5
+            ],
+            [
+              44.45,
+              -7.6
+            ]
+          ]
+        },
+        {
+          "id": "B-1-fragment",
+          "sources": [
+            "48",
+            "52_0"
+          ],
+          "incomplete": true,
+          "orientation": "likely-parallel-to-Sukhumvit",
+          "points": [
+            [
+              8.2,
+              -3.9
+            ],
+            [
+              13.8,
+              -3.9
+            ],
+            [
+              13.8,
+              -1.6
+            ]
+          ],
+          "status": "Observed building-side fragment only; cropped end is NOT closed and no repeated row is inferred."
+        },
+        {
+          "id": "S-1-S-2-aisle",
+          "sources": [
+            "34",
+            "40_0",
+            "50_0",
+            "51_0"
+          ],
+          "points": [
+            [
+              46.5,
+              2.9
+            ],
+            [
+              46.5,
+              13.9
+            ]
+          ]
+        },
+        {
+          "id": "S-start",
+          "sources": [
+            "34",
+            "40_0"
+          ],
+          "points": [
+            [
+              46.5,
+              2.9
+            ],
+            [
+              49.3,
+              2.9
+            ]
+          ]
+        },
+        {
+          "id": "S-middle",
+          "sources": [
+            "34",
+            "40_0"
+          ],
+          "points": [
+            [
+              46.5,
+              8.4
+            ],
+            [
+              49.3,
+              8.4
+            ]
+          ]
+        },
+        {
+          "id": "S-end",
+          "sources": [
+            "34",
+            "40_0"
+          ],
+          "points": [
+            [
+              46.5,
+              13.9
+            ],
+            [
+              49.3,
+              13.9
+            ]
+          ]
+        },
+        {
+          "id": "S-shrine-continuation",
+          "sources": [
+            "34",
+            "40_0"
+          ],
+          "incomplete": true,
+          "points": [
+            [
+              46.5,
+              2.9
+            ],
+            [
+              46.5,
+              1.1
+            ]
+          ],
+          "status": "Shrine-end continuation has no confirmed far closing line."
+        }
+      ],
+      "unknownPaintSpans": [
+        "Front run between photographed endpoints: missing exact intermediate positions; no uniform grid interpolated.",
+        "Building-side cropped end and side-run shrine-end closure are not established.",
+        "Dark joints and flag pole centres are not additional parking dividers."
+      ],
+      "cars": [
+        {
+          "id": "EXT-MB-FD",
+          "bayId": "F-D",
+          "model": "Mercedes-Benz E-Class",
+          "profile": "eclass",
+          "brand": "MB",
+          "paint": "#eceeea",
+          "photoReference": "Showroom 260912 / 1,4",
+          "cx": 16.8,
+          "cy": -6.425,
+          "l": 5.05,
+          "w": 2.15,
+          "heightCap": 1.55,
+          "angle": 0
+        },
+        {
+          "id": "EXT-MB-FT",
+          "bayId": "F-T",
+          "model": "Mercedes-Benz C-Class",
+          "profile": "cclass",
+          "brand": "MB",
+          "paint": "#252a2e",
+          "photoReference": "Showroom 260912 / 8",
+          "cx": 31.3,
+          "cy": -6.425,
+          "l": 4.8,
+          "w": 2.1,
+          "heightCap": 1.55,
+          "angle": 180
+        }
+      ],
+      "level": -0.8
+    }
   },
   "feedbackPolicy": {
     "submissionEnabled": true,
-    "reason": "Live backend must explicitly support v09 modes/views and exteriorScheme. Exterior comments use named area and view, pins remain interior-only."
+    "reason": "Live backend must explicitly support v11 section, image/plan/model and point/rectangle contracts. Each review retains its section, reference, state and metric plan location; receipt verification is required."
   },
   "exterior": {
     "schema": 1,
@@ -4779,29 +5417,38 @@ window.BC_LAYOUT = {
       {
         "id": "SC-P1",
         "use": "smart customer",
+        "existingBayId": "S-1",
+        "render": true,
         "x": 47.9,
-        "y": 5.75,
+        "y": 5.65,
         "width": 2.8,
-        "length": 5.5
+        "length": 5.5,
+        "status": "Candidate assignment to photographed existing interval, NOT an additional bay. MB allocation review pending."
       },
       {
         "id": "ST-P1",
         "use": "smart test drive 1",
+        "existingBayId": "S-2",
+        "render": true,
         "x": 47.9,
-        "y": 11.45,
+        "y": 11.15,
         "width": 2.8,
-        "length": 5.5
+        "length": 5.5,
+        "status": "Candidate assignment to photographed existing interval, NOT an additional bay. MB allocation review pending."
       },
       {
         "id": "ST-P2",
         "use": "smart test drive 2",
-        "x": 47.9,
-        "y": 17.15,
+        "existingBayId": null,
+        "render": false,
+        "x": null,
+        "y": null,
         "width": 2.8,
-        "length": 5.5
+        "length": 5.5,
+        "status": "HOLD — unassigned. Former Y17.15 proxy crossed the workshop gate approach and is removed from physical paint, not relocated without evidence."
       }
     ],
-    "parkingStatus": "D01 p12: 1 customer + 2 test-drive bays, white delineation without floor logo. Candidate side allocation only; must preserve required MB allocation FIRST. Full-site MB inventory, turn/swept paths, exits and levels not validated. This is not a parking-capacity approval.",
+    "parkingStatus": "D01 p12 target: 1 customer + 2 test-drive bays. Two candidate assignments reuse photographed side cells S-1/S-2 with no duplicate paint. Second test-drive space is UNASSIGNED / HOLD: former proxy crossed workshop gate approach. Preserve MB allocation FIRST. Full-site inventory, measured paint, swept paths, exits and levels not validated; not a capacity or compliance approval.",
     "sharedCharging": "Retain the v07 shared existing MB wallbox concept. No new charger or capacity invented; operating reach, electrical compatibility and safe cable route need verification.",
     "retained": [
       "Existing MB pylon",
@@ -4936,5 +5583,93 @@ window.BC_LAYOUT = {
     }
   },
   "defaultExteriorScheme": "proposed",
-  "iteration": "r3"
+  "iteration": "r4",
+  "mbVehicles": [
+    {
+      "id": "MB1",
+      "model": "Mercedes-Benz GLS",
+      "bodyStyle": "gls",
+      "paint": "#11171b",
+      "photoReference": "Showroom 260912 / 3",
+      "familyConfirmed": true
+    },
+    {
+      "id": "MB2",
+      "model": "Mercedes-Benz GLC",
+      "bodyStyle": "glc",
+      "paint": "#eeeFEb",
+      "photoReference": "Showroom 260912 / 3",
+      "familyConfirmed": true
+    },
+    {
+      "id": "MB3",
+      "model": "Mercedes-Benz E-Class",
+      "bodyStyle": "e-class",
+      "paint": "#eceeea",
+      "photoReference": "Showroom 260912 / 1,4",
+      "familyConfirmed": true
+    },
+    {
+      "id": "MB4",
+      "model": "Mercedes-Benz GLC",
+      "bodyStyle": "glc-sport",
+      "paint": "#f0f0eb",
+      "photoReference": "Showroom 260912 / 2,4",
+      "familyConfirmed": true
+    },
+    {
+      "id": "MB5",
+      "model": "Mercedes-Benz C-Class",
+      "bodyStyle": "c-class",
+      "paint": "#252a2e",
+      "photoReference": "Showroom 260912 / 8",
+      "familyConfirmed": true
+    },
+    {
+      "id": "MB6",
+      "model": "Mercedes-AMG coupe · exact family unconfirmed",
+      "bodyStyle": "amg-coupe",
+      "paint": "#101419",
+      "photoReference": "Showroom 260912 / 6,9",
+      "familyConfirmed": false
+    }
+  ],
+  "vehicleAppearanceStatus": "Photographed vehicle appearances; MB slot assignment is illustrative, not original photo order. Model year/trim unverified. 5.20 × 2.10 m planning envelopes retained, not physical vehicle specifications.",
+  "decorativePlanters": [
+    {
+      "x": 25.15,
+      "y": 10.05,
+      "radius": 0.3,
+      "height": 0.9,
+      "foliageRadius": 0.5
+    },
+    {
+      "x": 26,
+      "y": 10.7,
+      "radius": 0.3,
+      "height": 0.68,
+      "foliageRadius": 0.5
+    },
+    {
+      "x": 33,
+      "y": 15.35,
+      "radius": 0.3,
+      "height": 0.9,
+      "foliageRadius": 0.5
+    },
+    {
+      "x": 33.72,
+      "y": 15.35,
+      "radius": 0.3,
+      "height": 0.68,
+      "foliageRadius": 0.5
+    }
+  ],
+  "reviewAdoptions": {
+    "revision": "v11",
+    "ownerReviewDate": "2026-09-13",
+    "mb5": "Front-centre interpretation, aligned to entrance centreX28.2 with setback adjusted toY4.3",
+    "priceStands": "All MB including MB6 handover: RHD front-right,0.30m setback",
+    "status": "Adopted in model; not compliance approval"
+  }
 };
