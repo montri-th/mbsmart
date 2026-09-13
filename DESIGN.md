@@ -1,6 +1,6 @@
 ---
 name: Benz Chitchai showroom review
-description: Extracted visual system for the v05 review interface around the v04 schematic model.
+description: Extracted v05 review interface, retained for the v06 three-use schematic model.
 colors:
   accent: "#0078d6"
   accent-hover: "#0068ba"
@@ -95,7 +95,7 @@ components:
 
 ## Overview
 
-This is a scoped extraction of the implemented v05 client review interface surrounding the unchanged v04 schematic model. Its visual language uses a black header, white and pale-gray surfaces, dark text, serif project heading, sans-serif controls, and blue action and location accents. No creative metaphor or additional user-confirmed aesthetic preferences are assigned.
+This is a scoped extraction of the implemented v05 client review interface, retained around the v06 model with three Flex uses, independent AC and people toggles. Its visual language uses a black header, white and pale-gray surfaces, dark text, serif project heading, sans-serif controls, and blue action and location accents. No creative metaphor or additional user-confirmed aesthetic preferences are assigned.
 
 The requested Mercedes-Benz alignment is limited to public-web reference: [Mercedes-Benz Thailand](https://www.mercedes-benz.co.th/th/). The [Mercedes-Benz Brand Design System portal](https://brand-design.mercedes-benz.com/) is gated; this document does not establish access to its private specifications, official brand compliance, or brand approval. Georgia and the system sans-serif stack are intentional substitutes; no proprietary fonts or Mercedes-Benz logo are included.
 
@@ -185,5 +185,5 @@ At the original extraction, the endpoint was empty and submission was disabled. 
 
 - Don't label these extracted tokens as official Mercedes-Benz BDS specifications or brand approval.
 - Don't add proprietary fonts or a Mercedes-Benz logo to this extraction.
-- Don't treat an annotation or comment as an automatic change to the v04 model.
+- Don't treat an annotation or comment as an automatic model change; retain its exact model revision, use and AC context.
 - Don't represent a disabled submission or an unconfirmed response as a saved Google Sheets comment.

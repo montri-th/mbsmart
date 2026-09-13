@@ -1,5 +1,5 @@
-/* Benz Chitchai, owner-directed B / 3B, v06. Metres. Plan (x,y) => world (x,height,-y).
- * All vertical dimensions and product meshes are schematic. Manual references are in layout.js.
+/* Benz Chitchai, original B / 3B, v04. Metres. Plan (x,y) => world (x,height,-y).
+ * All vertical dimensions and product meshes are schematic. Data source: layout-v04.json.
  * Material colours deliberately represent the photographed physical surfaces, not UI theme tokens.
  */
 (() => {
@@ -12,9 +12,8 @@
   renderer.domElement.setAttribute('role','img');renderer.domElement.setAttribute('aria-label','โมเดลโชว์รูม 3 มิติ หมุนด้วยเมาส์หรือเลือกมุมกล้องจากปุ่มด้านบน');
   const scene=new T.Scene();scene.background=new T.Color('#d4dce0');
   const camera=new T.PerspectiveCamera(58,1,.08,220), target=new T.Vector3();
-  const shell=new T.Group(), overhead=new T.Group(), dynamic=new T.Group(), markings=new T.Group(), reviewMarker=new T.Group(), peopleGroup=new T.Group();scene.add(shell,overhead,dynamic,markings,reviewMarker,peopleGroup);
-  let state=dataset.states.find(s=>s.mode==='handover'), mode='handover', activeView='interior', labelsOn=false, dirty=true, acOn=false, peopleOn=true;
-  const modeNames={handover:'Vehicle handover',consulting:'Consulting area',lounge:'Customer waiting annex'};
+  const shell=new T.Group(), overhead=new T.Group(), dynamic=new T.Group(), markings=new T.Group(), reviewMarker=new T.Group();scene.add(shell,overhead,dynamic,markings,reviewMarker);
+  let state=dataset.states.find(s=>s.mode==='handover'), mode='handover', activeView='interior', labelsOn=false, dirty=true;
   const material=new Map(), labelItems=[];
   let seed=710;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
   function texture(kind){const c=document.createElement('canvas');c.width=c.height=512;const g=c.getContext('2d');
@@ -69,8 +68,6 @@
   for(const h of [3.86,4.2,4.6])tube([0,h,-8.03],[40,h,-8.03],.026,M.steel,overhead);
   planBox(20,15.88,40,.13,3.4,M.white,3.56,overhead);for(let x=0;x<40;x+=8)glassWall(x+.5,15.8,x+7.5,15.8,2.4,overhead,M.glass,4.15);
   // Under-mezzanine coffers and a high coffered hall.
-  // Dedicated sealed flex-room ceiling; hidden with cutaway only, never an open-top AC enclosure.
-  planBox(36,5.25,7.96,5.46,.12,M.white,3.15,overhead);
   for(let x=4;x<40;x+=8){planBox(x,10,7.4,3.3,.12,M.white,3.03,overhead);planBox(x,10,6.2,2.25,.07,M.dark,3.17,overhead);for(const yy of [8.45,11.55])planBox(x,yy,7.4,.16,.25,M.white,2.96,overhead);for(const xx of [x-3.65,x+3.65])planBox(xx,10,.16,3.3,.25,M.white,2.96,overhead);}
   for(let x=4;x<40;x+=8){planBox(x,4,7.5,7.5,.16,M.white,7.05,overhead);planBox(x,4,6.3,6.3,.10,M.dark,6.93,overhead);for(let q=-2.8;q<3;q+=.25){planBox(x+q,4,.04,6.1,.05,M.steel,6.85,overhead);planBox(x,4+q,6.1,.035,.05,M.steel,6.85,overhead);}}
   const ring=mesh(new T.TorusGeometry(2.45,.18,10,80),M.white,overhead);ring.rotation.x=Math.PI/2;ring.position.set(28,3.08,-4.75);
@@ -79,7 +76,6 @@
   }
   // Existing room surfaces. Doors and new optional panels are modelled below per state.
   glassWall(32,8,32,10.2,3.15);glassWall(32,11.4,32,16,3.15);glassWall(32,16,40,16,3.15);planBox(36,12,7.6,7.6,.03,M.fabric,.008);sign('SERVICE LOUNGE',36,2.63,-15.9,3.1,.35,0);
-  glassWall(32,10.2,32,11.4,3.15);tube([32.04,1,-10.45],[32.04,1.3,-10.45],.018,M.steel); // Existing lounge self-closing door assumed; survey hardware and clear width.
   function car(c,index,parent){const g=new T.Group();parent.add(g);g.name=c.id;g.userData={id:c.id,kind:'vehicle',brand:c.brand};const paint=new T.MeshPhysicalMaterial({color:c.brand==='smart'?'#e6e5dc':['#ebeae5','#161d24','#162128','#f0eee6','#bbc3ca'][index-1]||'#bec7ca',metalness:.55,roughness:.23,clearcoat:1,clearcoatRoughness:.16});const windows=new T.MeshPhysicalMaterial({color:'#132a32',metalness:.1,roughness:.14,clearcoat:1,flatShading:true});
     paint.envMapIntensity=.32;windows.envMapIntensity=.24;
     function loft(sections,mat){const verts=[],indices=[];for(const [x,w,b,t] of sections){const cross=[[-w*.82,b],[w*.82,b],[w,b+.13],[w,t-.12],[w*.84,t],[-w*.84,t],[-w,t-.12],[-w,b+.13]];for(const [z,y] of cross)verts.push(x,y,z);}for(let i=0;i<sections.length-1;i++)for(let j=0;j<8;j++){let a=i*8+j,b=i*8+(j+1)%8,k=(i+1)*8+j,d=(i+1)*8+(j+1)%8;indices.push(a,k,b,b,k,d);}for(let j=1;j<7;j++){indices.push(0,j,j+1);let a=(sections.length-1)*8;indices.push(a,a+j+1,a+j);}const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(verts,3));geo.setIndex(indices);geo.computeVertexNormals();return mesh(geo,mat,g);}
@@ -91,32 +87,15 @@
     for(const z of [-.64,.64]){box(2.45,.88,z,.09,.06,.42,new T.MeshBasicMaterial({color:'#e6f8ff'}),g);box(-2.45,.86,z,.075,.055,.39,new T.MeshBasicMaterial({color:'#b84a41'}),g);box(.85,1.16,z>0?1.025:-1.025,.24,.12,.16,paint,g);}
     for(const x of [-.7,.75])for(const z of [-1.014,1.014])box(x,1.035,z,.18,.025,.025,M.steel,g);
     sign(c.brand==='smart'?'smart':c.id,2.645,.54,0,.42,.12,Math.PI/2,g,'#24343a','#e9eeed');
-    const bounds=new T.Box3().setFromObject(g),size=bounds.getSize(new T.Vector3()),centre=bounds.getCenter(new T.Vector3());for(const child of g.children){child.position.x-=centre.x;child.position.z-=centre.z;}g.scale.x=c.l/size.x;g.scale.z=c.w/size.z;g.position.set(c.cx,c.brand==='smart'?.10:0,-c.cy);g.rotation.y=c.angle*Math.PI/180;return g;
+    const size=new T.Box3().setFromObject(g).getSize(new T.Vector3());g.scale.x=c.l/size.x;g.scale.z=c.w/size.z;g.position.set(c.cx,c.brand==='smart'?.10:0,-c.cy);g.rotation.y=c.angle*Math.PI/180;return g;
   }
-  function facing(q){if(Number.isFinite(q.facing))return q.facing;const tables=state.furniture.filter(f=>['table','consult-table'].includes(f.type)&&f.zone===q.zone);const near=tables.sort((a,b)=>Math.hypot(a.cx-q.cx,a.cy-q.cy)-Math.hypot(b.cx-q.cx,b.cy-q.cy))[0];return near?Math.atan2(near.cy-q.cy,near.cx-q.cx)*180/Math.PI+90:(q.angle||0);}
-  function seat(q,parent){const g=new T.Group();g.userData={kind:'furniture',id:q.id};parent.add(g);g.position.set(q.cx,0,-q.cy);g.rotation.y=facing(q)*Math.PI/180;
+  function seat(q,parent){const g=new T.Group();parent.add(g);g.position.set(q.cx,0,-q.cy);const tables=state.furniture.filter(f=>f.type==='table'&&f.zone===q.zone);const nearest=tables.sort((a,b)=>Math.hypot(a.cx-q.cx,a.cy-q.cy)-Math.hypot(b.cx-q.cx,b.cy-q.cy))[0];let angle=q.angle||0;if(nearest)angle=Math.atan2(nearest.cy-q.cy,nearest.cx-q.cx)*180/Math.PI+90;g.rotation.y=angle*Math.PI/180;
     if(q.type==='sofa'||q.type==='armchair'){const w=q.w,d=q.h;box(0,.35,0,w,.32,d,M.upholstery,g);box(0,.68,-d*.39,w,.42,.18,M.upholstery,g);for(const x of [-w/2+.08,w/2-.08])box(x,.57,0,.16,.31,d,M.upholstery,g);const n=q.seats||1;for(let i=0;i<n;i++)box(-w/2+.16+(w-.32)*(i+.5)/n,.54,.04,(w-.34)/n-.02,.09,d*.63,M.upholstery,g);for(const x of [-w/2+.15,w/2-.15])for(const z of [-d/2+.15,d/2-.15])cylinder(x,.1,z,.035,.2,M.steel,g);if(q.id==='AS1')g.rotation.y=Math.PI;}
-    else if(q.zone!=='smart-module'){
-      // D02 pp143-144: black shell, truffle pad; four-point customer / five-point staff base.
-      const brown=new T.MeshStandardMaterial({color:'#625046',roughness:.85});
-      sphere(0,.49,0,.32,M.dark,g,1,.30,.9);sphere(0,.525,.015,.285,brown,g,1,.14,.85);
-      const back=sphere(0,.67,-.21,.31,M.dark,g,1,.55,.24);back.rotation.x=-.12;
-      sphere(0,.67,-.17,.285,brown,g,1,.47,.15);for(const x of [-.30,.30])sphere(x,.62,-.02,.15,M.dark,g,.25,.45,1.5);
-      cylinder(0,.26,0,.038,.4,M.steel,g);const staff=q.role==='consultant'||q.zone==='counter-staff',n=staff?5:4;
-      for(let i=0;i<n;i++){const a=i*Math.PI*2/n;const x=Math.cos(a)*.32,z=Math.sin(a)*.32;tube([0,.12,0],[x,.05,z],.025,M.steel,g);if(staff)sphere(x,.035,z,.036,M.dark,g);}
-    }else{box(0,.47,0,.5,.07,.47,M.upholstery,g);box(0,.7,-.21,.48,.43,.065,M.upholstery,g);for(const x of [-.2,.2])for(const z of [-.17,.17])tube([x,.04,z],[x,.45,z],.017,M.steel,g);for(const x of [-.25,.25]){tube([x,.5,-.18],[x,.68,-.18],.014,M.steel,g);box(x,.68,0,.035,.03,.38,M.upholstery,g);}}
+    else{box(0,.47,0,.5,.07,.47,M.upholstery,g);box(0,.7,-.21,.48,.43,.065,M.upholstery,g);for(const x of [-.2,.2])for(const z of [-.17,.17])tube([x,.04,z],[x,.45,z],.017,M.steel,g);for(const x of [-.25,.25]){tube([x,.5,-.18],[x,.68,-.18],.014,M.steel,g);box(x,.68,0,.035,.03,.38,M.upholstery,g);}}
     return g;
   }
   function furniture(q,parent){if(['chair','armchair','sofa'].includes(q.type))return seat(q,parent);const g=new T.Group();g.position.set(q.cx,0,-q.cy);g.rotation.y=(q.angle||0)*Math.PI/180;g.userData={id:q.id,type:q.type};parent.add(g);
-    if(q.type==='table'){const smart=q.zone==='smart-module',round=q.round,h=q.tableHeight||(q.low?.65:.73);if(round){cylinder(0,h,0,q.w/2,.015,M.dark,g);cylinder(0,h/2,0,.045,h-.03,M.dark,g);cylinder(0,.025,0,q.w*.3,.04,M.dark,g);}else{box(0,.75,0,q.w,.065,q.h,smart?M.white:M.wood,g);for(const x of [-q.w/2+.1,q.w/2-.1])box(x,.36,0,.045,.72,q.h*.74,M.steel,g);} }
-    else if(q.type==='consult-table'){
-      // TA03 catalogue silhouette / D02 PDF155; shaped top and curved-down outer end.
-      const poly=[[-q.w/2,-.48],[q.w/2,-.355],[q.w/2,.355],[-q.w/2,.48]];
-      slab(poly,.735,.025,M.dark,g);box(-q.w/2+.025,.38,0,.055,.73,.92,M.dark,g);box(0,.713,0,q.w-.08,.023,.69,M.steel,g);
-      box(.83,.6275,0,.10,.215,.50,M.steel,g); // Schematic support on sideboard; supplier connection detail remains TBC.
-      box(.1,.815,0,.34,.025,.23,M.dark,g);sign('CONSULT',.1,.92,-.025,.30,.18,0,g);
-    }
-    else if(q.type==='sideboard'){box(0,.26,0,q.w,.52,q.h,M.steel,g);box(-q.w/2-.004,.26,0,.016,.49,q.h-.04,M.wood,g);}
+    if(q.type==='table'){const smart=q.zone==='smart-module',round=q.round;if(round){cylinder(0,.74,0,q.w/2,.055,M.white,g);cylinder(0,.36,0,.055,.7,M.steel,g);cylinder(0,.035,0,.28,.045,M.blackStone,g);}else{box(0,.75,0,q.w,.065,q.h,smart?M.white:M.wood,g);for(const x of [-q.w/2+.1,q.w/2-.1])box(x,.36,0,.045,.72,q.h*.74,M.steel,g);} }
     else if(q.type==='counter'){box(0,.51,0,q.w,1.02,q.h,M.wood,g);box(0,.52,q.h/2+.01,q.w-.15,.86,.025,M.blackStone,g);box(0,1.045,0,q.w+.05,.045,q.h+.08,M.blackStone,g);for(const x of [-1.6,1.6]){box(x,1.21,0,.52,.32,.055,M.dark,g);box(x,1.07,0,.2,.03,.2,M.steel,g);}sign('CHITCHAI',0,.62,q.h/2+.027,1.5,.19,0,g,'#e2e2dc','#293034');}
     else if(q.type==='background-wall'){box(0,1.27,0,q.w,2.54,q.h,M.platform,g);sign('smart',-.9,1.94,q.h/2+.018,1.6,.5,0,g,'#eef3f1','#929b97');for(const x of [-q.w/2+.05,q.w/2-.05])box(x,1.25,q.h/2+.015,.035,2.4,.025,M.green,g);}
     else if(q.type==='screen'){const isKit=q.id==='LED';const w=isKit?1.66:q.h,h=w*9/16;box(0,1.68,0,q.w,.98,q.h,M.dark,g);if(isKit){const o=sign('smart — open your mind',0,1.7,.077,w,h,0,g,'#e6eabe','#435150');}else{sign('CHITCHAI',.09,1.7,0,1.2,.68,Math.PI/2,g);}}
@@ -127,55 +106,13 @@
     return g;
   }
   function module(state){slab(state.module.shape,.018,.065,M.platform,dynamic);slab(state.module.carpet,.09,.014,M.fabric,dynamic);const p=state.module.shape;for(let i=0;i<p.length;i++){const a=p[i],b=p[(i+1)%p.length];tube([a[0],.09,-a[1]],[b[0],.09,-b[1]],.018,M.green,dynamic);}}
-  function person(p){
-    const g=new T.Group();g.name=p.id;g.userData={kind:'person',pose:p.seat?'seated':p.pose,height:p.height};peopleGroup.add(g);
-    const q=p.seat&&state.furniture.find(q=>q.id===p.seat),sit=!!q;
-    const skin=new T.MeshStandardMaterial({color:p.skin,roughness:.78}),cloth=new T.MeshStandardMaterial({color:p.shirt,roughness:.95}),pants=new T.MeshStandardMaterial({color:p.pants,roughness:.92}),hair=new T.MeshStandardMaterial({color:'#302a26',roughness:1});
-    const hip=sit?.58:.92,shoulder=hip+.49,head=shoulder+.22;
-    sphere(0,hip+.26,0,.26,cloth,g,.83,1.14,.49);sphere(0,hip-.04,0,.20,pants,g,.88,.62,.63);
-    cylinder(0,head-.13,0,.055,.10,skin,g);sphere(0,head+.015,0,.125,skin,g,.8,1.16,.88);sphere(0,head+.09,-.018,.126,hair,g,.82,.6,.86);sphere(0,head+.01,.112,.035,skin,g,.57,.65,.7);
-    for(const side of [-1,1]){
-      sphere(side*.106,head+.015,0,.025,skin,g,.5,1,.75);
-      const knee=sit?[side*.12,.46,.39]:[side*.11,.49,side*(p.pose==='walk'?.14:.025)],ankle=sit?[side*.12,.10,.38]:[side*.11,.105,-side*(p.pose==='walk'?.13:.025)];
-      tube([side*.115,hip-.08,0],knee,.085,pants,g);sphere(...knee,.082,pants,g);tube(knee,ankle,.062,pants,g);sphere(ankle[0],.065,ankle[2]+(sit?.02:.07),sit?.09:.13,M.dark,g,.55,.45,1.12);
-      const elbow=sit?[side*.23,hip+.12,.23]:[side*.25,hip+.21,side*.025],hand=sit?[side*.17,hip+.13,.43]:p.pose==='gesture'&&side===1?[.48,hip+.31,.21]:[side*.23,hip-.03,.04];
-      tube([side*.19,shoulder-.04,0],elbow,.063,cloth,g);sphere(...elbow,.065,cloth,g);tube(elbow,hand,.047,cloth,g);sphere(...hand,.052,skin,g,.65,1,.6);
-    }
-    if(sit)box(0,hip+.13,.38,.29,.025,.20,M.dark,g);
-    g.scale.setScalar(p.height/1.78);g.position.set(q?q.cx:p.x,q?.zone==='smart-module'?.105:0,-(q?q.cy:p.y));g.rotation.y=(q?facing(q):(p.facing||0))*Math.PI/180;
-  }
-  function planter(x,y,r,h){const pot=new T.MeshStandardMaterial({color:'#323638',roughness:.85}),leaf=new T.MeshStandardMaterial({color:'#405d38',roughness:.82});const g=new T.Group();shell.add(g);g.position.set(x,0,-y);const m=mesh(new T.CylinderGeometry(r,r*.70,h,24),pot,g);m.position.y=h/2;cylinder(0,h,0,r*.88,.02,M.dark,g);for(let i=0;i<7;i++){const a=i*2.4,top=h+.55+(i%3)*.22,ex=Math.cos(a)*r*.9,ez=Math.sin(a)*r*.9;tube([0,h,0],[ex,top,ez],.009,leaf,g);for(let j=0;j<3;j++){const l=sphere(ex+Math.cos(a+j)*.12,top-j*.13,ez+Math.sin(a+j)*.12,.18,leaf,g,.6,.12,1.1);l.rotation.set(.4,a+j,.2);}}}
-  // D02: selected consulting wood zones and black-glass reception front; retained footprints.
-  const oak=new T.MeshStandardMaterial({map:woodTx,color:'#cbbba1',roughness:.63});
-  planBox(17.05,10.15,17.1,3.2,.014,oak,.012);for(let y=8.55;y<11.75;y+=.20)for(let x=8.5+(Math.round(y*5)%2)*.6;x<25.5;x+=1.2)planBox(x+.6,y+.1,1.196,.196,.005,oak,.027);
-  const blackGlass=new T.MeshPhysicalMaterial({color:'#10191f',roughness:.13,metalness:.1,clearcoat:1});planBox(11.65,12.03,6.1,.045,2.25,blackGlass,.75);for(let x=8.9;x<14.7;x+=.625)planBox(x,11.997,.008,.012,2.15,M.steel,.79);
-  sign('Mercedes-Benz',11.65,2.42,-11.985,2.45,.29,0);sign('WELCOME  /  RECEPTION',11.65,1.92,-11.98,2.4,.17,0);
-  // D03 optional paired planters, outside vehicles and service entry.
-  planter(25.8,10.7,.30,.90);planter(26.55,10.7,.30,.68);planter(33.0,15.35,.30,.90);planter(33.72,15.35,.30,.68);
-  // D02 LP vehicle/handover tracks: visual fixtures, not a calculated lux result.
-  for(const [x,y,z] of [[12,1.65,5.8],[20,1.65,5.8],[12,6.65,5.8],[20,6.65,5.8],[36,5.25,3.0]]){planBox(x,y,4.3,.055,.07,M.dark,z,overhead);for(const dx of [-1.6,0,1.6]){const head=cylinder(x+dx,z-.14,-y,.085,.22,M.dark,overhead);head.rotation.z=dx*.12;cylinder(x+dx,z-.26,-y,.068,.008,new T.MeshBasicMaterial({color:'#fff4e2'}),overhead);}}
-  function flexRoom(){
-    if(mode==='lounge'&&acOn){glassWall(32,8,32.4,8,3.15,dynamic);glassWall(34.8,8,40,8,3.15,dynamic);planBox(35.02,8,.22,.60,3.10,M.optionalGlass,0,dynamic);}
-    else{glassWall(32,8,40,8,3.15,dynamic);tube([33.3,1,-7.96],[33.3,1.3,-7.96],.018,M.steel,dynamic);}
-    for(const [a,b] of [[2.5,2.7],[2.7,3.9],[3.9,4],[7.2,8]])glassWall(32,a,32,b,3.15,dynamic,M.optionalGlass);
-    tube([32.04,1,-3.2],[32.04,1.3,-3.2],.018,M.steel,dynamic);
-    if(acOn)glassWall(32,4,32,7.2,3.15,dynamic,M.optionalGlass);else for(let i=0;i<4;i++)planBox(32.13+i*.06,7.53,.034,.55,3.10,M.optionalGlass,0,dynamic);
-    // Dedicated cassette installed in all modes; opening/closing AC is independent of use.
-    planBox(36,5.25,1,1,.16,M.white,2.92,dynamic);planBox(36,5.25,.7,.7,.012,M.dark,2.912,dynamic);for(let i=-3;i<=3;i++)planBox(36+i*.1,5.25,.02,.62,.014,M.steel,2.9,dynamic);
-    planBox(36.4,4.85,.035,.035,.012,new T.MeshBasicMaterial({color:acOn?'#79d8ad':'#a2a5a7'}),2.898,dynamic);
-    // One permanent stone floor for all uses; only loose rugs/furniture change.
-    if(mode==='lounge'){const rug=cylinder(36.3,.040,-5,1.34,.012,M.fabric,dynamic);rug.scale.z=.85;}
-    sign(mode==='handover'?'VEHICLE HANDOVER':mode==='consulting'?'CONSULTING':'CUSTOMER WAITING',36,2.61,-7.96,3.4,.3,0,dynamic);
-  }
   function line(points,color,parent=markings){const g=new T.BufferGeometry().setFromPoints(points.map(p=>new T.Vector3(...p)));const o=new T.Line(g,new T.LineBasicMaterial({color,transparent:true,opacity:.75}));parent.add(o);return o;}
-  const acState={handover:false,consulting:true,lounge:true};
-  const sharedMaterials=new Set(Object.values(M)),sharedTextures=new Set([granite,woodTx,fabricTx]);
-  function clearGroup(group){const materials=new Set(),textures=new Set();while(group.children.length){const c=group.children[0];group.remove(c);c.traverse(o=>{o.geometry?.dispose();for(const m of (Array.isArray(o.material)?o.material:[o.material]))if(m&&!sharedMaterials.has(m))materials.add(m);});}for(const m of materials){if(m.map&&!sharedTextures.has(m.map))textures.add(m.map);m.dispose();}for(const tx of textures)tx.dispose();}
-  function setMode(next){if(!dataset.states.some(s=>s.mode===next))return;mode=next;state=dataset.states.find(s=>s.mode===mode);acOn=acState[mode];clearGroup(dynamic);clearGroup(peopleGroup);flexRoom();module(state);state.cars.forEach((c,i)=>car(c,i,dynamic));state.furniture.forEach(q=>furniture(q,dynamic));state.people.forEach(person);peopleGroup.visible=peopleOn;
-    document.getElementById('state-status').textContent=(mode==='handover'?'MB 5 แสดง + MB6 ส่งมอบ + smart 1':mode==='consulting'?'MB 5 + smart 1 · Consulting 3 ที่ + รับรอง 2 ที่':'MB 5 + smart 1 · ห้องแอร์เดิม 10 + ส่วนขยาย 8 ที่')+' · แอร์ Flex '+(acOn?'เปิด / กระจกปิด':'ปิด / ช่องรถเปิด');document.getElementById('mode').value=mode;document.getElementById('flex-ac').checked=acOn;
-    root.querySelector('.issue').textContent='MB5 หน้า Entrance: หน้า–ท้าย 0.15 ม. / รอตรวจทางเดินและการเลี้ยวรถ';const tag=labelItems.find(q=>q.el.classList.contains('warning'));if(tag){const c=state.cars.find(c=>c.id==='MB5');tag.point.set(c.cx,2.3,-c.cy);tag.el.textContent='MB5 · Entrance / clearance HOLD';}updateCaption();dirty=true;
+  function setMode(next){mode=next;state=dataset.states.find(s=>s.mode===mode);while(dynamic.children.length){const child=dynamic.children[0];dynamic.remove(child);child.traverse(o=>{if(o.geometry)o.geometry.dispose();});}module(state);state.cars.forEach((c,i)=>car(c,i,dynamic));state.furniture.forEach(q=>furniture(q,dynamic));
+    if(mode==='handover'){glassWall(32,8,40,8,3.15,dynamic);}
+    else{glassWall(32,8,32.4,8,3.15,dynamic);glassWall(34.8,8,40,8,3.15,dynamic);glassWall(32,2.5,32,2.7,3.15,dynamic,M.optionalGlass);glassWall(32,3.9,32,8,3.15,dynamic,M.optionalGlass);glassWall(32,2.7,32,3.9,3.15,dynamic,M.optionalGlass);planBox(34.94,8,.25,.55,3.12,M.optionalGlass,0,dynamic);planBox(37.5,7.87,1.05,.25,.3,M.white,2.6,dynamic);}
+    document.getElementById('state-status').textContent=mode==='handover'?'MB 4 แสดง + 1 Handover · smart 1 / 3B · ห้องแอร์เดิม 10 ที่':'MB 5 แสดง + smart 1 / 3B · ห้องแอร์เดิม 10 + ส่วนขยาย 8 ที่ · ที่เก็บ furniture นอกโมเดลรอยืนยัน';document.getElementById('mode').value=mode;
+    const note=mode==='handover'?'MB5: หน้า–ท้าย ~15 ซม. / รอตรวจระยะใช้งาน':'MB5 ช่องแสดง: ท้ายชิดแนว service ~5 ซม. / รอตรวจ circulation';root.querySelector('.issue').textContent=note;const tag=labelItems.find(q=>q.el.classList.contains('warning'));if(tag){const c=state.cars.find(c=>c.id==='MB5');tag.point.set(c.cx,2.3,-c.cy);tag.el.textContent=mode==='handover'?'MB5 · หน้า–ท้าย 0.15 m / HOLD':'MB5 · ชิด service 0.05 m / HOLD';}dirty=true;
   }
-  function setAC(value){acState[mode]=!!value;setMode(mode);}
   // Review overlays are not proposed floor graphics.
   for(const x of [0,8,16,24,32,40]){line([[x,.025,0],[x,.025,-16]],'#b98738');floorLabel('LX'+x/8,x,16.6,1);}
   for(const [id,y] of [['H',0],['G',2.5],['F',8],['E',16]]){line([[0,.025,-y],[40,.025,-y]],'#b98738');floorLabel(id,-.65,y,.7);}
@@ -183,10 +120,10 @@
   const warningMat=new T.MeshBasicMaterial({color:'#efa554',transparent:true,opacity:.13,depthWrite:false});planBox(36,5.25,8,5.5,.01,warningMat,.025,markings);
   addLabel('3B · 8.65 × 6.63 m',4,2.95,-4);addLabel('ทางไป SERVICE · ไม่วาง ST',29.75,.8,-14);addLabel('MB5 · หน้า–ท้าย 0.15 m / HOLD',36.6,2.3,-5.25,true);addLabel('ห้องแอร์เดิม',36,2.2,-12);
   const presets={interior:{p:[27.9,2.05,-4.1],t:[9.4,1.42,-6.2],ceiling:true,title:'จากทางเข้า · มองสู่ smart และ counter เดิม'},smart:{p:[9.2,2.4,-3.9],t:[2.8,1.22,-5.2],ceiling:true,title:'smart Module 3B · ครบหนึ่งชุด'},handover:{p:[33.2,2.05,-2.8],t:[36.8,1.1,-7.4],ceiling:true,title:'Vehicle Handover · MB5 หันสู่ด้านหน้า entrance'},service:{p:[28.2,2.0,-6.7],t:[29.75,1.4,-15.5],ceiling:true,title:'ทางเข้า–ออกศูนย์บริการ · ยกเลิก ST'},overview:{p:[48,33,27],t:[20,0,-7.5],ceiling:false,title:'ภาพรวมสามมิติ · มุมตัดซ่อนฝ้าเพื่อดูผัง'},plan:{p:[20,49,-7.9],t:[20,0,-8],ceiling:false,title:'มองจากด้านบน · แกนยาว MB5 ตั้งฉาก'} };
-  presets.interior.p=[28.6,2.15,-7.15];presets.interior.t=[10.2,1.42,-7.8];presets.handover.p=[32.35,2.35,-2.78];presets.handover.t=[36,1.1,-5.8];presets.handover.title='MB6 · ส่งมอบรถ หันหน้าไปทาง smart';presets.plan.title='ผัง v06 · MB5 หน้า Entrance / Flex 3 รูปแบบ';
+  presets.handover.p=[30.4,2.15,-4.8];presets.handover.t=[36.5,1.15,-6.1];
   presets.overview.p=[39,24,17];presets.plan.p=[20,26,-7.9];
-  function updateCaption(){document.getElementById('view-title').textContent=activeView==='handover'?modeNames[mode]+' · แอร์ '+(acOn?'เปิด':'ปิด'):presets[activeView].title;}
-  function setView(v){activeView=v;const p=presets[v];camera.fov=v==='handover'?65:58;camera.updateProjectionMatrix();camera.position.set(...p.p);target.set(...p.t);if(v==='plan'||v==='overview'){const k=Math.max(1,1.8/camera.aspect);camera.position.sub(target).multiplyScalar(k).add(target);}camera.lookAt(target);overhead.visible=p.ceiling;document.getElementById('ceiling').checked=p.ceiling;root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));updateCaption();dirty=true;}
+  function updateCaption(){document.getElementById('view-title').textContent=activeView==='handover'&&mode==='lounge-ac'?'Optional · ห้องรับรองแอร์ส่วนขยาย เชื่อมห้องเดิม':presets[activeView].title;}
+  function setView(v){activeView=v;const p=presets[v];camera.position.set(...p.p);target.set(...p.t);if(v==='plan'||v==='overview'){const k=Math.max(1,1.8/camera.aspect);camera.position.sub(target).multiplyScalar(k).add(target);}camera.lookAt(target);overhead.visible=p.ceiling;document.getElementById('ceiling').checked=p.ceiling;root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));updateCaption();dirty=true;}
   function orbit(dx,dy){const v=camera.position.clone().sub(target),s=new T.Spherical().setFromVector3(v);s.theta-=dx*.006;s.phi=T.MathUtils.clamp(s.phi-dy*.006,.04,Math.PI/2+.05);camera.position.copy(target).add(new T.Vector3().setFromSpherical(s));camera.lookAt(target);dirty=true;}
   function zoom(f){const v=camera.position.clone().sub(target);v.multiplyScalar(f);v.clampLength(.6,110);camera.position.copy(target).add(v);dirty=true;}
   function pan(dx,dy){const distance=camera.position.distanceTo(target),right=new T.Vector3().setFromMatrixColumn(camera.matrix,0),up=new T.Vector3().setFromMatrixColumn(camera.matrix,1);const v=right.multiplyScalar(-dx*distance*.0018).add(up.multiplyScalar(dy*distance*.0018));camera.position.add(v);target.add(v);dirty=true;}
@@ -195,7 +132,6 @@
   renderer.domElement.addEventListener('pointermove',e=>{const old=pointers.get(e.pointerId);if(!old)return;const dx=e.clientX-old.x,dy=e.clientY-old.y;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,button:old.button});if(pointers.size===2){const a=[...pointers.values()],d=Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y);if(lastPinch)zoom(lastPinch/d);lastPinch=d;}else if(old.button===2||e.shiftKey)pan(dx,dy);else orbit(dx,dy);});
   for(const event of ['pointerup','pointercancel'])renderer.domElement.addEventListener(event,e=>{pointers.delete(e.pointerId);lastPinch=0;});renderer.domElement.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(e.deltaY*.001));},{passive:false});
   root.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));document.getElementById('mode').addEventListener('change',e=>{setMode(e.target.value);updateCaption();});document.getElementById('ceiling').addEventListener('change',e=>{overhead.visible=e.target.checked;dirty=true;});document.getElementById('labels').addEventListener('change',e=>{labelsOn=e.target.checked;markings.visible=labelsOn;dirty=true;});
-  document.getElementById('flex-ac').addEventListener('change',e=>setAC(e.target.checked));document.getElementById('people').addEventListener('change',e=>{peopleOn=e.target.checked;peopleGroup.visible=peopleOn;dirty=true;});
   function resize(){const w=host.clientWidth,h=host.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();dirty=true;}
   new ResizeObserver(resize).observe(host);
   function draw(){if(dirty){renderer.render(scene,camera);for(const q of labelItems){const p=q.point.clone().project(camera);q.el.hidden=!labelsOn||p.z>1||p.z<0||Math.abs(p.x)>.93||Math.abs(p.y)>.9;q.el.style.left=((p.x+1)*.5*host.clientWidth)+'px';q.el.style.top=((-p.y+1)*.5*host.clientHeight)+'px';}dirty=false;}requestAnimationFrame(draw);}
@@ -208,5 +144,5 @@
       if(q.type==='rectangle'){const rect=new T.Mesh(new T.PlaneGeometry(q.x2-q.x,q.y2-q.y),mat.clone());rect.material.opacity=.24;rect.rotation.x=-Math.PI/2;rect.position.set((q.x+q.x2)/2,.14,-(q.y+q.y2)/2);rect.renderOrder=19;reviewMarker.add(rect);}
     }dirty=true;
   }
-  window.BC_VIEWER={setMode,setAC,setView,setReviewLocation,setLabels(v){labelsOn=v;markings.visible=v;document.getElementById('labels').checked=v;dirty=true;},setCeiling(v){overhead.visible=v;document.getElementById('ceiling').checked=v;dirty=true;},snapshot(){renderer.render(scene,camera);return renderer.domElement.toDataURL('image/jpeg',.94);},inspect(){return {revision:dataset.revision,mode,ac:acOn,people:peopleGroup.children.length,peopleVisible:peopleOn,view:activeView,vehicles:dynamic.children.filter(o=>o.userData.kind==='vehicle').map(o=>({id:o.name,position:o.position.toArray(),rotation:o.rotation.y,bounds:new T.Box3().setFromObject(o).getSize(new T.Vector3()).toArray()})),ST:state.furniture.some(q=>q.id==='ST'),serviceReserve:state.serviceAccessReserve,ceiling:overhead.visible,glRenderer:renderer.getContext().getParameter(renderer.getContext().RENDERER),drawCalls:renderer.info.render.calls};},scene,camera};
+  window.BC_VIEWER={setMode,setView,setReviewLocation,setLabels(v){labelsOn=v;markings.visible=v;document.getElementById('labels').checked=v;dirty=true;},setCeiling(v){overhead.visible=v;document.getElementById('ceiling').checked=v;dirty=true;},snapshot(){renderer.render(scene,camera);return renderer.domElement.toDataURL('image/jpeg',.94);},inspect(){return {revision:'v04',mode,view:activeView,vehicles:dynamic.children.filter(o=>o.userData.kind==='vehicle').map(o=>({id:o.name,position:o.position.toArray(),rotation:o.rotation.y,bounds:new T.Box3().setFromObject(o).getSize(new T.Vector3()).toArray()})),ST:state.furniture.some(q=>q.id==='ST'),serviceReserve:state.serviceAccessReserve,ceiling:overhead.visible,glRenderer:renderer.getContext().getParameter(renderer.getContext().RENDERER),drawCalls:renderer.info.render.calls};},scene,camera};
 })();

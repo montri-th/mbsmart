@@ -4,7 +4,6 @@
   const $ = id => document.getElementById(id), form = $('comment-form'), map = $('review-map');
   const areas = [...$('comment-area').options].map(o => o.value);
   const views = ['interior','smart','handover','service','overview','plan'];
-  const revision=window.BC_LAYOUT.revision, modes=window.BC_LAYOUT.states.map(s=>s.mode), modeNames={handover:'Handover',consulting:'Consulting',lounge:'Waiting annex'};
   const endpoint = window.BC_FEEDBACK_CONFIG?.endpoint || '';
   const validEndpoint = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(endpoint);
   let location = {type:'area'}, tool = 'point', corner = null, cursor = {x:20,y:8};
@@ -44,7 +43,7 @@
     for(const q of s.furniture.filter(q=>['counter','table','sofa','armchair'].includes(q.type)))rect(q.cx-q.w/2,q.cy-q.h/2,q.w,q.h,{fill:q.type==='counter'?'#8b7663':'#aaa','fill-opacity':.6});
     for(const c of s.cars) {const r=rect(c.cx-c.l/2,c.cy-c.w/2,c.l,c.w,{rx:.3,fill:c.brand==='smart'?'#fafaf5':'#fbfbfb',stroke:'#555','stroke-width':.1,transform:`rotate(${-c.angle},${c.cx},${16-c.cy})`});r.setAttribute('aria-hidden','true');mapText(c.cx,c.cy-.2,c.id);}
     mapText(36,12,'LOUNGE');mapText(29.75,14,'SERVICE');mapText(4,14.5,'STAIR');mapText(11.6,12,'COUNTER');mapText(28.2,.9,'ENTRANCE');mapText(4.4,10,'smart 3B');
-    mapText(36,7.2,modeNames[currentMode()].toUpperCase());
+    if(currentMode()==='handover')mapText(36,7.2,'HANDOVER');else mapText(36,7.2,'LOUNGE +');
     if(location.type==='rectangle') rect(location.x,location.y,location.x2-location.x,location.y2-location.y,{class:'range'});
     if(location.type!=='area')element('circle',{cx:location.x,cy:16-location.y,r:.45,class:'pin'});
     if(corner)element('circle',{cx:corner.x,cy:16-corner.y,r:.35,class:'pin'});
@@ -55,7 +54,7 @@
     drawMap();help();
     $('location-summary').textContent=location.type==='area'?'ยังไม่ระบุจุดเฉพาะ':location.type==='point'?`${grid(location.x,location.y)} · ${coord(location.x,location.y)}`:`${coord(location.x,location.y)} ถึง ${coord(location.x2,location.y2)}`;
     $('show-location').hidden=location.type==='area' || !window.BC_VIEWER;
-    $('comment-context').textContent=`แนบ ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision}`;
+    $('comment-context').textContent=`แนบ${currentMode()==='handover'?'แบบหลัก Handover':'แบบ Optional ห้องรับรองแอร์'} · โมเดล v04`;
     window.BC_VIEWER?.setReviewLocation(location);
   }
   function pick(p) {
@@ -76,10 +75,9 @@
   $('clear-location').addEventListener('click',()=>{location={type:'area'};corner=null;changed();sync();});
   $('show-location').addEventListener('click',()=>{window.BC_VIEWER?.setView('plan');document.querySelector('.stage').scrollIntoView({block:'center',behavior:'instant'});});
   $('mode').addEventListener('change',()=>{changed();sync();});
-  $('flex-ac').addEventListener('change',()=>{changed();sync();});
   document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',changed));
   form.addEventListener('input',()=>{changed();$('comment-count').textContent=`${$('comment-text').value.length.toLocaleString('en-US')} / 3,000`;});
-  function payload() {return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:currentMode(),modelRevision:revision,ac:$('flex-ac').checked,view:currentView(),website:$('comment-website').value};}
+  function payload() {return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:currentMode(),modelRevision:'v04',view:currentView(),website:$('comment-website').value};}
   const comparable=p=>JSON.stringify({...p,id:''});
   form.addEventListener('submit',async e=>{
     e.preventDefault();if(sending || !validEndpoint)return;
@@ -105,10 +103,9 @@
   $('comment-text').addEventListener('input',()=>$('comment-text').setCustomValidity(''));
   // Permalinks carry geometry context only, never private comment text or authors.
   const query=new URLSearchParams(window.location.search);
-  if(query.get('rev') && query.get('rev')!==revision)status('ลิงก์นี้อ้างอิงแบบคนละรุ่น กรุณาตรวจตำแหน่งก่อนส่ง','error');
+  if(query.get('rev') && query.get('rev')!=='v04')status('ลิงก์นี้อ้างอิงแบบคนละรุ่น กรุณาตรวจตำแหน่งก่อนส่ง','error');
   else {
-    if(modes.includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
-    if(['0','1'].includes(query.get('ac'))){$('flex-ac').checked=query.get('ac')==='1';$('flex-ac').dispatchEvent(new Event('change'));}
+    if(['handover','lounge-ac'].includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
     if(areas.includes(query.get('area')))$('comment-area').value=query.get('area');
     const type=query.get('loc');
     if(['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(query.has('x')&&query.has('y')&&(type!=='rectangle'||query.has('x2')&&query.has('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
@@ -117,7 +114,7 @@
   sync();$('submit-comment').disabled=!validEndpoint;
   $('connection-notice').hidden=validEndpoint;
   status(validEndpoint?'พร้อมรับความเห็น':'ยังไม่เปิดรับออนไลน์ — รอเชื่อมต่อ Google ของโครงการ');
-  if(query.get('rev') && query.get('rev')!==revision)status('ลิงก์นี้อ้างอิงแบบคนละรุ่น จึงไม่คืนตำแหน่งเดิม กรุณาตรวจโมเดล '+revision+' ก่อนส่ง'+(validEndpoint?'':' · ยังไม่เปิดรับออนไลน์ รอเชื่อมต่อ Google'),'error');
+  if(query.get('rev') && query.get('rev')!=='v04')status('ลิงก์นี้อ้างอิงแบบคนละรุ่น จึงไม่คืนตำแหน่งเดิม กรุณาตรวจโมเดล v04 ก่อนส่ง'+(validEndpoint?'':' · ยังไม่เปิดรับออนไลน์ รอเชื่อมต่อ Google'),'error');
   // Read-only diagnostics for automated acceptance checks; no comment text is exposed.
-  window.BC_REVIEW={inspect:()=>({location:{...location},area:$('comment-area').value,mode:currentMode(),ac:$('flex-ac').checked,modelRevision:revision,configured:validEndpoint,sending})};
+  window.BC_REVIEW={inspect:()=>({location:{...location},area:$('comment-area').value,mode:currentMode(),modelRevision:'v04',configured:validEndpoint,sending})};
 })();
