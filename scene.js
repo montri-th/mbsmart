@@ -12,7 +12,7 @@
   renderer.domElement.setAttribute('role','img');renderer.domElement.setAttribute('aria-label','โมเดลโชว์รูม 3 มิติ หมุนด้วยเมาส์หรือเลือกมุมกล้องจากปุ่มด้านบน');
   const scene=new T.Scene();scene.background=new T.Color('#d4dce0');
   const camera=new T.PerspectiveCamera(58,1,.08,220), target=new T.Vector3();
-  const shell=new T.Group(), overhead=new T.Group(), dynamic=new T.Group(), markings=new T.Group();scene.add(shell,overhead,dynamic,markings);
+  const shell=new T.Group(), overhead=new T.Group(), dynamic=new T.Group(), markings=new T.Group(), reviewMarker=new T.Group();scene.add(shell,overhead,dynamic,markings,reviewMarker);
   let state=dataset.states.find(s=>s.mode==='handover'), mode='handover', activeView='interior', labelsOn=false, dirty=true;
   const material=new Map(), labelItems=[];
   let seed=710;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
@@ -136,5 +136,13 @@
   new ResizeObserver(resize).observe(host);
   function draw(){if(dirty){renderer.render(scene,camera);for(const q of labelItems){const p=q.point.clone().project(camera);q.el.hidden=!labelsOn||p.z>1||p.z<0||Math.abs(p.x)>.93||Math.abs(p.y)>.9;q.el.style.left=((p.x+1)*.5*host.clientWidth)+'px';q.el.style.top=((-p.y+1)*.5*host.clientHeight)+'px';}dirty=false;}requestAnimationFrame(draw);}
   markings.visible=false;setMode('handover');setView('interior');resize();draw();document.getElementById('loading').hidden=true;
-  window.BC_VIEWER={setMode,setView,setLabels(v){labelsOn=v;markings.visible=v;document.getElementById('labels').checked=v;dirty=true;},setCeiling(v){overhead.visible=v;document.getElementById('ceiling').checked=v;dirty=true;},snapshot(){renderer.render(scene,camera);return renderer.domElement.toDataURL('image/jpeg',.94);},inspect(){return {revision:'v04',mode,view:activeView,vehicles:dynamic.children.filter(o=>o.userData.kind==='vehicle').map(o=>({id:o.name,position:o.position.toArray(),rotation:o.rotation.y,bounds:new T.Box3().setFromObject(o).getSize(new T.Vector3()).toArray()})),ST:state.furniture.some(q=>q.id==='ST'),serviceReserve:state.serviceAccessReserve,ceiling:overhead.visible,glRenderer:renderer.getContext().getParameter(renderer.getContext().RENDERER),drawCalls:renderer.info.render.calls};},scene,camera};
+  function setReviewLocation(q){
+    while(reviewMarker.children.length){const o=reviewMarker.children[0];reviewMarker.remove(o);o.geometry?.dispose();o.material?.dispose();}
+    if(q.type==='point'||q.type==='rectangle'){
+      const mat=new T.MeshBasicMaterial({color:'#0078d6',transparent:true,opacity:.8,depthTest:false,depthWrite:false,side:T.DoubleSide});
+      const ring=new T.Mesh(new T.RingGeometry(.27,.44,40),mat);ring.rotation.x=-Math.PI/2;ring.position.set(q.x,.16,-q.y);ring.renderOrder=20;reviewMarker.add(ring);
+      if(q.type==='rectangle'){const rect=new T.Mesh(new T.PlaneGeometry(q.x2-q.x,q.y2-q.y),mat.clone());rect.material.opacity=.24;rect.rotation.x=-Math.PI/2;rect.position.set((q.x+q.x2)/2,.14,-(q.y+q.y2)/2);rect.renderOrder=19;reviewMarker.add(rect);}
+    }dirty=true;
+  }
+  window.BC_VIEWER={setMode,setView,setReviewLocation,setLabels(v){labelsOn=v;markings.visible=v;document.getElementById('labels').checked=v;dirty=true;},setCeiling(v){overhead.visible=v;document.getElementById('ceiling').checked=v;dirty=true;},snapshot(){renderer.render(scene,camera);return renderer.domElement.toDataURL('image/jpeg',.94);},inspect(){return {revision:'v04',mode,view:activeView,vehicles:dynamic.children.filter(o=>o.userData.kind==='vehicle').map(o=>({id:o.name,position:o.position.toArray(),rotation:o.rotation.y,bounds:new T.Box3().setFromObject(o).getSize(new T.Vector3()).toArray()})),ST:state.furniture.some(q=>q.id==='ST'),serviceReserve:state.serviceAccessReserve,ceiling:overhead.visible,glRenderer:renderer.getContext().getParameter(renderer.getContext().RENDERER),drawCalls:renderer.info.render.calls};},scene,camera};
 })();
