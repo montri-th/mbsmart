@@ -18,7 +18,14 @@
   try {const saved = localStorage.getItem('bc-review-device');if (/^[0-9a-f-]{36}$/i.test(saved || '')) clientId = saved; else localStorage.setItem('bc-review-device', clientId);} catch (_) { /* Memory-only works on shared/restricted browsers. */ }
   const currentMode = () => $('mode').value;
   const currentExterior = () => $('exterior-scheme').value;
-  const currentView = () => window.BC_VIEWER?.inspect().view || document.querySelector('[data-view][aria-pressed=true]')?.dataset.view || 'interior';
+  const currentView = () => window.BC_EXPERIENCE?.inspect().view || window.BC_VIEWER?.inspect().view || document.querySelector('[data-view][aria-pressed=true]')?.dataset.view || 'interior';
+  const experience = () => window.BC_EXPERIENCE?.inspect();
+  const referenceFields = () => {const c=experience();return c?{experienceRevision:c.experienceRevision,section:c.section,referenceKind:c.referenceKind,referenceId:c.referenceId}:{};};
+  const draftKey = () => JSON.stringify({...referenceFields(),mode:currentMode(),ac:$('flex-ac').checked,exterior:currentExterior()});
+  const drafts=new Map();let activeDraftKey=draftKey(),restoring=true;
+  function saveDraft(){drafts.set(activeDraftKey,{comment:$('comment-text').value,area:$('comment-area').value,location:{...location},corner:corner?{...corner}:null,pending,sequence,signature:comparable(payload())});}
+  function restoreDraft(){activeDraftKey=draftKey();const draft=drafts.get(activeDraftKey);$('comment-text').value=draft?.comment||'';$('comment-area').value=draft?.area||'general';location=draft?.location?{...draft.location}:{type:'area'};corner=draft?.corner?{...draft.corner}:null;pending=draft?.pending||null;sequence++;$('comment-count').textContent=`${$('comment-text').value.length.toLocaleString('en-US')} / 3,000`;$('comment-text').setCustomValidity('');window.BC_EXPERIENCE?.scope();sync();if(!sending)status(validEndpoint?'พร้อมรับความเห็นในส่วนและมุมนี้':offlineNotice);}
+  function contextChanged(){if(restoring||window.BC_EXPERIENCE?.isChanging())return;saveDraft();restoreDraft();window.BC_EXPERIENCE?.syncURL();}
   const inside = (x,y) => Number.isFinite(x) && Number.isFinite(y) && x>=0 && x<=40 && y>=0 && y<=16 && !(x>24 && y<2.5);
   const validLocation = q => q.type === 'area' || (['point','rectangle'].includes(q.type) && inside(q.x,q.y) && (q.type !== 'rectangle' || (inside(q.x2,q.y2) && inside(q.x2,q.y) && inside(q.x,q.y2) && q.x2-q.x>=.05 && q.y2-q.y>=.05)));
   const grid = (x,y) => `Lx${Math.min(4,Math.floor(x/8))}–${Math.min(5,Math.floor(x/8)+1)} / ${y<2.5?'G–H':y<8?'F–G':'E–F'}`;
@@ -65,7 +72,8 @@
     $('location-summary').textContent=location.type==='area'?'ยังไม่ระบุจุดเฉพาะ':location.type==='point'?`${grid(location.x,location.y)} · ${coord(location.x,location.y)}`:`${coord(location.x,location.y)} ถึง ${coord(location.x2,location.y2)}`;
     $('show-location').hidden=location.type==='area' || !window.BC_VIEWER;
     const viewLabel=document.querySelector(`[data-view="${currentView()}"]`)?.textContent||currentView();
-    $('comment-context').textContent=`ร่าง ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision} · ${currentExterior()==='proposed'?'ข้อเสนอ exterior smart':'ภายนอกเดิม'} · ${viewLabel}${location.type==='area'?'':' · หมุดภายในอาคาร'}`;
+    const c=experience();
+    $('comment-context').textContent=(c?`${c.title} · ${c.referenceKind==='artist-impression'?'ภาพแนวคิด':'โมเดล 3D'}: ${c.referenceTitle} · `:'')+`ร่าง ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision} · ${currentExterior()==='proposed'?'ข้อเสนอเพิ่มเติม':'ภายนอกเดิม'} · ${viewLabel}${location.type==='area'?'':' · หมุดภายในอาคาร'}`;
     window.BC_VIEWER?.setReviewLocation(location);
   }
   function pick(p) {
@@ -84,13 +92,15 @@
   $('zoom-map').addEventListener('click',()=>{mapZoom=2.5;mapCenter=location.type==='area'?{...cursor}:{x:location.x,y:location.y};drawMap();});
   $('reset-map').addEventListener('click',()=>{mapZoom=1;drawMap();});
   $('clear-location').addEventListener('click',()=>{location={type:'area'};corner=null;changed();sync();});
-  $('show-location').addEventListener('click',()=>{window.BC_VIEWER?.setView('plan');document.querySelector('.stage').scrollIntoView({block:'center',behavior:'instant'});});
-  $('mode').addEventListener('change',()=>{changed();sync();});
-  $('flex-ac').addEventListener('change',()=>{changed();sync();});
-  document.addEventListener('bc:viewchange',()=>{changed();sync();});
-  document.addEventListener('bc:exteriorchange',()=>{changed();sync();});
+  $('show-location').addEventListener('click',()=>{const selected={...location};window.BC_VIEWER?.setView('plan');location=selected;corner=null;changed();sync();document.querySelector('.stage').scrollIntoView({block:'center',behavior:'instant'});});
+  $('mode').addEventListener('change',()=>{if(experience())contextChanged();else{changed();sync();}});
+  $('flex-ac').addEventListener('change',()=>{if(experience())contextChanged();else{changed();sync();}});
+  document.addEventListener('bc:viewchange',()=>{if(!experience()){changed();sync();}});
+  document.addEventListener('bc:exteriorchange',()=>{if(experience())contextChanged();else{changed();sync();}});
+  document.addEventListener('bc:contextwillchange',()=>{if(!restoring)saveDraft();});
+  document.addEventListener('bc:contextchange',()=>{if(!restoring)restoreDraft();});
   form.addEventListener('input',()=>{changed();$('comment-count').textContent=`${$('comment-text').value.length.toLocaleString('en-US')} / 3,000`;});
-  function payload() {return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:currentMode(),modelRevision:revision,ac:$('flex-ac').checked,exteriorScheme:currentExterior(),view:currentView(),website:$('comment-website').value};}
+  function payload() {const c=experience(),artist=c?.referenceKind==='artist-impression';return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:c&&(c.section!=='showroom'||artist)?{type:'area'}:{...location},mode:artist?'handover':currentMode(),modelRevision:revision,ac:artist?false:$('flex-ac').checked,exteriorScheme:artist?'proposed':currentExterior(),view:currentView(),website:$('comment-website').value,...referenceFields()};}
   const comparable=p=>JSON.stringify({...p,id:''});
   form.addEventListener('submit',async e=>{
     e.preventDefault();if(sending || !submissionEnabled || !validEndpoint)return;
@@ -98,16 +108,18 @@
     if(corner){status('กรุณาเลือกมุมตรงข้ามให้ครบ หรือล้างจุดก่อนส่ง','error');return;}
     const candidate=payload();
     if(!pending || comparable(pending)!==comparable(candidate))pending=candidate;
-    const submission={...pending}, before=sequence, controller=new AbortController(), timeout=setTimeout(()=>controller.abort(),30000);
+    const submission={...pending}, before=sequence, submittedDraftKey=activeDraftKey, controller=new AbortController(), timeout=setTimeout(()=>controller.abort(),30000);
     sending=true;$('submit-comment').disabled=true;$('submit-comment').textContent='กำลังบันทึก…';status('กำลังรอใบรับจากระบบ กรุณาอย่าปิดหน้านี้');
     try {
       const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(submission),credentials:'omit',redirect:'follow',signal:controller.signal});
       if(!response.ok)throw Error('unconfirmed');
       const receipt=await response.json();
       if(receipt.ok!==true || receipt.id!==submission.id || !Number.isFinite(Date.parse(receipt.receivedAt)))throw Error(receipt.error || 'unconfirmed');
-      status(sequence===before?`บันทึกแล้ว · เลขรับ ${receipt.id.slice(0,8)} · ทีมจะพิจารณาร่วมกันก่อนแก้แบบ`:`บันทึกความเห็นก่อนหน้าแล้ว · เลขรับ ${receipt.id.slice(0,8)} · ข้อความหรือบริบทที่แก้ระหว่างส่งยังไม่ได้บันทึก กรุณากดส่งอีกครั้ง`,'success');pending=null;
+      const confirmedCurrent=experience()?activeDraftKey===submittedDraftKey&&comparable(payload())===comparable(submission):sequence===before;
+      status(confirmedCurrent?`บันทึกแล้ว · เลขรับ ${receipt.id.slice(0,8)} · ทีมจะพิจารณาร่วมกันก่อนแก้แบบ`:`บันทึกความเห็นก่อนหน้าแล้ว · เลขรับ ${receipt.id.slice(0,8)} · ข้อความหรือบริบทที่แก้ระหว่างส่งยังไม่ได้บันทึก กรุณากดส่งอีกครั้ง`,'success');if(activeDraftKey===submittedDraftKey)pending=null;
+      const stored=drafts.get(submittedDraftKey);if(stored?.signature===comparable(submission)){stored.comment='';stored.pending=null;}
       // Never clear a newer draft that was edited while the network was pending.
-      if(sequence===before){$('comment-text').value='';$('comment-count').textContent='0 / 3,000';}
+      if(confirmedCurrent){$('comment-text').value='';$('comment-count').textContent='0 / 3,000';}
     } catch(error) {
       const messages={rate_limited:'ส่งถี่เกินไป กรุณารอสักครู่แล้วลองอีกครั้ง',bad_request:'ข้อมูลบางส่วนไม่ถูกต้อง กรุณาตรวจข้อความและตำแหน่ง',conflict:'รหัสรายการนี้มีข้อมูลต่างกัน กรุณาแก้ข้อความแล้วส่งใหม่'};
       status(`${messages[error.message] || 'ยังยืนยันการบันทึกไม่ได้ กรุณาลองส่งอีกครั้ง'} · ข้อความยังอยู่ หากลองซ้ำด้วยข้อมูลเดิม ระบบจะไม่บันทึกซ้ำ`,'error');
@@ -119,15 +131,15 @@
   const validNumericParam=k=>query.has(k)&&query.get(k).trim()!==''&&Number.isFinite(Number(query.get(k)));
   if(query.get('rev') && query.get('rev')!==revision)status('ลิงก์นี้อ้างอิงแบบคนละรุ่น กรุณาตรวจตำแหน่งก่อนส่ง','error');
   else {
-    if(modes.includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
-    if(['0','1'].includes(query.get('ac'))){$('flex-ac').checked=query.get('ac')==='1';$('flex-ac').dispatchEvent(new Event('change'));}
+    if(experience()?.referenceKind!=='artist-impression'&&modes.includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
+    if(experience()?.referenceKind!=='artist-impression'&&['0','1'].includes(query.get('ac'))){$('flex-ac').checked=query.get('ac')==='1';$('flex-ac').dispatchEvent(new Event('change'));}
     if(areas.includes(query.get('area')))$('comment-area').value=query.get('area');
     const type=query.get('loc');
-    if(['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(validNumericParam('x')&&validNumericParam('y')&&(type!=='rectangle'||validNumericParam('x2')&&validNumericParam('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
-    if(views.includes(query.get('view')))window.BC_VIEWER?.setView(query.get('view'));
-    if(['existing','proposed'].includes(query.get('exterior'))){$('exterior-scheme').value=query.get('exterior');$('exterior-scheme').dispatchEvent(new Event('change'));}
+    if((!experience()||(experience().section==='showroom'&&experience().referenceKind==='model'))&&['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(validNumericParam('x')&&validNumericParam('y')&&(type!=='rectangle'||validNumericParam('x2')&&validNumericParam('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
+    if(!experience()&&views.includes(query.get('view')))window.BC_VIEWER?.setView(query.get('view'));
+    if(experience()?.referenceKind!=='artist-impression'&&['existing','proposed'].includes(query.get('exterior'))){$('exterior-scheme').value=query.get('exterior');$('exterior-scheme').dispatchEvent(new Event('change'));}
   }
-  sync();$('submit-comment').disabled=!validEndpoint;
+  activeDraftKey=draftKey();restoring=false;window.BC_EXPERIENCE?.scope();sync();$('submit-comment').disabled=!validEndpoint;
   $('connection-notice').hidden=validEndpoint;
   status(validEndpoint?'พร้อมรับความเห็น':offlineNotice);
   if(query.get('rev') && query.get('rev')!==revision){revisionWarning='ลิงก์นี้อ้างอิงแบบคนละรุ่น จึงไม่คืนตำแหน่งเดิม กรุณาตรวจโมเดล '+revision;$('connection-notice').hidden=false;$('connection-notice').textContent=revisionWarning;status(revisionWarning,'error');}
@@ -135,7 +147,10 @@
     status('กำลังตรวจว่าระบบรับความเห็นรองรับ '+revision+'…');
     const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
     fetch(endpoint,{credentials:'omit',signal:controller.signal}).then(r=>{if(!r.ok)throw Error('health');return r.json();}).then(h=>{
-      validEndpoint=h.ok===true&&h.schema===1&&h.service==='mbsmart-comments'&&Array.isArray(h.revisions)&&h.revisions.includes(revision)&&Array.isArray(h.modesByRevision?.[revision])&&modes.every(m=>h.modesByRevision[revision].includes(m))&&Array.isArray(h.viewsByRevision?.[revision])&&views.every(v=>h.viewsByRevision[revision].includes(v))&&Array.isArray(h.exteriorSchemesByRevision?.[revision])&&['existing','proposed'].every(s=>h.exteriorSchemesByRevision[revision].includes(s));
+      const cap=h.experienceCapabilitiesByRevision?.v10,app=window.BC_EXPERIENCE;
+      if(app&&(cap?.artistImpressionState?.mode!=='handover'||cap?.artistImpressionState?.ac!==false||cap?.artistImpressionState?.exteriorScheme!=='proposed'))throw Error('health');
+      const viewSupport=app?Array.isArray(h.experienceRevisions)&&h.experienceRevisions.includes('v10')&&cap?.modelRevision===revision&&cap.pinSection==='showroom'&&cap.pinReferenceKind==='model'&&['model','artist-impression'].every(k=>cap.referenceKinds?.includes(k))&&Object.entries(app.sections).every(([key,s])=>cap.sections?.includes(key)&&Array.isArray(cap.viewsBySection?.[key])&&s.views.every(v=>cap.viewsBySection[key].includes(v)))&&Array.isArray(cap.artistImpressions)&&app.images.every(i=>cap.artistImpressions.some(r=>r.id===i.id&&r.section===i.section&&r.view===i.view))&&['exterior','parking','identity','workshop','hv','me','parts'].every(a=>h.additionalAreasByExperienceRevision?.v10?.includes(a)):Array.isArray(h.viewsByRevision?.[revision])&&views.every(v=>h.viewsByRevision[revision].includes(v));
+      validEndpoint=h.ok===true&&h.schema===1&&h.service==='mbsmart-comments'&&Array.isArray(h.revisions)&&h.revisions.includes(revision)&&Array.isArray(h.modesByRevision?.[revision])&&modes.every(m=>h.modesByRevision[revision].includes(m))&&viewSupport&&Array.isArray(h.exteriorSchemesByRevision?.[revision])&&['existing','proposed'].every(s=>h.exteriorSchemesByRevision[revision].includes(s));
       $('submit-comment').disabled=!validEndpoint;$('connection-notice').hidden=validEndpoint&&!revisionWarning;
       if(validEndpoint&&revisionWarning)$('connection-notice').textContent=revisionWarning;
       if(!validEndpoint)$('connection-notice').textContent='เปิดตรวจแบบ '+revision+' ได้แล้ว — ยังไม่เปิดส่งความเห็นรุ่นนี้ ระหว่างรออัปเดตระบบ Google ของโครงการ ข้อความที่พิมพ์ยังไม่ถูกบันทึก กรุณาคัดลอกเก็บไว้ก่อนปิดหน้า';
@@ -143,5 +158,5 @@
     }).catch(()=>{$('connection-notice').hidden=false;$('connection-notice').textContent='ยังตรวจการเชื่อมต่อไม่ได้ จึงยังไม่เปิดส่งความเห็น ข้อความไม่ถูกบันทึก กรุณาคัดลอกเก็บไว้ก่อนปิดหน้า';status('ยังยืนยันระบบรับความเห็นไม่ได้ — ลองโหลดหน้าใหม่ภายหลัง','error');}).finally(()=>clearTimeout(timeout));
   }
   // Read-only diagnostics for automated acceptance checks; no comment text is exposed.
-  window.BC_REVIEW={inspect:()=>({location:{...location},area:$('comment-area').value,mode:currentMode(),ac:$('flex-ac').checked,modelRevision:revision,configured:validEndpoint,sending})};
+  window.BC_REVIEW={inspect:()=>({location:{...location},area:$('comment-area').value,mode:currentMode(),ac:$('flex-ac').checked,modelRevision:revision,...referenceFields(),configured:validEndpoint,sending})};
 })();

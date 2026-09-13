@@ -1,10 +1,18 @@
-# Benz Chitchai · v09-r3 integral tower / workshop coordination
+# Benz Chitchai · v10 three-section design review
+
+Showroom interior, Exterior and อู่ซ่อม each have two soft-light photorealistic artist impressions, captions, and their own image/model feedback context. Eleven model presets are locked by default; the owner can unlock the selected camera. Model geometry remains v09-r3. Images are AI-assisted interpretations, not measured conditions, approved design, specified equipment, or engineering evidence. Compare with the linked source model before decisions.
+
+Draft comments are separated in page memory by section, image/model view and model state. They are not stored across reloads. Artist references always use handover / AC off / proposed; model comments retain their selected state. Location pins remain showroom-model only. The original private log and endpoint are preserved. Backend deployment version 6 advertises the complete v10 contract; a labelled live test was received and read back as one native log row with the exact image/section context. A retry encountered a Google redirect error, so live retry receipt equality is not claimed. Local backend and simulated frontend checks cover deduplication and preservation of newer drafts.
+
+The favicon is the exact official Mercedes-Benz ICO, used at the owner's request. Public provenance is in `assets/presentation-v10.json`. No original private photos, drawings, log contents or credentials are shipped. Static/CPU checks and asset review are not rendered cross-device, survey, engineering or brand-compliance acceptance.
+
+## Retained v09-r3 geometry basis
 
 R3 supersedes earlier exterior assumptions below where explicitly stated. Legacy A–H=42m, E–A=26m, original1–9=48m; original3 is X2.02, NOT LX0. Original1/4/5/6/7/8 map to LX0..5. All showroom states remain byte-equivalent as data. Tower master corner X−3.8/frontY−1.9 now covers the separate-use meeting room with a continuous upper mass; setback/radius remain photo-fit. Workshop rear grid is Y42 with tapered west boundary; broad side awning X40..49.2 and internal gate are current-photo trials, not a curb opening. All five front poles now Y−7.75; pylon Y−7.05; two sign faces have distinct arrows/header.
 
 The workshop view adds a PROPOSED coordination layer: two smart dedicated bays (HV/ME), indicative MB allocations, lifts, protection placeholders, tools, diagnostics, separated parts shelves and LP32 lighting proxies. Quantities of MB bays and technical equipment dimensions are not verified existing capacity or compliance. D01 p2/p25 charger branding conflicts remain open, as do unavailable site-applicable MB technical/HV/MPS II criteria. Use assets/workshop-study.json and assets/legacy-drawing-controls.json. Browser/GPU, survey, access, fire, structural/electrical/HV and supplier gates remain open. Published v08 is NOT this candidate.
 
-## Current v09-r3 — owner-authorized public coordination release
+## Retained v09-r3 — owner-authorized public coordination release
 
 Compare `exterior=existing` and `exterior=proposed` with the exterior selector. Ten camera views and three interior Flex uses are available. All v07 interior states, vehicles, furniture, geometry controls and smart #5 factory are unchanged. The selector changes proposed exterior objects; the v07 proposed window logo is hidden in exterior existing-condition views only, not removed from the interior design.
 
@@ -16,7 +24,7 @@ Smart proposal: small pylon 1.466×4.515m and flag 1.2×4.5m shifted forward to 
 
 `assets/site-context.json` contains existing reconstruction and preserved v08 alternatives; `assets/exterior-proposal.json` contains proposal/waiver gates; `assets/existing-photo-fit.json` and `assets/building-annexes.json` make revision generation reproducible without private originals. `building-annexes.js` owns additional existing room/workshop geometry; `smart-brand.js` uses exact sourced paths. No source photographs, manuals, prices, private comments or Google credentials are included. The workshop follows the r3 tapered outline within X0–40/Y16–42; rear scene cropY50 remains provisional, and road/fence evidence stops atY30. February2019 reference supports form only, not current details.
 
-Feedback v09 adds required `exteriorScheme` (`existing` or `proposed`) to private log context and geometry-only permalinks (`exterior=...`). The UI fails closed unless the deployed backend explicitly advertises both schemes, all modes and views; it never claims saving without a matching receipt. The private v09 backend has been prepared and locally tested; its separate deployment and live verification remain pending. Publishing this viewer does not enable v09 comment submission. Pinning remains interior-only; exterior reviews use named-area/free-text and camera/scheme context.
+Feedback v09 adds required `exteriorScheme` (`existing` or `proposed`) to private log context and geometry-only permalinks (`exterior=...`). The deployed version 6 backend now preserves this legacy contract alongside v10. The UI fails closed unless the backend advertises the required contract and never claims saving without a matching receipt. Pinning remains interior-only; exterior reviews use named-area/free-text and camera/scheme context.
 
 `npm run revise`, `npm run build`, `npm test`; then `npm start` serves the built site at local port4175. Historical v08 bytes are frozen in `versions/v08` and earlier revision routes remain unchanged. CPU/static and simulated-transport checks are not browser, physical-iPhone, survey, engineering or compliance acceptance.
 

@@ -1,0 +1,133 @@
+{
+  "experienceRevision": "v10",
+  "modelRevision": "v09",
+  "geometryRevision": "v09-r3",
+  "generatedOn": "2026-09-13",
+  "style": "Photorealistic, soft light, premium",
+  "notice": "AI-assisted artist impressions based on locked model cameras. Framing, materials, landscape and fine equipment details are interpretive. The source model remains authoritative; neither images nor model are approved construction or compliance evidence.",
+  "artistImpressionState": {
+    "mode": "handover",
+    "ac": false,
+    "exteriorScheme": "proposed"
+  },
+  "images": [
+    {
+      "id": "showroom-arrival",
+      "section": "showroom",
+      "view": "interior",
+      "path": "assets/impressions/showroom-arrival-v10.jpg",
+      "width": 1672,
+      "height": 941,
+      "mime": "image/jpeg",
+      "bytes": 467271,
+      "sha256": "b2db814b5e5a7dc1adb744a9e48e35fe25c640a7b4d1f9232ffe3a696a60e2ba",
+      "origin": "Built-in image generation from the project model camera",
+      "sourceModelImageSha256": "707014a23b41b325589624b6963cea848c68865fb101fadda2bf027b64c0392c",
+      "generatedMasterSha256": "a0182441a99779224488a4b4623908cbba63781ea2617699a3dc028983129851",
+      "interpretiveDifferences": [
+        "Restored distant smart logo in selected v2.",
+        "Camera and main object layout broadly follow source; render adds warm timber finish to part of right ceiling and realistic surroundings beyond glazing."
+      ]
+    },
+    {
+      "id": "showroom-smart",
+      "section": "showroom",
+      "view": "smart",
+      "path": "assets/impressions/showroom-smart-v10.jpg",
+      "width": 1672,
+      "height": 941,
+      "mime": "image/jpeg",
+      "bytes": 491199,
+      "sha256": "d22ea39f9dc833a71042826faac654af90478e7ecb0855023a672bbd9f9f5f83",
+      "origin": "Built-in image generation from the project model camera",
+      "sourceModelImageSha256": "c117781a370f37a05759c32ebd71dcfeaf91b85b86224a9e92259974c034fc9e",
+      "generatedMasterSha256": "9eccde7017c4d29b82c05812d19a6edbb42209d6d7067e0b46f15d5d48213e1b",
+      "interpretiveDifferences": [
+        "Single beige, black-roof smart #5 impression and three seated people retained.",
+        "Precise production trim details are interpretive; generated exterior planting is fuller than the proxy source."
+      ]
+    },
+    {
+      "id": "exterior-aerial",
+      "section": "exterior",
+      "view": "site",
+      "path": "assets/impressions/exterior-aerial-v10.jpg",
+      "width": 1672,
+      "height": 941,
+      "mime": "image/jpeg",
+      "bytes": 314901,
+      "sha256": "f6e09a2277b5ae10e929301f05c2c3f64802d9573a11014f19429b62a2dac32d",
+      "origin": "Built-in image generation from the project model camera",
+      "sourceModelImageSha256": "dbbe2c8606ed9895c882aefb2a83e4d8639eadfac1bfd1b4b933f5010c9239de",
+      "generatedMasterSha256": "aff8c826c64c7f690932e210f790ac245714e9d8da9ed5248ebc7fe26d24c14c",
+      "interpretiveDifferences": [
+        "Selected v3 restores source-like empty top margin and removes invented rooftop blocks and side-awning vehicle.",
+        "Stepped massing, floor bands, glass ground floor, rear workshop, side awning, shrine, pylon and 3 MB + 2 Thai flags retained visually; exact pixel registration and tiny details are not guaranteed."
+      ]
+    },
+    {
+      "id": "exterior-street",
+      "section": "exterior",
+      "view": "frontage",
+      "path": "assets/impressions/exterior-street-v10.jpg",
+      "width": 1672,
+      "height": 941,
+      "mime": "image/jpeg",
+      "bytes": 418895,
+      "sha256": "e65a961fc66b3f36b29bb959968712657599196d1ce296ad8054cc96da8aedf0",
+      "origin": "Built-in image generation from the project model camera",
+      "sourceModelImageSha256": "3af875553b64e8cb7cd9b0c777cad8510a5488e20b4a33ffcfc0b10ff8b3db78",
+      "generatedMasterSha256": "579a5278eaa00ac60b06b7f4f84482bed270235a7a9561f675cec0a97162418d",
+      "interpretiveDifferences": [
+        "Selected v2 restores source-like building scale and eliminates invented microcar.",
+        "Stepped massing and main site objects retained; foreground road is extended to image bottom and small car/detail counts cannot be treated as model evidence."
+      ]
+    },
+    {
+      "id": "workshop-overview",
+      "section": "workshop",
+      "view": "workshop",
+      "path": "assets/impressions/workshop-overview-v10.jpg",
+      "width": 1672,
+      "height": 941,
+      "mime": "image/jpeg",
+      "bytes": 526114,
+      "sha256": "b349ef1f711b6be0dccc83436653f58590f0a0b34677c7c39aeb8ebfe3909167",
+      "origin": "Built-in image generation from the project model camera",
+      "sourceModelImageSha256": "4a723787a7875d54546bfc441e006897938c0a49f09547957857e7ace20d7fbe",
+      "generatedMasterSha256": "f3b2d7cda3d0126b1c5e4331e369d4000a9530ae94db583566d0b4130e2ea38b",
+      "interpretiveDifferences": [
+        "Open-roof cutaway retained; exposed bays empty, central aisle clear.",
+        "Framing is somewhat tighter and real material/equipment details are interpretive. Occlusion prevents certifying all bay counts visually; use the source model for exact 12+12 MB and 2 smart bay layout."
+      ]
+    },
+    {
+      "id": "workshop-smart-bays",
+      "section": "workshop",
+      "view": "workshop-detail",
+      "path": "assets/impressions/workshop-smart-bays-v10.jpg",
+      "width": 1672,
+      "height": 941,
+      "mime": "image/jpeg",
+      "bytes": 397317,
+      "sha256": "a4a4671e5878d40e4618b1fe936fcc4f447283094781e5d4bb5f46e7356b72fd",
+      "origin": "Built-in image generation from the project model camera",
+      "sourceModelImageSha256": "93279c07cc14e87dce44c155640d2ed06ebf543f56684ba48728e15ec8c6c028",
+      "generatedMasterSha256": "1c052775c735b0f26c0b9c5f5a0409e0135e0989e86e265cae7786183c1f312a",
+      "interpretiveDifferences": [
+        "Selected v3 uses unbranded lift details and readable HV/M/E signs; open roof and empty bays retained.",
+        "Lift detail, barrier height and material appearance are illustrative, not specified equipment or compliance approval."
+      ]
+    }
+  ],
+  "favicon": {
+    "path": "assets/mercedes-benz-87f46117.ico",
+    "role": "browser favicon",
+    "approval": "Explicit owner request for Mercedes-Benz logo favicon",
+    "source": "https://assets.oneweb.mercedes-benz.com/global/1.22.0/favicon/favicon.ico",
+    "discoveredAt": "https://www.mercedes-benz.co.uk/passengercars.html",
+    "mime": "image/vnd.microsoft.icon",
+    "originalBytes": true,
+    "sha256": "87f46117ffb97d18a8a55bbac03ad41f67cb4bb941ebc43f4adabb59b0cfa938"
+  }
+}

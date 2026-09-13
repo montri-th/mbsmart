@@ -1,0 +1,14 @@
+/* v10 extends the retained black / white / blue review surface. */
+.section-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-bottom:1px solid var(--line);margin-bottom:32px}
+.section-nav button{border-radius:0;border:0;border-bottom:3px solid transparent;background:transparent;padding:18px 16px;font-size:1rem;text-align:left}
+.section-nav button span{display:inline-block;margin-right:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.section-nav button[aria-pressed=true]{border-bottom-color:#191919;background:#fff;color:#191919}
+.section-nav button[aria-pressed=true]:hover{background:#eaeaea;color:#191919}
+.section-intro{margin-bottom:28px;max-width:100ch}.section-intro h2{font-family:Georgia,Thonburi,serif;font-weight:400;font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.25;margin:0 0 12px}.section-intro p{margin:8px 0;font-size:1rem}.section-intro .concept-note{font-size:.875rem;color:var(--muted);max-width:90ch}
+.medium-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.impression{margin:0 0 48px}.impression img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#e7e7e7;display:block}.impression figcaption{padding-top:20px}.impression h3{font-size:1.45rem;font-weight:500;line-height:1.4;margin:0 0 10px}.impression-description{font-size:1rem;max-width:75ch;margin:0 0 10px}.impression-note{font-size:.875rem;color:var(--muted);max-width:85ch;margin:0}.impression-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.review-panel{position:sticky;top:20px}.review-panel>label{font-size:.875rem}.review-panel #comment-reference{margin-bottom:16px}.review-panel .intro{line-height:1.7}.review-panel .privacy-note,.review-panel .context-line,.review-panel .submit-status{font-size:.875rem}.camera-lock{font-weight:600}.toolbar button{font-size:.875rem}.stage-caption{font-size:.875rem}.exterior-switch p{font-size:.875rem}
+.stage{height:auto;aspect-ratio:16/9;min-height:0}
+@media(max-width:1080px){.section-nav button{padding:16px 10px}.section-nav button span{margin-right:6px}.review-panel{position:static}}
+@media(max-width:600px){.section-nav{grid-template-columns:1fr;margin-bottom:24px}.section-nav button{padding:12px 14px;border-bottom:1px solid var(--line)}.section-nav button[aria-pressed=true]{border-left:3px solid #191919;border-bottom-color:var(--line)}.impression{margin-bottom:34px}.impression h3{font-size:1.3rem}.impression-actions{align-items:stretch}.impression-actions button{flex:1 1 180px}}
+html.capture .stage{position:fixed!important;inset:0 auto auto 0!important;width:100vw!important;height:56.25vw!important;z-index:999;background:#cad1d2}
+html.capture .stage-caption,html.capture #labels-layer{display:none!important}
+html.capture,html.capture body{overflow:hidden}

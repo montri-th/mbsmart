@@ -4,29 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="Benz Chitchai v09 — compare photo-reconciled existing exterior and smart arrival proposal. Retained MB identity, flags and shrine. Not survey or approved construction.">
+  <meta name="description" content="Benz Chitchai — Showroom interior, Exterior และอู่ซ่อม พร้อมภาพแนวคิด 6 มุมและความเห็นแยกส่วน · ไม่ใช่แบบอนุมัติหรือแบบก่อสร้าง">
   <script>{const r=new URLSearchParams(location.search).get('rev');if(['v04','v06','v07','v08'].includes(r))location.replace('./versions/'+r+'/index.html'+location.search+location.hash);}</script>
   <title>Benz Chitchai · แบบโชว์รูมและความเห็น</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="./assets/mercedes-benz-87f46117.ico">
   <link rel="stylesheet" href="./viewer.css">
+  <link rel="stylesheet" href="./experience.css">
+  <script>if(new URLSearchParams(location.search).get('capture')==='1')document.documentElement.classList.add('capture');</script>
 </head>
 <body>
   <main id="bc-interior">
     <header class="topbar">
-      <div><h1>Benz Chitchai</h1><p class="project-caption">โมเดล v09-r3 · อาคารเดิม + แผนโรงซ่อม · คงผังโชว์รูม v07</p>
+      <div><h1>Benz Chitchai</h1><p class="project-caption">Design review v10 · โมเดล v09-r3 · ภาพแนวคิดเพื่อพิจารณาร่วมกัน</p>
 </div>
 
       <label class="mode-label">การใช้พื้นที่ Flex<select id="mode"><option value="handover">1 · Vehicle handover — แบบหลัก</option><option value="consulting">2 · Consulting area</option><option value="lounge">3 · Customer waiting annex</option></select></label>
     </header>
-    <section class="smart-brief" aria-labelledby="site-focus-title"><div><p class="eyebrow">SMART ARRIVAL · EXTERIOR STUDY</p>
-<h2 id="site-focus-title">ต้อนรับ smart · คงเอกลักษณ์เดิม</h2>
-<p>เปรียบเทียบภายนอกเดิมจากภาพ กับข้อเสนอป้าย ธง และที่จอด smart</p>
-</div>
-<div class="smart-facts"><p>คง pylon MB · ธง MB 3 + ไทย 2 · ศาลเจ้า<span>ยืนยันตำแหน่งสัมพันธ์โดยเจ้าของ · ระยะและระดับยังประมาณจากภาพ</span></p>
-<a href="#site-basis">ดูมิติและข้อที่ยังต้องยืนยัน ↓</a></div>
-</section>
+    <nav class="section-nav" aria-label="ส่วนของโครงการ"><button type="button" data-section="showroom" aria-pressed="true"><span>1</span> Showroom interior</button><button type="button" data-section="exterior" aria-pressed="false"><span>2</span> Exterior</button><button type="button" data-section="workshop" aria-pressed="false"><span>3</span> อู่ซ่อม</button></nav>
+    <section class="section-intro" aria-labelledby="site-focus-title"><h2 id="site-focus-title">Showroom interior</h2><p id="section-description">สัมผัสแรกที่สงบและพรีเมียม เชื่อม Mercedes-Benz กับ smart ภายในพื้นที่เดิม</p><p class="concept-note">Artist impression · ภาพแนวคิดจากมุมโมเดล แสงและวัสดุเป็นการตีความด้วย AI ไม่ใช่ภาพหน้างานหรือแบบอนุมัติ</p></section>
 
     <div class="review-workspace"><div class="model-pane">
+    <div class="medium-nav" role="group" aria-label="รูปแบบการแสดงผล"><button type="button" data-medium="artist-impression" aria-pressed="true">Artist impressions</button><button type="button" data-medium="model" aria-pressed="false">สำรวจโมเดล 3D</button></div>
+    <div id="impression-gallery" aria-label="ภาพแนวคิดในส่วนนี้"></div>
+    <div id="model-content">
     <div class="exterior-switch"><label for="exterior-scheme">เปรียบเทียบภายนอก</label><select id="exterior-scheme"><option value="proposed">ข้อเสนอ smart เพิ่มเติม</option><option value="existing">ภายนอกเดิม · อ้างอิงภาพ</option></select><p id="exterior-status" role="status">ข้อเสนอรอ smart / เจ้าของ / supplier ตรวจ · ภายในคงแบบเดิม</p></div>
     <nav class="toolbar" aria-label="มุมมอง 3 มิติ">
       <button type="button" data-view="site" aria-pressed="true">บริเวณรอบอาคาร</button>
@@ -37,8 +37,10 @@
       <button type="button" data-view="handover">ส่งมอบ / โลโก้กระจก</button>
       <button type="button" data-view="service">ทางไป service</button>
       <button type="button" data-view="workshop">โรงซ่อม / smart WiW</button>
+      <button type="button" data-view="workshop-detail">ช่อง smart HV + M/E</button>
       <button type="button" data-view="overview">ภาพรวม 3D</button>
       <button type="button" data-view="plan">ผังภายใน</button>
+      <label class="check camera-lock"><input type="checkbox" id="camera-lock" checked> ล็อกมุมกล้อง</label>
       <label class="check"><input type="checkbox" id="site-context" checked> พื้นที่โดยรอบ</label>
       <label class="check"><input type="checkbox" id="upper-building" checked> มวลอาคารชั้นบน</label>
       <label class="check"><input type="checkbox" id="site-occluders" checked> ต้นไม้ / สายไฟ</label>
@@ -54,7 +56,7 @@
 
       <div id="no-webgl" hidden>เครื่องนี้เปิด 3 มิติไม่ได้ กรุณาเปิดด้วย Safari หรือ Chrome ที่รองรับ WebGL · <a href="./versions/v04/renders/interior-handover.jpg">ภาพแบบเก่า v04 (ก่อนการปรับครั้งนี้)</a></div>
 
-      <div class="stage-caption"><span id="view-title">บริเวณโดยรอบ · แนวอ้างอิงรอยืนยัน</span><span>ลากเพื่อหมุน · Scroll / pinch เพื่อซูม · คลิกขวาลากเพื่อเลื่อน</span></div>
+      <div class="stage-caption"><span id="view-title">บริเวณโดยรอบ · แนวอ้างอิงรอยืนยัน</span><span id="camera-help">ล็อกมุมสำคัญแล้ว · ปลดล็อกเพื่อหมุนและซูม</span></div>
 
       <div id="labels-layer" aria-hidden="true"></div>
 
@@ -69,13 +71,14 @@
     <p class="model-hint">รวมข้อเสนอเจ้าของ: โลโก้กระจก Type 4 ที่ X35.97/Y2.73 · LED รอบฐาน · E-price + iPad · ใช้ wallbox MB เดิมร่วมกัน (ตำแหน่งและระบบรอตรวจ)</p>
 
     <p class="model-hint">จุดชาร์จใช้ร่วมอยู่ห่าง S1 ประมาณ 28 ม. ในโมเดล — ต้องนำรถไปชาร์จที่จุดเดิม ไม่ใช่ลากสายผ่านโชว์รูม และยังต้องยืนยันกับ smart ว่าใช้ร่วมตามข้อ 10 ได้</p>
-
+    </div>
     </div>
 
     <aside class="review-panel" aria-labelledby="review-title">
-      <h2 id="review-title">ฝากความเห็นถึงทีมออกแบบ</h2>
+      <h2 id="review-title">ความเห็น · Showroom interior</h2>
+      <label for="comment-reference">อ้างอิงมุม / ภาพ</label><select id="comment-reference"></select>
 
-      <p class="intro">บอกสิ่งที่อยากปรับ และเลือกพื้นที่ที่เกี่ยวข้อง<br>ทีมจะรวบรวมไว้คุยกันก่อนแก้แบบ</p>
+      <p class="intro">ร่างแยกตามส่วนและภาพขณะเปิดหน้านี้<br>เลือกมุมอ้างอิงก่อนเขียน ทีมจะรวบรวมก่อนแก้แบบ</p>
 
       <p id="connection-notice" class="privacy-note">กำลังตรวจการเชื่อมต่อ Google Sheet — ความเห็นจะบันทึกเมื่อกดส่งและได้รับเลขรับเท่านั้น หากยังส่งไม่ได้ให้คัดลอกข้อความก่อนปิดหน้า</p>
 
@@ -201,6 +204,7 @@
   <script src="./site.js"></script>
   <script src="./exterior-massing.js"></script>
   <script src="./scene.js"></script>
+  <script src="./experience.js"></script>
   <script src="./feedback-config.js"></script>
   <script src="./feedback.js"></script>
   <script src="./review-guide.js"></script>
