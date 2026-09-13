@@ -1,6 +1,6 @@
 ---
 name: Benz Chitchai showroom review
-description: Retained review interface with v07 smart-focused source guide and revision-aware submission gate.
+description: Retained review interface with v08 surrounding-site controls, preserved v07 smart guide and health-gated Google Sheet comments.
 colors:
   accent: "#0078d6"
   accent-hover: "#0068ba"
@@ -92,6 +92,10 @@ components:
 ---
 
 # Design System: Benz Chitchai showroom review
+
+## v08 delta
+
+Existing interface retained. Three new exterior presets and separate visibility controls make the surroundings available without replacing the six interior views. A compact context header replaces the smart-specific introductory strip; smart specification remains in the notes. The blue-gray caution band identifies evidence controls, not new exterior paint or a surveyed boundary. Upper massing is a viewing context, not a change to the interior. v08 comments use the owner-authorized existing Apps Script endpoint, with strict capability checks and readable matching receipts. Exterior remarks retain the selected view but do not imply surveyed exterior pins. Public geometry files and private reference evidence remain separate. This is not an official Mercedes or smart Design System certification.
 
 ## v07 delta
 

@@ -1,0 +1,11 @@
+const fs=require('fs'),path=require('path'),vm=require('vm');
+const root=path.resolve(__dirname,'..'),ctx={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'versions/v07/layout.js'),'utf8'),ctx);
+const d=JSON.parse(JSON.stringify(ctx.window.BC_LAYOUT));
+if(d.revision!=='v07')throw Error('v08 must derive from frozen v07');
+d.revision='v08';
+d.site=JSON.parse(fs.readFileSync(path.join(root,'assets/site-context.json'),'utf8'));
+d.feedbackPolicy={submissionEnabled:true,reason:'Owner-authorized v08 feedback; live capability check and matching receipt required. Interior map remains interior-only; exterior comments use named area and view context.'};
+d.limitations=[...(d.limitations||[]),...d.site.limitations];
+fs.writeFileSync(path.join(root,'layout.js'),'/* v08 adds surrounding-site context; interior states are unchanged from frozen v07. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
+console.log('v08 derived from frozen v07; three interior states preserved exactly');

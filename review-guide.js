@@ -10,6 +10,7 @@ fetch('./assets/smart-review-matrix.json').then(r=>{if(!r.ok)throw Error('matrix
    const meta=document.createElement('p');meta.className='requirement-meta';meta.textContent=(statuses[row.standard]||row.standard)+' · PDF p'+row.sourcePages.join(', ');article.append(meta);
    for(const text of [row.requirement,row.v07Intent,row.review])if(text){const p=document.createElement('p');p.textContent=text;article.append(p);}
    const b=document.createElement('button');b.type='button';b.textContent='ให้ความเห็นข้อ '+row.id;b.addEventListener('click',()=>{const field=document.getElementById('comment-text'),prefix='[smart requirement '+row.id+' — '+row.title+']\n',next=(field.value?field.value+'\n\n':'')+prefix;if(!field.value.includes(prefix)){if(next.length>field.maxLength){field.setCustomValidity('ข้อความเต็มแล้ว กรุณาคัดลอกเก็บหรือย่อข้อความก่อนเพิ่มหัวข้อ');field.reportValidity();return;}field.value=next;}field.dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('comment-area').value=key==='display'?'smart':'general';document.getElementById('comment-area').dispatchEvent(new Event('change',{bubbles:true}));field.scrollIntoView({behavior:'auto',block:'center'});field.focus();});article.append(b);details.append(article);
+   if(key==='exterior')b.addEventListener('click',()=>{document.getElementById('clear-location').click();window.BC_VIEWER?.setView('site');});
   }host.append(details);
  }
 }).catch(()=>{/* Preserve source link and the useful static review questions. */});})();

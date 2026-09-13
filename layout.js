@@ -1,2 +1,3621 @@
-/* Authored v07 / source-labelled dimensions. */
-window.BC_LAYOUT={"revision":"v07","defaultState":"handover","states":[{"mode":"handover","floor":[[0,0],[24,0],[24,2.5],[40,2.5],[40,16],[0,16]],"columns":[{"x":-0.25,"y":-0.25,"w":0.5,"h":0.5},{"x":-0.25,"y":7.75,"w":0.5,"h":0.5},{"x":-0.25,"y":15.75,"w":0.5,"h":0.5},{"x":7.75,"y":-0.25,"w":0.5,"h":0.5},{"x":7.75,"y":7.75,"w":0.5,"h":0.5},{"x":7.75,"y":15.75,"w":0.5,"h":0.5},{"x":15.75,"y":-0.25,"w":0.5,"h":0.5},{"x":15.75,"y":7.75,"w":0.5,"h":0.5},{"x":15.75,"y":15.75,"w":0.5,"h":0.5},{"x":23.75,"y":-0.25,"w":0.5,"h":0.5},{"x":23.75,"y":7.75,"w":0.5,"h":0.5},{"x":23.75,"y":15.75,"w":0.5,"h":0.5},{"x":31.75,"y":7.75,"w":0.5,"h":0.5},{"x":31.75,"y":15.75,"w":0.5,"h":0.5},{"x":39.75,"y":7.75,"w":0.5,"h":0.5},{"x":39.75,"y":15.75,"w":0.5,"h":0.5}],"module":{"type":"Module 3B","quantity":1,"source":"D01 PDF p20","origin":[0.6500000000000004,0.35],"offset":[7.28,0.35],"rotation":90,"width":6.630000000000001,"depth":8.65,"envelopePolygon":[[7.28,0.35],[7.280000000000001,9],[0.6500000000000012,9],[0.6500000000000004,0.35000000000000037]],"carpet":[[1.1800000000000006,1.1000000000000005],[1.1800000000000006,5.6499999999999995],[3.4800000000000004,4.25],[3.4800000000000004,1.1000000000000003]],"sourceEnvelope":[8.65,6.63],"backwallLength":5.3,"shape":[[0.6500000000000004,0.35000000000000037],[0.6500000000000012,9],[3.200000000000001,9],[7.28,6.6499999999999995],[4.03,0.3500000000000002]],"shapeStatus":"Dimension-derived platform with small schematic corner radii; 2550 + 4080 = 6630 confirmed visually in D01 p20. Supplier fabrication CAD pending.","car":{"id":"S1","brand":"smart","cx":4.43,"cy":6.55,"l":4.695,"w":2.169,"angle":330,"bodyWidth":1.92,"height":1.705,"model":"smart #5 Premium","exterior":"Saturn Beige Matte","interior":"Shadow Black","dimensionStatus":"published vehicle dimensions; includes mirrors"},"status":"One complete 3B, source envelope 8.65 x 6.63 m, rotated 90 degrees; one-car exception requires site-specific written confirmation."},"cars":[{"id":"S1","brand":"smart","cx":4.43,"cy":6.55,"l":4.695,"w":2.169,"angle":330,"bodyWidth":1.92,"height":1.705,"model":"smart #5 Premium","exterior":"Saturn Beige Matte","interior":"Shadow Black","dimensionStatus":"published vehicle dimensions; includes mirrors"},{"id":"MB1","brand":"MB","cx":12,"cy":1.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB2","brand":"MB","cx":20,"cy":1.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB3","brand":"MB","cx":12,"cy":6.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB4","brand":"MB","cx":20,"cy":6.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB5","brand":"MB","cx":26.2,"cy":5.25,"l":5.2,"w":2.1,"angle":-90,"noseDirection":"toward entrance / negative Y","clearanceStatus":"HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"},{"id":"MB6","brand":"MB","cx":36,"cy":5.25,"l":5.2,"w":2.1,"angle":180,"noseDirection":"toward smart / negative X","purpose":"vehicle handover"}],"furniture":[{"id":"P","type":"counter","cx":11.6,"cy":9.65,"w":6,"h":0.8,"zone":"counter","retained":true,"dimensionStatus":"Existing counter retained; previous unmeasured proxy aligned to A01 sales position. Survey actual location.","signage":"shared reception / service direction / smart care table card, no added floor obstruction"},{"id":"MB1-EP","type":"price-stand","cx":15.3,"cy":1.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB2-EP","type":"price-stand","cx":23.3,"cy":1.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB3-EP","type":"price-stand","cx":15.3,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB4-EP","type":"price-stand","cx":23.3,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB5-EP","type":"price-stand","cx":24.65,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Retained price stand beside MB5, outside service reserve","relocated":true},{"id":"P-ST0","type":"chair","cx":9.7,"cy":10.55,"w":0.7,"h":0.7,"zone":"counter-staff","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-CU0","type":"chair","cx":9.7,"cy":8.75,"w":0.7,"h":0.7,"zone":"counter-customer","angle":0,"seats":1,"facing":180,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-ST1","type":"chair","cx":13.3,"cy":10.55,"w":0.7,"h":0.7,"zone":"counter-staff","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-CU1","type":"chair","cx":13.3,"cy":8.75,"w":0.7,"h":0.7,"zone":"counter-customer","angle":0,"seats":1,"facing":180,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"VM","type":"cabinet","cx":24.45,"cy":10.95,"w":1.8,"h":0.5,"zone":"MB-accessories","relocated":true,"note":"Relocated from (29.2,11.35) outside owner-reported service access; clearance and actual cabinet size unverified"},{"id":"W","type":"background-wall","cx":0.9300000000000006,"cy":3.6500000000000004,"w":5.3,"h":0.2,"zone":"smart-module","angle":90},{"id":"LED","type":"screen","cx":1.1000000000000005,"cy":4.449999999999999,"w":1.66,"h":0.13,"zone":"smart-module","angle":90,"screen":"75 inch per D01 p20; casing proxy"},{"id":"SC","type":"table","cx":2.4300000000000006,"cy":2.4500000000000006,"w":0.85,"h":1.6,"zone":"smart-module","angle":90},{"id":"SC-S","type":"chair","cx":2.4300000000000006,"cy":3.35,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"consultant","facing":0},{"id":"SC-C1","type":"chair","cx":2.88,"cy":1.55,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"customer","facing":180},{"id":"SC-C2","type":"chair","cx":1.9800000000000004,"cy":1.55,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"customer","facing":180},{"id":"EP","type":"price-stand","cx":2.330000000000001,"cy":8.4,"w":0.35,"h":0.35,"zone":"smart-module","angle":90},{"id":"LP","type":"linear-floor-light","cx":4.68,"cy":3.95,"w":0.4,"h":0.4,"zone":"smart-module","angle":90,"round":true,"note":"D01 p20 floor lamp is an inset linear floor light, not a freestanding lampshade."},{"id":"C1","type":"table","cx":20.7,"cy":9.65,"w":3.2,"h":0.85,"zone":"MB-consult"},{"id":"C1-U0","type":"chair","cx":19.6,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L0","type":"chair","cx":19.6,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-U1","type":"chair","cx":20.7,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L1","type":"chair","cx":20.7,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-U2","type":"chair","cx":21.8,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L2","type":"chair","cx":21.8,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C2","type":"table","cx":16.5,"cy":9.65,"w":0.8,"h":0.8,"zone":"MB-consult","round":true,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained"},{"id":"C2-C1","type":"chair","cx":16.5,"cy":10.57,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained","catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C2-C2","type":"chair","cx":16.5,"cy":8.73,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained","catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"AS1","type":"sofa","cx":36.45,"cy":9.05,"w":2.4,"h":0.85,"zone":"air-lounge","seats":3},{"id":"AS2","type":"sofa","cx":36.45,"cy":15.1,"w":2.4,"h":0.85,"zone":"air-lounge","seats":3},{"id":"AA1","type":"armchair","cx":35.1,"cy":11.05,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA2","type":"armchair","cx":37.8,"cy":11.05,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA3","type":"armchair","cx":35.1,"cy":13.2,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA4","type":"armchair","cx":37.8,"cy":13.2,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AT1","type":"table","cx":36.45,"cy":10.2,"w":1.1,"h":0.55,"zone":"air-lounge"},{"id":"AT2","type":"table","cx":36.45,"cy":14.15,"w":1.1,"h":0.55,"zone":"air-lounge"},{"id":"N","type":"hospitality","cx":39.15,"cy":14.7,"w":0.55,"h":1.4,"zone":"air-lounge","plumbing":"reuse existing provision only; location TBC"},{"id":"TV","type":"screen","cx":39.78,"cy":12.15,"w":0.15,"h":1.2,"zone":"air-lounge"},{"id":"SHARED-EV","type":"charger","cx":32.85,"cy":7.45,"w":0.4,"h":0.45,"angle":0,"zone":"shared-existing","retained":true,"source":"Owner-adopted review + site photos 8/9","status":"Existing MB wallbox reused; photo-based proxy adjusted clear of folded glass, not a measured location or physical relocation; capacity/cable/shared-use approval and commissioning pending"},{"id":"SMART-WINDOW-LOGO","type":"window-logo","cx":35.97,"cy":2.73,"w":0.98,"h":0.65,"angle":0,"zone":"smart-window","installation":"Type 4 — installed on indoor display window","logoSize":"SL2 candidate, 0.98 W x 1.32 H m; not SL4","centerHeight":2.05,"status":"Owner-selected plan pin; h is conservative plan-depth reservation including glass standoffs; height/size/attachments/MB alignment require supplier approval"}],"routes":[{"id":"entrance-east-service","x":28,"y":2.5,"w":3.5,"h":5.5,"planningWidth":3.5,"status":"Schematic clear eastern approach only; full cross-showroom route unresolved"},{"id":"service-approach-pedestrian","x":28,"y":8,"w":4,"h":8,"status":"nominal reservation, not code-approved clearance"}],"serviceAccessReserve":{"x":28,"y":8,"w":4,"h":8,"status":"Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"},"optionalPackage":{"active":true,"scope":"Three-use flex room with independently switchable AC; main hall stays unconditioned","airAreasGrossAssumed":{"old":64,"extension":44,"total":108},"HVAC":{"installed":true,"defaultOn":false,"state":"Dedicated supplemental unit, fresh-air and cooling load engineering required; engines off in enclosure","enclosure":"Sealed dedicated ceiling at assumed 3.15 m; existing lounge self-closing door assumed"},"G1":{"line":[[32,2.5],[32,8]],"pedestrianDoor":[2.7,3.9],"vehicleGate":[4,7.2],"state":"Gate closed with AC on; folded within flex footprint when AC off"},"F1":{"line":[[32.4,8],[34.8,8]],"openingWidth":2.4,"state":"Closed partition with connecting door"},"storage":{"status":"MB6 removed from building model for consulting/lounge; furniture stored off-model, no storage on service route","approvalRequired":true}},"people":[{"id":"smart-advisor","seat":"SC-S","height":1.76,"shirt":"#171a1b","pants":"#252c31","skin":"#bb8969"},{"id":"smart-client-1","seat":"SC-C1","height":1.66,"shirt":"#a97653","pants":"#394654","skin":"#c79a76"},{"id":"smart-client-2","seat":"SC-C2","height":1.71,"shirt":"#dbd6ca","pants":"#394550","skin":"#a7785c"},{"id":"reception-advisor","seat":"P-ST0","height":1.74,"shirt":"#e4e2d9","pants":"#272c35","skin":"#c09070"},{"id":"reception-client","seat":"P-CU0","height":1.69,"shirt":"#667d84","pants":"#44423e","skin":"#b88363"},{"id":"existing-lounge-reader","seat":"AA3","height":1.73,"shirt":"#a9aa9d","pants":"#383f46","skin":"#bf947b"},{"id":"gallery-customer","x":17.4,"y":4.15,"height":1.72,"facing":70,"pose":"walk","shirt":"#b9b2a4","pants":"#4a5869","skin":"#c89875"},{"id":"arrival","x":29.2,"y":5.6,"height":1.78,"facing":20,"pose":"stand","shirt":"#ebe6dd","pants":"#303e4b","skin":"#ad7859"},{"id":"handover-specialist","x":33.7,"y":6.95,"height":1.76,"facing":115,"pose":"gesture","shirt":"#35414c","pants":"#242d34","skin":"#bd8a67"},{"id":"handover-client","x":35.1,"y":6.95,"height":1.68,"facing":-40,"pose":"stand","shirt":"#c5b195","pants":"#405464","skin":"#cba17e"}]},{"mode":"consulting","floor":[[0,0],[24,0],[24,2.5],[40,2.5],[40,16],[0,16]],"columns":[{"x":-0.25,"y":-0.25,"w":0.5,"h":0.5},{"x":-0.25,"y":7.75,"w":0.5,"h":0.5},{"x":-0.25,"y":15.75,"w":0.5,"h":0.5},{"x":7.75,"y":-0.25,"w":0.5,"h":0.5},{"x":7.75,"y":7.75,"w":0.5,"h":0.5},{"x":7.75,"y":15.75,"w":0.5,"h":0.5},{"x":15.75,"y":-0.25,"w":0.5,"h":0.5},{"x":15.75,"y":7.75,"w":0.5,"h":0.5},{"x":15.75,"y":15.75,"w":0.5,"h":0.5},{"x":23.75,"y":-0.25,"w":0.5,"h":0.5},{"x":23.75,"y":7.75,"w":0.5,"h":0.5},{"x":23.75,"y":15.75,"w":0.5,"h":0.5},{"x":31.75,"y":7.75,"w":0.5,"h":0.5},{"x":31.75,"y":15.75,"w":0.5,"h":0.5},{"x":39.75,"y":7.75,"w":0.5,"h":0.5},{"x":39.75,"y":15.75,"w":0.5,"h":0.5}],"module":{"type":"Module 3B","quantity":1,"source":"D01 PDF p20","origin":[0.6500000000000004,0.35],"offset":[7.28,0.35],"rotation":90,"width":6.630000000000001,"depth":8.65,"envelopePolygon":[[7.28,0.35],[7.280000000000001,9],[0.6500000000000012,9],[0.6500000000000004,0.35000000000000037]],"carpet":[[1.1800000000000006,1.1000000000000005],[1.1800000000000006,5.6499999999999995],[3.4800000000000004,4.25],[3.4800000000000004,1.1000000000000003]],"sourceEnvelope":[8.65,6.63],"backwallLength":5.3,"shape":[[0.6500000000000004,0.35000000000000037],[0.6500000000000012,9],[3.200000000000001,9],[7.28,6.6499999999999995],[4.03,0.3500000000000002]],"shapeStatus":"Dimension-derived platform with small schematic corner radii; 2550 + 4080 = 6630 confirmed visually in D01 p20. Supplier fabrication CAD pending.","car":{"id":"S1","brand":"smart","cx":4.43,"cy":6.55,"l":4.695,"w":2.169,"angle":330,"bodyWidth":1.92,"height":1.705,"model":"smart #5 Premium","exterior":"Saturn Beige Matte","interior":"Shadow Black","dimensionStatus":"published vehicle dimensions; includes mirrors"},"status":"One complete 3B, source envelope 8.65 x 6.63 m, rotated 90 degrees; one-car exception requires site-specific written confirmation."},"cars":[{"id":"S1","brand":"smart","cx":4.43,"cy":6.55,"l":4.695,"w":2.169,"angle":330,"bodyWidth":1.92,"height":1.705,"model":"smart #5 Premium","exterior":"Saturn Beige Matte","interior":"Shadow Black","dimensionStatus":"published vehicle dimensions; includes mirrors"},{"id":"MB1","brand":"MB","cx":12,"cy":1.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB2","brand":"MB","cx":20,"cy":1.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB3","brand":"MB","cx":12,"cy":6.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB4","brand":"MB","cx":20,"cy":6.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB5","brand":"MB","cx":26.2,"cy":5.25,"l":5.2,"w":2.1,"angle":-90,"noseDirection":"toward entrance / negative Y","clearanceStatus":"HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"}],"furniture":[{"id":"P","type":"counter","cx":11.6,"cy":9.65,"w":6,"h":0.8,"zone":"counter","retained":true,"dimensionStatus":"Existing counter retained; previous unmeasured proxy aligned to A01 sales position. Survey actual location.","signage":"shared reception / service direction / smart care table card, no added floor obstruction"},{"id":"MB1-EP","type":"price-stand","cx":15.3,"cy":1.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB2-EP","type":"price-stand","cx":23.3,"cy":1.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB3-EP","type":"price-stand","cx":15.3,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB4-EP","type":"price-stand","cx":23.3,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB5-EP","type":"price-stand","cx":24.65,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Retained price stand beside MB5, outside service reserve","relocated":true},{"id":"P-ST0","type":"chair","cx":9.7,"cy":10.55,"w":0.7,"h":0.7,"zone":"counter-staff","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-CU0","type":"chair","cx":9.7,"cy":8.75,"w":0.7,"h":0.7,"zone":"counter-customer","angle":0,"seats":1,"facing":180,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-ST1","type":"chair","cx":13.3,"cy":10.55,"w":0.7,"h":0.7,"zone":"counter-staff","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-CU1","type":"chair","cx":13.3,"cy":8.75,"w":0.7,"h":0.7,"zone":"counter-customer","angle":0,"seats":1,"facing":180,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"VM","type":"cabinet","cx":24.45,"cy":10.95,"w":1.8,"h":0.5,"zone":"MB-accessories","relocated":true,"note":"Relocated from (29.2,11.35) outside owner-reported service access; clearance and actual cabinet size unverified"},{"id":"W","type":"background-wall","cx":0.9300000000000006,"cy":3.6500000000000004,"w":5.3,"h":0.2,"zone":"smart-module","angle":90},{"id":"LED","type":"screen","cx":1.1000000000000005,"cy":4.449999999999999,"w":1.66,"h":0.13,"zone":"smart-module","angle":90,"screen":"75 inch per D01 p20; casing proxy"},{"id":"SC","type":"table","cx":2.4300000000000006,"cy":2.4500000000000006,"w":0.85,"h":1.6,"zone":"smart-module","angle":90},{"id":"SC-S","type":"chair","cx":2.4300000000000006,"cy":3.35,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"consultant","facing":0},{"id":"SC-C1","type":"chair","cx":2.88,"cy":1.55,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"customer","facing":180},{"id":"SC-C2","type":"chair","cx":1.9800000000000004,"cy":1.55,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"customer","facing":180},{"id":"EP","type":"price-stand","cx":2.330000000000001,"cy":8.4,"w":0.35,"h":0.35,"zone":"smart-module","angle":90},{"id":"LP","type":"linear-floor-light","cx":4.68,"cy":3.95,"w":0.4,"h":0.4,"zone":"smart-module","angle":90,"round":true,"note":"D01 p20 floor lamp is an inset linear floor light, not a freestanding lampshade."},{"id":"C1","type":"table","cx":20.7,"cy":9.65,"w":3.2,"h":0.85,"zone":"MB-consult"},{"id":"C1-U0","type":"chair","cx":19.6,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L0","type":"chair","cx":19.6,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-U1","type":"chair","cx":20.7,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L1","type":"chair","cx":20.7,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-U2","type":"chair","cx":21.8,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L2","type":"chair","cx":21.8,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C2","type":"table","cx":16.5,"cy":9.65,"w":0.8,"h":0.8,"zone":"MB-consult","round":true,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained"},{"id":"C2-C1","type":"chair","cx":16.5,"cy":10.57,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained","catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C2-C2","type":"chair","cx":16.5,"cy":8.73,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained","catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"AS1","type":"sofa","cx":36.45,"cy":9.05,"w":2.4,"h":0.85,"zone":"air-lounge","seats":3},{"id":"AS2","type":"sofa","cx":36.45,"cy":15.1,"w":2.4,"h":0.85,"zone":"air-lounge","seats":3},{"id":"AA1","type":"armchair","cx":35.1,"cy":11.05,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA2","type":"armchair","cx":37.8,"cy":11.05,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA3","type":"armchair","cx":35.1,"cy":13.2,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA4","type":"armchair","cx":37.8,"cy":13.2,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AT1","type":"table","cx":36.45,"cy":10.2,"w":1.1,"h":0.55,"zone":"air-lounge"},{"id":"AT2","type":"table","cx":36.45,"cy":14.15,"w":1.1,"h":0.55,"zone":"air-lounge"},{"id":"N","type":"hospitality","cx":39.15,"cy":14.7,"w":0.55,"h":1.4,"zone":"air-lounge","plumbing":"reuse existing provision only; location TBC"},{"id":"TV","type":"screen","cx":39.78,"cy":12.15,"w":0.15,"h":1.2,"zone":"air-lounge"},{"id":"FC-T","type":"consult-table","cx":37.35,"cy":5.1,"w":1.805,"h":0.96,"zone":"flex-consult","catalogue":"TA03 / D02 PDF p155"},{"id":"FC-SB","type":"sideboard","cx":38.3625,"cy":5.1,"w":0.52,"h":3,"zone":"flex-consult","catalogue":"SM01 / D02 PDF p153; schematic connecting bracket"},{"id":"FC-STAFF","type":"chair","cx":37.25,"cy":6.12,"w":0.7,"h":0.7,"zone":"flex-consult","facing":0,"role":"consultant","seats":1},{"id":"FC-C1","type":"chair","cx":36.72,"cy":4.08,"w":0.7,"h":0.7,"zone":"flex-consult","facing":180,"seats":1},{"id":"FC-C2","type":"chair","cx":37.57,"cy":4.08,"w":0.7,"h":0.7,"zone":"flex-consult","facing":180,"seats":1},{"id":"FC-LOW","type":"table","cx":34.5,"cy":5.1,"w":0.65,"h":0.65,"zone":"flex","round":true,"low":true},{"id":"FC-W1","type":"armchair","cx":34.5,"cy":6.15,"w":0.85,"h":0.85,"zone":"flex","seats":1,"facing":0},{"id":"FC-W2","type":"armchair","cx":34.5,"cy":4.05,"w":0.85,"h":0.85,"zone":"flex","seats":1,"facing":180},{"id":"SHARED-EV","type":"charger","cx":32.85,"cy":7.45,"w":0.4,"h":0.45,"angle":0,"zone":"shared-existing","retained":true,"source":"Owner-adopted review + site photos 8/9","status":"Existing MB wallbox reused; photo-based proxy adjusted clear of folded glass, not a measured location or physical relocation; capacity/cable/shared-use approval and commissioning pending"},{"id":"SMART-WINDOW-LOGO","type":"window-logo","cx":35.97,"cy":2.73,"w":0.98,"h":0.65,"angle":0,"zone":"smart-window","installation":"Type 4 — installed on indoor display window","logoSize":"SL2 candidate, 0.98 W x 1.32 H m; not SL4","centerHeight":2.05,"status":"Owner-selected plan pin; h is conservative plan-depth reservation including glass standoffs; height/size/attachments/MB alignment require supplier approval"}],"routes":[{"id":"entrance-east-service","x":28,"y":2.5,"w":3.5,"h":5.5,"planningWidth":3.5,"status":"Schematic clear eastern approach only; full cross-showroom route unresolved"},{"id":"service-approach-pedestrian","x":28,"y":8,"w":4,"h":8,"status":"nominal reservation, not code-approved clearance"}],"serviceAccessReserve":{"x":28,"y":8,"w":4,"h":8,"status":"Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"},"optionalPackage":{"active":true,"scope":"Three-use flex room with independently switchable AC; main hall stays unconditioned","airAreasGrossAssumed":{"old":64,"extension":44,"total":108},"HVAC":{"installed":true,"defaultOn":true,"state":"Dedicated supplemental unit, fresh-air and cooling load engineering required; engines off in enclosure","enclosure":"Sealed dedicated ceiling at assumed 3.15 m; existing lounge self-closing door assumed"},"G1":{"line":[[32,2.5],[32,8]],"pedestrianDoor":[2.7,3.9],"vehicleGate":[4,7.2],"state":"Gate closed with AC on; folded within flex footprint when AC off"},"F1":{"line":[[32.4,8],[34.8,8]],"openingWidth":2.4,"state":"Closed partition with connecting door"},"storage":{"status":"MB6 removed from building model for consulting/lounge; furniture stored off-model, no storage on service route","approvalRequired":true}},"people":[{"id":"smart-advisor","seat":"SC-S","height":1.76,"shirt":"#171a1b","pants":"#252c31","skin":"#bb8969"},{"id":"smart-client-1","seat":"SC-C1","height":1.66,"shirt":"#a97653","pants":"#394654","skin":"#c79a76"},{"id":"smart-client-2","seat":"SC-C2","height":1.71,"shirt":"#dbd6ca","pants":"#394550","skin":"#a7785c"},{"id":"reception-advisor","seat":"P-ST0","height":1.74,"shirt":"#e4e2d9","pants":"#272c35","skin":"#c09070"},{"id":"reception-client","seat":"P-CU0","height":1.69,"shirt":"#667d84","pants":"#44423e","skin":"#b88363"},{"id":"existing-lounge-reader","seat":"AA3","height":1.73,"shirt":"#a9aa9d","pants":"#383f46","skin":"#bf947b"},{"id":"gallery-customer","x":17.4,"y":4.15,"height":1.72,"facing":70,"pose":"walk","shirt":"#b9b2a4","pants":"#4a5869","skin":"#c89875"},{"id":"arrival","x":29.2,"y":5.6,"height":1.78,"facing":20,"pose":"stand","shirt":"#ebe6dd","pants":"#303e4b","skin":"#ad7859"},{"id":"flex-user-0","seat":"FC-STAFF","height":1.65,"shirt":"#394855","pants":"#3e4850","skin":"#bf8d6b"},{"id":"flex-user-1","seat":"FC-C1","height":1.6849999999999998,"shirt":"#d0bda6","pants":"#3e4850","skin":"#bf8d6b"},{"id":"flex-user-2","seat":"FC-C2","height":1.72,"shirt":"#7d9593","pants":"#3e4850","skin":"#bf8d6b"},{"id":"flex-user-3","seat":"FC-W1","height":1.755,"shirt":"#e0dfd7","pants":"#3e4850","skin":"#bf8d6b"}]},{"mode":"lounge","floor":[[0,0],[24,0],[24,2.5],[40,2.5],[40,16],[0,16]],"columns":[{"x":-0.25,"y":-0.25,"w":0.5,"h":0.5},{"x":-0.25,"y":7.75,"w":0.5,"h":0.5},{"x":-0.25,"y":15.75,"w":0.5,"h":0.5},{"x":7.75,"y":-0.25,"w":0.5,"h":0.5},{"x":7.75,"y":7.75,"w":0.5,"h":0.5},{"x":7.75,"y":15.75,"w":0.5,"h":0.5},{"x":15.75,"y":-0.25,"w":0.5,"h":0.5},{"x":15.75,"y":7.75,"w":0.5,"h":0.5},{"x":15.75,"y":15.75,"w":0.5,"h":0.5},{"x":23.75,"y":-0.25,"w":0.5,"h":0.5},{"x":23.75,"y":7.75,"w":0.5,"h":0.5},{"x":23.75,"y":15.75,"w":0.5,"h":0.5},{"x":31.75,"y":7.75,"w":0.5,"h":0.5},{"x":31.75,"y":15.75,"w":0.5,"h":0.5},{"x":39.75,"y":7.75,"w":0.5,"h":0.5},{"x":39.75,"y":15.75,"w":0.5,"h":0.5}],"module":{"type":"Module 3B","quantity":1,"source":"D01 PDF p20","origin":[0.6500000000000004,0.35],"offset":[7.28,0.35],"rotation":90,"width":6.630000000000001,"depth":8.65,"envelopePolygon":[[7.28,0.35],[7.280000000000001,9],[0.6500000000000012,9],[0.6500000000000004,0.35000000000000037]],"carpet":[[1.1800000000000006,1.1000000000000005],[1.1800000000000006,5.6499999999999995],[3.4800000000000004,4.25],[3.4800000000000004,1.1000000000000003]],"sourceEnvelope":[8.65,6.63],"backwallLength":5.3,"shape":[[0.6500000000000004,0.35000000000000037],[0.6500000000000012,9],[3.200000000000001,9],[7.28,6.6499999999999995],[4.03,0.3500000000000002]],"shapeStatus":"Dimension-derived platform with small schematic corner radii; 2550 + 4080 = 6630 confirmed visually in D01 p20. Supplier fabrication CAD pending.","car":{"id":"S1","brand":"smart","cx":4.43,"cy":6.55,"l":4.695,"w":2.169,"angle":330,"bodyWidth":1.92,"height":1.705,"model":"smart #5 Premium","exterior":"Saturn Beige Matte","interior":"Shadow Black","dimensionStatus":"published vehicle dimensions; includes mirrors"},"status":"One complete 3B, source envelope 8.65 x 6.63 m, rotated 90 degrees; one-car exception requires site-specific written confirmation."},"cars":[{"id":"S1","brand":"smart","cx":4.43,"cy":6.55,"l":4.695,"w":2.169,"angle":330,"bodyWidth":1.92,"height":1.705,"model":"smart #5 Premium","exterior":"Saturn Beige Matte","interior":"Shadow Black","dimensionStatus":"published vehicle dimensions; includes mirrors"},{"id":"MB1","brand":"MB","cx":12,"cy":1.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB2","brand":"MB","cx":20,"cy":1.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB3","brand":"MB","cx":12,"cy":6.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB4","brand":"MB","cx":20,"cy":6.65,"l":5.2,"w":2.1,"angle":0},{"id":"MB5","brand":"MB","cx":26.2,"cy":5.25,"l":5.2,"w":2.1,"angle":-90,"noseDirection":"toward entrance / negative Y","clearanceStatus":"HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"}],"furniture":[{"id":"P","type":"counter","cx":11.6,"cy":9.65,"w":6,"h":0.8,"zone":"counter","retained":true,"dimensionStatus":"Existing counter retained; previous unmeasured proxy aligned to A01 sales position. Survey actual location.","signage":"shared reception / service direction / smart care table card, no added floor obstruction"},{"id":"MB1-EP","type":"price-stand","cx":15.3,"cy":1.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB2-EP","type":"price-stand","cx":23.3,"cy":1.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB3-EP","type":"price-stand","cx":15.3,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB4-EP","type":"price-stand","cx":23.3,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Reuse existing display stand"},{"id":"MB5-EP","type":"price-stand","cx":24.65,"cy":6.65,"w":0.35,"h":0.35,"zone":"MB-price","retained":true,"note":"Retained price stand beside MB5, outside service reserve","relocated":true},{"id":"P-ST0","type":"chair","cx":9.7,"cy":10.55,"w":0.7,"h":0.7,"zone":"counter-staff","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-CU0","type":"chair","cx":9.7,"cy":8.75,"w":0.7,"h":0.7,"zone":"counter-customer","angle":0,"seats":1,"facing":180,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-ST1","type":"chair","cx":13.3,"cy":10.55,"w":0.7,"h":0.7,"zone":"counter-staff","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"P-CU1","type":"chair","cx":13.3,"cy":8.75,"w":0.7,"h":0.7,"zone":"counter-customer","angle":0,"seats":1,"facing":180,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"VM","type":"cabinet","cx":24.45,"cy":10.95,"w":1.8,"h":0.5,"zone":"MB-accessories","relocated":true,"note":"Relocated from (29.2,11.35) outside owner-reported service access; clearance and actual cabinet size unverified"},{"id":"W","type":"background-wall","cx":0.9300000000000006,"cy":3.6500000000000004,"w":5.3,"h":0.2,"zone":"smart-module","angle":90},{"id":"LED","type":"screen","cx":1.1000000000000005,"cy":4.449999999999999,"w":1.66,"h":0.13,"zone":"smart-module","angle":90,"screen":"75 inch per D01 p20; casing proxy"},{"id":"SC","type":"table","cx":2.4300000000000006,"cy":2.4500000000000006,"w":0.85,"h":1.6,"zone":"smart-module","angle":90},{"id":"SC-S","type":"chair","cx":2.4300000000000006,"cy":3.35,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"consultant","facing":0},{"id":"SC-C1","type":"chair","cx":2.88,"cy":1.55,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"customer","facing":180},{"id":"SC-C2","type":"chair","cx":1.9800000000000004,"cy":1.55,"w":0.55,"h":0.55,"zone":"smart-module","angle":90,"seats":1,"role":"customer","facing":180},{"id":"EP","type":"price-stand","cx":2.330000000000001,"cy":8.4,"w":0.35,"h":0.35,"zone":"smart-module","angle":90},{"id":"LP","type":"linear-floor-light","cx":4.68,"cy":3.95,"w":0.4,"h":0.4,"zone":"smart-module","angle":90,"round":true,"note":"D01 p20 floor lamp is an inset linear floor light, not a freestanding lampshade."},{"id":"C1","type":"table","cx":20.7,"cy":9.65,"w":3.2,"h":0.85,"zone":"MB-consult"},{"id":"C1-U0","type":"chair","cx":19.6,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L0","type":"chair","cx":19.6,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-U1","type":"chair","cx":20.7,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L1","type":"chair","cx":20.7,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-U2","type":"chair","cx":21.8,"cy":10.6,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C1-L2","type":"chair","cx":21.8,"cy":8.7,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C2","type":"table","cx":16.5,"cy":9.65,"w":0.8,"h":0.8,"zone":"MB-consult","round":true,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained"},{"id":"C2-C1","type":"chair","cx":16.5,"cy":10.57,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained","catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"C2-C2","type":"chair","cx":16.5,"cy":8.73,"w":0.7,"h":0.7,"zone":"MB-consult","angle":0,"seats":1,"relocated":true,"note":"Small MB consultation set moved left to free north pedestrian detour; 2 seats retained","catalogue":"D02 PDF pp143-144 shell chair proxy"},{"id":"AS1","type":"sofa","cx":36.45,"cy":9.05,"w":2.4,"h":0.85,"zone":"air-lounge","seats":3},{"id":"AS2","type":"sofa","cx":36.45,"cy":15.1,"w":2.4,"h":0.85,"zone":"air-lounge","seats":3},{"id":"AA1","type":"armchair","cx":35.1,"cy":11.05,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA2","type":"armchair","cx":37.8,"cy":11.05,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA3","type":"armchair","cx":35.1,"cy":13.2,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AA4","type":"armchair","cx":37.8,"cy":13.2,"w":0.85,"h":0.85,"zone":"air-lounge","seats":1},{"id":"AT1","type":"table","cx":36.45,"cy":10.2,"w":1.1,"h":0.55,"zone":"air-lounge"},{"id":"AT2","type":"table","cx":36.45,"cy":14.15,"w":1.1,"h":0.55,"zone":"air-lounge"},{"id":"N","type":"hospitality","cx":39.15,"cy":14.7,"w":0.55,"h":1.4,"zone":"air-lounge","plumbing":"reuse existing provision only; location TBC"},{"id":"TV","type":"screen","cx":39.78,"cy":12.15,"w":0.15,"h":1.2,"zone":"air-lounge"},{"id":"FA-S1","type":"sofa","cx":36.5,"cy":3.3,"w":2.4,"h":0.85,"zone":"flex","seats":3,"facing":180},{"id":"FA-S2","type":"sofa","cx":36.5,"cy":6.7,"w":2.4,"h":0.85,"zone":"flex","seats":3,"facing":0},{"id":"FA-A1","type":"armchair","cx":34.55,"cy":5,"w":0.85,"h":0.85,"zone":"flex","seats":1,"facing":90},{"id":"FA-A2","type":"armchair","cx":38.45,"cy":5,"w":0.85,"h":0.85,"zone":"flex","seats":1,"facing":-90},{"id":"FA-T1","type":"table","cx":36.3,"cy":5,"w":0.65,"h":0.65,"zone":"flex","round":true,"low":true,"tableHeight":0.65,"catalogue":"TA02 large / D02 p159"},{"id":"FA-T2","type":"table","cx":37.05,"cy":5.2,"w":0.45,"h":0.45,"zone":"flex","round":true,"low":true,"tableHeight":0.6,"catalogue":"TA02 small / D02 p159"},{"id":"SHARED-EV","type":"charger","cx":32.85,"cy":7.45,"w":0.4,"h":0.45,"angle":0,"zone":"shared-existing","retained":true,"source":"Owner-adopted review + site photos 8/9","status":"Existing MB wallbox reused; photo-based proxy adjusted clear of folded glass, not a measured location or physical relocation; capacity/cable/shared-use approval and commissioning pending"},{"id":"SMART-WINDOW-LOGO","type":"window-logo","cx":35.97,"cy":2.73,"w":0.98,"h":0.65,"angle":0,"zone":"smart-window","installation":"Type 4 — installed on indoor display window","logoSize":"SL2 candidate, 0.98 W x 1.32 H m; not SL4","centerHeight":2.05,"status":"Owner-selected plan pin; h is conservative plan-depth reservation including glass standoffs; height/size/attachments/MB alignment require supplier approval"}],"routes":[{"id":"entrance-east-service","x":28,"y":2.5,"w":3.5,"h":5.5,"planningWidth":3.5,"status":"Schematic clear eastern approach only; full cross-showroom route unresolved"},{"id":"service-approach-pedestrian","x":28,"y":8,"w":4,"h":8,"status":"nominal reservation, not code-approved clearance"}],"serviceAccessReserve":{"x":28,"y":8,"w":4,"h":8,"status":"Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"},"optionalPackage":{"active":true,"scope":"Three-use flex room with independently switchable AC; main hall stays unconditioned","airAreasGrossAssumed":{"old":64,"extension":44,"total":108},"HVAC":{"installed":true,"defaultOn":true,"state":"Dedicated supplemental unit, fresh-air and cooling load engineering required; engines off in enclosure","enclosure":"Sealed dedicated ceiling at assumed 3.15 m; existing lounge self-closing door assumed"},"G1":{"line":[[32,2.5],[32,8]],"pedestrianDoor":[2.7,3.9],"vehicleGate":[4,7.2],"state":"Gate closed with AC on; folded within flex footprint when AC off"},"F1":{"line":[[32.4,8],[34.8,8]],"openingWidth":2.4,"state":"Open link only with Flex AC on; closed before vehicle gate opens with AC off"},"storage":{"status":"MB6 removed from building model for consulting/lounge; furniture stored off-model, no storage on service route","approvalRequired":true}},"people":[{"id":"smart-advisor","seat":"SC-S","height":1.76,"shirt":"#171a1b","pants":"#252c31","skin":"#bb8969"},{"id":"smart-client-1","seat":"SC-C1","height":1.66,"shirt":"#a97653","pants":"#394654","skin":"#c79a76"},{"id":"smart-client-2","seat":"SC-C2","height":1.71,"shirt":"#dbd6ca","pants":"#394550","skin":"#a7785c"},{"id":"reception-advisor","seat":"P-ST0","height":1.74,"shirt":"#e4e2d9","pants":"#272c35","skin":"#c09070"},{"id":"reception-client","seat":"P-CU0","height":1.69,"shirt":"#667d84","pants":"#44423e","skin":"#b88363"},{"id":"existing-lounge-reader","seat":"AA3","height":1.73,"shirt":"#a9aa9d","pants":"#383f46","skin":"#bf947b"},{"id":"gallery-customer","x":17.4,"y":4.15,"height":1.72,"facing":70,"pose":"walk","shirt":"#b9b2a4","pants":"#4a5869","skin":"#c89875"},{"id":"arrival","x":29.2,"y":5.6,"height":1.78,"facing":20,"pose":"stand","shirt":"#ebe6dd","pants":"#303e4b","skin":"#ad7859"},{"id":"flex-user-0","seat":"FA-S1","height":1.65,"shirt":"#394855","pants":"#3e4850","skin":"#bf8d6b"},{"id":"flex-user-1","seat":"FA-S2","height":1.6849999999999998,"shirt":"#d0bda6","pants":"#3e4850","skin":"#bf8d6b"},{"id":"flex-user-2","seat":"FA-A1","height":1.72,"shirt":"#7d9593","pants":"#3e4850","skin":"#bf8d6b"}]}],"manualElements":["D01 all 33 pages reread","D01 pp15/20/21 full 3B, silver backdrop, 75-inch display, pale wood desk, grey chairs, carpet, LED platform edging and digital E-price with iPad","D01 p8 Type4 indoor-window logo at owner pin35.97,2.73; p9 SL2 size candidate only","D01 p22 charger requirement; owner adopts reuse of existing MB wallbox, shared-use approval and commissioning pending","D01 p32 black smart uniform sample, TBC","Mercedes material and vehicle detail unchanged from v06; sales proxies aligned only"],"limitations":["One smart car is owner-reported exception; written site approval needed","Accessory display wall requirement unresolved for standalone 3B; no second 3A inserted","Outer smart dimensions sourced; authored sculpted geometry is approximate","Plan-traced staircase and office boundaries require site validation; all heights assumed","MB5 circulation HOLD; entrance swept path unresolved","Main hall unconditioned; flex/old lounge enclosure and HVAC require engineer review","Official raster assets not redistributed without permission"],"smartVehicle":{"model":"smart #5","trim":"Premium","exterior":"Saturn Beige Matte","interior":"Shadow Black","roof":"Eclipse Black","market":"UK / RHD reference","configuration":"HY1UOGUF52B9000180","length":4.695,"bodyWidth":1.92,"mirrorWidth":2.169,"height":1.705,"wheelbase":2.9,"frontOverhang":0.855,"rearOverhang":0.94,"meshStatus":"Independently authored dimensional representation, not manufacturer CAD","source":"https://uk.smart.com/en/models/hashtag-five/","secondarySource":"https://ma.smart.com/modeles/smart-5/premium-2"},"building":{"source":["A01: LINE_ALBUM_Showroom_260912_10.jpg","A04: LINE_ALBUM_Showroom_260912_13.jpg"],"units":"metres","coordinates":"X increases along facade; Y increases from front H toward rear E; world=(X,height,-Y)","grids":{"X":[0,8,16,24,32,40],"XStatus":"assumed equal bays, not confirmed by legible dimension string","Y":{"H":0,"G":2.5,"F":8,"E":16},"YStatus":"owner confirmed"},"levels":{"showroom":0,"datumNote":"+0.80 is a level mark, not a horizontal dimension; road datum not confirmed"},"heights":{"office":3.18,"mezzanineSoffit":3.28,"mezzanineTop":3.56,"hall":7.1,"status":"assumed; not traced from plan"},"admin":{"polygon":[[8,11.5],[16,11.5],[16,16],[8,16]],"status":"photo traced / verify as-built","hallDoor":[[8,11.7],[8,12.8]],"core":[[8,13.9],[10.3,13.9],[10.3,16],[8,16]]},"manager":{"polygon":[[16,11.5],[26,11.5],[26.174311485495316,11.50761060381651],[26.34729635533386,11.530384493975584],[26.51763809020504,11.568148347421863],[26.68404028665134,11.620614758428184],[26.8452365234814,11.6873844259267],[27,11.767949192431123],[27.147152872702094,11.861695911422016],[27.28557521937308,11.967911113762044],[27.414213562373096,12.085786437626904],[27.532088886237958,12.21442478062692],[27.638304088577982,12.352847127297908],[27.73205080756888,12.5],[27.8126155740733,12.654763476518601],[27.879385241571818,12.815959713348663],[27.931851652578136,12.982361909794959],[27.969615506024414,13.15270364466614],[27.99238939618349,13.325688514504684],[28,13.5],[28,16],[16,16]],"corner":{"center":[26,13.5],"radius":2,"start":-90,"end":0},"status":"photo traced, rounded SE corner approximate","boundaryAuthority":"Circular corner parameters are authoritative; polygon samples the R2 arc every 5 degrees. All dimensions remain photo-traced assumptions."},"stair":{"type":"C-return, three legs","lower":{"x":[4.3,6.3],"y":[12.4,13.9],"riseDirection":"negative X / inferred"},"west":{"x":[2.6,4.3],"y":[13.9,14.6],"riseDirection":"positive Y / inferred"},"upper":{"x":[4.3,6.3],"y":[14.6,16],"riseDirection":"positive X / inferred"},"well":{"x":[4.3,6.3],"y":[13.9,14.6]},"status":"photo-traced footprint and topology; rise, tread count, clear width and landing heights assumed","landings":[{"x":[2.6,4.3],"y":[12.4,13.9]},{"x":[2.6,4.3],"y":[14.6,16]}],"renderOnly":{"risers":[8,4,8],"rise":0.178,"totalRise":3.56,"status":"assumed visualization only; short middle treads and headroom need stair section"}},"rearSteps":{"x":[6.3,8],"landingY":[16,17],"y":[17,18.7],"status":"separate rear/service level transition, direction/levels assumed"},"salesFrame":{"frontY":8,"rearY":11.5,"status":"Grid F to traced office frontage; furniture adjusted from v06 unmeasured proxies"}}};
+/* v08 adds surrounding-site context; interior states are unchanged from frozen v07. */
+window.BC_LAYOUT = {
+  "revision": "v08",
+  "defaultState": "handover",
+  "states": [
+    {
+      "mode": "handover",
+      "floor": [
+        [
+          0,
+          0
+        ],
+        [
+          24,
+          0
+        ],
+        [
+          24,
+          2.5
+        ],
+        [
+          40,
+          2.5
+        ],
+        [
+          40,
+          16
+        ],
+        [
+          0,
+          16
+        ]
+      ],
+      "columns": [
+        {
+          "x": -0.25,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": -0.25,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": -0.25,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 31.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 31.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 39.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 39.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "module": {
+        "type": "Module 3B",
+        "quantity": 1,
+        "source": "D01 PDF p20",
+        "origin": [
+          0.6500000000000004,
+          0.35
+        ],
+        "offset": [
+          7.28,
+          0.35
+        ],
+        "rotation": 90,
+        "width": 6.630000000000001,
+        "depth": 8.65,
+        "envelopePolygon": [
+          [
+            7.28,
+            0.35
+          ],
+          [
+            7.280000000000001,
+            9
+          ],
+          [
+            0.6500000000000012,
+            9
+          ],
+          [
+            0.6500000000000004,
+            0.35000000000000037
+          ]
+        ],
+        "carpet": [
+          [
+            1.1800000000000006,
+            1.1000000000000005
+          ],
+          [
+            1.1800000000000006,
+            5.6499999999999995
+          ],
+          [
+            3.4800000000000004,
+            4.25
+          ],
+          [
+            3.4800000000000004,
+            1.1000000000000003
+          ]
+        ],
+        "sourceEnvelope": [
+          8.65,
+          6.63
+        ],
+        "backwallLength": 5.3,
+        "shape": [
+          [
+            0.6500000000000004,
+            0.35000000000000037
+          ],
+          [
+            0.6500000000000012,
+            9
+          ],
+          [
+            3.200000000000001,
+            9
+          ],
+          [
+            7.28,
+            6.6499999999999995
+          ],
+          [
+            4.03,
+            0.3500000000000002
+          ]
+        ],
+        "shapeStatus": "Dimension-derived platform with small schematic corner radii; 2550 + 4080 = 6630 confirmed visually in D01 p20. Supplier fabrication CAD pending.",
+        "car": {
+          "id": "S1",
+          "brand": "smart",
+          "cx": 4.43,
+          "cy": 6.55,
+          "l": 4.695,
+          "w": 2.169,
+          "angle": 330,
+          "bodyWidth": 1.92,
+          "height": 1.705,
+          "model": "smart #5 Premium",
+          "exterior": "Saturn Beige Matte",
+          "interior": "Shadow Black",
+          "dimensionStatus": "published vehicle dimensions; includes mirrors"
+        },
+        "status": "One complete 3B, source envelope 8.65 x 6.63 m, rotated 90 degrees; one-car exception requires site-specific written confirmation."
+      },
+      "cars": [
+        {
+          "id": "S1",
+          "brand": "smart",
+          "cx": 4.43,
+          "cy": 6.55,
+          "l": 4.695,
+          "w": 2.169,
+          "angle": 330,
+          "bodyWidth": 1.92,
+          "height": 1.705,
+          "model": "smart #5 Premium",
+          "exterior": "Saturn Beige Matte",
+          "interior": "Shadow Black",
+          "dimensionStatus": "published vehicle dimensions; includes mirrors"
+        },
+        {
+          "id": "MB1",
+          "brand": "MB",
+          "cx": 12,
+          "cy": 1.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB2",
+          "brand": "MB",
+          "cx": 20,
+          "cy": 1.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB3",
+          "brand": "MB",
+          "cx": 12,
+          "cy": 6.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB4",
+          "brand": "MB",
+          "cx": 20,
+          "cy": 6.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB5",
+          "brand": "MB",
+          "cx": 26.2,
+          "cy": 5.25,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": -90,
+          "noseDirection": "toward entrance / negative Y",
+          "clearanceStatus": "HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"
+        },
+        {
+          "id": "MB6",
+          "brand": "MB",
+          "cx": 36,
+          "cy": 5.25,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 180,
+          "noseDirection": "toward smart / negative X",
+          "purpose": "vehicle handover"
+        }
+      ],
+      "furniture": [
+        {
+          "id": "P",
+          "type": "counter",
+          "cx": 11.6,
+          "cy": 9.65,
+          "w": 6,
+          "h": 0.8,
+          "zone": "counter",
+          "retained": true,
+          "dimensionStatus": "Existing counter retained; previous unmeasured proxy aligned to A01 sales position. Survey actual location.",
+          "signage": "shared reception / service direction / smart care table card, no added floor obstruction"
+        },
+        {
+          "id": "MB1-EP",
+          "type": "price-stand",
+          "cx": 15.3,
+          "cy": 1.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB2-EP",
+          "type": "price-stand",
+          "cx": 23.3,
+          "cy": 1.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB3-EP",
+          "type": "price-stand",
+          "cx": 15.3,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB4-EP",
+          "type": "price-stand",
+          "cx": 23.3,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB5-EP",
+          "type": "price-stand",
+          "cx": 24.65,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Retained price stand beside MB5, outside service reserve",
+          "relocated": true
+        },
+        {
+          "id": "P-ST0",
+          "type": "chair",
+          "cx": 9.7,
+          "cy": 10.55,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-staff",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-CU0",
+          "type": "chair",
+          "cx": 9.7,
+          "cy": 8.75,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-customer",
+          "angle": 0,
+          "seats": 1,
+          "facing": 180,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-ST1",
+          "type": "chair",
+          "cx": 13.3,
+          "cy": 10.55,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-staff",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-CU1",
+          "type": "chair",
+          "cx": 13.3,
+          "cy": 8.75,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-customer",
+          "angle": 0,
+          "seats": 1,
+          "facing": 180,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "VM",
+          "type": "cabinet",
+          "cx": 24.45,
+          "cy": 10.95,
+          "w": 1.8,
+          "h": 0.5,
+          "zone": "MB-accessories",
+          "relocated": true,
+          "note": "Relocated from (29.2,11.35) outside owner-reported service access; clearance and actual cabinet size unverified"
+        },
+        {
+          "id": "W",
+          "type": "background-wall",
+          "cx": 0.9300000000000006,
+          "cy": 3.6500000000000004,
+          "w": 5.3,
+          "h": 0.2,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "LED",
+          "type": "screen",
+          "cx": 1.1000000000000005,
+          "cy": 4.449999999999999,
+          "w": 1.66,
+          "h": 0.13,
+          "zone": "smart-module",
+          "angle": 90,
+          "screen": "75 inch per D01 p20; casing proxy"
+        },
+        {
+          "id": "SC",
+          "type": "table",
+          "cx": 2.4300000000000006,
+          "cy": 2.4500000000000006,
+          "w": 0.85,
+          "h": 1.6,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "SC-S",
+          "type": "chair",
+          "cx": 2.4300000000000006,
+          "cy": 3.35,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "consultant",
+          "facing": 0
+        },
+        {
+          "id": "SC-C1",
+          "type": "chair",
+          "cx": 2.88,
+          "cy": 1.55,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "customer",
+          "facing": 180
+        },
+        {
+          "id": "SC-C2",
+          "type": "chair",
+          "cx": 1.9800000000000004,
+          "cy": 1.55,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "customer",
+          "facing": 180
+        },
+        {
+          "id": "EP",
+          "type": "price-stand",
+          "cx": 2.330000000000001,
+          "cy": 8.4,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "LP",
+          "type": "linear-floor-light",
+          "cx": 4.68,
+          "cy": 3.95,
+          "w": 0.4,
+          "h": 0.4,
+          "zone": "smart-module",
+          "angle": 90,
+          "round": true,
+          "note": "D01 p20 floor lamp is an inset linear floor light, not a freestanding lampshade."
+        },
+        {
+          "id": "C1",
+          "type": "table",
+          "cx": 20.7,
+          "cy": 9.65,
+          "w": 3.2,
+          "h": 0.85,
+          "zone": "MB-consult"
+        },
+        {
+          "id": "C1-U0",
+          "type": "chair",
+          "cx": 19.6,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L0",
+          "type": "chair",
+          "cx": 19.6,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-U1",
+          "type": "chair",
+          "cx": 20.7,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L1",
+          "type": "chair",
+          "cx": 20.7,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-U2",
+          "type": "chair",
+          "cx": 21.8,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L2",
+          "type": "chair",
+          "cx": 21.8,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C2",
+          "type": "table",
+          "cx": 16.5,
+          "cy": 9.65,
+          "w": 0.8,
+          "h": 0.8,
+          "zone": "MB-consult",
+          "round": true,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained"
+        },
+        {
+          "id": "C2-C1",
+          "type": "chair",
+          "cx": 16.5,
+          "cy": 10.57,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained",
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C2-C2",
+          "type": "chair",
+          "cx": 16.5,
+          "cy": 8.73,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained",
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "AS1",
+          "type": "sofa",
+          "cx": 36.45,
+          "cy": 9.05,
+          "w": 2.4,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 3
+        },
+        {
+          "id": "AS2",
+          "type": "sofa",
+          "cx": 36.45,
+          "cy": 15.1,
+          "w": 2.4,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 3
+        },
+        {
+          "id": "AA1",
+          "type": "armchair",
+          "cx": 35.1,
+          "cy": 11.05,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA2",
+          "type": "armchair",
+          "cx": 37.8,
+          "cy": 11.05,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA3",
+          "type": "armchair",
+          "cx": 35.1,
+          "cy": 13.2,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA4",
+          "type": "armchair",
+          "cx": 37.8,
+          "cy": 13.2,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AT1",
+          "type": "table",
+          "cx": 36.45,
+          "cy": 10.2,
+          "w": 1.1,
+          "h": 0.55,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "AT2",
+          "type": "table",
+          "cx": 36.45,
+          "cy": 14.15,
+          "w": 1.1,
+          "h": 0.55,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "N",
+          "type": "hospitality",
+          "cx": 39.15,
+          "cy": 14.7,
+          "w": 0.55,
+          "h": 1.4,
+          "zone": "air-lounge",
+          "plumbing": "reuse existing provision only; location TBC"
+        },
+        {
+          "id": "TV",
+          "type": "screen",
+          "cx": 39.78,
+          "cy": 12.15,
+          "w": 0.15,
+          "h": 1.2,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "SHARED-EV",
+          "type": "charger",
+          "cx": 32.85,
+          "cy": 7.45,
+          "w": 0.4,
+          "h": 0.45,
+          "angle": 0,
+          "zone": "shared-existing",
+          "retained": true,
+          "source": "Owner-adopted review + site photos 8/9",
+          "status": "Existing MB wallbox reused; photo-based proxy adjusted clear of folded glass, not a measured location or physical relocation; capacity/cable/shared-use approval and commissioning pending"
+        },
+        {
+          "id": "SMART-WINDOW-LOGO",
+          "type": "window-logo",
+          "cx": 35.97,
+          "cy": 2.73,
+          "w": 0.98,
+          "h": 0.65,
+          "angle": 0,
+          "zone": "smart-window",
+          "installation": "Type 4 — installed on indoor display window",
+          "logoSize": "SL2 candidate, 0.98 W x 1.32 H m; not SL4",
+          "centerHeight": 2.05,
+          "status": "Owner-selected plan pin; h is conservative plan-depth reservation including glass standoffs; height/size/attachments/MB alignment require supplier approval"
+        }
+      ],
+      "routes": [
+        {
+          "id": "entrance-east-service",
+          "x": 28,
+          "y": 2.5,
+          "w": 3.5,
+          "h": 5.5,
+          "planningWidth": 3.5,
+          "status": "Schematic clear eastern approach only; full cross-showroom route unresolved"
+        },
+        {
+          "id": "service-approach-pedestrian",
+          "x": 28,
+          "y": 8,
+          "w": 4,
+          "h": 8,
+          "status": "nominal reservation, not code-approved clearance"
+        }
+      ],
+      "serviceAccessReserve": {
+        "x": 28,
+        "y": 8,
+        "w": 4,
+        "h": 8,
+        "status": "Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"
+      },
+      "optionalPackage": {
+        "active": true,
+        "scope": "Three-use flex room with independently switchable AC; main hall stays unconditioned",
+        "airAreasGrossAssumed": {
+          "old": 64,
+          "extension": 44,
+          "total": 108
+        },
+        "HVAC": {
+          "installed": true,
+          "defaultOn": false,
+          "state": "Dedicated supplemental unit, fresh-air and cooling load engineering required; engines off in enclosure",
+          "enclosure": "Sealed dedicated ceiling at assumed 3.15 m; existing lounge self-closing door assumed"
+        },
+        "G1": {
+          "line": [
+            [
+              32,
+              2.5
+            ],
+            [
+              32,
+              8
+            ]
+          ],
+          "pedestrianDoor": [
+            2.7,
+            3.9
+          ],
+          "vehicleGate": [
+            4,
+            7.2
+          ],
+          "state": "Gate closed with AC on; folded within flex footprint when AC off"
+        },
+        "F1": {
+          "line": [
+            [
+              32.4,
+              8
+            ],
+            [
+              34.8,
+              8
+            ]
+          ],
+          "openingWidth": 2.4,
+          "state": "Closed partition with connecting door"
+        },
+        "storage": {
+          "status": "MB6 removed from building model for consulting/lounge; furniture stored off-model, no storage on service route",
+          "approvalRequired": true
+        }
+      },
+      "people": [
+        {
+          "id": "smart-advisor",
+          "seat": "SC-S",
+          "height": 1.76,
+          "shirt": "#171a1b",
+          "pants": "#252c31",
+          "skin": "#bb8969"
+        },
+        {
+          "id": "smart-client-1",
+          "seat": "SC-C1",
+          "height": 1.66,
+          "shirt": "#a97653",
+          "pants": "#394654",
+          "skin": "#c79a76"
+        },
+        {
+          "id": "smart-client-2",
+          "seat": "SC-C2",
+          "height": 1.71,
+          "shirt": "#dbd6ca",
+          "pants": "#394550",
+          "skin": "#a7785c"
+        },
+        {
+          "id": "reception-advisor",
+          "seat": "P-ST0",
+          "height": 1.74,
+          "shirt": "#e4e2d9",
+          "pants": "#272c35",
+          "skin": "#c09070"
+        },
+        {
+          "id": "reception-client",
+          "seat": "P-CU0",
+          "height": 1.69,
+          "shirt": "#667d84",
+          "pants": "#44423e",
+          "skin": "#b88363"
+        },
+        {
+          "id": "existing-lounge-reader",
+          "seat": "AA3",
+          "height": 1.73,
+          "shirt": "#a9aa9d",
+          "pants": "#383f46",
+          "skin": "#bf947b"
+        },
+        {
+          "id": "gallery-customer",
+          "x": 17.4,
+          "y": 4.15,
+          "height": 1.72,
+          "facing": 70,
+          "pose": "walk",
+          "shirt": "#b9b2a4",
+          "pants": "#4a5869",
+          "skin": "#c89875"
+        },
+        {
+          "id": "arrival",
+          "x": 29.2,
+          "y": 5.6,
+          "height": 1.78,
+          "facing": 20,
+          "pose": "stand",
+          "shirt": "#ebe6dd",
+          "pants": "#303e4b",
+          "skin": "#ad7859"
+        },
+        {
+          "id": "handover-specialist",
+          "x": 33.7,
+          "y": 6.95,
+          "height": 1.76,
+          "facing": 115,
+          "pose": "gesture",
+          "shirt": "#35414c",
+          "pants": "#242d34",
+          "skin": "#bd8a67"
+        },
+        {
+          "id": "handover-client",
+          "x": 35.1,
+          "y": 6.95,
+          "height": 1.68,
+          "facing": -40,
+          "pose": "stand",
+          "shirt": "#c5b195",
+          "pants": "#405464",
+          "skin": "#cba17e"
+        }
+      ]
+    },
+    {
+      "mode": "consulting",
+      "floor": [
+        [
+          0,
+          0
+        ],
+        [
+          24,
+          0
+        ],
+        [
+          24,
+          2.5
+        ],
+        [
+          40,
+          2.5
+        ],
+        [
+          40,
+          16
+        ],
+        [
+          0,
+          16
+        ]
+      ],
+      "columns": [
+        {
+          "x": -0.25,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": -0.25,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": -0.25,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 31.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 31.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 39.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 39.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "module": {
+        "type": "Module 3B",
+        "quantity": 1,
+        "source": "D01 PDF p20",
+        "origin": [
+          0.6500000000000004,
+          0.35
+        ],
+        "offset": [
+          7.28,
+          0.35
+        ],
+        "rotation": 90,
+        "width": 6.630000000000001,
+        "depth": 8.65,
+        "envelopePolygon": [
+          [
+            7.28,
+            0.35
+          ],
+          [
+            7.280000000000001,
+            9
+          ],
+          [
+            0.6500000000000012,
+            9
+          ],
+          [
+            0.6500000000000004,
+            0.35000000000000037
+          ]
+        ],
+        "carpet": [
+          [
+            1.1800000000000006,
+            1.1000000000000005
+          ],
+          [
+            1.1800000000000006,
+            5.6499999999999995
+          ],
+          [
+            3.4800000000000004,
+            4.25
+          ],
+          [
+            3.4800000000000004,
+            1.1000000000000003
+          ]
+        ],
+        "sourceEnvelope": [
+          8.65,
+          6.63
+        ],
+        "backwallLength": 5.3,
+        "shape": [
+          [
+            0.6500000000000004,
+            0.35000000000000037
+          ],
+          [
+            0.6500000000000012,
+            9
+          ],
+          [
+            3.200000000000001,
+            9
+          ],
+          [
+            7.28,
+            6.6499999999999995
+          ],
+          [
+            4.03,
+            0.3500000000000002
+          ]
+        ],
+        "shapeStatus": "Dimension-derived platform with small schematic corner radii; 2550 + 4080 = 6630 confirmed visually in D01 p20. Supplier fabrication CAD pending.",
+        "car": {
+          "id": "S1",
+          "brand": "smart",
+          "cx": 4.43,
+          "cy": 6.55,
+          "l": 4.695,
+          "w": 2.169,
+          "angle": 330,
+          "bodyWidth": 1.92,
+          "height": 1.705,
+          "model": "smart #5 Premium",
+          "exterior": "Saturn Beige Matte",
+          "interior": "Shadow Black",
+          "dimensionStatus": "published vehicle dimensions; includes mirrors"
+        },
+        "status": "One complete 3B, source envelope 8.65 x 6.63 m, rotated 90 degrees; one-car exception requires site-specific written confirmation."
+      },
+      "cars": [
+        {
+          "id": "S1",
+          "brand": "smart",
+          "cx": 4.43,
+          "cy": 6.55,
+          "l": 4.695,
+          "w": 2.169,
+          "angle": 330,
+          "bodyWidth": 1.92,
+          "height": 1.705,
+          "model": "smart #5 Premium",
+          "exterior": "Saturn Beige Matte",
+          "interior": "Shadow Black",
+          "dimensionStatus": "published vehicle dimensions; includes mirrors"
+        },
+        {
+          "id": "MB1",
+          "brand": "MB",
+          "cx": 12,
+          "cy": 1.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB2",
+          "brand": "MB",
+          "cx": 20,
+          "cy": 1.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB3",
+          "brand": "MB",
+          "cx": 12,
+          "cy": 6.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB4",
+          "brand": "MB",
+          "cx": 20,
+          "cy": 6.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB5",
+          "brand": "MB",
+          "cx": 26.2,
+          "cy": 5.25,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": -90,
+          "noseDirection": "toward entrance / negative Y",
+          "clearanceStatus": "HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"
+        }
+      ],
+      "furniture": [
+        {
+          "id": "P",
+          "type": "counter",
+          "cx": 11.6,
+          "cy": 9.65,
+          "w": 6,
+          "h": 0.8,
+          "zone": "counter",
+          "retained": true,
+          "dimensionStatus": "Existing counter retained; previous unmeasured proxy aligned to A01 sales position. Survey actual location.",
+          "signage": "shared reception / service direction / smart care table card, no added floor obstruction"
+        },
+        {
+          "id": "MB1-EP",
+          "type": "price-stand",
+          "cx": 15.3,
+          "cy": 1.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB2-EP",
+          "type": "price-stand",
+          "cx": 23.3,
+          "cy": 1.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB3-EP",
+          "type": "price-stand",
+          "cx": 15.3,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB4-EP",
+          "type": "price-stand",
+          "cx": 23.3,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB5-EP",
+          "type": "price-stand",
+          "cx": 24.65,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Retained price stand beside MB5, outside service reserve",
+          "relocated": true
+        },
+        {
+          "id": "P-ST0",
+          "type": "chair",
+          "cx": 9.7,
+          "cy": 10.55,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-staff",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-CU0",
+          "type": "chair",
+          "cx": 9.7,
+          "cy": 8.75,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-customer",
+          "angle": 0,
+          "seats": 1,
+          "facing": 180,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-ST1",
+          "type": "chair",
+          "cx": 13.3,
+          "cy": 10.55,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-staff",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-CU1",
+          "type": "chair",
+          "cx": 13.3,
+          "cy": 8.75,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-customer",
+          "angle": 0,
+          "seats": 1,
+          "facing": 180,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "VM",
+          "type": "cabinet",
+          "cx": 24.45,
+          "cy": 10.95,
+          "w": 1.8,
+          "h": 0.5,
+          "zone": "MB-accessories",
+          "relocated": true,
+          "note": "Relocated from (29.2,11.35) outside owner-reported service access; clearance and actual cabinet size unverified"
+        },
+        {
+          "id": "W",
+          "type": "background-wall",
+          "cx": 0.9300000000000006,
+          "cy": 3.6500000000000004,
+          "w": 5.3,
+          "h": 0.2,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "LED",
+          "type": "screen",
+          "cx": 1.1000000000000005,
+          "cy": 4.449999999999999,
+          "w": 1.66,
+          "h": 0.13,
+          "zone": "smart-module",
+          "angle": 90,
+          "screen": "75 inch per D01 p20; casing proxy"
+        },
+        {
+          "id": "SC",
+          "type": "table",
+          "cx": 2.4300000000000006,
+          "cy": 2.4500000000000006,
+          "w": 0.85,
+          "h": 1.6,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "SC-S",
+          "type": "chair",
+          "cx": 2.4300000000000006,
+          "cy": 3.35,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "consultant",
+          "facing": 0
+        },
+        {
+          "id": "SC-C1",
+          "type": "chair",
+          "cx": 2.88,
+          "cy": 1.55,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "customer",
+          "facing": 180
+        },
+        {
+          "id": "SC-C2",
+          "type": "chair",
+          "cx": 1.9800000000000004,
+          "cy": 1.55,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "customer",
+          "facing": 180
+        },
+        {
+          "id": "EP",
+          "type": "price-stand",
+          "cx": 2.330000000000001,
+          "cy": 8.4,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "LP",
+          "type": "linear-floor-light",
+          "cx": 4.68,
+          "cy": 3.95,
+          "w": 0.4,
+          "h": 0.4,
+          "zone": "smart-module",
+          "angle": 90,
+          "round": true,
+          "note": "D01 p20 floor lamp is an inset linear floor light, not a freestanding lampshade."
+        },
+        {
+          "id": "C1",
+          "type": "table",
+          "cx": 20.7,
+          "cy": 9.65,
+          "w": 3.2,
+          "h": 0.85,
+          "zone": "MB-consult"
+        },
+        {
+          "id": "C1-U0",
+          "type": "chair",
+          "cx": 19.6,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L0",
+          "type": "chair",
+          "cx": 19.6,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-U1",
+          "type": "chair",
+          "cx": 20.7,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L1",
+          "type": "chair",
+          "cx": 20.7,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-U2",
+          "type": "chair",
+          "cx": 21.8,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L2",
+          "type": "chair",
+          "cx": 21.8,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C2",
+          "type": "table",
+          "cx": 16.5,
+          "cy": 9.65,
+          "w": 0.8,
+          "h": 0.8,
+          "zone": "MB-consult",
+          "round": true,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained"
+        },
+        {
+          "id": "C2-C1",
+          "type": "chair",
+          "cx": 16.5,
+          "cy": 10.57,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained",
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C2-C2",
+          "type": "chair",
+          "cx": 16.5,
+          "cy": 8.73,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained",
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "AS1",
+          "type": "sofa",
+          "cx": 36.45,
+          "cy": 9.05,
+          "w": 2.4,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 3
+        },
+        {
+          "id": "AS2",
+          "type": "sofa",
+          "cx": 36.45,
+          "cy": 15.1,
+          "w": 2.4,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 3
+        },
+        {
+          "id": "AA1",
+          "type": "armchair",
+          "cx": 35.1,
+          "cy": 11.05,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA2",
+          "type": "armchair",
+          "cx": 37.8,
+          "cy": 11.05,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA3",
+          "type": "armchair",
+          "cx": 35.1,
+          "cy": 13.2,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA4",
+          "type": "armchair",
+          "cx": 37.8,
+          "cy": 13.2,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AT1",
+          "type": "table",
+          "cx": 36.45,
+          "cy": 10.2,
+          "w": 1.1,
+          "h": 0.55,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "AT2",
+          "type": "table",
+          "cx": 36.45,
+          "cy": 14.15,
+          "w": 1.1,
+          "h": 0.55,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "N",
+          "type": "hospitality",
+          "cx": 39.15,
+          "cy": 14.7,
+          "w": 0.55,
+          "h": 1.4,
+          "zone": "air-lounge",
+          "plumbing": "reuse existing provision only; location TBC"
+        },
+        {
+          "id": "TV",
+          "type": "screen",
+          "cx": 39.78,
+          "cy": 12.15,
+          "w": 0.15,
+          "h": 1.2,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "FC-T",
+          "type": "consult-table",
+          "cx": 37.35,
+          "cy": 5.1,
+          "w": 1.805,
+          "h": 0.96,
+          "zone": "flex-consult",
+          "catalogue": "TA03 / D02 PDF p155"
+        },
+        {
+          "id": "FC-SB",
+          "type": "sideboard",
+          "cx": 38.3625,
+          "cy": 5.1,
+          "w": 0.52,
+          "h": 3,
+          "zone": "flex-consult",
+          "catalogue": "SM01 / D02 PDF p153; schematic connecting bracket"
+        },
+        {
+          "id": "FC-STAFF",
+          "type": "chair",
+          "cx": 37.25,
+          "cy": 6.12,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "flex-consult",
+          "facing": 0,
+          "role": "consultant",
+          "seats": 1
+        },
+        {
+          "id": "FC-C1",
+          "type": "chair",
+          "cx": 36.72,
+          "cy": 4.08,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "flex-consult",
+          "facing": 180,
+          "seats": 1
+        },
+        {
+          "id": "FC-C2",
+          "type": "chair",
+          "cx": 37.57,
+          "cy": 4.08,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "flex-consult",
+          "facing": 180,
+          "seats": 1
+        },
+        {
+          "id": "FC-LOW",
+          "type": "table",
+          "cx": 34.5,
+          "cy": 5.1,
+          "w": 0.65,
+          "h": 0.65,
+          "zone": "flex",
+          "round": true,
+          "low": true
+        },
+        {
+          "id": "FC-W1",
+          "type": "armchair",
+          "cx": 34.5,
+          "cy": 6.15,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "flex",
+          "seats": 1,
+          "facing": 0
+        },
+        {
+          "id": "FC-W2",
+          "type": "armchair",
+          "cx": 34.5,
+          "cy": 4.05,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "flex",
+          "seats": 1,
+          "facing": 180
+        },
+        {
+          "id": "SHARED-EV",
+          "type": "charger",
+          "cx": 32.85,
+          "cy": 7.45,
+          "w": 0.4,
+          "h": 0.45,
+          "angle": 0,
+          "zone": "shared-existing",
+          "retained": true,
+          "source": "Owner-adopted review + site photos 8/9",
+          "status": "Existing MB wallbox reused; photo-based proxy adjusted clear of folded glass, not a measured location or physical relocation; capacity/cable/shared-use approval and commissioning pending"
+        },
+        {
+          "id": "SMART-WINDOW-LOGO",
+          "type": "window-logo",
+          "cx": 35.97,
+          "cy": 2.73,
+          "w": 0.98,
+          "h": 0.65,
+          "angle": 0,
+          "zone": "smart-window",
+          "installation": "Type 4 — installed on indoor display window",
+          "logoSize": "SL2 candidate, 0.98 W x 1.32 H m; not SL4",
+          "centerHeight": 2.05,
+          "status": "Owner-selected plan pin; h is conservative plan-depth reservation including glass standoffs; height/size/attachments/MB alignment require supplier approval"
+        }
+      ],
+      "routes": [
+        {
+          "id": "entrance-east-service",
+          "x": 28,
+          "y": 2.5,
+          "w": 3.5,
+          "h": 5.5,
+          "planningWidth": 3.5,
+          "status": "Schematic clear eastern approach only; full cross-showroom route unresolved"
+        },
+        {
+          "id": "service-approach-pedestrian",
+          "x": 28,
+          "y": 8,
+          "w": 4,
+          "h": 8,
+          "status": "nominal reservation, not code-approved clearance"
+        }
+      ],
+      "serviceAccessReserve": {
+        "x": 28,
+        "y": 8,
+        "w": 4,
+        "h": 8,
+        "status": "Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"
+      },
+      "optionalPackage": {
+        "active": true,
+        "scope": "Three-use flex room with independently switchable AC; main hall stays unconditioned",
+        "airAreasGrossAssumed": {
+          "old": 64,
+          "extension": 44,
+          "total": 108
+        },
+        "HVAC": {
+          "installed": true,
+          "defaultOn": true,
+          "state": "Dedicated supplemental unit, fresh-air and cooling load engineering required; engines off in enclosure",
+          "enclosure": "Sealed dedicated ceiling at assumed 3.15 m; existing lounge self-closing door assumed"
+        },
+        "G1": {
+          "line": [
+            [
+              32,
+              2.5
+            ],
+            [
+              32,
+              8
+            ]
+          ],
+          "pedestrianDoor": [
+            2.7,
+            3.9
+          ],
+          "vehicleGate": [
+            4,
+            7.2
+          ],
+          "state": "Gate closed with AC on; folded within flex footprint when AC off"
+        },
+        "F1": {
+          "line": [
+            [
+              32.4,
+              8
+            ],
+            [
+              34.8,
+              8
+            ]
+          ],
+          "openingWidth": 2.4,
+          "state": "Closed partition with connecting door"
+        },
+        "storage": {
+          "status": "MB6 removed from building model for consulting/lounge; furniture stored off-model, no storage on service route",
+          "approvalRequired": true
+        }
+      },
+      "people": [
+        {
+          "id": "smart-advisor",
+          "seat": "SC-S",
+          "height": 1.76,
+          "shirt": "#171a1b",
+          "pants": "#252c31",
+          "skin": "#bb8969"
+        },
+        {
+          "id": "smart-client-1",
+          "seat": "SC-C1",
+          "height": 1.66,
+          "shirt": "#a97653",
+          "pants": "#394654",
+          "skin": "#c79a76"
+        },
+        {
+          "id": "smart-client-2",
+          "seat": "SC-C2",
+          "height": 1.71,
+          "shirt": "#dbd6ca",
+          "pants": "#394550",
+          "skin": "#a7785c"
+        },
+        {
+          "id": "reception-advisor",
+          "seat": "P-ST0",
+          "height": 1.74,
+          "shirt": "#e4e2d9",
+          "pants": "#272c35",
+          "skin": "#c09070"
+        },
+        {
+          "id": "reception-client",
+          "seat": "P-CU0",
+          "height": 1.69,
+          "shirt": "#667d84",
+          "pants": "#44423e",
+          "skin": "#b88363"
+        },
+        {
+          "id": "existing-lounge-reader",
+          "seat": "AA3",
+          "height": 1.73,
+          "shirt": "#a9aa9d",
+          "pants": "#383f46",
+          "skin": "#bf947b"
+        },
+        {
+          "id": "gallery-customer",
+          "x": 17.4,
+          "y": 4.15,
+          "height": 1.72,
+          "facing": 70,
+          "pose": "walk",
+          "shirt": "#b9b2a4",
+          "pants": "#4a5869",
+          "skin": "#c89875"
+        },
+        {
+          "id": "arrival",
+          "x": 29.2,
+          "y": 5.6,
+          "height": 1.78,
+          "facing": 20,
+          "pose": "stand",
+          "shirt": "#ebe6dd",
+          "pants": "#303e4b",
+          "skin": "#ad7859"
+        },
+        {
+          "id": "flex-user-0",
+          "seat": "FC-STAFF",
+          "height": 1.65,
+          "shirt": "#394855",
+          "pants": "#3e4850",
+          "skin": "#bf8d6b"
+        },
+        {
+          "id": "flex-user-1",
+          "seat": "FC-C1",
+          "height": 1.6849999999999998,
+          "shirt": "#d0bda6",
+          "pants": "#3e4850",
+          "skin": "#bf8d6b"
+        },
+        {
+          "id": "flex-user-2",
+          "seat": "FC-C2",
+          "height": 1.72,
+          "shirt": "#7d9593",
+          "pants": "#3e4850",
+          "skin": "#bf8d6b"
+        },
+        {
+          "id": "flex-user-3",
+          "seat": "FC-W1",
+          "height": 1.755,
+          "shirt": "#e0dfd7",
+          "pants": "#3e4850",
+          "skin": "#bf8d6b"
+        }
+      ]
+    },
+    {
+      "mode": "lounge",
+      "floor": [
+        [
+          0,
+          0
+        ],
+        [
+          24,
+          0
+        ],
+        [
+          24,
+          2.5
+        ],
+        [
+          40,
+          2.5
+        ],
+        [
+          40,
+          16
+        ],
+        [
+          0,
+          16
+        ]
+      ],
+      "columns": [
+        {
+          "x": -0.25,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": -0.25,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": -0.25,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 7.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 15.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": -0.25,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 23.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 31.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 31.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 39.75,
+          "y": 7.75,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 39.75,
+          "y": 15.75,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "module": {
+        "type": "Module 3B",
+        "quantity": 1,
+        "source": "D01 PDF p20",
+        "origin": [
+          0.6500000000000004,
+          0.35
+        ],
+        "offset": [
+          7.28,
+          0.35
+        ],
+        "rotation": 90,
+        "width": 6.630000000000001,
+        "depth": 8.65,
+        "envelopePolygon": [
+          [
+            7.28,
+            0.35
+          ],
+          [
+            7.280000000000001,
+            9
+          ],
+          [
+            0.6500000000000012,
+            9
+          ],
+          [
+            0.6500000000000004,
+            0.35000000000000037
+          ]
+        ],
+        "carpet": [
+          [
+            1.1800000000000006,
+            1.1000000000000005
+          ],
+          [
+            1.1800000000000006,
+            5.6499999999999995
+          ],
+          [
+            3.4800000000000004,
+            4.25
+          ],
+          [
+            3.4800000000000004,
+            1.1000000000000003
+          ]
+        ],
+        "sourceEnvelope": [
+          8.65,
+          6.63
+        ],
+        "backwallLength": 5.3,
+        "shape": [
+          [
+            0.6500000000000004,
+            0.35000000000000037
+          ],
+          [
+            0.6500000000000012,
+            9
+          ],
+          [
+            3.200000000000001,
+            9
+          ],
+          [
+            7.28,
+            6.6499999999999995
+          ],
+          [
+            4.03,
+            0.3500000000000002
+          ]
+        ],
+        "shapeStatus": "Dimension-derived platform with small schematic corner radii; 2550 + 4080 = 6630 confirmed visually in D01 p20. Supplier fabrication CAD pending.",
+        "car": {
+          "id": "S1",
+          "brand": "smart",
+          "cx": 4.43,
+          "cy": 6.55,
+          "l": 4.695,
+          "w": 2.169,
+          "angle": 330,
+          "bodyWidth": 1.92,
+          "height": 1.705,
+          "model": "smart #5 Premium",
+          "exterior": "Saturn Beige Matte",
+          "interior": "Shadow Black",
+          "dimensionStatus": "published vehicle dimensions; includes mirrors"
+        },
+        "status": "One complete 3B, source envelope 8.65 x 6.63 m, rotated 90 degrees; one-car exception requires site-specific written confirmation."
+      },
+      "cars": [
+        {
+          "id": "S1",
+          "brand": "smart",
+          "cx": 4.43,
+          "cy": 6.55,
+          "l": 4.695,
+          "w": 2.169,
+          "angle": 330,
+          "bodyWidth": 1.92,
+          "height": 1.705,
+          "model": "smart #5 Premium",
+          "exterior": "Saturn Beige Matte",
+          "interior": "Shadow Black",
+          "dimensionStatus": "published vehicle dimensions; includes mirrors"
+        },
+        {
+          "id": "MB1",
+          "brand": "MB",
+          "cx": 12,
+          "cy": 1.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB2",
+          "brand": "MB",
+          "cx": 20,
+          "cy": 1.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB3",
+          "brand": "MB",
+          "cx": 12,
+          "cy": 6.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB4",
+          "brand": "MB",
+          "cx": 20,
+          "cy": 6.65,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": 0
+        },
+        {
+          "id": "MB5",
+          "brand": "MB",
+          "cx": 26.2,
+          "cy": 5.25,
+          "l": 5.2,
+          "w": 2.1,
+          "angle": -90,
+          "noseDirection": "toward entrance / negative Y",
+          "clearanceStatus": "HOLD: 0.15 m front/rear bay margins; full circulation/swept path unverified"
+        }
+      ],
+      "furniture": [
+        {
+          "id": "P",
+          "type": "counter",
+          "cx": 11.6,
+          "cy": 9.65,
+          "w": 6,
+          "h": 0.8,
+          "zone": "counter",
+          "retained": true,
+          "dimensionStatus": "Existing counter retained; previous unmeasured proxy aligned to A01 sales position. Survey actual location.",
+          "signage": "shared reception / service direction / smart care table card, no added floor obstruction"
+        },
+        {
+          "id": "MB1-EP",
+          "type": "price-stand",
+          "cx": 15.3,
+          "cy": 1.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB2-EP",
+          "type": "price-stand",
+          "cx": 23.3,
+          "cy": 1.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB3-EP",
+          "type": "price-stand",
+          "cx": 15.3,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB4-EP",
+          "type": "price-stand",
+          "cx": 23.3,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Reuse existing display stand"
+        },
+        {
+          "id": "MB5-EP",
+          "type": "price-stand",
+          "cx": 24.65,
+          "cy": 6.65,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "MB-price",
+          "retained": true,
+          "note": "Retained price stand beside MB5, outside service reserve",
+          "relocated": true
+        },
+        {
+          "id": "P-ST0",
+          "type": "chair",
+          "cx": 9.7,
+          "cy": 10.55,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-staff",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-CU0",
+          "type": "chair",
+          "cx": 9.7,
+          "cy": 8.75,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-customer",
+          "angle": 0,
+          "seats": 1,
+          "facing": 180,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-ST1",
+          "type": "chair",
+          "cx": 13.3,
+          "cy": 10.55,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-staff",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "P-CU1",
+          "type": "chair",
+          "cx": 13.3,
+          "cy": 8.75,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "counter-customer",
+          "angle": 0,
+          "seats": 1,
+          "facing": 180,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "VM",
+          "type": "cabinet",
+          "cx": 24.45,
+          "cy": 10.95,
+          "w": 1.8,
+          "h": 0.5,
+          "zone": "MB-accessories",
+          "relocated": true,
+          "note": "Relocated from (29.2,11.35) outside owner-reported service access; clearance and actual cabinet size unverified"
+        },
+        {
+          "id": "W",
+          "type": "background-wall",
+          "cx": 0.9300000000000006,
+          "cy": 3.6500000000000004,
+          "w": 5.3,
+          "h": 0.2,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "LED",
+          "type": "screen",
+          "cx": 1.1000000000000005,
+          "cy": 4.449999999999999,
+          "w": 1.66,
+          "h": 0.13,
+          "zone": "smart-module",
+          "angle": 90,
+          "screen": "75 inch per D01 p20; casing proxy"
+        },
+        {
+          "id": "SC",
+          "type": "table",
+          "cx": 2.4300000000000006,
+          "cy": 2.4500000000000006,
+          "w": 0.85,
+          "h": 1.6,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "SC-S",
+          "type": "chair",
+          "cx": 2.4300000000000006,
+          "cy": 3.35,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "consultant",
+          "facing": 0
+        },
+        {
+          "id": "SC-C1",
+          "type": "chair",
+          "cx": 2.88,
+          "cy": 1.55,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "customer",
+          "facing": 180
+        },
+        {
+          "id": "SC-C2",
+          "type": "chair",
+          "cx": 1.9800000000000004,
+          "cy": 1.55,
+          "w": 0.55,
+          "h": 0.55,
+          "zone": "smart-module",
+          "angle": 90,
+          "seats": 1,
+          "role": "customer",
+          "facing": 180
+        },
+        {
+          "id": "EP",
+          "type": "price-stand",
+          "cx": 2.330000000000001,
+          "cy": 8.4,
+          "w": 0.35,
+          "h": 0.35,
+          "zone": "smart-module",
+          "angle": 90
+        },
+        {
+          "id": "LP",
+          "type": "linear-floor-light",
+          "cx": 4.68,
+          "cy": 3.95,
+          "w": 0.4,
+          "h": 0.4,
+          "zone": "smart-module",
+          "angle": 90,
+          "round": true,
+          "note": "D01 p20 floor lamp is an inset linear floor light, not a freestanding lampshade."
+        },
+        {
+          "id": "C1",
+          "type": "table",
+          "cx": 20.7,
+          "cy": 9.65,
+          "w": 3.2,
+          "h": 0.85,
+          "zone": "MB-consult"
+        },
+        {
+          "id": "C1-U0",
+          "type": "chair",
+          "cx": 19.6,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L0",
+          "type": "chair",
+          "cx": 19.6,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-U1",
+          "type": "chair",
+          "cx": 20.7,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L1",
+          "type": "chair",
+          "cx": 20.7,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-U2",
+          "type": "chair",
+          "cx": 21.8,
+          "cy": 10.6,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C1-L2",
+          "type": "chair",
+          "cx": 21.8,
+          "cy": 8.7,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C2",
+          "type": "table",
+          "cx": 16.5,
+          "cy": 9.65,
+          "w": 0.8,
+          "h": 0.8,
+          "zone": "MB-consult",
+          "round": true,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained"
+        },
+        {
+          "id": "C2-C1",
+          "type": "chair",
+          "cx": 16.5,
+          "cy": 10.57,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained",
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "C2-C2",
+          "type": "chair",
+          "cx": 16.5,
+          "cy": 8.73,
+          "w": 0.7,
+          "h": 0.7,
+          "zone": "MB-consult",
+          "angle": 0,
+          "seats": 1,
+          "relocated": true,
+          "note": "Small MB consultation set moved left to free north pedestrian detour; 2 seats retained",
+          "catalogue": "D02 PDF pp143-144 shell chair proxy"
+        },
+        {
+          "id": "AS1",
+          "type": "sofa",
+          "cx": 36.45,
+          "cy": 9.05,
+          "w": 2.4,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 3
+        },
+        {
+          "id": "AS2",
+          "type": "sofa",
+          "cx": 36.45,
+          "cy": 15.1,
+          "w": 2.4,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 3
+        },
+        {
+          "id": "AA1",
+          "type": "armchair",
+          "cx": 35.1,
+          "cy": 11.05,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA2",
+          "type": "armchair",
+          "cx": 37.8,
+          "cy": 11.05,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA3",
+          "type": "armchair",
+          "cx": 35.1,
+          "cy": 13.2,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AA4",
+          "type": "armchair",
+          "cx": 37.8,
+          "cy": 13.2,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "air-lounge",
+          "seats": 1
+        },
+        {
+          "id": "AT1",
+          "type": "table",
+          "cx": 36.45,
+          "cy": 10.2,
+          "w": 1.1,
+          "h": 0.55,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "AT2",
+          "type": "table",
+          "cx": 36.45,
+          "cy": 14.15,
+          "w": 1.1,
+          "h": 0.55,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "N",
+          "type": "hospitality",
+          "cx": 39.15,
+          "cy": 14.7,
+          "w": 0.55,
+          "h": 1.4,
+          "zone": "air-lounge",
+          "plumbing": "reuse existing provision only; location TBC"
+        },
+        {
+          "id": "TV",
+          "type": "screen",
+          "cx": 39.78,
+          "cy": 12.15,
+          "w": 0.15,
+          "h": 1.2,
+          "zone": "air-lounge"
+        },
+        {
+          "id": "FA-S1",
+          "type": "sofa",
+          "cx": 36.5,
+          "cy": 3.3,
+          "w": 2.4,
+          "h": 0.85,
+          "zone": "flex",
+          "seats": 3,
+          "facing": 180
+        },
+        {
+          "id": "FA-S2",
+          "type": "sofa",
+          "cx": 36.5,
+          "cy": 6.7,
+          "w": 2.4,
+          "h": 0.85,
+          "zone": "flex",
+          "seats": 3,
+          "facing": 0
+        },
+        {
+          "id": "FA-A1",
+          "type": "armchair",
+          "cx": 34.55,
+          "cy": 5,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "flex",
+          "seats": 1,
+          "facing": 90
+        },
+        {
+          "id": "FA-A2",
+          "type": "armchair",
+          "cx": 38.45,
+          "cy": 5,
+          "w": 0.85,
+          "h": 0.85,
+          "zone": "flex",
+          "seats": 1,
+          "facing": -90
+        },
+        {
+          "id": "FA-T1",
+          "type": "table",
+          "cx": 36.3,
+          "cy": 5,
+          "w": 0.65,
+          "h": 0.65,
+          "zone": "flex",
+          "round": true,
+          "low": true,
+          "tableHeight": 0.65,
+          "catalogue": "TA02 large / D02 p159"
+        },
+        {
+          "id": "FA-T2",
+          "type": "table",
+          "cx": 37.05,
+          "cy": 5.2,
+          "w": 0.45,
+          "h": 0.45,
+          "zone": "flex",
+          "round": true,
+          "low": true,
+          "tableHeight": 0.6,
+          "catalogue": "TA02 small / D02 p159"
+        },
+        {
+          "id": "SHARED-EV",
+          "type": "charger",
+          "cx": 32.85,
+          "cy": 7.45,
+          "w": 0.4,
+          "h": 0.45,
+          "angle": 0,
+          "zone": "shared-existing",
+          "retained": true,
+          "source": "Owner-adopted review + site photos 8/9",
+          "status": "Existing MB wallbox reused; photo-based proxy adjusted clear of folded glass, not a measured location or physical relocation; capacity/cable/shared-use approval and commissioning pending"
+        },
+        {
+          "id": "SMART-WINDOW-LOGO",
+          "type": "window-logo",
+          "cx": 35.97,
+          "cy": 2.73,
+          "w": 0.98,
+          "h": 0.65,
+          "angle": 0,
+          "zone": "smart-window",
+          "installation": "Type 4 — installed on indoor display window",
+          "logoSize": "SL2 candidate, 0.98 W x 1.32 H m; not SL4",
+          "centerHeight": 2.05,
+          "status": "Owner-selected plan pin; h is conservative plan-depth reservation including glass standoffs; height/size/attachments/MB alignment require supplier approval"
+        }
+      ],
+      "routes": [
+        {
+          "id": "entrance-east-service",
+          "x": 28,
+          "y": 2.5,
+          "w": 3.5,
+          "h": 5.5,
+          "planningWidth": 3.5,
+          "status": "Schematic clear eastern approach only; full cross-showroom route unresolved"
+        },
+        {
+          "id": "service-approach-pedestrian",
+          "x": 28,
+          "y": 8,
+          "w": 4,
+          "h": 8,
+          "status": "nominal reservation, not code-approved clearance"
+        }
+      ],
+      "serviceAccessReserve": {
+        "x": 28,
+        "y": 8,
+        "w": 4,
+        "h": 8,
+        "status": "Approximate clear reserve east of traced manager boundary; column projection, doors and swept path remain unverified"
+      },
+      "optionalPackage": {
+        "active": true,
+        "scope": "Three-use flex room with independently switchable AC; main hall stays unconditioned",
+        "airAreasGrossAssumed": {
+          "old": 64,
+          "extension": 44,
+          "total": 108
+        },
+        "HVAC": {
+          "installed": true,
+          "defaultOn": true,
+          "state": "Dedicated supplemental unit, fresh-air and cooling load engineering required; engines off in enclosure",
+          "enclosure": "Sealed dedicated ceiling at assumed 3.15 m; existing lounge self-closing door assumed"
+        },
+        "G1": {
+          "line": [
+            [
+              32,
+              2.5
+            ],
+            [
+              32,
+              8
+            ]
+          ],
+          "pedestrianDoor": [
+            2.7,
+            3.9
+          ],
+          "vehicleGate": [
+            4,
+            7.2
+          ],
+          "state": "Gate closed with AC on; folded within flex footprint when AC off"
+        },
+        "F1": {
+          "line": [
+            [
+              32.4,
+              8
+            ],
+            [
+              34.8,
+              8
+            ]
+          ],
+          "openingWidth": 2.4,
+          "state": "Open link only with Flex AC on; closed before vehicle gate opens with AC off"
+        },
+        "storage": {
+          "status": "MB6 removed from building model for consulting/lounge; furniture stored off-model, no storage on service route",
+          "approvalRequired": true
+        }
+      },
+      "people": [
+        {
+          "id": "smart-advisor",
+          "seat": "SC-S",
+          "height": 1.76,
+          "shirt": "#171a1b",
+          "pants": "#252c31",
+          "skin": "#bb8969"
+        },
+        {
+          "id": "smart-client-1",
+          "seat": "SC-C1",
+          "height": 1.66,
+          "shirt": "#a97653",
+          "pants": "#394654",
+          "skin": "#c79a76"
+        },
+        {
+          "id": "smart-client-2",
+          "seat": "SC-C2",
+          "height": 1.71,
+          "shirt": "#dbd6ca",
+          "pants": "#394550",
+          "skin": "#a7785c"
+        },
+        {
+          "id": "reception-advisor",
+          "seat": "P-ST0",
+          "height": 1.74,
+          "shirt": "#e4e2d9",
+          "pants": "#272c35",
+          "skin": "#c09070"
+        },
+        {
+          "id": "reception-client",
+          "seat": "P-CU0",
+          "height": 1.69,
+          "shirt": "#667d84",
+          "pants": "#44423e",
+          "skin": "#b88363"
+        },
+        {
+          "id": "existing-lounge-reader",
+          "seat": "AA3",
+          "height": 1.73,
+          "shirt": "#a9aa9d",
+          "pants": "#383f46",
+          "skin": "#bf947b"
+        },
+        {
+          "id": "gallery-customer",
+          "x": 17.4,
+          "y": 4.15,
+          "height": 1.72,
+          "facing": 70,
+          "pose": "walk",
+          "shirt": "#b9b2a4",
+          "pants": "#4a5869",
+          "skin": "#c89875"
+        },
+        {
+          "id": "arrival",
+          "x": 29.2,
+          "y": 5.6,
+          "height": 1.78,
+          "facing": 20,
+          "pose": "stand",
+          "shirt": "#ebe6dd",
+          "pants": "#303e4b",
+          "skin": "#ad7859"
+        },
+        {
+          "id": "flex-user-0",
+          "seat": "FA-S1",
+          "height": 1.65,
+          "shirt": "#394855",
+          "pants": "#3e4850",
+          "skin": "#bf8d6b"
+        },
+        {
+          "id": "flex-user-1",
+          "seat": "FA-S2",
+          "height": 1.6849999999999998,
+          "shirt": "#d0bda6",
+          "pants": "#3e4850",
+          "skin": "#bf8d6b"
+        },
+        {
+          "id": "flex-user-2",
+          "seat": "FA-A1",
+          "height": 1.72,
+          "shirt": "#7d9593",
+          "pants": "#3e4850",
+          "skin": "#bf8d6b"
+        }
+      ]
+    }
+  ],
+  "manualElements": [
+    "D01 all 33 pages reread",
+    "D01 pp15/20/21 full 3B, silver backdrop, 75-inch display, pale wood desk, grey chairs, carpet, LED platform edging and digital E-price with iPad",
+    "D01 p8 Type4 indoor-window logo at owner pin35.97,2.73; p9 SL2 size candidate only",
+    "D01 p22 charger requirement; owner adopts reuse of existing MB wallbox, shared-use approval and commissioning pending",
+    "D01 p32 black smart uniform sample, TBC",
+    "Mercedes material and vehicle detail unchanged from v06; sales proxies aligned only"
+  ],
+  "limitations": [
+    "One smart car is owner-reported exception; written site approval needed",
+    "Accessory display wall requirement unresolved for standalone 3B; no second 3A inserted",
+    "Outer smart dimensions sourced; authored sculpted geometry is approximate",
+    "Plan-traced staircase and office boundaries require site validation; all heights assumed",
+    "MB5 circulation HOLD; entrance swept path unresolved",
+    "Main hall unconditioned; flex/old lounge enclosure and HVAC require engineer review",
+    "Official raster assets not redistributed without permission",
+    "X grid remains assumed: LX0..5=0,8,16,24,32,40; exterior registration inherits this uncertainty",
+    "Street View is historical; no assertion that utilities/fences/access match today's site",
+    "Coloured dashed lines indicate model evidence controls, not proposed paint or title-deed boundaries",
+    "No confirmed north arrow, parcel area, setback compliance, road reserve or boundary ownership",
+    "A-D, D-E and A-H are not derived; rear edge of scene is an explicit model crop",
+    "No driveway turning/sightline/drainage/accessibility/electrical-clearance approval",
+    "Original photos and drawings remain private; this public JSON contains derived coordinates only"
+  ],
+  "smartVehicle": {
+    "model": "smart #5",
+    "trim": "Premium",
+    "exterior": "Saturn Beige Matte",
+    "interior": "Shadow Black",
+    "roof": "Eclipse Black",
+    "market": "UK / RHD reference",
+    "configuration": "HY1UOGUF52B9000180",
+    "length": 4.695,
+    "bodyWidth": 1.92,
+    "mirrorWidth": 2.169,
+    "height": 1.705,
+    "wheelbase": 2.9,
+    "frontOverhang": 0.855,
+    "rearOverhang": 0.94,
+    "meshStatus": "Independently authored dimensional representation, not manufacturer CAD",
+    "source": "https://uk.smart.com/en/models/hashtag-five/",
+    "secondarySource": "https://ma.smart.com/modeles/smart-5/premium-2"
+  },
+  "building": {
+    "source": [
+      "A01: LINE_ALBUM_Showroom_260912_10.jpg",
+      "A04: LINE_ALBUM_Showroom_260912_13.jpg"
+    ],
+    "units": "metres",
+    "coordinates": "X increases along facade; Y increases from front H toward rear E; world=(X,height,-Y)",
+    "grids": {
+      "X": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        40
+      ],
+      "XStatus": "assumed equal bays, not confirmed by legible dimension string",
+      "Y": {
+        "H": 0,
+        "G": 2.5,
+        "F": 8,
+        "E": 16
+      },
+      "YStatus": "owner confirmed"
+    },
+    "levels": {
+      "showroom": 0,
+      "datumNote": "+0.80 is a level mark, not a horizontal dimension; road datum not confirmed"
+    },
+    "heights": {
+      "office": 3.18,
+      "mezzanineSoffit": 3.28,
+      "mezzanineTop": 3.56,
+      "hall": 7.1,
+      "status": "assumed; not traced from plan"
+    },
+    "admin": {
+      "polygon": [
+        [
+          8,
+          11.5
+        ],
+        [
+          16,
+          11.5
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          16
+        ]
+      ],
+      "status": "photo traced / verify as-built",
+      "hallDoor": [
+        [
+          8,
+          11.7
+        ],
+        [
+          8,
+          12.8
+        ]
+      ],
+      "core": [
+        [
+          8,
+          13.9
+        ],
+        [
+          10.3,
+          13.9
+        ],
+        [
+          10.3,
+          16
+        ],
+        [
+          8,
+          16
+        ]
+      ]
+    },
+    "manager": {
+      "polygon": [
+        [
+          16,
+          11.5
+        ],
+        [
+          26,
+          11.5
+        ],
+        [
+          26.174311485495316,
+          11.50761060381651
+        ],
+        [
+          26.34729635533386,
+          11.530384493975584
+        ],
+        [
+          26.51763809020504,
+          11.568148347421863
+        ],
+        [
+          26.68404028665134,
+          11.620614758428184
+        ],
+        [
+          26.8452365234814,
+          11.6873844259267
+        ],
+        [
+          27,
+          11.767949192431123
+        ],
+        [
+          27.147152872702094,
+          11.861695911422016
+        ],
+        [
+          27.28557521937308,
+          11.967911113762044
+        ],
+        [
+          27.414213562373096,
+          12.085786437626904
+        ],
+        [
+          27.532088886237958,
+          12.21442478062692
+        ],
+        [
+          27.638304088577982,
+          12.352847127297908
+        ],
+        [
+          27.73205080756888,
+          12.5
+        ],
+        [
+          27.8126155740733,
+          12.654763476518601
+        ],
+        [
+          27.879385241571818,
+          12.815959713348663
+        ],
+        [
+          27.931851652578136,
+          12.982361909794959
+        ],
+        [
+          27.969615506024414,
+          13.15270364466614
+        ],
+        [
+          27.99238939618349,
+          13.325688514504684
+        ],
+        [
+          28,
+          13.5
+        ],
+        [
+          28,
+          16
+        ],
+        [
+          16,
+          16
+        ]
+      ],
+      "corner": {
+        "center": [
+          26,
+          13.5
+        ],
+        "radius": 2,
+        "start": -90,
+        "end": 0
+      },
+      "status": "photo traced, rounded SE corner approximate",
+      "boundaryAuthority": "Circular corner parameters are authoritative; polygon samples the R2 arc every 5 degrees. All dimensions remain photo-traced assumptions."
+    },
+    "stair": {
+      "type": "C-return, three legs",
+      "lower": {
+        "x": [
+          4.3,
+          6.3
+        ],
+        "y": [
+          12.4,
+          13.9
+        ],
+        "riseDirection": "negative X / inferred"
+      },
+      "west": {
+        "x": [
+          2.6,
+          4.3
+        ],
+        "y": [
+          13.9,
+          14.6
+        ],
+        "riseDirection": "positive Y / inferred"
+      },
+      "upper": {
+        "x": [
+          4.3,
+          6.3
+        ],
+        "y": [
+          14.6,
+          16
+        ],
+        "riseDirection": "positive X / inferred"
+      },
+      "well": {
+        "x": [
+          4.3,
+          6.3
+        ],
+        "y": [
+          13.9,
+          14.6
+        ]
+      },
+      "status": "photo-traced footprint and topology; rise, tread count, clear width and landing heights assumed",
+      "landings": [
+        {
+          "x": [
+            2.6,
+            4.3
+          ],
+          "y": [
+            12.4,
+            13.9
+          ]
+        },
+        {
+          "x": [
+            2.6,
+            4.3
+          ],
+          "y": [
+            14.6,
+            16
+          ]
+        }
+      ],
+      "renderOnly": {
+        "risers": [
+          8,
+          4,
+          8
+        ],
+        "rise": 0.178,
+        "totalRise": 3.56,
+        "status": "assumed visualization only; short middle treads and headroom need stair section"
+      }
+    },
+    "rearSteps": {
+      "x": [
+        6.3,
+        8
+      ],
+      "landingY": [
+        16,
+        17
+      ],
+      "y": [
+        17,
+        18.7
+      ],
+      "status": "separate rear/service level transition, direction/levels assumed"
+    },
+    "salesFrame": {
+      "frontY": 8,
+      "rearY": 11.5,
+      "status": "Grid F to traced office frontage; furniture adjusted from v06 unmeasured proxies"
+    }
+  },
+  "site": {
+    "schema": 1,
+    "revision": "v08",
+    "purpose": "Existing-condition schematic context for future exterior design; no new exterior proposal",
+    "coordinateFrame": "Same as v07: plan X,Y metres; world X,height,-Y; H=Y0; local interior FFL=height0",
+    "status": "legacy-unverified / photo-traced / assumed; NOT cadastral boundary or measured as-built",
+    "basis": "Photographed sheet 10 for compact forecourt, checked against supplied exterior photographs; sheet 13 retained as an alternative issue, not overlaid as current construction",
+    "sources": [
+      {
+        "id": "A01",
+        "file": "LINE_ALBUM_Showroom_260912_10.jpg",
+        "kind": "photographed legacy plan",
+        "status": "drawing revision and surveyed currency unknown"
+      },
+      {
+        "id": "A04",
+        "file": "LINE_ALBUM_Showroom_260912_13.jpg",
+        "kind": "alternative photographed plan / elevation",
+        "status": "not combined into current solid geometry"
+      },
+      {
+        "id": "P10",
+        "file": "S__78520373.jpg",
+        "kind": "exterior condition photograph",
+        "date": "unknown"
+      },
+      {
+        "id": "P11",
+        "file": "S__78520374.jpg",
+        "kind": "entrance close-up",
+        "date": "unknown"
+      },
+      {
+        "id": "P12",
+        "file": "251738.jpg",
+        "kind": "overall exterior photograph",
+        "date": "unknown"
+      },
+      {
+        "id": "SV24",
+        "kind": "three owner-supplied Street View captures",
+        "date": "2024-06"
+      },
+      {
+        "id": "SV17",
+        "kind": "one owner-supplied Street View capture",
+        "date": "2017-03",
+        "use": "historical context only, not assumed current condition"
+      }
+    ],
+    "bounds": {
+      "xMin": -14,
+      "xMax": 58,
+      "yMin": -15.4,
+      "yMax": 30
+    },
+    "rearClip": {
+      "y": 30,
+      "status": "arbitrary context crop, not rear boundary, not derived A-H length"
+    },
+    "front": {
+      "plinthProjection": {
+        "value": 1.2,
+        "status": "photo-traced candidate from A01; not printed dimension"
+      },
+      "setbackFromPlinth": {
+        "value": 7.2,
+        "status": "printed reading in A01; starts at outer front strip, not grid H"
+      },
+      "apronEdgeY": {
+        "value": -8.4,
+        "status": "derived candidate: -1.20-7.20, inherits uncertain endpoints/registration"
+      },
+      "entranceApronFrontY": {
+        "value": -2.4,
+        "status": "derived candidate using A01 printed 6.00 to same edge"
+      },
+      "gate": {
+        "xMin": -5.5,
+        "xMax": 2.5,
+        "width": 8,
+        "status": "8.00 printed width; centre X=-1.50 photo-traced"
+      },
+      "gateReturnRadius": {
+        "value": 3,
+        "status": "R3.00 printed in A01; returns simplified in ground mesh"
+      }
+    },
+    "edgeControlPoints": [
+      [
+        -7.2,
+        -8.4
+      ],
+      [
+        31,
+        -8.4
+      ],
+      [
+        34.5,
+        -8.2
+      ],
+      [
+        39,
+        -7.2
+      ],
+      [
+        43,
+        -5
+      ],
+      [
+        46.5,
+        -1.5
+      ],
+      [
+        48.7,
+        3
+      ],
+      [
+        50.2,
+        8.5
+      ],
+      [
+        50.5,
+        16
+      ],
+      [
+        50.5,
+        30
+      ]
+    ],
+    "edgeStatus": "A01 photo-traced front/east edge against assumed X frame; rounded corner is a trace, not a certified circular arc. Segment Y16 to30 is context extrapolation only.",
+    "leftContextEdge": [
+      [
+        -7.2,
+        -8.4
+      ],
+      [
+        -5,
+        0
+      ],
+      [
+        -2,
+        16
+      ],
+      [
+        0,
+        30
+      ]
+    ],
+    "leftEdgeStatus": "unverified legacy line / context crop; not modelled as a confirmed fence or cadastral boundary",
+    "east": {
+      "apronEdgeX": 50.5,
+      "serviceGapY": [
+        17,
+        25
+      ],
+      "status": "road-side edge traced against assumed 40m X grid; service opening position/width unmeasured"
+    },
+    "sidewalk": {
+      "width": 2,
+      "status": "photo-estimated display width, NOT A01 printed 3.10"
+    },
+    "road": {
+      "displayStripWidth": 5,
+      "status": "near-edge context strip only; not full carriageway width or legal road reserve; no traffic lanes certified"
+    },
+    "gateTransitions": {
+      "frontInnerY": -2.4,
+      "eastInnerX": 46,
+      "status": "render-only continuity to assumed grades, not measured or designed ramps; verify slope, drainage, turning and footway crossing"
+    },
+    "levels": {
+      "interiorFFL": 0,
+      "forecourt": -0.8,
+      "sidewalk": -1.45,
+      "road": -1.6,
+      "status": "ALL exterior rendered heights are photo-scale assumptions relative to model FFL0, NOT recovered drawing levels or road benchmark",
+      "warning": "+0.80 is a relative elevation annotation. Its relation to the public road is unconfirmed. No physical slope/step/retaining design is approved."
+    },
+    "entrySteps": {
+      "xMin": 25.6,
+      "xMax": 30.8,
+      "yMin": -1.2,
+      "landingY": 0.8,
+      "yMax": 2.5,
+      "risers": 5,
+      "status": "five-step visual proxy from entrance photo; width/treads/risers/landing require field measurement"
+    },
+    "planting": {
+      "frontBeds": [
+        [
+          0.15,
+          -1.12,
+          23.7,
+          0.85
+        ],
+        [
+          32.15,
+          1.35,
+          7.55,
+          0.85
+        ]
+      ],
+      "palmCentres": [
+        [
+          1,
+          -0.7
+        ],
+        [
+          7.4,
+          -0.7
+        ],
+        [
+          15.2,
+          -0.7
+        ],
+        [
+          22.5,
+          -0.7
+        ],
+        [
+          33,
+          1.75
+        ],
+        [
+          39,
+          1.75
+        ]
+      ],
+      "status": "photo-character proxies; species/count/locations not surveyed"
+    },
+    "markers": {
+      "pylon": [
+        42.5,
+        -3.4
+      ],
+      "flags": [
+        [
+          34,
+          -3.4
+        ],
+        [
+          35.4,
+          -3.4
+        ],
+        [
+          36.8,
+          -3.4
+        ]
+      ],
+      "directionSign": [
+        40.5,
+        -4.2
+      ],
+      "status": "photo-traced context proxies adjusted clear of other proxy objects; no physical relocation or new smart exterior branding proposed"
+    },
+    "utilityPoles": [
+      [
+        7,
+        -10.3
+      ],
+      [
+        24,
+        -10.3
+      ],
+      [
+        44.7,
+        -7.9
+      ],
+      [
+        52.4,
+        8.5
+      ]
+    ],
+    "upperBuilding": {
+      "upperBase": 7.2,
+      "mainHeight": 22,
+      "middleHeight": 18,
+      "rightHeight": 11,
+      "middleX": 24,
+      "rightX": 32,
+      "endX": 40,
+      "rearY": 16,
+      "recessY": 2.5,
+      "cornerRadius": 1.25,
+      "showroomSoffit": 7.02,
+      "fasciaHeight": 3.82,
+      "canopy": {
+        "cx": 28.2,
+        "width": 8.4,
+        "wallY": 2.5,
+        "frontY": -2,
+        "lowerChordHeight": 3.6,
+        "trussDepth": 0.4
+      },
+      "status": "ALL numbers are visual assumptions: rounded stepped massing and ribbon windows from photographs; not measured storeys or structural member sizes"
+    },
+    "alternativeA04": {
+      "frontStairWidthReading": 10.4,
+      "outerArcReading": 15,
+      "status": "10.40 and R15.00 readable on alternative sheet13; not applied to current canopy entrance; other endpoint/radius readings unresolved"
+    },
+    "limitations": [
+      "X grid remains assumed: LX0..5=0,8,16,24,32,40; exterior registration inherits this uncertainty",
+      "Street View is historical; no assertion that utilities/fences/access match today's site",
+      "Coloured dashed lines indicate model evidence controls, not proposed paint or title-deed boundaries",
+      "No confirmed north arrow, parcel area, setback compliance, road reserve or boundary ownership",
+      "A-D, D-E and A-H are not derived; rear edge of scene is an explicit model crop",
+      "No driveway turning/sightline/drainage/accessibility/electrical-clearance approval",
+      "Original photos and drawings remain private; this public JSON contains derived coordinates only"
+    ]
+  },
+  "feedbackPolicy": {
+    "submissionEnabled": true,
+    "reason": "Owner-authorized v08 feedback; live capability check and matching receipt required. Interior map remains interior-only; exterior comments use named area and view context."
+  }
+};

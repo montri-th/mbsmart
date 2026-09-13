@@ -1,4 +1,4 @@
-/* Benz Chitchai, owner-directed B / 3B, v07. Metres. Plan (x,y) => world (x,height,-y).
+/* Benz Chitchai, owner-directed B / 3B, v08 exterior context. Metres. Plan (x,y) => world (x,height,-y).
  * All vertical dimensions and product meshes are schematic. Manual references are in layout.js.
  * Material colours deliberately represent the photographed physical surfaces, not UI theme tokens.
  */
@@ -11,9 +11,9 @@
   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.6));renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.88;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;host.appendChild(renderer.domElement);
   renderer.domElement.setAttribute('role','img');renderer.domElement.setAttribute('aria-label','โมเดลโชว์รูม 3 มิติ หมุนด้วยเมาส์หรือเลือกมุมกล้องจากปุ่มด้านบน');
   const scene=new T.Scene();scene.background=new T.Color('#d4dce0');
-  const camera=new T.PerspectiveCamera(58,1,.08,220), target=new T.Vector3();
+  const camera=new T.PerspectiveCamera(58,1,.08,500), target=new T.Vector3();
   const shell=new T.Group(), overhead=new T.Group(), dynamic=new T.Group(), markings=new T.Group(), reviewMarker=new T.Group(), peopleGroup=new T.Group();scene.add(shell,overhead,dynamic,markings,reviewMarker,peopleGroup);
-  let state=dataset.states.find(s=>s.mode==='handover'), mode='handover', activeView='interior', labelsOn=false, dirty=true, acOn=false, peopleOn=true;
+  let state=dataset.states.find(s=>s.mode==='handover'), mode='handover', activeView='interior', labelsOn=false, dirty=true, acOn=false, peopleOn=true, contextOn=true, upperOn=false, occludersOn=true;
   const modeNames={handover:'Vehicle handover',consulting:'Consulting area',lounge:'Customer waiting annex'};
   const material=new Map(), labelItems=[];
   let seed=710;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
@@ -45,7 +45,12 @@
   const sun=new T.DirectionalLight('#fff6e4',1.6);sun.position.set(-5,17,15);sun.target.position.set(18,0,-6);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-35,right:35,top:22,bottom:-22,near:1,far:90});sun.shadow.bias=-.0002;sun.shadow.normalBias=.035;scene.add(sun,sun.target);
   const fill=new T.DirectionalLight('#d9edff',.55);fill.position.set(45,10,-6);scene.add(fill);
   // Existing plan and material character, with explicitly assumed heights.
-  slab(state.floor,-.12,.12,M.stone);slab([[-2,-3],[42,-3],[42,18],[-2,18]],-.36,.15,new T.MeshStandardMaterial({color:'#929b9e',roughness:.9}));
+  slab(state.floor,-.12,.12,M.stone);
+  const siteHelpers={mesh,box,planBox,sphere,cylinder,tube,slab,sign,M,floor:state.floor};
+  const site=window.BC_SITE(T,siteHelpers,dataset.site),exterior=window.BC_EXTERIOR_MASSING(T,siteHelpers,dataset.site.upperBuilding);
+  const contextRoot=new T.Group();contextRoot.name='EXTERIOR-CONTEXT-v08';scene.add(contextRoot);
+  contextRoot.add(site.ground,site.objects,site.occluders,site.guides,exterior.upper,exterior.facade,exterior.canopy);
+  function updateContext(){contextRoot.visible=contextOn;exterior.upper.visible=upperOn;site.occluders.visible=occludersOn;site.guides.visible=labelsOn;document.getElementById('site-context').checked=contextOn;document.getElementById('upper-building').checked=upperOn;document.getElementById('site-occluders').checked=occludersOn;dirty=true;}
   const floorShape=new T.Shape();state.floor.forEach((p,i)=>i?floorShape.lineTo(...p):floorShape.moveTo(...p));floorShape.closePath();
   const floorReflection=new window.BC_Reflector(new T.ShapeGeometry(floorShape),{textureWidth:1024,textureHeight:1024,color:'#aaaeb0',clipBias:.002,multisample:0});floorReflection.rotation.x=-Math.PI/2;floorReflection.position.y=.009;floorReflection.material.transparent=true;floorReflection.material.depthWrite=false;floorReflection.material.fragmentShader=floorReflection.material.fragmentShader.replace('color ), 1.0','color ), 0.23');floorReflection.renderOrder=1;shell.add(floorReflection);
   const inside=(x,y)=>x>=0&&x<=40&&y>=0&&y<=16&&!(x>24&&y<2.5);
@@ -54,9 +59,11 @@
   for(const c of state.columns){const x=c.x+c.w/2,y=c.y+c.h/2;planBox(x,y,c.w,c.h,7.1,M.column);for(const z of [.28,.48,2.95,3.15,6.3,6.5])planBox(x,y,c.w+.012,c.h+.012,.105,M.blackStone,z);}
   function glassWall(x1,y1,x2,y2,height=3.2,parent=shell,mat=M.glass,bottom=0,frame=true){const len=Math.hypot(x2-x1,y2-y1),g=new T.Group();parent.add(g);g.position.set((x1+x2)/2,bottom,-(y1+y2)/2);g.rotation.y=Math.atan2(y2-y1,x2-x1);box(0,height/2,0,len,height,.024,mat,g);if(frame){box(0,.04,0,len,.07,.08,M.dark,g);box(0,height-.04,0,len,.07,.08,M.dark,g);for(let p=-len/2;p<=len/2+.01;p+=Math.min(2,len))box(p,height/2,0,.038,height,.055,M.dark,g);box(len/2,height/2,0,.038,height,.055,M.dark,g);}return g;}
   glassWall(0,0,24,0,7);glassWall(0,0,0,16,7);glassWall(40,2.5,40,16,3.18);glassWall(32,2.5,40,2.5,3.18);
+  // Low-side upper glazing closes the photographic facade only; interior room plan is unchanged.
+  glassWall(24,2.5,40,2.5,3.82,exterior.facade,M.glass,3.18);glassWall(40,2.5,40,16,3.82,exterior.facade,M.glass,3.18);
   // Entrance recess: front glazing and a central assumed opening, not verified vehicle access.
   glassWall(24,2.5,26.6,2.5,3.18);glassWall(29.8,2.5,32,2.5,3.18);sign('ENTRANCE',28.2,2.82,-2.45,2.4,.29,0);
-  for(const y of [.8,1.6,2.4]){planBox(28.2,y,3.2,.8,.11,M.stone,-.36+y*.075);}
+  // The former three floating entrance blocks are replaced by the separate photo-based exterior stair in site.js.
   // A01/A04 photo-traced room enclosure. The former south door gaps were not evidenced.
   planBox(18,15.94,20,.13,3.18,M.white);
   planBox(8,11.60,.13,.20,3.18,M.white);planBox(8,14.4,.13,3.2,3.18,M.white);
@@ -212,21 +219,29 @@
   presets.handover.p=[33.5,2.2,3.2];presets.handover.t=[36,1.4,-5.2];
   addLabel('smart · Type 4 indoor-window logo / size TBC',35.97,2.85,-2.73);addLabel('MB wallbox เดิม · ใช้ร่วม / ตำแหน่งรอวัด',32.85,1.85,-7.45);
   presets.overview.p=[39,24,17];presets.plan.p=[20,26,-7.9];
+  presets.plan.title='ผังภายใน v08 · คงผัง v07';
+  presets.site={p:[76,46,60],t:[21,4,-6],ceiling:true,site:true,upper:true,title:'บริเวณโดยรอบ · ลาน รั้ว ทางเท้า และริมถนน (แนวอ้างอิงรอยืนยัน)'};
+  presets.frontage={p:[24,7,39],t:[21,7,-3],ceiling:true,site:true,upper:true,title:'มองจากริมถนน · อาคารเดิมและลานด้านหน้า'};
+  presets.siteplan={p:[22,77,-7],t:[22,-.6,-7.1],ceiling:false,site:true,upper:false,title:'ผังบริเวณ · คงกริดภายใน / เส้นสีไม่ใช่แนวเขตที่ดิน'};
+  addLabel('ลานหน้าอาคาร · จากขอบแถบหน้าอาคาร 7.20 ม. / รอยืนยัน',16,.55,4.6,true);
+  addLabel('ริมถนนสาธารณะ · แนวอ้างอิงภาพ / ไม่ใช่รังวัด',25,.1,10.6,true);
+  addLabel('ทางเข้า–ออกด้านข้าง · ขนาดและระดับรอสำรวจ',49,.3,-20,true);
   function updateCaption(){document.getElementById('view-title').textContent=activeView==='handover'?modeNames[mode]+' · แอร์ '+(acOn?'เปิด':'ปิด'):presets[activeView].title;}
-  function setView(v){activeView=v;const p=presets[v];camera.fov=v==='handover'?65:58;camera.updateProjectionMatrix();camera.position.set(...p.p);target.set(...p.t);if(v==='plan'||v==='overview'){const k=Math.max(1,1.8/camera.aspect);camera.position.sub(target).multiplyScalar(k).add(target);}camera.lookAt(target);overhead.visible=p.ceiling;document.getElementById('ceiling').checked=p.ceiling;root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));updateCaption();dirty=true;}
+  function setView(v){if(!Object.hasOwn(presets,v))return false;activeView=v;const p=presets[v];camera.fov=v==='handover'?65:58;camera.updateProjectionMatrix();camera.position.set(...p.p);target.set(...p.t);if(['plan','overview','site','siteplan','frontage'].includes(v)){const k=Math.max(1,(p.site?1.15:1.8)/camera.aspect);camera.position.sub(target).multiplyScalar(k).add(target);}camera.lookAt(target);overhead.visible=p.ceiling;document.getElementById('ceiling').checked=p.ceiling;upperOn=!!p.upper;if(p.site)contextOn=true;updateContext();root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));updateCaption();dirty=true;document.dispatchEvent(new CustomEvent('bc:viewchange',{detail:{view:v}}));return true;}
   function orbit(dx,dy){const v=camera.position.clone().sub(target),s=new T.Spherical().setFromVector3(v);s.theta-=dx*.006;s.phi=T.MathUtils.clamp(s.phi-dy*.006,.04,Math.PI/2+.05);camera.position.copy(target).add(new T.Vector3().setFromSpherical(s));camera.lookAt(target);dirty=true;}
-  function zoom(f){const v=camera.position.clone().sub(target);v.multiplyScalar(f);v.clampLength(.6,110);camera.position.copy(target).add(v);dirty=true;}
+  function zoom(f){const v=camera.position.clone().sub(target);v.multiplyScalar(f);v.clampLength(.6,290);camera.position.copy(target).add(v);dirty=true;}
   function pan(dx,dy){const distance=camera.position.distanceTo(target),right=new T.Vector3().setFromMatrixColumn(camera.matrix,0),up=new T.Vector3().setFromMatrixColumn(camera.matrix,1);const v=right.multiplyScalar(-dx*distance*.0018).add(up.multiplyScalar(dy*distance*.0018));camera.position.add(v);target.add(v);dirty=true;}
   const pointers=new Map();let lastPinch=0;
   renderer.domElement.addEventListener('contextmenu',e=>e.preventDefault());renderer.domElement.addEventListener('pointerdown',e=>{renderer.domElement.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,button:e.button});});
   renderer.domElement.addEventListener('pointermove',e=>{const old=pointers.get(e.pointerId);if(!old)return;const dx=e.clientX-old.x,dy=e.clientY-old.y;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,button:old.button});if(pointers.size===2){const a=[...pointers.values()],d=Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y);if(lastPinch)zoom(lastPinch/d);lastPinch=d;}else if(old.button===2||e.shiftKey)pan(dx,dy);else orbit(dx,dy);});
   for(const event of ['pointerup','pointercancel'])renderer.domElement.addEventListener(event,e=>{pointers.delete(e.pointerId);lastPinch=0;});renderer.domElement.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(e.deltaY*.001));},{passive:false});
-  root.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));document.getElementById('mode').addEventListener('change',e=>{setMode(e.target.value);updateCaption();});document.getElementById('ceiling').addEventListener('change',e=>{overhead.visible=e.target.checked;dirty=true;});document.getElementById('labels').addEventListener('change',e=>{labelsOn=e.target.checked;markings.visible=labelsOn;dirty=true;});
+  root.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));document.getElementById('mode').addEventListener('change',e=>{setMode(e.target.value);updateCaption();});document.getElementById('ceiling').addEventListener('change',e=>{overhead.visible=e.target.checked;dirty=true;});document.getElementById('labels').addEventListener('change',e=>{labelsOn=e.target.checked;markings.visible=labelsOn;updateContext();});
+  document.getElementById('site-context').addEventListener('change',e=>{contextOn=e.target.checked;updateContext();});document.getElementById('upper-building').addEventListener('change',e=>{upperOn=e.target.checked;if(upperOn)contextOn=true;updateContext();});document.getElementById('site-occluders').addEventListener('change',e=>{occludersOn=e.target.checked;updateContext();});
   document.getElementById('flex-ac').addEventListener('change',e=>setAC(e.target.checked));document.getElementById('people').addEventListener('change',e=>{peopleOn=e.target.checked;peopleGroup.visible=peopleOn;dirty=true;});
   function resize(){const w=host.clientWidth,h=host.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();dirty=true;}
   new ResizeObserver(resize).observe(host);
   function draw(){if(dirty){renderer.render(scene,camera);for(const q of labelItems){const p=q.point.clone().project(camera);q.el.hidden=!labelsOn||p.z>1||p.z<0||Math.abs(p.x)>.93||Math.abs(p.y)>.9;q.el.style.left=((p.x+1)*.5*host.clientWidth)+'px';q.el.style.top=((-p.y+1)*.5*host.clientHeight)+'px';}dirty=false;}requestAnimationFrame(draw);}
-  markings.visible=false;setMode('handover');setView('smart');resize();draw();document.getElementById('loading').hidden=true;
+  markings.visible=false;setMode('handover');resize();setView('site');draw();document.getElementById('loading').hidden=true;
   function setReviewLocation(q){
     while(reviewMarker.children.length){const o=reviewMarker.children[0];reviewMarker.remove(o);o.geometry?.dispose();o.material?.dispose();}
     if(q.type==='point'||q.type==='rectangle'){
@@ -235,5 +250,5 @@
       if(q.type==='rectangle'){const rect=new T.Mesh(new T.PlaneGeometry(q.x2-q.x,q.y2-q.y),mat.clone());rect.material.opacity=.24;rect.rotation.x=-Math.PI/2;rect.position.set((q.x+q.x2)/2,.14,-(q.y+q.y2)/2);rect.renderOrder=19;reviewMarker.add(rect);}
     }dirty=true;
   }
-  window.BC_VIEWER={setMode,setAC,setView,setReviewLocation,setLabels(v){labelsOn=v;markings.visible=v;document.getElementById('labels').checked=v;dirty=true;},setCeiling(v){overhead.visible=v;document.getElementById('ceiling').checked=v;dirty=true;},snapshot(){renderer.render(scene,camera);return renderer.domElement.toDataURL('image/jpeg',.94);},inspect(){return {revision:dataset.revision,mode,ac:acOn,people:peopleGroup.children.length,peopleVisible:peopleOn,view:activeView,vehicles:dynamic.children.filter(o=>o.userData.kind==='vehicle').map(o=>({id:o.name,position:o.position.toArray(),rotation:o.rotation.y,bounds:new T.Box3().setFromObject(o).getSize(new T.Vector3()).toArray()})),ST:state.furniture.some(q=>q.id==='ST'),serviceReserve:state.serviceAccessReserve,ceiling:overhead.visible,glRenderer:renderer.getContext().getParameter(renderer.getContext().RENDERER),drawCalls:renderer.info.render.calls};},scene,camera};
+  window.BC_VIEWER={setMode,setAC,setView,setReviewLocation,setLabels(v){labelsOn=v;markings.visible=v;document.getElementById('labels').checked=v;updateContext();},setCeiling(v){overhead.visible=v;document.getElementById('ceiling').checked=v;dirty=true;},snapshot(){renderer.render(scene,camera);return renderer.domElement.toDataURL('image/jpeg',.94);},inspect(){return {revision:dataset.revision,mode,ac:acOn,people:peopleGroup.children.length,peopleVisible:peopleOn,view:activeView,site:{visible:contextRoot.visible,upper:exterior.upper.visible,occluders:site.occluders.visible,bounds:dataset.site.bounds,status:dataset.site.status},vehicles:dynamic.children.filter(o=>o.userData.kind==='vehicle').map(o=>({id:o.name,position:o.position.toArray(),rotation:o.rotation.y,bounds:new T.Box3().setFromObject(o).getSize(new T.Vector3()).toArray()})),ST:state.furniture.some(q=>q.id==='ST'),serviceReserve:state.serviceAccessReserve,ceiling:overhead.visible,glRenderer:renderer.getContext().getParameter(renderer.getContext().RENDERER),drawCalls:renderer.info.render.calls};},scene,camera};
 })();

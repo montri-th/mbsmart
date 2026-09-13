@@ -3,11 +3,13 @@
   'use strict';
   const $ = id => document.getElementById(id), form = $('comment-form'), map = $('review-map');
   const areas = [...$('comment-area').options].map(o => o.value);
-  const views = ['interior','smart','handover','service','overview','plan'];
+  const views = [...document.querySelectorAll('[data-view]')].map(b=>b.dataset.view);
   const revision=window.BC_LAYOUT.revision, modes=window.BC_LAYOUT.states.map(s=>s.mode), modeNames={handover:'Handover',consulting:'Consulting',lounge:'Waiting annex'};
   const endpoint = window.BC_FEEDBACK_CONFIG?.endpoint || '';
+  const submissionEnabled=window.BC_LAYOUT.feedbackPolicy?.submissionEnabled===true&&window.BC_FEEDBACK_CONFIG?.submissionEnabled===true;
+  const offlineNotice='ยังไม่พร้อมส่ง Google Sheet · ข้อความเป็นร่างในหน้านี้ กรุณาคัดลอกก่อนปิดหน้า';
   const endpointConfigured = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(endpoint);
-  let validEndpoint=false; // Fail closed until the live backend explicitly supports this revision.
+  let validEndpoint=false, revisionWarning=''; // Fail closed until the live backend explicitly supports this revision.
   let location = {type:'area'}, tool = 'point', corner = null, cursor = {x:20,y:8};
   let keyboard = false, sending = false, pending = null, sequence = 0;
   let mapZoom=1, mapCenter={x:20,y:8}, drag=null;
@@ -21,7 +23,7 @@
   const grid = (x,y) => `Lx${Math.min(4,Math.floor(x/8))}–${Math.min(5,Math.floor(x/8)+1)} / ${y<2.5?'G–H':y<8?'F–G':'E–F'}`;
   const coord = (x,y) => `X ${x.toFixed(2)}, Y ${y.toFixed(2)} ม.`;
   function status(text, state='') {$('submit-status').textContent=text;$('submit-status').dataset.state=state;}
-  function changed() {sequence++;if(!sending) {pending=null;status(validEndpoint?'พร้อมรับความเห็น':'ยังไม่เปิดรับออนไลน์ — รอเชื่อมต่อ Google ของโครงการ');}}
+  function changed() {sequence++;if(!sending) {pending=null;status((validEndpoint?'พร้อมรับความเห็น':offlineNotice)+(revisionWarning?' · '+revisionWarning:''));}}
   function element(tag, attrs={}, text='') {const el=document.createElementNS('http://www.w3.org/2000/svg',tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));if(text)el.textContent=text;map.appendChild(el);return el;}
   function rect(x,y,w,h,attrs={}) {return element('rect',{x,y:16-y-h,width:w,height:h,...attrs});}
   function mapText(x,y,text,attrs={}) {return element('text',{x,y:16-y,'text-anchor':'middle',...attrs},text);}
@@ -61,7 +63,8 @@
     drawMap();help();
     $('location-summary').textContent=location.type==='area'?'ยังไม่ระบุจุดเฉพาะ':location.type==='point'?`${grid(location.x,location.y)} · ${coord(location.x,location.y)}`:`${coord(location.x,location.y)} ถึง ${coord(location.x2,location.y2)}`;
     $('show-location').hidden=location.type==='area' || !window.BC_VIEWER;
-    $('comment-context').textContent=`แนบ ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision}`;
+    const viewLabel=document.querySelector(`[data-view="${currentView()}"]`)?.textContent||currentView();
+    $('comment-context').textContent=`ร่าง ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision} · ${viewLabel}${location.type==='area'?'':' · หมุดภายในอาคาร'}`;
     window.BC_VIEWER?.setReviewLocation(location);
   }
   function pick(p) {
@@ -83,12 +86,12 @@
   $('show-location').addEventListener('click',()=>{window.BC_VIEWER?.setView('plan');document.querySelector('.stage').scrollIntoView({block:'center',behavior:'instant'});});
   $('mode').addEventListener('change',()=>{changed();sync();});
   $('flex-ac').addEventListener('change',()=>{changed();sync();});
-  document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',changed));
+  document.addEventListener('bc:viewchange',()=>{changed();sync();});
   form.addEventListener('input',()=>{changed();$('comment-count').textContent=`${$('comment-text').value.length.toLocaleString('en-US')} / 3,000`;});
   function payload() {return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:currentMode(),modelRevision:revision,ac:$('flex-ac').checked,view:currentView(),website:$('comment-website').value};}
   const comparable=p=>JSON.stringify({...p,id:''});
   form.addEventListener('submit',async e=>{
-    e.preventDefault();if(sending || !validEndpoint)return;
+    e.preventDefault();if(sending || !submissionEnabled || !validEndpoint)return;
     if(!$('comment-text').value.trim()) {$('comment-text').setCustomValidity('กรุณาเขียนความเห็นก่อนส่ง');$('comment-text').reportValidity();return;}
     if(corner){status('กรุณาเลือกมุมตรงข้ามให้ครบ หรือล้างจุดก่อนส่ง','error');return;}
     const candidate=payload();
@@ -106,32 +109,34 @@
     } catch(error) {
       const messages={rate_limited:'ส่งถี่เกินไป กรุณารอสักครู่แล้วลองอีกครั้ง',bad_request:'ข้อมูลบางส่วนไม่ถูกต้อง กรุณาตรวจข้อความและตำแหน่ง',conflict:'รหัสรายการนี้มีข้อมูลต่างกัน กรุณาแก้ข้อความแล้วส่งใหม่'};
       status(`${messages[error.message] || 'ยังยืนยันการบันทึกไม่ได้ กรุณาลองส่งอีกครั้ง'} · ข้อความยังอยู่ หากลองซ้ำด้วยข้อมูลเดิม ระบบจะไม่บันทึกซ้ำ`,'error');
-    } finally {clearTimeout(timeout);sending=false;$('submit-comment').disabled=false;$('submit-comment').textContent='ส่งความเห็น';}
+    } finally {clearTimeout(timeout);sending=false;$('submit-comment').disabled=!submissionEnabled||!validEndpoint;$('submit-comment').textContent='ส่งความเห็น';}
   });
   $('comment-text').addEventListener('input',()=>$('comment-text').setCustomValidity(''));
   // Permalinks carry geometry context only, never private comment text or authors.
   const query=new URLSearchParams(window.location.search);
+  const validNumericParam=k=>query.has(k)&&query.get(k).trim()!==''&&Number.isFinite(Number(query.get(k)));
   if(query.get('rev') && query.get('rev')!==revision)status('ลิงก์นี้อ้างอิงแบบคนละรุ่น กรุณาตรวจตำแหน่งก่อนส่ง','error');
   else {
     if(modes.includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
     if(['0','1'].includes(query.get('ac'))){$('flex-ac').checked=query.get('ac')==='1';$('flex-ac').dispatchEvent(new Event('change'));}
     if(areas.includes(query.get('area')))$('comment-area').value=query.get('area');
     const type=query.get('loc');
-    if(['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(query.has('x')&&query.has('y')&&(type!=='rectangle'||query.has('x2')&&query.has('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
+    if(['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(validNumericParam('x')&&validNumericParam('y')&&(type!=='rectangle'||validNumericParam('x2')&&validNumericParam('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
     if(views.includes(query.get('view')))window.BC_VIEWER?.setView(query.get('view'));
   }
   sync();$('submit-comment').disabled=!validEndpoint;
   $('connection-notice').hidden=validEndpoint;
-  status(validEndpoint?'พร้อมรับความเห็น':'ยังไม่เปิดรับออนไลน์ — รอเชื่อมต่อ Google ของโครงการ');
-  if(query.get('rev') && query.get('rev')!==revision)status('ลิงก์นี้อ้างอิงแบบคนละรุ่น จึงไม่คืนตำแหน่งเดิม กรุณาตรวจโมเดล '+revision+' ก่อนส่ง'+(validEndpoint?'':' · ยังไม่เปิดรับออนไลน์ รอเชื่อมต่อ Google'),'error');
-  if(endpointConfigured){
+  status(validEndpoint?'พร้อมรับความเห็น':offlineNotice);
+  if(query.get('rev') && query.get('rev')!==revision){revisionWarning='ลิงก์นี้อ้างอิงแบบคนละรุ่น จึงไม่คืนตำแหน่งเดิม กรุณาตรวจโมเดล '+revision;$('connection-notice').hidden=false;$('connection-notice').textContent=revisionWarning;status(revisionWarning,'error');}
+  if(submissionEnabled&&endpointConfigured){
     status('กำลังตรวจว่าระบบรับความเห็นรองรับ '+revision+'…');
     const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
     fetch(endpoint,{credentials:'omit',signal:controller.signal}).then(r=>{if(!r.ok)throw Error('health');return r.json();}).then(h=>{
-      validEndpoint=h.ok===true&&h.service==='mbsmart-comments'&&h.revisions?.includes(revision)&&modes.every(m=>h.modesByRevision?.[revision]?.includes(m));
-      $('submit-comment').disabled=!validEndpoint;$('connection-notice').hidden=validEndpoint;
-      if(!validEndpoint)$('connection-notice').textContent='เปิดตรวจแบบ v07 ได้แล้ว — ยังไม่เปิดส่งความเห็นรุ่นนี้ ระหว่างรออัปเดตระบบ Google ของโครงการ ข้อความที่พิมพ์ยังไม่ถูกบันทึก กรุณาคัดลอกเก็บไว้ก่อนปิดหน้า';
-      status(validEndpoint?'พร้อมรับความเห็น':'ยังไม่เปิดส่งความเห็น '+revision+' — รออัปเดตระบบรับข้อมูล');
+      validEndpoint=h.ok===true&&h.schema===1&&h.service==='mbsmart-comments'&&Array.isArray(h.revisions)&&h.revisions.includes(revision)&&Array.isArray(h.modesByRevision?.[revision])&&modes.every(m=>h.modesByRevision[revision].includes(m))&&Array.isArray(h.viewsByRevision?.[revision])&&views.every(v=>h.viewsByRevision[revision].includes(v));
+      $('submit-comment').disabled=!validEndpoint;$('connection-notice').hidden=validEndpoint&&!revisionWarning;
+      if(validEndpoint&&revisionWarning)$('connection-notice').textContent=revisionWarning;
+      if(!validEndpoint)$('connection-notice').textContent='เปิดตรวจแบบ '+revision+' ได้แล้ว — ยังไม่เปิดส่งความเห็นรุ่นนี้ ระหว่างรออัปเดตระบบ Google ของโครงการ ข้อความที่พิมพ์ยังไม่ถูกบันทึก กรุณาคัดลอกเก็บไว้ก่อนปิดหน้า';
+      status((validEndpoint?'พร้อมรับความเห็น — ส่งแล้วจะได้รับเลขรับ':'ยังไม่เปิดส่งความเห็น '+revision+' — รออัปเดตระบบรับข้อมูล')+(revisionWarning?' · '+revisionWarning:''));
     }).catch(()=>{$('connection-notice').hidden=false;$('connection-notice').textContent='ยังตรวจการเชื่อมต่อไม่ได้ จึงยังไม่เปิดส่งความเห็น ข้อความไม่ถูกบันทึก กรุณาคัดลอกเก็บไว้ก่อนปิดหน้า';status('ยังยืนยันระบบรับความเห็นไม่ได้ — ลองโหลดหน้าใหม่ภายหลัง','error');}).finally(()=>clearTimeout(timeout));
   }
   // Read-only diagnostics for automated acceptance checks; no comment text is exposed.

@@ -1,8 +1,26 @@
-# Benz Chitchai · smart-focused review v07
+# Benz Chitchai · surrounding-site context v08
+
+[Open v08 site context](https://montri-th.github.io/mbsmart/?rev=v08&mode=handover&view=site). This revision extends the existing model to the front and side public-road edge for later exterior design. No new exterior proposal, cadastral model or surveyed as-built is claimed.
+
+## Current v08
+
+Nine camera presets: the six interior views are retained, plus site overview, street frontage and site plan. Toggle surrounding context, upper-building massing, trees/utilities and evidence guides independently. The blue-ribbon stepped building, canopy, entry stair, planted strips, original signs, raised apron, retaining face, white fence, sidewalk and near-edge road strip are authored condition proxies from owner-supplied photos. The road strip does not assert a full carriageway width.
+
+The full interior `states`, building control data and smart vehicle factory are unchanged from v07. v07 primary bytes and dependencies are frozen under `versions/v07`; earlier v04/v06 stay unchanged. Version-specific URLs retain their original geometry.
+
+**Evidence correction:** drawing10 reads **7.20m**, not17.20m, from the outer plinth strip, not gridH. The assumed1.20m strip yields a candidate front apron edgeY=-8.40. Printed gate width8m has an unmeasured plan registration. Drawing13's10.40m stair and alternative turning scheme are not fused into the current front entrance. `assets/site-context.json` identifies each reading, trace and assumption. `assets/geometry-register.json` includes the site controls. All exterior levels are illustrative relative to modelFFL0; +0.80 remains an unconfirmed relative elevation. The rear cropY30 is not a property line or A-H length.
+
+**v08 comments are owner-enabled:** the existing Apps Script deployment was upgraded to support v04/v06/v07/v08 and all nine v08 views. The form enables only after a strict schema/revision/modes/views health check, and confirms saving only on a matching receipt. Explicitly disabling either policy flag prevents all health GET and POST requests. The pinning map still represents the interior floor, not the enlarged site; exterior feedback uses named areas and retained view context. Archived feedback configurations remain unchanged. A clearly labelled SYSTEM TEST v08 entry was written and read back from the private log; an identical-ID retry returned the same receipt without duplication. This is server/transport verification plus simulated frontend tests, not an iPhone browser test.
+
+Run `npm run revise`, `npm run build`, then `npm test`; serve `dist/` through HTTP. No new dependencies or image downloads. `site.js` owns ground/retaining/fence/landscape/utility proxies; `exterior-massing.js` owns the separate facade/canopy/upper mass; `scene.js` integrates them and camera controls. Public assets exclude source drawings, photos and private evidence reports.
+
+Open gates: boundary/road survey, heights, grades/drainage, footway crossing and vehicle swept paths, utility clearance, real iPhone/WebGL visual review, owner exterior-design decisions. Site source/geometry tests are not engineering or native-device acceptance. The previously prepared v07 friend handoff is deliberately not overwritten by v08.
+
+## Historical v07 release (interior baseline retained)
 
 [Open smart v07](https://montri-th.github.io/mbsmart/?rev=v07&mode=handover&view=smart). Owner review first; not construction, surveyed BIM, manufacturer CAD or compliance approval.
 
-## Current v07 release
+### v07 scope
 
 C-return three-flight stair and photo-traced Admin/Living/Manager enclosure; smart #5 Premium in Saturn Beige Matte / Shadow Black / Eclipse Black roof. Vehicle4.695 ×2.169(mirrors) ×1.705m, body1.920m, wheelbase2.900m. All secondary surfaces and finishes are authored interpretations, not photographic realism or calibrated samples. Source: [smart UK](https://uk.smart.com/en/models/hashtag-five/), [exact configuration](https://uk.smart.com/en/customizer/?pn18=HY1UOGUF52B9000180), [Premium dimensions](https://ma.smart.com/modeles/smart-5/premium-2).
 

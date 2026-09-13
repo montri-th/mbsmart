@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "revision": "v08",
+  "purpose": "Existing-condition schematic context for future exterior design; no new exterior proposal",
+  "coordinateFrame": "Same as v07: plan X,Y metres; world X,height,-Y; H=Y0; local interior FFL=height0",
+  "status": "legacy-unverified / photo-traced / assumed; NOT cadastral boundary or measured as-built",
+  "basis": "Photographed sheet 10 for compact forecourt, checked against supplied exterior photographs; sheet 13 retained as an alternative issue, not overlaid as current construction",
+  "sources": [
+    {"id":"A01","file":"LINE_ALBUM_Showroom_260912_10.jpg","kind":"photographed legacy plan","status":"drawing revision and surveyed currency unknown"},
+    {"id":"A04","file":"LINE_ALBUM_Showroom_260912_13.jpg","kind":"alternative photographed plan / elevation","status":"not combined into current solid geometry"},
+    {"id":"P10","file":"S__78520373.jpg","kind":"exterior condition photograph","date":"unknown"},
+    {"id":"P11","file":"S__78520374.jpg","kind":"entrance close-up","date":"unknown"},
+    {"id":"P12","file":"251738.jpg","kind":"overall exterior photograph","date":"unknown"},
+    {"id":"SV24","kind":"three owner-supplied Street View captures","date":"2024-06"},
+    {"id":"SV17","kind":"one owner-supplied Street View capture","date":"2017-03","use":"historical context only, not assumed current condition"}
+  ],
+  "bounds": {"xMin":-14,"xMax":58,"yMin":-15.4,"yMax":30},
+  "rearClip": {"y":30,"status":"arbitrary context crop, not rear boundary, not derived A-H length"},
+  "front": {
+    "plinthProjection": {"value":1.2,"status":"photo-traced candidate from A01; not printed dimension"},
+    "setbackFromPlinth": {"value":7.2,"status":"printed reading in A01; starts at outer front strip, not grid H"},
+    "apronEdgeY": {"value":-8.4,"status":"derived candidate: -1.20-7.20, inherits uncertain endpoints/registration"},
+    "entranceApronFrontY": {"value":-2.4,"status":"derived candidate using A01 printed 6.00 to same edge"},
+    "gate": {"xMin":-5.5,"xMax":2.5,"width":8,"status":"8.00 printed width; centre X=-1.50 photo-traced"},
+    "gateReturnRadius": {"value":3,"status":"R3.00 printed in A01; returns simplified in ground mesh"}
+  },
+  "edgeControlPoints": [[-7.2,-8.4],[31,-8.4],[34.5,-8.2],[39,-7.2],[43,-5],[46.5,-1.5],[48.7,3],[50.2,8.5],[50.5,16],[50.5,30]],
+  "edgeStatus": "A01 photo-traced front/east edge against assumed X frame; rounded corner is a trace, not a certified circular arc. Segment Y16 to30 is context extrapolation only.",
+  "leftContextEdge": [[-7.2,-8.4],[-5,0],[-2,16],[0,30]],
+  "leftEdgeStatus": "unverified legacy line / context crop; not modelled as a confirmed fence or cadastral boundary",
+  "east": {"apronEdgeX":50.5,"serviceGapY":[17,25],"status":"road-side edge traced against assumed 40m X grid; service opening position/width unmeasured"},
+  "sidewalk": {"width":2,"status":"photo-estimated display width, NOT A01 printed 3.10"},
+  "road": {"displayStripWidth":5,"status":"near-edge context strip only; not full carriageway width or legal road reserve; no traffic lanes certified"},
+  "gateTransitions": {"frontInnerY":-2.4,"eastInnerX":46,"status":"render-only continuity to assumed grades, not measured or designed ramps; verify slope, drainage, turning and footway crossing"},
+  "levels": {
+    "interiorFFL":0,"forecourt":-0.8,"sidewalk":-1.45,"road":-1.6,
+    "status":"ALL exterior rendered heights are photo-scale assumptions relative to model FFL0, NOT recovered drawing levels or road benchmark",
+    "warning":"+0.80 is a relative elevation annotation. Its relation to the public road is unconfirmed. No physical slope/step/retaining design is approved."
+  },
+  "entrySteps": {"xMin":25.6,"xMax":30.8,"yMin":-1.2,"landingY":0.8,"yMax":2.5,"risers":5,"status":"five-step visual proxy from entrance photo; width/treads/risers/landing require field measurement"},
+  "planting": {"frontBeds":[[0.15,-1.12,23.7,0.85],[32.15,1.35,7.55,0.85]],"palmCentres":[[1,-0.7],[7.4,-0.7],[15.2,-0.7],[22.5,-0.7],[33,1.75],[39,1.75]],"status":"photo-character proxies; species/count/locations not surveyed"},
+  "markers": {"pylon":[42.5,-3.4],"flags":[[34,-3.4],[35.4,-3.4],[36.8,-3.4]],"directionSign":[40.5,-4.2],"status":"photo-traced context proxies adjusted clear of other proxy objects; no physical relocation or new smart exterior branding proposed"},
+  "utilityPoles": [[7,-10.3],[24,-10.3],[44.7,-7.9],[52.4,8.5]],
+  "upperBuilding": {"upperBase":7.2,"mainHeight":22,"middleHeight":18,"rightHeight":11,"middleX":24,"rightX":32,"endX":40,"rearY":16,"recessY":2.5,"cornerRadius":1.25,"showroomSoffit":7.02,"fasciaHeight":3.82,"canopy":{"cx":28.2,"width":8.4,"wallY":2.5,"frontY":-2,"lowerChordHeight":3.6,"trussDepth":0.4},"status":"ALL numbers are visual assumptions: rounded stepped massing and ribbon windows from photographs; not measured storeys or structural member sizes"},
+  "alternativeA04": {"frontStairWidthReading":10.4,"outerArcReading":15,"status":"10.40 and R15.00 readable on alternative sheet13; not applied to current canopy entrance; other endpoint/radius readings unresolved"},
+  "limitations": [
+    "X grid remains assumed: LX0..5=0,8,16,24,32,40; exterior registration inherits this uncertainty",
+    "Street View is historical; no assertion that utilities/fences/access match today's site",
+    "Coloured dashed lines indicate model evidence controls, not proposed paint or title-deed boundaries",
+    "No confirmed north arrow, parcel area, setback compliance, road reserve or boundary ownership",
+    "A-D, D-E and A-H are not derived; rear edge of scene is an explicit model crop",
+    "No driveway turning/sightline/drainage/accessibility/electrical-clearance approval",
+    "Original photos and drawings remain private; this public JSON contains derived coordinates only"
+  ]
+}
