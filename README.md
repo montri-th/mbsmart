@@ -24,13 +24,13 @@ Plan units are metres. The owner confirmed E–F 8.00 m, F–G 5.50 m and G–H 
 
 Materials are procedural approximations informed by supplied photos: polished grey stone, dark stone bands, glass, timber, upholstery and metal. Cars/furniture are generic proxy meshes, not manufacturer models. Signs are review placeholders. This is not an as-built model, approved brand artwork, photorealistic final visualization, fabrication package or construction document.
 
-## Client review UI — prepared, submission not yet enabled
+## Client review UI — submission enabled for acceptance testing
 
 Choose an area, write a comment, and optionally place a point or two-corner rectangle on the control plan. The plan can enlarge around a selected point and pan; keyboard arrows and Enter also select coordinates. “ดูจุดใน 3D” shows the annotation in the existing model. The overlay is a review marker, not a physical design object.
 
-The private Google Sheet log has been created, but Google reauthorization and live backend acceptance tests remain pending. `feedback-config.js` therefore has an empty endpoint and the submit button is deliberately disabled. Do not describe this release as accepting or saving client comments yet.
+The submission endpoint is configured after a real HTTP submission returned a matching receipt and native Google Sheets readback confirmed one stored row. An exact retry returned the original receipt without adding a duplicate. The log remains private. Live form-click verification on the published browser/iPhone remains pending: the local Mac was locked, so HTTP transport checks must not be described as a completed browser acceptance test.
 
-Once activated, submissions are intended to include a free-text comment, optional name/team, area and geometric context, model revision and viewing mode. The backend must return a readable matching receipt before the UI reports success. Failed requests retain their draft and retry identifier; a newer draft edited during a pending request is not cleared. A device-local random ID is used for rate limiting, not identity verification. Comment text is not saved to browser storage. The public site never lists private comments or embeds a spreadsheet credential.
+Submissions include a free-text comment, optional name/team, area and geometric context, model revision and viewing mode. The backend must return a readable matching receipt before the UI reports success. Failed requests retain their draft and retry identifier; a newer draft edited during a pending request is not cleared. A device-local random ID is used for rate limiting, not identity verification. Comment text is not saved to browser storage. The public site never lists private comments or embeds a spreadsheet credential.
 
 Permalinks contain only area, position, view, mode and model revision. Private text and names are not included. Comments enter a review queue; they do not automatically change the model. The owner and design team decide which requests to accept.
 
@@ -46,7 +46,7 @@ Serve the repository root with a local static HTTP server. No package installati
 npm run build
 ```
 
-The build validates the design-state counts and creates an allowlisted static `dist/` directory. GitHub Actions publishes it to GitHub Pages on pushes to `main`. Model assets are local/relative, with no external CDN or analytics. The model requires browser WebGL; fallback stills remain available. Comment persistence additionally requires the separately deployed private-project backend; the viewer itself remains usable without it. Do not enable the endpoint until a real browser receipt and corresponding private Sheet row have both been verified.
+The build validates the design-state counts and creates an allowlisted static `dist/` directory. GitHub Actions publishes it to GitHub Pages on pushes to `main`. Model assets are local/relative, with no external CDN or analytics. The model requires browser WebGL; fallback stills remain available. Comment persistence additionally requires the separately deployed private-project backend; the viewer itself remains usable without it. Before inviting clients, complete a live browser submission and verify its receipt ID in the private log; current activation allows the owner to perform that last check remotely.
 
 `layout.js` is the publishable derived layout. `scene.js` constructs the review model and interactions. `scripts/prepare-layout.cjs` is an optional converter for a compatible local geometry JSON; the original private inputs are deliberately not included.
 

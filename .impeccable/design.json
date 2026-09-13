@@ -47,7 +47,7 @@
       "name": "Primary submission button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Full-width primary action. The observed interface is disabled while its endpoint is empty; this specimen preserves that state.",
+      "description": "Full-width primary action. This specimen demonstrates the disabled/unconfigured state; the current endpoint is configured for owner acceptance testing, with live browser submission verification pending.",
       "html": "<button type=\"button\" class=\"ds-primary\" disabled>ส่งความเห็น</button>",
       "css": ".ds-primary{font:600 .875rem/1.5 Arial,Thonburi,'Noto Sans Thai',sans-serif;background:var(--accent,#0078d6);color:var(--surface,#fff);border:1px solid var(--accent,#0078d6);border-radius:9999px;min-height:48px;padding:10px 14px;width:100%;cursor:pointer}.ds-primary:hover:not(:disabled){background:#0068ba;border-color:#0068ba}.ds-primary:focus-visible{outline:3px solid #0078d6;outline-offset:3px}.ds-primary:disabled{background:#e3e3e3;color:#555;border-color:#c4c4c4;cursor:not-allowed}@media(prefers-reduced-motion:no-preference){.ds-primary{transition:background-color .15s ease-out,border-color .15s ease-out}}"
     },

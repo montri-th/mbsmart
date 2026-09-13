@@ -170,7 +170,7 @@ Arrow keys move the cursor by 0.5m, Shift plus an arrow by 0.1m, Enter/Space sel
 
 The status region is announced politely. Success is shown only after a matching receipt identifier and valid receipt timestamp; an unconfirmed response keeps the draft available. A success reveal lasts 0.45s with ease-out only when reduced motion is not requested.
 
-At extraction, the configured endpoint is empty and submission is disabled. Google OAuth `invalid_rapt` blocks endpoint deployment and real Sheets write tests in the project handoff. Neither this document nor its component previews claim that comments are currently stored in Google Sheets. The prepared receipt states describe code behavior awaiting a live integration test.
+At the original extraction, the endpoint was empty and submission was disabled. On 13 September 2026, authorization and actual HTTP-to-Sheets write/readback plus duplicate-retry checks passed; the endpoint was configured for owner acceptance testing. A live browser/iPhone form submission is still pending because the local Mac was locked. The disabled component specimen below remains an intentional state example, not the current deployment status. No completed browser test is claimed.
 
 ## Do's and Don'ts
 
