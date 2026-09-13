@@ -1,6 +1,6 @@
 ---
 name: Benz Chitchai showroom review
-description: Extracted v05 review interface, retained for the v06 three-use schematic model.
+description: Retained review interface with v07 smart-focused source guide and revision-aware submission gate.
 colors:
   accent: "#0078d6"
   accent-hover: "#0068ba"
@@ -92,6 +92,10 @@ components:
 ---
 
 # Design System: Benz Chitchai showroom review
+
+## v07 delta
+
+Added a compact smart specification strip, five native details groups covering35 requirements, non-sending comment-prefill buttons and source-labelled geometry. Submit is gated on live backend support for the current revision. Old views remain archived. The interface is a local interpretation of public Mercedes web patterns, not certification of its gated proprietary Design System. No official marketing photos are publicly embedded.
 
 ## Overview
 

@@ -4,10 +4,8 @@
   const $ = id => document.getElementById(id), form = $('comment-form'), map = $('review-map');
   const areas = [...$('comment-area').options].map(o => o.value);
   const views = ['interior','smart','handover','service','overview','plan'];
-  const revision=window.BC_LAYOUT.revision, modes=window.BC_LAYOUT.states.map(s=>s.mode), modeNames={handover:'Handover',consulting:'Consulting',lounge:'Waiting annex'};
   const endpoint = window.BC_FEEDBACK_CONFIG?.endpoint || '';
-  const endpointConfigured = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(endpoint);
-  let validEndpoint=false; // Fail closed until the live backend explicitly supports this revision.
+  const validEndpoint = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(endpoint);
   let location = {type:'area'}, tool = 'point', corner = null, cursor = {x:20,y:8};
   let keyboard = false, sending = false, pending = null, sequence = 0;
   let mapZoom=1, mapCenter={x:20,y:8}, drag=null;
@@ -36,21 +34,16 @@
     element('polygon',{points:s.floor.map(p=>`${p[0]},${16-p[1]}`).join(' '),fill:'#eee',stroke:'#777','stroke-width':.12});
     rect(32,8,8,8,{fill:'#dce9ed',stroke:'#8d9b9f','stroke-width':.1});
     rect(32,2.5,8,5.5,{fill:currentMode()==='handover'?'#e5dfd5':'#dce9ed',stroke:'#999','stroke-width':.1});
-    rect(28,8,4,8,{fill:'#e0e8df'});
-    rect(8,11.5,8,4.5,{fill:'#d9d8d5',stroke:'#777','stroke-width':.1});
-    rect(8,13.9,2.3,2.1,{fill:'#bdbdbb',stroke:'#777','stroke-width':.08});
-    element('path',{d:'M16 0 H28 V2.5 A2 2 0 0 1 26 4.5 H16 Z',fill:'#dfdedb',stroke:'#777','stroke-width':.1});
-    for(const [x,y,w,h] of [[4.3,12.4,2,1.5],[2.6,12.4,1.7,1.5],[2.6,13.9,1.7,.7],[2.6,14.6,1.7,1.4],[4.3,14.6,2,1.4]])rect(x,y,w,h,{fill:'#c8c8c8',stroke:'#777','stroke-width':.08});
-    for(let i=1;i<8;i++)for(const y of [12.4,14.6])element('line',{x1:4.3+i*.25,x2:4.3+i*.25,y1:16-y,y2:16-y-(y===12.4?1.5:1.4),stroke:'#999','stroke-width':.05});
-    for(let i=1;i<4;i++)element('line',{x1:2.6,x2:4.3,y1:2.1-i*.175,y2:2.1-i*.175,stroke:'#999','stroke-width':.05});
+    rect(27.5,8,4.5,8,{fill:'#e0e8df'});
+    rect(1.2,12.5,5.6,3.5,{fill:'#d0d0d0'});
     element('polygon',{points:s.module.shape.map(p=>`${p[0]},${16-p[1]}`).join(' '),fill:'#dedfd7',stroke:'#7f856b','stroke-width':.12});
     for(const x of [0,8,16,24,32,40]) {element('line',{x1:x,x2:x,y1:0,y2:16,stroke:'#aaa','stroke-width':.05,'stroke-dasharray':'.3 .3'});mapText(x,16.6,`Lx${x/8}`,{class:'grid-label'});}
     for(const [name,y] of [['H',0],['G',2.5],['F',8],['E',16]]) {element('line',{x1:0,x2:40,y1:16-y,y2:16-y,stroke:'#aaa','stroke-width':.05,'stroke-dasharray':'.3 .3'});mapText(-.85,y-.2,name,{class:'grid-label'});}
     for(const c of s.columns)rect(c.x,c.y,c.w,c.h,{fill:'#555'});
     for(const q of s.furniture.filter(q=>['counter','table','sofa','armchair'].includes(q.type)))rect(q.cx-q.w/2,q.cy-q.h/2,q.w,q.h,{fill:q.type==='counter'?'#8b7663':'#aaa','fill-opacity':.6});
     for(const c of s.cars) {const r=rect(c.cx-c.l/2,c.cy-c.w/2,c.l,c.w,{rx:.3,fill:c.brand==='smart'?'#fafaf5':'#fbfbfb',stroke:'#555','stroke-width':.1,transform:`rotate(${-c.angle},${c.cx},${16-c.cy})`});r.setAttribute('aria-hidden','true');mapText(c.cx,c.cy-.2,c.id);}
-    mapText(36,12,'LOUNGE');mapText(30,14,'SERVICE');mapText(4.4,14.1,'STAIR');mapText(12,14,'ADMIN');mapText(22,14,'LIVING / MANAGER');mapText(11.6,9.65,'COUNTER');mapText(28.2,.9,'ENTRANCE');mapText(4.4,10,'smart 3B');
-    mapText(36,7.2,modeNames[currentMode()].toUpperCase());
+    mapText(36,12,'LOUNGE');mapText(29.75,14,'SERVICE');mapText(4,14.5,'STAIR');mapText(11.6,12,'COUNTER');mapText(28.2,.9,'ENTRANCE');mapText(4.4,10,'smart 3B');
+    if(currentMode()==='handover')mapText(36,7.2,'HANDOVER');else mapText(36,7.2,'LOUNGE +');
     if(location.type==='rectangle') rect(location.x,location.y,location.x2-location.x,location.y2-location.y,{class:'range'});
     if(location.type!=='area')element('circle',{cx:location.x,cy:16-location.y,r:.45,class:'pin'});
     if(corner)element('circle',{cx:corner.x,cy:16-corner.y,r:.35,class:'pin'});
@@ -61,7 +54,7 @@
     drawMap();help();
     $('location-summary').textContent=location.type==='area'?'ยังไม่ระบุจุดเฉพาะ':location.type==='point'?`${grid(location.x,location.y)} · ${coord(location.x,location.y)}`:`${coord(location.x,location.y)} ถึง ${coord(location.x2,location.y2)}`;
     $('show-location').hidden=location.type==='area' || !window.BC_VIEWER;
-    $('comment-context').textContent=`แนบ ${modeNames[currentMode()]} · แอร์ ${$('flex-ac').checked?'เปิด':'ปิด'} · โมเดล ${revision}`;
+    $('comment-context').textContent=`แนบ${currentMode()==='handover'?'แบบหลัก Handover':'แบบ Optional ห้องรับรองแอร์'} · โมเดล v04`;
     window.BC_VIEWER?.setReviewLocation(location);
   }
   function pick(p) {
@@ -82,10 +75,9 @@
   $('clear-location').addEventListener('click',()=>{location={type:'area'};corner=null;changed();sync();});
   $('show-location').addEventListener('click',()=>{window.BC_VIEWER?.setView('plan');document.querySelector('.stage').scrollIntoView({block:'center',behavior:'instant'});});
   $('mode').addEventListener('change',()=>{changed();sync();});
-  $('flex-ac').addEventListener('change',()=>{changed();sync();});
   document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',changed));
   form.addEventListener('input',()=>{changed();$('comment-count').textContent=`${$('comment-text').value.length.toLocaleString('en-US')} / 3,000`;});
-  function payload() {return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:currentMode(),modelRevision:revision,ac:$('flex-ac').checked,view:currentView(),website:$('comment-website').value};}
+  function payload() {return {schema:1,id:uuid(),clientId,name:$('comment-name').value,team:$('comment-team').value,comment:$('comment-text').value,area:$('comment-area').value,location:{...location},mode:currentMode(),modelRevision:'v04',view:currentView(),website:$('comment-website').value};}
   const comparable=p=>JSON.stringify({...p,id:''});
   form.addEventListener('submit',async e=>{
     e.preventDefault();if(sending || !validEndpoint)return;
@@ -111,10 +103,9 @@
   $('comment-text').addEventListener('input',()=>$('comment-text').setCustomValidity(''));
   // Permalinks carry geometry context only, never private comment text or authors.
   const query=new URLSearchParams(window.location.search);
-  if(query.get('rev') && query.get('rev')!==revision)status('ลิงก์นี้อ้างอิงแบบคนละรุ่น กรุณาตรวจตำแหน่งก่อนส่ง','error');
+  if(query.get('rev') && query.get('rev')!=='v04')status('ลิงก์นี้อ้างอิงแบบคนละรุ่น กรุณาตรวจตำแหน่งก่อนส่ง','error');
   else {
-    if(modes.includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
-    if(['0','1'].includes(query.get('ac'))){$('flex-ac').checked=query.get('ac')==='1';$('flex-ac').dispatchEvent(new Event('change'));}
+    if(['handover','lounge-ac'].includes(query.get('mode'))) {$('mode').value=query.get('mode');$('mode').dispatchEvent(new Event('change'));}
     if(areas.includes(query.get('area')))$('comment-area').value=query.get('area');
     const type=query.get('loc');
     if(['point','rectangle'].includes(type)) {const q={type,x:Number(query.get('x')),y:Number(query.get('y'))};if(type==='rectangle'){q.x2=Number(query.get('x2'));q.y2=Number(query.get('y2'));}if(query.has('x')&&query.has('y')&&(type!=='rectangle'||query.has('x2')&&query.has('y2'))&&validLocation(q)){location=q;document.querySelector('.location-details').open=true;}}
@@ -123,17 +114,7 @@
   sync();$('submit-comment').disabled=!validEndpoint;
   $('connection-notice').hidden=validEndpoint;
   status(validEndpoint?'พร้อมรับความเห็น':'ยังไม่เปิดรับออนไลน์ — รอเชื่อมต่อ Google ของโครงการ');
-  if(query.get('rev') && query.get('rev')!==revision)status('ลิงก์นี้อ้างอิงแบบคนละรุ่น จึงไม่คืนตำแหน่งเดิม กรุณาตรวจโมเดล '+revision+' ก่อนส่ง'+(validEndpoint?'':' · ยังไม่เปิดรับออนไลน์ รอเชื่อมต่อ Google'),'error');
-  if(endpointConfigured){
-    status('กำลังตรวจว่าระบบรับความเห็นรองรับ '+revision+'…');
-    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
-    fetch(endpoint,{credentials:'omit',signal:controller.signal}).then(r=>{if(!r.ok)throw Error('health');return r.json();}).then(h=>{
-      validEndpoint=h.ok===true&&h.service==='mbsmart-comments'&&h.revisions?.includes(revision)&&modes.every(m=>h.modesByRevision?.[revision]?.includes(m));
-      $('submit-comment').disabled=!validEndpoint;$('connection-notice').hidden=validEndpoint;
-      if(!validEndpoint)$('connection-notice').textContent='เปิดตรวจแบบ v07 ได้แล้ว — ยังไม่เปิดส่งความเห็นรุ่นนี้ ระหว่างรออัปเดตระบบ Google ของโครงการ ข้อความที่พิมพ์ยังไม่ถูกบันทึก กรุณาคัดลอกเก็บไว้ก่อนปิดหน้า';
-      status(validEndpoint?'พร้อมรับความเห็น':'ยังไม่เปิดส่งความเห็น '+revision+' — รออัปเดตระบบรับข้อมูล');
-    }).catch(()=>{$('connection-notice').hidden=false;$('connection-notice').textContent='ยังตรวจการเชื่อมต่อไม่ได้ จึงยังไม่เปิดส่งความเห็น ข้อความไม่ถูกบันทึก กรุณาคัดลอกเก็บไว้ก่อนปิดหน้า';status('ยังยืนยันระบบรับความเห็นไม่ได้ — ลองโหลดหน้าใหม่ภายหลัง','error');}).finally(()=>clearTimeout(timeout));
-  }
+  if(query.get('rev') && query.get('rev')!=='v04')status('ลิงก์นี้อ้างอิงแบบคนละรุ่น จึงไม่คืนตำแหน่งเดิม กรุณาตรวจโมเดล v04 ก่อนส่ง'+(validEndpoint?'':' · ยังไม่เปิดรับออนไลน์ รอเชื่อมต่อ Google'),'error');
   // Read-only diagnostics for automated acceptance checks; no comment text is exposed.
-  window.BC_REVIEW={inspect:()=>({location:{...location},area:$('comment-area').value,mode:currentMode(),ac:$('flex-ac').checked,modelRevision:revision,configured:validEndpoint,sending})};
+  window.BC_REVIEW={inspect:()=>({location:{...location},area:$('comment-area').value,mode:currentMode(),modelRevision:'v04',configured:validEndpoint,sending})};
 })();

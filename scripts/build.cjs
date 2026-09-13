@@ -1,8 +1,9 @@
 const fs=require('fs'),path=require('path'),vm=require('vm');
 const root=path.resolve(__dirname,'..'),dist=path.join(root,'dist');fs.mkdirSync(dist,{recursive:true});
-for(const file of ['scene.js','layout.js','feedback.js','feedback-config.js'])new vm.Script(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
+for(const file of ['scene.js','smart.js','review-guide.js','layout.js','feedback.js','feedback-config.js'])new vm.Script(fs.readFileSync(path.join(root,file),'utf8'),{filename:file});
 const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'layout.js'),'utf8'),context);const d=context.window.BC_LAYOUT;
-if(d.revision!=='v06'||d.states.length!==3||d.defaultState!=='handover')throw Error('Wrong revision/default');
+fs.writeFileSync(path.join(root,'assets/geometry-register.json'),JSON.stringify({schema:1,revision:d.revision,authority:'Derived visualization coordinates, not survey or construction documentation',building:d.building,smartVehicle:d.smartVehicle,states:d.states.map(s=>({mode:s.mode,floor:s.floor,columns:s.columns,module:s.module,cars:s.cars,furniture:s.furniture,serviceAccessReserve:s.serviceAccessReserve})),limitations:d.limitations},null,2)+'\n');
+if(d.revision!=='v07'||d.states.length!==3||d.defaultState!=='handover')throw Error('Wrong revision/default');
 for(const s of d.states){if(s.cars.filter(c=>c.brand==='MB').length!==(s.mode==='handover'?6:5)||s.cars.filter(c=>c.brand==='smart').length!==1||s.module.type!=='Module 3B'||s.module.quantity!==1||s.furniture.some(q=>q.id==='ST')||s.people.length<8)throw Error('Wrong design state');}
-for(const name of ['index.html','viewer.css','scene.js','layout.js','feedback.js','feedback-config.js','vendor','renders','versions'])fs.cpSync(path.join(root,name),path.join(dist,name),{recursive:true});
-fs.writeFileSync(path.join(dist,'.nojekyll'),'');console.log('Static build complete: B/3B v06, three modes, people, switchable AC; archived v04 preserved.');
+for(const name of ['index.html','viewer.css','scene.js','smart.js','review-guide.js','layout.js','feedback.js','feedback-config.js','assets','vendor','renders','versions'])fs.cpSync(path.join(root,name),path.join(dist,name),{recursive:true});
+fs.writeFileSync(path.join(dist,'.nojekyll'),'');console.log('Static build complete: smart-focused v07, C-return stair and legacy rooms; v04/v06 preserved.');

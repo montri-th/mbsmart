@@ -1,4 +1,22 @@
-# Benz Chitchai · Option B / smart Module 3B
+# Benz Chitchai · smart-focused review v07
+
+[Open smart v07](https://montri-th.github.io/mbsmart/?rev=v07&mode=handover&view=smart). Owner review first; not construction, surveyed BIM, manufacturer CAD or compliance approval.
+
+## Current v07 release
+
+C-return three-flight stair and photo-traced Admin/Living/Manager enclosure; smart #5 Premium in Saturn Beige Matte / Shadow Black / Eclipse Black roof. Vehicle4.695 ×2.169(mirrors) ×1.705m, body1.920m, wheelbase2.900m. All secondary surfaces and finishes are authored interpretations, not photographic realism or calibrated samples. Source: [smart UK](https://uk.smart.com/en/models/hashtag-five/), [exact configuration](https://uk.smart.com/en/customizer/?pn18=HY1UOGUF52B9000180), [Premium dimensions](https://ma.smart.com/modeles/smart-5/premium-2).
+
+One complete3B, LED edging,75-inch screen, iPad E-price; existing MB wallbox reused, with location/capacity/shared-use acceptance still requiring site checks. Type4 indoor-window logo at owner-selectedX35.97/Y2.73; SL2-sized study is a candidate, not an approved match to the existing MB sign. Owner-adopted comments6–8 are included; duplicate7/8 remain separate source records, one implementation.
+
+All33 manual pages and35 master requirements reviewed. The public guide records intent and unknowns, never approval. Original manuals, photos, confidential prices, private log and downloaded marketing raster frames are excluded from this repository. Public configurator uses24 raster frames; no official3D mesh was found. Raster publication permission remains pending.
+
+Authoritative scene coordinates: `layout.js`, `assets/geometry-register.json`. Plan(X,Y)→world(X,height,−Y), metres. Y gridsH0/G2.5/F8/E16 are owner confirmed. X0/8/16/24/32/40, verticals, traced rooms and stair details are assumptions. +0.80 is a level, not distance. Static smart fit is not door-opening or circulation approval; MB5 entrance and stair/HVAC/charger engineering remain open.
+
+**v07 logging gate:** local private backend passes51 tests but its existing Apps Script update is not deployed. The UI checks live revision support and leaves Submit disabled untilv07 is supported. Drafts are not saved; copy them before closing. No v07 end-to-end logging success is claimed. v04/v06 assets and endpoint remain available unchanged.
+
+`npm run revise` derivesv07 from frozenv06; `npm run build` creates allowlisted `dist/`. Serve via HTTP, not file://. Three.js/WebGL is required, no CDN or npm install needed. `smart.js` owns smart detail; `scene.js` preserves MB detail and implements building/interactions. Test real iPhone Safari before compliance handoff. Sending to compliance is a separate owner action.
+
+## Historical v06 notes (superseded where v07 above differs)
 
 Interactive schematic interior review, model v06 / retained review UI, 13 September 2026.
 
