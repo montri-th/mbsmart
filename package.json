@@ -1,0 +1,1 @@
+{"name":"mbsmart-interior-review","version":"0.4.0","private":true,"description":"Benz Chitchai B / smart 3B schematic interior viewer","scripts":{"build":"node scripts/build.cjs","start":"python3 -m http.server 4173 --bind 127.0.0.1"}}
