@@ -1,5 +1,6 @@
 const fs=require('fs'),path=require('path'),vm=require('vm');
 const root=path.resolve(__dirname,'..'),ctx={window:{}};
+const measureFrontAxle=require('./measure-mercedes-front-axle.cjs')(root);
 vm.runInNewContext(fs.readFileSync(path.join(root,'versions/v08/layout.js'),'utf8'),ctx);
 const d=JSON.parse(JSON.stringify(ctx.window.BC_LAYOUT));
 if(d.revision!=='v08')throw Error('v09 must derive from frozen v08');
@@ -48,6 +49,8 @@ d.mbVehicles=[
 d.vehicleAppearanceStatus='Photographed vehicle appearances; MB slot assignment is illustrative, not original photo order. Model year/trim unverified. 5.20 × 2.10 m planning envelopes retained, not physical vehicle specifications.';
 d.decorativePlanters=[{x:25.15,y:10.05,radius:.30,height:.90,foliageRadius:.50},{x:26,y:10.7,radius:.30,height:.68,foliageRadius:.50},{x:33,y:15.35,radius:.30,height:.90,foliageRadius:.50},{x:33.72,y:15.35,radius:.30,height:.68,foliageRadius:.50}];
 for(const state of d.states){
+ const smartDesk=state.furniture.find(q=>q.id==='SC');
+ Object.assign(smartDesk,{shape:'rectangular-slab-ended',round:false,finish:'pale wood',tableHeight:.766,source:'D01 Requirement summary for SMART Shop in Shop V3, PDF p20, legend7 and Module3B bill; p21 inset',dimensionStatus:'0.85 x1.60m and height are visual proxies; source gives desk type and chair count, not manufacturing dimensions',fidelityNote:'Rectangular consult desk with two full-width slab short-end supports; one advisor opposite two customers. Not a round cafe table or central pedestal. Owner requested recheck15Sep2026.'});
  for(const car of state.cars.filter(q=>q.brand==='MB'))Object.assign(car,d.mbVehicles.find(q=>q.id===car.id));
  const mb5=state.cars.find(q=>q.id==='MB5');Object.assign(mb5,{cx:28.2,cy:6.9,angle:-90,frontCentre:[28.2,4.3],clearanceStatus:'Owner review adopted: centred to entrance, adjusted setback. Door line gap1.80m; rear circulation and swept paths remain HOLD pending measured door swing and full route validation.'});
  for(const car of state.cars.filter(q=>q.brand==='MB')){
@@ -55,6 +58,18 @@ for(const state of d.states){
   if(!stand){stand={id:car.id+'-EP',type:'price-stand',w:.35,h:.35,zone:'MB-price',retained:false};state.furniture.push(stand);}
   const a=car.angle*Math.PI/180,forward=[Math.cos(a),Math.sin(a)],right=[Math.sin(a),-Math.cos(a)],long=car.l/2-.30,side=car.w/2+stand.w/2+.15;
   Object.assign(stand,{cx:+(car.cx+forward[0]*long+right[0]*side).toFixed(4),cy:+(car.cy+forward[1]*long+right[1]*side).toFixed(4),angle:car.angle,relocated:true,placement:'Driver right / RHD; centre 0.30m behind front; base edge0.15m outside planning vehicle envelope',note:'Owner review adopted; verify actual stand and door clearances'});
+  if(/^MB[1-5]$/.test(car.id)){
+   const axle=measureFrontAxle(car),offset=axle.frontAxleOffset,modelTyreGap=side-stand.h/2-axle.rightFrontTyreOuterOffset;
+   if(!(modelTyreGap>0&&modelTyreGap<.30))throw Error(car.id+' model front-tyre-to-base lateral gap must be positive and below0.30m');
+   Object.assign(stand,{cx:+(car.cx+forward[0]*offset+right[0]*side).toFixed(9),cy:+(car.cy+forward[1]*offset+right[1]*side).toFixed(9),angle:car.angle+90,
+    placement:'Driver right / RHD; next to actual model front tyre; sign face points in vehicle-front direction; base edge0.15m outside planning vehicle envelope',
+    alignment:{...axle,reference:'front-right-tyre',signFace:'vehicle-front',vehicleAngle:car.angle,planningEnvelopeGap:.15,modelTyreGap,
+     manual:'RetailManual Vol2 Application Rules v2023: AD01 PDF190 / printed189; adjacent to front tyre, orientation parallel to vehicle main axis, lateral gap <30cm',
+     ownerConfirmation:'15 September 2026: MB1–MB5 next to front right tyre; sign faces same direction as car front',
+     supersedes:'Earlier approximate0.30m setback from vehicle front for MB1–MB5 only; MB6 unchanged',
+     mainVisitorPathVerified:false,doorOpeningVerified:false,supplierFootprintVerified:false},
+    note:'Owner-confirmed position and facing; verify actual stand and door clearances. Main visitor path and supplier stand footprint remain coordination items, not approved compliance.'});
+  }
   delete stand.corners;
  }
  for(const q of state.furniture){if(q.type==='plant'||q.type==='planter'){if(Math.abs(q.cx-25.8)<.001&&Math.abs(q.cy-10.7)<.001){q.cx=25.15;q.cy=10.05;}else if(Math.abs(q.cx-26.55)<.001&&Math.abs(q.cy-10.7)<.001){q.cx=26;q.cy=10.7;}}}
@@ -70,12 +85,16 @@ for(const q of s.existingInventory){
  if(q.id==='FACADE-MB')Object.assign(q,{xy:[4.05,-.22],width:7.55,textHeight:.93,centreHeight:3.85,positionStatus:'first glazed bay, near-frontal June2024 Street View checked13Sep2026; metric photo-fit only',typography:'raised serif lettering silhouette on continuous black concrete beam; supplier vector pending'});
  if(q.id==='FACADE-DEALER')Object.assign(q,{xy:[20,-.22],width:7.35,textHeight:.72,centreHeight:3.85,positionStatus:'third glazed bay before canopy, June2024 Street View checked13Sep2026; metric photo-fit only',typography:'raised sans-serif dealer lettering silhouette on continuous black concrete beam'});
 }
-d.reviewAdoptions={revision:'v11',ownerReviewDate:'2026-09-13',mb5:'Front-centre interpretation, aligned to entrance centreX28.2 with setback adjusted toY4.3',priceStands:'All MB including MB6 handover: RHD front-right,0.30m setback',status:'Adopted in model; not compliance approval'};
+d.reviewAdoptions={revision:'v11',ownerReviewDate:'2026-09-13',mb5:'Front-centre interpretation, aligned to entrance centreX28.2 with setback adjusted toY4.3',priceStands:'15Sep2026: MB1–MB5 at actual fitted front-right tyre, sign faces vehicle front; supersedes former0.30m nose setback for these five only. MB6 handover retains prior RHD front-right0.30m setback and facing. AD01 visitor-path, open-door and supplier-footprint coordination remain unverified.',status:'Adopted in model; not compliance approval'};
 s.exteriorParking={...JSON.parse(fs.readFileSync(path.join(root,'assets/parking-photo-fit.json'),'utf8')),level:s.levels.forecourt};
 d.limitations=d.limitations.map(q=>q.startsWith('MB5 circulation HOLD')?'MB5 owner relocation adopted; actual door swing, rear passage and vehicle swept path remain HOLD':q);
 d.feedbackPolicy={submissionEnabled:true,reason:'Live backend must explicitly support v11 section, image/plan/model and point/rectangle contracts. Each review retains its section, reference, state and metric plan location; receipt verification is required.'};
 d.limitations=d.limitations.filter(q=>!q.startsWith('Street View is historical'));
 d.limitations.push('v09 separates reconstructed existing exterior from proposed smart additions. Proposed items are not compliance, engineering or supplier approvals.');
+require('./apply-owner-review-v12.cjs')(d,JSON.parse(fs.readFileSync(path.join(root,'assets/owner-review-v12.json'),'utf8')));
 fs.writeFileSync(path.join(root,'assets/site-context.json'),JSON.stringify(s,null,2)+'\n');
-fs.writeFileSync(path.join(root,'layout.js'),'/* v09-r4 / v11 owner review adoption; coordinate frame and archived v08 preserved. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
+fs.writeFileSync(path.join(root,'assets/parking-photo-fit.json'),JSON.stringify(s.exteriorParking,null,2)+'\n');
+fs.writeFileSync(path.join(root,'assets/workshop-study.json'),JSON.stringify(s.workshopStudy,null,2)+'\n');
+fs.writeFileSync(path.join(root,'assets/exterior-proposal.json'),JSON.stringify(d.exterior,null,2)+'\n');
+fs.writeFileSync(path.join(root,'layout.js'),'/* v09-r6 / v12 owner review adoption; v11 comment contract and archived coordinates preserved. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
 console.log('v09 layout generated; existing inventory separated from smart proposal');

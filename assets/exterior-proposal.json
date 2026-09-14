@@ -5,20 +5,178 @@
   "concept": "A restrained smart arrival marker at the left driveway; retain MB identity and shrine corner; concentrate smart parking on the side apron",
   "source": "Requirement summary for SMART Shop in Shop, version 3.0, 1 September 2026, PDF pages 2 and 4–13",
   "units": "metres; X,Y in unchanged local building grid; world X,height,-Y",
-  "pylon": {"id":"SP1","x":-1.8,"y":-3.3,"width":1.466,"height":4.515,"depth":0.28,"status":"D01 p4–5 small size; shifted forward to clear restored meeting room, not an existing-object relocation. Depth/foundation/access provisional. Original smart UK symbol and wordmark paths; stacked spacing and production artwork pending supplier approval."},
-  "flag": {"id":"SF1","x":-4,"y":-3.5,"width":1.2,"height":4.5,"poleHeight":7.2,"status":"D01 p4/6 flag dimensions; moved forward to clear meeting room. Pole height/base/circulation provisional; separate from existing MB 3 + Thai 2"},
-  "directionBoard": {"id":"SD1","enabled":false,"approval":"waiver_pending","width":0.75,"height":1.7,"depth":0.05,"status":"OMITTED by owner: share retained MB directional sign to avoid duplication. D01 p4/10 remains required (flexible); owner will request waiver. No waiver granted or submitted by this model."},
-  "facadeLogo": {"id":"S-FACADE","type":"Type 4 indoor window / SL2-sized study retained from v07","center":[35.97,2.73],"width":0.98,"height":1.32,"status":"Existing v07 proposal, NOT an installed existing smart logo; keep row6-directed location. D01 p7–9 brand spacing needs real MB wordmark width, sightline and supplier artwork verification. No duplicate logo added."},
-  "careLogo": {"id":"SC1","x":41.5,"y":15.96,"centerHeight":3.36,"width":2.07,"height":0.3,"depth":0.025,"status":"D01 p4/13 size on front-end fascia of EXISTING ATTACHED WORKSHOP AWNING, not sales entrance. Exact service inspection point, artwork and mounting pending operator/supplier confirmation."},
-  "serviceCanopy": {"replacedBy":"site.annexes.workshop.awning","status":"Detached canopy proxy removed. Existing awning is integrated with attached rear workshop; no new standalone canopy proposed."},
+  "pylon": {
+    "id": "SP1",
+    "x": 5,
+    "y": -7.22,
+    "width": 1.466,
+    "height": 4.515,
+    "depth": 0.28,
+    "status": "Removed from current proposal by latest owner instruction15Sep2026; historical SP1 ID and location retained only for comment provenance, no body, base or logo rendered.",
+    "rotationRadians": 0,
+    "enabled": false,
+    "render": false
+  },
+  "flag": {
+    "id": "SF1",
+    "x": 8,
+    "y": -7.57,
+    "width": 1.2,
+    "height": 4.5,
+    "poleHeight": 7.2,
+    "status": "Lone left smart flag removed by latest owner instruction15Sep2026; historical SF1 ID retained for comment provenance, no pole, cloth or base rendered.",
+    "enabled": false,
+    "render": false
+  },
+  "directionBoard": {
+    "id": "SD1",
+    "enabled": false,
+    "approval": "waiver_pending",
+    "width": 0.75,
+    "height": 1.7,
+    "depth": 0.05,
+    "status": "OMITTED by owner: share retained MB directional sign to avoid duplication. D01 p4/10 remains required (flexible); owner will request waiver. No waiver granted or submitted by this model."
+  },
+  "facadeLogo": {
+    "id": "S-FACADE",
+    "type": "Type 4 indoor window / SL2-sized study retained from v07",
+    "center": [
+      35,
+      2.73
+    ],
+    "width": 0.98,
+    "height": 1.32,
+    "status": "Inside frameless glass panel X34–36, with separate raised source-path symbol/wordmark and two slim vertical carriers; physical dark back visible from interior. No fabricated LED power, CCT, return-depth or carrier engineering specification.",
+    "installationType": 4,
+    "illuminated": true,
+    "outwardFacing": true
+  },
+  "careLogo": {
+    "id": "SC1",
+    "x": 49.1875,
+    "y": 26.135,
+    "centerHeight": 0.1499999999999999,
+    "width": 2.07,
+    "height": 0.3,
+    "depth": 0.025,
+    "status": "Owner-confirmed relocation of the single existing study sign from canopy to inside fence between MB-D02 and MB-D03, facing workshop. Y is midpoint of clear gap22–30.27; X is inner fence49.2 minus half panel depth. Height, hardware and fence attachments are reversible visual proxies, not engineering or brand approval.",
+    "xy": [
+      49.1875,
+      26.135
+    ],
+    "heightAboveApron": 0.95,
+    "rotationRadians": -1.5707963267948966,
+    "mount": "inside-fence",
+    "faceDirection": "plan-negative-X",
+    "betweenParkingCodes": [
+      "MB-D02",
+      "MB-D03"
+    ]
+  },
+  "serviceCanopy": {
+    "replacedBy": "site.annexes.workshop.awning",
+    "status": "Detached canopy proxy removed. Existing awning is integrated with attached rear workshop; no new standalone canopy proposed."
+  },
   "parking": [
-    {"id":"SC-P1","use":"smart customer","existingBayId":"S-1","render":true,"x":47.9,"y":5.65,"width":2.8,"length":5.5,"status":"Candidate assignment to photographed existing interval, NOT an additional bay. MB allocation review pending."},
-    {"id":"ST-P1","use":"smart test drive 1","existingBayId":"S-2","render":true,"x":47.9,"y":11.15,"width":2.8,"length":5.5,"status":"Candidate assignment to photographed existing interval, NOT an additional bay. MB allocation review pending."},
-    {"id":"ST-P2","use":"smart test drive 2","existingBayId":null,"render":false,"x":null,"y":null,"width":2.8,"length":5.5,"status":"HOLD — unassigned. Former Y17.15 proxy crossed the workshop gate approach and is removed from physical paint, not relocated without evidence."}
+    {
+      "id": "SC-P1",
+      "use": "smart sales",
+      "existingBayId": "B-2",
+      "render": true,
+      "x": 8.1,
+      "y": -3.05,
+      "width": 2.5,
+      "length": 5,
+      "status": "Owner-confirmed Smart Sales 01 at S-S-01; sign anchor is an unmeasured design proxy, supplier/access approval pending",
+      "referenceId": "SC-P1",
+      "bayId": "B-2",
+      "code": "S-S-01",
+      "brand": "smart",
+      "role": "Sales",
+      "label": "Smart Sales 01",
+      "signAnchor": [
+        5.92,
+        -1.5
+      ],
+      "signRotation": 0,
+      "bounds": [
+        5.6,
+        -4.3,
+        10.6,
+        -1.8
+      ],
+      "allocationReviewPending": false
+    },
+    {
+      "id": "ST-P1",
+      "use": "smart demo",
+      "existingBayId": "B-1",
+      "render": true,
+      "x": 3.0999999999999996,
+      "y": -3.05,
+      "width": 2.5,
+      "length": 5,
+      "status": "Owner-confirmed Smart Demo 01 at S-D-01; sign anchor is an unmeasured design proxy, supplier/access approval pending",
+      "referenceId": "ST-P1",
+      "bayId": "B-1",
+      "code": "S-D-01",
+      "brand": "smart",
+      "role": "Demo",
+      "label": "Smart Demo 01",
+      "signAnchor": [
+        0.92,
+        -1.5
+      ],
+      "signRotation": 0,
+      "bounds": [
+        0.6,
+        -4.3,
+        5.6,
+        -1.8
+      ],
+      "allocationReviewPending": false
+    },
+    {
+      "id": "ST-P2",
+      "use": "smart demo",
+      "existingBayId": "OWNER-REAR-01",
+      "render": true,
+      "x": 38.75,
+      "y": 45.5,
+      "width": 2.5,
+      "length": 5,
+      "status": "Owner-confirmed Smart Demo 02 at S-D-02; sign anchor is an unmeasured design proxy, supplier/access approval pending",
+      "referenceId": "ST-P2",
+      "bayId": "OWNER-REAR-01",
+      "code": "S-D-02",
+      "brand": "smart",
+      "role": "Demo",
+      "label": "Smart Demo 02",
+      "signAnchor": [
+        39.68,
+        48.2
+      ],
+      "signRotation": 3.141592653589793,
+      "bounds": [
+        37.5,
+        43,
+        40,
+        48
+      ],
+      "allocationReviewPending": false
+    }
   ],
   "parkingStatus": "D01 p12 target: 1 customer + 2 test-drive bays. Two candidate assignments reuse photographed side cells S-1/S-2 with no duplicate paint. Second test-drive space is UNASSIGNED / HOLD: former proxy crossed workshop gate approach. Preserve MB allocation FIRST. Full-site inventory, measured paint, swept paths, exits and levels not validated; not a capacity or compliance approval.",
-  "sharedCharging": "Retain the v07 shared existing MB wallbox concept. No new charger or capacity invented; operating reach, electrical compatibility and safe cable route need verification.",
-  "retained": ["Existing MB pylon", "Three existing MB flags", "Two existing Thai flags", "Chinese shrine", "Existing Mercedes-Benz and dealer signs", "Existing main entry canopy", "Existing interior v07 geometry and three Flex modes"],
+  "sharedCharging": "Four owner-confirmed charging points: showroom, Customer Service, rear workshop and rear parking. Existing SHARED-EV represents the showroom point; mounting, hardware, electrical capacity and specifications remain unverified.",
+  "retained": [
+    "Existing MB pylon",
+    "Three existing MB flags",
+    "Two existing Thai flags",
+    "Chinese shrine",
+    "Existing Mercedes-Benz and dealer signs",
+    "Existing main entry canopy",
+    "Existing interior v07 geometry and three Flex modes"
+  ],
   "approvalGates": [
     "smart review of pylon/flag location; SD1 omitted per owner and uses shared MB wayfinding, WAIVER PENDING, not an approved exception",
     "Facade mark method/size and D01 p7 clear spacing relative to actual MB wordmarks",
@@ -26,5 +184,874 @@
     "Utilities clearance, sign foundations, wind load, lighting/power and permissions by qualified local team",
     "Retain MB parking minimum before assigning smart 1+2; validate vehicle movement and pedestrian access",
     "Operator confirms side/rear canopy as smart service inspection point before care sign installation"
+  ],
+  "workshopStudy": {
+    "revision": "v09-r3",
+    "status": "Owner-reported existing equipment with separately identified proposed smart WiW interventions; not supplier/survey verified",
+    "sources": [
+      {
+        "id": "D01",
+        "pages": [
+          2,
+          24,
+          25,
+          26,
+          27
+        ],
+        "title": "smart SiS/WiW Requirement Summary V3, 1 September 2026"
+      },
+      {
+        "id": "D02",
+        "pages": [
+          2,
+          203,
+          207,
+          260
+        ],
+        "title": "MB Retail Experience Volume 2, 2023"
+      }
+    ],
+    "layoutBasis": "Legacy grid A–B6.5m bay row / B–C7m manoeuvring zone / C–D6.5m row / D–E6m interface. These are grid bands, not approved clearances.",
+    "clearDriveBand": {
+      "xMin": 8,
+      "xMax": 40,
+      "yMin": 28.5,
+      "yMax": 35.5,
+      "status": "Central reservation only; eastern parking excluded; swept path unverified"
+    },
+    "smartBays": [
+      {
+        "id": "SMART-HV",
+        "type": "HV",
+        "label": "ช่องงานแรงดันสูง · รออนุมัติ",
+        "xMin": 32,
+        "yMin": 35.5,
+        "xMax": 36,
+        "yMax": 42
+      }
+    ],
+    "bayDimensionsStatus": "One 4×6.5m HV use overlay on the owner-reported existing lift; separate 4×6.5m empty marked smart service workbay. No additional M/E lift or duplicated HV lift.",
+    "mbPlanningCells": {
+      "xMin": 8,
+      "xMax": 32,
+      "pitch": 4,
+      "rows": [
+        [
+          22,
+          28.5
+        ],
+        [
+          35.5,
+          42
+        ]
+      ],
+      "status": "Retired generic allocation proxies; explicit owner inventory is authoritative",
+      "render": false
+    },
+    "sharedParts": {
+      "xMin": 2.5,
+      "xMax": 7.3,
+      "yMin": 35.8,
+      "yMax": 41.3,
+      "shelfSeparation": "MB and smart distinct labelled shelves; not battery/quarantine storage"
+    },
+    "serviceReception": {
+      "xMin": 32,
+      "xMax": 36,
+      "yMin": 16,
+      "yMax": 22,
+      "floorLevel": -0.3,
+      "status": "Legacy service strip approximate; shared reception subject to MAR20/MPS II applicability"
+    },
+    "hvProtection": {
+      "matRating": null,
+      "approvedMatDimensions": null,
+      "approvedBarrierHeight": null,
+      "status": "Mat and barrier represented as placeholders; technical design and access/isolation/rescue procedures require approved HV specialist"
+    },
+    "charger": {
+      "brand": null,
+      "power": null,
+      "status": "Four owner-confirmed charging locations; hardware, mounting, cable route and power specifications remain unverified. CH-SHOWROOM reuses the existing SHARED-EV object; no fifth charger."
+    },
+    "lighting": {
+      "orientation": "Continuous rows parallel to lift/workbench axis",
+      "source": "D02 PDF p260 LP32",
+      "lux": null,
+      "calculationStatus": "not performed"
+    },
+    "openGates": [
+      "Current workshop survey and retained MB capacity",
+      "smart/MB site-specific technical criteria and conversion approval",
+      "HV risk assessment and certified protection products",
+      "Lift/slab/anchorage structural assessment",
+      "Electric power, charging, data/VLAN and commissioning",
+      "Approved local-language sign artwork and fonts",
+      "Accessible routes, fire egress and vehicle swept paths",
+      "Real browser/GPU and mobile visual review"
+    ],
+    "ownerLayout": {
+      "equipment": {
+        "ownerExisting": [
+          {
+            "id": "WS-R28-1",
+            "designation": "MB-2P-04",
+            "role": "MB High Voltage station",
+            "roleStatus": "Owner annotated plan 15 September 2026; role label, not HV safety certification",
+            "kind": "two-post",
+            "centre": [
+              14,
+              25.25
+            ],
+            "allocation": [
+              12,
+              22,
+              16,
+              28.5
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R28-2",
+            "designation": "MB-2P-03",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              18,
+              25.25
+            ],
+            "allocation": [
+              16,
+              22,
+              20,
+              28.5
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R28-3",
+            "designation": "MB-2P-02",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              22,
+              25.25
+            ],
+            "allocation": [
+              20,
+              22,
+              24,
+              28.5
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R28-4",
+            "designation": "MB-2P-01",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              26,
+              25.25
+            ],
+            "allocation": [
+              24,
+              22,
+              28,
+              28.5
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R29",
+            "role": "smart High Voltage station",
+            "roleStatus": "Owner annotation confirms use assignment; existing physical lift retained, HV technical acceptance remains HOLD",
+            "kind": "two-post",
+            "centre": [
+              34,
+              38.75
+            ],
+            "allocation": [
+              32,
+              35.5,
+              36,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R30-1",
+            "designation": "MB-2P-05",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              18,
+              38.75
+            ],
+            "allocation": [
+              16,
+              35.5,
+              20,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R30-2",
+            "designation": "MB-2P-06",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              22,
+              38.75
+            ],
+            "allocation": [
+              20,
+              35.5,
+              24,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R30-3",
+            "designation": "MB-2P-07",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              26,
+              38.75
+            ],
+            "allocation": [
+              24,
+              35.5,
+              28,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R31",
+            "designation": "MB-4P-02",
+            "role": "MB Active Reception workbay",
+            "kind": "four-post",
+            "centre": [
+              30,
+              38.75
+            ],
+            "allocation": [
+              28,
+              35.5,
+              32,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R32",
+            "designation": "MB-4P-01",
+            "role": "MB Wheel Alignment workbay",
+            "function": "wheel-alignment",
+            "physicalKindStatus": "Owner confirms a tall physical four-post alignment lift; member and runway dimensions remain schematic, not supplier verified",
+            "kind": "four-post",
+            "centre": [
+              14,
+              38.75
+            ],
+            "allocation": [
+              12,
+              35.5,
+              16,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          }
+        ],
+        "proposedAdditional": [],
+        "retireGenericMbPlanningLoop": true,
+        "retireUnconfirmedProxyCells": [
+          [
+            8,
+            22,
+            12,
+            28.5
+          ],
+          [
+            28,
+            22,
+            32,
+            28.5
+          ],
+          [
+            8,
+            35.5,
+            12,
+            42
+          ]
+        ],
+        "retirementMeaning": "Remove invented generic model proxies, not actual confirmed equipment"
+      },
+      "smartOverlays": [
+        {
+          "id": "SMART-HV",
+          "type": "HV",
+          "bounds": [
+            32,
+            35.5,
+            36,
+            42
+          ],
+          "physicalLiftRef": "WS-R29",
+          "renderOwnLift": false,
+          "status": "proposed HV use over owner-reported existing lift; safety/brand acceptance HOLD"
+        }
+      ],
+      "smartServiceWorkbay": {
+        "id": "SMART-SERVICE-WORKBAY",
+        "label": "smart service workbay",
+        "bounds": [
+          8,
+          22,
+          12,
+          28.5
+        ],
+        "renderStyle": "floor-marking-only",
+        "equipment": false,
+        "physicalLift": false,
+        "status": "Owner confirms empty floor reservation marked per smart workbay requirement; no lift or other equipment. Not a relocated M/E hoist or technical approval."
+      },
+      "existingRearStair": {
+        "id": "EXISTING-REAR-STEEL-STAIR",
+        "bounds": [
+          36,
+          38.75,
+          40,
+          42
+        ],
+        "material": "steel",
+        "floorLevel": -0.6,
+        "upperLandingLevel": 3,
+        "flightWidth": 1.1,
+        "landingDepth": 0.85,
+        "risersPerFlight": 9,
+        "arrangement": "compact return-stair visual proxy",
+        "floorDestination": "second floor",
+        "ownerConfirmed": "Existing steel stair occupies roughly the rear half of the former top-right study cell; no hoist in this cell",
+        "status": "Extent and stair use confirmed by owner. Exact direction, tread/riser dimensions, landing elevation and guard details are provisional visual geometry, not measured access or structural approval. No second-floor room or new door inferred.",
+        "measuredDimensions": false,
+        "render": true
+      },
+      "chargingPoints": [
+        {
+          "id": "CH-REAR-PARKING",
+          "centre": [
+            23.75,
+            42.11
+          ],
+          "floorLevel": -0.8,
+          "parkingCode": "MB-C13",
+          "wallContactY": 42,
+          "faceDirection": "positive-y",
+          "location": "centre of MB-C13 against outside workshop rear wall",
+          "status": "Owner-confirmed relative location; X from MB-C13 centre, body centreY42.11 derived from wallY42 plus half the0.22m generic proxy depth. Face points towards rear parking. This is not measured set-out or specified charger hardware/mounting/power."
+        },
+        {
+          "id": "CH-REAR-WORKSHOP",
+          "centre": [
+            32,
+            41.9
+          ],
+          "floorLevel": -0.6,
+          "location": "rear workshop wall",
+          "status": "Owner confirms charging point; annotation-fit location marker, mounting/hardware/power unspecified"
+        },
+        {
+          "id": "CH-CS",
+          "centre": [
+            36.7,
+            21.5
+          ],
+          "floorLevel": -0.6,
+          "location": "beside Customer Service",
+          "status": "Owner confirms charging point; annotation-fit location marker, mounting/hardware/power unspecified"
+        },
+        {
+          "id": "CH-SHOWROOM",
+          "centre": [
+            33.7,
+            8
+          ],
+          "floorLevel": 0,
+          "location": "showroom near rear edge of Flex/Handover",
+          "status": "Owner confirms charging point; annotation-fit location marker, mounting/hardware/power unspecified"
+        }
+      ],
+      "chargingStatus": "Exactly four large magenta owner-plan circles are charging locations, not the small frontage smart-flag marks. Positions are visual registration, not electrical siting, cable routing, charger specification or approval; no additional charger inferred at HV bay.",
+      "reservations": {
+        "walkway": {
+          "id": "OWNER-R25-WALKWAY",
+          "bounds": [
+            27.86,
+            16.22,
+            35.89,
+            17.93
+          ],
+          "level": null,
+          "renderStyle": "outline-and-label-only; annotation width not survey"
+        },
+        "csOffice": {
+          "id": "OWNER-R26-CS-OFFICE",
+          "label": "Customer Service Office / สำนักงานบริการลูกค้า",
+          "abbreviation": "CS",
+          "programmeStatus": "Owner latest annotated plan explicitly labels Customer Service Office; adjacent MB-S03 is parking, not part of the office. CS means Customer Service, not sales or customer-consultant role.",
+          "bounds": [
+            32,
+            18.17,
+            35.89,
+            28.4
+          ],
+          "doors": [],
+          "level": null,
+          "ac": null,
+          "renderWalls": false,
+          "renderCeiling": false,
+          "renderStyle": "outline-and-label-only; no invented doors"
+        },
+        "obsoleteServiceCounter": {
+          "render": false,
+          "oldCentre": [
+            34,
+            19
+          ],
+          "meaning": "superseded unverified proxy"
+        },
+        "serviceSlab": {
+          "retainUnverifiedExistingProxy": true,
+          "bounds": [
+            32,
+            16,
+            36,
+            22
+          ],
+          "floorLevel": -0.3,
+          "annotationDepthTest": false,
+          "status": "No flattening or raised-floor extension inferred from comments"
+        },
+        "diagnosis": {
+          "requiredFunctionRetained": true,
+          "oldCentre": [
+            37.8,
+            24.8
+          ],
+          "renderOldCabinet": false,
+          "newCentre": null,
+          "status": "HOLD; old proposed cabinet conflicts with row27 parking; do not invent new room/doors"
+        },
+        "parking": [
+          {
+            "id": "OWNER-R27-P1",
+            "bounds": [
+              36.14,
+              22.07,
+              39.79,
+              28.4
+            ],
+            "code": "MB-S03"
+          },
+          {
+            "id": "OWNER-R33-P1",
+            "bounds": [
+              46,
+              30.27,
+              48.5,
+              35.27
+            ],
+            "code": "MB-D03",
+            "status": "Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified"
+          },
+          {
+            "id": "OWNER-R33-P2",
+            "bounds": [
+              46,
+              35.27,
+              48.5,
+              40.27
+            ],
+            "code": "MB-D04",
+            "status": "Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified"
+          },
+          {
+            "id": "OWNER-R34-P1",
+            "bounds": [
+              46,
+              17,
+              48.5,
+              22
+            ],
+            "code": "MB-D02",
+            "status": "Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified"
+          },
+          {
+            "id": "OWNER-R36-P1",
+            "bounds": [
+              46,
+              42,
+              48.5,
+              47
+            ],
+            "renderStyle": "owner dimensioned2.5×5m reservation; r6 replaces obsolete annotation-box overlap; actual approach unverified",
+            "code": "MB-D05",
+            "status": "Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified"
+          }
+        ],
+        "parkingStatus": "Owner-marked approximate reservations, long-axis Y, no extra rendered vehicles or approved capacity"
+      },
+      "rearParking": {
+        "id": "OWNER-REAR-TEN",
+        "count": 10,
+        "wallModelY": 42,
+        "offset": 1,
+        "yMin": 43,
+        "yMax": 48,
+        "width": 2.5,
+        "depth": 5,
+        "anchor": {
+          "kind": "bank right edge aligned with workshop sidewall X40; bay1 is rightmost",
+          "x": 40,
+          "bay1CentreX": 38.75,
+          "status": "Owner-confirmed corrected registration from annotated plan 15 September 2026; not surveyed"
+        },
+        "bankBounds": [
+          15,
+          43,
+          40,
+          48
+        ],
+        "gapStrip": [
+          15,
+          42,
+          40,
+          43
+        ],
+        "numberOrder": "right to left",
+        "bays": [
+          {
+            "id": "OWNER-REAR-01",
+            "code": "S-D-02",
+            "number": 1,
+            "centre": [
+              38.75,
+              45.5
+            ],
+            "bounds": [
+              37.5,
+              43,
+              40,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-02",
+            "code": "MB-C08",
+            "number": 2,
+            "centre": [
+              36.25,
+              45.5
+            ],
+            "bounds": [
+              35,
+              43,
+              37.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-03",
+            "code": "MB-C09",
+            "number": 3,
+            "centre": [
+              33.75,
+              45.5
+            ],
+            "bounds": [
+              32.5,
+              43,
+              35,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-04",
+            "code": "MB-C10",
+            "number": 4,
+            "centre": [
+              31.25,
+              45.5
+            ],
+            "bounds": [
+              30,
+              43,
+              32.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-05",
+            "code": "MB-C11",
+            "number": 5,
+            "centre": [
+              28.75,
+              45.5
+            ],
+            "bounds": [
+              27.5,
+              43,
+              30,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-06",
+            "code": "MB-C12",
+            "number": 6,
+            "centre": [
+              26.25,
+              45.5
+            ],
+            "bounds": [
+              25,
+              43,
+              27.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-07",
+            "code": "MB-C13",
+            "number": 7,
+            "centre": [
+              23.75,
+              45.5
+            ],
+            "bounds": [
+              22.5,
+              43,
+              25,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-08",
+            "code": "MB-C14",
+            "number": 8,
+            "centre": [
+              21.25,
+              45.5
+            ],
+            "bounds": [
+              20,
+              43,
+              22.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-09",
+            "code": "MB-C15",
+            "number": 9,
+            "centre": [
+              18.75,
+              45.5
+            ],
+            "bounds": [
+              17.5,
+              43,
+              20,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-10",
+            "code": "MB-C16",
+            "number": 10,
+            "centre": [
+              16.25,
+              45.5
+            ],
+            "bounds": [
+              15,
+              43,
+              17.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          }
+        ],
+        "crossedOutLeftCellsRendered": 0,
+        "vehicleHeading": null,
+        "renderVehicles": false,
+        "approachStatus": "HOLD;1m is wall offset, not vehicle aisle; do not invent rear wall opening"
+      },
+      "ownerAnnotationResolutions": {
+        "source": "828E311D-6782-4BED-8B4C-750FF306907B.jpg",
+        "sourceRole": "Latest owner-annotated plan; supersedes earlier photo annotations where answered",
+        "status": "Owner answered all three questions; confirmed roles and counts applied, dimensions remain annotation-fit unless explicitly stated",
+        "items": [
+          {
+            "id": "SMART-SERVICE-ME-AND-STAIRS",
+            "observation": "Orange SMART service workbay left of front MB-2P-04; stairs drawn in the current top-right M/E cell",
+            "answer": "Orange smart service workbay is empty marked floor only, without any lift or equipment. Top-right cell has no hoist; existing steel stair to second floor occupies roughly the rear half. No additional M/E lift is retained or relocated.",
+            "applied": true
+          },
+          {
+            "id": "ALIGNMENT-PHYSICAL-MECHANISM",
+            "observation": "Rear Wheel Alignment workbay is labelled MB-4P-01",
+            "answer": "MB-4P-01 is an actual tall four-post wheel-alignment lift. Total existing physical inventory is eight two-post plus two four-post lifts.",
+            "applied": true
+          },
+          {
+            "id": "MAGENTA-CHARGING-POINTS",
+            "observation": "Four large magenta circles near rear parking, rear workshop wall, CS and showroom; small frontage marks separately label smart flags",
+            "answer": "All four large magenta circles are charging locations; small frontage marks are smart flags. Exact mounting, hardware and electrical specification remain unconfirmed.",
+            "applied": true
+          }
+        ]
+      },
+      "circulation": {
+        "retireClearDriveBandToX49_2": true,
+        "centralReservation": [
+          8,
+          28.5,
+          40,
+          35.5
+        ],
+        "sideResidualStudy": [
+          40.2,
+          17.2,
+          44.9,
+          42
+        ],
+        "status": "Illustrative reservations; not swept-path/width certification; inspect gate/posts"
+      },
+      "expectedCounts": {
+        "ownerPhysicalLifts": 10,
+        "ownerTwoPost": 8,
+        "ownerFourPost": 2,
+        "ownerAlignment": 1,
+        "ownerAlignmentCountBasis": "Role subset of the two physical four-post lifts, not an additional lift",
+        "proposedAdditionalME": 0,
+        "proposedSchemePhysicalLifts": 10,
+        "existingSchemePhysicalLifts": 10,
+        "smartUseOverlays": 1,
+        "smartFloorOnlyWorkbays": 1,
+        "chargingLocations": 4,
+        "extraPhysicalHVLifts": 0,
+        "rearNumberedBays": 10,
+        "otherOwnerParkingReservations": 5,
+        "totalParkingReservationsThisSubset": 15,
+        "siteCapacity": null
+      }
+    },
+    "customerService": {
+      "id": "OWNER-R26-CS-OFFICE",
+      "label": "Customer Service Office / สำนักงานบริการลูกค้า",
+      "abbreviation": "CS",
+      "programmeStatus": "Owner latest annotated plan explicitly labels Customer Service Office; adjacent MB-S03 is parking, not part of the office. CS means Customer Service, not sales or customer-consultant role.",
+      "bounds": [
+        32,
+        18.17,
+        35.89,
+        28.4
+      ],
+      "doors": [],
+      "level": null,
+      "ac": null,
+      "renderWalls": false,
+      "renderCeiling": false,
+      "renderStyle": "outline-and-label-only; no invented doors"
+    },
+    "diagnosis": {
+      "required": true,
+      "positionStatus": "HOLD: previous unverified cabinet removed from Customer Service parking; final location requires operator confirmation"
+    }
+  },
+  "allocationReviewPending": false,
+  "additionalFlags": [
+    {
+      "id": "SF2",
+      "x": 19.5,
+      "y": -7.57,
+      "width": 1.2,
+      "height": 4.5,
+      "poleHeight": 7.2,
+      "status": "Latest owner instruction15Sep2026 retains ONLY SF2–SF4: three smart flags at2.50m centres, first2.50m from MB neighbour at X17, all Y−7.57. SP1 and SF1 are removed. Cloths1.20×4.50m; pole heights7.20m unchanged. Foundation, wind loading and brand clearance remain unverified."
+    },
+    {
+      "id": "SF3",
+      "x": 22,
+      "y": -7.57,
+      "width": 1.2,
+      "height": 4.5,
+      "poleHeight": 7.2,
+      "status": "Latest owner instruction15Sep2026 retains ONLY SF2–SF4: three smart flags at2.50m centres, first2.50m from MB neighbour at X17, all Y−7.57. SP1 and SF1 are removed. Cloths1.20×4.50m; pole heights7.20m unchanged. Foundation, wind loading and brand clearance remain unverified."
+    },
+    {
+      "id": "SF4",
+      "x": 24.5,
+      "y": -7.57,
+      "width": 1.2,
+      "height": 4.5,
+      "poleHeight": 7.2,
+      "status": "Latest owner instruction15Sep2026 retains ONLY SF2–SF4: three smart flags at2.50m centres, first2.50m from MB neighbour at X17, all Y−7.57. SP1 and SF1 are removed. Cloths1.20×4.50m; pole heights7.20m unchanged. Foundation, wind loading and brand clearance remain unverified."
+    }
   ]
 }

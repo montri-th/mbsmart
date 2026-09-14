@@ -96,7 +96,7 @@
         5,
         28
       ],
-      "status": "proposed_review",
+      "status": "waiver_pending",
       "requirement": "Black pylon with illuminated upper logo and lower lettering; existing large pylon substructure may be reused subject to fit.",
       "dimensionsMm": {
         "variants": [
@@ -110,8 +110,9 @@
           }
         ]
       },
-      "review": "SP1 1.466×4.515m shifted forward to clear restored meeting room; original smart UK symbol and wordmark paths replace reconstructed logo. Stacked spacing remains study composition; supplier production artwork, foundations, utilities, height, circulation and MB coexistence still require approval.",
-      "v09Intent": "SP1 small pylon 1.466×4.515m at left arrival apron; retain MB pylon. Review foundations, utilities, sign height and coexistence."
+      "review": "Owner removes smart pylon SP1 entirely from the current proposal. Historical ID remains for comments only; no body/base/logo is rendered. Omission is not a smart-approved waiver of the source requirement.",
+      "v09Intent": "SP1 small pylon 1.466×4.515m at left arrival apron; retain MB pylon. Review foundations, utilities, sign height and coexistence.",
+      "v12Intent": "r6: เจ้าของล่าสุดให้ถอด smart pylon SP1 ออกจากข้อเสนอทั้งหมด ไม่มีตัวป้าย ฐานหรือโลโก้ค้างในโมเดล คงรหัสเดิมเฉพาะประวัติ comment; เสา MB เดิมไม่เปลี่ยน การไม่ติดตั้ง pylon ไม่ถือเป็นการอนุมัติยกเว้นข้อกำหนดโดย smart"
     },
     {
       "id": "2",
@@ -130,8 +131,9 @@
         "height": 4500,
         "width": 1200
       },
-      "review": "SF1 smart flag 1.2×4.5m at separate left arrival position; all three MB and two Thai flags retained. Pole/base design pending. Confirm flag location and attachment with site owner and smart.",
-      "v09Intent": "SF1 smart flag 1.2×4.5m at separate left arrival position; all three MB and two Thai flags retained. Pole/base design pending."
+      "review": "Latest owner instruction removes lone left SF1 and retains only SF2–SF4: three Smart flags, with2.50m pole spacing including nearest MB. All three MB cloths are enlarged to1.20×4.50m matching Smart; existing poles and Thai2 unchanged. Brand acceptance, safe mounting and wind loading remain review gates.",
+      "v09Intent": "SF1 smart flag 1.2×4.5m at separate left arrival position; all three MB and two Thai flags retained. Pole/base design pending.",
+      "v12Intent": "r6: เจ้าของล่าสุดให้ถอด SF1 เดี่ยวด้านซ้าย คงเฉพาะ SF2–SF4 รวมsmart3ต้น ระยะห่าง2.50ม. และห่าง MBข้างเคียง2.50ม. ผืนธง MB3ต้นขยายเป็น1.20×4.50ม. เท่าsmart คงตำแหน่งและความสูงเสาเดิมพร้อมธงชาติ2ต้น ฐาน การรับแรงและการยอมรับโดยแบรนด์ยังรอตรวจ"
     },
     {
       "id": "3",
@@ -177,12 +179,13 @@
       },
       "v07Intent": "Owner-adopted installation type4 indoor-display-window logo, proposed SL2 0.98m wide x1.32m high, at owner pin X35.97,Y2.73. Type4 does not mean SL4.",
       "placement": {
-        "planXMetres": 35.97,
+        "planXMetres": 35,
         "planYMetres": 2.73,
-        "basis": "owner comment pin; placement instruction, not an as-built survey",
+        "basis": "r6 owner: centre of frameless panel X34–36; historical pin preserved only in original comment log",
         "installationType": 4
       },
-      "review": "RFI: verify existing MB size/matching SL2, mounting elevation and supports, actual window/frame location, outward visibility and complete exterior identity. A proposed indoor-window logo does not establish site-wide exterior compliance."
+      "review": "RFI: verify existing MB size/matching SL2, mounting elevation and supports, actual window/frame location, outward visibility and complete exterior identity. A proposed indoor-window logo does not establish site-wide exterior compliance.",
+      "v12Intent": "r6: Type4 Illuminated ด้านในกระจกหน้าห้องส่งมอบ X34–36 (ศูนย์กลาง X35/Y2.73) หันออกถนน ตัวอักษรนูนมีด้านหลังทึบและโครงแขวนแนวตั้ง2เส้นตาม D01p8 ใช้เส้นโลโก้ต้นทาง ขนาด SL2 ความหนาและการติดตั้งเป็นตัวแทน รอผู้ผลิตยืนยัน ไม่ใช่SL4"
     },
     {
       "id": "4",
@@ -279,8 +282,9 @@
           "testDrive": 4
         }
       ],
-      "review": "Target remains smart customer1 + test2. Night-photo reconstruction reuses two existing side cells S-1/S-2 as candidate customer1/test1 assignments with no duplicate paint. Test-drive2 is UNASSIGNED / HOLD: former proxy crossed workshop gate approach. Required MB allocation, dealership classification, exact paint and vehicle paths must be confirmed before any assignment; showroom cars cannot substitute for parking.",
-      "v09Intent": "R4 night-photo correction: two candidate existing-cell assignments, one unassigned requirement. No full-site inventory or capacity approval."
+      "review": "Owner parking roles are Demo01 at B1, Sales01 at B2 and Demo02 at rear1, not the superseded side S-1/S-2 trial. Sales designation does not itself prove compliance with customer-parking requirements. MB allocation, brand acceptance and surveyed manoeuvring remain separate review gates; display cars cannot substitute for parking.",
+      "v09Intent": "R4 night-photo correction: two candidate existing-cell assignments, one unassigned requirement. No full-site inventory or capacity approval.",
+      "v12Intent": "r6: เจ้าของกำหนด B1 = S-D-01 Smart Demo01, B2 = S-S-01 Smart Sales01, หลังอู่ช่อง1 = S-D-02 Smart Demo02; หลังช่อง2–10 = MB-C08–MB-C16 เรียงขวาไปซ้าย. ยกเลิกข้อเสนอ smart S-1/S-2 ด้านข้างเดิม; ชื่อ Sales ไม่ถือว่าแทน customer requirement โดยอัตโนมัติ ยังรอแบรนด์ตรวจโควตาและทางเข้าออก"
     },
     {
       "id": "7",
@@ -302,8 +306,9 @@
         "transparentAcrylic": 5,
         "opalAcrylic": 5
       },
-      "review": "SC1 2.07×0.30m now on front-end fascia of the attached workshop awning, not sales entrance; detached canopy proxy removed. Operator must confirm this as actual inspection point and supplier must verify artwork/mounting.",
-      "v09Intent": "Use the existing workshop's attached awning as a proposed care-logo mounting study; not an approved inspection function."
+      "review": "Owner relocation of existing SC1 / care04 from the canopy to the inside fence between MB-D02 and MB-D03, facing the workshop, retains its artwork and 2.07×0.30m size. This is one moved sign, not an extra copy. Mounting engineering and acceptance against the unchanged source canopy requirement remain unverified.",
+      "v09Intent": "Use the existing workshop's attached awning as a proposed care-logo mounting study; not an approved inspection function.",
+      "v12Intent": "r6: ย้ายป้าย smart care04 / SC1 เดิมออกจากกันสาดไปด้านในรั้ว ระหว่าง MB-D02 กับ MB-D03 หันเข้าหาอู่ตามเจ้าของ ไม่เพิ่มป้ายซ้ำ คง artwork และขนาด2.07×0.30ม. การรับแรง ฐาน จุดยึดและการยอมรับตำแหน่งใหม่ตามข้อกำหนดยังรอตรวจ; ชื่อข้อกำหนดต้นทางที่ระบุ canopy ยังคงไว้ ไม่ถือว่าการย้ายเป็นการอนุมัติข้อยกเว้น"
     },
     {
       "id": "8",
@@ -382,7 +387,8 @@
           "review": "Review complete platform, edge/light, carpet, wall/screen, furniture, price stand and real charger; do not interpret this as3A+3B."
         }
       ],
-      "review": "Obtain written confirmation of one-car exception independently from owner-reported3B-alone acceptance; confirm exact variant, vehicle fit and full component set."
+      "review": "Obtain written confirmation of one-car exception independently from owner-reported3B-alone acceptance; confirm exact variant, vehicle fit and full component set.",
+      "v12Intent": "r6: คง Module 3B หนึ่งชุด / smart #5 หนึ่งคัน เจ้าของยืนยัน Autohaus Small และ MB Sub Stage 2 จอ พร้อม Sales Step V; จอ smart75นิ้วเป็นอีกชุด การยกเว้นขั้นต่ำรถ smart และสต็อก Certified ยังไม่ถือว่าอนุมัติ"
     },
     {
       "id": "9",
@@ -430,7 +436,8 @@
         "commissioningStatus": "not_verified"
       },
       "sourceConflict": "C06",
-      "review": "RFI: confirm smart acceptance of this shared existing charger for required item10, surveyed location, actual capacity/availability, connection side and cable reach, safe charging workflow, electrical condition and commissioning. Do not imply the remote wallbox can charge the displayed#5 in place or draw a long cable as proof of compliance. The clash-adjusted model proxy must not be issued as installation coordinates."
+      "review": "RFI: confirm smart acceptance of this shared existing charger for required item10, surveyed location, actual capacity/availability, connection side and cable reach, safe charging workflow, electrical condition and commissioning. Do not imply the remote wallbox can charge the displayed#5 in place or draw a long cable as proof of compliance. The clash-adjusted model proxy must not be issued as installation coordinates.",
+      "v12Intent": "r6: เจ้าของระบุจุดชาร์จ4ตำแหน่งรวมจุดในโชว์รูม จุดหลังอู่ตรงกลางช่อง MB-C13 ชิดผนังตามภาพกำกับ ใช้ตัวแทนตำแหน่งไม่ใช่สเปก wallbox; การติดตั้ง กำลังไฟ สายและสิทธิใช้ร่วมยังรอตรวจ ไม่อ้างว่าสายถึงรถแสดงหรือว่าผ่านข้อ10แล้ว"
     },
     {
       "id": "11",
@@ -461,7 +468,8 @@
       "status": "retained_shared_review",
       "requirement": "Master allows sharing with MB; a separate smart stand is Optional on p23.",
       "v07Intent": "Retain original shared counter; no second freestanding reception stand automatically added.",
-      "review": "Confirm shared reception visibility and operation; distinction is optional separate stand, not optional reception function."
+      "review": "Confirm shared reception visibility and operation; distinction is optional separate stand, not optional reception function.",
+      "v12Intent": "r6: คงเคาน์เตอร์ MB เดิม เพิ่มตัวแทนบัตรต้อนรับ/แท็บเล็ตและสื่อ Sub Stage 2 จอตาม Autohaus Small ไม่เพิ่มเคาน์เตอร์ smart แยก"
     },
     {
       "id": "13",
@@ -490,7 +498,8 @@
       "status": "retained_shared_review",
       "requirement": "Delivery can be shared with MB.",
       "v07Intent": "Default vehicle handover in existing flex bay; consulting/waiting are alternate uses and MB6 is absent in those alternatives.",
-      "review": "Confirm booking/changeover, vehicle path and availability. Rendered default MB6 is not a second smart display vehicle."
+      "review": "Confirm booking/changeover, vehicle path and availability. Rendered default MB6 is not a second smart display vehicle.",
+      "v12Intent": "r6: ลำดับที่เจ้าของยืนยันคือขยับ MB5 และป้ายราคา นำ MB6 ผ่านช่อง MB5 แล้วเลี้ยวซ้ายลง Ramp Entrance เดิม ไม่เพิ่มประตูรถใหม่; เส้นทางภายนอกและปลาย ramp ยัง HOLD รอตรวจระยะ/ความลาด/วงเลี้ยว ไม่ใช้เส้นแผนภาพเป็นระยะรับรอง"
     },
     {
       "id": "15",
@@ -505,7 +514,8 @@
       "status": "retained_shared_review",
       "requirement": "Shared with MB, subject to MAR20 or MPSII per master.",
       "v07Intent": "Existing service access/counter function retained; detailed Mercedes fit-out not improved in this iteration.",
-      "review": "Operations team must identify the real service reception and demonstrate applicable counter standard and service route."
+      "review": "Operations team must identify the real service reception and demonstrate applicable counter standard and service route.",
+      "v12Intent": "r6: CS คือ Customer Service / สำนักงานบริการลูกค้า แสดงกรอบสำนักงานและทางเดิน แยกจากช่องจอดภายใน MB-S03 ข้างสำนักงาน ซึ่งไม่นับใน26ช่องภายนอก ไม่เพิ่มผนังหรือประตูโดยเดา; ระดับพื้นและรายละเอียดเคาน์เตอร์ยังรอสำรวจ"
     },
     {
       "id": "16",
@@ -536,7 +546,8 @@
       "status": "retained_shared_review",
       "requirement": "Can share with MB; p24 illustrates shared lounge with smart signboard/table card/flag.",
       "v07Intent": "Existing air-conditioned lounge retained; optional waiting-annex use of flex bay connects to it.",
-      "review": "Confirm café service, capacity, accessible route, smart identification and HVAC/changeover. No whole-showroom AC is implied."
+      "review": "Confirm café service, capacity, accessible route, smart identification and HVAC/changeover. No whole-showroom AC is implied.",
+      "v12Intent": "r6: คงห้องรับรองเดิมและทางเลือก Flex เพิ่มตัวแทน hospitality บนโต๊ะเดิมตามลำดับประสบการณ์ Sales Step V ไม่ใช่การยืนยันจำนวนพนักงานหรือที่นั่งใช้งานจริง"
     },
     {
       "id": "18",
@@ -606,7 +617,7 @@
         25,
         28
       ],
-      "status": "not_modelled_workshop",
+      "status": "proposed_review",
       "requirement": "One high-voltage bay and one mechanical/electrical bay; p25 calls for local-language bay signage and HV protection.",
       "subitems": [
         {
@@ -640,7 +651,8 @@
           "details": "smartcare wall logo, grey/green hoist colour scheme and local-language signage in fit-out suggestions."
         }
       ],
-      "review": "Separate workshop plan, equipment allocation and safety/commissioning review required."
+      "review": "Separate workshop plan, equipment allocation and safety/commissioning review required.",
+      "v12Intent": "r6: smart HV ใช้ลิฟต์สองเสาเดิม WS-R29; smart service เป็นพื้นว่างตีเส้น ไม่มีลิฟต์ ตู้ หรืออุปกรณ์ในช่อง. เดิมมี10ลิฟต์: สองเสา8 + สี่เสา2 โดย MB-4P-01 เป็นลิฟต์ตั้งศูนย์สูงและ MB-4P-02 Active Reception. มุมหลังขวาเป็นบันไดเหล็กเดิมประมาณครึ่งช่อง ไม่มี M/E hoist; ข้อกำหนดหนึ่งHV+หนึ่งM/Eและการยอมรับแบบยังรอ smart ตรวจ"
     },
     {
       "id": "21",
@@ -652,9 +664,10 @@
         26,
         28
       ],
-      "status": "not_modelled_workshop",
+      "status": "proposed_review",
       "requirement": "General tools can be shared with MB.",
-      "review": "Provide inventory, availability and condition evidence; render does not demonstrate tools."
+      "review": "Provide inventory, availability and condition evidence; render does not demonstrate tools.",
+      "v12Intent": "r6: แสดงตัวแทนตู้เครื่องมือทั่วไปใช้ร่วม MB/smart นอกช่อง smart service ที่ต้องว่าง รายการและความพร้อมจริงรอตรวจ"
     },
     {
       "id": "22",
@@ -666,9 +679,10 @@
         26,
         28
       ],
-      "status": "not_modelled_workshop",
+      "status": "proposed_review",
       "requirement": "smart special tools are required.",
-      "review": "Obtain model-specific approved tool list and inventory; no itemized tool dimensions supplied in this summary."
+      "review": "Obtain model-specific approved tool list and inventory; no itemized tool dimensions supplied in this summary.",
+      "v12Intent": "r6: แสดงตัวแทนตู้เครื่องมือ smart แยกจาก MB และนอกช่อง service ที่ต้องว่าง ต้องตรวจรายการตามรุ่นรถและข้อกำหนดผู้ผลิต"
     },
     {
       "id": "23",
@@ -680,9 +694,10 @@
         26,
         28
       ],
-      "status": "not_modelled_workshop",
+      "status": "location_pending",
       "requirement": "smart diagnosis equipment/system is required.",
-      "review": "Verify authorized equipment, licences, software and operating access separately."
+      "review": "Verify authorized equipment, licences, software and operating access separately.",
+      "v12Intent": "r6: นำตู้ diagnosis ที่อยู่ในช่องจอด MB-S03 ข้าง CS ออก หน้าที่ diagnosis ยังต้องมี แต่ตำแหน่งทดแทนยัง HOLD รอผู้ดูแลยืนยัน ไม่ถือว่ายกเลิกข้อกำหนด"
     },
     {
       "id": "24",
@@ -710,7 +725,8 @@
       "status": "review_question",
       "requirement": "Master permits sharing an MB-brand AC charger; p25 suggestions refer to smart-branded wall boxes.",
       "sourceConflict": "C04",
-      "review": "Resolve device/branding expectation and provide workshop charging availability, electrical and commissioning evidence."
+      "review": "Resolve device/branding expectation and provide workshop charging availability, electrical and commissioning evidence.",
+      "v12Intent": "r6: เจ้าของระบุจุดชาร์จรวม4ตำแหน่ง รวมโชว์รูม จุดหลังอู่ตรงกลาง MB-C13 ชิดผนัง ไม่มี wallbox เพิ่มซ้ำในช่อง HV; รุ่น ยี่ห้อ กำลังไฟ การยึด แนวสาย ความปลอดภัยและข้อกำหนดใช้ร่วมที่ต่างกันในคู่มือยังรอตรวจ"
     },
     {
       "id": "26",
@@ -723,7 +739,7 @@
         27,
         28
       ],
-      "status": "not_modelled_workshop",
+      "status": "proposed_review",
       "requirement": "Workshop bay signage required; p27 says detailed drawings/fonts come from smart network SharePoint assets.",
       "dimensionsMm": {
         "illustrativeSignWidth": 1000,
@@ -731,7 +747,8 @@
         "illustrativeThickness": 10,
         "illustrativeBottomHeightAboveFloor": 3300
       },
-      "review": "Treat p27 dimensions as reference illustration; obtain approved local-language artwork, exact fabrication details and safe mounting height."
+      "review": "Treat p27 dimensions as reference illustration; obtain approved local-language artwork, exact fabrication details and safe mounting height.",
+      "v12Intent": "r6: ป้าย HV และการตีเส้น smart service ใช้ประสานตำแหน่งเท่านั้น ไม่คงป้าย M/E ที่มุมบันไดและไม่ถือเป็น artwork CI หรือรายละเอียดติดตั้งที่อนุมัติ"
     },
     {
       "id": "27",
@@ -743,9 +760,10 @@
         26,
         28
       ],
-      "status": "not_modelled_workshop",
+      "status": "proposed_review",
       "requirement": "Shared storage allowed, with clearly separated smart shelves.",
-      "review": "Provide warehouse layout, labelled shelf allocation and operational controls."
+      "review": "Provide warehouse layout, labelled shelf allocation and operational controls.",
+      "v12Intent": "r6: แสดงชั้นอะไหล่ MB/smart แยกชุดในพื้นที่ร่วม ไม่ใช่จุดเก็บหรือกักกันแบตเตอรี่แรงดันสูง"
     },
     {
       "id": "28",
@@ -1289,5 +1307,6 @@
       "sourceRequirementChanged": false
     }
   ],
-  "reviewNotice": "This is an intent and open-issues register, not certification. The rendered arrangement, colour impression, digital vehicle and people do not establish dimensions as-built, manufacturer exactness, functioning equipment, legal/safety compliance, or acceptance of exceptions. All source requirements remain reviewable; no row has a pass/approved state."
+  "reviewNotice": "This is an intent and open-issues register, not certification. The rendered arrangement, colour impression, digital vehicle and people do not establish dimensions as-built, manufacturer exactness, functioning equipment, legal/safety compliance, or acceptance of exceptions. All source requirements remain reviewable; no row has a pass/approved state.",
+  "ownerReviewRevision": "v12 / geometry r6"
 }

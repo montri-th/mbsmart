@@ -67,14 +67,14 @@
     function footprint(width,isWindow=false) {
       // One explicit master quarter-circle is shared with the ground meeting room.
       // The ground pocket returns to glass Y0; the tall facade continues along Y-1.9.
-      const shape=new T.Shape(),cx=corner.center[0],cy=corner.center[1],r=corner.radius;
-      shape.moveTo(leftX,cy);shape.absarc(cx,cy,r,Math.PI,Math.PI*1.5,false);
-      const leading=width>middleX?wingY:frontY;
-      if(width>middleX){shape.lineTo(middleX,frontY);shape.lineTo(middleX,wingY);}
-      shape.lineTo(width-radius,leading);shape.quadraticCurveTo(width,leading,width,leading+radius);
-      shape.lineTo(width,rearY);shape.lineTo(leftX,rearY);
-      if(isWindow){shape.lineTo(leftX,balcony.yMax);shape.lineTo(balcony.recessX,balcony.yMax);shape.lineTo(balcony.recessX,balcony.yMin);shape.lineTo(leftX,balcony.yMin);}
-      shape.lineTo(leftX,cy);shape.closePath();return shape;
+      const inset=isWindow?(data.windowRecess??.34):0,shape=new T.Shape(),cx=corner.center[0],cy=corner.center[1],r=corner.radius-inset,lx=leftX+inset,wx=width-inset;
+      shape.moveTo(lx,cy);shape.absarc(cx,cy,r,Math.PI,Math.PI*1.5,false);
+      const leading=(width>middleX?wingY:frontY)+inset;
+      if(width>middleX){shape.lineTo(middleX-inset,frontY+inset);shape.lineTo(middleX-inset,wingY+inset);}
+      shape.lineTo(wx-radius,leading);shape.quadraticCurveTo(wx,leading,wx,leading+radius);
+      shape.lineTo(wx,rearY-inset);shape.lineTo(lx,rearY-inset);
+      if(isWindow){shape.lineTo(lx,balcony.yMax);shape.lineTo(balcony.recessX,balcony.yMax);shape.lineTo(balcony.recessX,balcony.yMin);shape.lineTo(lx,balcony.yMin);}
+      shape.lineTo(lx,cy);shape.closePath();return shape;
     }
     function prism(shape, y, height, mat, parent, name) {
       const o = h.mesh(new T.ExtrudeGeometry(shape, { depth: height, bevelEnabled: false, curveSegments: 8 }), mat, parent);
@@ -160,7 +160,7 @@
       ctx.save();ctx.translate(20,16);ctx.scale(2008/m.width,224/height);ctx.fillText(q.text,0,m.actualBoundingBoxAscent||145);ctx.restore();
       const tx=new T.CanvasTexture(canvas);tx.colorSpace=T.SRGBColorSpace;
       const mat=new T.MeshStandardMaterial({map:tx,transparent:true,alphaTest:.08,roughness:.38,metalness:.18,emissive:'#e4e4dc',emissiveIntensity:.10,side:T.DoubleSide});
-      const o=h.mesh(new T.PlaneGeometry(q.width,q.height),mat,facade);o.position.set(q.x,signHeight+.03,beamData.letterWorldZ??.22);
+      const o=h.mesh(new T.PlaneGeometry(q.width,q.height),mat,facade);o.position.set(q.x,(beamData.letterBottomHeight??signHeight-.16)+q.height/2,beamData.letterWorldZ??.22);
       tag(o,q.id,['SV-FRONT-JUN2024-checked-20260913','current-night-photos']);
       o.userData.lettering='photo-matched typographic silhouette; not supplier artwork';return o;
     }

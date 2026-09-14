@@ -1,34 +1,1847 @@
 {
-  "revision": "night-photo-r1",
-  "coordinateStatus": "Photo-fit geometry, NOT surveyed. Orientation and topology follow supplied nighttime photographs; metric endpoints remain approximate.",
-  "referenceRoad": "Main Sukhumvit frontage runs along local X; side-road parking along Y is perpendicular to Sukhumvit.",
-  "identifiedCompleteCells": 5,
+  "revision": "owner-v12-r6",
+  "coordinateStatus": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
+  "referenceRoad": "Sukhumvit local X; Samet–Ang Sila local Y",
+  "allocationReviewPending": false,
+  "allocationStatus": "Owner confirmed on 15 September 2026: B1 = Smart Demo 01, B2 = Smart Sales 01, rear bay 1 = Smart Demo 02; rear bays 2–10 = MB-C08–MB-C16 right to left. Other codes transcribed from the owner-annotated plan. Physical sign placement remains a design proxy, not installation approval.",
+  "allocations": [
+    {
+      "referenceId": "ST-P1",
+      "bayId": "B-1",
+      "code": "S-D-01",
+      "brand": "smart",
+      "role": "Demo",
+      "label": "Smart Demo 01",
+      "signAnchor": [
+        0.92,
+        -1.5
+      ],
+      "signRotation": 0
+    },
+    {
+      "referenceId": "SC-P1",
+      "bayId": "B-2",
+      "code": "S-S-01",
+      "brand": "smart",
+      "role": "Sales",
+      "label": "Smart Sales 01",
+      "signAnchor": [
+        5.92,
+        -1.5
+      ],
+      "signRotation": 0
+    },
+    {
+      "referenceId": "ST-P2",
+      "bayId": "OWNER-REAR-01",
+      "code": "S-D-02",
+      "brand": "smart",
+      "role": "Demo",
+      "label": "Smart Demo 02",
+      "signAnchor": [
+        39.68,
+        48.2
+      ],
+      "signRotation": 3.141592653589793
+    }
+  ],
+  "identifiedCompleteCells": 26,
   "siteCapacity": null,
-  "illustrationOccupancy": {"occupied": 2, "identifiedCompleteCells": 5, "ratio": 0.4, "scope": "Two cars in five individually identified complete photo cells. Other incomplete/continuing markings are not a full-site inventory; this is NOT site occupancy or usable capacity."},
-  "status": "Night-photo reconstruction: mixed parallel/main-road-perpendicular runs and an incomplete building-side marking. Two illustrative photographed Mercedes; smart allocation, exact bay endpoints, access and turning remain HOLD.",
+  "illustrationOccupancy": {
+    "occupied": 10,
+    "identifiedCompleteCells": 26,
+    "ratio": 0.38461538461538464,
+    "scope": "10 illustrative MB cars / 26 exterior study cells = 38.5%, approximately 40%. All three smart allocations, F3/F4 ramp approach and shrine corner remain empty; no certified capacity or invented smart stock claim. Separate indoor CS reservation excluded."
+  },
+  "status": "Owner-directed mixed parallel/perpendicular parking and use codes. F3/F4 ramp approach and shrine/pylon/gate frontage kept empty; manoeuvring and sign hardware remain unverified.",
   "cells": [
-    {"id":"F-D","run":"front-roadside","orientation":"parallel-to-Sukhumvit","bounds":[13.2,-7.65,20.4,-5.2],"sources":["43_0","44_0","45_0","46_0"],"status":"One long cell between outer MB flag poles; middle pole is NOT a divider. Metric photo-fit."},
-    {"id":"F-T","run":"front-roadside","orientation":"parallel-to-Sukhumvit","bounds":[28.2,-7.65,34.4,-5.2],"sources":["47_0"],"status":"Complete interval ends at genuine white T-divider. X34.4 is an unmeasured visual fit, not a pole midpoint or a concrete joint."},
-    {"id":"C-P","run":"pylon-shrine-corner","orientation":"perpendicular-to-Sukhumvit","bounds":[42.15,-7.6,44.45,-2.5],"sources":["41_0","53_0"],"status":"Separate U-shaped corner cell; kept empty for identity and shrine access study. Dimensions/clearances unverified."},
-    {"id":"S-1","run":"side-roadside","orientation":"perpendicular-to-Sukhumvit","bounds":[46.5,2.9,49.3,8.4],"sources":["34","40_0","50_0","51_0"],"status":"First complete side-run interval, parallel to SIDE road. Metric photo-fit."},
-    {"id":"S-2","run":"side-roadside","orientation":"perpendicular-to-Sukhumvit","bounds":[46.5,8.4,49.3,13.9],"sources":["34","40_0","50_0","51_0"],"status":"Second consecutive side-run interval. Stops before modeled workshop gate approach; movement not certified."}
+    {
+      "id": "F-1",
+      "code": "MB-S01",
+      "run": "front-roadside",
+      "bounds": [
+        13.25,
+        -6.92,
+        18.25,
+        -4.42
+      ],
+      "orientation": "parallel-to-Sukhumvit",
+      "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
+    },
+    {
+      "id": "F-2",
+      "code": "MB-S02",
+      "run": "front-roadside",
+      "bounds": [
+        18.25,
+        -6.92,
+        23.25,
+        -4.42
+      ],
+      "orientation": "parallel-to-Sukhumvit",
+      "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
+    },
+    {
+      "id": "F-3",
+      "code": "MB-C01",
+      "run": "front-roadside",
+      "bounds": [
+        23.25,
+        -6.92,
+        28.25,
+        -4.42
+      ],
+      "orientation": "parallel-to-Sukhumvit",
+      "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
+    },
+    {
+      "id": "F-4",
+      "code": "MB-C02",
+      "run": "front-roadside",
+      "bounds": [
+        28.25,
+        -6.92,
+        33.25,
+        -4.42
+      ],
+      "orientation": "parallel-to-Sukhumvit",
+      "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
+    },
+    {
+      "id": "F-5",
+      "code": "MB-C03",
+      "run": "front-roadside",
+      "bounds": [
+        33.25,
+        -6.92,
+        38.25,
+        -4.42
+      ],
+      "orientation": "parallel-to-Sukhumvit",
+      "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
+    },
+    {
+      "id": "B-1",
+      "code": "S-D-01",
+      "run": "building-side",
+      "bounds": [
+        0.6,
+        -4.3,
+        5.6,
+        -1.8
+      ],
+      "orientation": "parallel-to-Sukhumvit",
+      "status": "Old pin(.58,-1.07) is a row-start annotation, not vehicle centre. Keep south of planter and separate from the curved room and gate approach."
+    },
+    {
+      "id": "B-2",
+      "code": "S-S-01",
+      "run": "building-side",
+      "bounds": [
+        5.6,
+        -4.3,
+        10.6,
+        -1.8
+      ],
+      "orientation": "parallel-to-Sukhumvit",
+      "status": "Old pin(.58,-1.07) is a row-start annotation, not vehicle centre. Keep south of planter and separate from the curved room and gate approach."
+    },
+    {
+      "id": "S-1",
+      "code": "MB-C05",
+      "run": "side-roadside",
+      "bounds": [
+        46,
+        -3.5,
+        48.5,
+        1.5
+      ],
+      "orientation": "parallel-to-Samet-Ang-Sila",
+      "status": "Four replacement 2.5×5m head-to-tail cells inward of the crossed-out old side run. Starts beyond shrine approach, ends before R34. Position remains a photo-fit trial; owner codes are MB-C05, MB-C06, MB-C07 and MB-D01 from corner towards workshop."
+    },
+    {
+      "id": "S-2",
+      "code": "MB-C06",
+      "run": "side-roadside",
+      "bounds": [
+        46,
+        1.5,
+        48.5,
+        6.5
+      ],
+      "orientation": "parallel-to-Samet-Ang-Sila",
+      "status": "Four replacement 2.5×5m head-to-tail cells inward of the crossed-out old side run. Starts beyond shrine approach, ends before R34. Position remains a photo-fit trial; owner codes are MB-C05, MB-C06, MB-C07 and MB-D01 from corner towards workshop."
+    },
+    {
+      "id": "S-3",
+      "code": "MB-C07",
+      "run": "side-roadside",
+      "bounds": [
+        46,
+        6.5,
+        48.5,
+        11.5
+      ],
+      "orientation": "parallel-to-Samet-Ang-Sila",
+      "status": "Four replacement 2.5×5m head-to-tail cells inward of the crossed-out old side run. Starts beyond shrine approach, ends before R34. Position remains a photo-fit trial; owner codes are MB-C05, MB-C06, MB-C07 and MB-D01 from corner towards workshop."
+    },
+    {
+      "id": "S-4",
+      "code": "MB-D01",
+      "run": "side-roadside",
+      "bounds": [
+        46,
+        11.5,
+        48.5,
+        16.5
+      ],
+      "orientation": "parallel-to-Samet-Ang-Sila",
+      "status": "Four replacement 2.5×5m head-to-tail cells inward of the crossed-out old side run. Starts beyond shrine approach, ends before R34. Position remains a photo-fit trial; owner codes are MB-C05, MB-C06, MB-C07 and MB-D01 from corner towards workshop."
+    },
+    {
+      "id": "C-P",
+      "code": "MB-C04",
+      "run": "pylon-shrine-corner",
+      "bounds": [
+        42.15,
+        -6.92,
+        44.65,
+        -1.92
+      ],
+      "orientation": "perpendicular-to-Sukhumvit",
+      "status": "2.5×5m corner cell kept unoccupied beside shrine/pylon; clearance is a visual study, not an operating approval."
+    },
+    {
+      "id": "OWNER-REAR-01",
+      "code": "S-D-02",
+      "run": "rear-workshop",
+      "bounds": [
+        37.5,
+        43,
+        40,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 1; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-02",
+      "code": "MB-C08",
+      "run": "rear-workshop",
+      "bounds": [
+        35,
+        43,
+        37.5,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 2; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-03",
+      "code": "MB-C09",
+      "run": "rear-workshop",
+      "bounds": [
+        32.5,
+        43,
+        35,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 3; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-04",
+      "code": "MB-C10",
+      "run": "rear-workshop",
+      "bounds": [
+        30,
+        43,
+        32.5,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 4; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-05",
+      "code": "MB-C11",
+      "run": "rear-workshop",
+      "bounds": [
+        27.5,
+        43,
+        30,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 5; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-06",
+      "code": "MB-C12",
+      "run": "rear-workshop",
+      "bounds": [
+        25,
+        43,
+        27.5,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 6; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-07",
+      "code": "MB-C13",
+      "run": "rear-workshop",
+      "bounds": [
+        22.5,
+        43,
+        25,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 7; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-08",
+      "code": "MB-C14",
+      "run": "rear-workshop",
+      "bounds": [
+        20,
+        43,
+        22.5,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 8; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-09",
+      "code": "MB-C15",
+      "run": "rear-workshop",
+      "bounds": [
+        17.5,
+        43,
+        20,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 9; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-REAR-10",
+      "code": "MB-C16",
+      "run": "rear-workshop",
+      "bounds": [
+        15,
+        43,
+        17.5,
+        48
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 10; X registration photo-fit."
+    },
+    {
+      "id": "OWNER-R33-P1",
+      "code": "MB-D03",
+      "run": "workshop-side",
+      "bounds": [
+        46,
+        30.27,
+        48.5,
+        35.27
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner dimensioned 2.5×5m exterior reservation; no obsolete R36 override. Code confirmed; position and approach remain unverified."
+    },
+    {
+      "id": "OWNER-R33-P2",
+      "code": "MB-D04",
+      "run": "workshop-side",
+      "bounds": [
+        46,
+        35.27,
+        48.5,
+        40.27
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner dimensioned 2.5×5m exterior reservation; no obsolete R36 override. Code confirmed; position and approach remain unverified."
+    },
+    {
+      "id": "OWNER-R34-P1",
+      "code": "MB-D02",
+      "run": "workshop-side",
+      "bounds": [
+        46,
+        17,
+        48.5,
+        22
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner dimensioned 2.5×5m exterior reservation; no obsolete R36 override. Code confirmed; position and approach remain unverified."
+    },
+    {
+      "id": "OWNER-R36-P1",
+      "code": "MB-D05",
+      "run": "workshop-side",
+      "bounds": [
+        46,
+        42,
+        48.5,
+        47
+      ],
+      "orientation": "long-axis-Y",
+      "status": "Owner dimensioned 2.5×5m exterior reservation; no obsolete R36 override. Code confirmed; position and approach remain unverified."
+    }
   ],
   "paint": [
-    {"id":"F-D-outline","sources":["43_0","46_0"],"points":[[13.2,-7.65],[13.2,-5.2],[20.4,-5.2],[20.4,-7.65]]},
-    {"id":"F-D-continuation","sources":["42_0","48","52_0"],"incomplete":true,"points":[[20.4,-5.2],[23,-5.2]]},
-    {"id":"F-T-outline","sources":["47_0"],"points":[[28.2,-7.65],[28.2,-5.2],[34.4,-5.2],[34.4,-7.65]]},
-    {"id":"F-T-continuation","sources":["47_0","53_0"],"incomplete":true,"points":[[34.4,-5.2],[39,-5.2]]},
-    {"id":"C-P-outline","sources":["41_0","53_0"],"points":[[42.15,-7.6],[42.15,-2.5],[44.45,-2.5],[44.45,-7.6]]},
-    {"id":"B-1-fragment","sources":["48","52_0"],"incomplete":true,"orientation":"likely-parallel-to-Sukhumvit","points":[[8.2,-3.9],[13.8,-3.9],[13.8,-1.6]],"status":"Observed building-side fragment only; cropped end is NOT closed and no repeated row is inferred."},
-    {"id":"S-1-S-2-aisle","sources":["34","40_0","50_0","51_0"],"points":[[46.5,2.9],[46.5,13.9]]},
-    {"id":"S-start","sources":["34","40_0"],"points":[[46.5,2.9],[49.3,2.9]]},
-    {"id":"S-middle","sources":["34","40_0"],"points":[[46.5,8.4],[49.3,8.4]]},
-    {"id":"S-end","sources":["34","40_0"],"points":[[46.5,13.9],[49.3,13.9]]},
-    {"id":"S-shrine-continuation","sources":["34","40_0"],"incomplete":true,"points":[[46.5,2.9],[46.5,1.1]],"status":"Shrine-end continuation has no confirmed far closing line."}
+    {
+      "id": "F-1-edge-1",
+      "points": [
+        [
+          13.25,
+          -6.92
+        ],
+        [
+          18.25,
+          -6.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-1-edge-2",
+      "points": [
+        [
+          18.25,
+          -6.92
+        ],
+        [
+          18.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-1-edge-3",
+      "points": [
+        [
+          18.25,
+          -4.42
+        ],
+        [
+          13.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-1-edge-4",
+      "points": [
+        [
+          13.25,
+          -4.42
+        ],
+        [
+          13.25,
+          -6.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-2-edge-1",
+      "points": [
+        [
+          18.25,
+          -6.92
+        ],
+        [
+          23.25,
+          -6.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-2-edge-2",
+      "points": [
+        [
+          23.25,
+          -6.92
+        ],
+        [
+          23.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-2-edge-3",
+      "points": [
+        [
+          23.25,
+          -4.42
+        ],
+        [
+          18.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-3-edge-1",
+      "points": [
+        [
+          23.25,
+          -6.92
+        ],
+        [
+          28.25,
+          -6.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-3-edge-2",
+      "points": [
+        [
+          28.25,
+          -6.92
+        ],
+        [
+          28.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-3-edge-3",
+      "points": [
+        [
+          28.25,
+          -4.42
+        ],
+        [
+          23.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-4-edge-1",
+      "points": [
+        [
+          28.25,
+          -6.92
+        ],
+        [
+          33.25,
+          -6.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-4-edge-2",
+      "points": [
+        [
+          33.25,
+          -6.92
+        ],
+        [
+          33.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-4-edge-3",
+      "points": [
+        [
+          33.25,
+          -4.42
+        ],
+        [
+          28.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-5-edge-1",
+      "points": [
+        [
+          33.25,
+          -6.92
+        ],
+        [
+          38.25,
+          -6.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-5-edge-2",
+      "points": [
+        [
+          38.25,
+          -6.92
+        ],
+        [
+          38.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "F-5-edge-3",
+      "points": [
+        [
+          38.25,
+          -4.42
+        ],
+        [
+          33.25,
+          -4.42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "B-1-edge-1",
+      "points": [
+        [
+          0.6,
+          -4.3
+        ],
+        [
+          5.6,
+          -4.3
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "B-1-edge-2",
+      "points": [
+        [
+          5.6,
+          -4.3
+        ],
+        [
+          5.6,
+          -1.8
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "B-1-edge-3",
+      "points": [
+        [
+          5.6,
+          -1.8
+        ],
+        [
+          0.6,
+          -1.8
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "B-1-edge-4",
+      "points": [
+        [
+          0.6,
+          -1.8
+        ],
+        [
+          0.6,
+          -4.3
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "B-2-edge-1",
+      "points": [
+        [
+          5.6,
+          -4.3
+        ],
+        [
+          10.6,
+          -4.3
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "B-2-edge-2",
+      "points": [
+        [
+          10.6,
+          -4.3
+        ],
+        [
+          10.6,
+          -1.8
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "B-2-edge-3",
+      "points": [
+        [
+          10.6,
+          -1.8
+        ],
+        [
+          5.6,
+          -1.8
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-1-edge-1",
+      "points": [
+        [
+          46,
+          -3.5
+        ],
+        [
+          48.5,
+          -3.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-1-edge-2",
+      "points": [
+        [
+          48.5,
+          -3.5
+        ],
+        [
+          48.5,
+          1.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-1-edge-3",
+      "points": [
+        [
+          48.5,
+          1.5
+        ],
+        [
+          46,
+          1.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-1-edge-4",
+      "points": [
+        [
+          46,
+          1.5
+        ],
+        [
+          46,
+          -3.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-2-edge-2",
+      "points": [
+        [
+          48.5,
+          1.5
+        ],
+        [
+          48.5,
+          6.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-2-edge-3",
+      "points": [
+        [
+          48.5,
+          6.5
+        ],
+        [
+          46,
+          6.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-2-edge-4",
+      "points": [
+        [
+          46,
+          6.5
+        ],
+        [
+          46,
+          1.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-3-edge-2",
+      "points": [
+        [
+          48.5,
+          6.5
+        ],
+        [
+          48.5,
+          11.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-3-edge-3",
+      "points": [
+        [
+          48.5,
+          11.5
+        ],
+        [
+          46,
+          11.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-3-edge-4",
+      "points": [
+        [
+          46,
+          11.5
+        ],
+        [
+          46,
+          6.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-4-edge-2",
+      "points": [
+        [
+          48.5,
+          11.5
+        ],
+        [
+          48.5,
+          16.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-4-edge-3",
+      "points": [
+        [
+          48.5,
+          16.5
+        ],
+        [
+          46,
+          16.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "S-4-edge-4",
+      "points": [
+        [
+          46,
+          16.5
+        ],
+        [
+          46,
+          11.5
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "C-P-edge-1",
+      "points": [
+        [
+          42.15,
+          -6.92
+        ],
+        [
+          44.65,
+          -6.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "C-P-edge-2",
+      "points": [
+        [
+          44.65,
+          -6.92
+        ],
+        [
+          44.65,
+          -1.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "C-P-edge-3",
+      "points": [
+        [
+          44.65,
+          -1.92
+        ],
+        [
+          42.15,
+          -1.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "C-P-edge-4",
+      "points": [
+        [
+          42.15,
+          -1.92
+        ],
+        [
+          42.15,
+          -6.92
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-01-edge-1",
+      "points": [
+        [
+          37.5,
+          43
+        ],
+        [
+          40,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-01-edge-2",
+      "points": [
+        [
+          40,
+          43
+        ],
+        [
+          40,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-01-edge-3",
+      "points": [
+        [
+          40,
+          48
+        ],
+        [
+          37.5,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-01-edge-4",
+      "points": [
+        [
+          37.5,
+          48
+        ],
+        [
+          37.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-02-edge-1",
+      "points": [
+        [
+          35,
+          43
+        ],
+        [
+          37.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-02-edge-3",
+      "points": [
+        [
+          37.5,
+          48
+        ],
+        [
+          35,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-02-edge-4",
+      "points": [
+        [
+          35,
+          48
+        ],
+        [
+          35,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-03-edge-1",
+      "points": [
+        [
+          32.5,
+          43
+        ],
+        [
+          35,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-03-edge-3",
+      "points": [
+        [
+          35,
+          48
+        ],
+        [
+          32.5,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-03-edge-4",
+      "points": [
+        [
+          32.5,
+          48
+        ],
+        [
+          32.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-04-edge-1",
+      "points": [
+        [
+          30,
+          43
+        ],
+        [
+          32.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-04-edge-3",
+      "points": [
+        [
+          32.5,
+          48
+        ],
+        [
+          30,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-04-edge-4",
+      "points": [
+        [
+          30,
+          48
+        ],
+        [
+          30,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-05-edge-1",
+      "points": [
+        [
+          27.5,
+          43
+        ],
+        [
+          30,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-05-edge-3",
+      "points": [
+        [
+          30,
+          48
+        ],
+        [
+          27.5,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-05-edge-4",
+      "points": [
+        [
+          27.5,
+          48
+        ],
+        [
+          27.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-06-edge-1",
+      "points": [
+        [
+          25,
+          43
+        ],
+        [
+          27.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-06-edge-3",
+      "points": [
+        [
+          27.5,
+          48
+        ],
+        [
+          25,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-06-edge-4",
+      "points": [
+        [
+          25,
+          48
+        ],
+        [
+          25,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-07-edge-1",
+      "points": [
+        [
+          22.5,
+          43
+        ],
+        [
+          25,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-07-edge-3",
+      "points": [
+        [
+          25,
+          48
+        ],
+        [
+          22.5,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-07-edge-4",
+      "points": [
+        [
+          22.5,
+          48
+        ],
+        [
+          22.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-08-edge-1",
+      "points": [
+        [
+          20,
+          43
+        ],
+        [
+          22.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-08-edge-3",
+      "points": [
+        [
+          22.5,
+          48
+        ],
+        [
+          20,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-08-edge-4",
+      "points": [
+        [
+          20,
+          48
+        ],
+        [
+          20,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-09-edge-1",
+      "points": [
+        [
+          17.5,
+          43
+        ],
+        [
+          20,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-09-edge-3",
+      "points": [
+        [
+          20,
+          48
+        ],
+        [
+          17.5,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-09-edge-4",
+      "points": [
+        [
+          17.5,
+          48
+        ],
+        [
+          17.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-10-edge-1",
+      "points": [
+        [
+          15,
+          43
+        ],
+        [
+          17.5,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-10-edge-3",
+      "points": [
+        [
+          17.5,
+          48
+        ],
+        [
+          15,
+          48
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-REAR-10-edge-4",
+      "points": [
+        [
+          15,
+          48
+        ],
+        [
+          15,
+          43
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R33-P1-edge-1",
+      "points": [
+        [
+          46,
+          30.27
+        ],
+        [
+          48.5,
+          30.27
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R33-P1-edge-2",
+      "points": [
+        [
+          48.5,
+          30.27
+        ],
+        [
+          48.5,
+          35.27
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R33-P1-edge-3",
+      "points": [
+        [
+          48.5,
+          35.27
+        ],
+        [
+          46,
+          35.27
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R33-P1-edge-4",
+      "points": [
+        [
+          46,
+          35.27
+        ],
+        [
+          46,
+          30.27
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R33-P2-edge-2",
+      "points": [
+        [
+          48.5,
+          35.27
+        ],
+        [
+          48.5,
+          40.27
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R33-P2-edge-3",
+      "points": [
+        [
+          48.5,
+          40.27
+        ],
+        [
+          46,
+          40.27
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R33-P2-edge-4",
+      "points": [
+        [
+          46,
+          40.27
+        ],
+        [
+          46,
+          35.27
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R34-P1-edge-1",
+      "points": [
+        [
+          46,
+          17
+        ],
+        [
+          48.5,
+          17
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R34-P1-edge-2",
+      "points": [
+        [
+          48.5,
+          17
+        ],
+        [
+          48.5,
+          22
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R34-P1-edge-3",
+      "points": [
+        [
+          48.5,
+          22
+        ],
+        [
+          46,
+          22
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R34-P1-edge-4",
+      "points": [
+        [
+          46,
+          22
+        ],
+        [
+          46,
+          17
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R36-P1-edge-1",
+      "points": [
+        [
+          46,
+          42
+        ],
+        [
+          48.5,
+          42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R36-P1-edge-2",
+      "points": [
+        [
+          48.5,
+          42
+        ],
+        [
+          48.5,
+          47
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R36-P1-edge-3",
+      "points": [
+        [
+          48.5,
+          47
+        ],
+        [
+          46,
+          47
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    },
+    {
+      "id": "OWNER-R36-P1-edge-4",
+      "points": [
+        [
+          46,
+          47
+        ],
+        [
+          46,
+          42
+        ]
+      ],
+      "source": "owner-review-v12",
+      "level": -0.8
+    }
   ],
-  "unknownPaintSpans": ["Front run between photographed endpoints: missing exact intermediate positions; no uniform grid interpolated.","Building-side cropped end and side-run shrine-end closure are not established.","Dark joints and flag pole centres are not additional parking dividers."],
   "cars": [
-    {"id":"EXT-MB-FD","bayId":"F-D","model":"Mercedes-Benz E-Class","profile":"eclass","brand":"MB","paint":"#eceeea","photoReference":"Showroom 260912 / 1,4","cx":16.8,"cy":-6.425,"l":5.05,"w":2.15,"heightCap":1.55,"angle":0},
-    {"id":"EXT-MB-FT","bayId":"F-T","model":"Mercedes-Benz C-Class","profile":"cclass","brand":"MB","paint":"#252a2e","photoReference":"Showroom 260912 / 8","cx":31.3,"cy":-6.425,"l":4.8,"w":2.1,"heightCap":1.55,"angle":180}
-  ]
+    {
+      "id": "EXT-MB-F-1",
+      "bayId": "F-1",
+      "model": "Mercedes-Benz C-Class",
+      "profile": "cclass",
+      "brand": "MB",
+      "paint": "#252a2e",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 15.75,
+      "cy": -5.67,
+      "l": 4.8,
+      "w": 2.1,
+      "heightCap": 1.55,
+      "angle": 0
+    },
+    {
+      "id": "EXT-MB-F-2",
+      "bayId": "F-2",
+      "model": "Mercedes-Benz C-Class",
+      "profile": "cclass",
+      "brand": "MB",
+      "paint": "#eceeea",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 20.75,
+      "cy": -5.67,
+      "l": 4.8,
+      "w": 2.1,
+      "heightCap": 1.55,
+      "angle": 0
+    },
+    {
+      "id": "EXT-MB-F-5",
+      "bayId": "F-5",
+      "model": "Mercedes-Benz C-Class",
+      "profile": "cclass",
+      "brand": "MB",
+      "paint": "#c4c7c5",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 35.75,
+      "cy": -5.67,
+      "l": 4.8,
+      "w": 2.1,
+      "heightCap": 1.55,
+      "angle": 0
+    },
+    {
+      "id": "EXT-MB-S-2",
+      "bayId": "S-2",
+      "model": "Mercedes-Benz GLC",
+      "profile": "glc",
+      "brand": "MB",
+      "paint": "#252a2e",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 47.25,
+      "cy": 4,
+      "l": 4.75,
+      "w": 2.12,
+      "heightCap": 1.68,
+      "angle": 90
+    },
+    {
+      "id": "EXT-MB-S-3",
+      "bayId": "S-3",
+      "model": "Mercedes-Benz C-Class",
+      "profile": "cclass",
+      "brand": "MB",
+      "paint": "#eceeea",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 47.25,
+      "cy": 9,
+      "l": 4.8,
+      "w": 2.1,
+      "heightCap": 1.55,
+      "angle": 90
+    },
+    {
+      "id": "EXT-MB-S-4",
+      "bayId": "S-4",
+      "model": "Mercedes-Benz C-Class",
+      "profile": "cclass",
+      "brand": "MB",
+      "paint": "#c4c7c5",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 47.25,
+      "cy": 14,
+      "l": 4.8,
+      "w": 2.1,
+      "heightCap": 1.55,
+      "angle": 90
+    },
+    {
+      "id": "EXT-MB-OWNER-REAR-03",
+      "bayId": "OWNER-REAR-03",
+      "model": "Mercedes-Benz C-Class",
+      "profile": "cclass",
+      "brand": "MB",
+      "paint": "#252a2e",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 33.75,
+      "cy": 45.5,
+      "l": 4.8,
+      "w": 2.1,
+      "heightCap": 1.55,
+      "angle": 90
+    },
+    {
+      "id": "EXT-MB-OWNER-REAR-05",
+      "bayId": "OWNER-REAR-05",
+      "model": "Mercedes-Benz GLC",
+      "profile": "glc",
+      "brand": "MB",
+      "paint": "#eceeea",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 28.75,
+      "cy": 45.5,
+      "l": 4.75,
+      "w": 2.12,
+      "heightCap": 1.68,
+      "angle": 90
+    },
+    {
+      "id": "EXT-MB-OWNER-REAR-07",
+      "bayId": "OWNER-REAR-07",
+      "model": "Mercedes-Benz C-Class",
+      "profile": "cclass",
+      "brand": "MB",
+      "paint": "#c4c7c5",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 23.75,
+      "cy": 45.5,
+      "l": 4.8,
+      "w": 2.1,
+      "heightCap": 1.55,
+      "angle": 90
+    },
+    {
+      "id": "EXT-MB-OWNER-REAR-09",
+      "bayId": "OWNER-REAR-09",
+      "model": "Mercedes-Benz C-Class",
+      "profile": "cclass",
+      "brand": "MB",
+      "paint": "#252a2e",
+      "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+      "cx": 18.75,
+      "cy": 45.5,
+      "l": 4.8,
+      "w": 2.1,
+      "heightCap": 1.55,
+      "angle": 90
+    }
+  ],
+  "unknownPaintSpans": [
+    "Photo-fit endpoints and side boundary require site measurement",
+    "Rear 1m gap is wall offset, not an aisle; road access not inferred",
+    "Front F3/F4 paint-to-ramp-toe relationship and metric exit route HOLD"
+  ],
+  "level": -0.8
 }

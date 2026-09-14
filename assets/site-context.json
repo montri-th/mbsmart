@@ -121,12 +121,22 @@
       "id": "R3-NIGHT",
       "file": "S__78577753_0.jpg",
       "role": "owner-supplied current condition, capture date unverified; recessed glazing and fence-adjacent flags"
+    },
+    {
+      "id": "R6-REAR-DAY",
+      "file": "ที่จอดรถ 10 คันหลังอู่ซ่อม.jpg",
+      "role": "owner-supplied rear ten-space parking photograph; observed low metal lean-to canopy, slender supports and open frontage; metric dimensions unmeasured"
+    },
+    {
+      "id": "R6-REVERSE-SIDE-DAY",
+      "file": "ถ่ายจากหลังอาคารมาหาถนนสุขุมวิทอาคารอยู่ขวามือของภาพนี้.jpg",
+      "role": "owner-supplied reverse side-passage photograph; existing rear/side canopy connection, not measured structural details"
     }
   ],
   "bounds": {
     "xMin": -14,
-    "xMax": 58,
-    "yMin": -15.4,
+    "xMax": 66,
+    "yMin": -27,
     "yMax": 50
   },
   "rearClip": {
@@ -140,92 +150,71 @@
     },
     "setbackFromPlinth": {
       "value": 7.2,
-      "status": "printed reading in A01; starts at outer front strip, not grid H"
+      "status": "Owner-confirmed clear distance, 15 September 2026; preserve building and planter geometry.",
+      "from": "main planter outer edge",
+      "to": "physical inside fence face"
     },
     "apronEdgeY": {
-      "value": -8.4,
-      "status": "derived candidate: -1.20-7.20, inherits uncertain endpoints/registration"
+      "value": -8.32,
+      "status": "Owner-confirmed7.20m from retained planter outer edgeY−1.12 to physical inside fence face; not a cadastral survey"
     },
     "entranceApronFrontY": {
       "value": -2.4,
       "status": "derived candidate using A01 printed 6.00 to same edge"
     },
     "gate": {
-      "xMin": -7.2,
-      "xMax": 11.3,
-      "width": 18.5,
-      "status": "broad-photo-envelope-in-assumed-X-frame; NOT measured current gate width; owner visual review needed",
+      "xMin": -6,
+      "xMax": 2.5,
+      "width": 8.5,
+      "status": "Blue-trace fit; approximately 8-9 m, not the prior 18.5 m broad apron envelope",
       "legacyPrintedWidth": 8
     },
     "gateReturnRadius": {
       "value": 3,
       "status": "R3.00 printed in A01; returns simplified in ground mesh"
-    }
+    },
+    "confirmedPlanterOuterY": -1.12
   },
   "edgeControlPoints": [
     [
-      -7.2,
-      -8.4
+      -9,
+      -8.32
     ],
     [
-      44.5,
-      -8.4
+      48,
+      -8.32
     ],
     [
-      46.0529,
-      -8.1956
+      49.2,
+      -7.12
     ],
     [
-      47.5,
-      -7.5962
-    ],
-    [
-      48.7426,
-      -6.6426
-    ],
-    [
-      49.6962,
-      -5.4
-    ],
-    [
-      50.2956,
-      -3.9529
-    ],
-    [
-      50.5,
-      -2.4
-    ],
-    [
-      50.5,
-      16
-    ],
-    [
-      50.5,
+      49.2,
       30
     ]
   ],
-  "edgeStatus": "localized-photo-fit-fillet; front/east controls inherited-unverified; NOT printed A01 R6.00 or authenticated A04 R15.00",
+  "edgeStatus": "Smaller R1.2m visual trial from owner Street View references; not a measured radius. This is inner fence radius, not outer road kerb radius.",
   "leftContextEdge": [
     [
-      -7.2,
-      -8.4
+      -9,
+      -8.32
     ],
     [
-      -5,
+      -7.5,
       0
     ],
     [
-      -2,
+      -5.7,
       16
     ],
     [
-      0,
-      30
+      -3.3,
+      40.5
     ]
   ],
   "leftEdgeStatus": "unverified legacy line / context crop; not modelled as a confirmed fence or cadastral boundary",
   "east": {
-    "apronEdgeX": 50.5,
+    "apronEdgeX": 49.2,
     "serviceGapY": [
       17,
       25
@@ -238,8 +227,10 @@
     "status": "photo-estimated display width, NOT A01 printed 3.10"
   },
   "road": {
-    "displayStripWidth": 5,
-    "status": "near-edge context strip only; not full carriageway width or legal road reserve; no traffic lanes certified"
+    "displayStripWidth": 9,
+    "status": "near-edge context strip only; not full carriageway width or legal road reserve; no traffic lanes certified",
+    "topology": "T-junction",
+    "doNot": "Do not render Samet-Ang Sila as dead end, fabricate side curb opening, attach roads to old boundary, or use tower roof outline as property edge"
   },
   "gateTransitions": {
     "frontInnerY": -6.9,
@@ -261,7 +252,8 @@
     "landingY": 0.8,
     "yMax": 2.5,
     "risers": 5,
-    "status": "five-step visual proxy from entrance photo; width/treads/risers/landing require field measurement"
+    "status": "Superseded five-step proxy across vehicle entrance; owner confirms ramp at existing front Entrance",
+    "render": false
   },
   "planting": {
     "frontBeds": [
@@ -269,12 +261,6 @@
         0.15,
         -1.12,
         23.7,
-        0.85
-      ],
-      [
-        32.15,
-        1.35,
-        7.55,
         0.85
       ]
     ],
@@ -294,29 +280,63 @@
       [
         22.5,
         -0.7
-      ],
-      [
-        33,
-        1.75
-      ],
-      [
-        39,
-        1.75
       ]
     ],
-    "status": "photo-character proxies; species/count/locations not surveyed"
+    "status": "photo-character proxies; species/count/locations not surveyed",
+    "insideFenceBeds": [],
+    "sidewalkTrees": [],
+    "frontagePolicy": {
+      "retainBuildingBeds": true,
+      "insideFencePlanting": false,
+      "sidewalkTrees": false,
+      "handoverFrontageHasPlanting": false,
+      "handoverFrontageExclusion": {
+        "xMin": 32,
+        "xMax": 40,
+        "yMin": 1,
+        "yMax": 2.5,
+        "source": "Owner confirmation15Sep2026: no trees or planting along the front glazing of vehicle handover; remove the unsupported bed/palms proxy in this span, retain the real glass base and forecourt."
+      },
+      "frontBeds": [
+        [
+          0.15,
+          -1.12,
+          23.7,
+          0.85
+        ]
+      ],
+      "palmCentres": [
+        [
+          1,
+          -0.7
+        ],
+        [
+          7.4,
+          -0.7
+        ],
+        [
+          15.2,
+          -0.7
+        ],
+        [
+          22.5,
+          -0.7
+        ]
+      ],
+      "scope": "Both street-front fence edges and sidewalks have no planting additions. Retain only the photographed main-showroom bed/palms at X0.15–23.85; vehicle-handover front glazing X32–40 has no planting."
+    }
   },
   "markers": {
     "pylon": [
-      41.5,
-      -7.05
+      39.79,
+      -7.27
     ],
     "pylonData": {
       "id": "MB-PYLON",
       "type": "thin-two-sided-pylon",
       "xy": [
-        41.5,
-        -7.05
+        39.79,
+        -7.27
       ],
       "width": 1.6,
       "depth": 0.42,
@@ -331,21 +351,22 @@
         "N06",
         "N08"
       ],
-      "positionStatus": "photo-fit-not-surveyed",
-      "retainInProposal": true
+      "positionStatus": "Owner: align broad face with building side plane facing Samet–Ang Sila. Y photo-fit to revised fence.",
+      "retainInProposal": true,
+      "outwardBroadFacePlaneX": 40
     },
     "flags": [
       [
-        13.2,
-        -7.75
+        12,
+        -7.57
       ],
       [
-        16.8,
-        -7.75
+        14.5,
+        -7.57
       ],
       [
-        20.4,
-        -7.75
+        17,
+        -7.57
       ]
     ],
     "flagData": [
@@ -353,62 +374,65 @@
         "id": "MB-FLAG-1",
         "type": "mercedes-banner",
         "xy": [
-          13.2,
-          -7.75
+          12,
+          -7.57
         ],
         "poleHeightAboveApron": 7,
-        "clothWidth": 1,
-        "clothHeight": 3,
+        "clothWidth": 1.2,
+        "clothHeight": 4.5,
         "sources": [
           "N04",
           "N05",
           "N06"
         ],
         "positionStatus": "photo-fit-not-surveyed",
-        "countStatus": "owner-confirmed"
+        "countStatus": "owner-confirmed",
+        "clothStatus": "Third visible front column X16 +1 m; exact 2.5 m gaps. Latest owner instruction15Sep2026 enlarges all three MB cloths to1.20×4.50m, matching retained smart SF2–SF4; preserve existing MB pole heights7m. Old (16.9,-7.16) pin is historical annotation. Marker Y follows fence/drain, not parking centres; fabric sizes are owner-directed study dimensions, not wind-load approval."
       },
       {
         "id": "MB-FLAG-2",
         "type": "mercedes-banner",
         "xy": [
-          16.8,
-          -7.75
+          14.5,
+          -7.57
         ],
         "poleHeightAboveApron": 7,
-        "clothWidth": 1,
-        "clothHeight": 3,
+        "clothWidth": 1.2,
+        "clothHeight": 4.5,
         "sources": [
           "N04",
           "N05",
           "N06"
         ],
         "positionStatus": "photo-fit-not-surveyed",
-        "countStatus": "owner-confirmed"
+        "countStatus": "owner-confirmed",
+        "clothStatus": "Third visible front column X16 +1 m; exact 2.5 m gaps. Latest owner instruction15Sep2026 enlarges all three MB cloths to1.20×4.50m, matching retained smart SF2–SF4; preserve existing MB pole heights7m. Old (16.9,-7.16) pin is historical annotation. Marker Y follows fence/drain, not parking centres; fabric sizes are owner-directed study dimensions, not wind-load approval."
       },
       {
         "id": "MB-FLAG-3",
         "type": "mercedes-banner",
         "xy": [
-          20.4,
-          -7.75
+          17,
+          -7.57
         ],
         "poleHeightAboveApron": 7,
-        "clothWidth": 1,
-        "clothHeight": 3,
+        "clothWidth": 1.2,
+        "clothHeight": 4.5,
         "sources": [
           "N04",
           "N05",
           "N06"
         ],
         "positionStatus": "photo-fit-not-surveyed",
-        "countStatus": "owner-confirmed"
+        "countStatus": "owner-confirmed",
+        "clothStatus": "Third visible front column X16 +1 m; exact 2.5 m gaps. Latest owner instruction15Sep2026 enlarges all three MB cloths to1.20×4.50m, matching retained smart SF2–SF4; preserve existing MB pole heights7m. Old (16.9,-7.16) pin is historical annotation. Marker Y follows fence/drain, not parking centres; fabric sizes are owner-directed study dimensions, not wind-load approval."
       },
       {
         "id": "TH-FLAG-1",
         "type": "thai-national-flag",
         "xy": [
           28.2,
-          -7.75
+          -7.57
         ],
         "poleHeightAboveApron": 8.2,
         "clothWidth": 1.6,
@@ -427,7 +451,7 @@
         "type": "thai-national-flag",
         "xy": [
           37.2,
-          -7.75
+          -7.57
         ],
         "poleHeightAboveApron": 8.2,
         "clothWidth": 1.6,
@@ -446,8 +470,8 @@
       "id": "SHRINE",
       "type": "existing-chinese-shrine",
       "xy": [
-        46.7,
-        -2.8
+        46.65,
+        -6.05
       ],
       "terraceWidth": 3.5,
       "terraceDepth": 3.2,
@@ -460,7 +484,7 @@
         "N07",
         "N08"
       ],
-      "positionStatus": "photo-fit-not-surveyed",
+      "positionStatus": "Same shrine scale/artwork/yaw, re-grounded snugly within smaller corner as a photo-fit trial, not a physical relocation proposal. At R1.2 current mesh roof vertices clear inside fence by at least0.292m and plinth by0.651m. Open approach remains toward +Y; no surveyed or access-clearance claim.",
       "retainInProposal": true,
       "keepApproachFromInside": true,
       "notPublicGateway": true,
@@ -479,19 +503,20 @@
         "height": 4.79,
         "rotationRadians": 3.141592653589793,
         "status": "authored mesh bounds, NOT measured shrine dimensions"
-      }
+      },
+      "rotationRadians": 3.141592653589793
     },
     "directionSign": [
-      12.1,
-      -7.5
+      10.5,
+      -7.47
     ],
     "status": "Object counts/order/topology have higher confidence than all numeric XY/heights/yaw; numeric values are adjustable photo-fit candidates, never measured as-built",
     "directionData": {
       "id": "EXISTING-DIRECTION",
       "type": "driveway-direction-board",
       "xy": [
-        12.1,
-        -7.5
+        10.5,
+        -7.47
       ],
       "width": 1.25,
       "depth": 0.25,
@@ -562,19 +587,23 @@
   "utilityPoles": [
     [
       7,
-      -10.3
+      -9.82
     ],
     [
       24,
-      -10.3
+      -9.82
     ],
     [
-      44.7,
-      -7.9
+      47,
+      -9.82
     ],
     [
-      52.4,
-      8.5
+      50.2,
+      -6.12
+    ],
+    [
+      50.9,
+      16
     ]
   ],
   "upperBuilding": {
@@ -628,8 +657,10 @@
       "roughness": 0.86,
       "metalness": 0,
       "source": "Owner close-up supplied14Sep2026: continuous opaque black concrete beam behind first/third facade lettering",
-      "status": "Observed continuity/material character; dimensions and structure not surveyed"
-    }
+      "status": "Observed continuity/material character; dimensions and structure not surveyed",
+      "letterBottomHeight": 3.66
+    },
+    "windowRecess": 0.34
   },
   "alternativeA04": {
     "frontStairWidthReading": 10.4,
@@ -707,68 +738,44 @@
     ]
   },
   "corner": {
-    "frontY": -8.4,
-    "sideX": 50.5,
+    "frontY": -8.32,
+    "sideX": 49.2,
     "filletCentre": [
-      44.5,
-      -2.4
+      48,
+      -7.12
     ],
-    "filletRadius": 6,
+    "filletRadius": 1.2,
     "renderTrialRadiusRange": [
-      5,
-      9
+      1.2,
+      1.2
     ],
     "frontTangent": [
-      44.5,
-      -8.4
+      48,
+      -8.32
     ],
     "sideTangent": [
-      50.5,
-      -2.4
+      49.2,
+      -7.12
     ],
     "points": [
       [
-        -7.2,
-        -8.4
+        -9,
+        -8.32
       ],
       [
-        44.5,
-        -8.4
+        48,
+        -8.32
       ],
       [
-        46.0529,
-        -8.1956
+        49.2,
+        -7.12
       ],
       [
-        47.5,
-        -7.5962
-      ],
-      [
-        48.7426,
-        -6.6426
-      ],
-      [
-        49.6962,
-        -5.4
-      ],
-      [
-        50.2956,
-        -3.9529
-      ],
-      [
-        50.5,
-        -2.4
-      ],
-      [
-        50.5,
-        16
-      ],
-      [
-        50.5,
+        49.2,
         30
       ]
     ],
-    "status": "localized-photo-fit-fillet; front/east controls inherited-unverified; NOT printed A01 R6.00 or authenticated A04 R15.00",
+    "status": "Smaller R1.2m visual trial from owner Street View references; not a measured radius. This is inner fence radius, not outer road kerb radius.",
     "sources": [
       "N01",
       "N02",
@@ -781,7 +788,7 @@
   },
   "annexes": {
     "revision": "v09",
-    "iteration": "r3",
+    "iteration": "r6",
     "status": "Owner-confirmed uses and attachment; legacy grids recovered, exterior faces/photo-fit NOT measured as-built",
     "units": "metres, local plan X,Y to world X,height,-Y",
     "sources": [
@@ -819,6 +826,16 @@
         "id": "R3-NIGHT",
         "file": "S__78577753_0.jpg",
         "role": "owner-supplied current condition, capture date unverified; recessed glazing and fence-adjacent flags"
+      },
+      {
+        "id": "R6-REAR-DAY",
+        "file": "ที่จอดรถ 10 คันหลังอู่ซ่อม.jpg",
+        "role": "owner-supplied rear ten-space parking photograph; observed low metal lean-to canopy, slender supports and open frontage; metric dimensions unmeasured"
+      },
+      {
+        "id": "R6-REVERSE-SIDE-DAY",
+        "file": "ถ่ายจากหลังอาคารมาหาถนนสุขุมวิทอาคารอยู่ขวามือของภาพนี้.jpg",
+        "role": "owner-supplied reverse side-passage photograph; existing rear/side canopy connection, not measured structural details"
       }
     ],
     "meeting": {
@@ -934,6 +951,42 @@
         "outerHeight": 3.35,
         "status": "Broad cross-passage roof front confirmed by current photos50/51; width and rear continuation are editable trials"
       },
+      "rearCanopy": {
+        "id": "EXISTING-REAR-PARKING-CANOPY",
+        "render": true,
+        "kind": "existing low metal lean-to over rear ten-space bank",
+        "xMin": 15,
+        "xMax": 40,
+        "wallY": 42,
+        "outerY": 48.3,
+        "wallHeight": 3.55,
+        "outerHeight": 3.2,
+        "floorLevel": -0.8,
+        "trussDepth": 0.28,
+        "supportY": 48.1,
+        "supportXs": [
+          15,
+          20,
+          25,
+          30,
+          35,
+          40
+        ],
+        "coveredParkingBounds": [
+          15,
+          43,
+          40,
+          48
+        ],
+        "evidence": [
+          "R6-REAR-DAY",
+          "R6-REVERSE-SIDE-DAY"
+        ],
+        "status": "Existing rear cover observed in owner daytime photos; extent over corrected ten-space bank. Height, 6.3m projection, eave overhang, support spacing and members are reversible photo-fit proxies, not measured or engineered.",
+        "measuredDimensions": false,
+        "structuralApproval": false,
+        "supportStatus": "Visual support rhythm only; posts placed just beyond parking paint so no parked-car envelope is intersected. Verify actual supports, drainage and manoeuvring on site."
+      },
       "sideGate": {
         "xMin": 40.2,
         "xMax": 49,
@@ -942,7 +995,28 @@
         "status": "Existing internal cross-passage mesh gate, photo-fit; NOT an opening in road fence"
       },
       "material": "Light warm-grey corrugated metal, blue-grey ribbon windows, dark open/screened lower bays, steel awning",
-      "geometryStatus": "E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Interior equipment belongs to a separate proposed coordination layer, not existing/as-built."
+      "geometryStatus": "E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Separate workshop layer distinguishes owner-reported existing equipment from proposed smart use, without certified as-built or installation claims.",
+      "rearStair": {
+        "id": "EXISTING-REAR-STEEL-STAIR",
+        "bounds": [
+          36,
+          38.75,
+          40,
+          42
+        ],
+        "material": "steel",
+        "floorLevel": -0.6,
+        "upperLandingLevel": 3,
+        "flightWidth": 1.1,
+        "landingDepth": 0.85,
+        "risersPerFlight": 9,
+        "arrangement": "compact return-stair visual proxy",
+        "floorDestination": "second floor",
+        "ownerConfirmed": "Existing steel stair occupies roughly the rear half of the former top-right study cell; no hoist in this cell",
+        "status": "Extent and stair use confirmed by owner. Exact direction, tread/riser dimensions, landing elevation and guard details are provisional visual geometry, not measured access or structural approval. No second-floor room or new door inferred.",
+        "measuredDimensions": false,
+        "render": true
+      }
     },
     "contextCropY": 50,
     "limitations": [
@@ -1020,7 +1094,7 @@
   },
   "workshopStudy": {
     "revision": "v09-r3",
-    "status": "PROPOSED COORDINATION STUDY — not as-built, MB/smart approval or engineering certification",
+    "status": "Owner-reported existing equipment with separately identified proposed smart WiW interventions; not supplier/survey verified",
     "sources": [
       {
         "id": "D01",
@@ -1047,32 +1121,23 @@
     "layoutBasis": "Legacy grid A–B6.5m bay row / B–C7m manoeuvring zone / C–D6.5m row / D–E6m interface. These are grid bands, not approved clearances.",
     "clearDriveBand": {
       "xMin": 8,
-      "xMax": 49.2,
+      "xMax": 40,
       "yMin": 28.5,
       "yMax": 35.5,
-      "status": "Concept band kept free of model equipment, NOT verified swept path"
+      "status": "Central reservation only; eastern parking excluded; swept path unverified"
     },
     "smartBays": [
       {
         "id": "SMART-HV",
-        "label": "ช่องงานแรงดันสูง · รออนุมัติ",
         "type": "HV",
+        "label": "ช่องงานแรงดันสูง · รออนุมัติ",
         "xMin": 32,
+        "yMin": 35.5,
         "xMax": 36,
-        "yMin": 35.5,
-        "yMax": 42
-      },
-      {
-        "id": "SMART-ME",
-        "label": "ช่องงาน M/E · รออนุมัติ",
-        "type": "ME",
-        "xMin": 36,
-        "xMax": 40,
-        "yMin": 35.5,
         "yMax": 42
       }
     ],
-    "bayDimensionsStatus": "Two 4 × 6.5m grid allocations are a planning trial; operational clear width/depth, doors, lifts and safety envelope are NOT approved",
+    "bayDimensionsStatus": "One 4×6.5m HV use overlay on the owner-reported existing lift; separate 4×6.5m empty marked smart service workbay. No additional M/E lift or duplicated HV lift.",
     "mbPlanningCells": {
       "xMin": 8,
       "xMax": 32,
@@ -1087,7 +1152,8 @@
           42
         ]
       ],
-      "status": "12 illustrative MB allocation cells, NOT surveyed lift count, committed capacity or permission to convert existing MB bays"
+      "status": "Retired generic allocation proxies; explicit owner inventory is authoritative",
+      "render": false
     },
     "sharedParts": {
       "xMin": 2.5,
@@ -1113,7 +1179,7 @@
     "charger": {
       "brand": null,
       "power": null,
-      "status": "RFI: D01 p2 item25 MB/shared vs p25 smart-branded wallbox; generic reserved wallbox only"
+      "status": "Four owner-confirmed charging locations; hardware, mounting, cable route and power specifications remain unverified. CH-SHOWROOM reuses the existing SHARED-EV object; no fifth charger."
     },
     "lighting": {
       "orientation": "Continuous rows parallel to lift/workbench axis",
@@ -1130,7 +1196,740 @@
       "Approved local-language sign artwork and fonts",
       "Accessible routes, fire egress and vehicle swept paths",
       "Real browser/GPU and mobile visual review"
-    ]
+    ],
+    "ownerLayout": {
+      "equipment": {
+        "ownerExisting": [
+          {
+            "id": "WS-R28-1",
+            "designation": "MB-2P-04",
+            "role": "MB High Voltage station",
+            "roleStatus": "Owner annotated plan 15 September 2026; role label, not HV safety certification",
+            "kind": "two-post",
+            "centre": [
+              14,
+              25.25
+            ],
+            "allocation": [
+              12,
+              22,
+              16,
+              28.5
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R28-2",
+            "designation": "MB-2P-03",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              18,
+              25.25
+            ],
+            "allocation": [
+              16,
+              22,
+              20,
+              28.5
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R28-3",
+            "designation": "MB-2P-02",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              22,
+              25.25
+            ],
+            "allocation": [
+              20,
+              22,
+              24,
+              28.5
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R28-4",
+            "designation": "MB-2P-01",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              26,
+              25.25
+            ],
+            "allocation": [
+              24,
+              22,
+              28,
+              28.5
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R29",
+            "role": "smart High Voltage station",
+            "roleStatus": "Owner annotation confirms use assignment; existing physical lift retained, HV technical acceptance remains HOLD",
+            "kind": "two-post",
+            "centre": [
+              34,
+              38.75
+            ],
+            "allocation": [
+              32,
+              35.5,
+              36,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R30-1",
+            "designation": "MB-2P-05",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              18,
+              38.75
+            ],
+            "allocation": [
+              16,
+              35.5,
+              20,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R30-2",
+            "designation": "MB-2P-06",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              22,
+              38.75
+            ],
+            "allocation": [
+              20,
+              35.5,
+              24,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R30-3",
+            "designation": "MB-2P-07",
+            "role": "MB two-post workbay",
+            "kind": "two-post",
+            "centre": [
+              26,
+              38.75
+            ],
+            "allocation": [
+              24,
+              35.5,
+              28,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R31",
+            "designation": "MB-4P-02",
+            "role": "MB Active Reception workbay",
+            "kind": "four-post",
+            "centre": [
+              30,
+              38.75
+            ],
+            "allocation": [
+              28,
+              35.5,
+              32,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          },
+          {
+            "id": "WS-R32",
+            "designation": "MB-4P-01",
+            "role": "MB Wheel Alignment workbay",
+            "function": "wheel-alignment",
+            "physicalKindStatus": "Owner confirms a tall physical four-post alignment lift; member and runway dimensions remain schematic, not supplier verified",
+            "kind": "four-post",
+            "centre": [
+              14,
+              38.75
+            ],
+            "allocation": [
+              12,
+              35.5,
+              16,
+              42
+            ],
+            "status": "owner-reported-existing; grid-reconciled not supplier/survey verified",
+            "brandAssignment": null,
+            "supplier": null
+          }
+        ],
+        "proposedAdditional": [],
+        "retireGenericMbPlanningLoop": true,
+        "retireUnconfirmedProxyCells": [
+          [
+            8,
+            22,
+            12,
+            28.5
+          ],
+          [
+            28,
+            22,
+            32,
+            28.5
+          ],
+          [
+            8,
+            35.5,
+            12,
+            42
+          ]
+        ],
+        "retirementMeaning": "Remove invented generic model proxies, not actual confirmed equipment"
+      },
+      "smartOverlays": [
+        {
+          "id": "SMART-HV",
+          "type": "HV",
+          "bounds": [
+            32,
+            35.5,
+            36,
+            42
+          ],
+          "physicalLiftRef": "WS-R29",
+          "renderOwnLift": false,
+          "status": "proposed HV use over owner-reported existing lift; safety/brand acceptance HOLD"
+        }
+      ],
+      "smartServiceWorkbay": {
+        "id": "SMART-SERVICE-WORKBAY",
+        "label": "smart service workbay",
+        "bounds": [
+          8,
+          22,
+          12,
+          28.5
+        ],
+        "renderStyle": "floor-marking-only",
+        "equipment": false,
+        "physicalLift": false,
+        "status": "Owner confirms empty floor reservation marked per smart workbay requirement; no lift or other equipment. Not a relocated M/E hoist or technical approval."
+      },
+      "existingRearStair": {
+        "id": "EXISTING-REAR-STEEL-STAIR",
+        "bounds": [
+          36,
+          38.75,
+          40,
+          42
+        ],
+        "material": "steel",
+        "floorLevel": -0.6,
+        "upperLandingLevel": 3,
+        "flightWidth": 1.1,
+        "landingDepth": 0.85,
+        "risersPerFlight": 9,
+        "arrangement": "compact return-stair visual proxy",
+        "floorDestination": "second floor",
+        "ownerConfirmed": "Existing steel stair occupies roughly the rear half of the former top-right study cell; no hoist in this cell",
+        "status": "Extent and stair use confirmed by owner. Exact direction, tread/riser dimensions, landing elevation and guard details are provisional visual geometry, not measured access or structural approval. No second-floor room or new door inferred.",
+        "measuredDimensions": false,
+        "render": true
+      },
+      "chargingPoints": [
+        {
+          "id": "CH-REAR-PARKING",
+          "centre": [
+            23.75,
+            42.11
+          ],
+          "floorLevel": -0.8,
+          "parkingCode": "MB-C13",
+          "wallContactY": 42,
+          "faceDirection": "positive-y",
+          "location": "centre of MB-C13 against outside workshop rear wall",
+          "status": "Owner-confirmed relative location; X from MB-C13 centre, body centreY42.11 derived from wallY42 plus half the0.22m generic proxy depth. Face points towards rear parking. This is not measured set-out or specified charger hardware/mounting/power."
+        },
+        {
+          "id": "CH-REAR-WORKSHOP",
+          "centre": [
+            32,
+            41.9
+          ],
+          "floorLevel": -0.6,
+          "location": "rear workshop wall",
+          "status": "Owner confirms charging point; annotation-fit location marker, mounting/hardware/power unspecified"
+        },
+        {
+          "id": "CH-CS",
+          "centre": [
+            36.7,
+            21.5
+          ],
+          "floorLevel": -0.6,
+          "location": "beside Customer Service",
+          "status": "Owner confirms charging point; annotation-fit location marker, mounting/hardware/power unspecified"
+        },
+        {
+          "id": "CH-SHOWROOM",
+          "centre": [
+            33.7,
+            8
+          ],
+          "floorLevel": 0,
+          "location": "showroom near rear edge of Flex/Handover",
+          "status": "Owner confirms charging point; annotation-fit location marker, mounting/hardware/power unspecified"
+        }
+      ],
+      "chargingStatus": "Exactly four large magenta owner-plan circles are charging locations, not the small frontage smart-flag marks. Positions are visual registration, not electrical siting, cable routing, charger specification or approval; no additional charger inferred at HV bay.",
+      "reservations": {
+        "walkway": {
+          "id": "OWNER-R25-WALKWAY",
+          "bounds": [
+            27.86,
+            16.22,
+            35.89,
+            17.93
+          ],
+          "level": null,
+          "renderStyle": "outline-and-label-only; annotation width not survey"
+        },
+        "csOffice": {
+          "id": "OWNER-R26-CS-OFFICE",
+          "label": "Customer Service Office / สำนักงานบริการลูกค้า",
+          "abbreviation": "CS",
+          "programmeStatus": "Owner latest annotated plan explicitly labels Customer Service Office; adjacent MB-S03 is parking, not part of the office. CS means Customer Service, not sales or customer-consultant role.",
+          "bounds": [
+            32,
+            18.17,
+            35.89,
+            28.4
+          ],
+          "doors": [],
+          "level": null,
+          "ac": null,
+          "renderWalls": false,
+          "renderCeiling": false,
+          "renderStyle": "outline-and-label-only; no invented doors"
+        },
+        "obsoleteServiceCounter": {
+          "render": false,
+          "oldCentre": [
+            34,
+            19
+          ],
+          "meaning": "superseded unverified proxy"
+        },
+        "serviceSlab": {
+          "retainUnverifiedExistingProxy": true,
+          "bounds": [
+            32,
+            16,
+            36,
+            22
+          ],
+          "floorLevel": -0.3,
+          "annotationDepthTest": false,
+          "status": "No flattening or raised-floor extension inferred from comments"
+        },
+        "diagnosis": {
+          "requiredFunctionRetained": true,
+          "oldCentre": [
+            37.8,
+            24.8
+          ],
+          "renderOldCabinet": false,
+          "newCentre": null,
+          "status": "HOLD; old proposed cabinet conflicts with row27 parking; do not invent new room/doors"
+        },
+        "parking": [
+          {
+            "id": "OWNER-R27-P1",
+            "bounds": [
+              36.14,
+              22.07,
+              39.79,
+              28.4
+            ],
+            "code": "MB-S03"
+          },
+          {
+            "id": "OWNER-R33-P1",
+            "bounds": [
+              46,
+              30.27,
+              48.5,
+              35.27
+            ],
+            "code": "MB-D03",
+            "status": "Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified"
+          },
+          {
+            "id": "OWNER-R33-P2",
+            "bounds": [
+              46,
+              35.27,
+              48.5,
+              40.27
+            ],
+            "code": "MB-D04",
+            "status": "Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified"
+          },
+          {
+            "id": "OWNER-R34-P1",
+            "bounds": [
+              46,
+              17,
+              48.5,
+              22
+            ],
+            "code": "MB-D02",
+            "status": "Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified"
+          },
+          {
+            "id": "OWNER-R36-P1",
+            "bounds": [
+              46,
+              42,
+              48.5,
+              47
+            ],
+            "renderStyle": "owner dimensioned2.5×5m reservation; r6 replaces obsolete annotation-box overlap; actual approach unverified",
+            "code": "MB-D05",
+            "status": "Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified"
+          }
+        ],
+        "parkingStatus": "Owner-marked approximate reservations, long-axis Y, no extra rendered vehicles or approved capacity"
+      },
+      "rearParking": {
+        "id": "OWNER-REAR-TEN",
+        "count": 10,
+        "wallModelY": 42,
+        "offset": 1,
+        "yMin": 43,
+        "yMax": 48,
+        "width": 2.5,
+        "depth": 5,
+        "anchor": {
+          "kind": "bank right edge aligned with workshop sidewall X40; bay1 is rightmost",
+          "x": 40,
+          "bay1CentreX": 38.75,
+          "status": "Owner-confirmed corrected registration from annotated plan 15 September 2026; not surveyed"
+        },
+        "bankBounds": [
+          15,
+          43,
+          40,
+          48
+        ],
+        "gapStrip": [
+          15,
+          42,
+          40,
+          43
+        ],
+        "numberOrder": "right to left",
+        "bays": [
+          {
+            "id": "OWNER-REAR-01",
+            "code": "S-D-02",
+            "number": 1,
+            "centre": [
+              38.75,
+              45.5
+            ],
+            "bounds": [
+              37.5,
+              43,
+              40,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-02",
+            "code": "MB-C08",
+            "number": 2,
+            "centre": [
+              36.25,
+              45.5
+            ],
+            "bounds": [
+              35,
+              43,
+              37.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-03",
+            "code": "MB-C09",
+            "number": 3,
+            "centre": [
+              33.75,
+              45.5
+            ],
+            "bounds": [
+              32.5,
+              43,
+              35,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-04",
+            "code": "MB-C10",
+            "number": 4,
+            "centre": [
+              31.25,
+              45.5
+            ],
+            "bounds": [
+              30,
+              43,
+              32.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-05",
+            "code": "MB-C11",
+            "number": 5,
+            "centre": [
+              28.75,
+              45.5
+            ],
+            "bounds": [
+              27.5,
+              43,
+              30,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-06",
+            "code": "MB-C12",
+            "number": 6,
+            "centre": [
+              26.25,
+              45.5
+            ],
+            "bounds": [
+              25,
+              43,
+              27.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-07",
+            "code": "MB-C13",
+            "number": 7,
+            "centre": [
+              23.75,
+              45.5
+            ],
+            "bounds": [
+              22.5,
+              43,
+              25,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-08",
+            "code": "MB-C14",
+            "number": 8,
+            "centre": [
+              21.25,
+              45.5
+            ],
+            "bounds": [
+              20,
+              43,
+              22.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-09",
+            "code": "MB-C15",
+            "number": 9,
+            "centre": [
+              18.75,
+              45.5
+            ],
+            "bounds": [
+              17.5,
+              43,
+              20,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          },
+          {
+            "id": "OWNER-REAR-10",
+            "code": "MB-C16",
+            "number": 10,
+            "centre": [
+              16.25,
+              45.5
+            ],
+            "bounds": [
+              15,
+              43,
+              17.5,
+              48
+            ],
+            "width": 2.5,
+            "depth": 5,
+            "orientation": "long-axis-Y"
+          }
+        ],
+        "crossedOutLeftCellsRendered": 0,
+        "vehicleHeading": null,
+        "renderVehicles": false,
+        "approachStatus": "HOLD;1m is wall offset, not vehicle aisle; do not invent rear wall opening"
+      },
+      "ownerAnnotationResolutions": {
+        "source": "828E311D-6782-4BED-8B4C-750FF306907B.jpg",
+        "sourceRole": "Latest owner-annotated plan; supersedes earlier photo annotations where answered",
+        "status": "Owner answered all three questions; confirmed roles and counts applied, dimensions remain annotation-fit unless explicitly stated",
+        "items": [
+          {
+            "id": "SMART-SERVICE-ME-AND-STAIRS",
+            "observation": "Orange SMART service workbay left of front MB-2P-04; stairs drawn in the current top-right M/E cell",
+            "answer": "Orange smart service workbay is empty marked floor only, without any lift or equipment. Top-right cell has no hoist; existing steel stair to second floor occupies roughly the rear half. No additional M/E lift is retained or relocated.",
+            "applied": true
+          },
+          {
+            "id": "ALIGNMENT-PHYSICAL-MECHANISM",
+            "observation": "Rear Wheel Alignment workbay is labelled MB-4P-01",
+            "answer": "MB-4P-01 is an actual tall four-post wheel-alignment lift. Total existing physical inventory is eight two-post plus two four-post lifts.",
+            "applied": true
+          },
+          {
+            "id": "MAGENTA-CHARGING-POINTS",
+            "observation": "Four large magenta circles near rear parking, rear workshop wall, CS and showroom; small frontage marks separately label smart flags",
+            "answer": "All four large magenta circles are charging locations; small frontage marks are smart flags. Exact mounting, hardware and electrical specification remain unconfirmed.",
+            "applied": true
+          }
+        ]
+      },
+      "circulation": {
+        "retireClearDriveBandToX49_2": true,
+        "centralReservation": [
+          8,
+          28.5,
+          40,
+          35.5
+        ],
+        "sideResidualStudy": [
+          40.2,
+          17.2,
+          44.9,
+          42
+        ],
+        "status": "Illustrative reservations; not swept-path/width certification; inspect gate/posts"
+      },
+      "expectedCounts": {
+        "ownerPhysicalLifts": 10,
+        "ownerTwoPost": 8,
+        "ownerFourPost": 2,
+        "ownerAlignment": 1,
+        "ownerAlignmentCountBasis": "Role subset of the two physical four-post lifts, not an additional lift",
+        "proposedAdditionalME": 0,
+        "proposedSchemePhysicalLifts": 10,
+        "existingSchemePhysicalLifts": 10,
+        "smartUseOverlays": 1,
+        "smartFloorOnlyWorkbays": 1,
+        "chargingLocations": 4,
+        "extraPhysicalHVLifts": 0,
+        "rearNumberedBays": 10,
+        "otherOwnerParkingReservations": 5,
+        "totalParkingReservationsThisSubset": 15,
+        "siteCapacity": null
+      }
+    },
+    "customerService": {
+      "id": "OWNER-R26-CS-OFFICE",
+      "label": "Customer Service Office / สำนักงานบริการลูกค้า",
+      "abbreviation": "CS",
+      "programmeStatus": "Owner latest annotated plan explicitly labels Customer Service Office; adjacent MB-S03 is parking, not part of the office. CS means Customer Service, not sales or customer-consultant role.",
+      "bounds": [
+        32,
+        18.17,
+        35.89,
+        28.4
+      ],
+      "doors": [],
+      "level": null,
+      "ac": null,
+      "renderWalls": false,
+      "renderCeiling": false,
+      "renderStyle": "outline-and-label-only; no invented doors"
+    },
+    "diagnosis": {
+      "required": true,
+      "positionStatus": "HOLD: previous unverified cabinet removed from Customer Service parking; final location requires operator confirmation"
+    }
   },
   "frontDrain": {
     "insideOffset": 0.3,
@@ -1158,62 +1957,65 @@
       "id": "MB-FLAG-1",
       "type": "mercedes-banner",
       "xy": [
-        13.2,
-        -7.75
+        12,
+        -7.57
       ],
       "poleHeightAboveApron": 7,
-      "clothWidth": 1,
-      "clothHeight": 3,
+      "clothWidth": 1.2,
+      "clothHeight": 4.5,
       "sources": [
         "N04",
         "N05",
         "N06"
       ],
       "positionStatus": "photo-fit-not-surveyed",
-      "countStatus": "owner-confirmed"
+      "countStatus": "owner-confirmed",
+      "clothStatus": "Third visible front column X16 +1 m; exact 2.5 m gaps. Latest owner instruction15Sep2026 enlarges all three MB cloths to1.20×4.50m, matching retained smart SF2–SF4; preserve existing MB pole heights7m. Old (16.9,-7.16) pin is historical annotation. Marker Y follows fence/drain, not parking centres; fabric sizes are owner-directed study dimensions, not wind-load approval."
     },
     {
       "id": "MB-FLAG-2",
       "type": "mercedes-banner",
       "xy": [
-        16.8,
-        -7.75
+        14.5,
+        -7.57
       ],
       "poleHeightAboveApron": 7,
-      "clothWidth": 1,
-      "clothHeight": 3,
+      "clothWidth": 1.2,
+      "clothHeight": 4.5,
       "sources": [
         "N04",
         "N05",
         "N06"
       ],
       "positionStatus": "photo-fit-not-surveyed",
-      "countStatus": "owner-confirmed"
+      "countStatus": "owner-confirmed",
+      "clothStatus": "Third visible front column X16 +1 m; exact 2.5 m gaps. Latest owner instruction15Sep2026 enlarges all three MB cloths to1.20×4.50m, matching retained smart SF2–SF4; preserve existing MB pole heights7m. Old (16.9,-7.16) pin is historical annotation. Marker Y follows fence/drain, not parking centres; fabric sizes are owner-directed study dimensions, not wind-load approval."
     },
     {
       "id": "MB-FLAG-3",
       "type": "mercedes-banner",
       "xy": [
-        20.4,
-        -7.75
+        17,
+        -7.57
       ],
       "poleHeightAboveApron": 7,
-      "clothWidth": 1,
-      "clothHeight": 3,
+      "clothWidth": 1.2,
+      "clothHeight": 4.5,
       "sources": [
         "N04",
         "N05",
         "N06"
       ],
       "positionStatus": "photo-fit-not-surveyed",
-      "countStatus": "owner-confirmed"
+      "countStatus": "owner-confirmed",
+      "clothStatus": "Third visible front column X16 +1 m; exact 2.5 m gaps. Latest owner instruction15Sep2026 enlarges all three MB cloths to1.20×4.50m, matching retained smart SF2–SF4; preserve existing MB pole heights7m. Old (16.9,-7.16) pin is historical annotation. Marker Y follows fence/drain, not parking centres; fabric sizes are owner-directed study dimensions, not wind-load approval."
     },
     {
       "id": "TH-FLAG-1",
       "type": "thai-national-flag",
       "xy": [
         28.2,
-        -7.75
+        -7.57
       ],
       "poleHeightAboveApron": 8.2,
       "clothWidth": 1.6,
@@ -1232,7 +2034,7 @@
       "type": "thai-national-flag",
       "xy": [
         37.2,
-        -7.75
+        -7.57
       ],
       "poleHeightAboveApron": 8.2,
       "clothWidth": 1.6,
@@ -1250,8 +2052,8 @@
       "id": "MB-PYLON",
       "type": "thin-two-sided-pylon",
       "xy": [
-        41.5,
-        -7.05
+        39.79,
+        -7.27
       ],
       "width": 1.6,
       "depth": 0.42,
@@ -1266,15 +2068,16 @@
         "N06",
         "N08"
       ],
-      "positionStatus": "photo-fit-not-surveyed",
-      "retainInProposal": true
+      "positionStatus": "Owner: align broad face with building side plane facing Samet–Ang Sila. Y photo-fit to revised fence.",
+      "retainInProposal": true,
+      "outwardBroadFacePlaneX": 40
     },
     {
       "id": "SHRINE",
       "type": "existing-chinese-shrine",
       "xy": [
-        46.7,
-        -2.8
+        46.65,
+        -6.05
       ],
       "terraceWidth": 3.5,
       "terraceDepth": 3.2,
@@ -1287,7 +2090,7 @@
         "N07",
         "N08"
       ],
-      "positionStatus": "photo-fit-not-surveyed",
+      "positionStatus": "Same shrine scale/artwork/yaw, re-grounded snugly within smaller corner as a photo-fit trial, not a physical relocation proposal. At R1.2 current mesh roof vertices clear inside fence by at least0.292m and plinth by0.651m. Open approach remains toward +Y; no surveyed or access-clearance claim.",
       "retainInProposal": true,
       "keepApproachFromInside": true,
       "notPublicGateway": true,
@@ -1306,14 +2109,15 @@
         "height": 4.79,
         "rotationRadians": 3.141592653589793,
         "status": "authored mesh bounds, NOT measured shrine dimensions"
-      }
+      },
+      "rotationRadians": 3.141592653589793
     },
     {
       "id": "EXISTING-DIRECTION",
       "type": "driveway-direction-board",
       "xy": [
-        12.1,
-        -7.5
+        10.5,
+        -7.47
       ],
       "width": 1.25,
       "depth": 0.25,
@@ -1390,7 +2194,7 @@
       "text": "Mercedes-Benz",
       "width": 7.55,
       "textHeight": 0.93,
-      "centreHeight": 3.85,
+      "centreHeight": 4.125,
       "sources": [
         "N03",
         "N04",
@@ -1410,7 +2214,7 @@
       "text": "Chitchai Chonburi",
       "width": 7.35,
       "textHeight": 0.72,
-      "centreHeight": 3.85,
+      "centreHeight": 4.0200000000000005,
       "sources": [
         "N03",
         "N04",
@@ -1422,368 +2226,1866 @@
     }
   ],
   "exteriorParking": {
-    "revision": "night-photo-r1",
-    "coordinateStatus": "Photo-fit geometry, NOT surveyed. Orientation and topology follow supplied nighttime photographs; metric endpoints remain approximate.",
-    "referenceRoad": "Main Sukhumvit frontage runs along local X; side-road parking along Y is perpendicular to Sukhumvit.",
-    "identifiedCompleteCells": 5,
+    "revision": "owner-v12-r6",
+    "coordinateStatus": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
+    "referenceRoad": "Sukhumvit local X; Samet–Ang Sila local Y",
+    "allocationReviewPending": false,
+    "allocationStatus": "Owner confirmed on 15 September 2026: B1 = Smart Demo 01, B2 = Smart Sales 01, rear bay 1 = Smart Demo 02; rear bays 2–10 = MB-C08–MB-C16 right to left. Other codes transcribed from the owner-annotated plan. Physical sign placement remains a design proxy, not installation approval.",
+    "allocations": [
+      {
+        "referenceId": "ST-P1",
+        "bayId": "B-1",
+        "code": "S-D-01",
+        "brand": "smart",
+        "role": "Demo",
+        "label": "Smart Demo 01",
+        "signAnchor": [
+          0.92,
+          -1.5
+        ],
+        "signRotation": 0
+      },
+      {
+        "referenceId": "SC-P1",
+        "bayId": "B-2",
+        "code": "S-S-01",
+        "brand": "smart",
+        "role": "Sales",
+        "label": "Smart Sales 01",
+        "signAnchor": [
+          5.92,
+          -1.5
+        ],
+        "signRotation": 0
+      },
+      {
+        "referenceId": "ST-P2",
+        "bayId": "OWNER-REAR-01",
+        "code": "S-D-02",
+        "brand": "smart",
+        "role": "Demo",
+        "label": "Smart Demo 02",
+        "signAnchor": [
+          39.68,
+          48.2
+        ],
+        "signRotation": 3.141592653589793
+      }
+    ],
+    "identifiedCompleteCells": 26,
     "siteCapacity": null,
     "illustrationOccupancy": {
-      "occupied": 2,
-      "identifiedCompleteCells": 5,
-      "ratio": 0.4,
-      "scope": "Two cars in five individually identified complete photo cells. Other incomplete/continuing markings are not a full-site inventory; this is NOT site occupancy or usable capacity."
+      "occupied": 10,
+      "identifiedCompleteCells": 26,
+      "ratio": 0.38461538461538464,
+      "scope": "10 illustrative MB cars / 26 exterior study cells = 38.5%, approximately 40%. All three smart allocations, F3/F4 ramp approach and shrine corner remain empty; no certified capacity or invented smart stock claim. Separate indoor CS reservation excluded."
     },
-    "status": "Night-photo reconstruction: mixed parallel/main-road-perpendicular runs and an incomplete building-side marking. Two illustrative photographed Mercedes; smart allocation, exact bay endpoints, access and turning remain HOLD.",
+    "status": "Owner-directed mixed parallel/perpendicular parking and use codes. F3/F4 ramp approach and shrine/pylon/gate frontage kept empty; manoeuvring and sign hardware remain unverified.",
     "cells": [
       {
-        "id": "F-D",
+        "id": "F-1",
+        "code": "MB-S01",
         "run": "front-roadside",
-        "orientation": "parallel-to-Sukhumvit",
         "bounds": [
-          13.2,
-          -7.65,
-          20.4,
-          -5.2
+          13.25,
+          -6.92,
+          18.25,
+          -4.42
         ],
-        "sources": [
-          "43_0",
-          "44_0",
-          "45_0",
-          "46_0"
-        ],
-        "status": "One long cell between outer MB flag poles; middle pole is NOT a divider. Metric photo-fit."
+        "orientation": "parallel-to-Sukhumvit",
+        "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
       },
       {
-        "id": "F-T",
+        "id": "F-2",
+        "code": "MB-S02",
         "run": "front-roadside",
-        "orientation": "parallel-to-Sukhumvit",
         "bounds": [
-          28.2,
-          -7.65,
-          34.4,
-          -5.2
+          18.25,
+          -6.92,
+          23.25,
+          -4.42
         ],
-        "sources": [
-          "47_0"
-        ],
-        "status": "Complete interval ends at genuine white T-divider. X34.4 is an unmeasured visual fit, not a pole midpoint or a concrete joint."
+        "orientation": "parallel-to-Sukhumvit",
+        "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
       },
       {
-        "id": "C-P",
-        "run": "pylon-shrine-corner",
-        "orientation": "perpendicular-to-Sukhumvit",
+        "id": "F-3",
+        "code": "MB-C01",
+        "run": "front-roadside",
         "bounds": [
-          42.15,
-          -7.6,
-          44.45,
-          -2.5
+          23.25,
+          -6.92,
+          28.25,
+          -4.42
         ],
-        "sources": [
-          "41_0",
-          "53_0"
+        "orientation": "parallel-to-Sukhumvit",
+        "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
+      },
+      {
+        "id": "F-4",
+        "code": "MB-C02",
+        "run": "front-roadside",
+        "bounds": [
+          28.25,
+          -6.92,
+          33.25,
+          -4.42
         ],
-        "status": "Separate U-shaped corner cell; kept empty for identity and shrine access study. Dimensions/clearances unverified."
+        "orientation": "parallel-to-Sukhumvit",
+        "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
+      },
+      {
+        "id": "F-5",
+        "code": "MB-C03",
+        "run": "front-roadside",
+        "bounds": [
+          33.25,
+          -6.92,
+          38.25,
+          -4.42
+        ],
+        "orientation": "parallel-to-Sukhumvit",
+        "status": "Five2.5×5m parallel cells with1.40m fence/drain/marker margin, no planting strip. F3/F4 remain unoccupied where the unmeasured existing ramp toe/exit may intersect. Use photographed C/GLC profiles that fit; never shorten an E-Class."
+      },
+      {
+        "id": "B-1",
+        "code": "S-D-01",
+        "run": "building-side",
+        "bounds": [
+          0.6,
+          -4.3,
+          5.6,
+          -1.8
+        ],
+        "orientation": "parallel-to-Sukhumvit",
+        "status": "Old pin(.58,-1.07) is a row-start annotation, not vehicle centre. Keep south of planter and separate from the curved room and gate approach."
+      },
+      {
+        "id": "B-2",
+        "code": "S-S-01",
+        "run": "building-side",
+        "bounds": [
+          5.6,
+          -4.3,
+          10.6,
+          -1.8
+        ],
+        "orientation": "parallel-to-Sukhumvit",
+        "status": "Old pin(.58,-1.07) is a row-start annotation, not vehicle centre. Keep south of planter and separate from the curved room and gate approach."
       },
       {
         "id": "S-1",
+        "code": "MB-C05",
         "run": "side-roadside",
-        "orientation": "perpendicular-to-Sukhumvit",
         "bounds": [
-          46.5,
-          2.9,
-          49.3,
-          8.4
+          46,
+          -3.5,
+          48.5,
+          1.5
         ],
-        "sources": [
-          "34",
-          "40_0",
-          "50_0",
-          "51_0"
-        ],
-        "status": "First complete side-run interval, parallel to SIDE road. Metric photo-fit."
+        "orientation": "parallel-to-Samet-Ang-Sila",
+        "status": "Four replacement 2.5×5m head-to-tail cells inward of the crossed-out old side run. Starts beyond shrine approach, ends before R34. Position remains a photo-fit trial; owner codes are MB-C05, MB-C06, MB-C07 and MB-D01 from corner towards workshop."
       },
       {
         "id": "S-2",
+        "code": "MB-C06",
         "run": "side-roadside",
-        "orientation": "perpendicular-to-Sukhumvit",
         "bounds": [
-          46.5,
-          8.4,
-          49.3,
-          13.9
+          46,
+          1.5,
+          48.5,
+          6.5
         ],
-        "sources": [
-          "34",
-          "40_0",
-          "50_0",
-          "51_0"
+        "orientation": "parallel-to-Samet-Ang-Sila",
+        "status": "Four replacement 2.5×5m head-to-tail cells inward of the crossed-out old side run. Starts beyond shrine approach, ends before R34. Position remains a photo-fit trial; owner codes are MB-C05, MB-C06, MB-C07 and MB-D01 from corner towards workshop."
+      },
+      {
+        "id": "S-3",
+        "code": "MB-C07",
+        "run": "side-roadside",
+        "bounds": [
+          46,
+          6.5,
+          48.5,
+          11.5
         ],
-        "status": "Second consecutive side-run interval. Stops before modeled workshop gate approach; movement not certified."
+        "orientation": "parallel-to-Samet-Ang-Sila",
+        "status": "Four replacement 2.5×5m head-to-tail cells inward of the crossed-out old side run. Starts beyond shrine approach, ends before R34. Position remains a photo-fit trial; owner codes are MB-C05, MB-C06, MB-C07 and MB-D01 from corner towards workshop."
+      },
+      {
+        "id": "S-4",
+        "code": "MB-D01",
+        "run": "side-roadside",
+        "bounds": [
+          46,
+          11.5,
+          48.5,
+          16.5
+        ],
+        "orientation": "parallel-to-Samet-Ang-Sila",
+        "status": "Four replacement 2.5×5m head-to-tail cells inward of the crossed-out old side run. Starts beyond shrine approach, ends before R34. Position remains a photo-fit trial; owner codes are MB-C05, MB-C06, MB-C07 and MB-D01 from corner towards workshop."
+      },
+      {
+        "id": "C-P",
+        "code": "MB-C04",
+        "run": "pylon-shrine-corner",
+        "bounds": [
+          42.15,
+          -6.92,
+          44.65,
+          -1.92
+        ],
+        "orientation": "perpendicular-to-Sukhumvit",
+        "status": "2.5×5m corner cell kept unoccupied beside shrine/pylon; clearance is a visual study, not an operating approval."
+      },
+      {
+        "id": "OWNER-REAR-01",
+        "code": "S-D-02",
+        "run": "rear-workshop",
+        "bounds": [
+          37.5,
+          43,
+          40,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 1; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-02",
+        "code": "MB-C08",
+        "run": "rear-workshop",
+        "bounds": [
+          35,
+          43,
+          37.5,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 2; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-03",
+        "code": "MB-C09",
+        "run": "rear-workshop",
+        "bounds": [
+          32.5,
+          43,
+          35,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 3; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-04",
+        "code": "MB-C10",
+        "run": "rear-workshop",
+        "bounds": [
+          30,
+          43,
+          32.5,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 4; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-05",
+        "code": "MB-C11",
+        "run": "rear-workshop",
+        "bounds": [
+          27.5,
+          43,
+          30,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 5; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-06",
+        "code": "MB-C12",
+        "run": "rear-workshop",
+        "bounds": [
+          25,
+          43,
+          27.5,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 6; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-07",
+        "code": "MB-C13",
+        "run": "rear-workshop",
+        "bounds": [
+          22.5,
+          43,
+          25,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 7; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-08",
+        "code": "MB-C14",
+        "run": "rear-workshop",
+        "bounds": [
+          20,
+          43,
+          22.5,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 8; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-09",
+        "code": "MB-C15",
+        "run": "rear-workshop",
+        "bounds": [
+          17.5,
+          43,
+          20,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 9; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-REAR-10",
+        "code": "MB-C16",
+        "run": "rear-workshop",
+        "bounds": [
+          15,
+          43,
+          17.5,
+          48
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner: 2.5 × 5m; 1m clear wall offset. Number 10; X registration photo-fit."
+      },
+      {
+        "id": "OWNER-R33-P1",
+        "code": "MB-D03",
+        "run": "workshop-side",
+        "bounds": [
+          46,
+          30.27,
+          48.5,
+          35.27
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner dimensioned 2.5×5m exterior reservation; no obsolete R36 override. Code confirmed; position and approach remain unverified."
+      },
+      {
+        "id": "OWNER-R33-P2",
+        "code": "MB-D04",
+        "run": "workshop-side",
+        "bounds": [
+          46,
+          35.27,
+          48.5,
+          40.27
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner dimensioned 2.5×5m exterior reservation; no obsolete R36 override. Code confirmed; position and approach remain unverified."
+      },
+      {
+        "id": "OWNER-R34-P1",
+        "code": "MB-D02",
+        "run": "workshop-side",
+        "bounds": [
+          46,
+          17,
+          48.5,
+          22
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner dimensioned 2.5×5m exterior reservation; no obsolete R36 override. Code confirmed; position and approach remain unverified."
+      },
+      {
+        "id": "OWNER-R36-P1",
+        "code": "MB-D05",
+        "run": "workshop-side",
+        "bounds": [
+          46,
+          42,
+          48.5,
+          47
+        ],
+        "orientation": "long-axis-Y",
+        "status": "Owner dimensioned 2.5×5m exterior reservation; no obsolete R36 override. Code confirmed; position and approach remain unverified."
       }
     ],
     "paint": [
       {
-        "id": "F-D-outline",
-        "sources": [
-          "43_0",
-          "46_0"
-        ],
+        "id": "F-1-edge-1",
         "points": [
           [
-            13.2,
-            -7.65
+            13.25,
+            -6.92
           ],
           [
-            13.2,
-            -5.2
-          ],
-          [
-            20.4,
-            -5.2
-          ],
-          [
-            20.4,
-            -7.65
+            18.25,
+            -6.92
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "F-D-continuation",
-        "sources": [
-          "42_0",
-          "48",
-          "52_0"
-        ],
-        "incomplete": true,
+        "id": "F-1-edge-2",
         "points": [
           [
-            20.4,
-            -5.2
+            18.25,
+            -6.92
           ],
           [
-            23,
-            -5.2
+            18.25,
+            -4.42
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "F-T-outline",
-        "sources": [
-          "47_0"
-        ],
+        "id": "F-1-edge-3",
         "points": [
           [
-            28.2,
-            -7.65
+            18.25,
+            -4.42
           ],
           [
-            28.2,
-            -5.2
-          ],
-          [
-            34.4,
-            -5.2
-          ],
-          [
-            34.4,
-            -7.65
+            13.25,
+            -4.42
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "F-T-continuation",
-        "sources": [
-          "47_0",
-          "53_0"
-        ],
-        "incomplete": true,
+        "id": "F-1-edge-4",
         "points": [
           [
-            34.4,
-            -5.2
+            13.25,
+            -4.42
           ],
           [
-            39,
-            -5.2
+            13.25,
+            -6.92
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "C-P-outline",
-        "sources": [
-          "41_0",
-          "53_0"
+        "id": "F-2-edge-1",
+        "points": [
+          [
+            18.25,
+            -6.92
+          ],
+          [
+            23.25,
+            -6.92
+          ]
         ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-2-edge-2",
+        "points": [
+          [
+            23.25,
+            -6.92
+          ],
+          [
+            23.25,
+            -4.42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-2-edge-3",
+        "points": [
+          [
+            23.25,
+            -4.42
+          ],
+          [
+            18.25,
+            -4.42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-3-edge-1",
+        "points": [
+          [
+            23.25,
+            -6.92
+          ],
+          [
+            28.25,
+            -6.92
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-3-edge-2",
+        "points": [
+          [
+            28.25,
+            -6.92
+          ],
+          [
+            28.25,
+            -4.42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-3-edge-3",
+        "points": [
+          [
+            28.25,
+            -4.42
+          ],
+          [
+            23.25,
+            -4.42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-4-edge-1",
+        "points": [
+          [
+            28.25,
+            -6.92
+          ],
+          [
+            33.25,
+            -6.92
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-4-edge-2",
+        "points": [
+          [
+            33.25,
+            -6.92
+          ],
+          [
+            33.25,
+            -4.42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-4-edge-3",
+        "points": [
+          [
+            33.25,
+            -4.42
+          ],
+          [
+            28.25,
+            -4.42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-5-edge-1",
+        "points": [
+          [
+            33.25,
+            -6.92
+          ],
+          [
+            38.25,
+            -6.92
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-5-edge-2",
+        "points": [
+          [
+            38.25,
+            -6.92
+          ],
+          [
+            38.25,
+            -4.42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "F-5-edge-3",
+        "points": [
+          [
+            38.25,
+            -4.42
+          ],
+          [
+            33.25,
+            -4.42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "B-1-edge-1",
+        "points": [
+          [
+            0.6,
+            -4.3
+          ],
+          [
+            5.6,
+            -4.3
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "B-1-edge-2",
+        "points": [
+          [
+            5.6,
+            -4.3
+          ],
+          [
+            5.6,
+            -1.8
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "B-1-edge-3",
+        "points": [
+          [
+            5.6,
+            -1.8
+          ],
+          [
+            0.6,
+            -1.8
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "B-1-edge-4",
+        "points": [
+          [
+            0.6,
+            -1.8
+          ],
+          [
+            0.6,
+            -4.3
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "B-2-edge-1",
+        "points": [
+          [
+            5.6,
+            -4.3
+          ],
+          [
+            10.6,
+            -4.3
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "B-2-edge-2",
+        "points": [
+          [
+            10.6,
+            -4.3
+          ],
+          [
+            10.6,
+            -1.8
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "B-2-edge-3",
+        "points": [
+          [
+            10.6,
+            -1.8
+          ],
+          [
+            5.6,
+            -1.8
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-1-edge-1",
+        "points": [
+          [
+            46,
+            -3.5
+          ],
+          [
+            48.5,
+            -3.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-1-edge-2",
+        "points": [
+          [
+            48.5,
+            -3.5
+          ],
+          [
+            48.5,
+            1.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-1-edge-3",
+        "points": [
+          [
+            48.5,
+            1.5
+          ],
+          [
+            46,
+            1.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-1-edge-4",
+        "points": [
+          [
+            46,
+            1.5
+          ],
+          [
+            46,
+            -3.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-2-edge-2",
+        "points": [
+          [
+            48.5,
+            1.5
+          ],
+          [
+            48.5,
+            6.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-2-edge-3",
+        "points": [
+          [
+            48.5,
+            6.5
+          ],
+          [
+            46,
+            6.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-2-edge-4",
+        "points": [
+          [
+            46,
+            6.5
+          ],
+          [
+            46,
+            1.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-3-edge-2",
+        "points": [
+          [
+            48.5,
+            6.5
+          ],
+          [
+            48.5,
+            11.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-3-edge-3",
+        "points": [
+          [
+            48.5,
+            11.5
+          ],
+          [
+            46,
+            11.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-3-edge-4",
+        "points": [
+          [
+            46,
+            11.5
+          ],
+          [
+            46,
+            6.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-4-edge-2",
+        "points": [
+          [
+            48.5,
+            11.5
+          ],
+          [
+            48.5,
+            16.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-4-edge-3",
+        "points": [
+          [
+            48.5,
+            16.5
+          ],
+          [
+            46,
+            16.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "S-4-edge-4",
+        "points": [
+          [
+            46,
+            16.5
+          ],
+          [
+            46,
+            11.5
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "C-P-edge-1",
         "points": [
           [
             42.15,
-            -7.6
+            -6.92
+          ],
+          [
+            44.65,
+            -6.92
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "C-P-edge-2",
+        "points": [
+          [
+            44.65,
+            -6.92
+          ],
+          [
+            44.65,
+            -1.92
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "C-P-edge-3",
+        "points": [
+          [
+            44.65,
+            -1.92
           ],
           [
             42.15,
-            -2.5
-          ],
-          [
-            44.45,
-            -2.5
-          ],
-          [
-            44.45,
-            -7.6
+            -1.92
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "B-1-fragment",
-        "sources": [
-          "48",
-          "52_0"
-        ],
-        "incomplete": true,
-        "orientation": "likely-parallel-to-Sukhumvit",
+        "id": "C-P-edge-4",
         "points": [
           [
-            8.2,
-            -3.9
+            42.15,
+            -1.92
           ],
           [
-            13.8,
-            -3.9
-          ],
-          [
-            13.8,
-            -1.6
+            42.15,
+            -6.92
           ]
         ],
-        "status": "Observed building-side fragment only; cropped end is NOT closed and no repeated row is inferred."
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "S-1-S-2-aisle",
-        "sources": [
-          "34",
-          "40_0",
-          "50_0",
-          "51_0"
-        ],
+        "id": "OWNER-REAR-01-edge-1",
         "points": [
           [
-            46.5,
-            2.9
+            37.5,
+            43
           ],
           [
-            46.5,
-            13.9
+            40,
+            43
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "S-start",
-        "sources": [
-          "34",
-          "40_0"
-        ],
+        "id": "OWNER-REAR-01-edge-2",
         "points": [
           [
-            46.5,
-            2.9
+            40,
+            43
           ],
           [
-            49.3,
-            2.9
+            40,
+            48
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "S-middle",
-        "sources": [
-          "34",
-          "40_0"
-        ],
+        "id": "OWNER-REAR-01-edge-3",
         "points": [
           [
-            46.5,
-            8.4
+            40,
+            48
           ],
           [
-            49.3,
-            8.4
+            37.5,
+            48
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "S-end",
-        "sources": [
-          "34",
-          "40_0"
-        ],
+        "id": "OWNER-REAR-01-edge-4",
         "points": [
           [
-            46.5,
-            13.9
+            37.5,
+            48
           ],
           [
-            49.3,
-            13.9
+            37.5,
+            43
           ]
-        ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       },
       {
-        "id": "S-shrine-continuation",
-        "sources": [
-          "34",
-          "40_0"
-        ],
-        "incomplete": true,
+        "id": "OWNER-REAR-02-edge-1",
         "points": [
           [
-            46.5,
-            2.9
+            35,
+            43
           ],
           [
-            46.5,
-            1.1
+            37.5,
+            43
           ]
         ],
-        "status": "Shrine-end continuation has no confirmed far closing line."
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-02-edge-3",
+        "points": [
+          [
+            37.5,
+            48
+          ],
+          [
+            35,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-02-edge-4",
+        "points": [
+          [
+            35,
+            48
+          ],
+          [
+            35,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-03-edge-1",
+        "points": [
+          [
+            32.5,
+            43
+          ],
+          [
+            35,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-03-edge-3",
+        "points": [
+          [
+            35,
+            48
+          ],
+          [
+            32.5,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-03-edge-4",
+        "points": [
+          [
+            32.5,
+            48
+          ],
+          [
+            32.5,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-04-edge-1",
+        "points": [
+          [
+            30,
+            43
+          ],
+          [
+            32.5,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-04-edge-3",
+        "points": [
+          [
+            32.5,
+            48
+          ],
+          [
+            30,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-04-edge-4",
+        "points": [
+          [
+            30,
+            48
+          ],
+          [
+            30,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-05-edge-1",
+        "points": [
+          [
+            27.5,
+            43
+          ],
+          [
+            30,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-05-edge-3",
+        "points": [
+          [
+            30,
+            48
+          ],
+          [
+            27.5,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-05-edge-4",
+        "points": [
+          [
+            27.5,
+            48
+          ],
+          [
+            27.5,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-06-edge-1",
+        "points": [
+          [
+            25,
+            43
+          ],
+          [
+            27.5,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-06-edge-3",
+        "points": [
+          [
+            27.5,
+            48
+          ],
+          [
+            25,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-06-edge-4",
+        "points": [
+          [
+            25,
+            48
+          ],
+          [
+            25,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-07-edge-1",
+        "points": [
+          [
+            22.5,
+            43
+          ],
+          [
+            25,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-07-edge-3",
+        "points": [
+          [
+            25,
+            48
+          ],
+          [
+            22.5,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-07-edge-4",
+        "points": [
+          [
+            22.5,
+            48
+          ],
+          [
+            22.5,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-08-edge-1",
+        "points": [
+          [
+            20,
+            43
+          ],
+          [
+            22.5,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-08-edge-3",
+        "points": [
+          [
+            22.5,
+            48
+          ],
+          [
+            20,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-08-edge-4",
+        "points": [
+          [
+            20,
+            48
+          ],
+          [
+            20,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-09-edge-1",
+        "points": [
+          [
+            17.5,
+            43
+          ],
+          [
+            20,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-09-edge-3",
+        "points": [
+          [
+            20,
+            48
+          ],
+          [
+            17.5,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-09-edge-4",
+        "points": [
+          [
+            17.5,
+            48
+          ],
+          [
+            17.5,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-10-edge-1",
+        "points": [
+          [
+            15,
+            43
+          ],
+          [
+            17.5,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-10-edge-3",
+        "points": [
+          [
+            17.5,
+            48
+          ],
+          [
+            15,
+            48
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-REAR-10-edge-4",
+        "points": [
+          [
+            15,
+            48
+          ],
+          [
+            15,
+            43
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R33-P1-edge-1",
+        "points": [
+          [
+            46,
+            30.27
+          ],
+          [
+            48.5,
+            30.27
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R33-P1-edge-2",
+        "points": [
+          [
+            48.5,
+            30.27
+          ],
+          [
+            48.5,
+            35.27
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R33-P1-edge-3",
+        "points": [
+          [
+            48.5,
+            35.27
+          ],
+          [
+            46,
+            35.27
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R33-P1-edge-4",
+        "points": [
+          [
+            46,
+            35.27
+          ],
+          [
+            46,
+            30.27
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R33-P2-edge-2",
+        "points": [
+          [
+            48.5,
+            35.27
+          ],
+          [
+            48.5,
+            40.27
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R33-P2-edge-3",
+        "points": [
+          [
+            48.5,
+            40.27
+          ],
+          [
+            46,
+            40.27
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R33-P2-edge-4",
+        "points": [
+          [
+            46,
+            40.27
+          ],
+          [
+            46,
+            35.27
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R34-P1-edge-1",
+        "points": [
+          [
+            46,
+            17
+          ],
+          [
+            48.5,
+            17
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R34-P1-edge-2",
+        "points": [
+          [
+            48.5,
+            17
+          ],
+          [
+            48.5,
+            22
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R34-P1-edge-3",
+        "points": [
+          [
+            48.5,
+            22
+          ],
+          [
+            46,
+            22
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R34-P1-edge-4",
+        "points": [
+          [
+            46,
+            22
+          ],
+          [
+            46,
+            17
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R36-P1-edge-1",
+        "points": [
+          [
+            46,
+            42
+          ],
+          [
+            48.5,
+            42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R36-P1-edge-2",
+        "points": [
+          [
+            48.5,
+            42
+          ],
+          [
+            48.5,
+            47
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R36-P1-edge-3",
+        "points": [
+          [
+            48.5,
+            47
+          ],
+          [
+            46,
+            47
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
+      },
+      {
+        "id": "OWNER-R36-P1-edge-4",
+        "points": [
+          [
+            46,
+            47
+          ],
+          [
+            46,
+            42
+          ]
+        ],
+        "source": "owner-review-v12",
+        "level": -0.8
       }
-    ],
-    "unknownPaintSpans": [
-      "Front run between photographed endpoints: missing exact intermediate positions; no uniform grid interpolated.",
-      "Building-side cropped end and side-run shrine-end closure are not established.",
-      "Dark joints and flag pole centres are not additional parking dividers."
     ],
     "cars": [
       {
-        "id": "EXT-MB-FD",
-        "bayId": "F-D",
-        "model": "Mercedes-Benz E-Class",
-        "profile": "eclass",
-        "brand": "MB",
-        "paint": "#eceeea",
-        "photoReference": "Showroom 260912 / 1,4",
-        "cx": 16.8,
-        "cy": -6.425,
-        "l": 5.05,
-        "w": 2.15,
-        "heightCap": 1.55,
-        "angle": 0
-      },
-      {
-        "id": "EXT-MB-FT",
-        "bayId": "F-T",
+        "id": "EXT-MB-F-1",
+        "bayId": "F-1",
         "model": "Mercedes-Benz C-Class",
         "profile": "cclass",
         "brand": "MB",
         "paint": "#252a2e",
-        "photoReference": "Showroom 260912 / 8",
-        "cx": 31.3,
-        "cy": -6.425,
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 15.75,
+        "cy": -5.67,
         "l": 4.8,
         "w": 2.1,
         "heightCap": 1.55,
-        "angle": 180
+        "angle": 0
+      },
+      {
+        "id": "EXT-MB-F-2",
+        "bayId": "F-2",
+        "model": "Mercedes-Benz C-Class",
+        "profile": "cclass",
+        "brand": "MB",
+        "paint": "#eceeea",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 20.75,
+        "cy": -5.67,
+        "l": 4.8,
+        "w": 2.1,
+        "heightCap": 1.55,
+        "angle": 0
+      },
+      {
+        "id": "EXT-MB-F-5",
+        "bayId": "F-5",
+        "model": "Mercedes-Benz C-Class",
+        "profile": "cclass",
+        "brand": "MB",
+        "paint": "#c4c7c5",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 35.75,
+        "cy": -5.67,
+        "l": 4.8,
+        "w": 2.1,
+        "heightCap": 1.55,
+        "angle": 0
+      },
+      {
+        "id": "EXT-MB-S-2",
+        "bayId": "S-2",
+        "model": "Mercedes-Benz GLC",
+        "profile": "glc",
+        "brand": "MB",
+        "paint": "#252a2e",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 47.25,
+        "cy": 4,
+        "l": 4.75,
+        "w": 2.12,
+        "heightCap": 1.68,
+        "angle": 90
+      },
+      {
+        "id": "EXT-MB-S-3",
+        "bayId": "S-3",
+        "model": "Mercedes-Benz C-Class",
+        "profile": "cclass",
+        "brand": "MB",
+        "paint": "#eceeea",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 47.25,
+        "cy": 9,
+        "l": 4.8,
+        "w": 2.1,
+        "heightCap": 1.55,
+        "angle": 90
+      },
+      {
+        "id": "EXT-MB-S-4",
+        "bayId": "S-4",
+        "model": "Mercedes-Benz C-Class",
+        "profile": "cclass",
+        "brand": "MB",
+        "paint": "#c4c7c5",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 47.25,
+        "cy": 14,
+        "l": 4.8,
+        "w": 2.1,
+        "heightCap": 1.55,
+        "angle": 90
+      },
+      {
+        "id": "EXT-MB-OWNER-REAR-03",
+        "bayId": "OWNER-REAR-03",
+        "model": "Mercedes-Benz C-Class",
+        "profile": "cclass",
+        "brand": "MB",
+        "paint": "#252a2e",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 33.75,
+        "cy": 45.5,
+        "l": 4.8,
+        "w": 2.1,
+        "heightCap": 1.55,
+        "angle": 90
+      },
+      {
+        "id": "EXT-MB-OWNER-REAR-05",
+        "bayId": "OWNER-REAR-05",
+        "model": "Mercedes-Benz GLC",
+        "profile": "glc",
+        "brand": "MB",
+        "paint": "#eceeea",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 28.75,
+        "cy": 45.5,
+        "l": 4.75,
+        "w": 2.12,
+        "heightCap": 1.68,
+        "angle": 90
+      },
+      {
+        "id": "EXT-MB-OWNER-REAR-07",
+        "bayId": "OWNER-REAR-07",
+        "model": "Mercedes-Benz C-Class",
+        "profile": "cclass",
+        "brand": "MB",
+        "paint": "#c4c7c5",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 23.75,
+        "cy": 45.5,
+        "l": 4.8,
+        "w": 2.1,
+        "heightCap": 1.55,
+        "angle": 90
+      },
+      {
+        "id": "EXT-MB-OWNER-REAR-09",
+        "bayId": "OWNER-REAR-09",
+        "model": "Mercedes-Benz C-Class",
+        "profile": "cclass",
+        "brand": "MB",
+        "paint": "#252a2e",
+        "photoReference": "Owner showroom photographs 12 September 2026; family appearance, not live stock",
+        "cx": 18.75,
+        "cy": 45.5,
+        "l": 4.8,
+        "w": 2.1,
+        "heightCap": 1.55,
+        "angle": 90
       }
     ],
+    "unknownPaintSpans": [
+      "Photo-fit endpoints and side boundary require site measurement",
+      "Rear 1m gap is wall offset, not an aisle; road access not inferred",
+      "Front F3/F4 paint-to-ramp-toe relationship and metric exit route HOLD"
+    ],
     "level": -0.8
+  },
+  "ownerReview": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
+  "fence": {
+    "reference": "inside-face",
+    "retainingThickness": 0.22,
+    "frontInsideY": -8.32,
+    "sideInsideX": 49.2,
+    "status": "All fence-member thickness projects outward from the canonical inside-face datum"
+  },
+  "rearGroundXMax": 49.2,
+  "entryRamp": {
+    "xMin": 26.6,
+    "xMax": 29.8,
+    "yMin": -4.5,
+    "yMax": 2.5,
+    "status": "Existing front Entrance ramp confirmed by owner; width/run/level profile are schematic pending measurement, not accessibility or vehicle-gradient approval"
   }
 }

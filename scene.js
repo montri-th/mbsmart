@@ -13,6 +13,7 @@
   const scene=new T.Scene();scene.background=new T.Color('#d4dce0');
   const camera=new T.PerspectiveCamera(58,1,.08,500), target=new T.Vector3();
   const shell=new T.Group(), overhead=new T.Group(), dynamic=new T.Group(), markings=new T.Group(), reviewMarker=new T.Group(), peopleGroup=new T.Group();scene.add(shell,overhead,dynamic,markings,reviewMarker,peopleGroup);
+  const handoverGuide=new T.Group();handoverGuide.name='OWNER-HANDOVER-SEQUENCE';markings.add(handoverGuide);
   let state=dataset.states.find(s=>s.mode==='handover'), mode='handover', activeView='interior', labelsOn=false, dirty=true, acOn=false, peopleOn=true, contextOn=true, upperOn=false, occludersOn=true;
   const modeNames={handover:'Vehicle handover',consulting:'Consulting area',lounge:'Customer waiting annex'};
   let exteriorScheme=dataset.defaultExteriorScheme;
@@ -59,7 +60,7 @@
   contextRoot.add(...Object.values(workshopStudy));
   const parkedCars=new T.Group();parkedCars.name='EXTERIOR-PHOTOGRAPHED-MB-ILLUSTRATION';parkedCars.userData={...dataset.site.exteriorParking,cars:undefined};contextRoot.add(parkedCars);
   for(const c of dataset.site.exteriorParking.cars){const o=mercedes.car({...c,height:c.heightCap},parkedCars);o.position.y=dataset.site.exteriorParking.level;}
-  function updateContext(){contextRoot.visible=contextOn;exterior.upper.visible=upperOn;site.occluders.visible=occludersOn;site.guides.visible=labelsOn;smartExterior.proposed.visible=exteriorScheme==='proposed';
+  function updateContext(){contextRoot.visible=contextOn;exterior.upper.visible=upperOn;site.occluders.visible=occludersOn;site.guides.visible=labelsOn;smartExterior.proposed.visible=exteriorScheme==='proposed';handoverGuide.visible=mode==='handover';
     annexes.workshopRoof.visible=upperOn;annexes.guides.visible=labelsOn;
     workshopStudy.proposed.visible=exteriorScheme==='proposed';workshopStudy.overhead.visible=upperOn&&exteriorScheme==='proposed';workshopStudy.guides.visible=labelsOn&&exteriorScheme==='proposed';
     for(const o of dynamic.children)if(o.userData.type==='window-logo')o.visible=exteriorScheme==='proposed'||!['site','siteplan','frontage'].includes(activeView);
@@ -73,12 +74,18 @@
   for(let y=0;y<=16.01;y+=.8){const max=y<2.5?24:40;box(max/2,.003,-y,max,.004,.009,M.tileJoint);}
   for(const c of state.columns){const x=c.x+c.w/2,y=c.y+c.h/2;planBox(x,y,c.w,c.h,7.1,M.column);for(const z of [.28,.48,2.95,3.15,6.3,6.5])planBox(x,y,c.w+.012,c.h+.012,.105,M.blackStone,z);}
   function glassWall(x1,y1,x2,y2,height=3.2,parent=shell,mat=M.glass,bottom=0,frame=true){const len=Math.hypot(x2-x1,y2-y1),g=new T.Group();parent.add(g);g.position.set((x1+x2)/2,bottom,-(y1+y2)/2);g.rotation.y=Math.atan2(y2-y1,x2-x1);box(0,height/2,0,len,height,.024,mat,g);if(frame){box(0,.04,0,len,.07,.08,M.dark,g);box(0,height-.04,0,len,.07,.08,M.dark,g);for(let p=-len/2;p<=len/2+.01;p+=Math.min(2,len))box(p,height/2,0,.038,height,.055,M.dark,g);box(len/2,height/2,0,.038,height,.055,M.dark,g);}return g;}
-  glassWall(0,0,24,0,7);glassWall(0,8,0,16,7);glassWall(0,0,0,8,3.8,overhead,M.glass,3.2);glassWall(40,2.5,40,16,3.18);glassWall(32,2.5,40,2.5,3.18);
+  function exteriorGlass(x1,y1,x2,y2,height,parent=shell,bottom=0){
+    const g=glassWall(x1,y1,x2,y2,height,parent,M.glass,bottom,false),len=Math.hypot(x2-x1,y2-y1);
+    g.name='EXISTING-FRAMELESS-GLAZING';g.userData={source:'Owner row15 and photos04/05',jointWidth:.006,frame:false};
+    for(let p=-len/2+2;p<len/2-.01;p+=2)box(p,height/2,0,.006,height,.026,M.dark,g);
+    return g;
+  }
+  exteriorGlass(0,0,24,0,7);exteriorGlass(0,8,0,16,7);exteriorGlass(0,0,0,8,3.8,overhead,3.2);exteriorGlass(40,2.5,40,16,3.18);exteriorGlass(32,2.5,40,2.5,3.18);
   // Low-side upper glazing closes the photographic facade only; interior room plan is unchanged.
-  glassWall(24,2.5,40,2.5,3.82,exterior.facade,M.glass,3.18);glassWall(40,2.5,40,16,3.82,exterior.facade,M.glass,3.18);
-  // Entrance recess: front glazing and a central assumed opening, not verified vehicle access.
-  glassWall(24,2.5,26.6,2.5,3.18);glassWall(29.8,2.5,32,2.5,3.18);sign('ENTRANCE',28.2,2.82,-2.45,2.4,.29,0);
-  // The former three floating entrance blocks are replaced by the separate photo-based exterior stair in site.js.
+  exteriorGlass(24,2.5,40,2.5,3.82,exterior.facade,3.18);exteriorGlass(40,2.5,40,16,3.82,exterior.facade,3.18);
+  // Existing Entrance vehicle route confirmed by owner; opening dimensions unmeasured.
+  exteriorGlass(24,2.5,26.6,2.5,3.18);exteriorGlass(29.8,2.5,32,2.5,3.18);sign('ENTRANCE',28.2,2.82,-2.45,2.4,.29,0);
+  // Existing front Entrance ramp is in site.js; no new vehicle opening is created.
   // A01/A04 photo-traced room enclosure. The former south door gaps were not evidenced.
   planBox(18,15.94,20,.13,3.18,M.white);
   planBox(8,11.60,.13,.20,3.18,M.white);planBox(8,14.4,.13,3.2,3.18,M.white);
@@ -153,7 +160,7 @@
     else if(q.type==='counter'){box(0,.51,0,q.w,1.02,q.h,M.wood,g);box(0,.52,q.h/2+.01,q.w-.15,.86,.025,M.blackStone,g);box(0,1.045,0,q.w+.05,.045,q.h+.08,M.blackStone,g);for(const x of [-1.6,1.6]){box(x,1.21,0,.52,.32,.055,M.dark,g);box(x,1.07,0,.2,.03,.2,M.steel,g);}sign('CHITCHAI',0,.62,q.h/2+.027,1.5,.19,0,g,'#e2e2dc','#293034');}
     else if(q.type==='background-wall'){box(0,1.27,0,q.w,2.54,q.h,M.platform,g);sign('smart',-.9,1.94,q.h/2+.018,1.6,.5,0,g,'#eef3f1','#929b97');for(const x of [-q.w/2+.05,q.w/2-.05])box(x,1.25,q.h/2+.015,.035,2.4,.025,M.green,g);}
     else if(q.type==='screen'){const isKit=q.id==='LED';const w=isKit?1.66:q.h,h=w*9/16;box(0,1.68,0,q.w,.98,q.h,M.dark,g);if(isKit){const o=sign('smart — open your mind',0,1.7,.077,w,h,0,g,'#e6eabe','#435150');}else{sign('CHITCHAI',.09,1.7,0,1.2,.68,Math.PI/2,g);}}
-    else if(q.type==='charger'){box(0,.72,0,.22,1.44,.19,M.dark,g);box(0,1.05,.115,.26,.34,.07,M.white,g);const points=[new T.Vector3(.12,.91,.19),new T.Vector3(.3,.59,.15),new T.Vector3(.21,.38,.15),new T.Vector3(-.08,.51,.16),new T.Vector3(-.13,1,.16)];mesh(new T.TubeGeometry(new T.CatmullRomCurve3(points),24,.016,7,false),M.dark,g);}
+    else if(q.type==='charger'){const cg=new T.Group();cg.name=q.chargingPointRef||q.id;cg.userData={kind:'owner-confirmed-charging-point',existingFurnitureId:q.id,hardwareSpecified:false,electricalApproval:false,status:q.status};g.add(cg);box(0,.72,0,.22,1.44,.19,M.dark,cg);box(0,1.05,.115,.26,.34,.07,M.white,cg);const points=[new T.Vector3(.12,.91,.19),new T.Vector3(.3,.59,.15),new T.Vector3(.21,.38,.15),new T.Vector3(-.08,.51,.16),new T.Vector3(-.13,1,.16)];mesh(new T.TubeGeometry(new T.CatmullRomCurve3(points),24,.016,7,false),M.dark,cg);}
     else if(q.type==='price-stand'){box(0,.045,0,q.w,.08,q.h,M.steel,g);box(0,.51,0,.055,.93,.055,M.steel,g);const p=box(0,1.01,0,.27,.4,.035,M.dark,g);p.rotation.x=-.25;sign(q.id==='EP'?'smart':q.id.split('-')[0],0,1.06,.038,.22,.28,0,g,'#25333a','#edf0e9');}
     else if(q.type==='floor-lamp'){cylinder(0,.025,0,.2,.05,M.steel,g);cylinder(0,.83,0,.018,1.6,M.steel,g);const sh=mesh(new T.CylinderGeometry(.16,.26,.32,30),new T.MeshStandardMaterial({color:'#e8e2cf',emissive:'#dbd0a7',emissiveIntensity:.4}),g);sh.position.y=1.63;}
     else if(q.type==='cabinet'||q.type==='hospitality'){box(0,.48,0,q.w,.96,q.h,M.wood,g);box(0,.98,0,q.w+.03,.035,q.h+.03,M.blackStone,g);for(let x=-q.w/2+.25;x<q.w/2;x+=.55)box(x,.59,q.h/2+.008,.015,.45,.012,M.steel,g);}
@@ -182,7 +189,18 @@
   const oak=new T.MeshStandardMaterial({map:woodTx,color:'#cbbba1',roughness:.63});
   planBox(17.05,10.15,17.1,3.2,.014,oak,.012);for(let y=8.55;y<11.75;y+=.20)for(let x=8.5+(Math.round(y*5)%2)*.6;x<25.5;x+=1.2)planBox(x+.6,y+.1,1.196,.196,.005,oak,.027);
   const blackGlass=new T.MeshPhysicalMaterial({color:'#10191f',roughness:.13,metalness:.1,clearcoat:1});planBox(11.65,11.475,6.1,.045,2.25,blackGlass,.75);for(let x=8.9;x<14.7;x+=.625)planBox(x,11.442,.008,.012,2.15,M.steel,.79);
-  sign('Mercedes-Benz',11.65,2.42,-11.43,2.45,.29,0);sign('WELCOME  /  RECEPTION',11.65,1.92,-11.425,2.4,.17,0);
+  sign('Mercedes-Benz',11.65,2.70,-11.43,2.45,.29,0);
+  // Owner selects Small's TWO-screen Sub Stage, adapted to existing backdrop.
+  // Dimensions/mounting/content are visual proposals, not equipment procurement.
+  for(const [i,x] of [11.05,12.25].entries()){
+    const display=box(x,2.02,-11.4,1.10,.62,.055,M.dark);display.name='SMALL-SUB-STAGE-SCREEN-'+(i+1);display.userData={kind:'small-sub-stage-screen',format:'Autohaus Small',countPackage:2,approved:false};
+    sign(i?'YOUR NEXT JOURNEY':'Mercedes-Benz',x,2.02,-11.368,1.045,.565,0,shell,'#eef2f2',i?'#303f49':'#18252c');
+  }
+  // Step V welcome/consult/hospitality touchpoints stay on retained furniture.
+  const card=box(10.15,1.18,-9.65,.16,.22,.012,M.dark);card.name='WELCOME-A5-CARD';
+  sign('Customer Service',10.15,1.18,-9.64,.148,.21,0,shell,'#e9eeed','#222a2e');
+  for(const [x,y,z] of [[12.9,9.65,1.095],[20.7,9.65,.805],[16.5,9.65,.775]]){const tablet=planBox(x,y,.26,.18,.015,M.dark,z);tablet.name='STEP-V-CONSULT-TABLET';}
+  for(const y of [10.2,14.15]){const x=36.45;planBox(x,y,.42,.29,.025,M.dark,.80);for(const dx of [-.11,.10])cylinder(x+dx,.87,-y,.035,.12,M.white);const vase=cylinder(x+.25,.90,-y,.065,.20,M.white);vase.name='STEP-V-HOSPITALITY-VASE';for(const dx of [-.025,.025]){tube([x+.25,.99,-y],[x+.25+dx,1.11,-y+.025],.006,M.green);sphere(x+.25+dx,1.12,-y+.025,.032,M.white);}}
   smart.lighting(overhead,scene);
   // D03 optional paired planters, outside vehicles and service entry.
   for(const q of dataset.decorativePlanters)planter(q.x,q.y,q.radius,q.height);
@@ -207,7 +225,7 @@
   function clearGroup(group){const materials=new Set(),textures=new Set();while(group.children.length){const c=group.children[0];group.remove(c);c.traverse(o=>{o.geometry?.dispose();for(const m of (Array.isArray(o.material)?o.material:[o.material]))if(m&&!sharedMaterials.has(m))materials.add(m);});}for(const m of materials){if(m.map&&!sharedTextures.has(m.map))textures.add(m.map);m.dispose();}for(const tx of textures)tx.dispose();}
   function setMode(next){if(!dataset.states.some(s=>s.mode===next))return;mode=next;state=dataset.states.find(s=>s.mode===mode);acOn=acState[mode];clearGroup(dynamic);clearGroup(peopleGroup);flexRoom();module(state);state.cars.forEach((c,i)=>car(c,i,dynamic));state.furniture.forEach(q=>furniture(q,dynamic));state.people.forEach(person);peopleGroup.visible=peopleOn;
     document.getElementById('state-status').textContent=(mode==='handover'?'MB 5 แสดง + MB6 ส่งมอบ + smart 1':mode==='consulting'?'MB 5 + smart 1 · Consulting 3 ที่ + รับรอง 2 ที่':'MB 5 + smart 1 · ห้องแอร์เดิม 10 + ส่วนขยาย 8 ที่')+' · แอร์ Flex '+(acOn?'เปิด / กระจกปิด':'ปิด / ช่องรถเปิด');document.getElementById('mode').value=mode;document.getElementById('flex-ac').checked=acOn;
-    root.querySelector('.issue').textContent='MB5 กึ่งกลาง Entrance · หน้ารถถึงแนวประตู 1.80 ม. / รอตรวจประตูและวงเลี้ยว';const tag=labelItems.find(q=>q.el.classList.contains('warning'));if(tag){const c=state.cars.find(c=>c.id==='MB5');tag.point.set(c.cx,2.3,-c.cy);tag.el.textContent='MB5 · Owner review adopted / circulation HOLD';}updateContext();updateCaption();dirty=true;
+    root.querySelector('.issue').textContent='ส่งมอบ: ขยับ MB5 ก่อน → MB6 ผ่านช่องเดิม → เลี้ยวซ้ายลง Ramp Entrance · ระยะเลี้ยวรอวัด';const tag=labelItems.find(q=>q.el.classList.contains('warning'));if(tag){const c=state.cars.find(c=>c.id==='MB5');tag.point.set(c.cx,2.3,-c.cy);tag.el.textContent='MB5 · ขยับชั่วคราวก่อนนำ MB6 ออก';}updateContext();updateCaption();dirty=true;
   }
   function setAC(value){acState[mode]=!!value;setMode(mode);}
   // Review overlays are not proposed floor graphics.
@@ -215,16 +233,30 @@
   for(const [id,y] of [['H',0],['G',2.5],['F',8],['E',16]]){line([[0,.025,-y],[40,.025,-y]],'#b98738');floorLabel(id,-.65,y,.7);}
   for(const route of state.routes.filter(q=>q.path)){const geometry=new T.BufferGeometry().setFromPoints(route.path.map(([x,y])=>new T.Vector3(x,.038,-y)));const line=new T.Line(geometry,new T.LineDashedMaterial({color:'#739187',dashSize:.24,gapSize:.12,depthTest:false}));line.computeLineDistances();line.name=route.id;line.userData={planningWidth:route.planningWidth,status:route.status};markings.add(line);}floorLabel('SERVICE ROUTE · VERIFY',30.5,13.5,2.3,markings);
   const warningMat=new T.MeshBasicMaterial({color:'#efa554',transparent:true,opacity:.13,depthWrite:false});planBox(36,5.25,8,5.5,.01,warningMat,.025,markings);
+  // Owner-confirmed operating sequence, not a collision-free trajectory or new floor paint.
+  const operation=dataset.customerExperience.handover;
+  const rampLevel=y=>y>=2.5?0:y<=-4.5?-.8:(y-2.5)*.8/7;
+  const gateInnerY=dataset.site.gateTransitions.frontInnerY,gateRoadY=dataset.site.corner.frontY-dataset.site.sidewalk.width;
+  const forecourtLevel=y=>dataset.site.levels.forecourt+(dataset.site.levels.road-dataset.site.levels.forecourt)*Math.max(0,Math.min(1,(gateInnerY-y)/(gateInnerY-gateRoadY)));
+  for(const [id,path] of [['MB6-VIA-VACATED-MB5',operation.path],['ENTRANCE-TO-FORECOURT',operation.forecourtPath]]){
+    if(id==='ENTRANCE-TO-FORECOURT'&&operation.forecourtRouteRender===false)continue;
+    const points=path.map(([x,y])=>new T.Vector3(x,(id==='ENTRANCE-TO-FORECOURT'?forecourtLevel(y):rampLevel(y))+.055,-y));
+    const guide=new T.Line(new T.BufferGeometry().setFromPoints(points),new T.LineDashedMaterial({color:'#c58a35',dashSize:.28,gapSize:.16,depthTest:false}));
+    guide.computeLineDistances();guide.name=id;guide.userData={kind:'operating-sequence',sweptPathVerified:false,prerequisite:'Temporarily move MB5, its price stand and clear people/cables'};handoverGuide.add(guide);
+  }
+  floorLabel('1 · MOVE MB5 FIRST',28.2,8.8,3.3,handoverGuide);
+  floorLabel('2 · MB6 VIA MB5',32.1,5.25,3.2,handoverGuide);
+  const rampNote=floorLabel('3 · LEFT / EXISTING RAMP',28.2,-1,3.1,handoverGuide);rampNote.position.y=rampLevel(-1)+.07;
   addLabel('3B · 8.65 × 6.63 m',4,2.95,-4);addLabel('ทางไป SERVICE · รอตรวจ',30.5,.8,-14);addLabel('MB5 · ปรับตามเจ้าของ / รอตรวจทางสัญจร',28.2,2.3,-6.9,true);addLabel('ห้องแอร์เดิม',36,2.2,-12);
   const presets={interior:{p:[27.9,2.05,-4.1],t:[9.4,1.42,-6.2],ceiling:true,title:'จากทางเข้า · มองสู่ smart และ counter เดิม'},smart:{p:[9.2,2.4,-3.9],t:[2.8,1.22,-5.2],ceiling:true,title:'smart Module 3B · ครบหนึ่งชุด'},handover:{p:[33.2,2.05,-2.8],t:[36.8,1.1,-7.4],ceiling:true,title:'Vehicle Handover · MB5 หันสู่ด้านหน้า entrance'},service:{p:[28.2,2.0,-6.7],t:[29.75,1.4,-15.5],ceiling:true,title:'ทางเข้า–ออกศูนย์บริการ · ยกเลิก ST'},overview:{p:[48,33,27],t:[20,0,-7.5],ceiling:false,title:'ภาพรวมสามมิติ · มุมตัดซ่อนฝ้าเพื่อดูผัง'},plan:{p:[20,49,-7.9],t:[20,0,-8],ceiling:false,title:'มองจากด้านบน · แกนยาว MB5 ตั้งฉาก'} };
   presets.interior.p=[25.5,2.15,-7.15];presets.interior.t=[10.2,1.42,-7.8];presets.handover.p=[32.35,2.35,-2.78];presets.handover.t=[36,1.1,-5.8];presets.handover.title='MB6 · ส่งมอบรถ หันหน้าไปทาง smart';presets.plan.title='ผัง v11 · MB5 และป้ายราคาปรับตามความเห็นเจ้าของ';
   presets.smart={p:[10.5,2.45,-6.3],t:[3.4,1.05,-4.7],ceiling:true,title:'smart #5 Premium · Saturn Beige Matte / Shadow Black'};
   presets.interior.p=[26.1,2.3,-3.5];presets.interior.t=[8,1.3,-4];
   presets.handover.p=[31.8,2.5,-2.85];presets.handover.t=[36,1.2,-5.5];presets.handover.site=false;
-  addLabel('smart · Type 4 indoor-window logo / size TBC',35.97,2.85,-2.73);addLabel('MB wallbox เดิม · ใช้ร่วม / ตำแหน่งรอวัด',32.85,1.85,-7.45);
+  addLabel('smart · กลางแผ่นกระจกไร้กรอบ / รอตรวจขนาด',35,2.85,-2.73);addLabel('MB wallbox เดิม · ใช้ร่วม / ตำแหน่งรอวัด',32.85,1.85,-7.45);
   presets.overview.p=[39,24,17];presets.overview.site=false;presets.plan.p=[20,26,-7.9];presets.plan.site=false;
-  presets.plan.title='ผังภายใน v09-r4 · ปรับ MB5 และป้ายราคาด้านพวงมาลัยขวา';presets.service.p=[30.5,2.1,-9.8];
-  presets.site={p:[61,39,39],t:[20,4,-17],ceiling:true,site:true,upper:true,title:'อาคารและโรงซ่อมเชื่อมด้านหลัง · ป้าย MB ตั้งฉากถนน / ห้องประชุมแยกจาก Sales'};
+  presets.plan.title='ผังปรับปรุง r5 · Small / Sub Stage 2 จอ / ลำดับส่งมอบ';presets.service.p=[30.5,2.1,-9.8];
+  presets.site={p:[68,44,44],t:[22,4,-17],ceiling:true,site:true,upper:true,title:'อาคารและอู่ซ่อม · ป้าย MB ตรงระนาบด้านเสม็ด–อ่างศิลา · ที่จอดตามเจ้าของ'};
   presets.frontage={p:[24,18,39],t:[21,7,-3],ceiling:true,site:true,upper:true,title:'มุมยกระดับด้านหน้า · อาคารเดิมและลานด้านหน้า'};
   presets.siteplan={p:[22,86,-17],t:[22,-.6,-17.1],ceiling:false,site:true,upper:false,title:'ผังบริเวณ · ห้องประชุมแยก Sales / โรงซ่อมด้านหลัง / เส้นสีไม่ใช่แนวเขต'};
   presets.workshop={p:[49,29,-6],t:[23,0,-30],ceiling:false,site:true,upper:false,title:'โรงซ่อม · ผังเตรียม smart HV + M/E · อุปกรณ์เป็นข้อเสนอรออนุมัติ'};
@@ -234,7 +266,7 @@
   function setCameraLocked(value){cameraLocked=!!value;pointers.clear();lastPinch=0;const control=document.getElementById('camera-lock');if(control)control.checked=cameraLocked;renderer.domElement.style.touchAction=cameraLocked?'pan-y':'none';const hint=document.getElementById('camera-help');if(hint)hint.textContent=cameraLocked?'ล็อกมุมสำคัญแล้ว · ปลดล็อกเพื่อหมุนและซูม':'ลากเพื่อหมุน · Scroll / pinch เพื่อซูม · คลิกขวาลากเพื่อเลื่อน';document.dispatchEvent(new CustomEvent('bc:cameralock',{detail:{locked:cameraLocked}}));}
   addLabel('ลานหน้าอาคาร · จากขอบแถบหน้าอาคาร 7.20 ม. / รอยืนยัน',16,.55,4.6,true);
   addLabel('ริมถนนสาธารณะ · แนวอ้างอิงภาพ / ไม่ใช่รังวัด',25,.1,10.6,true);
-  addLabel('ลานด้านข้าง · ที่จอด smart 1 + 2 / รอตรวจโควตา MB',48,.3,-20,true);
+  addLabel('ลานด้านข้าง · smart ลูกค้า 1 + ทดลองขับ 1 / ช่องทดลองขับที่ 2 รอจัดตำแหน่ง',48,.3,-20,true);
   function updateCaption(){document.getElementById('view-title').textContent=activeView==='handover'?modeNames[mode]+' · แอร์ '+(acOn?'เปิด':'ปิด'):presets[activeView].title;}
   function setView(v){if(!Object.hasOwn(presets,v))return false;activeView=v;const p=presets[v];camera.fov=v==='handover'?65:v==='frontage'?70:58;camera.updateProjectionMatrix();camera.position.set(...p.p);target.set(...p.t);if(['plan','overview','site','siteplan','frontage','workshop-plan'].includes(v)){const k=Math.max(1,(p.site?1.15:1.8)/camera.aspect);camera.position.sub(target).multiplyScalar(k).add(target);}camera.lookAt(target);overhead.visible=p.ceiling;document.getElementById('ceiling').checked=p.ceiling;upperOn=!!p.upper;if(typeof p.site==='boolean')contextOn=p.site;updateContext();root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));updateCaption();dirty=true;document.dispatchEvent(new CustomEvent('bc:viewchange',{detail:{view:v}}));return true;}
   function orbit(dx,dy){if(cameraLocked)return;const v=camera.position.clone().sub(target),s=new T.Spherical().setFromVector3(v);s.theta-=dx*.006;s.phi=T.MathUtils.clamp(s.phi-dy*.006,.04,Math.PI/2+.05);camera.position.copy(target).add(new T.Vector3().setFromSpherical(s));camera.lookAt(target);dirty=true;}

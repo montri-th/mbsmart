@@ -67,6 +67,48 @@ window.BC_BUILDING_ANNEXES=(T,h,data)=>{
   wall([aw.xMax,aw.yMin],[aw.xMax,aw.yMax],aw.outerHeight-.14,.23,metal,workshopRoof,.05);
   // A real front-end fascia supports the proposed care mark, pending service-point approval.
   wall([aw.xMin,aw.yMin],[aw.xMax,aw.yMin],3.18,.36,metal,workshopRoof,.05);
+  // Owner daytime photos confirm the low rear parking cover. It is separate
+  // from the unchanged side awning; all member sizes and roof levels are visual
+  // proxies, not a structural proposal or a measured headroom certificate.
+  const rc=w.rearCanopy;
+  if(rc?.render){
+    const roofGroup=new T.Group(),supports=new T.Group();
+    roofGroup.name=rc.id;roofGroup.userData={...rc,kind:'existing-photo-fit-rear-canopy'};workshopRoof.add(roofGroup);
+    supports.name=rc.id+'-SUPPORTS';supports.userData={...rc,kind:'existing-photo-fit-rear-canopy-supports'};workshop.add(supports);
+    const cover=surface([[rc.xMin,rc.wallY,rc.wallHeight],[rc.xMax,rc.wallY,rc.wallHeight],[rc.xMax,rc.outerY,rc.outerHeight],[rc.xMin,rc.outerY,rc.outerHeight]],metal,roofGroup);cover.name=rc.id+'-ROOF';
+    const roofLevel=y=>rc.wallHeight+(y-rc.wallY)/(rc.outerY-rc.wallY)*(rc.outerHeight-rc.wallHeight);
+    for(const x of rc.supportXs){
+      const top=roofLevel(rc.supportY)-rc.trussDepth;
+      const post=planBox(x,rc.supportY,.10,.10,top-rc.floorLevel,M.steel,rc.floorLevel,supports);post.name=rc.id+'-POST-X'+x;
+      const ya=rc.wallY,yb=rc.supportY,za=roofLevel(ya),zb=roofLevel(yb);
+      tube([x,za-.04,-ya],[x,zb-.04,-yb],.035,M.steel,roofGroup);
+      tube([x,za-rc.trussDepth,-ya],[x,zb-rc.trussDepth,-yb],.035,M.steel,roofGroup);
+      for(let i=0;i<6;i++){const a=ya+(yb-ya)*i/6,b=ya+(yb-ya)*(i+1)/6;tube([x,roofLevel(a)-(i%2?rc.trussDepth:.04),-a],[x,roofLevel(b)-(i%2 ? .04 : rc.trussDepth),-b],.021,M.steel,roofGroup);}
+    }
+    for(let x=rc.xMin;x<=rc.xMax;x+=.65)tube([x,rc.wallHeight+.012,-rc.wallY],[x,rc.outerHeight+.012,-rc.outerY],.014,lineMat,roofGroup);
+    const fascia=wall([rc.xMin,rc.outerY],[rc.xMax,rc.outerY],rc.outerHeight-.16,.22,metal,roofGroup,.06);fascia.name=rc.id+'-EAVE';
+  }
+  // Existing steel stair, owner-confirmed in the REAR HALF of the former
+  // top-right study cell. Compact return flights are a reversible visual proxy;
+  // no new floor, door or certified access dimensions are inferred.
+  const rs=w.rearStair;
+  if(rs?.render){
+    const stair=new T.Group();stair.name=rs.id;stair.userData={...rs,kind:'existing-steel-stair-proxy',isVehicleLift:false};workshop.add(stair);
+    const [sx0,sy0,sx1,sy1]=rs.bounds,cx=(sx0+sx1)/2,n=rs.risersPerFlight,pad=.12,lowerY=sy0+pad,turnY=sy1-pad-rs.landingDepth,run=turnY-lowerY,stepDepth=run/n,rise=(rs.upperLandingLevel-rs.floorLevel)/(n*2),mid=rs.floorLevel+n*rise;
+    const gap=.20,leftX=cx-(rs.flightWidth+gap)/2,rightX=cx+(rs.flightWidth+gap)/2;
+    for(const [flight,x,reverse,base] of [[1,leftX,false,rs.floorLevel],[2,rightX,true,mid]]){
+      for(let i=0;i<n;i++){const y=reverse?turnY-(i+.5)*stepDepth:lowerY+(i+.5)*stepDepth,z=base+(i+1)*rise,tread=planBox(x,y,rs.flightWidth,stepDepth,.055,M.steel,z-.055,stair);tread.name=rs.id+'-FLIGHT-'+flight+'-TREAD-'+(i+1);}
+      for(const dx of [-rs.flightWidth/2+.045,rs.flightWidth/2-.045]){
+        const startY=reverse?turnY:lowerY,endY=reverse?lowerY:turnY;
+        tube([x+dx,base+.04,-startY],[x+dx,base+n*rise-.06,-endY],.04,lineMat,stair);
+        tube([x+dx,base+.96,-startY],[x+dx,base+n*rise+.96,-endY],.023,M.steel,stair);
+        for(let i=0;i<=n;i+=3){const y=reverse?turnY-i*stepDepth:lowerY+i*stepDepth,z=base+i*rise;tube([x+dx,z,-y],[x+dx,z+.96,-y],.023,M.steel,stair);}
+      }
+    }
+    const landingWidth=rs.flightWidth*2+gap,landing=planBox(cx,turnY+rs.landingDepth/2,landingWidth,rs.landingDepth,.08,M.steel,mid-.08,stair);landing.name=rs.id+'-MID-LANDING';
+    for(const x of [cx-landingWidth/2+.05,cx+landingWidth/2-.05]){planBox(x,sy1-pad-.05,.075,.075,mid-rs.floorLevel,M.steel,rs.floorLevel,stair);tube([x,mid+.96,-turnY],[x,mid+.96,-(sy1-pad)],.023,M.steel,stair);tube([x,mid,-(sy1-pad)],[x,mid+.96,-(sy1-pad)],.023,M.steel,stair);}
+    tube([cx-landingWidth/2+.05,mid+.96,-(sy1-pad)],[cx+landingWidth/2-.05,mid+.96,-(sy1-pad)],.023,M.steel,stair);
+  }
   // Sliding mesh leaves stacked at each side: internal workshop gate shown open.
   const gate=w.sideGate,gateGroup=new T.Group();gateGroup.name='INTERNAL-WORKSHOP-GATE-OPEN-PROXY';gateGroup.userData=gate;workshop.add(gateGroup);
   for(const gx of [gate.xMin,gate.xMax]){for(const dx of [0,.13]){planBox(gx+dx,gate.y,.07,1.6,gate.height,M.steel,w.floorLevel,gateGroup);for(let gy=gate.y-.8;gy<=gate.y+.8;gy+=.18)planBox(gx+dx,gy,.025,.025,gate.height,M.steel,w.floorLevel,gateGroup);}}

@@ -105,19 +105,40 @@ window.BC_SMART=function(T,H){
   const alu=mat('#aaaead',.38,.62),pale=mat('#d3c4a8',.68),chairGrey=mat('#858987',.85),edge=mat('#dcdedb',.27,.3);
   if(q.type==='window-logo'){
    g.position.y=q.centerHeight;
-   const white=new T.MeshStandardMaterial({color:'#f4f6f0',emissive:'#f0f2e9',emissiveIntensity:.65});
-   // Type4 is the installation method, not sizeSL4. This SL2-sized study faces the exterior.
-   for(const x of [-.23,.23])box(x,0,-.075,.018,1.32,.032,M.dark,g);
-   for(const x of [-.23,.23])for(const y of [-.61,.61])tube([x,y,-.075],[x,y,.22],.008,M.steel,g); // Schematic glass standoffs; supplier fixing/clearance approval pending.
-   icon(g,-.006,.20,.008,.98,white);
-   const cv=document.createElement('canvas');cv.width=600;cv.height=190;const ct=cv.getContext('2d');ct.clearRect(0,0,600,190);ct.fillStyle='#ffffff';ct.font='500 155px Arial';ct.textAlign='center';ct.textBaseline='middle';ct.fillText('smart',300,91,570);const tx=new T.CanvasTexture(cv);tx.colorSpace=T.SRGBColorSpace;
-   const word=mesh(new T.PlaneGeometry(.91,.29),new T.MeshBasicMaterial({map:tx,transparent:true,alphaTest:.1,side:T.DoubleSide}),g);word.position.set(0,-.43,.025);word.castShadow=false;
+   // Type4 is the indoor-window installation (D01p8), NOT size SL4.
+   // Extrude the unchanged official paths, with real dark backs visible indoors.
+   // Fit uniformly inside the provisional SL2 envelope; never stretch the logo.
+   const brand=window.BC_SMART_BRAND_DATA,envelope=q.sizeEnvelope||[.98,1.32],scale=Math.min(envelope[0]/70,envelope[1]/95),depth=q.depthProxy??.035;
+   const front=mat('#fafbf5',.30),returns=mat('#c8cbca',.4,.55),back=mat('#555b5c',.6,.2);
+   front.emissive=new T.Color('#ffffff');front.emissiveIntensity=.8;
+   function sourceShapes(p){
+    const tokens=p.d.match(/[MLHVCZ]|[-+]?(?:\d*\.\d+|\d+\.?\d*)(?:[eE][-+]?\d+)?/g),sp=new T.ShapePath();let i=0,cmd,x=0,y=0,sx=0,sy=0;
+    const xy=(a,b)=>{const [m,n,o,r,tx,ty]=p.transform;return [(m*a+o*b+tx-35)*scale,(47.5-n*a-r*b-ty)*scale];};
+    const n=()=>{if(i>=tokens.length||/^[A-Z]$/.test(tokens[i]))throw Error('Invalid official smart path');return Number(tokens[i++]);};
+    while(i<tokens.length){if(/^[A-Z]$/.test(tokens[i]))cmd=tokens[i++];
+     if(cmd==='M'){x=n();y=n();sx=x;sy=y;sp.moveTo(...xy(x,y));cmd='L';}
+     else if(cmd==='L'){x=n();y=n();sp.lineTo(...xy(x,y));}
+     else if(cmd==='H'){x=n();sp.lineTo(...xy(x,y));}
+     else if(cmd==='V'){y=n();sp.lineTo(...xy(x,y));}
+     else if(cmd==='C'){const a=n(),b=n(),c=n(),d=n();x=n();y=n();sp.bezierCurveTo(...xy(a,b),...xy(c,d),...xy(x,y));}
+     else if(cmd==='Z'){sp.currentPath.closePath();x=sx;y=sy;cmd=null;}
+     else throw Error('Unsupported official smart path command '+cmd);
+    }
+    // Y inversion makes the source outer contours CCW; preserve the a-counter.
+    return sp.toShapes(true);
+   }
+   for(const p of brand.paths){const shapes=sourceShapes(p),geo=new T.ExtrudeGeometry(shapes,{depth,bevelEnabled:false,curveSegments:20});
+    // Extrude cap group contains front and rear; assign by actual cap normal.
+    const normals=geo.attributes.normal;geo.clearGroups();let start=0,last=-1;for(let i=0;i<normals.count;i+=3){const nz=normals.getZ(i),material=nz>.99?0:nz<-.99?2:1;if(material!==last){if(i>start)geo.addGroup(start,i-start,last);start=i;last=material;}}if(normals.count>start)geo.addGroup(start,normals.count-start,last);
+    const letter=mesh(geo,[front,returns,back],g);letter.name='TYPE4-RAISED-'+p.id;letter.userData={sourcePathSha256:p.sourcePathSha256,sourcePathUnmodified:true,installationType:4,depthProxy:depth,manufacturerCAD:false};
+   }
+   for(const [i,x]of [-.31,.24].entries()){const carrier=box(x,.09,-.052,.012,2.08,.022,M.dark,g);carrier.name='TYPE4-VERTICAL-CARRIER-'+(i+1);}
+   g.userData={...g.userData,source:'D01p8 Type4 indoor-window installation / p9 SL2 study; smart UK unchanged symbol and wordmark paths',panelCentre:q.cx,illuminated:true,faceDirection:'outward-plan-negative-Y',backVisibleIndoors:true,sizeEnvelope:envelope,sourceScale:scale,mountingApproval:false,electricalSpecificationVerified:false,depthAndCarriers:'unmeasured visual proxies, supplier design pending'};
   }else if(q.type==='background-wall'){
    rb(0,1.31,0,5.24,2.50,.14,.035,alu,g);
    for(let x=-1.95;x<2.6;x+=.65)box(x,1.31,.079,.006,2.36,.006,M.steel,g);
    tube([-2.54,.072,.08],[2.54,.072,.08],.013,new T.MeshStandardMaterial({color:'#fff8df',emissive:'#fff0c7',emissiveIntensity:1.8}),g);
-   icon(g,-1.73,1.89,.092,.73,new T.MeshStandardMaterial({color:'#f8f8f3',emissive:'#eff3eb',emissiveIntensity:.8}));
-   sign('smart',-1.7,1.47,.095,.87,.25,0,g,'#ffffff','#a3a8a7');
+   const wallLogo=mesh(new T.PlaneGeometry(.73,.73*95/70),window.BC_SMART_BRAND_MATERIAL(T),g);wallLogo.position.set(-1.73,1.79,.095);wallLogo.castShadow=false;wallLogo.name='MODULE-LOGO-SOURCE-PATHS';
   }else if(q.type==='screen'){
    rb(0,1.61,0,1.674,.948,.065,.008,blackMaterial(),g);
    const canvas=document.createElement('canvas');canvas.width=1280;canvas.height=720;const ctx=canvas.getContext('2d');ctx.fillStyle='#102124';ctx.fillRect(0,0,1280,720);
@@ -126,8 +147,10 @@ window.BC_SMART=function(T,H){
    ctx.strokeStyle='#dce7ae';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(470,478);ctx.bezierCurveTo(460,415,500,405,550,400);ctx.lineTo(635,294);ctx.quadraticCurveTo(658,268,703,268);ctx.lineTo(1048,268);ctx.quadraticCurveTo(1097,270,1108,330);ctx.lineTo(1127,465);ctx.lineTo(1068,478);ctx.bezierCurveTo(1070,401,973,401,968,478);ctx.lineTo(652,478);ctx.bezierCurveTo(653,400,558,400,550,478);ctx.closePath();ctx.stroke();
    const tx=new T.CanvasTexture(canvas);tx.colorSpace=T.SRGBColorSpace;const p=mesh(new T.PlaneGeometry(1.65,.928),new T.MeshBasicMaterial({map:tx}),g);p.position.set(0,1.61,.037);p.castShadow=false;
   }else if(q.type==='table'){
-   rb(0,.738,0,q.w-.016,.056,q.h-.016,.006,pale,g);
-   for(const z of [-q.h/2+.04,q.h/2-.04])box(0,.371,z,q.w,.712,.065,pale,g);
+   // D01 p20/21: rectangular pale-wood negotiation desk, not a cafe pedestal.
+   g.name='SMART-3B-CONSULT-DESK';g.userData={...g.userData,shape:'rectangular-slab-ended',finish:'pale wood',nominalPlanSize:[q.w,q.h],dimensionStatus:q.dimensionStatus};
+   const deskTop=rb(0,.738,0,q.w-.016,.056,q.h-.016,.006,pale,g);deskTop.name='SC-RECTANGULAR-TOP';
+   for(const [i,z] of [-q.h/2+.04,q.h/2-.04].entries()){const panel=box(0,.371,z,q.w,.712,.065,pale,g);panel.name='SC-SLAB-END-'+(i+1);}
    // Pale wood grain is authored with narrow tonal lines, not a stock texture.
    for(let i=0;i<30;i++)box(-q.w/2+.022+i*(q.w-.044)/30,.770,0,.001,.002,q.h-.04,i%3?edge:pale,g);
   }else if(q.type==='chair'){

@@ -1,10 +1,10 @@
 {
   "experienceRevision": "v11",
   "modelRevision": "v09",
-  "geometryRevision": "v09-r4",
+  "geometryRevision": "v09-r6",
   "generatedOn": "2026-09-14",
   "style": "Photorealistic, soft light, premium",
-  "notice": "AI-assisted impressions with photographed Mercedes appearances and model-based camera references. Native plans and model govern geometry; image framing, finishes and fine details remain interpretive. Night-photo parking reconstruction is approximate, not surveyed capacity or compliance approval.",
+  "notice": "Owner-directed design study. AI images interpret lighting and finishes; native vector plans and the r6 model govern positions and counts. The v11 comment/pin contract is unchanged. Not cadastral, structural, swept-path or brand certification.",
   "artistImpressionState": {
     "mode": "handover",
     "ac": false,
@@ -15,149 +15,141 @@
       "id": "showroom-arrival",
       "section": "showroom",
       "view": "interior",
-      "path": "assets/impressions/showroom-arrival-v11.jpg",
-      "bytes": 586787,
-      "sha256": "0804250c41567ffbfd1a772d4859c74d0df9b7a64867cfa11ec1839f2246b37d",
+      "path": "assets/impressions/showroom-arrival-v12.jpg",
+      "bytes": 529108,
+      "sha256": "471f4a5b4a8913de1fc5da6078e5cb640b65c3a3cf9bd80d6262e98e2229c61c",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation from model camera and evidence references",
-      "generatedMasterSha256": "0d1814c7359e048e32e613508c01211b70736b7a9ffcdc5b5f08d4a41f54ec63",
+      "origin": "Built-in image generation using r6 model capture and owner photo references",
+      "generatedMasterSha256": "1dc489d821a15d7a62c6524e303e225bd39b63547a09fbdb81a208f6a5c307d8",
       "interpretiveDifferences": [
-        "Sparse partial parallel exterior vehicle context is visible, but the second model exterior car is too occluded to certify its count from this still.",
-        "GLC grille/bumper and car details remain interpretive rather than exact stock trim reproduction.",
-        "Metric stand offsets, fine signage and exact camera registration are not certified."
+        "Vehicle trims, light and finishes are interpreted; model and vector plan govern metric positions.",
+        "Distant urban background is illustrative; not a frontage survey."
       ]
     },
     {
       "id": "showroom-smart",
       "section": "showroom",
       "view": "smart",
-      "path": "assets/impressions/showroom-smart-v11.jpg",
-      "bytes": 526860,
-      "sha256": "b73b5dc9818f55e8a02248bd068f0f17520a93a92b3b84b091b814eb923e003f",
+      "path": "assets/impressions/showroom-smart-v12.jpg",
+      "bytes": 442657,
+      "sha256": "cfbadeed929dd43bf155a0bc602f44682033cba99eaf8d65cab49b0b118fc1d5",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation from model camera and evidence references",
-      "generatedMasterSha256": "a81099e567ac56d479b872bf843c0700a044846d8990f738bfe993d3bc46314e",
+      "origin": "Built-in image generation using r6 model capture and owner photo references",
+      "generatedMasterSha256": "1d26eaca6c2ff9ad7c55fffd382ec06ab220a266953411e1c57317fac06f7199",
       "interpretiveDifferences": [
-        "Selected after one focused car-detail correction: one beige black-roof smart #5, Module 3B, three seated people and current camera composition retained broadly.",
-        "Final seat upholstery appears lighter than the modeled black interior. Exact production trim, logo microdetails and metric registration are not certified.",
-        "Generated exterior planting and subtle ceiling lighting/material detail are fuller than the schematic camera; they are illustrative, not additional scope."
+        "Desk dimensions and chair hardware are visual proxies, not supplier fabrication certification.",
+        "Distant urban background, lighting and finishes are interpreted."
       ]
     },
     {
       "id": "showroom-handover",
       "section": "showroom",
       "view": "handover",
-      "path": "assets/impressions/showroom-handover-v11.jpg",
-      "bytes": 555683,
-      "sha256": "b74e628391900504fad59abfd78c00d5112eee7aeacd8dcf422c96eda00bb684",
+      "path": "assets/impressions/showroom-handover-v12.jpg",
+      "bytes": 466003,
+      "sha256": "e9d729119463a341b7e9b3ef00ae0d513361a2c9d478c0b14d9a78d5460d844e",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation from model camera and evidence references",
-      "generatedMasterSha256": "26f6cfb1010c43d8d47ca0856c7811b9669caa0ca0445b1b81c77c3a1a4bf264",
+      "origin": "Built-in image generation using r6 model capture and owner photo references",
+      "generatedMasterSha256": "5782f1f4e364662ef452df2c0459df84cb07fd4696d54cb0e4bf21e7a76fc013",
       "interpretiveDifferences": [
-        "Black low two-door Mercedes-AMG coupe follows owner photographs; no G-Class or SUV. Exact vehicle family remains intentionally unconfirmed.",
-        "Source heading and overall placement, driver-right front price stand, existing wallbox/cable, two standing adults, one seated lounge person, glazing, white window decal and two room signs are retained visually.",
-        "Fine material, reflected landscape, ceiling light and distant planting detail is interpretive. Read the stand setback and exact geometry from the deterministic model/plan, not the generated still."
+        "Artist impression is not a deterministic source-path or measured architectural rendering. Nearly edge-on artwork does not certify the front-facing sign.",
+        "Exact AMG trim remains unconfirmed. Sign size, carriers, mounting, electrical specification and charging hardware remain study proxies.",
+        "Subdued adjoining interior and distant road are contextual interpretations, not new room/equipment or planting proposals.",
+        "Covered context and reflections through rear lounge glazing are interpreted; not an exact surveyed or photographic backdrop."
       ]
     },
     {
       "id": "showroom-overview",
       "section": "showroom",
       "view": "overview",
-      "path": "assets/impressions/showroom-overview-v11.jpg",
-      "bytes": 356319,
-      "sha256": "e7f522c8ffa6e9a363755a186a5a735b79267323c1b8c4c7b53b5367ca10a9cb",
+      "path": "assets/impressions/showroom-overview-v12.jpg",
+      "bytes": 236757,
+      "sha256": "4e196879e1a79220c496b94f1c2ba8d511e01c67670bff20e4767cccbaff6cc7",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation from model camera and evidence references",
-      "generatedMasterSha256": "e2589772635cb96def4b3580f09df31d92dcc56949cec510c6bba24fe900ccc0",
+      "origin": "Built-in image generation using r6 model capture and owner photo references",
+      "generatedMasterSha256": "4dec80863beec806779408b711b64dee09ace71661297fda8aead9fe6544102e",
       "interpretiveDifferences": [
-        "The complete building is still enlarged within the frame compared with the source capture. Do not claim exact locked camera registration.",
-        "There are still differences in staff/person distribution around reception/central consultation, fine furniture shapes and placard locations; total person fidelity is not certified.",
-        "The handover car is lower after correction, but exact two-door/production-body detail at this scale remains less convincing than the dedicated handover image.",
-        "Exact six-stand metric positioning/30 cm offsets and compliance must be taken from the model and plans."
+        "Small signs, chair count and stand-face geometry should be checked in plan/3D, not measured from this cutaway.",
+        "Vehicle trims, finishes and lighting are interpretations, not supplier, structural or compliance certification."
       ]
     },
     {
       "id": "exterior-aerial",
       "section": "exterior",
       "view": "site",
-      "path": "assets/impressions/exterior-aerial-v11.jpg",
-      "bytes": 660306,
-      "sha256": "99c69f913772a0aea688a776fd9c923500897fb2fefa48fa03da295af76fd2f1",
+      "path": "assets/impressions/exterior-aerial-v12.jpg",
+      "bytes": 336266,
+      "sha256": "fc65f8e787c6aab0e59049eac4503e089cdb15bbee3c4e80eb549ce051c7a177",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation from model camera and evidence references",
-      "generatedMasterSha256": "3d0675eca31c0cbd04307dde4ea9c2b259bdd3cae2759d1650579f655b66cf96",
+      "origin": "Built-in image generation using r6 model capture and owner photo references",
+      "generatedMasterSha256": "0a2a40a44753443db82e8668cc04f4d8aa84144246d2cb889e48d80269232876",
       "interpretiveDifferences": [
-        "Continuous solid charcoal fascia spans the first three front bays, including the blank second bay, with columns retaining their occlusions.",
-        "White wordmarks remain at the selected image's first/third-bay locations; no poster/slogan imported from the detail photo.",
-        "The requested lettering projecting partly above the fascia is NOT convincingly achieved: most/all letter height remains backed by the dark strip, especially in aerial. This is an unresolved visual mismatch, not an exact detail pass.",
-        "Fine beam depth/lower lip, glyph registration and physical material dimensions are illustrative; use source close-up and deterministic model for detail approval.",
-        "No obvious new/moved major scene object was observed in local review; not a claim of pixel-identical preservation outside the fascia."
+        "First smart fabric is partly obscured by overhead wire bundle; exact flag artwork cannot be signed off from this small aerial view.",
+        "Dealer characters are naturally below reliable reading scale. Exact text and fabrication artwork must be taken from the model and accepted street view, not inferred from this image.",
+        "Conceptual impression is not a dimensioned or compliance-approved drawing."
       ]
     },
     {
       "id": "exterior-street",
       "section": "exterior",
       "view": "frontage",
-      "path": "assets/impressions/exterior-street-v11.jpg",
-      "bytes": 459381,
-      "sha256": "6e8e54797d8ad3e7139e4fa60234e96d14249175985717cf75c31eab348d5304",
+      "path": "assets/impressions/exterior-street-v12.jpg",
+      "bytes": 415225,
+      "sha256": "b6dce1b21705787616e60b4606e27745d2139a2d0efca8617a300fd489918339",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation from model camera and evidence references",
-      "generatedMasterSha256": "59b604d2300308bcfb0edc5277d3edb792b673f3c1fb3a92a2afd790462ae8a0",
+      "origin": "Built-in image generation using r6 model capture and owner photo references",
+      "generatedMasterSha256": "c41cab8474599f652a3a261221b998bd85a1aa11266f6d9cc9b80e5604b3401c",
       "interpretiveDifferences": [
-        "Continuous solid charcoal fascia spans the first three front bays, including the blank second bay, with columns retaining their occlusions.",
-        "White wordmarks remain at the selected image's first/third-bay locations; no poster/slogan imported from the detail photo.",
-        "The requested lettering projecting partly above the fascia is NOT convincingly achieved: most/all letter height remains backed by the dark strip, especially in aerial. This is an unresolved visual mismatch, not an exact detail pass.",
-        "Fine beam depth/lower lip, glyph registration and physical material dimensions are illustrative; use source close-up and deterministic model for detail approval.",
-        "No obvious new/moved major scene object was observed in local review; not a claim of pixel-identical preservation outside the fascia."
+        "Photorealistic conceptual impression, not a dimensioned or compliance-approved drawing.",
+        "Small signage and occluded side Care object require model/source review, not fabrication approval from this image."
       ]
     },
     {
       "id": "workshop-overview",
       "section": "workshop",
       "view": "workshop",
-      "path": "assets/impressions/workshop-overview-v10.jpg",
+      "path": "assets/impressions/workshop-overview-v12.jpg",
+      "bytes": 398263,
+      "sha256": "cc8df58bae27c020e137eff43fb74d0b7872c1a103dee99bd7143497a21bd075",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "bytes": 526114,
-      "sha256": "b349ef1f711b6be0dccc83436653f58590f0a0b34677c7c39aeb8ebfe3909167",
-      "origin": "Built-in image generation from the project model camera",
-      "sourceModelImageSha256": "4a723787a7875d54546bfc441e006897938c0a49f09547957857e7ace20d7fbe",
-      "generatedMasterSha256": "f3b2d7cda3d0126b1c5e4331e369d4000a9530ae94db583566d0b4130e2ea38b",
+      "origin": "Built-in image generation using r6 model capture and owner photo references",
+      "generatedMasterSha256": "e3a68547a4d136a2d4d61216682a3c8b7fa7b851d5c284cda6036a5fb4f7c0d4",
       "interpretiveDifferences": [
-        "Open-roof cutaway retained; exposed bays empty, central aisle clear.",
-        "Framing is somewhat tighter and real material/equipment details are interpretive. Occlusion prevents certifying all bay counts visually; use the source model for exact 12+12 MB and 2 smart bay layout."
+        "CS office and MB-S03 remain occluded by the source foreground roof in this view; use plan/3D for those arrangements.",
+        "Material/light and framing interpretation is not a metric survey or certification.",
+        "Stair geometry, equipment dimensions and charging hardware remain provisional and subject to engineering/electrical review."
       ]
     },
     {
       "id": "workshop-smart-bays",
       "section": "workshop",
       "view": "workshop-detail",
-      "path": "assets/impressions/workshop-smart-bays-v10.jpg",
+      "path": "assets/impressions/workshop-smart-bays-v12.jpg",
+      "bytes": 437124,
+      "sha256": "ea75d612cea17cef86a7b4c5e2aaea283ce06cc88321148115340c27bd5a9136",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "bytes": 397317,
-      "sha256": "a4a4671e5878d40e4618b1fe936fcc4f447283094781e5d4bb5f46e7356b72fd",
-      "origin": "Built-in image generation from the project model camera",
-      "sourceModelImageSha256": "93279c07cc14e87dce44c155640d2ed06ebf543f56684ba48728e15ec8c6c028",
-      "generatedMasterSha256": "1c052775c735b0f26c0b9c5f5a0409e0135e0989e86e265cae7786183c1f312a",
+      "origin": "Built-in image generation using r6 model capture and owner photo references",
+      "generatedMasterSha256": "781266650d4540403ba280cf4976db79643560ce22dea7b143275fce8ea84bbe",
       "interpretiveDifferences": [
-        "Selected v3 uses unbranded lift details and readable HV/M/E signs; open roof and empty bays retained.",
-        "Lift detail, barrier height and material appearance are illustrative, not specified equipment or compliance approval."
+        "Stair dimensions, heights, construction and hardware details remain unmeasured proxies, not numeric certification.",
+        "Charger brand, capacity, mounting, wiring and electrical/safety approval remain unspecified.",
+        "Artist light, material and minor framing interpretation does not certify equipment or compliance."
       ]
     }
   ],
@@ -181,168 +173,176 @@
       "id": "showroom-plan",
       "section": "showroom",
       "view": "plan",
-      "path": "assets/plans/showroom-plan-v11.svg",
-      "bytes": 50692,
-      "sha256": "0a23f20700efb30a3b609a7a0b10d7ee07eb24dcaf4f07eaeb39d97b679092e1"
+      "path": "assets/plans/showroom-plan-v12.svg",
+      "bytes": 56223,
+      "sha256": "4781bb366acabca58858cec25bb681b175daab0e0d8f92857521502d4e668116"
     },
     {
       "id": "groundfloor-site-plan",
       "section": "exterior",
       "view": "siteplan",
-      "path": "assets/plans/groundfloor-site-plan-v11.svg",
-      "bytes": 76866,
-      "sha256": "69b8f6e63a6cd97c18b6b02eff4b9acafcc4b79020b313509997992dbd7960a9"
+      "path": "assets/plans/groundfloor-site-plan-v12.svg",
+      "bytes": 107791,
+      "sha256": "f03800c25e955c2eb055e72c90a8984761ebb9110b6555f5ac5fde0ad465de65"
     },
     {
       "id": "workshop-plan",
       "section": "workshop",
       "view": "workshop-plan",
-      "path": "assets/plans/workshop-plan-v11.svg",
-      "bytes": 33227,
-      "sha256": "d284711c653d0ef03f9fd54527d6e037ddcaed10dbe7c2b810e75dae99c69873"
+      "path": "assets/plans/workshop-plan-v12.svg",
+      "bytes": 58693,
+      "sha256": "32ca2898930959d1511d0582c67eb9317e6ce6f0d30cd4091ba649414351d293"
     }
   ],
   "downloads": [
     {
       "id": "showroom-arrival",
-      "path": "assets/downloads/showroom-arrival-hires.png",
-      "bytes": 2407385,
-      "sha256": "06fdca3ec071441c486a1c0b0494de67f7252369c03bcc6b809da0ece28610b2",
+      "path": "assets/downloads/showroom-arrival-v12-hires.png",
+      "bytes": 2199713,
+      "sha256": "705133bc287ddc7ca1757c0d79760c3ac384a535b8038d6a9b7ecf4f65c68c8f",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "0d1814c7359e048e32e613508c01211b70736b7a9ffcdc5b5f08d4a41f54ec63"
+      "generatedMasterSha256": "1dc489d821a15d7a62c6524e303e225bd39b63547a09fbdb81a208f6a5c307d8"
     },
     {
       "id": "showroom-smart",
-      "path": "assets/downloads/showroom-smart-hires.png",
-      "bytes": 2304175,
-      "sha256": "4823ab06959c346df2ccf532fd4faf45c17d0d1773a86632f14f65ae8cf5edba",
+      "path": "assets/downloads/showroom-smart-v12-hires.png",
+      "bytes": 2027890,
+      "sha256": "45ec8372091b2ed009d71538179859b8157076fd635b3ca1ccd6b7e337532303",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "a81099e567ac56d479b872bf843c0700a044846d8990f738bfe993d3bc46314e"
+      "generatedMasterSha256": "1d26eaca6c2ff9ad7c55fffd382ec06ab220a266953411e1c57317fac06f7199"
     },
     {
       "id": "showroom-handover",
-      "path": "assets/downloads/showroom-handover-hires.png",
-      "bytes": 2411161,
-      "sha256": "84afa0d5d084c143cb6243ffbd609bee149eca49b1a26758e2649c75df062d16",
+      "path": "assets/downloads/showroom-handover-v12-hires.png",
+      "bytes": 2080483,
+      "sha256": "6d6ae741d68e11b3555c56a051ee54e87fd8da8d37ba5989dd6d8682f3c8c6c0",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "26f6cfb1010c43d8d47ca0856c7811b9669caa0ca0445b1b81c77c3a1a4bf264"
+      "generatedMasterSha256": "5782f1f4e364662ef452df2c0459df84cb07fd4696d54cb0e4bf21e7a76fc013"
     },
     {
       "id": "showroom-overview",
-      "path": "assets/downloads/showroom-overview-hires.png",
-      "bytes": 1951896,
-      "sha256": "f19c5598ece1ab9ae786a23669e868bfbe546fdd3f6832fd335b4da2ae43a811",
+      "path": "assets/downloads/showroom-overview-v12-hires.png",
+      "bytes": 1476347,
+      "sha256": "4ee31d55812c13d8dbb4da9c051fbc8cc2640ab2332f30c71a112cd5539a9112",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "e2589772635cb96def4b3580f09df31d92dcc56949cec510c6bba24fe900ccc0"
+      "generatedMasterSha256": "4dec80863beec806779408b711b64dee09ace71661297fda8aead9fe6544102e"
     },
     {
       "id": "exterior-aerial",
-      "path": "assets/downloads/exterior-aerial-hires.png",
-      "bytes": 2654144,
-      "sha256": "003133088af9a08798eedd570e3395c9aa456e60ba8bfd60ff23e4d389306296",
+      "path": "assets/downloads/exterior-aerial-v12-hires.png",
+      "bytes": 1824178,
+      "sha256": "a146f13a045e83a286a06600cee096fba4a40379fbf81e47fb23e99b5d2a9de9",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "3d0675eca31c0cbd04307dde4ea9c2b259bdd3cae2759d1650579f655b66cf96"
+      "generatedMasterSha256": "0a2a40a44753443db82e8668cc04f4d8aa84144246d2cb889e48d80269232876"
     },
     {
       "id": "exterior-street",
-      "path": "assets/downloads/exterior-street-hires.png",
-      "bytes": 2045163,
-      "sha256": "1dfa99082927f38c0582c6bf86878d38ed2db17c3dc2eeaf1050c6ab759386dc",
+      "path": "assets/downloads/exterior-street-v12-hires.png",
+      "bytes": 2002389,
+      "sha256": "e1841324eb67dc9ebd096ce043eb6e50d21a2321efea5b92de65e2eca7fe3192",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "59b604d2300308bcfb0edc5277d3edb792b673f3c1fb3a92a2afd790462ae8a0"
+      "generatedMasterSha256": "c41cab8474599f652a3a261221b998bd85a1aa11266f6d9cc9b80e5604b3401c"
     },
     {
       "id": "workshop-overview",
-      "path": "assets/downloads/workshop-overview-hires.png",
-      "bytes": 2652662,
-      "sha256": "587f97de074ecb96cc460291f1ae2c62f7ac04c457cd200d9f84f9e284cfa679",
+      "path": "assets/downloads/workshop-overview-v12-hires.png",
+      "bytes": 2071481,
+      "sha256": "859fb187dae9d2234553bf8aa7aa37d7fa4b3f50260de1255209ba8007593b56",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "f3b2d7cda3d0126b1c5e4331e369d4000a9530ae94db583566d0b4130e2ea38b"
+      "generatedMasterSha256": "e3a68547a4d136a2d4d61216682a3c8b7fa7b851d5c284cda6036a5fb4f7c0d4"
     },
     {
       "id": "workshop-smart-bays",
-      "path": "assets/downloads/workshop-smart-bays-hires.png",
-      "bytes": 2006561,
-      "sha256": "a4219fcca43ebe073aa0f5003558bc080c22223e26db72f763ca91d276daa9e2",
+      "path": "assets/downloads/workshop-smart-bays-v12-hires.png",
+      "bytes": 2176790,
+      "sha256": "c5d3915cf09ef541eb6bad08e42ff5fe5747b1e62be933977e85557781a12a18",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "1c052775c735b0f26c0b9c5f5a0409e0135e0989e86e265cae7786183c1f312a"
+      "generatedMasterSha256": "781266650d4540403ba280cf4976db79643560ce22dea7b143275fce8ea84bbe"
     },
     {
       "id": "showroom-plan",
-      "path": "assets/downloads/showroom-plan-v11.png",
-      "bytes": 950154,
-      "sha256": "bb51af6bfc2874bc8de40869143da87b18fded26c6fb78934fc359b8490dafa8",
+      "path": "assets/downloads/showroom-plan-v12.png",
+      "bytes": 1061911,
+      "sha256": "dd33a7db32ea515509c9c11413a1e535b45be683ddf0e96d08121d3501ed0014",
       "width": 4400,
-      "height": 2900,
-      "origin": "Deterministic SVG raster export"
+      "height": 3440,
+      "origin": "Deterministic native SVG raster export",
+      "upscaled": false
     },
     {
       "id": "groundfloor-site-plan",
-      "path": "assets/downloads/groundfloor-site-plan-v11.png",
-      "bytes": 1183610,
-      "sha256": "6f22a8c28a369f254346d3a00d39e2ed92d3d3d54137839b72766cbed05f77fb",
+      "path": "assets/downloads/groundfloor-site-plan-v12.png",
+      "bytes": 1462379,
+      "sha256": "dd994a8f112542908bd9b8f77a13415c4960ea04ac0c07daae9633ef72fa5a08",
       "width": 4400,
-      "height": 3800,
-      "origin": "Deterministic SVG raster export"
+      "height": 5040,
+      "origin": "Deterministic native SVG raster export",
+      "upscaled": false
     },
     {
       "id": "workshop-plan",
-      "path": "assets/downloads/workshop-plan-v11.png",
-      "bytes": 988187,
-      "sha256": "29e04451bfad25621f3ac45923cd008163c274ed1c6eab36d763d20546ade253",
+      "path": "assets/downloads/workshop-plan-v12.png",
+      "bytes": 1179324,
+      "sha256": "c70c99b87feee486f42d22e4ceb00fe6cf86d68bf78d6050191a1f23577d3654",
       "width": 4400,
-      "height": 3060,
-      "origin": "Deterministic SVG raster export"
+      "height": 3940,
+      "origin": "Deterministic native SVG raster export",
+      "upscaled": false
     }
   ],
   "reviewMaps": [
     {
       "id": "showroom-plan",
-      "path": "assets/plans/showroom-plan-review-map-v11.svg",
-      "bytes": 34133,
-      "sha256": "97fbe05d191f8139ba15873255cb5cf7bc96197d07b05dd20a23ac065666ae21"
+      "path": "assets/plans/showroom-plan-review-map-v12.svg",
+      "bytes": 38160,
+      "sha256": "40ba8c0c878566bdd63a803c0b17fbe62cbc93cf37c16762d4bcffffe40c3614"
     },
     {
       "id": "groundfloor-site-plan",
-      "path": "assets/plans/groundfloor-site-plan-review-map-v11.svg",
-      "bytes": 59287,
-      "sha256": "30e6219b25b96b7dd0dbc07de7f312432e83fd27872ffd28901b8e040092e2a3"
+      "path": "assets/plans/groundfloor-site-plan-review-map-v12.svg",
+      "bytes": 86216,
+      "sha256": "e65ad40824b9a890d119c5e0bfaffe21f9c4e7ccd6e333e44de235415fb46c78"
     },
     {
       "id": "workshop-plan",
-      "path": "assets/plans/workshop-plan-review-map-v11.svg",
-      "bytes": 17946,
-      "sha256": "fafda7dcf39dbeda1d5c35e8e7504267433bdfb61355727d7c68453e33da486f"
+      "path": "assets/plans/workshop-plan-review-map-v12.svg",
+      "bytes": 40365,
+      "sha256": "c26453a1f3ffa960d157f6f96ba89d3d97368cc88dc4e5a7a8380e8a31e6cb60"
     }
   ],
   "parkingGeometry": {
-    "revision": "night-photo-r1",
+    "revision": "owner-v12-r6",
     "path": "assets/parking-photo-fit.json",
-    "sha256": "ee0220c1d26401fe8e3e1bd312076098b684a7c09fbf36b054054993df66f88a",
+    "sha256": "961a921864e8ef486f8c9ef8c3323d572100f011f99841d2e21fd9d49ecd1acf",
+    "modeledExteriorCells": 26,
+    "illustrativeCars": 10,
+    "illustrativeOccupancyPercent": 38.5,
+    "indoorCustomerServiceSpaces": 1,
     "siteCapacity": null
-  }
+  },
+  "presentationRevision": "v12"
 }
