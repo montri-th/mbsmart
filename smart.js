@@ -135,9 +135,16 @@ window.BC_SMART=function(T,H){
    for(const [i,x]of [-.31,.24].entries()){const carrier=box(x,.09,-.052,.012,2.08,.022,M.dark,g);carrier.name='TYPE4-VERTICAL-CARRIER-'+(i+1);}
    g.userData={...g.userData,source:'D01p8 Type4 indoor-window installation / p9 SL2 study; smart UK unchanged symbol and wordmark paths',panelCentre:q.cx,illuminated:true,faceDirection:'outward-plan-negative-Y',backVisibleIndoors:true,sizeEnvelope:envelope,sourceScale:scale,mountingApproval:false,electricalSpecificationVerified:false,depthAndCarriers:'unmeasured visual proxies, supplier design pending'};
   }else if(q.type==='background-wall'){
-   rb(0,1.31,0,5.24,2.50,.14,.035,alu,g);
-   for(let x=-1.95;x<2.6;x+=.65)box(x,1.31,.079,.006,2.36,.006,M.steel,g);
-   tube([-2.54,.072,.08],[2.54,.072,.08],.013,new T.MeshStandardMaterial({color:'#fff8df',emissive:'#fff0c7',emissiveIntensity:1.8}),g);
+   // D01 p20/21 + owner: softer trapezoid ELEVATION, not rectangular slab.
+   // Silhouette rounding is independent of the thin wall depth. These corner
+   // trims/taper are visual proxies; source supplies no fabrication radii.
+   const p=q.elevationProfile;if(!p)throw Error('Missing Module3B elevation profile');
+   const y0=p.bottomHeight,y1=y0+p.height,points=[[-p.bottomWidth/2,y0],[p.bottomWidth/2,y0],[p.topWidth/2,y1],[-p.topWidth/2,y1]],entry=[],exit=[];
+   for(let i=0;i<4;i++){const v=points[i],a=points[(i+3)%4],b=points[(i+1)%4],r=i<2?p.bottomCornerTrim:p.topCornerTrim,da=Math.hypot(a[0]-v[0],a[1]-v[1]),db=Math.hypot(b[0]-v[0],b[1]-v[1]);entry.push([v[0]+(a[0]-v[0])*r/da,v[1]+(a[1]-v[1])*r/da]);exit.push([v[0]+(b[0]-v[0])*r/db,v[1]+(b[1]-v[1])*r/db]);}
+   const shape=new T.Shape();shape.moveTo(...entry[0]);for(let i=0;i<4;i++){shape.quadraticCurveTo(...points[i],...exit[i]);shape.lineTo(...entry[(i+1)%4]);}shape.closePath();
+   const wall=mesh(new T.ExtrudeGeometry(shape,{depth:p.thickness,bevelEnabled:false,curveSegments:32}),alu,g);wall.position.z=-p.thickness/2;wall.name='SMART-3B-ROUNDED-TRAPEZOID-BACKDROP';wall.userData={...p,cornerMethod:'quadratic silhouette fillets; trim distance is not a certified radius'};g.userData.elevationProfile={...p};
+   for(let x=-1.95;x<=1.951;x+=.65)box(x,(y0+y1)/2,p.thickness/2+.004,.006,p.height-.035,.006,M.steel,g);
+   tube([-p.bottomWidth/2+p.bottomCornerTrim,y0+.012,p.thickness/2+.01],[p.bottomWidth/2-p.bottomCornerTrim,y0+.012,p.thickness/2+.01],.013,new T.MeshStandardMaterial({color:'#fff8df',emissive:'#fff0c7',emissiveIntensity:1.8}),g);
    const wallLogo=mesh(new T.PlaneGeometry(.73,.73*95/70),window.BC_SMART_BRAND_MATERIAL(T),g);wallLogo.position.set(-1.73,1.79,.095);wallLogo.castShadow=false;wallLogo.name='MODULE-LOGO-SOURCE-PATHS';
   }else if(q.type==='screen'){
    rb(0,1.61,0,1.674,.948,.065,.008,blackMaterial(),g);

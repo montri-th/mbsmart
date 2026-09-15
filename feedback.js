@@ -46,7 +46,7 @@
     $('zoom-help').textContent=mapZoom===1?'เลือกจุด แล้วขยายเพื่อชี้ให้แม่นขึ้น':'ลากเพื่อเลื่อนผัง · แตะเพื่อเลือกจุด';
     if(section()!=='showroom'){
       const plot=section()==='exterior'?[-14,58,-15.4,50.8]:[-3,54,12,46];
-      element('image',{href:`./assets/plans/${cfg.id}-review-map-v12.svg`,x:plot[0],y:16-plot[3],width:plot[1]-plot[0],height:plot[3]-plot[2]});
+      element('image',{href:`./assets/plans/${cfg.id}-review-map-v13.svg`,x:plot[0],y:16-plot[3],width:plot[1]-plot[0],height:plot[3]-plot[2]});
       if(location.type==='rectangle')rect(location.x,location.y,location.x2-location.x,location.y2-location.y,{class:'range'});
       if(location.type!=='area')element('circle',{cx:location.x,cy:16-location.y,r:.65,class:'pin'});
       if(corner)element('circle',{cx:corner.x,cy:16-corner.y,r:.5,class:'pin'});

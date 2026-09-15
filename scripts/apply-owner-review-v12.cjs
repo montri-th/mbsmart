@@ -1,12 +1,12 @@
 /* One canonical owner-review projection, applied after the frozen v08 → v09 base.
  * Wire revision v09 / experience v11 are retained for historical comment pins.
- * r6 identifies this geometry; coordinates are not construction set-out values. */
+ * r7 identifies this geometry; coordinates are not construction set-out values. */
 module.exports=function applyOwnerReview(d,review){
   const s=d.site,e=review.exterior,w=JSON.parse(JSON.stringify(review.workshop)),b=e.boundary;
   const sideRefits=new Map(e.parking.workshopSideRefits.map(q=>[q.id,q]));
   w.reservations.parking=w.reservations.parking.map(q=>({...q,code:e.parking.bayCodes[q.id],...(sideRefits.has(q.id)?{bounds:sideRefits.get(q.id).bounds.slice(),status:'Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified'}:{})}));
-  d.iteration='r6';d.designRevision='v12';d.customerExperience=review.customerExperience;
-  d.reviewAdoptions={...d.reviewAdoptions,designRevision:'v12',ownerReviewDate:review.date,status:review.status,latestAnnotationReview:review.latestAnnotationReview};
+  d.iteration='r7';d.designRevision='v13';d.customerExperience=review.customerExperience;
+  d.reviewAdoptions={...d.reviewAdoptions,designRevision:'v13',ownerReviewDate:review.date,status:review.status,latestAnnotationReview:review.latestAnnotationReview,followupR7:review.followupR7};
   s.ownerReview=review.status;s.leftContextEdge=b.leftContextEdge;
   s.front.apronEdgeY={value:b.frontY,status:'Owner-confirmed7.20m from retained planter outer edgeY−1.12 to physical inside fence face; not a cadastral survey'};
   s.front.confirmedPlanterOuterY=b.frontDatum.planterOuterY;
@@ -57,7 +57,7 @@ module.exports=function applyOwnerReview(d,review){
   // F3/F4 border the unmeasured ramp toe; no illustrative car may obstruct it.
   const occupied=['F-1','F-2','F-5','S-2','S-3','S-4','OWNER-REAR-03','OWNER-REAR-05','OWNER-REAR-07','OWNER-REAR-09'];
   const cars=occupied.map((id,i)=>{const q=cells.find(c=>c.id===id),[x0,y0,x1,y1]=q.bounds,isGLC=i===3||i===7;return {id:'EXT-MB-'+id,bayId:id,model:'Mercedes-Benz '+(isGLC?'GLC':'C-Class'),profile:isGLC?'glc':'cclass',brand:'MB',paint:i%3===0?'#252a2e':i%3===1?'#eceeea':'#c4c7c5',photoReference:'Owner showroom photographs 12 September 2026; family appearance, not live stock',cx:(x0+x1)/2,cy:(y0+y1)/2,l:isGLC?4.75:4.8,w:isGLC?2.12:2.10,heightCap:isGLC?1.68:1.55,angle:x1-x0>y1-y0?0:90};});
-  s.exteriorParking={revision:'owner-v12-r6',coordinateStatus:review.status,referenceRoad:'Sukhumvit local X; Samet–Ang Sila local Y',allocationReviewPending:false,allocationStatus:e.parking.allocationStatus,allocations:e.parking.allocations,identifiedCompleteCells:cells.length,siteCapacity:null,illustrationOccupancy:{occupied:cars.length,identifiedCompleteCells:cells.length,ratio:cars.length/cells.length,scope:'10 illustrative MB cars / 26 exterior study cells = 38.5%, approximately 40%. All three smart allocations, F3/F4 ramp approach and shrine corner remain empty; no certified capacity or invented smart stock claim. Separate indoor CS reservation excluded.'},status:'Owner-directed mixed parallel/perpendicular parking and use codes. F3/F4 ramp approach and shrine/pylon/gate frontage kept empty; manoeuvring and sign hardware remain unverified.',cells,paint,cars,unknownPaintSpans:['Photo-fit endpoints and side boundary require site measurement','Rear 1m gap is wall offset, not an aisle; road access not inferred','Front F3/F4 paint-to-ramp-toe relationship and metric exit route HOLD'],level:s.levels.forecourt};
+  s.exteriorParking={revision:'owner-v13-r7',coordinateStatus:review.status,referenceRoad:'Sukhumvit local X; Samet–Ang Sila local Y',allocationReviewPending:false,allocationStatus:e.parking.allocationStatus,allocations:e.parking.allocations,identifiedCompleteCells:cells.length,siteCapacity:null,illustrationOccupancy:{occupied:cars.length,identifiedCompleteCells:cells.length,ratio:cars.length/cells.length,scope:'10 illustrative MB cars / 26 exterior study cells = 38.5%, approximately 40%. All three smart allocations, F3/F4 ramp approach and shrine corner remain empty; no certified capacity or invented smart stock claim. Separate indoor CS reservation excluded.'},status:'Owner-directed mixed parallel/perpendicular parking and use codes. F3/F4 ramp approach and shrine/pylon/gate frontage kept empty; manoeuvring and sign hardware remain unverified.',cells,paint,cars,unknownPaintSpans:['Photo-fit endpoints and side boundary require site measurement','Rear 1m gap is wall offset, not an aisle; road access not inferred','Front F3/F4 paint-to-ramp-toe relationship and metric exit route HOLD'],level:s.levels.forecourt};
   d.exterior.allocationReviewPending=false;
   for(const q of d.exterior.parking){const assignment=e.parking.allocations.find(a=>a.referenceId===q.id),cell=assignment&&cells.find(c=>c.id===assignment.bayId);if(!cell)throw new Error('Missing owner parking allocation '+q.id);const [x0,y0,x1,y1]=cell.bounds;Object.assign(q,assignment,{id:q.id,use:'smart '+assignment.role.toLowerCase(),existingBayId:cell.id,bounds:cell.bounds.slice(),render:true,allocationReviewPending:false,x:(x0+x1)/2,y:(y0+y1)/2,width:Math.min(x1-x0,y1-y0),length:Math.max(x1-x0,y1-y0),status:'Owner-confirmed '+assignment.label+' at '+assignment.code+'; sign anchor is an unmeasured design proxy, supplier/access approval pending'});}
   s.entryRamp={xMin:26.6,xMax:29.8,yMin:-4.5,yMax:2.5,status:'Existing front Entrance ramp confirmed by owner; width/run/level profile are schematic pending measurement, not accessibility or vehicle-gradient approval'};
@@ -71,6 +71,9 @@ module.exports=function applyOwnerReview(d,review){
   d.customerExperience.sharedCharging='Four owner-confirmed charging points: showroom, Customer Service, rear workshop and rear parking. Existing SHARED-EV represents the showroom point; mounting, hardware, electrical capacity and specifications remain unverified.';
   d.exterior.sharedCharging=d.customerExperience.sharedCharging;
   for(const state of d.states){
+    const backdrop=state.furniture.find(q=>q.type==='background-wall');
+    if(!backdrop||!review.module3BBackdrop)throw Error('Missing canonical Module3B backdrop');
+    Object.assign(backdrop,{elevationProfile:{...review.module3BBackdrop},shape:review.module3BBackdrop.shape});
     const logo=state.furniture.find(q=>q.type==='window-logo');Object.assign(logo,{cx:facade.centre[0],cy:facade.centre[1],centerHeight:facade.centreHeight,sizeEnvelope:facade.sizeEnvelope.slice(),depthProxy:facade.depthProxy,illuminated:facade.illuminated,installationType:facade.installationType,status:d.exterior.facadeLogo.status});
     state.handoverOperation=d.customerExperience.handover;
     const sharedEV=state.furniture.find(q=>q.id==='SHARED-EV'),showroomCharge=w.chargingPoints.find(q=>q.id==='CH-SHOWROOM');

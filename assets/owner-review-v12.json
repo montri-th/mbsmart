@@ -1,5 +1,23 @@
 {
-  "revision": "v12-owner-r6",
+  "revision": "v13-owner-r7",
+  "module3BBackdrop": {
+    "shape": "rounded-trapezoid-elevation",
+    "bottomWidth": 5.3,
+    "topWidth": 4.9,
+    "height": 2.5,
+    "bottomHeight": 0.06,
+    "thickness": 0.14,
+    "topCornerTrim": 0.30,
+    "bottomCornerTrim": 0.18,
+    "source": "D01 PDF p20 Detail of Module3, p21 reference image; owner correction15Sep2026",
+    "dimensionStatus": "5.30m nominal width from source plan. Taper, height, corner trims and thickness are image-interpreted design proxies, not supplier fabrication dimensions.",
+    "supplierGeometryVerified": false
+  },
+  "followupR7": {
+    "date": "2026-09-15",
+    "items": ["Exterior atmospheric photorealism without moving approved study elements", "Rear roof spans full workshop length; posts every three parking bays; ten paint cells unchanged", "Module3B rounded trapezoid backdrop elevation; existing desk, logo and screen positions retained"],
+    "status": "Implemented and checked against owner references: full-length canopy and seven-point actual-mesh audit; rounded backdrop eleven-point actual-mesh audit. New atmospheric exterior and targeted backdrop artwork reviewed; no survey, fabrication or brand approval claim."
+  },
   "date": "2026-09-15",
   "latestAnnotationReview": {
     "source": "codex-clipboard-87d47988-a6b6-4510-a893-8c74909f1248.jpg",

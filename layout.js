@@ -1,4 +1,4 @@
-/* v09-r6 / v12 owner review adoption; v11 comment contract and archived coordinates preserved. */
+/* v09-r7 / v13 owner review adoption; v11 comment contract and archived coordinates preserved. */
 window.BC_LAYOUT = {
   "revision": "v09",
   "defaultState": "handover",
@@ -581,7 +581,21 @@ window.BC_LAYOUT = {
           "w": 5.3,
           "h": 0.2,
           "zone": "smart-module",
-          "angle": 90
+          "angle": 90,
+          "elevationProfile": {
+            "shape": "rounded-trapezoid-elevation",
+            "bottomWidth": 5.3,
+            "topWidth": 4.9,
+            "height": 2.5,
+            "bottomHeight": 0.06,
+            "thickness": 0.14,
+            "topCornerTrim": 0.3,
+            "bottomCornerTrim": 0.18,
+            "source": "D01 PDF p20 Detail of Module3, p21 reference image; owner correction15Sep2026",
+            "dimensionStatus": "5.30m nominal width from source plan. Taper, height, corner trims and thickness are image-interpreted design proxies, not supplier fabrication dimensions.",
+            "supplierGeometryVerified": false
+          },
+          "shape": "rounded-trapezoid-elevation"
         },
         {
           "id": "LED",
@@ -1785,7 +1799,21 @@ window.BC_LAYOUT = {
           "w": 5.3,
           "h": 0.2,
           "zone": "smart-module",
-          "angle": 90
+          "angle": 90,
+          "elevationProfile": {
+            "shape": "rounded-trapezoid-elevation",
+            "bottomWidth": 5.3,
+            "topWidth": 4.9,
+            "height": 2.5,
+            "bottomHeight": 0.06,
+            "thickness": 0.14,
+            "topCornerTrim": 0.3,
+            "bottomCornerTrim": 0.18,
+            "source": "D01 PDF p20 Detail of Module3, p21 reference image; owner correction15Sep2026",
+            "dimensionStatus": "5.30m nominal width from source plan. Taper, height, corner trims and thickness are image-interpreted design proxies, not supplier fabrication dimensions.",
+            "supplierGeometryVerified": false
+          },
+          "shape": "rounded-trapezoid-elevation"
         },
         {
           "id": "LED",
@@ -3072,7 +3100,21 @@ window.BC_LAYOUT = {
           "w": 5.3,
           "h": 0.2,
           "zone": "smart-module",
-          "angle": 90
+          "angle": 90,
+          "elevationProfile": {
+            "shape": "rounded-trapezoid-elevation",
+            "bottomWidth": 5.3,
+            "topWidth": 4.9,
+            "height": 2.5,
+            "bottomHeight": 0.06,
+            "thickness": 0.14,
+            "topCornerTrim": 0.3,
+            "bottomCornerTrim": 0.18,
+            "source": "D01 PDF p20 Detail of Module3, p21 reference image; owner correction15Sep2026",
+            "dimensionStatus": "5.30m nominal width from source plan. Taper, height, corner trims and thickness are image-interpreted design proxies, not supplier fabrication dimensions.",
+            "supplierGeometryVerified": false
+          },
+          "shape": "rounded-trapezoid-elevation"
         },
         {
           "id": "LED",
@@ -4895,7 +4937,7 @@ window.BC_LAYOUT = {
     },
     "annexes": {
       "revision": "v09",
-      "iteration": "r6",
+      "iteration": "r7",
       "status": "Owner-confirmed uses and attachment; legacy grids recovered, exterior faces/photo-fit NOT measured as-built",
       "units": "metres, local plan X,Y to world X,height,-Y",
       "sources": [
@@ -5061,8 +5103,9 @@ window.BC_LAYOUT = {
         "rearCanopy": {
           "id": "EXISTING-REAR-PARKING-CANOPY",
           "render": true,
-          "kind": "existing low metal lean-to over rear ten-space bank",
-          "xMin": 15,
+          "kind": "existing low metal lean-to spanning full rear workshop elevation",
+          "roofScope": "full-rear-workshop-elevation",
+          "xMin": 2.02,
           "xMax": 40,
           "wallY": 42,
           "outerY": 48.3,
@@ -5072,13 +5115,30 @@ window.BC_LAYOUT = {
           "trussDepth": 0.28,
           "supportY": 48.1,
           "supportXs": [
-            15,
-            20,
+            2.5,
+            10,
+            17.5,
             25,
-            30,
-            35,
+            32.5,
             40
           ],
+          "supportGrid": {
+            "anchorX": 40,
+            "bayWidth": 2.5,
+            "baysPerSpan": 3,
+            "nominalSpacing": 7.5,
+            "regularSupportXs": [
+              2.5,
+              10,
+              17.5,
+              25,
+              32.5,
+              40
+            ],
+            "leftEndOverhang": 0.48,
+            "rightEndOverhang": 0,
+            "terminalPostAdded": false
+          },
           "coveredParkingBounds": [
             15,
             43,
@@ -5089,7 +5149,7 @@ window.BC_LAYOUT = {
             "R6-REAR-DAY",
             "R6-REVERSE-SIDE-DAY"
           ],
-          "status": "Existing rear cover observed in owner daytime photos; extent over corrected ten-space bank. Height, 6.3m projection, eave overhang, support spacing and members are reversible photo-fit proxies, not measured or engineered.",
+          "status": "15Sep owner: roof extends along full rear workshop elevation, 37.98m in current legacy-plan model; painted ten-space bank is independent. Posts every three 2.5m bays (7.5m). Heights, projection, terminal overhang and member sizes remain photo-fit proxies, not measured or engineered.",
           "measuredDimensions": false,
           "structuralApproval": false,
           "supportStatus": "Visual support rhythm only; posts placed just beyond parking paint so no parked-car envelope is intersected. Verify actual supports, drainage and manoeuvring on site."
@@ -6333,7 +6393,7 @@ window.BC_LAYOUT = {
       }
     ],
     "exteriorParking": {
-      "revision": "owner-v12-r6",
+      "revision": "owner-v13-r7",
       "coordinateStatus": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
       "referenceRoad": "Sukhumvit local X; Samet–Ang Sila local Y",
       "allocationReviewPending": false,
@@ -9258,7 +9318,7 @@ window.BC_LAYOUT = {
     ]
   },
   "defaultExteriorScheme": "proposed",
-  "iteration": "r6",
+  "iteration": "r7",
   "mbVehicles": [
     {
       "id": "MB1",
@@ -9346,7 +9406,7 @@ window.BC_LAYOUT = {
     "mb5": "Front-centre interpretation, aligned to entrance centreX28.2 with setback adjusted toY4.3",
     "priceStands": "15Sep2026: MB1–MB5 at actual fitted front-right tyre, sign faces vehicle front; supersedes former0.30m nose setback for these five only. MB6 handover retains prior RHD front-right0.30m setback and facing. AD01 visitor-path, open-door and supplier-footprint coordination remain unverified.",
     "status": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
-    "designRevision": "v12",
+    "designRevision": "v13",
     "latestAnnotationReview": {
       "source": "codex-clipboard-87d47988-a6b6-4510-a893-8c74909f1248.jpg",
       "status": "latest15Sep owner instructions implemented in source; actual-factory geometry verified; refreshed artist images and publication pending",
@@ -9365,9 +9425,18 @@ window.BC_LAYOUT = {
         "Customer Service Office label distinct from MB-S03 parking",
         "Magenta electric charging station legend"
       ]
+    },
+    "followupR7": {
+      "date": "2026-09-15",
+      "items": [
+        "Exterior atmospheric photorealism without moving approved study elements",
+        "Rear roof spans full workshop length; posts every three parking bays; ten paint cells unchanged",
+        "Module3B rounded trapezoid backdrop elevation; existing desk, logo and screen positions retained"
+      ],
+      "status": "Implemented and checked against owner references: full-length canopy and seven-point actual-mesh audit; rounded backdrop eleven-point actual-mesh audit. New atmospheric exterior and targeted backdrop artwork reviewed; no survey, fabrication or brand approval claim."
     }
   },
-  "designRevision": "v12",
+  "designRevision": "v13",
   "customerExperience": {
     "format": "Autohaus Small",
     "salesJourney": "Sales Step V",
