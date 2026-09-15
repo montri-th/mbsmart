@@ -98,5 +98,5 @@ fs.writeFileSync(path.join(root,'assets/geometry-register.json'),JSON.stringify(
 fs.writeFileSync(path.join(root,'assets/parking-photo-fit.json'),JSON.stringify(s.exteriorParking,null,2)+'\n');
 fs.writeFileSync(path.join(root,'assets/workshop-study.json'),JSON.stringify(s.workshopStudy,null,2)+'\n');
 fs.writeFileSync(path.join(root,'assets/exterior-proposal.json'),JSON.stringify(d.exterior,null,2)+'\n');
-fs.writeFileSync(path.join(root,'layout.js'),'/* v09-r8 / v14 owner review adoption; v11 comment contract and archived coordinates preserved. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
+fs.writeFileSync(path.join(root,'layout.js'),'/* v09-r9 / v15 owner review adoption; v11 comment contract and archived coordinates preserved. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
 console.log('v09 layout generated; existing inventory separated from smart proposal');

@@ -284,7 +284,7 @@
       ],
       "review": "Owner parking roles are Demo01 at B1, Sales01 at B2 and Demo02 at rear1, not the superseded side S-1/S-2 trial. Sales designation does not itself prove compliance with customer-parking requirements. MB allocation, brand acceptance and surveyed manoeuvring remain separate review gates; display cars cannot substitute for parking.",
       "v09Intent": "R4 night-photo correction: two candidate existing-cell assignments, one unassigned requirement. No full-site inventory or capacity approval.",
-      "v12Intent": "r6: เจ้าของกำหนด B1 = S-D-01 Smart Demo01, B2 = S-S-01 Smart Sales01, หลังอู่ช่อง1 = S-D-02 Smart Demo02; หลังช่อง2–10 = MB-C08–MB-C16 เรียงขวาไปซ้าย. ยกเลิกข้อเสนอ smart S-1/S-2 ด้านข้างเดิม; ชื่อ Sales ไม่ถือว่าแทน customer requirement โดยอัตโนมัติ ยังรอแบรนด์ตรวจโควตาและทางเข้าออก"
+      "v12Intent": "r6: เจ้าของกำหนด B1 = S-D-01 Smart Demo01, B2 = S-S-01 Smart Sales01, หลัง Workshop ช่อง1 = S-D-02 Smart Demo02; หลังช่อง2–10 = MB-C08–MB-C16 เรียงขวาไปซ้าย. ยกเลิกข้อเสนอ smart S-1/S-2 ด้านข้างเดิม; ชื่อ Sales ไม่ถือว่าแทน customer requirement โดยอัตโนมัติ ยังรอแบรนด์ตรวจโควตาและทางเข้าออก"
     },
     {
       "id": "7",
@@ -308,7 +308,7 @@
       },
       "review": "Owner relocation of existing SC1 / care04 from the canopy to the inside fence between MB-D02 and MB-D03, facing the workshop, retains its artwork and 2.07×0.30m size. This is one moved sign, not an extra copy. Mounting engineering and acceptance against the unchanged source canopy requirement remain unverified.",
       "v09Intent": "Use the existing workshop's attached awning as a proposed care-logo mounting study; not an approved inspection function.",
-      "v12Intent": "r6: ย้ายป้าย smart care04 / SC1 เดิมออกจากกันสาดไปด้านในรั้ว ระหว่าง MB-D02 กับ MB-D03 หันเข้าหาอู่ตามเจ้าของ ไม่เพิ่มป้ายซ้ำ คง artwork และขนาด2.07×0.30ม. การรับแรง ฐาน จุดยึดและการยอมรับตำแหน่งใหม่ตามข้อกำหนดยังรอตรวจ; ชื่อข้อกำหนดต้นทางที่ระบุ canopy ยังคงไว้ ไม่ถือว่าการย้ายเป็นการอนุมัติข้อยกเว้น"
+      "v12Intent": "r6: ย้ายป้าย smart care04 / SC1 เดิมออกจากกันสาดไปด้านในรั้ว ระหว่าง MB-D02 กับ MB-D03 หันเข้าหา Workshop ตามเจ้าของ ไม่เพิ่มป้ายซ้ำ คง artwork และขนาด2.07×0.30ม. การรับแรง ฐาน จุดยึดและการยอมรับตำแหน่งใหม่ตามข้อกำหนดยังรอตรวจ; ชื่อข้อกำหนดต้นทางที่ระบุ canopy ยังคงไว้ ไม่ถือว่าการย้ายเป็นการอนุมัติข้อยกเว้น"
     },
     {
       "id": "8",
@@ -437,7 +437,7 @@
       },
       "sourceConflict": "C06",
       "review": "RFI: confirm smart acceptance of this shared existing charger for required item10, surveyed location, actual capacity/availability, connection side and cable reach, safe charging workflow, electrical condition and commissioning. Do not imply the remote wallbox can charge the displayed#5 in place or draw a long cable as proof of compliance. The clash-adjusted model proxy must not be issued as installation coordinates.",
-      "v12Intent": "r6: เจ้าของระบุจุดชาร์จ4ตำแหน่งรวมจุดในโชว์รูม จุดหลังอู่ตรงกลางช่อง MB-C13 ชิดผนังตามภาพกำกับ ใช้ตัวแทนตำแหน่งไม่ใช่สเปก wallbox; การติดตั้ง กำลังไฟ สายและสิทธิใช้ร่วมยังรอตรวจ ไม่อ้างว่าสายถึงรถแสดงหรือว่าผ่านข้อ10แล้ว"
+      "v12Intent": "r6: เจ้าของระบุจุดชาร์จ4ตำแหน่งรวมจุดในโชว์รูม จุดหลัง Workshop ตรงกลางช่อง MB-C13 ชิดผนังตามภาพกำกับ ใช้ตัวแทนตำแหน่งไม่ใช่สเปก wallbox; การติดตั้ง กำลังไฟ สายและสิทธิใช้ร่วมยังรอตรวจ ไม่อ้างว่าสายถึงรถแสดงหรือว่าผ่านข้อ10แล้ว"
     },
     {
       "id": "11",
@@ -726,7 +726,7 @@
       "requirement": "Master permits sharing an MB-brand AC charger; p25 suggestions refer to smart-branded wall boxes.",
       "sourceConflict": "C04",
       "review": "Resolve device/branding expectation and provide workshop charging availability, electrical and commissioning evidence.",
-      "v12Intent": "r6: เจ้าของระบุจุดชาร์จรวม4ตำแหน่ง รวมโชว์รูม จุดหลังอู่ตรงกลาง MB-C13 ชิดผนัง ไม่มี wallbox เพิ่มซ้ำในช่อง HV; รุ่น ยี่ห้อ กำลังไฟ การยึด แนวสาย ความปลอดภัยและข้อกำหนดใช้ร่วมที่ต่างกันในคู่มือยังรอตรวจ"
+      "v12Intent": "r6: เจ้าของระบุจุดชาร์จรวม4ตำแหน่ง รวมโชว์รูม จุดหลัง Workshop ตรงกลาง MB-C13 ชิดผนัง ไม่มี wallbox เพิ่มซ้ำในช่อง HV; รุ่น ยี่ห้อ กำลังไฟ การยึด แนวสาย ความปลอดภัยและข้อกำหนดใช้ร่วมที่ต่างกันในคู่มือยังรอตรวจ"
     },
     {
       "id": "26",

@@ -174,9 +174,9 @@ window.BC_BUILDING_ANNEXES=(T,h,data)=>{
     for(const x of [cx-landingWidth/2+.05,cx+landingWidth/2-.05]){planBox(x,sy1-pad-.05,.075,.075,mid-rs.floorLevel,M.steel,rs.floorLevel,stair);tube([x,mid+.96,-turnY],[x,mid+.96,-(sy1-pad)],.023,M.steel,stair);tube([x,mid,-(sy1-pad)],[x,mid+.96,-(sy1-pad)],.023,M.steel,stair);}
     tube([cx-landingWidth/2+.05,mid+.96,-(sy1-pad)],[cx+landingWidth/2-.05,mid+.96,-(sy1-pad)],.023,M.steel,stair);
   }
-  // Sliding mesh leaves stacked at each side: internal workshop gate shown open.
-  const gate=w.sideGate,gateGroup=new T.Group();gateGroup.name='INTERNAL-WORKSHOP-GATE-OPEN-PROXY';gateGroup.userData=gate;workshop.add(gateGroup);
-  for(const gx of [gate.xMin,gate.xMax]){for(const dx of [0,.13]){planBox(gx+dx,gate.y,.07,1.6,gate.height,M.steel,w.floorLevel,gateGroup);for(let gy=gate.y-.8;gy<=gate.y+.8;gy+=.18)planBox(gx+dx,gy,.025,.025,gate.height,M.steel,w.floorLevel,gateGroup);}}
+  // Owner confirms the surrounding drive passes continuously below the roof.
+  // No gate leaves, rails, shutters or invented door frame across this passage.
+  const passage=new T.Group();passage.name='WORKSHOP-OPEN-THROUGH-PASSAGE';passage.userData={...w.throughPassage,hasPhysicalGate:false,clearanceCertified:false};workshop.add(passage);
   if(batch.length){const b=new T.InstancedMesh(new T.BoxGeometry(1,1,1),lineMat,batch.length);batch.forEach((m,i)=>b.setMatrixAt(i,m));b.instanceMatrix.needsUpdate=true;b.name='WORKSHOP-RIBS-AND-SCREENS';workshop.add(b);}
   for(const [text,x,y,width] of [['MEETING ROOM · INTEGRAL TOWER',-1.9,4.9,3.2],['WORKSHOP · LEGACY GRID / STUDY',20,30,17]]){const o=sign(text,x,(y>16?w.floorLevel:0)+.025,-y,width,.55,0,guides,'#edf2ed','#41585a');o.rotation.x=-Math.PI/2;}
   return groups;

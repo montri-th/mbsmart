@@ -264,8 +264,12 @@
     "landingY": 0.8,
     "yMax": 2.5,
     "risers": 5,
-    "status": "Superseded five-step proxy across vehicle entrance; owner confirms ramp at existing front Entrance",
-    "render": false
+    "status": "Owner confirms mechanical entrance shown as normal steps, exactly three anti-slip stickers per step. Five modeled risers and original photo-fit footprint are visual proxies, not surveyed mechanism/fabrication details.",
+    "render": true,
+    "mechanism": "convertible-steps-ramp",
+    "displayState": "steps",
+    "antiSlipPerStep": 3,
+    "dimensionsMeasured": false
   },
   "planting": {
     "frontBeds": [
@@ -800,7 +804,7 @@
   },
   "annexes": {
     "revision": "v09",
-    "iteration": "r8",
+    "iteration": "r9",
     "status": "Owner-confirmed uses and attachment; legacy grids recovered, exterior faces/photo-fit NOT measured as-built",
     "units": "metres, local plan X,Y to world X,height,-Y",
     "sources": [
@@ -1022,7 +1026,9 @@
         "xMax": 49,
         "y": 16.4,
         "height": 2.35,
-        "status": "Existing internal cross-passage mesh gate, photo-fit; NOT an opening in road fence"
+        "status": "Owner confirms continuous vehicle passage with no gate. Earlier photo-fit mesh leaves were an incorrect interpretation and are not rendered.",
+        "render": false,
+        "enabled": false
       },
       "material": "Light warm-grey corrugated metal, blue-grey ribbon windows, dark open/screened lower bays, steel awning",
       "geometryStatus": "E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Separate workshop layer distinguishes owner-reported existing equipment from proposed smart use, without certified as-built or installation claims.",
@@ -1083,6 +1089,17 @@
         "status": "Extent and stair use confirmed by owner. Exact direction, tread/riser dimensions, landing elevation and guard details are provisional visual geometry, not measured access or structural approval. No second-floor room or new door inferred.",
         "measuredDimensions": false,
         "render": true
+      },
+      "throughPassage": {
+        "id": "WORKSHOP-OPEN-THROUGH-PASSAGE",
+        "xMin": 40.2,
+        "xMax": 49,
+        "yMin": 16,
+        "yMax": 48.3,
+        "noGate": true,
+        "clearWidthSurveyed": false,
+        "status": "Owner confirms the surrounding vehicle drive continues under the Workshop roof without any gate. Bounds identify the modeled context strip, NOT its guaranteed usable clearance; retain parking and structural supports. Verify actual clear width and turning before use.",
+        "source": "Owner15Sep2026 and codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg"
       }
     },
     "contextCropY": 50,
@@ -1265,6 +1282,17 @@
       "Real browser/GPU and mobile visual review"
     ],
     "ownerLayout": {
+      "throughPassage": {
+        "id": "WORKSHOP-OPEN-THROUGH-PASSAGE",
+        "xMin": 40.2,
+        "xMax": 49,
+        "yMin": 16,
+        "yMax": 48.3,
+        "noGate": true,
+        "clearWidthSurveyed": false,
+        "status": "Owner confirms the surrounding vehicle drive continues under the Workshop roof without any gate. Bounds identify the modeled context strip, NOT its guaranteed usable clearance; retain parking and structural supports. Verify actual clear width and turning before use.",
+        "source": "Owner15Sep2026 and codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg"
+      },
       "innerConnection": {
         "mostlyOpen": true,
         "columnLineX": 40,
@@ -2429,7 +2457,7 @@
     }
   ],
   "exteriorParking": {
-    "revision": "owner-v14-r8",
+    "revision": "owner-v15-r9",
     "coordinateStatus": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
     "referenceRoad": "Sukhumvit local X; Samet–Ang Sila local Y",
     "allocationReviewPending": false,
@@ -4312,6 +4340,10 @@
     "xMax": 29.8,
     "yMin": -4.5,
     "yMax": 2.5,
-    "status": "Existing front Entrance ramp confirmed by owner; width/run/level profile are schematic pending measurement, not accessibility or vehicle-gradient approval"
+    "render": false,
+    "mechanism": "convertible-steps-ramp",
+    "displayState": "steps",
+    "deployedOnlyForVehicleTransfer": true,
+    "status": "Owner confirms mechanical steps convert to ramp only for vehicle transfer; normal model and artwork show steps. Prior operating envelope width/run/level profile are schematic pending measurement, not accessibility or vehicle-gradient approval."
   }
 }

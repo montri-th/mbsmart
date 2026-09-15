@@ -131,16 +131,32 @@ window.BC_SITE=(T,h,data)=>{
   // Visible threshold channel; exact drainage levels and outfall remain unverified.
   ibox((gx.xMin+gx.xMax)/2,L.road+.011,-fy+SW-.12,gx.xMax-gx.xMin,.014,.16,black,ground);
   for(let x=gx.xMin+.1;x<gx.xMax;x+=.17)ibox(x,L.road+.021,-fy+SW-.12,.027,.014,.16,M.steel,ground);
-  // Owner-confirmed existing vehicle Entrance. Profile is a schematic connection,
-  // not a measured grade or vehicle/accessibility design. No new opening added.
-  const er=data.entryRamp;
-  if(er){const ramp=surface([[er.xMin,er.yMin,L.forecourt+.006],[er.xMax,er.yMin,L.forecourt+.006],[er.xMax,er.yMax,.006],[er.xMin,er.yMax,.006]],concrete,objects);ramp.name='EXISTING-FRONT-ENTRANCE-RAMP';ramp.userData={...er,verifiedDimensions:false};}
-  // Retain the historical step proxy only when not superseded by owner evidence.
-  if(data.entrySteps.render!==false){
-  const es=data.entrySteps,sw=es.xMax-es.xMin,cx=(es.xMin+es.xMax)/2,run=(es.landingY-es.yMin)/es.risers,rise=(0-L.forecourt)/es.risers;
-  const entry=new T.Group();entry.name='EXTERIOR-ENTRANCE-STAIR';entry.userData={...es,rise,run};objects.add(entry);
-  for(let i=0;i<es.risers;i++){const depth=es.yMax-(es.yMin+i*run),top=L.forecourt+(i+1)*rise;planBox(cx,es.yMax-depth/2,sw,depth,top-L.forecourt,M.column,L.forecourt,entry);for(const dx of [-1.45,0,1.45])planBox(cx+dx,es.yMin+(i+.17)*run,.85,.08,.009,M.dark,top+.002,entry);}
-  for(const x of [es.xMin-.19,es.xMax+.19])planBox(x,(es.yMin+es.yMax)/2,.38,es.yMax-es.yMin,.86,M.column,L.forecourt,entry);
+  // Owner confirms one mechanical entrance that converts steps to a vehicle ramp
+  // temporarily, then returns to steps. Show its normal STEPS state; never draw
+  // a permanent ramp through the stairs or invent a second opening/mechanism.
+  const er=data.entryRamp,es=data.entrySteps,showEntrySteps=!!es&&es.render!==false;
+  if(er&&er.render!==false&&!showEntrySteps){const ramp=surface([[er.xMin,er.yMin,L.forecourt+.006],[er.xMax,er.yMin,L.forecourt+.006],[er.xMax,er.yMax,.006],[er.xMin,er.yMax,.006]],concrete,objects);ramp.name='EXISTING-FRONT-ENTRANCE-RAMP';ramp.userData={...er,displayState:'ramp',verifiedDimensions:false};}
+  if(showEntrySteps){
+    const sw=es.xMax-es.xMin,cx=(es.xMin+es.xMax)/2,run=(es.landingY-es.yMin)/es.risers,rise=(0-L.forecourt)/es.risers;
+    const stone=new T.MeshStandardMaterial({color:'#c7c9c5',map:grain(219,10,.5),roughness:.58});stone.name='ENTRANCE-PALE-GREY-STONE';
+    const edgeStone=new T.MeshStandardMaterial({color:'#656d70',roughness:.5});edgeStone.name='ENTRANCE-DARK-STONE-EDGE';
+    const antiSlip=new T.MeshStandardMaterial({color:'#343b3e',roughness:.98});antiSlip.name='ENTRANCE-ANTI-SLIP-STICKER';
+    const entry=new T.Group();entry.name='EXTERIOR-ENTRANCE-STAIR';entry.userData={...es,mechanism:es.mechanism||'convertible-steps-ramp',displayState:'steps',rise,run,antiSlipPerStep:3,verifiedDimensions:false,mechanicalPartsModelled:false,dimensionStatus:'Retained photo-fit footprint and five-step visual rhythm; actual riser, tread, landing and conversion mechanism dimensions are not surveyed.'};objects.add(entry);
+    const base=planBox(cx,es.yMin-.001,sw,.002,.035,edgeStone,L.forecourt,entry);base.name='ENTRANCE-DARK-STONE-BASE';base.userData={kind:'entrance-base-edge',dimensionsMeasured:false,visualTrimOffset:.002};
+    for(let i=0;i<es.risers;i++){
+      const front=es.yMin+i*run,depth=es.yMax-front,top=L.forecourt+(i+1)*rise;
+      const tread=planBox(cx,es.yMax-depth/2,sw,depth,top-L.forecourt,stone,L.forecourt,entry);tread.name='ENTRANCE-STEP-'+(i+1);tread.userData={kind:'entrance-step',stepIndex:i+1,top,frontY:front,dimensionsMeasured:false};
+      const nosing=planBox(cx,front+.0125,sw,.025,.018,edgeStone,top-.016,entry);nosing.name='ENTRANCE-STEP-'+(i+1)+'-NOSING';nosing.userData={kind:'entrance-stone-nosing',stepIndex:i+1,notAntiSlipSticker:true};
+      // Exactly three separate owner-confirmed stickers per step. The dimensions
+      // and spacing remain photo-fit; no additional grooves or sticker groups.
+      for(let n=0;n<3;n++){
+        const sticker=planBox(cx+(n-1)*1.45,front+run*.24,.85,.08,.006,antiSlip,top+.002,entry);sticker.name='ENTRANCE-STEP-'+(i+1)+'-ANTI-SLIP-'+(n+1);sticker.userData={kind:'entrance-anti-slip-sticker',stepIndex:i+1,stickerIndex:n+1,dimensionsMeasured:false};
+      }
+      // Stepped stone cheeks follow the tread profile instead of the former
+      // constant-height side blocks. No railing or exposed lifting gear is inferred.
+      const cheekDepth=i===es.risers-1?es.yMax-front:run;
+      for(const [side,x] of [['LEFT',es.xMin-.19],['RIGHT',es.xMax+.19]]){const cheek=planBox(x,front+cheekDepth/2,.38,cheekDepth,top-L.forecourt+.08,stone,L.forecourt,entry);cheek.name='ENTRANCE-'+side+'-CHEEK-'+(i+1);cheek.userData={kind:'entrance-stepped-cheek',side,stepIndex:i+1,dimensionsMeasured:false};}
+    }
   }
   // Retain the photographed main-showroom bed/palms only. Owner confirms no
   // planting at vehicle-handover front glazing, inside fence, or either sidewalk.

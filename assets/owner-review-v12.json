@@ -1,5 +1,13 @@
 {
-  "revision": "v14-owner-r8",
+  "revision": "v15-owner-r9",
+  "followupR9": {
+    "date": "2026-09-15",
+    "items": ["Use Workshop consistently in current authored web and documents; preserve original source filenames and client comment quotations", "Surrounding vehicle drive passes below Workshop roof continuously with no gate or shutter", "Reconcile the photographed entrance staircase with the previously modeled vehicle ramp before changing either"],
+    "status": "Owner-confirmed mechanical entrance shown as normal steps, exactly three anti-slip stickers per step. Actual geometry checks pass: eight entrance checks and twelve roadside-shell checks including no gate and eighteen open through-passage ray samples. Two exterior images corrected and all eight artist views reviewed for r9. Unmeasured dimensions, mechanism engineering and vehicle swept-path remain unverified; release verification follows integration.",
+    "sources": ["codex-clipboard-925fcfe4-9ceb-40d7-af15-3def6693b305.jpg", "codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg", "codex-clipboard-975608e7-3b7d-4f0f-91f4-4990f3a2dfae.png"],
+    "entranceClarificationPending": false,
+    "entranceConfirmation": "Mechanical steps convert to a ramp only while moving vehicles, then back to steps. Model and artist impressions must show steps, with three anti-slip stickers per step. No separate adjacent vehicle doorway."
+  },
   "followupR8": {
     "date": "2026-09-15",
     "items": ["Only Client Comment Log rows40 and41: English High Voltage Station wall plaque and M/E Station at existing empty marked workbay", "Workshop architectural side mass reaches roadside columns; roadside breeze-block brick fence, not a second inset wall", "Dark-grey workshop-facing masonry beneath roof only; smart care stays at existing roadside fence position", "Samet–Ang Sila six lanes, three each direction; Thailand left-hand traffic: building-side carriageway away from Sukhumvit and opposite carriageway toward Sukhumvit"],
@@ -28,7 +36,7 @@
   "date": "2026-09-15",
   "latestAnnotationReview": {
     "source": "codex-clipboard-87d47988-a6b6-4510-a893-8c74909f1248.jpg",
-    "status": "latest15Sep owner instructions implemented in source; actual-factory geometry verified; refreshed artist images and publication pending",
+    "status": "Latest15Sep owner instructions implemented in r9 source and reviewed artwork; current normal-step mechanical entrance and open Workshop through-passage verified. Publication checks follow integration. Historic v11 comment/pin coordinate contract unchanged.",
     "latestAnnotationAdoptedInFull": true,
     "sourceVerification": "PASS15Sep2026: assembled actual-Three geometry178/178 including five-car front-right-tyre/forward-face stands across30 mode/AC/car cases, exact3smart/3MB/2Thai flags, noSP1/SF1, nohandover-front planting, rearwall charger/carefence positions. Independent Type4 audit9/9: seven unchanged SVG paths, 4991fill samples,14front/back raycasts, raised illuminated outward caps and real dark backs. No survey, fabrication, structural/electrical or brand approval claim.",
     "items": ["Retain exactly SF2–SF4 at2.50m spacing; remove SP1 and lone left SF1; MB cloth equals smart cloth", "Rear parking charger centred on MB-C13 against workshop wall", "Single smart care sign inside fence between MB-D02/D03 facing workshop", "MB1–MB5 price stands at front-right tyre, faces point with car front", "Type4 illuminated smart sign inside handover front glazing facing outward", "No planting at handover front glazing; retain main-showroom planting only"],
@@ -362,6 +370,17 @@
     }
   },
   "workshop": {
+    "throughPassage": {
+      "id": "WORKSHOP-OPEN-THROUGH-PASSAGE",
+      "xMin": 40.2,
+      "xMax": 49,
+      "yMin": 16,
+      "yMax": 48.3,
+      "noGate": true,
+      "clearWidthSurveyed": false,
+      "status": "Owner confirms the surrounding vehicle drive continues under the Workshop roof without any gate. Bounds identify the modeled context strip, NOT its guaranteed usable clearance; retain parking and structural supports. Verify actual clear width and turning before use.",
+      "source": "Owner15Sep2026 and codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg"
+    },
     "innerConnection": {"mostlyOpen":true,"columnLineX":40,"photoFitOpenY":[22,42],"retainColumnsAndBeams":true,"notASecondWall":true,"unverifiedTransitionY":[16,22],"status":"Owner confirms recessed inner line is mostly open between workshop and side area. Photos support open connection across main working span; CS/lounge transition requires plan-to-photo alignment before changing."},
     "roadsideShell": {"enabled":true,"xMax":49.2,"yMin":22,"yMax":42,"columnYs":[22,28.5,35.5,42],"columnSize":0.30,"status":"Owner photos show main workshop mass reaching roadside columns. X matches retained photo-fit fence datum; Y extents, member sizes and heights remain unmeasured visual proxies. Operational grid X0–40 and rear canopy are unchanged."},
     "roadsideMasonry": {"enabled":true,"insideFaceX":49.2,"thickness":0.18,"baseLevel":-0.8,"solidTop":0.4,"topLevel":3.55,"segments":[[22,42]],"interiorColor":"#45494b","exteriorColor":"#d7d8d1","blockWidth":0.40,"blockHeight":0.20,"web":0.04,"paintScope":"Workshop-facing brick ventilation fence surface under roof only; no second inset wall, no paint change to outer face, mesh gates, upper metal cladding or roof structure.","colourBasis":"Owner-directed dark-grey proposal; PT03/05 background concept in MB RetailManual PDF231 informs visual tone but does not approve this workshop substrate or exact colour.","brandColourApproval":false,"dimensionStatus":"Masonry module, heights, thickness and transition Y22 are photo-fit, not surveyed. Inside surface retains existing fence datum and exact smart care position."},
@@ -1030,12 +1049,12 @@
     "handover": {
       "sequence": [
         "Temporarily move MB5 out of its display position",
-        "Open existing Flex vehicle opening; switch Flex AC off for transfer",
+        "Open existing Flex vehicle opening; switch Flex AC off for transfer; convert the mechanical entrance steps to ramp",
         "Drive MB6 through the vacated MB5 position",
-        "Turn left and descend the existing front Entrance ramp"
+        "Turn left and descend the existing front Entrance ramp; return the mechanical entrance to normal steps after transfer"
       ],
       "newVehicleDoor": false,
-      "routeStatus": "Owner-confirmed operating sequence; swept path, ramp dimensions/gradient and clearances require site verification."
+      "routeStatus": "Owner-confirmed convertible mechanical steps/ramp, shown as steps with three anti-slip stickers per step in the model and artwork; swept path, deployed ramp dimensions/gradient and clearances require site verification."
     },
     "CS": "Customer Service"
   }

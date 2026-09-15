@@ -1,10 +1,10 @@
 {
   "experienceRevision": "v11",
   "modelRevision": "v09",
-  "geometryRevision": "v09-r8",
+  "geometryRevision": "v09-r9",
   "generatedOn": "2026-09-15",
   "style": "Photorealistic, soft light, premium",
-  "notice": "Owner-directed design study. AI images interpret lighting and finishes; native vector plans and the r8 model govern positions and counts. The v11 comment/pin contract is unchanged. Not cadastral, structural, swept-path or brand certification.",
+  "notice": "Owner-directed design study. AI images interpret lighting and finishes; native vector plans and the r9 model govern positions and counts. The v11 comment/pin contract is unchanged. Not cadastral, structural, swept-path or brand certification.",
   "artistImpressionState": {
     "mode": "handover",
     "ac": false,
@@ -15,20 +15,20 @@
       "id": "showroom-arrival",
       "section": "showroom",
       "view": "interior",
-      "path": "assets/impressions/showroom-arrival-v14.jpg",
+      "path": "assets/impressions/showroom-arrival-v15.jpg",
       "bytes": 520547,
       "sha256": "62f6b620b815195ad981850ac26ca4f9f7b898f7f0770e6a03a76f0225e684b4",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Retained built-in generated artwork explicitly reviewed against r8 model geometry",
-      "geometryRevision": "v09-r8",
+      "origin": "Retained built-in generated artwork explicitly reviewed against r9 model geometry",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v13",
       "retentionStatus": "retained-after-current-geometry-review",
       "acceptanceStatus": "accepted-by-root",
       "generatedMasterSha256": "8bdc67bf24c7cae23e8b6d231d543014d888bbcf3ec56e61ee5f79664bdb70c4",
       "reviewNotes": [
-        "All showroom states and native r8 capture exactly match r7; root visually checked front-right MB stands and retained Module3B."
+        "Main entrance stair is behind the camera; Workshop passage not shown. Unchanged r9 native capture is byte-identical to r8. Existing MB display/stands and Module3B retained."
       ],
       "interpretiveDifferences": [
         "ภาพแนวคิดเพื่อสื่อแสง วัสดุ และบรรยากาศ ไม่ใช่แบบสำรวจหรือแบบติดตั้ง ใช้โมเดลและแปลนเวกเตอร์ตรวจตำแหน่งและระยะ"
@@ -38,20 +38,20 @@
       "id": "showroom-smart",
       "section": "showroom",
       "view": "smart",
-      "path": "assets/impressions/showroom-smart-v14.jpg",
+      "path": "assets/impressions/showroom-smart-v15.jpg",
       "bytes": 429958,
       "sha256": "22cff0fa2a2123a8bfaf5134b7553e77a3c627f7817282629f5be01523b894c2",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Retained built-in generated artwork explicitly reviewed against r8 model geometry",
-      "geometryRevision": "v09-r8",
+      "origin": "Retained built-in generated artwork explicitly reviewed against r9 model geometry",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v13",
       "retentionStatus": "retained-after-current-geometry-review",
       "acceptanceStatus": "accepted-by-root",
       "generatedMasterSha256": "dba262184b718aeeba33019b558bcea3f04e6efc0f683c5adbcae1da0b912131",
       "reviewNotes": [
-        "Native r8 capture pixel-identical to r7; root reviewed rounded trapezoid backdrop, slab consultation desk with one advisor and two customer chairs, single smart vehicle."
+        "Module3B corner, backdrop, slab desk and chairs unchanged; affected entrance and Workshop route outside view. Native r9 capture is byte-identical to r8."
       ],
       "interpretiveDifferences": [
         "ภาพแนวคิดเพื่อสื่อแสง วัสดุ และบรรยากาศ ไม่ใช่แบบสำรวจหรือแบบติดตั้ง ใช้โมเดลและแปลนเวกเตอร์ตรวจตำแหน่งและระยะ"
@@ -61,21 +61,20 @@
       "id": "showroom-handover",
       "section": "showroom",
       "view": "handover",
-      "path": "assets/impressions/showroom-handover-v14.jpg",
+      "path": "assets/impressions/showroom-handover-v15.jpg",
       "bytes": 466003,
       "sha256": "e9d729119463a341b7e9b3ef00ae0d513361a2c9d478c0b14d9a78d5460d844e",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Retained built-in generated artwork explicitly reviewed against r8 model geometry",
-      "geometryRevision": "v09-r8",
+      "origin": "Retained built-in generated artwork explicitly reviewed against r9 model geometry",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v12",
       "retentionStatus": "retained-after-current-geometry-review",
       "acceptanceStatus": "accepted-by-root",
       "generatedMasterSha256": "5782f1f4e364662ef452df2c0459df84cb07fd4696d54cb0e4bf21e7a76fc013",
       "reviewNotes": [
-        "Original v12 artwork retained through v13, reviewed anew for r8. Current capture pixel-identical; Type4 physical dark back, black coupe and unobstructed handover glass retained.",
-        "Narrow background street glimpse is an atmospheric interpretation, not a lane-count drawing."
+        "Main entrance off-left/occluded, no permanent ramp shown. Native r9 capture byte-identical to r8; retained Type4 physical sign and clear handover glazing."
       ],
       "interpretiveDifferences": [
         "ภาพแนวคิดเพื่อสื่อแสง วัสดุ และบรรยากาศ ไม่ใช่แบบสำรวจหรือแบบติดตั้ง ใช้โมเดลและแปลนเวกเตอร์ตรวจตำแหน่งและระยะ"
@@ -85,20 +84,20 @@
       "id": "showroom-overview",
       "section": "showroom",
       "view": "overview",
-      "path": "assets/impressions/showroom-overview-v14.jpg",
+      "path": "assets/impressions/showroom-overview-v15.jpg",
       "bytes": 242333,
       "sha256": "c9e5da5e63155d71daeee8dac7b0f097e9575ec703f8811bb8fa0c70078c5efd",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Retained built-in generated artwork explicitly reviewed against r8 model geometry",
-      "geometryRevision": "v09-r8",
+      "origin": "Retained built-in generated artwork explicitly reviewed against r9 model geometry",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v13",
       "retentionStatus": "retained-after-current-geometry-review",
       "acceptanceStatus": "accepted-by-root",
       "generatedMasterSha256": "fcafcca65fda147745dbc8387db454b79edf5f8df2e138898fb198d5a82b3671",
       "reviewNotes": [
-        "Root reviewed showroom-only cutaway with unchanged seven vehicles, Module3B and two-screen Small Sub Stage. r8 capture is pixel-identical to r7."
+        "Showroom-only cutaway excludes exterior stair and Workshop. Current/previous captures visually compared: limited 634-pixel change in entrance-related guide region, no car/furniture/stand-position change or conflicting permanent ramp."
       ],
       "interpretiveDifferences": [
         "ภาพแนวคิดเพื่อสื่อแสง วัสดุ และบรรยากาศ ไม่ใช่แบบสำรวจหรือแบบติดตั้ง ใช้โมเดลและแปลนเวกเตอร์ตรวจตำแหน่งและระยะ"
@@ -108,22 +107,21 @@
       "id": "exterior-aerial",
       "section": "exterior",
       "view": "site",
-      "path": "assets/impressions/exterior-aerial-v14.jpg",
-      "bytes": 656261,
-      "sha256": "16119d5c22bcdfd5fab149ee2ec07725d5edd8ac62279e6defd75ad9198ab301",
+      "path": "assets/impressions/exterior-aerial-v15.jpg",
+      "bytes": 624617,
+      "sha256": "d1e9b05c444226ac09af1bab5cc6520b50d059763e1712a450de64ab3c6ba7c0",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation using r8 model capture and owner photo references",
-      "geometryRevision": "v09-r8",
-      "sourceRevision": "v14",
-      "retentionStatus": "new-v14-artwork",
+      "origin": "Built-in image editing using prior reviewed artist masters and owner photo references, verified against r9 model",
+      "geometryRevision": "v09-r9",
+      "sourceRevision": "v15",
+      "retentionStatus": "new-v15-artwork",
       "acceptanceStatus": "accepted-by-root",
-      "generatedMasterSha256": "fcd5f989e02f22d7dbad2c499809328bd2804a243a2002c78385d5e1db29b724",
+      "generatedMasterSha256": "6b4d583197fdd38c160af6354cd22ed71a8d9165cdfbcc62b256895fe246d903",
       "reviewNotes": [
-        "Root reviewed corrected narrow mid-glazing sign beams, extended workshop roof, low cross-passage cover, six road lanes and median, 3 MB/3 smart/2 Thai flags, MB pylon, corner shrine and small Type4 window sign.",
-        "Root checked Thailand left-hand traffic: rears on building-side carriageway away from junction, fronts on opposite carriageway toward junction; cross-street directions are consistent.",
-        "City skyline, atmospheric depth, glass reflections and distant surroundings are interpretive; model governs exact geometry."
+        "Root and independent visual review: front Workshop portal open through beneath roof; normal compact entrance steps and three sticker positions on readable treads, restored projecting space-frame/glass canopy; flat forecourt, no second staircase or permanent ramp.",
+        "Exactly three MB, three smart and two Thai flags retained; Type4 handover window sign, MB pylon, shrine and vehicle positions retained. Building-side road shows rear-facing traffic away from junction; opposite carriageway fronts approach junction (Thailand left-hand traffic)."
       ],
       "interpretiveDifferences": [
         "ภาพแนวคิดเพื่อสื่อแสง วัสดุ และบรรยากาศ ไม่ใช่แบบสำรวจหรือแบบติดตั้ง ใช้โมเดลและแปลนเวกเตอร์ตรวจตำแหน่งและระยะ"
@@ -133,22 +131,21 @@
       "id": "exterior-street",
       "section": "exterior",
       "view": "frontage",
-      "path": "assets/impressions/exterior-street-v14.jpg",
-      "bytes": 576347,
-      "sha256": "ee20ecd78012729edcc3dd5dbc3fde9017efcf4014329e3a88b44d0cb93e19ba",
-      "width": 1672,
+      "path": "assets/impressions/exterior-street-v15.jpg",
+      "bytes": 568863,
+      "sha256": "a39ee53f96a26d2c13236f19933a75de500ccd750e2eed10d46f198e48312b58",
+      "width": 1671,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation using r8 model capture and owner photo references",
-      "geometryRevision": "v09-r8",
-      "sourceRevision": "v14",
-      "retentionStatus": "new-v14-artwork",
+      "origin": "Built-in image editing using prior reviewed artist masters and owner photo references, verified against r9 model",
+      "geometryRevision": "v09-r9",
+      "sourceRevision": "v15",
+      "retentionStatus": "new-v15-artwork",
       "acceptanceStatus": "accepted-by-root",
-      "generatedMasterSha256": "53bf9ede340dae3a7956d650e3b9309461167205da7e8b8e3e3a88097d9ab3d7",
+      "generatedMasterSha256": "82a64723d8b4dad7df6e8f820d6c7d7e6d8cf32725682cb8a5f68173820c2019",
       "reviewNotes": [
-        "Root reviewed facade bands, six-lane side road, 3 MB/3 smart/2 Thai flags and restored Type4 sign in handover front-glass panel after model projection/raycast verified its visibility.",
-        "Root checked Thailand left-hand traffic: building-side road vehicles show rears away from junction, opposite carriageway shows fronts toward junction. Foreground street restored to empty approved composition.",
-        "City backdrop and small sign illumination are interpretive, not surveyed view or photometric certification."
+        "Root and independent visual review: single compact normal staircase beneath original canopy, three dark sticker positions on readable treads; third smart flag restored at original position.",
+        "Three MB/three smart/two Thai flags, Type4 sign and left-hand traffic retained. Workshop passage mostly occluded in this view; absence of a gate is established by actual model audit and aerial view, not inferred here."
       ],
       "interpretiveDifferences": [
         "ภาพแนวคิดเพื่อสื่อแสง วัสดุ และบรรยากาศ ไม่ใช่แบบสำรวจหรือแบบติดตั้ง ใช้โมเดลและแปลนเวกเตอร์ตรวจตำแหน่งและระยะ"
@@ -158,21 +155,20 @@
       "id": "workshop-overview",
       "section": "workshop",
       "view": "workshop",
-      "path": "assets/impressions/workshop-overview-v14.jpg",
+      "path": "assets/impressions/workshop-overview-v15.jpg",
       "bytes": 558247,
       "sha256": "050704a7f076413f2f1a828c2f9aa233c578589325d9662a9d1b4cfb7f88aa6f",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation using r8 model capture and owner photo references",
-      "geometryRevision": "v09-r8",
+      "origin": "Retained built-in generated artwork explicitly reviewed against r9 model geometry",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v14",
-      "retentionStatus": "new-v14-artwork",
+      "retentionStatus": "retained-after-current-geometry-review",
       "acceptanceStatus": "accepted-by-root",
       "generatedMasterSha256": "09a0a89c1985f273a5b7577bdf7c5f368f8b68cd9bfe59e916fb1b153374cfc3",
       "reviewNotes": [
-        "Root checked open inset column line, retained columns, eight two-post and two four-post lifts, empty M/E workbay with English sign and English HV wall plaque. Incorrect rear-wall perforations removed.",
-        "Roof intentionally cut away to read workshop layout; full roof is shown in exterior views."
+        "Current capture and retained artwork show open through-drive. Only 2495 pixels differ in native comparison around removed gate detail; no closed barrier in retained artwork. Image is not proof of measured vehicle clearance."
       ],
       "interpretiveDifferences": [
         "ภาพแนวคิดเพื่อสื่อแสง วัสดุ และบรรยากาศ ไม่ใช่แบบสำรวจหรือแบบติดตั้ง ใช้โมเดลและแปลนเวกเตอร์ตรวจตำแหน่งและระยะ"
@@ -182,21 +178,20 @@
       "id": "workshop-smart-bays",
       "section": "workshop",
       "view": "workshop-detail",
-      "path": "assets/impressions/workshop-smart-bays-v14.jpg",
+      "path": "assets/impressions/workshop-smart-bays-v15.jpg",
       "bytes": 528636,
       "sha256": "11c5fdc112bf288b93b612a1b6724229e1f1cc19c1a84bd0f1d7f9cc46dd90d1",
       "width": 1672,
       "height": 941,
       "mime": "image/jpeg",
-      "origin": "Built-in image generation using r8 model capture and owner photo references",
-      "geometryRevision": "v09-r8",
+      "origin": "Retained built-in generated artwork explicitly reviewed against r9 model geometry",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v14",
-      "retentionStatus": "new-v14-artwork",
+      "retentionStatus": "retained-after-current-geometry-review",
       "acceptanceStatus": "accepted-by-root",
       "generatedMasterSha256": "946825a85634a97175c7050ade9fd1a4921443e4a13d120d070fd9706776ff4f",
       "reviewNotes": [
-        "Root checked English High Voltage Station plaque, solid rear wall, tall lift geometry, half-bay stair, open inset column line and dark-grey workshop-facing roadside breeze blocks.",
-        "Roof intentionally cut away; supplier fixings, approved sign artwork, colours and equipment specification remain subject to verification."
+        "Front gate location outside view; visible rear/stair-side connection open. Native r9 capture byte-identical to r8. English HV plaque and dark inside roadside masonry retained."
       ],
       "interpretiveDifferences": [
         "ภาพแนวคิดเพื่อสื่อแสง วัสดุ และบรรยากาศ ไม่ใช่แบบสำรวจหรือแบบติดตั้ง ใช้โมเดลและแปลนเวกเตอร์ตรวจตำแหน่งและระยะ"
@@ -223,145 +218,145 @@
       "id": "showroom-plan",
       "section": "showroom",
       "view": "plan",
-      "path": "assets/plans/showroom-plan-v14.svg",
-      "bytes": 57670,
-      "sha256": "76bfeb6d7e8fa4a0180aa40e59788c8a508b2d1f0da6ae86571f1718d2a69ab2"
+      "path": "assets/plans/showroom-plan-v15.svg",
+      "bytes": 63623,
+      "sha256": "962f25816699b45319036dff58fe6c12fa3c9af5e50d78eed01645d870646bdc"
     },
     {
       "id": "groundfloor-site-plan",
       "section": "exterior",
       "view": "siteplan",
-      "path": "assets/plans/groundfloor-site-plan-v14.svg",
-      "bytes": 120305,
-      "sha256": "f40dcb15a99305819a72f4c61dbc68e023944e940ed704ce0e92bb9799bea18d"
+      "path": "assets/plans/groundfloor-site-plan-v15.svg",
+      "bytes": 125724,
+      "sha256": "d8f0320cb09c8c2c7ec65f915576b8cbfb74184d0bf21f01c58b4d0d4fea5333"
     },
     {
       "id": "workshop-plan",
       "section": "workshop",
       "view": "workshop-plan",
-      "path": "assets/plans/workshop-plan-v14.svg",
-      "bytes": 66600,
-      "sha256": "29f1ae464321a2a56cc26f4b47b3c90408562cdf8a5c2af2a7c349349b502aac"
+      "path": "assets/plans/workshop-plan-v15.svg",
+      "bytes": 66258,
+      "sha256": "06c5da639eb79ac570e82d09496fe71a895e7fe4d96aae288ccbc8e4ab8b2b08"
     }
   ],
   "downloads": [
     {
       "id": "showroom-arrival",
-      "path": "assets/downloads/showroom-arrival-v14-hires.png",
+      "path": "assets/downloads/showroom-arrival-v15-hires.png",
       "bytes": 2185157,
       "sha256": "1892333ddbb2f5b1629172b9fc1ded91ae3c800da55ed2b7e135d70a0d59e8b5",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "geometryRevision": "v09-r8",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v13",
       "retentionStatus": "retained-after-current-geometry-review",
       "generatedMasterSha256": "8bdc67bf24c7cae23e8b6d231d543014d888bbcf3ec56e61ee5f79664bdb70c4"
     },
     {
       "id": "showroom-smart",
-      "path": "assets/downloads/showroom-smart-v14-hires.png",
+      "path": "assets/downloads/showroom-smart-v15-hires.png",
       "bytes": 2001776,
       "sha256": "07e512aeeecc79d70a4712c385a112a52243e4d67453880b0a511917b6d54cd3",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "geometryRevision": "v09-r8",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v13",
       "retentionStatus": "retained-after-current-geometry-review",
       "generatedMasterSha256": "dba262184b718aeeba33019b558bcea3f04e6efc0f683c5adbcae1da0b912131"
     },
     {
       "id": "showroom-handover",
-      "path": "assets/downloads/showroom-handover-v14-hires.png",
+      "path": "assets/downloads/showroom-handover-v15-hires.png",
       "bytes": 2080483,
       "sha256": "6d6ae741d68e11b3555c56a051ee54e87fd8da8d37ba5989dd6d8682f3c8c6c0",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "geometryRevision": "v09-r8",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v12",
       "retentionStatus": "retained-after-current-geometry-review",
       "generatedMasterSha256": "5782f1f4e364662ef452df2c0459df84cb07fd4696d54cb0e4bf21e7a76fc013"
     },
     {
       "id": "showroom-overview",
-      "path": "assets/downloads/showroom-overview-v14-hires.png",
+      "path": "assets/downloads/showroom-overview-v15-hires.png",
       "bytes": 1507649,
       "sha256": "640ee539767ad8e0341e2d722745e7a2fc9db4e199590bfd31292e89cd8f0421",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "geometryRevision": "v09-r8",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v13",
       "retentionStatus": "retained-after-current-geometry-review",
       "generatedMasterSha256": "fcafcca65fda147745dbc8387db454b79edf5f8df2e138898fb198d5a82b3671"
     },
     {
       "id": "exterior-aerial",
-      "path": "assets/downloads/exterior-aerial-v14-hires.png",
-      "bytes": 2585603,
-      "sha256": "0ac7afa2652af18db4dbb7d0557c72eeff846a6d6980e6ec13f99505823381f7",
+      "path": "assets/downloads/exterior-aerial-v15-hires.png",
+      "bytes": 2496132,
+      "sha256": "d015c8428b37204a453899240f9489a4088534ad47fd18065ed702f4a7583fb7",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "geometryRevision": "v09-r8",
-      "sourceRevision": "v14",
-      "retentionStatus": "new-v14-artwork",
-      "generatedMasterSha256": "fcd5f989e02f22d7dbad2c499809328bd2804a243a2002c78385d5e1db29b724"
+      "geometryRevision": "v09-r9",
+      "sourceRevision": "v15",
+      "retentionStatus": "new-v15-artwork",
+      "generatedMasterSha256": "6b4d583197fdd38c160af6354cd22ed71a8d9165cdfbcc62b256895fe246d903"
     },
     {
       "id": "exterior-street",
-      "path": "assets/downloads/exterior-street-v14-hires.png",
-      "bytes": 2343435,
-      "sha256": "226c801774e98a6846d89d148331f3de5b2573566c86d65c4fe398afab748332",
-      "width": 1672,
+      "path": "assets/downloads/exterior-street-v15-hires.png",
+      "bytes": 2310938,
+      "sha256": "e65ccebbebd689bdec3462a672de0db179d411d8542223cc69959854b8a82b46",
+      "width": 1671,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "geometryRevision": "v09-r8",
-      "sourceRevision": "v14",
-      "retentionStatus": "new-v14-artwork",
-      "generatedMasterSha256": "53bf9ede340dae3a7956d650e3b9309461167205da7e8b8e3e3a88097d9ab3d7"
+      "geometryRevision": "v09-r9",
+      "sourceRevision": "v15",
+      "retentionStatus": "new-v15-artwork",
+      "generatedMasterSha256": "82a64723d8b4dad7df6e8f820d6c7d7e6d8cf32725682cb8a5f68173820c2019"
     },
     {
       "id": "workshop-overview",
-      "path": "assets/downloads/workshop-overview-v14-hires.png",
+      "path": "assets/downloads/workshop-overview-v15-hires.png",
       "bytes": 2653624,
       "sha256": "57bd2de82bfad07041d7035b0de9ce1dbad0d297b54e00a37867e9b4cef781da",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "geometryRevision": "v09-r8",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v14",
-      "retentionStatus": "new-v14-artwork",
+      "retentionStatus": "retained-after-current-geometry-review",
       "generatedMasterSha256": "09a0a89c1985f273a5b7577bdf7c5f368f8b68cd9bfe59e916fb1b153374cfc3"
     },
     {
       "id": "workshop-smart-bays",
-      "path": "assets/downloads/workshop-smart-bays-v14-hires.png",
+      "path": "assets/downloads/workshop-smart-bays-v15-hires.png",
       "bytes": 2442393,
       "sha256": "45748da8830a610efe19184921cac5b40f79e7a6d1db7f764072f3e6f8c2c618",
       "width": 1672,
       "height": 941,
       "nativeResolution": true,
       "upscaled": false,
-      "geometryRevision": "v09-r8",
+      "geometryRevision": "v09-r9",
       "sourceRevision": "v14",
-      "retentionStatus": "new-v14-artwork",
+      "retentionStatus": "retained-after-current-geometry-review",
       "generatedMasterSha256": "946825a85634a97175c7050ade9fd1a4921443e4a13d120d070fd9706776ff4f"
     },
     {
       "id": "showroom-plan",
-      "path": "assets/downloads/showroom-plan-v14.png",
-      "bytes": 1097756,
-      "sha256": "9c7ad7792b52def5a3b85131390cc285f536aba377641996965595d4133a282f",
+      "path": "assets/downloads/showroom-plan-v15.png",
+      "bytes": 1102561,
+      "sha256": "4b06f3aec447f5802eb87858c3ac56e2b575bc99f87668790d3d6a1657eb5a60",
       "width": 4400,
       "height": 3440,
       "origin": "Deterministic native SVG raster export",
@@ -369,9 +364,9 @@
     },
     {
       "id": "groundfloor-site-plan",
-      "path": "assets/downloads/groundfloor-site-plan-v14.png",
-      "bytes": 1522253,
-      "sha256": "62bc7b5c270a9276e837bcf5d56649dfb870f5f0fe9e4a246aff72cc1cc75e4b",
+      "path": "assets/downloads/groundfloor-site-plan-v15.png",
+      "bytes": 1529781,
+      "sha256": "9c8961f9a5bdd3ada23b85a0ac22d35825f4ccafb5695fbc54a0a9320141add3",
       "width": 4400,
       "height": 5040,
       "origin": "Deterministic native SVG raster export",
@@ -379,9 +374,9 @@
     },
     {
       "id": "workshop-plan",
-      "path": "assets/downloads/workshop-plan-v14.png",
-      "bytes": 1262450,
-      "sha256": "23341ab599b9b672218a3668dafaf7caff62777295c53ca794d2f84bdc8e8382",
+      "path": "assets/downloads/workshop-plan-v15.png",
+      "bytes": 1274039,
+      "sha256": "6423a361ae713c02a7231a051afa35b91015e198dcce0ef56ef23641c66d3a27",
       "width": 4400,
       "height": 3940,
       "origin": "Deterministic native SVG raster export",
@@ -391,32 +386,32 @@
   "reviewMaps": [
     {
       "id": "showroom-plan",
-      "path": "assets/plans/showroom-plan-review-map-v14.svg",
-      "bytes": 38160,
-      "sha256": "40ba8c0c878566bdd63a803c0b17fbe62cbc93cf37c16762d4bcffffe40c3614"
+      "path": "assets/plans/showroom-plan-review-map-v15.svg",
+      "bytes": 43976,
+      "sha256": "4f07eea7fd56cd9dbfd03d539742d722f7f79ec1dde474719d230aa84c11ade9"
     },
     {
       "id": "groundfloor-site-plan",
-      "path": "assets/plans/groundfloor-site-plan-review-map-v14.svg",
-      "bytes": 97408,
-      "sha256": "19fbaae6e2b5151b2b9eed5dc8ac58b7a497c085b97d9e4288c4321ce70c3145"
+      "path": "assets/plans/groundfloor-site-plan-review-map-v15.svg",
+      "bytes": 103008,
+      "sha256": "1cfc2f2da499fe28b44f480c7d6828f89597ba0c2fc54a5898237f062c531bba"
     },
     {
       "id": "workshop-plan",
-      "path": "assets/plans/workshop-plan-review-map-v14.svg",
-      "bytes": 47004,
-      "sha256": "5bfd6156ab862877864d927d17194aae8bf8d2eb05b8e5ad948a2c68f01b842c"
+      "path": "assets/plans/workshop-plan-review-map-v15.svg",
+      "bytes": 46783,
+      "sha256": "2e1221b2baa55fbfc3cf87bc52ac04e99eeb8323cd2907935ed3253a8693ac59"
     }
   ],
   "parkingGeometry": {
-    "revision": "owner-v14-r8",
+    "revision": "owner-v15-r9",
     "path": "assets/parking-photo-fit.json",
-    "sha256": "956feddf9eee4977825e085d7749ca1276498a15361b75fb6102ddbad4304e3c",
+    "sha256": "a08c4e47ac5fd5eeed719c5251e3052feedc00ab89f938d6cee86efb43d0d2f5",
     "modeledExteriorCells": 26,
     "illustrativeCars": 10,
     "illustrativeOccupancyPercent": 38.5,
     "indoorCustomerServiceSpaces": 1,
     "siteCapacity": null
   },
-  "presentationRevision": "v14"
+  "presentationRevision": "v15"
 }

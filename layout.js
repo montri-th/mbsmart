@@ -1,4 +1,4 @@
-/* v09-r8 / v14 owner review adoption; v11 comment contract and archived coordinates preserved. */
+/* v09-r9 / v15 owner review adoption; v11 comment contract and archived coordinates preserved. */
 window.BC_LAYOUT = {
   "revision": "v09",
   "defaultState": "handover",
@@ -1168,12 +1168,12 @@ window.BC_LAYOUT = {
       "handoverOperation": {
         "sequence": [
           "Temporarily move MB5 out of its display position",
-          "Open existing Flex vehicle opening; switch Flex AC off for transfer",
+          "Open existing Flex vehicle opening; switch Flex AC off for transfer; convert the mechanical entrance steps to ramp",
           "Drive MB6 through the vacated MB5 position",
-          "Turn left and descend the existing front Entrance ramp"
+          "Turn left and descend the existing front Entrance ramp; return the mechanical entrance to normal steps after transfer"
         ],
         "newVehicleDoor": false,
-        "routeStatus": "Owner-confirmed operating sequence; swept path, ramp dimensions/gradient and clearances require site verification.",
+        "routeStatus": "Owner-confirmed convertible mechanical steps/ramp, shown as steps with three anti-slip stickers per step in the model and artwork; swept path, deployed ramp dimensions/gradient and clearances require site verification.",
         "path": [
           [
             36,
@@ -1231,9 +1231,11 @@ window.BC_LAYOUT = {
         "forecourtRouteStatus": "HOLD: old metric forecourt path intersects narrowed F-row. Do not shorten the existing ramp or infer a clear lane; measure ramp toe and parking relationship first.",
         "confirmedExitSequence": [
           "Temporarily move MB5 and its price stand",
+          "Convert mechanical entrance steps to ramp for vehicle transfer",
           "MB6 passes vacated MB5",
-          "Turn left through existing front Entrance ramp",
-          "Exit through existing front gate"
+          "Turn left through the same front Entrance ramp",
+          "Exit through existing front gate",
+          "Return the mechanical entrance to steps after transfer"
         ]
       }
     },
@@ -2469,12 +2471,12 @@ window.BC_LAYOUT = {
       "handoverOperation": {
         "sequence": [
           "Temporarily move MB5 out of its display position",
-          "Open existing Flex vehicle opening; switch Flex AC off for transfer",
+          "Open existing Flex vehicle opening; switch Flex AC off for transfer; convert the mechanical entrance steps to ramp",
           "Drive MB6 through the vacated MB5 position",
-          "Turn left and descend the existing front Entrance ramp"
+          "Turn left and descend the existing front Entrance ramp; return the mechanical entrance to normal steps after transfer"
         ],
         "newVehicleDoor": false,
-        "routeStatus": "Owner-confirmed operating sequence; swept path, ramp dimensions/gradient and clearances require site verification.",
+        "routeStatus": "Owner-confirmed convertible mechanical steps/ramp, shown as steps with three anti-slip stickers per step in the model and artwork; swept path, deployed ramp dimensions/gradient and clearances require site verification.",
         "path": [
           [
             36,
@@ -2532,9 +2534,11 @@ window.BC_LAYOUT = {
         "forecourtRouteStatus": "HOLD: old metric forecourt path intersects narrowed F-row. Do not shorten the existing ramp or infer a clear lane; measure ramp toe and parking relationship first.",
         "confirmedExitSequence": [
           "Temporarily move MB5 and its price stand",
+          "Convert mechanical entrance steps to ramp for vehicle transfer",
           "MB6 passes vacated MB5",
-          "Turn left through existing front Entrance ramp",
-          "Exit through existing front gate"
+          "Turn left through the same front Entrance ramp",
+          "Exit through existing front gate",
+          "Return the mechanical entrance to steps after transfer"
         ]
       }
     },
@@ -3745,12 +3749,12 @@ window.BC_LAYOUT = {
       "handoverOperation": {
         "sequence": [
           "Temporarily move MB5 out of its display position",
-          "Open existing Flex vehicle opening; switch Flex AC off for transfer",
+          "Open existing Flex vehicle opening; switch Flex AC off for transfer; convert the mechanical entrance steps to ramp",
           "Drive MB6 through the vacated MB5 position",
-          "Turn left and descend the existing front Entrance ramp"
+          "Turn left and descend the existing front Entrance ramp; return the mechanical entrance to normal steps after transfer"
         ],
         "newVehicleDoor": false,
-        "routeStatus": "Owner-confirmed operating sequence; swept path, ramp dimensions/gradient and clearances require site verification.",
+        "routeStatus": "Owner-confirmed convertible mechanical steps/ramp, shown as steps with three anti-slip stickers per step in the model and artwork; swept path, deployed ramp dimensions/gradient and clearances require site verification.",
         "path": [
           [
             36,
@@ -3808,9 +3812,11 @@ window.BC_LAYOUT = {
         "forecourtRouteStatus": "HOLD: old metric forecourt path intersects narrowed F-row. Do not shorten the existing ramp or infer a clear lane; measure ramp toe and parking relationship first.",
         "confirmedExitSequence": [
           "Temporarily move MB5 and its price stand",
+          "Convert mechanical entrance steps to ramp for vehicle transfer",
           "MB6 passes vacated MB5",
-          "Turn left through existing front Entrance ramp",
-          "Exit through existing front gate"
+          "Turn left through the same front Entrance ramp",
+          "Exit through existing front gate",
+          "Return the mechanical entrance to steps after transfer"
         ]
       }
     }
@@ -4413,8 +4419,12 @@ window.BC_LAYOUT = {
       "landingY": 0.8,
       "yMax": 2.5,
       "risers": 5,
-      "status": "Superseded five-step proxy across vehicle entrance; owner confirms ramp at existing front Entrance",
-      "render": false
+      "status": "Owner confirms mechanical entrance shown as normal steps, exactly three anti-slip stickers per step. Five modeled risers and original photo-fit footprint are visual proxies, not surveyed mechanism/fabrication details.",
+      "render": true,
+      "mechanism": "convertible-steps-ramp",
+      "displayState": "steps",
+      "antiSlipPerStep": 3,
+      "dimensionsMeasured": false
     },
     "planting": {
       "frontBeds": [
@@ -4949,7 +4959,7 @@ window.BC_LAYOUT = {
     },
     "annexes": {
       "revision": "v09",
-      "iteration": "r8",
+      "iteration": "r9",
       "status": "Owner-confirmed uses and attachment; legacy grids recovered, exterior faces/photo-fit NOT measured as-built",
       "units": "metres, local plan X,Y to world X,height,-Y",
       "sources": [
@@ -5171,7 +5181,9 @@ window.BC_LAYOUT = {
           "xMax": 49,
           "y": 16.4,
           "height": 2.35,
-          "status": "Existing internal cross-passage mesh gate, photo-fit; NOT an opening in road fence"
+          "status": "Owner confirms continuous vehicle passage with no gate. Earlier photo-fit mesh leaves were an incorrect interpretation and are not rendered.",
+          "render": false,
+          "enabled": false
         },
         "material": "Light warm-grey corrugated metal, blue-grey ribbon windows, dark open/screened lower bays, steel awning",
         "geometryStatus": "E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Separate workshop layer distinguishes owner-reported existing equipment from proposed smart use, without certified as-built or installation claims.",
@@ -5232,6 +5244,17 @@ window.BC_LAYOUT = {
           "status": "Extent and stair use confirmed by owner. Exact direction, tread/riser dimensions, landing elevation and guard details are provisional visual geometry, not measured access or structural approval. No second-floor room or new door inferred.",
           "measuredDimensions": false,
           "render": true
+        },
+        "throughPassage": {
+          "id": "WORKSHOP-OPEN-THROUGH-PASSAGE",
+          "xMin": 40.2,
+          "xMax": 49,
+          "yMin": 16,
+          "yMax": 48.3,
+          "noGate": true,
+          "clearWidthSurveyed": false,
+          "status": "Owner confirms the surrounding vehicle drive continues under the Workshop roof without any gate. Bounds identify the modeled context strip, NOT its guaranteed usable clearance; retain parking and structural supports. Verify actual clear width and turning before use.",
+          "source": "Owner15Sep2026 and codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg"
         }
       },
       "contextCropY": 50,
@@ -5414,6 +5437,17 @@ window.BC_LAYOUT = {
         "Real browser/GPU and mobile visual review"
       ],
       "ownerLayout": {
+        "throughPassage": {
+          "id": "WORKSHOP-OPEN-THROUGH-PASSAGE",
+          "xMin": 40.2,
+          "xMax": 49,
+          "yMin": 16,
+          "yMax": 48.3,
+          "noGate": true,
+          "clearWidthSurveyed": false,
+          "status": "Owner confirms the surrounding vehicle drive continues under the Workshop roof without any gate. Bounds identify the modeled context strip, NOT its guaranteed usable clearance; retain parking and structural supports. Verify actual clear width and turning before use.",
+          "source": "Owner15Sep2026 and codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg"
+        },
         "innerConnection": {
           "mostlyOpen": true,
           "columnLineX": 40,
@@ -6578,7 +6612,7 @@ window.BC_LAYOUT = {
       }
     ],
     "exteriorParking": {
-      "revision": "owner-v14-r8",
+      "revision": "owner-v15-r9",
       "coordinateStatus": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
       "referenceRoad": "Sukhumvit local X; Samet–Ang Sila local Y",
       "allocationReviewPending": false,
@@ -8461,7 +8495,11 @@ window.BC_LAYOUT = {
       "xMax": 29.8,
       "yMin": -4.5,
       "yMax": 2.5,
-      "status": "Existing front Entrance ramp confirmed by owner; width/run/level profile are schematic pending measurement, not accessibility or vehicle-gradient approval"
+      "render": false,
+      "mechanism": "convertible-steps-ramp",
+      "displayState": "steps",
+      "deployedOnlyForVehicleTransfer": true,
+      "status": "Owner confirms mechanical steps convert to ramp only for vehicle transfer; normal model and artwork show steps. Prior operating envelope width/run/level profile are schematic pending measurement, not accessibility or vehicle-gradient approval."
     }
   },
   "feedbackPolicy": {
@@ -8761,6 +8799,17 @@ window.BC_LAYOUT = {
         "Real browser/GPU and mobile visual review"
       ],
       "ownerLayout": {
+        "throughPassage": {
+          "id": "WORKSHOP-OPEN-THROUGH-PASSAGE",
+          "xMin": 40.2,
+          "xMax": 49,
+          "yMin": 16,
+          "yMax": 48.3,
+          "noGate": true,
+          "clearWidthSurveyed": false,
+          "status": "Owner confirms the surrounding vehicle drive continues under the Workshop roof without any gate. Bounds identify the modeled context strip, NOT its guaranteed usable clearance; retain parking and structural supports. Verify actual clear width and turning before use.",
+          "source": "Owner15Sep2026 and codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg"
+        },
         "innerConnection": {
           "mostlyOpen": true,
           "columnLineX": 40,
@@ -9662,7 +9711,7 @@ window.BC_LAYOUT = {
     ]
   },
   "defaultExteriorScheme": "proposed",
-  "iteration": "r8",
+  "iteration": "r9",
   "mbVehicles": [
     {
       "id": "MB1",
@@ -9750,10 +9799,10 @@ window.BC_LAYOUT = {
     "mb5": "Front-centre interpretation, aligned to entrance centreX28.2 with setback adjusted toY4.3",
     "priceStands": "15Sep2026: MB1–MB5 at actual fitted front-right tyre, sign faces vehicle front; supersedes former0.30m nose setback for these five only. MB6 handover retains prior RHD front-right0.30m setback and facing. AD01 visitor-path, open-door and supplier-footprint coordination remain unverified.",
     "status": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
-    "designRevision": "v14",
+    "designRevision": "v15",
     "latestAnnotationReview": {
       "source": "codex-clipboard-87d47988-a6b6-4510-a893-8c74909f1248.jpg",
-      "status": "latest15Sep owner instructions implemented in source; actual-factory geometry verified; refreshed artist images and publication pending",
+      "status": "Latest15Sep owner instructions implemented in r9 source and reviewed artwork; current normal-step mechanical entrance and open Workshop through-passage verified. Publication checks follow integration. Historic v11 comment/pin coordinate contract unchanged.",
       "latestAnnotationAdoptedInFull": true,
       "sourceVerification": "PASS15Sep2026: assembled actual-Three geometry178/178 including five-car front-right-tyre/forward-face stands across30 mode/AC/car cases, exact3smart/3MB/2Thai flags, noSP1/SF1, nohandover-front planting, rearwall charger/carefence positions. Independent Type4 audit9/9: seven unchanged SVG paths, 4991fill samples,14front/back raycasts, raised illuminated outward caps and real dark backs. No survey, fabrication, structural/electrical or brand approval claim.",
       "items": [
@@ -9796,9 +9845,25 @@ window.BC_LAYOUT = {
         ]
       },
       "ownerClarification": "Breeze-block means brick ventilation fence at roadside, not a second inset interior wall. The inset column line is mostly open and connects through to the workshop; photo-supported opening Y22–42 is retained with columns and beams. Keep smart care at its current roadside fence anchor between MB-D02/MB-D03 facing workshop."
+    },
+    "followupR9": {
+      "date": "2026-09-15",
+      "items": [
+        "Use Workshop consistently in current authored web and documents; preserve original source filenames and client comment quotations",
+        "Surrounding vehicle drive passes below Workshop roof continuously with no gate or shutter",
+        "Reconcile the photographed entrance staircase with the previously modeled vehicle ramp before changing either"
+      ],
+      "status": "Owner-confirmed mechanical entrance shown as normal steps, exactly three anti-slip stickers per step. Actual geometry checks pass: eight entrance checks and twelve roadside-shell checks including no gate and eighteen open through-passage ray samples. Two exterior images corrected and all eight artist views reviewed for r9. Unmeasured dimensions, mechanism engineering and vehicle swept-path remain unverified; release verification follows integration.",
+      "sources": [
+        "codex-clipboard-925fcfe4-9ceb-40d7-af15-3def6693b305.jpg",
+        "codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg",
+        "codex-clipboard-975608e7-3b7d-4f0f-91f4-4990f3a2dfae.png"
+      ],
+      "entranceClarificationPending": false,
+      "entranceConfirmation": "Mechanical steps convert to a ramp only while moving vehicles, then back to steps. Model and artist impressions must show steps, with three anti-slip stickers per step. No separate adjacent vehicle doorway."
     }
   },
-  "designRevision": "v14",
+  "designRevision": "v15",
   "customerExperience": {
     "format": "Autohaus Small",
     "salesJourney": "Sales Step V",
@@ -9808,12 +9873,12 @@ window.BC_LAYOUT = {
     "handover": {
       "sequence": [
         "Temporarily move MB5 out of its display position",
-        "Open existing Flex vehicle opening; switch Flex AC off for transfer",
+        "Open existing Flex vehicle opening; switch Flex AC off for transfer; convert the mechanical entrance steps to ramp",
         "Drive MB6 through the vacated MB5 position",
-        "Turn left and descend the existing front Entrance ramp"
+        "Turn left and descend the existing front Entrance ramp; return the mechanical entrance to normal steps after transfer"
       ],
       "newVehicleDoor": false,
-      "routeStatus": "Owner-confirmed operating sequence; swept path, ramp dimensions/gradient and clearances require site verification.",
+      "routeStatus": "Owner-confirmed convertible mechanical steps/ramp, shown as steps with three anti-slip stickers per step in the model and artwork; swept path, deployed ramp dimensions/gradient and clearances require site verification.",
       "path": [
         [
           36,
@@ -9871,9 +9936,11 @@ window.BC_LAYOUT = {
       "forecourtRouteStatus": "HOLD: old metric forecourt path intersects narrowed F-row. Do not shorten the existing ramp or infer a clear lane; measure ramp toe and parking relationship first.",
       "confirmedExitSequence": [
         "Temporarily move MB5 and its price stand",
+        "Convert mechanical entrance steps to ramp for vehicle transfer",
         "MB6 passes vacated MB5",
-        "Turn left through existing front Entrance ramp",
-        "Exit through existing front gate"
+        "Turn left through the same front Entrance ramp",
+        "Exit through existing front gate",
+        "Return the mechanical entrance to steps after transfer"
       ]
     },
     "CS": "Customer Service",

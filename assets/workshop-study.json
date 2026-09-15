@@ -104,6 +104,17 @@
     "Real browser/GPU and mobile visual review"
   ],
   "ownerLayout": {
+    "throughPassage": {
+      "id": "WORKSHOP-OPEN-THROUGH-PASSAGE",
+      "xMin": 40.2,
+      "xMax": 49,
+      "yMin": 16,
+      "yMax": 48.3,
+      "noGate": true,
+      "clearWidthSurveyed": false,
+      "status": "Owner confirms the surrounding vehicle drive continues under the Workshop roof without any gate. Bounds identify the modeled context strip, NOT its guaranteed usable clearance; retain parking and structural supports. Verify actual clear width and turning before use.",
+      "source": "Owner15Sep2026 and codex-clipboard-11cea104-aa54-4b52-bb2f-1d179de2be71.jpg"
+    },
     "innerConnection": {
       "mostlyOpen": true,
       "columnLineX": 40,

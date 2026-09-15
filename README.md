@@ -1,4 +1,12 @@
-# Benz Chitchai · v11 three-section design review
+# Benz Chitchai · V15 / Model v09-r9
+
+Current owner correction: use **Workshop** in the current website, plans and authored documents. The drive continues under the Workshop roof without gate leaves or shutters. The mechanical Showroom entrance is displayed as **steps**, with three anti-slip stickers per step; it converts to a ramp only during vehicle transfer and returns to steps afterward. Step count, run, rise and deployed ramp envelope remain visual/photo-fit geometry, not measured fabrication or operating approval.
+
+The v11 comment contract, existing comment pins, 26 exterior parking cells, 10 illustrative cars, 10 existing workshop lifts, English smart station signs, three smart flags, Type4 illuminated handover sign and Thailand left-hand traffic remain intact. Original source filenames, client quotations and issued archives are preserved; the terminology change applies to current authored material.
+
+V15 includes two corrected exterior artist images and six explicitly re-reviewed retained images, three current SVG plans and eleven native PNG downloads. Source dimensions are preserved: the new street image is 1671×941; the other seven are 1672×941. No AI image was upscaled. Current source/build, 37 offline feedback checks and twelve desktop/mobile gallery-plan states pass; exact publication verification is recorded separately after deployment.
+
+## Historical v11 presentation record (superseded)
 
 Current presentation: four Showroom interior impressions, two Exterior impressions and two workshop impressions, three highlighted Smart SiS vector plans, twelve locked model views and native-resolution downloads (AI PNG 1672×941, plan PNG 4400px wide and SVG). Soft-light photographic interpretations are not measured conditions or compliance proof; native plans and model govern geometry.
 
@@ -12,7 +20,7 @@ Public asset provenance is `assets/presentation-v11.json`. All original photos, 
 
 ## Historical v10 presentation (superseded above)
 
-Showroom interior, Exterior and อู่ซ่อม each have two soft-light photorealistic artist impressions, captions, and their own image/model feedback context. Eleven model presets are locked by default; the owner can unlock the selected camera. Model geometry remains v09-r3. Images are AI-assisted interpretations, not measured conditions, approved design, specified equipment, or engineering evidence. Compare with the linked source model before decisions.
+Showroom interior, Exterior and Workshop each have two soft-light photorealistic artist impressions, captions, and their own image/model feedback context. Eleven model presets are locked by default; the owner can unlock the selected camera. Model geometry remains v09-r3. Images are AI-assisted interpretations, not measured conditions, approved design, specified equipment, or engineering evidence. Compare with the linked source model before decisions.
 
 Draft comments are separated in page memory by section, image/model view and model state. They are not stored across reloads. Artist references always use handover / AC off / proposed; model comments retain their selected state. Location pins remain showroom-model only. The original private log and endpoint are preserved. Backend deployment version 6 advertises the complete v10 contract; a labelled live test was received and read back as one native log row with the exact image/section context. A retry encountered a Google redirect error, so live retry receipt equality is not claimed. Local backend and simulated frontend checks cover deduplication and preservation of newer drafts.
 

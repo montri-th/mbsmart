@@ -1,12 +1,12 @@
 /* One canonical owner-review projection, applied after the frozen v08 → v09 base.
  * Wire revision v09 / experience v11 are retained for historical comment pins.
- * r8 identifies this geometry; coordinates are not construction set-out values. */
+ * r9 identifies this geometry; coordinates are not construction set-out values. */
 module.exports=function applyOwnerReview(d,review){
   const s=d.site,e=review.exterior,w=JSON.parse(JSON.stringify(review.workshop)),b=e.boundary;
   const sideRefits=new Map(e.parking.workshopSideRefits.map(q=>[q.id,q]));
   w.reservations.parking=w.reservations.parking.map(q=>({...q,code:e.parking.bayCodes[q.id],...(sideRefits.has(q.id)?{bounds:sideRefits.get(q.id).bounds.slice(),status:'Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified'}:{})}));
-  d.iteration='r8';d.designRevision='v14';d.customerExperience=review.customerExperience;
-  d.reviewAdoptions={...d.reviewAdoptions,designRevision:'v14',ownerReviewDate:review.date,status:review.status,latestAnnotationReview:review.latestAnnotationReview,followupR7:review.followupR7,followupR8:review.followupR8};
+  d.iteration='r9';d.designRevision='v15';d.customerExperience=review.customerExperience;
+  d.reviewAdoptions={...d.reviewAdoptions,designRevision:'v15',ownerReviewDate:review.date,status:review.status,latestAnnotationReview:review.latestAnnotationReview,followupR7:review.followupR7,followupR8:review.followupR8,followupR9:review.followupR9};
   s.ownerReview=review.status;s.leftContextEdge=b.leftContextEdge;
   s.front.apronEdgeY={value:b.frontY,status:'Owner-confirmed7.20m from retained planter outer edgeY−1.12 to physical inside fence face; not a cadastral survey'};
   s.front.confirmedPlanterOuterY=b.frontDatum.planterOuterY;
@@ -24,7 +24,9 @@ module.exports=function applyOwnerReview(d,review){
   s.annexes.workshop.awning.status='Existing low cross-passage canopy; large workshop mass continues beside it to roadside columns. Dimensions photo-fit.';
   s.annexes.workshop.roadsideShell=w.roadsideShell;
   s.annexes.workshop.roadsideMasonry=w.roadsideMasonry;
-  s.annexes.iteration='r8';
+  s.annexes.workshop.sideGate={...s.annexes.workshop.sideGate,render:false,enabled:false,status:'Owner confirms continuous vehicle passage with no gate. Earlier photo-fit mesh leaves were an incorrect interpretation and are not rendered.'};
+  s.annexes.workshop.throughPassage={...w.throughPassage};
+  s.annexes.iteration='r9';
   s.limitations=s.limitations.filter(q=>!q.includes('Street fence stops at observed Y30'));
   s.limitations.push('Workshop operational grid unchanged; architectural road-facing extension and roadside brick-fence segment follow owner photographs. Wall transitions, member sizes, road widths and paint shade are visual proposals pending site/supplier checks.');
   s.planting={...s.planting,frontBeds:e.planting.frontBeds.map(q=>q.slice()),palmCentres:e.planting.palmCentres.map(q=>q.slice()),insideFenceBeds:[],sidewalkTrees:[],frontagePolicy:e.planting};
@@ -65,17 +67,17 @@ module.exports=function applyOwnerReview(d,review){
   // F3/F4 border the unmeasured ramp toe; no illustrative car may obstruct it.
   const occupied=['F-1','F-2','F-5','S-2','S-3','S-4','OWNER-REAR-03','OWNER-REAR-05','OWNER-REAR-07','OWNER-REAR-09'];
   const cars=occupied.map((id,i)=>{const q=cells.find(c=>c.id===id),[x0,y0,x1,y1]=q.bounds,isGLC=i===3||i===7;return {id:'EXT-MB-'+id,bayId:id,model:'Mercedes-Benz '+(isGLC?'GLC':'C-Class'),profile:isGLC?'glc':'cclass',brand:'MB',paint:i%3===0?'#252a2e':i%3===1?'#eceeea':'#c4c7c5',photoReference:'Owner showroom photographs 12 September 2026; family appearance, not live stock',cx:(x0+x1)/2,cy:(y0+y1)/2,l:isGLC?4.75:4.8,w:isGLC?2.12:2.10,heightCap:isGLC?1.68:1.55,angle:x1-x0>y1-y0?0:90};});
-  s.exteriorParking={revision:'owner-v14-r8',coordinateStatus:review.status,referenceRoad:'Sukhumvit local X; Samet–Ang Sila local Y',allocationReviewPending:false,allocationStatus:e.parking.allocationStatus,allocations:e.parking.allocations,identifiedCompleteCells:cells.length,siteCapacity:null,illustrationOccupancy:{occupied:cars.length,identifiedCompleteCells:cells.length,ratio:cars.length/cells.length,scope:'10 illustrative MB cars / 26 exterior study cells = 38.5%, approximately 40%. All three smart allocations, F3/F4 ramp approach and shrine corner remain empty; no certified capacity or invented smart stock claim. Separate indoor CS reservation excluded.'},status:'Owner-directed mixed parallel/perpendicular parking and use codes. F3/F4 ramp approach and shrine/pylon/gate frontage kept empty; manoeuvring and sign hardware remain unverified.',cells,paint,cars,unknownPaintSpans:['Photo-fit endpoints and side boundary require site measurement','Rear 1m gap is wall offset, not an aisle; road access not inferred','Front F3/F4 paint-to-ramp-toe relationship and metric exit route HOLD'],level:s.levels.forecourt};
+  s.exteriorParking={revision:'owner-v15-r9',coordinateStatus:review.status,referenceRoad:'Sukhumvit local X; Samet–Ang Sila local Y',allocationReviewPending:false,allocationStatus:e.parking.allocationStatus,allocations:e.parking.allocations,identifiedCompleteCells:cells.length,siteCapacity:null,illustrationOccupancy:{occupied:cars.length,identifiedCompleteCells:cells.length,ratio:cars.length/cells.length,scope:'10 illustrative MB cars / 26 exterior study cells = 38.5%, approximately 40%. All three smart allocations, F3/F4 ramp approach and shrine corner remain empty; no certified capacity or invented smart stock claim. Separate indoor CS reservation excluded.'},status:'Owner-directed mixed parallel/perpendicular parking and use codes. F3/F4 ramp approach and shrine/pylon/gate frontage kept empty; manoeuvring and sign hardware remain unverified.',cells,paint,cars,unknownPaintSpans:['Photo-fit endpoints and side boundary require site measurement','Rear 1m gap is wall offset, not an aisle; road access not inferred','Front F3/F4 paint-to-ramp-toe relationship and metric exit route HOLD'],level:s.levels.forecourt};
   d.exterior.allocationReviewPending=false;
   for(const q of d.exterior.parking){const assignment=e.parking.allocations.find(a=>a.referenceId===q.id),cell=assignment&&cells.find(c=>c.id===assignment.bayId);if(!cell)throw new Error('Missing owner parking allocation '+q.id);const [x0,y0,x1,y1]=cell.bounds;Object.assign(q,assignment,{id:q.id,use:'smart '+assignment.role.toLowerCase(),existingBayId:cell.id,bounds:cell.bounds.slice(),render:true,allocationReviewPending:false,x:(x0+x1)/2,y:(y0+y1)/2,width:Math.min(x1-x0,y1-y0),length:Math.max(x1-x0,y1-y0),status:'Owner-confirmed '+assignment.label+' at '+assignment.code+'; sign anchor is an unmeasured design proxy, supplier/access approval pending'});}
-  s.entryRamp={xMin:26.6,xMax:29.8,yMin:-4.5,yMax:2.5,status:'Existing front Entrance ramp confirmed by owner; width/run/level profile are schematic pending measurement, not accessibility or vehicle-gradient approval'};
-  s.entrySteps.render=false;s.entrySteps.status='Superseded five-step proxy across vehicle entrance; owner confirms ramp at existing front Entrance';
+  s.entryRamp={xMin:26.6,xMax:29.8,yMin:-4.5,yMax:2.5,render:false,mechanism:'convertible-steps-ramp',displayState:'steps',deployedOnlyForVehicleTransfer:true,status:'Owner confirms mechanical steps convert to ramp only for vehicle transfer; normal model and artwork show steps. Prior operating envelope width/run/level profile are schematic pending measurement, not accessibility or vehicle-gradient approval.'};
+  Object.assign(s.entrySteps,{render:true,mechanism:'convertible-steps-ramp',displayState:'steps',antiSlipPerStep:3,dimensionsMeasured:false,status:'Owner confirms mechanical entrance shown as normal steps, exactly three anti-slip stickers per step. Five modeled risers and original photo-fit footprint are visual proxies, not surveyed mechanism/fabrication details.'});
   d.customerExperience.handover.path=[[36,5.25],[32,5.25],[30,5.25],[28.2,5.25],[28.2,2.5],[28.2,-4.5]];
   d.customerExperience.handover.forecourtPath=[[28.2,-4.5],[27,-5.9],[18,-5.9],[8,-5.9],[-1.75,-6.9],[-1.75,-13.5]];
   d.customerExperience.handover.forecourtRouteRender=false;
   d.customerExperience.handover.forecourtPathSuperseded=true;
   d.customerExperience.handover.forecourtRouteStatus='HOLD: old metric forecourt path intersects narrowed F-row. Do not shorten the existing ramp or infer a clear lane; measure ramp toe and parking relationship first.';
-  d.customerExperience.handover.confirmedExitSequence=['Temporarily move MB5 and its price stand','MB6 passes vacated MB5','Turn left through existing front Entrance ramp','Exit through existing front gate'];
+  d.customerExperience.handover.confirmedExitSequence=['Temporarily move MB5 and its price stand','Convert mechanical entrance steps to ramp for vehicle transfer','MB6 passes vacated MB5','Turn left through the same front Entrance ramp','Exit through existing front gate','Return the mechanical entrance to steps after transfer'];
   d.customerExperience.sharedCharging='Four owner-confirmed charging points: showroom, Customer Service, rear workshop and rear parking. Existing SHARED-EV represents the showroom point; mounting, hardware, electrical capacity and specifications remain unverified.';
   d.exterior.sharedCharging=d.customerExperience.sharedCharging;
   for(const state of d.states){
