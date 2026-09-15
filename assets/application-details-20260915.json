@@ -150,35 +150,37 @@
       "section": "workshop",
       "kind": "artist-impression",
       "title": "ป้าย smart care ด้านในรั้ว Workshop",
-      "caption": "ติดป้าย smart care ที่ผิวด้านในรั้วระหว่าง MB-D02 กับ MB-D03 หันเข้าหา Workshop ตามตำแหน่งที่เจ้าของยืนยัน",
+      "caption": "ป้าย smart care ตัวอักษรดำบนแผ่นพื้นสีอ่อน ติดด้านในรั้วระหว่าง MB-D02 กับ MB-D03 หันเข้าหา Workshop ตามตำแหน่งที่เจ้าของยืนยัน",
       "note": "ป้ายเดียว หันเข้าหาอู่ กึ่งกลางระหว่าง MB-D02 และ MB-D03",
-      "alt": "ป้าย smart care บนผิวด้านในรั้วอิฐช่องลมสีเทาเข้ม ระหว่างเสาคอนกรีตริม Workshop",
+      "alt": "ป้าย smart care ตัวอักษรดำ โดย smart หนาและ care บาง บนแผ่นพื้นสีอ่อนยึดซ่อน ติดกึ่งกลางผิวด้านในรั้วระหว่างเสาคอนกรีตริม Workshop",
       "geometryRevision": "v09-r9",
       "acceptanceStatus": "accepted-by-root",
       "preview": {
-        "path": "assets/application-details/smart-care-position-20260915.jpg",
-        "sha256": "b8d6673dbbc0942a036d698757366a9097a19d3235b12a5ac098c950458ae8fd",
+        "path": "assets/application-details/smart-care-position-20260915-r2.jpg",
+        "sha256": "d5489a0ebee3f14a84824c35902501edd022302a211472b50caeeb784f42e9dc",
         "width": 1672,
         "height": 941
       },
       "master": {
-        "path": "assets/application-details/smart-care-position-20260915.png",
-        "sha256": "4a26efa18369ddddf12e30c958678020881162d8e44733634d62ef5520f54adf",
+        "path": "assets/application-details/smart-care-position-20260915-r2.png",
+        "sha256": "e13ac948f92adbc7bbbb640ad26f451008eea2d4db0eb4926791420a4bb59601",
         "width": 1672,
         "height": 941
       },
       "nativeResolution": true,
       "upscaled": false,
-      "generatedMasterSha256": "4a26efa18369ddddf12e30c958678020881162d8e44733634d62ef5520f54adf",
+      "generatedMasterSha256": "e13ac948f92adbc7bbbb640ad26f451008eea2d4db0eb4926791420a4bb59601",
       "sources": [
         "https://montri-th.github.io/mbsmart/assets/owner-review-v12.json",
         "https://montri-th.github.io/mbsmart/assets/workshop-study.json"
       ],
       "reviewNotes": [
-        "Owner-confirmed inner-fence location between MB-D02 and MB-D03, facing Workshop.",
+        "Owner-reference style: bold black smart plus thin black care on a light flush backer with concealed mounting.",
+        "The single sign stays on the owner-confirmed inner fence between MB-D02 and MB-D03, facing Workshop.",
         "Artist impression; dimensions, installation and brand acceptance remain subject to review."
       ],
-      "sourceBasis": "Model v09-r9 reference capture; artist interpretation for presentation"
+      "sourceBasis": "Model v09-r9 reference capture; artist interpretation for presentation",
+      "imageRevision": "r2"
     }
   ]
 }
