@@ -1,0 +1,25 @@
+/* Inherits the reviewed Mercedes-inspired black, white and restrained blue surface. */
+.application-detail-jumps{margin:0 0 28px;padding:0 0 20px;border-bottom:1px solid var(--line)}
+.application-detail-jumps p{margin:0 0 8px;font-size:.875rem;font-weight:600}
+.application-detail-jumps ul{display:flex;flex-wrap:wrap;gap:4px 24px;list-style:none;padding:0;margin:0}
+.application-detail-jumps a{display:inline-block;min-height:44px;padding:10px 0;font-size:.875rem;font-weight:600;text-underline-offset:4px}
+.application-details{margin-top:56px;padding-top:32px;border-top:1px solid var(--line)}
+.application-details h2{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:400;line-height:1.35;margin:0 0 12px;max-width:24ch}
+.application-details-intro{font-size:1rem;line-height:1.65;max-width:68ch;margin:0 0 30px;color:var(--muted)}
+.application-detail{margin:0 0 48px;scroll-margin-top:24px}
+.application-detail-image{display:block;line-height:0;background:#fff;overflow:hidden}
+.application-detail-image img{display:block;width:100%;height:auto;object-fit:contain;transition:filter 160ms ease-out}
+.application-detail-image:hover img{filter:brightness(.96)}
+.application-detail figcaption{padding-top:20px}
+.application-detail h3{font-size:1.45rem;line-height:1.45;font-weight:500;margin:0 0 10px;text-wrap:balance}
+.application-detail-caption{font-size:1rem;line-height:1.65;max-width:70ch;margin:0 0 12px}
+.application-detail-status{font-size:.875rem;line-height:1.65;color:var(--muted);max-width:75ch;margin:0}
+.application-detail-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px 24px;margin-top:16px}
+.application-detail-actions a{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;font-size:.875rem;font-weight:600;text-underline-offset:4px}
+.application-detail-actions button{font-size:.875rem}
+.application-detail-image-error{font-size:.875rem;line-height:1.65;padding:20px;background:#fff;margin:0}
+.application-detail-provenance{font-size:.8125rem;line-height:1.6;margin:24px 0 0;color:var(--muted)}
+.application-detail-jumps a:hover,.application-detail-actions a:hover{color:#0068ba;text-decoration-thickness:2px}
+@media(max-width:600px){.application-details{margin-top:36px;padding-top:24px}.application-detail{margin-bottom:36px}.application-detail h3{font-size:1.3rem}.application-detail-actions{gap:4px 18px}.application-detail-actions button{flex-basis:100%;margin-top:6px}.application-detail-jumps ul{display:block}.application-details-intro{margin-bottom:24px}}
+@media(prefers-reduced-motion:reduce){.application-detail-image img{transition:none}}
+html.capture .application-details,html.capture .application-detail-jumps{display:none!important}

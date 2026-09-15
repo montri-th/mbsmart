@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "revision": "slides-20260915-v15-steps",
+  "geometryRevision": "v09-r9",
+  "experienceRevision": "v11",
+  "baseCommit": "38fc4a5780ed6aaaf1458689ab6881b6a8443346",
+  "items": [
+    {
+      "id": "smart-type4-detail",
+      "section": "showroom",
+      "kind": "artist-impression",
+      "title": "ป้าย smart Type 4 ที่กระจกห้องส่งมอบ",
+      "caption": "มองจากภายนอกเห็นป้าย smart Type 4 Illuminated ด้านในกระจกห้องส่งมอบ หันออกถนนและเชื่อมกับพื้นที่ Mercedes-Benz เดิม",
+      "note": "ติดตั้งด้านในกระจก หันหน้าป้ายสู่ภายนอก · Entrance แสดงเป็นขั้นบันไดตามสภาพใช้งานปกติ",
+      "alt": "ป้าย smart สีขาวบนกระจกห้องส่งมอบ มีรถคูเป้ Mercedes-Benz สองประตูสีดำด้านใน",
+      "geometryRevision": "v09-r9",
+      "acceptanceStatus": "accepted-by-root",
+      "preview": {
+        "path": "assets/application-details/smart-type4-detail-steps-v15.jpg",
+        "sha256": "87c4787c0096396eb9de34948ced6664dc1f147215a5191265c4e664e28d55fb",
+        "width": 1671,
+        "height": 941
+      },
+      "master": {
+        "path": "assets/application-details/smart-type4-detail-steps-v15.png",
+        "sha256": "9d9f30ec1853e2d777d32e5c81e70e2417268a50ba4c4911a17eec0ca6fb7257",
+        "width": 1671,
+        "height": 941
+      },
+      "nativeResolution": true,
+      "upscaled": false,
+      "generatedMasterSha256": "9d9f30ec1853e2d777d32e5c81e70e2417268a50ba4c4911a17eec0ca6fb7257",
+      "supersedesMaster": "assets/application-details/smart-type4-detail-20260915.png",
+      "correctionTool": "built-in image_gen__imagegen",
+      "sources": [
+        "https://montri-th.github.io/mbsmart/assets/owner-review-v12.json",
+        "https://montri-th.github.io/mbsmart/assets/geometry-register.json"
+      ],
+      "reviewNotes": [
+        "Outward-facing Type 4 sign at handover glazing; two-door coupe; no planting in front of this room.",
+        "V15 localized correction replaces the ramp with normal mechanical stair state and three dark anti-slip patches per tread; original Type 4 sign, coupe, glass, furniture, canopy and framing retained.",
+        "Artist impression; dimensions, installation and brand acceptance remain subject to review."
+      ],
+      "sourceBasis": "Model v09-r9 reference capture; artist interpretation for presentation"
+    },
+    {
+      "id": "smart-front-parking",
+      "section": "exterior",
+      "kind": "artist-impression",
+      "title": "จุดจอด smart ด้านหน้าอาคาร",
+      "caption": "แยกช่อง S-D-01 สำหรับรถทดลองขับคันที่ 1 และ S-S-01 สำหรับลูกค้า ให้จดจำได้ตั้งแต่หน้าโชว์รูม",
+      "note": "S-D-01 สำหรับทดลองขับ · S-S-01 สำหรับลูกค้า",
+      "alt": "ช่องจอดว่างหน้าโชว์รูมสองช่อง ป้าย S-D-01 Test Drive 1 และ S-S-01 For Customers",
+      "geometryRevision": "v09-r9",
+      "acceptanceStatus": "accepted-by-root",
+      "preview": {
+        "path": "assets/application-details/smart-front-parking-20260915.jpg",
+        "sha256": "b95a18a35ef8fb3134ea484a2b079f818f692114da6fef14c71b84f1f38a5381",
+        "width": 1672,
+        "height": 941
+      },
+      "master": {
+        "path": "assets/application-details/smart-front-parking-20260915.png",
+        "sha256": "c132b479ae99332d9d07f046f6744dae1e38327db7e8d3d89add179d41f7a753",
+        "width": 1672,
+        "height": 941
+      },
+      "nativeResolution": true,
+      "upscaled": false,
+      "generatedMasterSha256": "c132b479ae99332d9d07f046f6744dae1e38327db7e8d3d89add179d41f7a753",
+      "sources": [
+        "https://montri-th.github.io/mbsmart/assets/owner-review-v12.json",
+        "https://montri-th.github.io/mbsmart/assets/exterior-proposal.json"
+      ],
+      "reviewNotes": [
+        "S-D-01 Test Drive 1 and S-S-01 For Customers follow the presentation brief.",
+        "Artist impression; dimensions, installation and brand acceptance remain subject to review."
+      ],
+      "sourceBasis": "Model v09-r9 reference capture; artist interpretation for presentation"
+    },
+    {
+      "id": "smart-rear-parking",
+      "section": "exterior",
+      "kind": "artist-impression",
+      "title": "จุดจอดรถทดลองขับด้านหลัง Workshop",
+      "caption": "ช่อง S-D-02 รองรับรถทดลองขับคันที่ 2 ในแถวจอดด้านหลัง Workshop โดยใช้พื้นที่ใต้หลังคาเดิมร่วมกับรถ Mercedes-Benz",
+      "note": "S-D-02 อยู่ปลายแนวจอดด้านหลัง Workshop",
+      "alt": "ช่อง S-D-02 Test Drive 2 ใต้หลังคาด้านหลัง Workshop พร้อมช่องจอด Mercedes-Benz ข้างเคียง",
+      "geometryRevision": "v09-r9",
+      "acceptanceStatus": "accepted-by-root",
+      "preview": {
+        "path": "assets/application-details/smart-rear-parking-20260915.jpg",
+        "sha256": "d8b459f3444b63b1b5209fd1251ed61550890c812ce4ea80789ae1f8d599b514",
+        "width": 1672,
+        "height": 941
+      },
+      "master": {
+        "path": "assets/application-details/smart-rear-parking-20260915.png",
+        "sha256": "978c5cdb7ff926cb571fc4c80a0bb51269f512232cfd228ba79045fa839500eb",
+        "width": 1672,
+        "height": 941
+      },
+      "nativeResolution": true,
+      "upscaled": false,
+      "generatedMasterSha256": "978c5cdb7ff926cb571fc4c80a0bb51269f512232cfd228ba79045fa839500eb",
+      "sources": [
+        "https://montri-th.github.io/mbsmart/assets/owner-review-v12.json",
+        "https://montri-th.github.io/mbsmart/assets/exterior-proposal.json"
+      ],
+      "reviewNotes": [
+        "S-D-02 uses rear bay 1 in the model reference.",
+        "Artist impression; dimensions, installation and brand acceptance remain subject to review."
+      ],
+      "sourceBasis": "Model v09-r9 reference capture; artist interpretation for presentation"
+    },
+    {
+      "id": "smart-me-station",
+      "section": "workshop",
+      "kind": "artist-impression",
+      "title": "M/E Station บนพื้นที่ทำงานเดิม",
+      "caption": "กำหนดช่อง M/E Station ด้วยเส้นพื้นและป้าย เพื่อให้เห็นขอบเขตงาน smart ชัดเจน พื้นที่ช่องนี้คงว่างและไม่เพิ่มลิฟต์หรืออุปกรณ์",
+      "note": "พื้นที่ว่างตีเส้น พร้อมป้ายแขวนเหนือช่องงาน",
+      "alt": "พื้นที่สี่เหลี่ยมเส้นสีเหลืองว่างหน้าป้าย M/E Station มีลิฟต์เดิมอยู่ช่องข้างเคียง",
+      "geometryRevision": "v09-r9",
+      "acceptanceStatus": "accepted-by-root",
+      "preview": {
+        "path": "assets/application-details/smart-me-station-20260915.jpg",
+        "sha256": "34ac1aa2750264b8005b89eb8f56b83abd6e316fbf1d63b4fb3a395612d4bdbe",
+        "width": 1672,
+        "height": 941
+      },
+      "master": {
+        "path": "assets/application-details/smart-me-station-20260915.png",
+        "sha256": "76909ae3f1cbde91fb369d0d4b64ac4df94ca4a68fc1ca2597c0e989759e75d1",
+        "width": 1672,
+        "height": 941
+      },
+      "nativeResolution": true,
+      "upscaled": false,
+      "generatedMasterSha256": "76909ae3f1cbde91fb369d0d4b64ac4df94ca4a68fc1ca2597c0e989759e75d1",
+      "sources": [
+        "https://montri-th.github.io/mbsmart/assets/owner-review-v12.json",
+        "https://montri-th.github.io/mbsmart/assets/workshop-study.json"
+      ],
+      "reviewNotes": [
+        "Marked M/E bay remains empty; adjacent lifts are existing.",
+        "Artist impression; dimensions, installation and brand acceptance remain subject to review."
+      ],
+      "sourceBasis": "Model v09-r9 reference capture; artist interpretation for presentation"
+    },
+    {
+      "id": "smart-care-position",
+      "section": "workshop",
+      "kind": "artist-impression",
+      "title": "ป้าย smart care ด้านในรั้ว Workshop",
+      "caption": "ติดป้าย smart care ที่ผิวด้านในรั้วระหว่าง MB-D02 กับ MB-D03 หันเข้าหา Workshop ตามตำแหน่งที่เจ้าของยืนยัน",
+      "note": "ป้ายเดียว หันเข้าหา Workshop กึ่งกลางระหว่าง MB-D02 และ MB-D03",
+      "alt": "ป้าย smart care บนผิวด้านในรั้วอิฐช่องลมสีเทาเข้ม ระหว่างเสาคอนกรีตริม Workshop",
+      "geometryRevision": "v09-r9",
+      "acceptanceStatus": "accepted-by-root",
+      "preview": {
+        "path": "assets/application-details/smart-care-position-20260915.jpg",
+        "sha256": "b8d6673dbbc0942a036d698757366a9097a19d3235b12a5ac098c950458ae8fd",
+        "width": 1672,
+        "height": 941
+      },
+      "master": {
+        "path": "assets/application-details/smart-care-position-20260915.png",
+        "sha256": "4a26efa18369ddddf12e30c958678020881162d8e44733634d62ef5520f54adf",
+        "width": 1672,
+        "height": 941
+      },
+      "nativeResolution": true,
+      "upscaled": false,
+      "generatedMasterSha256": "4a26efa18369ddddf12e30c958678020881162d8e44733634d62ef5520f54adf",
+      "sources": [
+        "https://montri-th.github.io/mbsmart/assets/owner-review-v12.json",
+        "https://montri-th.github.io/mbsmart/assets/workshop-study.json"
+      ],
+      "reviewNotes": [
+        "Owner-confirmed inner-fence location between MB-D02 and MB-D03, facing Workshop.",
+        "Artist impression; dimensions, installation and brand acceptance remain subject to review."
+      ],
+      "sourceBasis": "Model v09-r9 reference capture; artist interpretation for presentation"
+    }
+  ]
+}

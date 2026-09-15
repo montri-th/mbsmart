@@ -6,6 +6,8 @@ The v11 comment contract, existing comment pins, 26 exterior parking cells, 10 i
 
 V15 includes two corrected exterior artist images and six explicitly re-reviewed retained images, three current SVG plans and eleven native PNG downloads. Source dimensions are preserved: the new street image is 1671×941; the other seven are 1672×941. No AI image was upscaled. Current source/build, 37 offline feedback checks and twelve desktop/mobile gallery-plan states pass; exact publication verification is recorded separately after deployment.
 
+The concurrently added five application-detail images are preserved in their section galleries. The Type4 close-up additionally receives a localized normal-step correction; its native 1671×941 master is `assets/application-details/smart-type4-detail-steps-v15.png`, with the prior master retained as an unselected archive. Four other detail images and their presentation brief are unchanged. Detail provenance is `assets/application-details-20260915.json`; no historic v11 image or comment reference is reassigned.
+
 ## Historical v11 presentation record (superseded)
 
 Current presentation: four Showroom interior impressions, two Exterior impressions and two workshop impressions, three highlighted Smart SiS vector plans, twelve locked model views and native-resolution downloads (AI PNG 1672×941, plan PNG 4400px wide and SVG). Soft-light photographic interpretations are not measured conditions or compliance proof; native plans and model govern geometry.

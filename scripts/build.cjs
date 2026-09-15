@@ -20,3 +20,4 @@ for(const s of d.states){if(s.cars.filter(c=>c.brand==='MB').length!==(s.mode===
 fs.mkdirSync(dist,{recursive:true});fs.writeFileSync(path.join(root,'assets/geometry-register.json'),JSON.stringify(require('./export-geometry.cjs')(d),null,2)+'\n');
 for(const name of ['index.html','viewer.css','experience.css','experience.js','scene.js','smart.js','mercedes-vehicles.js','smart-brand.js','building-annexes.js','workshop-interior.js','site.js','shrine.js','exterior-design.js','exterior-massing.js','review-guide.js','layout.js','feedback.js','feedback-config.js','assets','vendor','renders','versions'])fs.cpSync(path.join(root,name),path.join(dist,name),{recursive:true});
 fs.writeFileSync(path.join(dist,'.nojekyll'),'');console.log('Static build complete: v15 presentation, v09-r9 owner review; v11 pinned-comment contract and archived designs preserved.');
+require('./build-application-details.cjs')();
