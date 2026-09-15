@@ -190,7 +190,7 @@
     ],
     [
       49.2,
-      30
+      42
     ]
   ],
   "edgeStatus": "Smaller R1.2m visual trial from owner Street View references; not a measured radius. This is inner fence radius, not outer road kerb radius.",
@@ -230,6 +230,18 @@
     "displayStripWidth": 9,
     "status": "near-edge context strip only; not full carriageway width or legal road reserve; no traffic lanes certified",
     "topology": "T-junction",
+    "sametAngSila": {
+      "lanesPerDirection": 3,
+      "totalLanes": 6,
+      "laneWidth": 3.25,
+      "medianWidth": 2,
+      "drivingSide": "left",
+      "nearCarriagewayPlanYDirection": 1,
+      "farCarriagewayPlanYDirection": -1,
+      "trafficDirectionSource": "Owner correction15Sep2026: Thailand left-hand traffic. Building-side carriageway travels away from Sukhumvit (+planY); opposite carriageway travels toward Sukhumvit (-planY).",
+      "countSource": "Owner confirmation15Sep2026 and supplied June2024 Street View",
+      "dimensionStatus": "Six-lane count confirmed by owner. Lane widths, median width and marking spacing are unmeasured visual context fits, not a road design or survey."
+    },
     "doNot": "Do not render Samet-Ang Sila as dead end, fabricate side curb opening, attach roads to old boundary, or use tower roof outline as property edge"
   },
   "gateTransitions": {
@@ -673,8 +685,8 @@
     "A-D, D-E and A-H are not derived; rear edge of scene is an explicit model crop",
     "No driveway turning/sightline/drainage/accessibility/electrical-clearance approval",
     "Original photos and drawings remain private; this public JSON contains derived coordinates only",
-    "Rear workshop follows legacy E–A26m grid envelope / Y16–42; current as-built unverified. Street fence stops at observed Y30 context. Meeting room shares the tall tower corner, separate only in interior use from Sales.",
-    "Owner confirms current relative positions and 3 MB + 2 Thai flag count; ALL metric coordinates, heights, curve radius and levels remain photo-fit assumptions. One detail screenshot is October 2023, not June 2024."
+    "Owner confirms current relative positions and 3 MB + 2 Thai flag count; ALL metric coordinates, heights, curve radius and levels remain photo-fit assumptions. One detail screenshot is October 2023, not June 2024.",
+    "Workshop operational grid unchanged; architectural road-facing extension and roadside brick-fence segment follow owner photographs. Wall transitions, member sizes, road widths and paint shade are visual proposals pending site/supplier checks."
   ],
   "ownerConfirmation": {
     "positionsRemainCurrent": true,
@@ -772,7 +784,7 @@
       ],
       [
         49.2,
-        30
+        42
       ]
     ],
     "status": "Smaller R1.2m visual trial from owner Street View references; not a measured radius. This is inner fence radius, not outer road kerb radius.",
@@ -788,7 +800,7 @@
   },
   "annexes": {
     "revision": "v09",
-    "iteration": "r7",
+    "iteration": "r8",
     "status": "Owner-confirmed uses and attachment; legacy grids recovered, exterior faces/photo-fit NOT measured as-built",
     "units": "metres, local plan X,Y to world X,height,-Y",
     "sources": [
@@ -946,10 +958,10 @@
         "xMin": 40,
         "xMax": 49.2,
         "yMin": 16,
-        "yMax": 42,
+        "yMax": 22,
         "wallHeight": 3.55,
         "outerHeight": 3.35,
-        "status": "Broad cross-passage roof front confirmed by current photos50/51; width and rear continuation are editable trials"
+        "status": "Existing low cross-passage canopy; large workshop mass continues beside it to roadside columns. Dimensions photo-fit."
       },
       "rearCanopy": {
         "id": "EXISTING-REAR-PARKING-CANOPY",
@@ -1014,6 +1026,43 @@
       },
       "material": "Light warm-grey corrugated metal, blue-grey ribbon windows, dark open/screened lower bays, steel awning",
       "geometryStatus": "E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Separate workshop layer distinguishes owner-reported existing equipment from proposed smart use, without certified as-built or installation claims.",
+      "roadsideShell": {
+        "enabled": true,
+        "xMax": 49.2,
+        "yMin": 22,
+        "yMax": 42,
+        "columnYs": [
+          22,
+          28.5,
+          35.5,
+          42
+        ],
+        "columnSize": 0.3,
+        "status": "Owner photos show main workshop mass reaching roadside columns. X matches retained photo-fit fence datum; Y extents, member sizes and heights remain unmeasured visual proxies. Operational grid X0–40 and rear canopy are unchanged."
+      },
+      "roadsideMasonry": {
+        "enabled": true,
+        "insideFaceX": 49.2,
+        "thickness": 0.18,
+        "baseLevel": -0.8,
+        "solidTop": 0.4,
+        "topLevel": 3.55,
+        "segments": [
+          [
+            22,
+            42
+          ]
+        ],
+        "interiorColor": "#45494b",
+        "exteriorColor": "#d7d8d1",
+        "blockWidth": 0.4,
+        "blockHeight": 0.2,
+        "web": 0.04,
+        "paintScope": "Workshop-facing brick ventilation fence surface under roof only; no second inset wall, no paint change to outer face, mesh gates, upper metal cladding or roof structure.",
+        "colourBasis": "Owner-directed dark-grey proposal; PT03/05 background concept in MB RetailManual PDF231 informs visual tone but does not approve this workshop substrate or exact colour.",
+        "brandColourApproval": false,
+        "dimensionStatus": "Masonry module, heights, thickness and transition Y22 are photo-fit, not surveyed. Inside surface retains existing fence datum and exact smart care position."
+      },
       "rearStair": {
         "id": "EXISTING-REAR-STEEL-STAIR",
         "bounds": [
@@ -1216,6 +1265,100 @@
       "Real browser/GPU and mobile visual review"
     ],
     "ownerLayout": {
+      "innerConnection": {
+        "mostlyOpen": true,
+        "columnLineX": 40,
+        "photoFitOpenY": [
+          22,
+          42
+        ],
+        "retainColumnsAndBeams": true,
+        "notASecondWall": true,
+        "unverifiedTransitionY": [
+          16,
+          22
+        ],
+        "status": "Owner confirms recessed inner line is mostly open between workshop and side area. Photos support open connection across main working span; CS/lounge transition requires plan-to-photo alignment before changing."
+      },
+      "roadsideShell": {
+        "enabled": true,
+        "xMax": 49.2,
+        "yMin": 22,
+        "yMax": 42,
+        "columnYs": [
+          22,
+          28.5,
+          35.5,
+          42
+        ],
+        "columnSize": 0.3,
+        "status": "Owner photos show main workshop mass reaching roadside columns. X matches retained photo-fit fence datum; Y extents, member sizes and heights remain unmeasured visual proxies. Operational grid X0–40 and rear canopy are unchanged."
+      },
+      "roadsideMasonry": {
+        "enabled": true,
+        "insideFaceX": 49.2,
+        "thickness": 0.18,
+        "baseLevel": -0.8,
+        "solidTop": 0.4,
+        "topLevel": 3.55,
+        "segments": [
+          [
+            22,
+            42
+          ]
+        ],
+        "interiorColor": "#45494b",
+        "exteriorColor": "#d7d8d1",
+        "blockWidth": 0.4,
+        "blockHeight": 0.2,
+        "web": 0.04,
+        "paintScope": "Workshop-facing brick ventilation fence surface under roof only; no second inset wall, no paint change to outer face, mesh gates, upper metal cladding or roof structure.",
+        "colourBasis": "Owner-directed dark-grey proposal; PT03/05 background concept in MB RetailManual PDF231 informs visual tone but does not approve this workshop substrate or exact colour.",
+        "brandColourApproval": false,
+        "dimensionStatus": "Masonry module, heights, thickness and transition Y22 are photo-fit, not surveyed. Inside surface retains existing fence datum and exact smart care position."
+      },
+      "ownerCommentSignage": [
+        {
+          "id": "SMART-HV-ENGLISH-ROW40",
+          "label": "High Voltage Station",
+          "station": "HV",
+          "xy": [
+            34,
+            41.85
+          ],
+          "height": 3,
+          "width": 1,
+          "signHeight": 0.28,
+          "rotationRadians": 0,
+          "mount": "wall",
+          "source": "Owner Client Comment Log row40; D01 PDF27 item26",
+          "commentPin": [
+            33.95,
+            41.79
+          ],
+          "status": "English artwork/reference proportions adopted; supplier vectors, fixings and substrate coordination pending."
+        },
+        {
+          "id": "SMART-ME-ENGLISH-ROW41",
+          "label": "M/E Station",
+          "station": "M/E",
+          "xy": [
+            10.32,
+            22.07
+          ],
+          "height": 2.84,
+          "width": 1,
+          "signHeight": 0.28,
+          "rotationRadians": 3.141592653589793,
+          "mount": "hanging",
+          "source": "Owner Client Comment Log row41; D01 PDF27 item26",
+          "commentPin": [
+            10.32,
+            22.07
+          ],
+          "status": "Sign at existing empty workbay, no equipment added. Bottom3.30m above workshop floor per reference; hanger details require site/supplier confirmation."
+        }
+      ],
       "equipment": {
         "ownerExisting": [
           {
@@ -1947,7 +2090,49 @@
     "diagnosis": {
       "required": true,
       "positionStatus": "HOLD: previous unverified cabinet removed from Customer Service parking; final location requires operator confirmation"
-    }
+    },
+    "ownerCommentSignage": [
+      {
+        "id": "SMART-HV-ENGLISH-ROW40",
+        "label": "High Voltage Station",
+        "station": "HV",
+        "xy": [
+          34,
+          41.85
+        ],
+        "height": 3,
+        "width": 1,
+        "signHeight": 0.28,
+        "rotationRadians": 0,
+        "mount": "wall",
+        "source": "Owner Client Comment Log row40; D01 PDF27 item26",
+        "commentPin": [
+          33.95,
+          41.79
+        ],
+        "status": "English artwork/reference proportions adopted; supplier vectors, fixings and substrate coordination pending."
+      },
+      {
+        "id": "SMART-ME-ENGLISH-ROW41",
+        "label": "M/E Station",
+        "station": "M/E",
+        "xy": [
+          10.32,
+          22.07
+        ],
+        "height": 2.84,
+        "width": 1,
+        "signHeight": 0.28,
+        "rotationRadians": 3.141592653589793,
+        "mount": "hanging",
+        "source": "Owner Client Comment Log row41; D01 PDF27 item26",
+        "commentPin": [
+          10.32,
+          22.07
+        ],
+        "status": "Sign at existing empty workbay, no equipment added. Bottom3.30m above workshop floor per reference; hanger details require site/supplier confirmation."
+      }
+    ]
   },
   "frontDrain": {
     "insideOffset": 0.3,
@@ -2244,7 +2429,7 @@
     }
   ],
   "exteriorParking": {
-    "revision": "owner-v13-r7",
+    "revision": "owner-v14-r8",
     "coordinateStatus": "Owner confirms 7.20m from main front planter outer edge to inside fence. Remaining exterior coordinates are explicitly photo-fit trials, not a survey, legal boundary, equipment certification or brand approval.",
     "referenceRoad": "Sukhumvit local X; Samet–Ang Sila local Y",
     "allocationReviewPending": false,
@@ -4096,7 +4281,30 @@
     "retainingThickness": 0.22,
     "frontInsideY": -8.32,
     "sideInsideX": 49.2,
-    "status": "All fence-member thickness projects outward from the canonical inside-face datum"
+    "roadsideMasonry": {
+      "enabled": true,
+      "insideFaceX": 49.2,
+      "thickness": 0.18,
+      "baseLevel": -0.8,
+      "solidTop": 0.4,
+      "topLevel": 3.55,
+      "segments": [
+        [
+          22,
+          42
+        ]
+      ],
+      "interiorColor": "#45494b",
+      "exteriorColor": "#d7d8d1",
+      "blockWidth": 0.4,
+      "blockHeight": 0.2,
+      "web": 0.04,
+      "paintScope": "Workshop-facing brick ventilation fence surface under roof only; no second inset wall, no paint change to outer face, mesh gates, upper metal cladding or roof structure.",
+      "colourBasis": "Owner-directed dark-grey proposal; PT03/05 background concept in MB RetailManual PDF231 informs visual tone but does not approve this workshop substrate or exact colour.",
+      "brandColourApproval": false,
+      "dimensionStatus": "Masonry module, heights, thickness and transition Y22 are photo-fit, not surveyed. Inside surface retains existing fence datum and exact smart care position."
+    },
+    "status": "All fence-member thickness projects outward from the canonical inside-face datum; roadside breeze-block is a boundary segment, not a second inset wall"
   },
   "rearGroundXMax": 49.2,
   "entryRamp": {

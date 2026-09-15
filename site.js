@@ -53,24 +53,58 @@ window.BC_SITE=(T,h,data)=>{
   if(data.road.topology==='T-junction'){
     const frontY=data.front.apronEdgeY.value-SW,sideX=data.east.apronEdgeX+SW;
     const main=slab([[-35,frontY-13],[96,frontY-13],[96,frontY],[-35,frontY]],L.road-.14,.14,asphalt,ground);main.name='SUKHUMVIT-CONTINUOUS-ROAD-CONTEXT';
-    const branch=slab([[sideX,frontY],[sideX+13,frontY],[sideX+13,76],[sideX,76]],L.road-.14,.14,asphalt,ground);branch.name='SAMET-ANG-SILA-CONTINUING-BRANCH';
+    const samet=data.road.sametAngSila;
+    const laneStudy=samet&&samet.lanesPerDirection===3&&samet.totalLanes===6&&samet.laneWidth>0&&samet.medianWidth>0;
+    const roadWidth=laneStudy?samet.totalLanes*samet.laneWidth+samet.medianWidth:13;
+    const branch=slab([[sideX,frontY],[sideX+roadWidth,frontY],[sideX+roadWidth,76],[sideX,76]],L.road-.14,.14,asphalt,ground);branch.name='SAMET-ANG-SILA-CONTINUING-BRANCH';
+    branch.userData={...(samet||{}),nearKerbX:sideX,farKerbX:sideX+roadWidth,roadWidth,propertyBoundaryMoved:false,notTrafficEngineeringDesign:true};
+    if(laneStudy){
+      // The owner confirms 3 + 3 lanes. Widths and median nose are only photo-fit
+      // context: keep the existing near kerb and widen away from the property.
+      const roadGroup=new T.Group();roadGroup.name='SAMET-ANG-SILA-SIX-LANE-CONTEXT';roadGroup.userData={...branch.userData,lanesPerDirection:3,totalLanes:6};ground.add(roadGroup);
+      const markingMat=new T.MeshStandardMaterial({color:'#dddcd3',roughness:1});
+      const markerStart=Math.max(frontY+6,fc[1]+fr+SW),farY=76;
+      const laneLevel=L.road+.003;
+      for(const carriageway of ['NEAR','FAR']){
+        const carriagewayX=sideX+(carriageway==='FAR'?3*samet.laneWidth+samet.medianWidth:0);
+        for(let lane=0;lane<3;lane++){
+          const x0=carriagewayX+lane*samet.laneWidth,x1=x0+samet.laneWidth;
+          const laneMesh=slab([[x0,frontY],[x1,frontY],[x1,farY],[x0,farY]],laneLevel-.003,.003,asphalt,roadGroup);
+          laneMesh.name=`SAMET-${carriageway}-LANE-${lane+1}`;
+          laneMesh.userData={carriageway,lane:lane+1,bounds:[x0,frontY,x1,farY],laneWidth:samet.laneWidth,dimensionStatus:samet.dimensionStatus,drivingSide:samet.drivingSide,planYDirection:carriageway==='NEAR'?samet.nearCarriagewayPlanYDirection:samet.farCarriagewayPlanYDirection,trafficDirection:'Owner-confirmed left-hand traffic; no turn-permission or approved traffic-layout claim',directionArrowsDrawn:false};
+        }
+        for(let divider=1;divider<3;divider++){
+          const marks=new T.Group();marks.name=`SAMET-${carriageway}-LANE-DIVIDER-${divider}`;marks.userData={dimensionStatus:samet.dimensionStatus,notApprovedRoadMarkings:true};roadGroup.add(marks);
+          for(let y=markerStart;y<farY;y+=6){const end=Math.min(y+3,farY);planBox(carriagewayX+divider*samet.laneWidth,(y+end)/2,.10,end-y,.008,markingMat,laneLevel+.002,marks);}
+        }
+      }
+      const mx=sideX+3*samet.laneWidth,mw=samet.medianWidth,nose=Math.min(.65,mw/2),my=markerStart;
+      const median=slab([[mx+nose,my],[mx+mw-nose,my],[mx+mw,my+nose],[mx+mw,farY],[mx,farY],[mx,my+nose]],L.road,.16,paving,roadGroup);
+      median.name='SAMET-ANG-SILA-MEDIAN-PHOTO-FIT';median.userData={width:mw,startY:my,nearX:mx,farX:mx+mw,dimensionStatus:samet.dimensionStatus,notApprovedTrafficIsland:true};
+      for(const x of [mx,mx+mw])for(let y=my+nose;y<farY;y+=.8){const end=Math.min(y+.8,farY);planBox(x,(y+end)/2,.16,end-y,.17,Math.floor((y-my-nose)/.8)%2?fenceMat:black,L.road,roadGroup);}
+    }
   }
   // Discrete side/rear context, deliberately not an invented full-site enclosure.
   slab([[-13,data.front.apronEdgeY.value],...data.leftContextEdge,[-13,40.5]],L.forecourt-.2,.18,soil,ground);
   function openGate(x,y,offset=0){return (y<data.front.apronEdgeY.value+.12&&x>data.front.gate.xMin&&x<data.front.gate.xMax)||(data.east.openingEnabled&&x>data.east.apronEdgeX-.1&&y>data.east.serviceGapY[0]&&y<data.east.serviceGapY[1]);}
   function lerp(a,b,t){return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t];}
   function splitAtGates(a,b){const ts=[0,1];for(const [axis,limits] of [[0,[data.front.gate.xMin,data.front.gate.xMax]],[1,data.east.serviceGapY]]){const delta=b[axis]-a[axis];if(Math.abs(delta)<1e-8)continue;for(const v of limits){const t=(v-a[axis])/delta;if(t>1e-8&&t<1-1e-8)ts.push(t);}}return [...new Set(ts)].sort((a,b)=>a-b);}
-  function segments(points,step,fn){let cumulative=0;for(let i=0;i<points.length-1;i++){const a=points[i],b=points[i+1],dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy),cuts=splitAtGates(a,b);for(let k=0;k<cuts.length-1;k++){const start=cuts[k],span=cuts[k+1]-start,n=Math.max(1,Math.ceil(len*span/step));for(let j=0;j<n;j++){const t=start+span*(j+.5)/n;fn(a[0]+dx*t,a[1]+dy*t,len*span/n,Math.atan2(dy,dx),cumulative+len*t);}}cumulative+=len;}}
+  function segments(points,step,fn,split=splitAtGates){let cumulative=0;for(let i=0;i<points.length-1;i++){const a=points[i],b=points[i+1],dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy),cuts=split(a,b);for(let k=0;k<cuts.length-1;k++){const start=cuts[k],span=cuts[k+1]-start,n=Math.max(1,Math.ceil(len*span/step));for(let j=0;j<n;j++){const t=start+span*(j+.5)/n;fn(a[0]+dx*t,a[1]+dy*t,len*span/n,Math.atan2(dy,dx),cumulative+len*t);}}cumulative+=len;}}
   // Canonical edge is the physical INNER face, not the centre of a thick fence.
   // Each member projects its own thickness outward so the owner's clear datum
   // stays 7.20m from the retained planter, independent of material thickness.
   const fence=new T.Group();fence.name='EXISTING-FENCE-INNER-FACE-DATUM';
   fence.userData={...data.fence,frontPlanterOuterY:data.front.confirmedPlanterOuterY,frontClearDistance:data.front.setbackFromPlinth.value,cornerStatus:data.corner.status};objects.add(fence);
   function fenceBox(x,y,height,w,ht,depth,mat,angle){const ox=Math.sin(angle)*depth/2,oy=-Math.cos(angle)*depth/2;ibox(x+ox,height,-(y+oy),w,ht,depth,mat,fence,angle);}
+  const roadsideMasonry=data.fence.roadsideMasonry;
+  function isRoadsideMasonry(x,y){return roadsideMasonry?.enabled&&Math.abs(x-roadsideMasonry.insideFaceX)<.04&&(roadsideMasonry.segments||[]).some(([a,b])=>y>=Math.min(a,b)&&y<=Math.max(a,b));}
+  function splitAtFenceMaterial(a,b){const ts=splitAtGates(a,b);if(roadsideMasonry?.enabled&&Math.abs(b[1]-a[1])>1e-8)for(const y of (roadsideMasonry.segments||[]).flat()){const t=(y-a[1])/(b[1]-a[1]);if(t>1e-8&&t<1-1e-8)ts.push(t);}return [...new Set(ts)].sort((a,b)=>a-b);}
   // Weathered retaining face plus existing white vertical-bar fence, omitted at candidate gates.
+  // Roadside breeze-block masonry is constructed by building-annexes.js on this
+  // SAME datum. Keep the below-apron retaining face, never superimpose white rails.
   const wallTop=L.forecourt+.04,wallBottom=L.sidewalk-.05;
-  segments(fenceEdge,.24,(x,y,len,a)=>{if(x<raw[0][0]||openGate(x,y))return;fenceBox(x,y,(wallTop+wallBottom)/2,len,wallTop-wallBottom,data.fence.retainingThickness,retaining,a);fenceBox(x,y,wallTop+.57,.027,1.12,.027,fenceMat,a);});
-  segments(fenceEdge,1.8,(x,y,len,a)=>{if(x<raw[0][0]||openGate(x,y))return;for(const ht of [.12,1.1])fenceBox(x,y,wallTop+ht,len,.048,.048,fenceMat,a);fenceBox(x,y,wallTop+.59,.065,1.17,.065,fenceMat,a);});
+  segments(fenceEdge,.24,(x,y,len,a)=>{if(x<raw[0][0]||openGate(x,y))return;fenceBox(x,y,(wallTop+wallBottom)/2,len,wallTop-wallBottom,data.fence.retainingThickness,retaining,a);if(!isRoadsideMasonry(x,y))fenceBox(x,y,wallTop+.57,.027,1.12,.027,fenceMat,a);},splitAtFenceMaterial);
+  segments(fenceEdge,1.8,(x,y,len,a)=>{if(x<raw[0][0]||openGate(x,y)||isRoadsideMasonry(x,y))return;for(const ht of [.12,1.1])fenceBox(x,y,wallTop+ht,len,.048,.048,fenceMat,a);fenceBox(x,y,wallTop+.59,.065,1.17,.065,fenceMat,a);},splitAtFenceMaterial);
   segments(fenceEdge,1.8,(x,y,len,a,s)=>{if(x<raw[0][0]||openGate(x,y))return;fenceBox(x,y,wallTop-.07,len,.12,.25,retaining,a);if(Math.floor(s/1.8)%2===0)fenceBox(x,y,wallTop-.16,.24,.12,.255,black,a);});
   // Current photos: a dark open channel just INSIDE the fence, with poles on its apron edge.
   // Surface recess is a visual proxy; no excavation depth or outfall is certified.

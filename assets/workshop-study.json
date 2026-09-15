@@ -104,6 +104,100 @@
     "Real browser/GPU and mobile visual review"
   ],
   "ownerLayout": {
+    "innerConnection": {
+      "mostlyOpen": true,
+      "columnLineX": 40,
+      "photoFitOpenY": [
+        22,
+        42
+      ],
+      "retainColumnsAndBeams": true,
+      "notASecondWall": true,
+      "unverifiedTransitionY": [
+        16,
+        22
+      ],
+      "status": "Owner confirms recessed inner line is mostly open between workshop and side area. Photos support open connection across main working span; CS/lounge transition requires plan-to-photo alignment before changing."
+    },
+    "roadsideShell": {
+      "enabled": true,
+      "xMax": 49.2,
+      "yMin": 22,
+      "yMax": 42,
+      "columnYs": [
+        22,
+        28.5,
+        35.5,
+        42
+      ],
+      "columnSize": 0.3,
+      "status": "Owner photos show main workshop mass reaching roadside columns. X matches retained photo-fit fence datum; Y extents, member sizes and heights remain unmeasured visual proxies. Operational grid X0–40 and rear canopy are unchanged."
+    },
+    "roadsideMasonry": {
+      "enabled": true,
+      "insideFaceX": 49.2,
+      "thickness": 0.18,
+      "baseLevel": -0.8,
+      "solidTop": 0.4,
+      "topLevel": 3.55,
+      "segments": [
+        [
+          22,
+          42
+        ]
+      ],
+      "interiorColor": "#45494b",
+      "exteriorColor": "#d7d8d1",
+      "blockWidth": 0.4,
+      "blockHeight": 0.2,
+      "web": 0.04,
+      "paintScope": "Workshop-facing brick ventilation fence surface under roof only; no second inset wall, no paint change to outer face, mesh gates, upper metal cladding or roof structure.",
+      "colourBasis": "Owner-directed dark-grey proposal; PT03/05 background concept in MB RetailManual PDF231 informs visual tone but does not approve this workshop substrate or exact colour.",
+      "brandColourApproval": false,
+      "dimensionStatus": "Masonry module, heights, thickness and transition Y22 are photo-fit, not surveyed. Inside surface retains existing fence datum and exact smart care position."
+    },
+    "ownerCommentSignage": [
+      {
+        "id": "SMART-HV-ENGLISH-ROW40",
+        "label": "High Voltage Station",
+        "station": "HV",
+        "xy": [
+          34,
+          41.85
+        ],
+        "height": 3,
+        "width": 1,
+        "signHeight": 0.28,
+        "rotationRadians": 0,
+        "mount": "wall",
+        "source": "Owner Client Comment Log row40; D01 PDF27 item26",
+        "commentPin": [
+          33.95,
+          41.79
+        ],
+        "status": "English artwork/reference proportions adopted; supplier vectors, fixings and substrate coordination pending."
+      },
+      {
+        "id": "SMART-ME-ENGLISH-ROW41",
+        "label": "M/E Station",
+        "station": "M/E",
+        "xy": [
+          10.32,
+          22.07
+        ],
+        "height": 2.84,
+        "width": 1,
+        "signHeight": 0.28,
+        "rotationRadians": 3.141592653589793,
+        "mount": "hanging",
+        "source": "Owner Client Comment Log row41; D01 PDF27 item26",
+        "commentPin": [
+          10.32,
+          22.07
+        ],
+        "status": "Sign at existing empty workbay, no equipment added. Bottom3.30m above workshop floor per reference; hanger details require site/supplier confirmation."
+      }
+    ],
     "equipment": {
       "ownerExisting": [
         {
@@ -835,5 +929,47 @@
   "diagnosis": {
     "required": true,
     "positionStatus": "HOLD: previous unverified cabinet removed from Customer Service parking; final location requires operator confirmation"
-  }
+  },
+  "ownerCommentSignage": [
+    {
+      "id": "SMART-HV-ENGLISH-ROW40",
+      "label": "High Voltage Station",
+      "station": "HV",
+      "xy": [
+        34,
+        41.85
+      ],
+      "height": 3,
+      "width": 1,
+      "signHeight": 0.28,
+      "rotationRadians": 0,
+      "mount": "wall",
+      "source": "Owner Client Comment Log row40; D01 PDF27 item26",
+      "commentPin": [
+        33.95,
+        41.79
+      ],
+      "status": "English artwork/reference proportions adopted; supplier vectors, fixings and substrate coordination pending."
+    },
+    {
+      "id": "SMART-ME-ENGLISH-ROW41",
+      "label": "M/E Station",
+      "station": "M/E",
+      "xy": [
+        10.32,
+        22.07
+      ],
+      "height": 2.84,
+      "width": 1,
+      "signHeight": 0.28,
+      "rotationRadians": 3.141592653589793,
+      "mount": "hanging",
+      "source": "Owner Client Comment Log row41; D01 PDF27 item26",
+      "commentPin": [
+        10.32,
+        22.07
+      ],
+      "status": "Sign at existing empty workbay, no equipment added. Bottom3.30m above workshop floor per reference; hanger details require site/supplier confirmation."
+    }
+  ]
 }

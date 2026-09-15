@@ -1,0 +1,336 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1970" viewBox="0 0 2200 1970" role="img" aria-labelledby="title desc"><title id="title">ผังโรงซ่อมและ Customer Service</title><desc id="desc">ลิฟต์เดิม10ชุด (8สองเสา +2สี่เสา) · smart service เป็นพื้นว่างตีเส้น ไม่มีอุปกรณ์ แบบเวกเตอร์จากพิกัด v09-r8 สีเขียวคือข้อเสนอ smart สีส้มเส้นประคือพื้นที่ใช้ร่วมและประเด็นรอประสาน สีเทาคือบริบทเดิม ทุกระยะเป็นเมตรในโมเดล ไม่ใช่แบบสำรวจ</desc><defs><pattern id="coord-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#c48b22" stroke-width="1" opacity=".15"/></pattern><marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7c8583"/></marker><style>text{font-family:Thonburi,'Noto Sans Thai',Tahoma,Arial,sans-serif;fill:#263532}.txt{paint-order:stroke;stroke:white;stroke-width:5;stroke-linejoin:round}.tiny{font-size:17px}.small{font-size:21px}.label{font-size:24px}.key-title{font-size:27px;font-weight:700}.key-body{font-size:22px}.dim{font-size:20px;fill:#7c8583}.grid{stroke:#d8ddda;stroke-width:1;stroke-dasharray:11 7 2 7}</style></defs><rect width="2200" height="1970" fill="white"/>
+<text x="70" y="63" font-size="22" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="600" >BENZ CHITCHAI  /  smart SiS + WiW</text>
+<text x="70" y="132" font-size="49" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >ผังโรงซ่อมและ Customer Service</text>
+<text x="70" y="181" font-size="25" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ลิฟต์เดิม10ชุด (8สองเสา +2สี่เสา) · smart service เป็นพื้นว่างตีเส้น ไม่มีอุปกรณ์</text>
+<line x1="70" y1="216" x2="2130" y2="216" stroke="#263532" stroke-width="2"/>
+<line x1="70" y1="254" x2="132" y2="254" stroke="#7c8583" stroke-width="2" fill="none"/>
+<text x="148" y="262" font-size="23" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="400" >บริบทเดิม / คงไว้</text>
+<line x1="575" y1="254" x2="637" y2="254" stroke="#087348" stroke-width="3.5" fill="#e5f3ea"/>
+<text x="653" y="262" font-size="23" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="400" >smart ใหม่ / ข้อเสนอ</text>
+<line x1="1080" y1="254" x2="1142" y2="254" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc"/>
+<text x="1158" y="262" font-size="23" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="400" >ใช้ร่วม / รอประสาน</text>
+<line x1="1585" y1="254" x2="1647" y2="254" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8"/>
+<text x="1663" y="262" font-size="23" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="400" >ปรับตามเจ้าของ / ภาพจริง</text>
+<circle cx="78" cy="294" r="6" fill="#ce69ba"/>
+<text x="95" y="301" font-size="19" fill="#755091" style="fill:#755091" text-anchor="start" font-weight="400" >จุดชาร์จรถไฟฟ้า / Electric charging station</text>
+<text x="2125" y="64" font-size="19" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >V14 · REVIEW DRAFT</text>
+<text x="2125" y="96" font-size="19" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >SOURCE GEOMETRY  v09-r8</text>
+<line x1="130.186" y1="1236.814" x2="1394.458" y2="1236.814" class="grid"/>
+<text x="115.186" y="1242.814" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >E</text>
+<line x1="130.186" y1="1086.305" x2="1394.458" y2="1086.305" class="grid"/>
+<text x="115.186" y="1092.305" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >D</text>
+<line x1="130.186" y1="923.254" x2="1394.458" y2="923.254" class="grid"/>
+<text x="115.186" y="929.254" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >C</text>
+<line x1="130.186" y1="747.661" x2="1394.458" y2="747.661" class="grid"/>
+<text x="115.186" y="753.661" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >B</text>
+<line x1="130.186" y1="584.61" x2="1394.458" y2="584.61" class="grid"/>
+<text x="115.186" y="590.61" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >A</text>
+<line x1="150.254" y1="1261.898" x2="150.254" y2="409.017" class="grid"/>
+<text x="150.254" y="392.017" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >1</text>
+<line x1="350.932" y1="1261.898" x2="350.932" y2="409.017" class="grid"/>
+<text x="350.932" y="392.017" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >4</text>
+<line x1="551.61" y1="1261.898" x2="551.61" y2="409.017" class="grid"/>
+<text x="551.61" y="392.017" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >5</text>
+<line x1="752.288" y1="1261.898" x2="752.288" y2="409.017" class="grid"/>
+<text x="752.288" y="392.017" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >6</text>
+<line x1="952.966" y1="1261.898" x2="952.966" y2="409.017" class="grid"/>
+<text x="952.966" y="392.017" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >7</text>
+<line x1="1153.644" y1="1261.898" x2="1153.644" y2="409.017" class="grid"/>
+<text x="1153.644" y="392.017" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >8</text>
+<line x1="1354.322" y1="1261.898" x2="1354.322" y2="409.017" class="grid"/>
+<text x="1354.322" y="392.017" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" >9</text>
+<polygon id="EXISTING-ATTACHED-WORKSHOP" data-status="floor" data-source="building-annexes.json workshop.gridEnvelope" points="150.254,1236.814 1153.644,1236.814 1153.644,584.61 200.925,584.61 178.098,747.661 150.254,923.254 150.254,1086.305" stroke="none" fill="none" style="fill:#fafbf9"/>
+<polygon id="EXISTING-AWNING-OVERHEAD" data-status="overhead" data-source="building-annexes.json workshop.awning" points="1153.644,1236.814 1384.424,1236.814 1384.424,1086.305 1153.644,1086.305" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none" />
+<polyline id="WORKSHOP-CORE-BOUNDARY-EXCLUDING-OPEN-SPAN" data-status="existing" data-source="owner confirms X40 Y22–42 open; Y16–22 transition unchanged" points="1153.644,1086.305 1153.644,1236.814 150.254,1236.814 150.254,1086.305 150.254,923.254 178.098,747.661 200.925,584.61 1153.644,584.61" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polygon id="WORKSHOP-ROADSIDE-SHELL" data-status="floor" data-source="building-annexes.json workshop.roadsideShell" points="1153.644,1086.305 1384.424,1086.305 1384.424,584.61 1153.644,584.61" stroke="none" fill="none" style="fill:#f0f3f1"/>
+<polyline id="WORKSHOP-ROADSIDE-ROOF-EDGE" data-status="overhead" data-source="main roof extent, not an internal partition" points="1153.644,1086.305 1384.424,1086.305 1384.424,584.61 1153.644,584.61" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none" style="fill:none" />
+<polygon id="WORKSHOP-INNER-COLUMN-Y22" data-status="existing" data-source="building-annexes.js retained internal columns" points="1151.261,1088.688 1156.027,1088.688 1156.027,1083.922 1151.261,1083.922" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#7c8583"/>
+<polygon id="WORKSHOP-INNER-COLUMN-Y28.5" data-status="existing" data-source="building-annexes.js retained internal columns" points="1151.261,925.637 1156.027,925.637 1156.027,920.871 1151.261,920.871" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#7c8583"/>
+<polygon id="WORKSHOP-INNER-COLUMN-Y35.5" data-status="existing" data-source="building-annexes.js retained internal columns" points="1151.261,750.044 1156.027,750.044 1156.027,745.278 1151.261,745.278" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#7c8583"/>
+<polygon id="WORKSHOP-INNER-COLUMN-Y42" data-status="existing" data-source="building-annexes.js retained internal columns" points="1151.261,586.993 1156.027,586.993 1156.027,582.227 1151.261,582.227" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#7c8583"/>
+<text x="1132.322" y="842.983" font-size="16" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1132.322 842.983)">เปิดเชื่อมอู่</text>
+<polygon id="ROADSIDE-SHELL-COLUMN-Y22" data-status="owner" data-source="building-annexes.json workshop.roadsideShell.columnYs" points="1376.898,1090.068 1384.424,1090.068 1384.424,1082.542 1376.898,1082.542" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#7c8583"/>
+<polygon id="ROADSIDE-SHELL-COLUMN-Y28.5" data-status="owner" data-source="building-annexes.json workshop.roadsideShell.columnYs" points="1376.898,927.017 1384.424,927.017 1384.424,919.492 1376.898,919.492" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#7c8583"/>
+<polygon id="ROADSIDE-SHELL-COLUMN-Y35.5" data-status="owner" data-source="building-annexes.json workshop.roadsideShell.columnYs" points="1376.898,751.424 1384.424,751.424 1384.424,743.898 1376.898,743.898" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#7c8583"/>
+<polygon id="ROADSIDE-SHELL-COLUMN-Y42" data-status="owner" data-source="building-annexes.json workshop.roadsideShell.columnYs" points="1376.898,588.373 1384.424,588.373 1384.424,580.847 1376.898,580.847" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#7c8583"/>
+<polygon id="ROADSIDE-MASONRY-0" data-status="owner" data-source="building-annexes.json workshop.roadsideMasonry" points="1384.424,1086.305 1388.939,1086.305 1388.939,584.61 1384.424,584.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#d7d8d1"/>
+<polyline id="ROADSIDE-MASONRY-INNER-PAINT-0" data-status="innerpaint" data-source="owner requested interior brick face only" points="1384.424,1086.305 1384.424,584.61" stroke="#45494b" stroke-width="4" fill="none" style="fill:none" />
+<polygon id="EXISTING-REAR-AWNING-OVERHEAD" data-status="overhead" data-source="building-annexes.json workshop.rearCanopy" points="200.925,584.61 1153.644,584.61 1153.644,426.576 200.925,426.576" stroke="#7c8583" stroke-width="1.7" stroke-dasharray="8 7" fill="none" />
+<polygon id="REAR-CANOPY-POST-X2.5" data-status="owner" data-source="building-annexes.json workshop.rearCanopy.supportXs" points="211.712,432.847 214.22,432.847 214.22,430.339 211.712,430.339" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#477f9b"/>
+<polygon id="REAR-CANOPY-POST-X10" data-status="owner" data-source="building-annexes.json workshop.rearCanopy.supportXs" points="399.847,432.847 402.356,432.847 402.356,430.339 399.847,430.339" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#477f9b"/>
+<polygon id="REAR-CANOPY-POST-X17.5" data-status="owner" data-source="building-annexes.json workshop.rearCanopy.supportXs" points="587.983,432.847 590.492,432.847 590.492,430.339 587.983,430.339" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#477f9b"/>
+<polygon id="REAR-CANOPY-POST-X25" data-status="owner" data-source="building-annexes.json workshop.rearCanopy.supportXs" points="776.119,432.847 778.627,432.847 778.627,430.339 776.119,430.339" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#477f9b"/>
+<polygon id="REAR-CANOPY-POST-X32.5" data-status="owner" data-source="building-annexes.json workshop.rearCanopy.supportXs" points="964.254,432.847 966.763,432.847 966.763,430.339 964.254,430.339" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#477f9b"/>
+<polygon id="REAR-CANOPY-POST-X40" data-status="owner" data-source="building-annexes.json workshop.rearCanopy.supportXs" points="1152.39,432.847 1154.898,432.847 1154.898,430.339 1152.39,430.339" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#477f9b"/>
+<polygon id="SHARED-DRIVE-BAND" data-status="shared" data-source="workshop-study.json clearDriveBand" points="350.932,923.254 1153.644,923.254 1153.644,747.661 350.932,747.661" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:url(#coord-hatch)"/>
+<polygon id="WS-R28-1" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="451.271,1086.305 551.61,1086.305 551.61,923.254 451.271,923.254" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R28-1-BASE--1" data-status="owner" data-source="workshop-interior.js physicalLift" points="463.186,1012.932 476.983,1012.932 476.983,996.627 463.186,996.627" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="477.61,1027.732 501.441,1027.732 501.441,1024.471 477.61,1024.471" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="477.61,985.088 501.441,985.088 501.441,981.827 477.61,981.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R28-1-BASE-1" data-status="owner" data-source="workshop-interior.js physicalLift" points="525.898,1012.932 539.695,1012.932 539.695,996.627 525.898,996.627" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="501.441,1027.732 525.271,1027.732 525.271,1024.471 501.441,1024.471" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="501.441,985.088 525.271,985.088 525.271,981.827 501.441,981.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="501.441" y="1070" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-2P-04</text>
+<text x="501.441" y="1050.434" font-size="14" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB HV</text>
+<polygon id="WS-R28-2" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="551.61,1086.305 651.949,1086.305 651.949,923.254 551.61,923.254" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R28-2-BASE--1" data-status="owner" data-source="workshop-interior.js physicalLift" points="563.525,1012.932 577.322,1012.932 577.322,996.627 563.525,996.627" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="577.949,1027.732 601.78,1027.732 601.78,1024.471 577.949,1024.471" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="577.949,985.088 601.78,985.088 601.78,981.827 577.949,981.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R28-2-BASE-1" data-status="owner" data-source="workshop-interior.js physicalLift" points="626.237,1012.932 640.034,1012.932 640.034,996.627 626.237,996.627" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="601.78,1027.732 625.61,1027.732 625.61,1024.471 601.78,1024.471" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="601.78,985.088 625.61,985.088 625.61,981.827 601.78,981.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="601.78" y="1070" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-2P-03</text>
+<polygon id="WS-R28-3" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="651.949,1086.305 752.288,1086.305 752.288,923.254 651.949,923.254" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R28-3-BASE--1" data-status="owner" data-source="workshop-interior.js physicalLift" points="663.864,1012.932 677.661,1012.932 677.661,996.627 663.864,996.627" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="678.288,1027.732 702.119,1027.732 702.119,1024.471 678.288,1024.471" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="678.288,985.088 702.119,985.088 702.119,981.827 678.288,981.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R28-3-BASE-1" data-status="owner" data-source="workshop-interior.js physicalLift" points="726.576,1012.932 740.373,1012.932 740.373,996.627 726.576,996.627" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="702.119,1027.732 725.949,1027.732 725.949,1024.471 702.119,1024.471" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="702.119,985.088 725.949,985.088 725.949,981.827 702.119,981.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="702.119" y="1070" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-2P-02</text>
+<polygon id="WS-R28-4" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="752.288,1086.305 852.627,1086.305 852.627,923.254 752.288,923.254" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R28-4-BASE--1" data-status="owner" data-source="workshop-interior.js physicalLift" points="764.203,1012.932 778,1012.932 778,996.627 764.203,996.627" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="778.627,1027.732 802.458,1027.732 802.458,1024.471 778.627,1024.471" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="778.627,985.088 802.458,985.088 802.458,981.827 778.627,981.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R28-4-BASE-1" data-status="owner" data-source="workshop-interior.js physicalLift" points="826.915,1012.932 840.712,1012.932 840.712,996.627 826.915,996.627" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="802.458,1027.732 826.288,1027.732 826.288,1024.471 802.458,1024.471" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="802.458,985.088 826.288,985.088 826.288,981.827 802.458,981.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="802.458" y="1070" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-2P-01</text>
+<polygon id="WS-R29" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="952.966,747.661 1053.305,747.661 1053.305,584.61 952.966,584.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R29-BASE--1" data-status="owner" data-source="workshop-interior.js physicalLift" points="964.881,674.288 978.678,674.288 978.678,657.983 964.881,657.983" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="979.305,689.088 1003.136,689.088 1003.136,685.827 979.305,685.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="979.305,646.444 1003.136,646.444 1003.136,643.183 979.305,643.183" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R29-BASE-1" data-status="owner" data-source="workshop-interior.js physicalLift" points="1027.593,674.288 1041.39,674.288 1041.39,657.983 1027.593,657.983" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="1003.136,689.088 1026.966,689.088 1026.966,685.827 1003.136,685.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="1003.136,646.444 1026.966,646.444 1026.966,643.183 1003.136,643.183" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="1003.136" y="731.356" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >2P</text>
+<polygon id="WS-R30-1" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="551.61,747.661 651.949,747.661 651.949,584.61 551.61,584.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R30-1-BASE--1" data-status="owner" data-source="workshop-interior.js physicalLift" points="563.525,674.288 577.322,674.288 577.322,657.983 563.525,657.983" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="577.949,689.088 601.78,689.088 601.78,685.827 577.949,685.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="577.949,646.444 601.78,646.444 601.78,643.183 577.949,643.183" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R30-1-BASE-1" data-status="owner" data-source="workshop-interior.js physicalLift" points="626.237,674.288 640.034,674.288 640.034,657.983 626.237,657.983" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="601.78,689.088 625.61,689.088 625.61,685.827 601.78,685.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="601.78,646.444 625.61,646.444 625.61,643.183 601.78,643.183" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="601.78" y="731.356" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-2P-05</text>
+<polygon id="WS-R30-2" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="651.949,747.661 752.288,747.661 752.288,584.61 651.949,584.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R30-2-BASE--1" data-status="owner" data-source="workshop-interior.js physicalLift" points="663.864,674.288 677.661,674.288 677.661,657.983 663.864,657.983" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="678.288,689.088 702.119,689.088 702.119,685.827 678.288,685.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="678.288,646.444 702.119,646.444 702.119,643.183 678.288,643.183" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R30-2-BASE-1" data-status="owner" data-source="workshop-interior.js physicalLift" points="726.576,674.288 740.373,674.288 740.373,657.983 726.576,657.983" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="702.119,689.088 725.949,689.088 725.949,685.827 702.119,685.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="702.119,646.444 725.949,646.444 725.949,643.183 702.119,643.183" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="702.119" y="731.356" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-2P-06</text>
+<polygon id="WS-R30-3" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="752.288,747.661 852.627,747.661 852.627,584.61 752.288,584.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R30-3-BASE--1" data-status="owner" data-source="workshop-interior.js physicalLift" points="764.203,674.288 778,674.288 778,657.983 764.203,657.983" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="778.627,689.088 802.458,689.088 802.458,685.827 778.627,685.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="778.627,646.444 802.458,646.444 802.458,643.183 778.627,643.183" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R30-3-BASE-1" data-status="owner" data-source="workshop-interior.js physicalLift" points="826.915,674.288 840.712,674.288 840.712,657.983 826.915,657.983" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="802.458,689.088 826.288,689.088 826.288,685.827 802.458,685.827" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="workshop-interior.js physicalLift" points="802.458,646.444 826.288,646.444 826.288,643.183 802.458,643.183" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="802.458" y="731.356" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-2P-07</text>
+<polygon id="WS-R31" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="852.627,747.661 952.966,747.661 952.966,584.61 852.627,584.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R31-RUNWAY--0.78" data-status="owner" data-source="workshop-interior.js physicalLift" points="876.708,726.339 889.753,726.339 889.753,605.932 876.708,605.932" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R31-RUNWAY-0.78" data-status="owner" data-source="workshop-interior.js physicalLift" points="915.841,726.339 928.885,726.339 928.885,605.932 915.841,605.932" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="" points="868.681,724.081 874.2,724.081 874.2,718.563 868.681,718.563" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="" points="868.681,613.708 874.2,613.708 874.2,608.19 868.681,608.19" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="" points="931.393,724.081 936.912,724.081 936.912,718.563 931.393,718.563" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="" points="931.393,613.708 936.912,613.708 936.912,608.19 931.393,608.19" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="902.797" y="731.356" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-4P-02</text>
+<polygon id="WS-R32" data-status="owner" data-source="workshop-study.json ownerLayout.equipment" points="451.271,747.661 551.61,747.661 551.61,584.61 451.271,584.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f2f6f8"/>
+<polygon id="WS-R32-RUNWAY--0.78" data-status="owner" data-source="workshop-interior.js physicalLift" points="475.353,726.339 488.397,726.339 488.397,605.932 475.353,605.932" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R32-RUNWAY-0.78" data-status="owner" data-source="workshop-interior.js physicalLift" points="514.485,726.339 527.529,726.339 527.529,605.932 514.485,605.932" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="" points="467.325,724.081 472.844,724.081 472.844,718.563 467.325,718.563" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="" points="467.325,613.708 472.844,613.708 472.844,608.19 467.325,608.19" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="" points="530.037,724.081 535.556,724.081 535.556,718.563 530.037,718.563" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon data-status="owner" data-source="" points="530.037,613.708 535.556,613.708 535.556,608.19 530.037,608.19" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R32-ALIGNMENT-TURNPLATE--0.78" data-status="owner" data-source="workshop-interior.js physicalLift alignment function" points="475.353,709.407 488.397,709.407 488.397,695.61 475.353,695.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<polygon id="WS-R32-ALIGNMENT-TURNPLATE-0.78" data-status="owner" data-source="workshop-interior.js physicalLift alignment function" points="514.485,709.407 527.529,709.407 527.529,695.61 514.485,695.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" />
+<text x="501.441" y="731.356" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-4P-01</text>
+<polygon id="SMART-HV" data-status="new" data-source="workshop-study.json ownerLayout.smartOverlays" points="952.966,747.661 1053.305,747.661 1053.305,584.61 952.966,584.61" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" style="fill:none"/>
+<polygon id="SMART-SERVICE-WORKBAY" data-status="new" data-source="owner confirmed empty marked service bay" points="350.932,1086.305 451.271,1086.305 451.271,923.254 350.932,923.254" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" style="fill:none"/>
+<polygon id="SMART-HV-ENGLISH-ROW40" data-status="new" data-source="workshop-study.json ownerCommentSignage / D01 PDF27 item26" points="990.593,588.498 1015.678,588.498 1015.678,588.247 990.593,588.247" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polyline id="SMART-HV-ENGLISH-ROW40-FACE" data-status="new" data-source="canonical sign face direction" points="1003.136,588.373 1003.136,605.932" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" style="fill:none" marker-end="url(#arrow-grey)"/>
+<text x="970.525" y="606.936" font-size="15" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >High Voltage Station</text>
+<polygon id="SMART-ME-ENGLISH-ROW41" data-status="new" data-source="workshop-study.json ownerCommentSignage / D01 PDF27 item26" points="421.671,1084.424 396.586,1084.424 396.586,1084.675 421.671,1084.675" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polyline id="SMART-ME-ENGLISH-ROW41-FACE" data-status="new" data-source="canonical sign face direction" points="409.129,1084.549 409.129,1066.99" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" style="fill:none" marker-end="url(#arrow-grey)"/>
+<text x="409.129" y="1056.956" font-size="15" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >M/E Station</text>
+<text x="401.102" y="993.492" font-size="15" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >smart</text>
+<text x="401.102" y="1016.068" font-size="14" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >SERVICE</text>
+<text x="401.102" y="1038.644" font-size="15" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >พื้นว่าง</text>
+<polygon id="EXISTING-REAR-STEEL-STAIR" data-status="owner" data-source="owner confirmed existing steel stair; half-cell visual fit" points="1053.305,666.136 1153.644,666.136 1153.644,584.61 1053.305,584.61" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polyline data-status="existing" data-source="" points="1057.068,658.61 1149.881,658.61" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="1057.068,650.583 1149.881,650.583" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="1057.068,642.556 1149.881,642.556" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="1057.068,634.529 1149.881,634.529" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="1057.068,626.502 1149.881,626.502" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="1057.068,618.475 1149.881,618.475" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="1057.068,610.447 1149.881,610.447" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="1057.068,602.42 1149.881,602.42" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<polyline data-status="existing" data-source="" points="1057.068,594.393 1149.881,594.393" stroke="#7c8583" stroke-width="2" fill="none" style="fill:none" />
+<text x="1103.475" y="692.475" font-size="15" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >บันไดเหล็กขึ้นชั้น2</text>
+<polygon id="HV-MAT-PLACEHOLDER" data-status="shared" data-source="workshop-interior.js HV mat" points="969.271,717.559 1037,717.559 1037,627.254 969.271,627.254" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none"/>
+<polyline id="HV-BARRIER-32.22" data-status="shared" data-source="workshop-interior.js HV barrier" points="958.485,738.881 958.485,590.881" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polyline id="HV-BARRIER-35.78" data-status="shared" data-source="workshop-interior.js HV barrier" points="1047.786,738.881 1047.786,590.881" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<circle id="CH-REAR-PARKING" data-status="owner" data-source="owner confirmed charger point; hardware/cable route unspecified" cx="746.017" cy="581.851" r="5.519" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#ce69ba"/>
+<text x="757.305" y="568.054" font-size="14" fill="#755091" style="fill:#755091" text-anchor="middle" font-weight="500" class="txt" >EV</text>
+<circle id="CH-REAR-WORKSHOP" data-status="owner" data-source="owner confirmed charger point; hardware/cable route unspecified" cx="952.966" cy="587.119" r="5.519" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#ce69ba"/>
+<text x="964.254" y="573.322" font-size="14" fill="#755091" style="fill:#755091" text-anchor="middle" font-weight="500" class="txt" >EV</text>
+<circle id="CH-CS" data-status="owner" data-source="owner confirmed charger point; hardware/cable route unspecified" cx="1070.864" cy="1098.847" r="5.519" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#ce69ba"/>
+<text x="1082.153" y="1085.051" font-size="14" fill="#755091" style="fill:#755091" text-anchor="middle" font-weight="500" class="txt" >EV</text>
+<polygon id="SHARED-PARTS-ENVELOPE" data-status="shared" data-source="workshop-study.json sharedParts" points="212.966,740.136 333.373,740.136 333.373,602.169 212.966,602.169" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polygon id="MB-PARTS-3.2" data-status="existing" data-source="workshop-interior.js shelves" points="216.729,730.102 244.322,730.102 244.322,684.949 216.729,684.949" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="MB-PARTS-6.5" data-status="existing" data-source="workshop-interior.js shelves" points="299.508,730.102 327.102,730.102 327.102,684.949 299.508,684.949" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="SMART-PARTS-3.2" data-status="new" data-source="workshop-interior.js shelves" points="216.729,664.881 244.322,664.881 244.322,619.729 216.729,619.729" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SMART-PARTS-6.5" data-status="new" data-source="workshop-interior.js shelves" points="299.508,664.881 327.102,664.881 327.102,619.729 299.508,619.729" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="SHARED-GENERAL-TOOLS" data-status="shared" data-source="workshop-interior.js tools" points="277.559,1039.271 308.915,1039.271 308.915,1022.966 277.559,1022.966" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" />
+<polygon id="SMART-SPECIAL-TOOLS" data-status="new" data-source="workshop-interior.js tools" points="277.559,991.61 308.915,991.61 308.915,975.305 277.559,975.305" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polygon id="OWNER-R25-WALKWAY" data-status="owner" data-source="workshop-study.json owner reservations" points="849.115,1231.295 1050.546,1231.295 1050.546,1188.4 849.115,1188.4" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="OWNER-R26-CS-OFFICE" data-status="owner" data-source="workshop-study.json owner reservations" points="952.966,1182.38 1050.546,1182.38 1050.546,925.763 952.966,925.763" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="OWNER-R27-P1" data-status="owner" data-source="workshop-study.json separate indoor CS parking" points="1056.817,1084.549 1148.376,1084.549 1148.376,925.763 1056.817,925.763" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:#f0f5f7"/>
+<text x="1001.756" y="990.983" font-size="25" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >CS</text>
+<text x="1001.756" y="1033.627" font-size="16" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >Customer</text>
+<text x="1001.756" y="1064.983" font-size="16" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >Service</text>
+<text x="1001.756" y="1096.339" font-size="16" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >Office</text>
+<text x="1102.597" y="1006.034" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >MB-S03</text>
+<text x="950.458" y="1209.22" font-size="18" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >ทางเดิน</text>
+<text x="295.746" y="900.678" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >DIAGNOSIS</text>
+<text x="295.746" y="929.525" font-size="17" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >ตำแหน่ง HOLD</text>
+<polyline id="INTERNAL-WORKSHOP-GATE" data-status="shared" data-source="building-annexes.json workshop.sideGate" points="1158.661,1226.78 1379.407,1226.78" stroke="#9b6200" stroke-width="2.5" stroke-dasharray="9 6" fill="#fff5dc" style="fill:none" />
+<polygon id="GATE-LEAF-40.2" data-status="existing" data-source="building-annexes.js gate" points="1157.407,1246.847 1159.915,1246.847 1159.915,1206.712 1157.407,1206.712" stroke="#7c8583" stroke-width="2" fill="none" />
+<polygon id="GATE-LEAF-49" data-status="existing" data-source="building-annexes.js gate" points="1378.153,1246.847 1380.661,1246.847 1380.661,1206.712 1378.153,1206.712" stroke="#7c8583" stroke-width="2" fill="none" />
+<text x="747.271" y="827.932" font-size="22" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >ช่องทางรถร่วม · กริด B–C 7.00 ม.</text>
+<text x="747.271" y="863.051" font-size="18" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >แผนผังศึกษา ไม่ใช่วงเลี้ยวที่ตรวจแล้ว</text>
+<text x="639.407" y="1151.525" font-size="22" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >ลิฟต์เดิม10ชุด · ไม่มีลิฟต์เพิ่ม</text>
+<text x="1212.593" y="860.542" font-size="16" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1212.593 860.542)">อาคารอู่ถึงแนวเสาริมถนน</text>
+<text x="270.661" y="770.237" font-size="17" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="500" class="txt" >อะไหล่ร่วม</text>
+<polygon id="CELL-OWNER-REAR-01" data-status="owner" data-source="parking-photo-fit.json cells" points="1090.932,559.525 1153.644,559.525 1153.644,434.102 1090.932,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-02" data-status="owner" data-source="parking-photo-fit.json cells" points="1028.22,559.525 1090.932,559.525 1090.932,434.102 1028.22,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-03" data-status="owner" data-source="parking-photo-fit.json cells" points="965.508,559.525 1028.22,559.525 1028.22,434.102 965.508,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-04" data-status="owner" data-source="parking-photo-fit.json cells" points="902.797,559.525 965.508,559.525 965.508,434.102 902.797,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-05" data-status="owner" data-source="parking-photo-fit.json cells" points="840.085,559.525 902.797,559.525 902.797,434.102 840.085,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-06" data-status="owner" data-source="parking-photo-fit.json cells" points="777.373,559.525 840.085,559.525 840.085,434.102 777.373,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-07" data-status="owner" data-source="parking-photo-fit.json cells" points="714.661,559.525 777.373,559.525 777.373,434.102 714.661,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-08" data-status="owner" data-source="parking-photo-fit.json cells" points="651.949,559.525 714.661,559.525 714.661,434.102 651.949,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-09" data-status="owner" data-source="parking-photo-fit.json cells" points="589.237,559.525 651.949,559.525 651.949,434.102 589.237,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-REAR-10" data-status="owner" data-source="parking-photo-fit.json cells" points="526.525,559.525 589.237,559.525 589.237,434.102 526.525,434.102" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-R33-P1" data-status="owner" data-source="parking-photo-fit.json cells" points="1304.153,878.854 1366.864,878.854 1366.864,753.431 1304.153,753.431" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-R33-P2" data-status="owner" data-source="parking-photo-fit.json cells" points="1304.153,753.431 1366.864,753.431 1366.864,628.007 1304.153,628.007" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-R34-P1" data-status="owner" data-source="parking-photo-fit.json cells" points="1304.153,1211.729 1366.864,1211.729 1366.864,1086.305 1304.153,1086.305" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="CELL-OWNER-R36-P1" data-status="owner" data-source="parking-photo-fit.json cells" points="1304.153,584.61 1366.864,584.61 1366.864,459.186 1304.153,459.186" stroke="#477f9b" stroke-width="2.6" fill="#eef5f8" style="fill:none"/>
+<polygon id="EXT-MB-OWNER-REAR-03" data-status="existing" data-source="parking-photo-fit.json cars" points="1023.203,557.017 1023.203,436.61 970.525,436.61 970.525,557.017" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="EXT-MB-OWNER-REAR-05" data-status="existing" data-source="parking-photo-fit.json cars" points="898.031,556.39 898.031,437.237 844.851,437.237 844.851,556.39" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="EXT-MB-OWNER-REAR-07" data-status="existing" data-source="parking-photo-fit.json cars" points="772.356,557.017 772.356,436.61 719.678,436.61 719.678,557.017" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<polygon id="EXT-MB-OWNER-REAR-09" data-status="existing" data-source="parking-photo-fit.json cars" points="646.932,557.017 646.932,436.61 594.254,436.61 594.254,557.017" stroke="#7c8583" stroke-width="2" fill="none" style="fill:#eff1ee"/>
+<text x="1122.288" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1122.288 496.814)">S-D-02</text>
+<text x="1059.576" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1059.576 496.814)">MB-C08</text>
+<text x="996.864" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 996.864 496.814)">MB-C09</text>
+<text x="934.153" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 934.153 496.814)">MB-C10</text>
+<text x="871.441" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 871.441 496.814)">MB-C11</text>
+<text x="808.729" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 808.729 496.814)">MB-C12</text>
+<text x="746.017" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 746.017 496.814)">MB-C13</text>
+<text x="683.305" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 683.305 496.814)">MB-C14</text>
+<text x="620.593" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 620.593 496.814)">MB-C15</text>
+<text x="557.881" y="496.814" font-size="12" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 557.881 496.814)">MB-C16</text>
+<text x="1335.508" y="816.142" font-size="13" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1335.508 816.142)">MB-D03</text>
+<text x="1335.508" y="690.719" font-size="13" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1335.508 690.719)">MB-D04</text>
+<text x="1335.508" y="1149.017" font-size="13" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1335.508 1149.017)">MB-D02</text>
+<text x="1335.508" y="521.898" font-size="13" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" transform="rotate(-90 1335.508 521.898)">MB-D05</text>
+<polygon id="SC1-CARE-SIGN" data-status="new" data-source="exterior-proposal.json careLogo / inside-fence" points="1383.797,956.617 1383.797,1008.542 1384.424,1008.542 1384.424,956.617" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" />
+<polyline id="SC1-CARE-FACE-DIRECTION" data-status="new" data-source="exterior-proposal.json careLogo face normal" points="1384.11,982.58 1338.958,982.58" stroke="#087348" stroke-width="3.5" fill="#e5f3ea" style="fill:none" marker-end="url(#arrow-grey)"/>
+<text x="1318.89" y="969.536" font-size="14" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="500" class="txt" >SC1</text>
+<text x="877.712" y="400.237" font-size="20" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >หลัง10ช่อง · 2.5 × 5ม. · เลข1อยู่ขวา</text>
+<text x="827.542" y="568.305" font-size="16" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="500" class="txt" >1ม. จากผนัง</text>
+<line x1="200.925" y1="371.39" x2="1153.644" y2="371.39" stroke="#7c8583" stroke-width="1"/><path d="M195.925,366.39l10,10 M1148.644,366.39l10,10" fill="none" stroke="#7c8583"/>
+<text x="677.285" y="361.39" font-size="20" fill="#7c8583" style="fill:#7c8583" text-anchor="middle" font-weight="400" class="txt">37.98 ม. · หลังคาเต็มแนวอู่</text>
+<line x1="1003.136" y1="588.373" x2="978.051" y2="541.966" stroke="white" stroke-width="7"/><line x1="1003.136" y1="588.373" x2="978.051" y2="541.966" stroke="#087348" stroke-width="1.7"/><circle cx="978.051" cy="541.966" r="20" fill="white" stroke="#087348" stroke-width="3" />
+<text x="978.051" y="548.966" font-size="19" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="700" >01</text>
+<line x1="409.129" y1="1084.549" x2="320.831" y2="1086.305" stroke="white" stroke-width="7"/><line x1="409.129" y1="1084.549" x2="320.831" y2="1086.305" stroke="#477f9b" stroke-width="1.7"/><circle cx="320.831" cy="1086.305" r="20" fill="white" stroke="#477f9b" stroke-width="3" />
+<text x="320.831" y="1093.305" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="700" >02</text>
+<line x1="1042.017" y1="590.881" x2="1231.407" y2="682.441" stroke="white" stroke-width="7"/><line x1="1042.017" y1="590.881" x2="1231.407" y2="682.441" stroke="#9b6200" stroke-width="1.7"/><circle cx="1231.407" cy="682.441" r="20" fill="white" stroke="#9b6200" stroke-width="3" stroke-dasharray="5 3"/>
+<text x="1231.407" y="689.441" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="700" >03</text>
+<line x1="293.237" y1="983.458" x2="212.966" y2="893.153" stroke="white" stroke-width="7"/><line x1="293.237" y1="983.458" x2="212.966" y2="893.153" stroke="#087348" stroke-width="1.7"/><circle cx="212.966" cy="893.153" r="20" fill="white" stroke="#087348" stroke-width="3" />
+<text x="212.966" y="900.153" font-size="19" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="700" >04</text>
+<line x1="270.661" y1="642.305" x2="152.763" y2="554.508" stroke="white" stroke-width="7"/><line x1="270.661" y1="642.305" x2="152.763" y2="554.508" stroke="#9b6200" stroke-width="1.7"/><circle cx="152.763" cy="554.508" r="20" fill="white" stroke="#9b6200" stroke-width="3" stroke-dasharray="5 3"/>
+<text x="152.763" y="561.508" font-size="19" fill="#9b6200" style="fill:#9b6200" text-anchor="middle" font-weight="700" >05</text>
+<line x1="1001.756" y1="1061.22" x2="927.881" y2="1136.475" stroke="white" stroke-width="7"/><line x1="1001.756" y1="1061.22" x2="927.881" y2="1136.475" stroke="#477f9b" stroke-width="1.7"/><circle cx="927.881" cy="1136.475" r="20" fill="white" stroke="#477f9b" stroke-width="3" />
+<text x="927.881" y="1143.475" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="700" >06</text>
+<line x1="1102.597" y1="1006.034" x2="1173.712" y2="1016.068" stroke="white" stroke-width="7"/><line x1="1102.597" y1="1006.034" x2="1173.712" y2="1016.068" stroke="#477f9b" stroke-width="1.7"/><circle cx="1173.712" cy="1016.068" r="20" fill="white" stroke="#477f9b" stroke-width="3" />
+<text x="1173.712" y="1023.068" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="700" >07</text>
+<line x1="702.119" y1="1004.78" x2="727.203" y2="890.644" stroke="white" stroke-width="7"/><line x1="702.119" y1="1004.78" x2="727.203" y2="890.644" stroke="#477f9b" stroke-width="1.7"/><circle cx="727.203" cy="890.644" r="20" fill="white" stroke="#477f9b" stroke-width="3" />
+<text x="727.203" y="897.644" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="700" >08</text>
+<line x1="401.102" y1="431.593" x2="363.475" y2="406.508" stroke="white" stroke-width="7"/><line x1="401.102" y1="431.593" x2="363.475" y2="406.508" stroke="#477f9b" stroke-width="1.7"/><circle cx="363.475" cy="406.508" r="20" fill="white" stroke="#477f9b" stroke-width="3" />
+<text x="363.475" y="413.508" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="700" >09</text>
+<line x1="1384.11" y1="982.58" x2="1479.746" y2="983.458" stroke="white" stroke-width="7"/><line x1="1384.11" y1="982.58" x2="1479.746" y2="983.458" stroke="#087348" stroke-width="1.7"/><circle cx="1479.746" cy="983.458" r="20" fill="white" stroke="#087348" stroke-width="3" />
+<text x="1479.746" y="990.458" font-size="19" fill="#087348" style="fill:#087348" text-anchor="middle" font-weight="700" >10</text>
+<line x1="1103.475" y1="626" x2="1228.898" y2="546.983" stroke="white" stroke-width="7"/><line x1="1103.475" y1="626" x2="1228.898" y2="546.983" stroke="#477f9b" stroke-width="1.7"/><circle cx="1228.898" cy="546.983" r="20" fill="white" stroke="#477f9b" stroke-width="3" />
+<text x="1228.898" y="553.983" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="700" >11</text>
+<line x1="501.441" y1="666.136" x2="451.271" y2="544.475" stroke="white" stroke-width="7"/><line x1="501.441" y1="666.136" x2="451.271" y2="544.475" stroke="#477f9b" stroke-width="1.7"/><circle cx="451.271" cy="544.475" r="20" fill="white" stroke="#477f9b" stroke-width="3" />
+<text x="451.271" y="551.475" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="700" >12</text>
+<line x1="1384.424" y1="747.661" x2="1479.746" y2="810.373" stroke="white" stroke-width="7"/><line x1="1384.424" y1="747.661" x2="1479.746" y2="810.373" stroke="#477f9b" stroke-width="1.7"/><circle cx="1479.746" cy="810.373" r="20" fill="white" stroke="#477f9b" stroke-width="3" />
+<text x="1479.746" y="817.373" font-size="19" fill="#477f9b" style="fill:#477f9b" text-anchor="middle" font-weight="700" >13</text>
+<text x="1640" y="317" font-size="28" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >จุดปรับปรุงและการใช้ร่วม</text>
+<line x1="1602" y1="294" x2="1602" y2="1830" stroke="#d8ddda"/>
+<text x="1640" y="352" font-size="24" fill="#087348" style="fill:#087348" text-anchor="start" font-weight="700" >01</text>
+<text x="1689" y="352" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >High Voltage Station</text>
+<text x="1689" y="385" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ป้ายอังกฤษตามความเห็น40</text>
+<text x="1689" y="414" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ใช้ลิฟต์WS-R29เดิม ไม่มีลิฟต์ใหม่</text>
+<text x="1640" y="467" font-size="24" fill="#477f9b" style="fill:#477f9b" text-anchor="start" font-weight="700" >02</text>
+<text x="1689" y="467" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >M/E Station / พื้นว่าง</text>
+<text x="1689" y="500" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ป้ายอังกฤษตามความเห็น41</text>
+<text x="1689" y="529" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >คงเส้นพื้น ไม่เพิ่มลิฟต์หรืออุปกรณ์</text>
+<text x="1640" y="582" font-size="24" fill="#9b6200" style="fill:#9b6200" text-anchor="start" font-weight="700" >03</text>
+<text x="1689" y="582" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >HV protection / จุดชาร์จ</text>
+<text x="1689" y="615" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ตำแหน่งชาร์จยืนยันตามวงชมพู</text>
+<text x="1689" y="644" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >อุปกรณ์ไฟฟ้า/ความปลอดภัยรอตรวจ</text>
+<text x="1640" y="697" font-size="24" fill="#087348" style="fill:#087348" text-anchor="start" font-weight="700" >04</text>
+<text x="1689" y="697" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >เครื่องมือ smart</text>
+<text x="1689" y="730" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ตู้เฉพาะ + เครื่องมือ MB ใช้ร่วม</text>
+<text x="1689" y="759" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >จุดวิเคราะห์ยังไม่กำหนดตำแหน่ง</text>
+<text x="1640" y="812" font-size="24" fill="#9b6200" style="fill:#9b6200" text-anchor="start" font-weight="700" >05</text>
+<text x="1689" y="812" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >อะไหล่ร่วม แยกชั้น</text>
+<text x="1689" y="845" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >smart สีเขียว / MB สีเทา</text>
+<text x="1689" y="874" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ไม่ใช่พื้นที่แบตเตอรี่หรือกักกัน</text>
+<text x="1640" y="927" font-size="24" fill="#477f9b" style="fill:#477f9b" text-anchor="start" font-weight="700" >06</text>
+<text x="1689" y="927" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >CS / สำนักงานบริการลูกค้า</text>
+<text x="1689" y="960" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >Customer Service Office</text>
+<text x="1689" y="989" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ตีกรอบเท่านั้น ไม่เพิ่มผนัง/ประตู</text>
+<text x="1640" y="1042" font-size="24" fill="#477f9b" style="fill:#477f9b" text-anchor="start" font-weight="700" >07</text>
+<text x="1689" y="1042" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >MB-S03 / ช่องจอดภายใน</text>
+<text x="1689" y="1075" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ไม่นับใน26ช่องภายนอก</text>
+<text x="1689" y="1104" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ย้ายตู้วิเคราะห์เดิมออก / จุดใหม่ HOLD</text>
+<text x="1640" y="1157" font-size="24" fill="#477f9b" style="fill:#477f9b" text-anchor="start" font-weight="700" >08</text>
+<text x="1689" y="1157" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >ลิฟต์เดิม10ชุด</text>
+<text x="1689" y="1190" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >8สองเสา +2สี่เสา ไม่มีเพิ่ม</text>
+<text x="1689" y="1219" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >MB-2P-04 เป็นจุด MB HV</text>
+<text x="1640" y="1272" font-size="24" fill="#477f9b" style="fill:#477f9b" text-anchor="start" font-weight="700" >09</text>
+<text x="1689" y="1272" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >หลังคาหลังอู่เต็มแนวอาคาร</text>
+<text x="1689" y="1305" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ยาว37.98ม. / เสาทุก3ช่อง7.50ม.</text>
+<text x="1689" y="1334" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >คงจอดหลัง10 + ข้างโรงซ่อม4</text>
+<text x="1640" y="1387" font-size="24" fill="#087348" style="fill:#087348" text-anchor="start" font-weight="700" >10</text>
+<text x="1689" y="1387" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >SC1 คงเดิม / สีด้านในรั้ว</text>
+<text x="1689" y="1420" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ผิวอิฐฝั่งอู่เทาเข้ม ไม่ทาด้านนอก</text>
+<text x="1689" y="1449" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >สีเสนอเทียบ MB ยังไม่อนุมัติ</text>
+<text x="1640" y="1502" font-size="24" fill="#477f9b" style="fill:#477f9b" text-anchor="start" font-weight="700" >11</text>
+<text x="1689" y="1502" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >บันไดเหล็กเดิมขึ้นชั้น2</text>
+<text x="1689" y="1535" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >กินพื้นที่ประมาณครึ่งช่อง</text>
+<text x="1689" y="1564" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >มุมนี้ไม่มี hoist / มิติยังเทียบภาพ</text>
+<text x="1640" y="1617" font-size="24" fill="#477f9b" style="fill:#477f9b" text-anchor="start" font-weight="700" >12</text>
+<text x="1689" y="1617" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >ตั้งศูนย์ MB-4P-01</text>
+<text x="1689" y="1650" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ลิฟต์4เสาสูงตามเจ้าของยืนยัน</text>
+<text x="1689" y="1679" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >MB-4P-02 เป็น Active Reception</text>
+<text x="1640" y="1732" font-size="24" fill="#477f9b" style="fill:#477f9b" text-anchor="start" font-weight="700" >13</text>
+<text x="1689" y="1732" font-size="25" fill="#263532" style="fill:#263532" text-anchor="start" font-weight="700" >อาคารอู่ถึงเสาริมถนน</text>
+<text x="1689" y="1765" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >แนวด้านในเปิดเชื่อมอู่ คงเสาเดิม</text>
+<text x="1689" y="1794" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >อิฐที่ริมถนน ไม่เพิ่มผนังซ้อนในอู่</text>
+<rect x="110" y="1670" width="125.424" height="10" fill="#263532"/><rect x="235.424" y="1670" width="125.424" height="10" fill="white" stroke="#263532"/>
+<text x="110" y="1658" font-size="20" fill="#263532" style="fill:#263532" text-anchor="middle" font-weight="400" >0</text>
+<text x="235.424" y="1658" font-size="20" fill="#263532" style="fill:#263532" text-anchor="middle" font-weight="400" >5</text>
+<text x="360.847" y="1658" font-size="20" fill="#263532" style="fill:#263532" text-anchor="middle" font-weight="400" >10</text>
+<text x="110" y="1713" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >มาตราส่วนกราฟิก · เมตรในโมเดล (ไม่ใช่ระยะสำรวจ)</text>
+<text x="790" y="1677" font-size="22" fill="#755091" style="fill:#755091" text-anchor="start" font-weight="400" >วงชมพู = เครื่องชาร์จ 4จุด รวมจุดในโชว์รูม</text>
+<text x="790" y="1712" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >ตำแหน่งเทียบแปลน / ยังไม่กำหนดรุ่น กำลังไฟ หรือสาย</text>
+<line x1="70" y1="1847" x2="2130" y2="1847" stroke="#d8ddda"/>
+<text x="70" y="1878" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >กริดใช้งานเดิม E–A26ม. · เปลือกอาคารถึงแนวเสาฝั่งถนน · ผิวอิฐด้านในรั้วเทาเข้ม ไม่ทาส่วนอื่น</text>
+<text x="70" y="1909" font-size="21" fill="#7c8583" style="fill:#7c8583" text-anchor="start" font-weight="400" >รูปทรง ระดับ สี จุดยึดป้ายและอุปกรณ์เป็นการเทียบภาพ ต้องตรวจหน้างานและการอนุมัติแบรนด์</text>
+<text x="2130" y="1941" font-size="17" fill="#7c8583" style="fill:#7c8583" text-anchor="end" font-weight="400" >workshop-plan.svg</text>
+</svg>

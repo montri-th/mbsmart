@@ -6,6 +6,39 @@ window.BC_WORKSHOP_INTERIOR=(T,h,data,annex)=>{
   function mark(text,x,y,width,parent=g.guides,bg='#344a50'){const o=sign(text,x,floor+.034,-y,width,.42,0,parent,'#f3f5ed',bg);o.rotation.x=-Math.PI/2;return o;}
   function line(x0,y0,x1,y1,parent=g.baseline,colour=paint){const o=box((x0+x1)/2,floor+.018,-(y0+y1)/2,Math.hypot(x1-x0,y1-y0),.014,.06,colour,parent);o.rotation.y=Math.atan2(y1-y0,x1-x0);return o;}
   const owner=data.ownerLayout;
+  // D01 PDF27 / item26 is a visual reference, not approved supplier artwork.
+  // Row40 replaces the old Thai HV wall plaque; row41 adds an M/E plaque to
+  // the existing empty service workbay, without changing its floor or equipment.
+  const ownerSigns=data.ownerCommentSignage??[];
+  function ownerStationSign(q){
+    const [x,y]=q.xy,gr=new T.Group();gr.name=q.id;gr.position.set(x,q.height,-y);gr.rotation.y=q.rotationRadians??0;
+    gr.userData={...q,kind:'owner-workshop-station-sign',heightDatum:'world-centre elevation',artworkStatus:'Schematic redraw of D01 PDF27 / item26; approved smart artwork, fonts, coating and mounting details required',supplierApproved:false,referenceThickness:.01};g.proposed.add(gr);
+    const c=document.createElement('canvas');c.width=2000;c.height=560;const ctx=c.getContext('2d');ctx.scale(2,2);
+    const black='#050505',lime='#c7da35',white='#ffffff';ctx.fillStyle=black;ctx.fillRect(0,0,1000,280);ctx.fillStyle=lime;ctx.fillRect(0,272,1000,8);
+    // Rounded icon frame follows the reference composition; it is not an asset extraction.
+    ctx.strokeStyle=lime;ctx.lineWidth=6;ctx.lineJoin='round';ctx.beginPath();ctx.moveTo(113,48);ctx.lineTo(251,48);ctx.quadraticCurveTo(269,48,269,66);ctx.lineTo(269,216);ctx.quadraticCurveTo(269,234,251,234);ctx.lineTo(113,234);ctx.quadraticCurveTo(95,234,95,216);ctx.lineTo(95,66);ctx.quadraticCurveTo(95,48,113,48);ctx.closePath();ctx.stroke();
+    ctx.fillStyle=lime;
+    if(q.station==='HV'){
+      ctx.beginPath();[[170,71],[218,71],[195,126],[224,126],[157,213],[171,151],[143,151]].forEach(([px,py],i)=>i?ctx.lineTo(px,py):ctx.moveTo(px,py));ctx.closePath();ctx.fill();
+    }else if(q.station==='M/E'){
+      // Crossed spanner and screwdriver, distinct from the HV lightning icon.
+      ctx.lineCap='round';ctx.lineWidth=19;ctx.beginPath();ctx.moveTo(153,111);ctx.lineTo(222,192);ctx.stroke();
+      ctx.beginPath();[[122,78],[137,76],[144,93],[158,94],[164,82],[157,67],[175,74],[184,89],[181,109],[166,123],[146,121],[130,107]].forEach(([px,py],i)=>i?ctx.lineTo(px,py):ctx.moveTo(px,py));ctx.closePath();ctx.fill();
+      ctx.lineWidth=9;ctx.beginPath();ctx.moveTo(159,172);ctx.lineTo(211,103);ctx.stroke();ctx.lineWidth=22;ctx.beginPath();ctx.moveTo(148,188);ctx.lineTo(174,154);ctx.stroke();
+      ctx.beginPath();[[205,100],[219,76],[230,84],[216,107]].forEach(([px,py],i)=>i?ctx.lineTo(px,py):ctx.moveTo(px,py));ctx.closePath();ctx.fill();
+    }
+    ctx.fillStyle=white;ctx.font='500 76px Arial';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(q.label,323,143,642);
+    const tx=new T.CanvasTexture(c);tx.colorSpace=T.SRGBColorSpace;
+    const body=box(0,0,0,q.width,q.signHeight,.01,new T.MeshStandardMaterial({color:black,roughness:.75}),gr);body.name=q.id+'-10MM-REFERENCE-BODY';
+    const face=new T.Mesh(new T.PlaneGeometry(q.width,q.signHeight),new T.MeshBasicMaterial({map:tx,toneMapped:false}));face.position.z=.0055;face.name=q.id+'-ENGLISH-CI-REFERENCE-FACE';gr.add(face);
+    // Only draw a suspended connection when a canonical top elevation exists.
+    // Wall fixings and unknown hanging attachment points are not invented.
+    if(q.mount==='hanging'&&Number.isFinite(q.suspensionTopHeight)&&q.suspensionTopHeight>q.height+q.signHeight/2){
+      for(const dx of [-q.width*.30,q.width*.30]){const hanger=tube([dx,q.signHeight/2,0],[dx,q.suspensionTopHeight-q.height,0],.003,steel,gr);hanger.name=q.id+'-SUSPENSION-PROXY';}
+    }
+    gr.userData.mountingGeometryVerified=false;
+  }
+  for(const q of ownerSigns)ownerStationSign(q);
   function physicalLift(q,parent){
     const [cx,cy]=q.centre,gr=new T.Group();gr.name=q.id;gr.userData={kind:'physical-lift',equipmentType:q.kind,physicalStationId:q.id,stationDesignation:q.designation??null,stationRole:q.role??null,roleStatus:q.roleStatus??'Owner station label; not equipment certification',physicalKindStatus:q.physicalKindStatus??null,status:q.status,supplier:null,equipmentDimensionsVerified:false};parent.add(gr);
     const part=(name,x,y,w,d,height,base,material=steel)=>{const o=planBox(x,y,w,d,height,material,base,gr);o.name=q.id+'-'+name;return o;};
@@ -25,7 +58,7 @@ window.BC_WORKSHOP_INTERIOR=(T,h,data,annex)=>{
     slab([[b.xMin+.06,b.yMin+.06],[b.xMax-.06,b.yMin+.06],[b.xMax-.06,b.yMax-.08],[b.xMin+.06,b.yMax-.08]],floor+.006,.01,new T.MeshStandardMaterial({color:b.type==='HV'?'#82917b':'#8a9490',roughness:.96}),bg);
     line(b.xMin,b.yMin,b.xMax,b.yMin,bg,green);line(b.xMin,b.yMin,b.xMin,b.yMax,bg,green);line(b.xMax,b.yMin,b.xMax,b.yMax,bg,green);
     const use=owner.smartOverlays.find(q=>q.id===b.id);bg.userData.physicalLiftRef=use.physicalLiftRef;bg.userData.useStatus=use.status;mark(b.label,cx,b.yMin+.45,3.7,bg,'#273331');
-    const s=sign(b.type==='HV'?'HV · ช่องงานแรงดันสูง':'M/E · ช่องงานทั่วไป',cx,3.0,-(b.yMax-.15),3.6,.35,0,bg,'#d7e797','#202826');s.name=b.id+'-LOCAL-LANGUAGE-SIGN-STUDY';
+    if(!ownerSigns.some(q=>q.station===b.type)){const s=sign(b.type==='HV'?'HV · ช่องงานแรงดันสูง':'M/E · ช่องงานทั่วไป',cx,3.0,-(b.yMax-.15),3.6,.35,0,bg,'#d7e797','#202826');s.name=b.id+'-LOCAL-LANGUAGE-SIGN-STUDY';}
     if(b.type==='HV'){
       const matProxy=planBox(cx,cy-.25,2.7,3.6,.014,mat,floor+.02,bg);matProxy.name='HV-INSULATING-MAT-PLACEHOLDER';matProxy.userData=data.hvProtection;
       // Illustrative barrier with access opening; no safety dimension is certified.

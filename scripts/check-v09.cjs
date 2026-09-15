@@ -13,8 +13,8 @@ const routeGeometry=[
  {id:'entrance-east-service',path:[[28.2,2.5],[28.2,3.25],[30.5,3.25],[30.5,10.2],[30.5,15.2]],planningWidth:1},
  {id:'mb5-rear-pedestrian',path:[[24,8.8],[26.15,9],[26.75,9.92],[27.4,10.2],[30.5,10.2]],planningWidth:1}
 ];
-test('R7 preserves building and smart module, with only audited rounded backdrop, logo artwork and handover metadata deltas',()=>{
- assert.equal(d.revision,'v09');assert.equal(d.iteration,'r7');assert.equal(d.designRevision,'v13');
+test('R8 preserves building and smart module, with only audited rounded backdrop, logo artwork and handover metadata deltas',()=>{
+ assert.equal(d.revision,'v09');assert.equal(d.iteration,'r8');assert.equal(d.designRevision,'v14');
  for(const k of ['building','smartVehicle'])assert.deepEqual(d[k],old[k],k);
  // Freeze every unrelated smart-factory byte. The verified Type4 branch is pinned
  // separately and assembled below; the other deltas are the audited backdrop, wall artwork and
@@ -60,7 +60,7 @@ test('R7 preserves building and smart module, with only audited rounded backdrop
   assert.deepEqual(s.module,prior.module,s.mode+' smart factory module');
  }
 });
-test('R7 Module3B canonical rounded trapezoid reaches all three states without changing floor pose or furniture',()=>{
+test('R8 Module3B canonical rounded trapezoid reaches all three states without changing floor pose or furniture',()=>{
  const p=owner.module3BBackdrop;assert.equal(p.shape,'rounded-trapezoid-elevation');for(const [key,value]of Object.entries({bottomWidth:5.3,topWidth:4.9,height:2.5,bottomHeight:.06,thickness:.14,topCornerTrim:.3,bottomCornerTrim:.18}))near(p[key],value,key);assert.equal(p.supplierGeometryVerified,false);assert.match(p.dimensionStatus,/proxies/);
  const T=require(path.join(root,'vendor/three.min.js')),material=new T.MeshStandardMaterial(),ctx={T,window:{},M:{steel:material,dark:material},shell:new T.Group()};
  const helpers=['mesh','box','tube'].map(name=>{const line=read('scene.js').toString().split('\n').find(l=>l.trimStart().startsWith('function '+name+'('));assert(line);return line;}).join('\n');
@@ -164,7 +164,7 @@ test('Manual smart sign sizes and three owner-confirmed Demo/Sales allocations p
  near(p.careLogo.width,2.07);assert.match(p.status,/NOT approved/);
 });
 test('Owner photo-fit parking has 26 cells, 10 illustrative cars, mixed orientations and unique canonical paint',()=>{
- const p=JSON.parse(read('assets/parking-photo-fit.json'));assert.deepEqual(d.site.exteriorParking,{...p,level:d.site.levels.forecourt});assert.equal(p.revision,'owner-v13-r7');assert.equal(p.siteCapacity,null);assert.equal(p.identifiedCompleteCells,26);assert.equal(p.cells.length,26);assert.equal(new Set(p.cells.map(c=>c.id)).size,26);assert(!p.cells.some(c=>c.id==='OWNER-R27-P1'));
+ const p=JSON.parse(read('assets/parking-photo-fit.json'));assert.deepEqual(d.site.exteriorParking,{...p,level:d.site.levels.forecourt});assert.equal(p.revision,'owner-v14-r8');assert.equal(p.siteCapacity,null);assert.equal(p.identifiedCompleteCells,26);assert.equal(p.cells.length,26);assert.equal(new Set(p.cells.map(c=>c.id)).size,26);assert(!p.cells.some(c=>c.id==='OWNER-R27-P1'));
  for(const [prefix,key,orientation] of [['F-','roadsideFrontFive','parallel-to-Sukhumvit'],['B-','buildingParallelTwo','parallel-to-Sukhumvit'],['S-','sideFenceFour','parallel-to-Samet-Ang-Sila']]){
   const row=owner.exterior.parking[key],cells=p.cells.filter(c=>c.id.startsWith(prefix));assert.equal(cells.length,row.count);
   for(let i=0;i<cells.length;i++){const c=cells[i];assert.equal(c.id,prefix+(i+1));assert.equal(c.orientation,orientation);const expected=prefix==='S-'?[row.xMin,row.yMin+i*row.slotLength,row.xMax,row.yMin+(i+1)*row.slotLength]:[row.xMin+i*row.slotLength,row.yMin,row.xMin+(i+1)*row.slotLength,row.yMax];assert.deepEqual(c.bounds,expected);}
@@ -182,11 +182,19 @@ test('Owner photo-fit parking has 26 cells, 10 illustrative cars, mixed orientat
  const src=read('site.js').toString();assert(src.includes('data.exteriorParking.paint'));assert(!src.includes('[13.2,16.8,20.4,24,28.2,32.5,37.2]'));assert(read('assets/parking-photo-fit.json').equals(read('dist/assets/parking-photo-fit.json')));
 });
 test('Owner R2 orientation and direction waiver remain explicit',()=>{for(const q of [d.site.markers.pylonData,d.site.markers.directionData])assert.equal(q.rotationRadians,Math.PI/2);assert.equal(d.exterior.directionBoard.enabled,false);const m=JSON.parse(read('assets/smart-review-matrix.json'));assert.equal(m.rows.find(r=>r.id==='4').status,'waiver_pending');assert.equal(m.rows.find(r=>r.id==='4').standard,'required_flexible');});
-test('Meeting outside Sales and attached workshop are registered separately',()=>{const a=d.site.annexes;assert.equal(a.meeting.fitEnvelope.xMax,0);assert.equal(a.workshop.footprint.yMin,16);assert.equal(a.workshop.attachment.y,16);assert.equal(a.workshop.awning.xMin,a.workshop.footprint.xMax);assert.equal(d.site.rearClip.y,50);assert.equal(d.site.edgeControlPoints.at(-1)[1],30);assert.equal(d.exterior.serviceCanopy.replacedBy,'site.annexes.workshop.awning');});
+test('Meeting outside Sales and attached workshop are registered separately',()=>{const a=d.site.annexes;assert.equal(a.meeting.fitEnvelope.xMax,0);assert.equal(a.workshop.footprint.yMin,16);assert.equal(a.workshop.attachment.y,16);assert.equal(a.workshop.awning.xMin,a.workshop.footprint.xMax);assert.equal(d.site.rearClip.y,50);assert.equal(d.site.edgeControlPoints.at(-1)[1],42,'r8 roadside fence covers full workshop length');assert.equal(d.exterior.serviceCanopy.replacedBy,'site.annexes.workshop.awning');});
+test('R8 roadside mass, inside-only paint, two English signs and Thai left-hand traffic are explicit',()=>{
+ const a=d.site.annexes.workshop,m=a.roadsideMasonry,r=d.site.road.sametAngSila,w=d.site.workshopStudy;
+ assert.deepEqual([a.roadsideShell.xMax,a.roadsideShell.yMin,a.roadsideShell.yMax],[49.2,22,42]);
+ assert.deepEqual(m.segments,[[22,42]]);near(m.insideFaceX,49.2);assert.equal(m.interiorColor,'#45494b');assert.equal(m.exteriorColor,'#d7d8d1');assert.equal(m.brandColourApproval,false);
+ assert.equal(w.ownerLayout.innerConnection.mostlyOpen,true);assert.deepEqual(w.ownerLayout.innerConnection.photoFitOpenY,[22,42]);assert.equal(w.ownerLayout.innerConnection.retainColumnsAndBeams,true);
+ assert.deepEqual(w.ownerCommentSignage.map(q=>q.label),['High Voltage Station','M/E Station']);assert.equal(w.ownerCommentSignage.length,2);assert.deepEqual(w.ownerLayout.equipment.proposedAdditional,[]);
+ assert.equal(r.totalLanes,6);assert.equal(r.lanesPerDirection,3);assert.equal(r.drivingSide,'left');assert.equal(r.nearCarriagewayPlanYDirection,1);assert.equal(r.farCarriagewayPlanYDirection,-1);
+});
 test('Logo artwork uses all seven source path strings without generic-font substitution',()=>{const paths=JSON.parse(read('assets/smart-brand/logo-paths.json'));assert.equal(paths.paths.length,7);for(const p of paths.paths){const source=read('assets/smart-brand/'+(p.component==='symbol'?'smart-symbol-source.svg':'smart-wordmark-white-source.svg')).toString();assert(source.includes(p.d),'Original path absent from official source');}assert(read('smart-brand.js').toString().includes(JSON.stringify(paths)));for(const f of ['smart-brand.js','building-annexes.js','assets/building-annexes.json','assets/smart-brand/smart-stacked-white-pylon-study.svg'])assert(read(f).equals(read('dist/'+f)),f);});
 test('Archived routes and twelve section-scoped scheme/feedback views',()=>{const html=read('index.html').toString(),fb=read('feedback.js').toString();assert(html.includes("['v04','v06','v07','v08'].includes(r)"));assert.equal((html.match(/data-view=/g)||[]).length,12);assert(html.includes('id="exterior-scheme"'));assert(fb.includes("exteriorScheme:artist?'proposed':currentExterior()"));assert(fb.includes('Array.isArray(h.exteriorSchemesByRevision?.[revision])'));assert(fb.includes('experienceCapabilitiesByRevision?.v11'));});
-test('R7 retains canonical R3 drawing controls and tower; owner workshop inventory replaces only unverified proxies',()=>{
- const s=d.site,a=s.annexes,w=s.workshopStudy.ownerLayout;assert.equal(d.iteration,'r7');assert.equal(s.legacyDrawingControls.letterGrid.A,42);assert.equal(s.legacyDrawingControls.numericGrid['3'],2.02);assert.equal(a.workshop.footprint.yMax,42);assert.equal(a.workshop.floorLevel,-.6);assert.equal(a.workshop.awning.xMax,49.2);assert.deepEqual(s.upperBuilding.masterCorner,a.meeting.masterTowerCorner);assert.equal(s.upperBuilding.masterCorner.frontY,-1.9);assert.equal(s.workshopStudy.smartBays.length,1);assert.deepEqual(s.workshopStudy,d.exterior.workshopStudy);const expected=JSON.parse(JSON.stringify(owner.workshop));for(const q of expected.reservations.parking){q.code=owner.exterior.parking.bayCodes[q.id];const refit=owner.exterior.parking.workshopSideRefits.find(r=>r.id===q.id);if(refit){q.bounds=refit.bounds.slice();q.status='Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified';}}assert.deepEqual(w,expected);assert.equal(s.markers.directionData.faces.reverseExit[0][0],'Exit');
+test('R8 retains canonical R3 drawing controls and tower; owner workshop inventory replaces only unverified proxies',()=>{
+ const s=d.site,a=s.annexes,w=s.workshopStudy.ownerLayout;assert.equal(d.iteration,'r8');assert.equal(s.legacyDrawingControls.letterGrid.A,42);assert.equal(s.legacyDrawingControls.numericGrid['3'],2.02);assert.equal(a.workshop.footprint.yMax,42);assert.equal(a.workshop.floorLevel,-.6);assert.equal(a.workshop.awning.xMax,49.2);assert.deepEqual(s.upperBuilding.masterCorner,a.meeting.masterTowerCorner);assert.equal(s.upperBuilding.masterCorner.frontY,-1.9);assert.equal(s.workshopStudy.smartBays.length,1);assert.deepEqual(s.workshopStudy,d.exterior.workshopStudy);const expected=JSON.parse(JSON.stringify(owner.workshop));for(const q of expected.reservations.parking){q.code=owner.exterior.parking.bayCodes[q.id];const refit=owner.exterior.parking.workshopSideRefits.find(r=>r.id===q.id);if(refit){q.bounds=refit.bounds.slice();q.status='Owner dimensioned 2.5×5m exterior photo-fit; owner code confirmed, manoeuvring unverified';}}assert.deepEqual(w,expected);assert.equal(s.markers.directionData.faces.reverseExit[0][0],'Exit');
  assert.equal(w.equipment.ownerExisting.length,10);assert.equal(new Set(w.equipment.ownerExisting.map(q=>q.id)).size,10);assert.equal(w.equipment.ownerExisting.filter(q=>q.kind==='two-post').length,8);assert.equal(w.equipment.ownerExisting.filter(q=>q.kind==='four-post').length,2);assert.equal(w.equipment.ownerExisting.filter(q=>q.kind==='wheel-alignment').length,0);assert.deepEqual(w.equipment.proposedAdditional,[]);
  const alignment=w.equipment.ownerExisting.find(q=>q.id==='WS-R32');assert.equal(alignment.designation,'MB-4P-01');assert.equal(alignment.kind,'four-post');assert.equal(alignment.function,'wheel-alignment');const service=w.smartServiceWorkbay;assert.equal(service.id,'SMART-SERVICE-WORKBAY');assert.deepEqual(service.bounds,[8,22,12,28.5]);assert.equal(service.renderStyle,'floor-marking-only');assert.equal(service.equipment,false);assert.equal(service.physicalLift,false);assert.deepEqual(w.existingRearStair.bounds,[36,38.75,40,42]);assert.equal(w.existingRearStair.measuredDimensions,false);assert.equal(w.chargingPoints.length,4);assert.equal(new Set(w.chargingPoints.map(q=>q.id)).size,4);
  const hv=w.smartOverlays.find(q=>q.id==='SMART-HV');assert.equal(hv.physicalLiftRef,'WS-R29');assert.equal(hv.renderOwnLift,false);assert.equal(w.equipment.ownerExisting.find(q=>q.id===hv.physicalLiftRef).kind,'two-post');assert.equal(s.workshopStudy.mbPlanningCells.render,false);
@@ -207,7 +215,7 @@ test('Ten rear workshop bays retain 2.5×5m dimensions, 1m wall offset, right-to
  near(cover.supportXs[0]-cover.xMin,.48);near(cover.xMax-cover.supportXs.at(-1),0);near(cover.supportGrid.leftEndOverhang,.48);near(cover.supportGrid.rightEndOverhang,0);assert.equal(cover.supportGrid.terminalPostAdded,false);assert.equal(cover.measuredDimensions,false);assert.equal(cover.structuralApproval,false);
  assert.deepEqual(cover,JSON.parse(read('assets/building-annexes.json')).workshop.rearCanopy,'Canonical full rear roof projection');
 });
-test('R7 actual annex factory renders one full rear roof and six posts outside all ten paint cells',()=>{
+test('R8 actual annex factory renders one full rear roof and six posts outside all ten paint cells',()=>{
  const T=require(path.join(root,'vendor/three.min.js')),a=JSON.parse(read('assets/building-annexes.json')),m=new T.MeshStandardMaterial(),M=Object.fromEntries(['column','stone','steel','dark','white','glass','wood','upholstery'].map(k=>[k,m])),ctx={T,window:{},shell:new T.Group(),M,a};
  const helpers=['mesh','box','planBox','tube','slab'].map(name=>{const line=read('scene.js').toString().split('\n').find(l=>l.trimStart().startsWith('function '+name+'('));assert(line);return line;}).join('\n');
  vm.runInNewContext(helpers+'\nfunction sign(text,x,y,z,w,h,rotation=0,parent=shell){const o=mesh(new T.PlaneGeometry(w,h),M.white,parent);o.position.set(x,y,z);o.rotation.y=rotation;return o;}\n'+read('building-annexes.js').toString()+'\nresult=window.BC_BUILDING_ANNEXES(T,{mesh,box,planBox,tube,slab,sign,M},a);',ctx);
@@ -225,7 +233,7 @@ test('Owner selects Small two-screen Sub Stage and confirms MB6 via vacated MB5 
 });
 test('Current model, Mercedes and experience assets present in exact dist bytes',()=>{for(const f of ['index.html','viewer.css','scene.js','smart.js','mercedes-vehicles.js','experience.js','experience.css','site.js','shrine.js','exterior-design.js','exterior-massing.js','feedback.js','layout.js','assets/geometry-register.json','assets/presentation-v11.json','assets/exterior-proposal.json','assets/site-context.json','assets/smart-review-matrix.json'])assert(read(f).equals(read('dist/'+f)),f);});
 test('Three native plans and three clean review maps retain exact dist parity',()=>{
- const p=JSON.parse(read('assets/presentation-v11.json'));assert.equal(p.geometryRevision,'v09-r7');assert.equal(p.presentationRevision,'v13');assert.equal(p.experienceRevision,'v11');
+ const p=JSON.parse(read('assets/presentation-v11.json'));assert.equal(p.geometryRevision,'v09-r8');assert.equal(p.presentationRevision,'v14');assert.equal(p.experienceRevision,'v11');
  assert.equal(p.plans.length,3);assert.equal(p.reviewMaps.length,3);
  assert.deepEqual(p.plans.map(q=>q.id).sort(),['groundfloor-site-plan','showroom-plan','workshop-plan'].sort());
  for(const q of [...p.plans,...p.reviewMaps]){assert(q.path.startsWith('assets/plans/')&&q.path.endsWith('.svg'));assert(read(q.path).equals(read('dist/'+q.path)),q.path);}
@@ -239,7 +247,7 @@ test('Three native plans and three clean review maps retain exact dist parity',(
 test('Exterior review-map image preserves all 104 cell vertices at historical metric pin positions',()=>{
  const feedback=read('feedback.js').toString(),embedded=feedback.match(/const plot=section\(\)==='exterior'\?\[([^\]]+)\]:\[([^\]]+)\]/);assert(embedded,'actual embedded image rectangle');
  const plot=embedded[1].split(',').map(Number);assert.deepEqual(plot,[-14,58,-15.4,50.8]);
- const manifest=JSON.parse(read('assets/presentation-v11.json')),entry=manifest.reviewMaps.find(q=>q.id==='groundfloor-site-plan');assert(entry);assert.equal(entry.path,'assets/plans/groundfloor-site-plan-review-map-v13.svg');
+ const manifest=JSON.parse(read('assets/presentation-v11.json')),entry=manifest.reviewMaps.find(q=>q.id==='groundfloor-site-plan');assert(entry);assert.equal(entry.path,'assets/plans/groundfloor-site-plan-review-map-v14.svg');
  const map=read(entry.path).toString(),viewBox=map.match(/viewBox="([^"]+)"/)?.[1].split(/\s+/).map(Number),transform=map.match(/<g transform="matrix\(([^)]+)\)"/)?.[1].split(/\s+/).map(Number);assert(viewBox&&transform);assert.deepEqual(viewBox,[-14,-50.8,72,66.2]);assert.equal(transform.length,6);near(transform[1],0);near(transform[2],0);
  let vertices=0;const [vx,vy,vw,vh]=viewBox;
  for(const c of d.site.exteriorParking.cells){const tags=[...map.matchAll(new RegExp('<polygon[^>]*id="CELL-'+c.id+'"[^>]*>','g'))];assert.equal(tags.length,1,'Exactly one map cell '+c.id);const pts=tags[0][0].match(/points="([^"]+)"/)[1].split(' ').map(p=>p.split(',').map(Number)),[x0,y0,x1,y1]=c.bounds,expected=[[x0,y0],[x1,y0],[x1,y1],[x0,y1]];assert.equal(pts.length,4);
@@ -248,7 +256,7 @@ test('Exterior review-map image preserves all 104 cell vertices at historical me
  assert.equal(vertices,104);
 });
 test('Deterministic revision generator replay is read-only',()=>{
- const writes=new Map(),allowed=new Set(['layout.js','assets/site-context.json','assets/parking-photo-fit.json','assets/workshop-study.json','assets/exterior-proposal.json'].map(p=>path.join(root,p)));
+ const writes=new Map(),allowed=new Set(['layout.js','assets/site-context.json','assets/building-annexes.json','assets/geometry-register.json','assets/parking-photo-fit.json','assets/workshop-study.json','assets/exterior-proposal.json'].map(p=>path.join(root,p)));
  const reads=new Set(),readable=new Set(['versions/v08/layout.js','mercedes-vehicles.js','assets/existing-photo-fit.json','assets/building-annexes.json','assets/legacy-drawing-controls.json','assets/workshop-study.json','assets/exterior-proposal.json','assets/parking-photo-fit.json','assets/owner-review-v12.json'].map(p=>path.join(root,p)));
  const replayFS={readFileSync(file,...args){const absolute=path.resolve(file);assert(readable.has(absolute),'unexpected generator input '+absolute);reads.add(absolute);return fs.readFileSync(absolute,...args);},writeFileSync(file,data,options){const absolute=path.resolve(file);assert(allowed.has(absolute),'unexpected generator output '+absolute);writes.set(absolute,Buffer.isBuffer(data)?Buffer.from(data):Buffer.from(data,typeof options==='string'?options:'utf8'));}};
  let projectionLoaded=false;
@@ -257,6 +265,9 @@ test('Deterministic revision generator replay is read-only',()=>{
   if(name==='./measure-mercedes-front-axle.cjs'){
    const module={exports:{}};const measureRequire=id=>{if(id==='node:fs')return replayFS;if(id==='node:path')return path;if(id==='node:vm')return vm;if(id==='node:crypto')return require('crypto');if(id==='node:assert/strict')return assert;if(id===path.join(root,'vendor/three.min.js'))return require(id);throw Error('Unexpected axle measurement dependency '+id);};
    new vm.Script(read('scripts/measure-mercedes-front-axle.cjs').toString(),{filename:'scripts/measure-mercedes-front-axle.cjs'}).runInNewContext({module,require:measureRequire});assert.equal(typeof module.exports,'function');return module.exports;
+  }
+  if(name==='./export-geometry.cjs'){
+   const module={exports:{}};new vm.Script(read('scripts/export-geometry.cjs').toString(),{filename:'scripts/export-geometry.cjs'}).runInNewContext({module,require(){throw Error('Geometry export may not load filesystem/network dependencies');}});assert.equal(typeof module.exports,'function');return module.exports;
   }
   if(name==='./apply-owner-review-v12.cjs'){
    assert.equal(projectionLoaded,false,'owner projection must load exactly once');projectionLoaded=true;

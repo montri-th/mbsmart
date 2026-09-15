@@ -43,32 +43,85 @@ window.BC_BUILDING_ANNEXES=(T,h,data)=>{
     for(const dx of [-.19,.19])for(const dy of [-.2,.2])planBox(x+dx,y+dy,.028,.028,.42,M.steel,0,meeting);
   }
   const w=data.workshop,f=w.footprint,x0=f.xMin,x1=f.xMax,y0=f.yMin,y1=f.yMax,ry=w.ridgeY,aw=w.awning;
+  // The roadside shell is independent of the retained operational grid and rear
+  // parking canopy. Y limits/member sizes are photo-fit, not surveyed dimensions.
+  const side=w.roadsideShell?.enabled?w.roadsideShell:null,rm=w.roadsideMasonry?.enabled?w.roadsideMasonry:null;
+  const roofLevelAt=y=>y<=ry?w.eavesHeight+(w.ridgeHeight-w.eavesHeight)*(y-y0)/(ry-y0):w.ridgeHeight+(w.eavesHeight-w.ridgeHeight)*(y-ry)/(y1-ry);
+  const sideX=y=>side&&y>=side.yMin&&y<=side.yMax?side.xMax:x1;
   slab(w.gridEnvelope,w.floorLevel-.14,.14,concrete,workshop);
   const westX=y=>y<=28.5?0:y<=35.5?(y-28.5)/7*1.11:1.11+(y-35.5)/6.5*.91;
   // Attached rear interface, not a detached pavilion. Unobserved interior left unprogrammed.
   for(const right of [false,true]){
-    const xp=y=>right?x1:westX(y),breaks=[y0,22,28.5,35.5,y1];
-    for(let i=1;i<breaks.length;i++){const ya=breaks[i-1],yb=breaks[i];wall([xp(ya),ya],[xp(yb),yb],w.floorLevel,1,concrete,workshop,.16);wall([xp(ya),ya],[xp(yb),yb],3.55,w.eavesHeight-3.55,metal,workshop,.16);}
-    surface([[xp(y0),y0,w.eavesHeight],[xp(ry),ry,w.ridgeHeight],[xp(y1),y1,w.eavesHeight]],metal,workshopRoof);
-    for(const y of breaks)planBox(xp(y),y,.19,.19,4.4,M.steel,w.floorLevel,workshop);
+    const xp=y=>right?sideX(y):westX(y),breaks=[...new Set([y0,22,28.5,35.5,y1,...(right&&side?[side.yMin,side.yMax]:[])])].sort((a,b)=>a-b);
+    for(let i=1;i<breaks.length;i++){
+      const ya=breaks[i-1],yb=breaks[i],outer=right&&side&&(ya+yb)/2>=side.yMin&&(ya+yb)/2<=side.yMax,xa=right?(outer?side.xMax:x1):westX(ya),xb=right?xa:westX(yb);
+      if(!outer)wall([xa,ya],[xb,yb],w.floorLevel,1,concrete,workshop,.16);
+      wall([xa,ya],[xb,yb],3.55,w.eavesHeight-3.55,metal,workshop,.16);
+    }
+    if(right&&side){
+      for(const [ya,yb,x] of [[y0,side.yMin,x1],[side.yMin,side.yMax,side.xMax],[side.yMax,y1,x1]]){
+        if(yb-ya<1e-6)continue;
+        const ys=[ya,...(ry>ya&&ry<yb?[ry]:[]),yb],pts=[[x,ya,w.eavesHeight],...ys.map(y=>[x,y,roofLevelAt(y)]),[x,yb,w.eavesHeight]];
+        surface(pts,metal,workshopRoof);
+      }
+    }else surface([[xp(y0),y0,w.eavesHeight],[xp(ry),ry,w.ridgeHeight],[xp(y1),y1,w.eavesHeight]],metal,workshopRoof);
+    // Retain the former side column line as internal structure; do not move bays.
+    for(const y of [y0,22,28.5,35.5,y1])planBox(right?x1:westX(y),y,.19,.19,4.4,M.steel,w.floorLevel,workshop);
     for(let y=y0;y<y1;y+=.7)for(let z=3.65;z<w.eavesHeight;z+=.23)rib(xp(y+.35),z,y+.35,.22,.028,.68);
     for(let y=y0+2;y<y1-2;y+=6){planBox(xp(y)+.012,y,.19,3.5,.48,blue,4.55,workshop);for(const yy of [y-1.75,y,y+1.75])planBox(xp(yy)+.016,yy,.23,.035,.56,M.steel,4.51,workshop);}
     // Ventilated lower bays; not solid storage or invented service equipment.
-    for(let y=y0+.3;y<y1;y+=.38)rib(xp(y),1.9,y,.055,2.45,.018);
-    for(let y=y0;y<y1;y+=.7)for(const z of [.6,1.1,1.6,2.1,2.6,3.1])rib(xp(y+.35),z,y+.35,.055,.02,.68);
+    for(let y=y0+.3;y<y1;y+=.38)if(!(right&&side&&y>=side.yMin&&y<=side.yMax))rib(xp(y),1.9,y,.055,2.45,.018);
+    for(let y=y0;y<y1;y+=.7)if(!(right&&side&&y+.35>=side.yMin&&y+.35<=side.yMax))for(const z of [.6,1.1,1.6,2.1,2.6,3.1])rib(xp(y+.35),z,y+.35,.055,.02,.68);
   }
   wall([westX(y1),y1],[x1,y1],w.floorLevel,w.eavesHeight-w.floorLevel,metal,workshop);
   for(const [ya,yb,za,zb] of [[y0,ry,w.eavesHeight,w.ridgeHeight],[ry,y1,w.ridgeHeight,w.eavesHeight]]){
-    surface([[westX(ya),ya,za],[x1,ya,za],[x1,yb,zb],[westX(yb),yb,zb]],metal,workshopRoof);
+    const core=surface([[westX(ya),ya,za],[x1,ya,za],[x1,yb,zb],[westX(yb),yb,zb]],metal,workshopRoof);core.name='WORKSHOP-CORE-ROOF-'+ya+'-'+yb;core.userData={operationalGridUnchanged:true,bounds:[westX(ya),ya,x1,yb]};
     for(let x=Math.max(westX(ya),westX(yb));x<=x1;x+=.65)tube([x,za+.012,-ya],[x,zb+.012,-yb],.018,lineMat,workshopRoof);
   }
-  surface([[aw.xMin,aw.yMin,aw.wallHeight],[aw.xMax,aw.yMin,aw.outerHeight],[aw.xMax,aw.yMax,aw.outerHeight],[aw.xMin,aw.yMax,aw.wallHeight]],metal,workshopRoof);
+  if(side){
+    const extension=new T.Group(),structure=new T.Group();extension.name='WORKSHOP-ROADSIDE-ROOF-EXTENSION';structure.name='WORKSHOP-ROADSIDE-STRUCTURE';workshopRoof.add(extension);workshop.add(structure);
+    extension.userData={...side,kind:'main-roof-side-extension',operationalFootprintChanged:false,rearCanopyChanged:false,dimensionsMeasured:false};structure.userData={...side,painted:false,dimensionsMeasured:false};
+    const cuts=[side.yMin,...(ry>side.yMin&&ry<side.yMax?[ry]:[]),side.yMax];
+    for(let i=1;i<cuts.length;i++){
+      const ya=cuts[i-1],yb=cuts[i],za=roofLevelAt(ya),zb=roofLevelAt(yb),roof=surface([[x1,ya,za],[side.xMax,ya,za],[side.xMax,yb,zb],[x1,yb,zb]],metal,extension);roof.name='WORKSHOP-ROADSIDE-ROOF-'+ya+'-'+yb;
+      for(let x=x1+.65;x<=side.xMax;x+=.65)tube([x,za+.012,-ya],[x,zb+.012,-yb],.018,lineMat,extension);
+    }
+    for(const y of [side.yMin,side.yMax]){
+      const end=wall([x1,y],[side.xMax,y],3.55,roofLevelAt(y)-3.55,metal,extension,.16);end.name='WORKSHOP-ROADSIDE-UPPER-RETURN-'+y;
+    }
+    for(const y of side.columnYs){
+      const size=side.columnSize,post=planBox(side.xMax-size/2,y,size,size,w.eavesHeight-w.floorLevel,concrete,w.floorLevel,structure);post.name='WORKSHOP-ROADSIDE-COLUMN-'+y;
+      post.userData={kind:'existing-main-roof-column-proxy',painted:false,dimensionsMeasured:false};
+      const beam=box((x1+side.xMax)/2,w.eavesHeight-.175,-y,side.xMax-x1,.35,.28,concrete,structure);beam.name='WORKSHOP-ROADSIDE-CROSS-BEAM-'+y;
+    }
+    wall([side.xMax-side.columnSize/2,side.yMin],[side.xMax-side.columnSize/2,side.yMax],w.eavesHeight-.35,.35,concrete,structure,.28);
+  }
+  if(rm){
+    const masonry=new T.Group();masonry.name='WORKSHOP-ROADSIDE-BREEZE-BLOCK-MASONRY';workshop.add(masonry);
+    masonry.userData={...rm,kind:'roadside-boundary-breeze-block-masonry',paintScope:'interior-roadside-masonry-under-main-roof-only',interiorDirection:'plan-negative-X',sharesRoadsideFenceDatum:true,secondInsetWall:false,dimensionsMeasured:false};
+    // Box face slots are +X,-X,+Y,-Y,+Z,-Z: paint only the physical inside face.
+    // No overlay projects into the workshop or in front of the existing SC1 sign.
+    const outside=new T.MeshStandardMaterial({color:rm.exteriorColor,roughness:.92}),inside=new T.MeshStandardMaterial({color:rm.interiorColor,roughness:.92});
+    outside.name='ROADSIDE-MASONRY-EXTERIOR-UNCHANGED';inside.name='ROADSIDE-MASONRY-INTERIOR-DARK-GREY';
+    const units=[],unit=(ya,yb,za,zb)=>{if(yb-ya<1e-6||zb-za<1e-6)return;dummy.position.set(rm.insideFaceX+rm.thickness/2,(za+zb)/2,-(ya+yb)/2);dummy.scale.set(rm.thickness,zb-za,yb-ya);dummy.rotation.set(0,0,0);dummy.updateMatrix();units.push(dummy.matrix.clone());};
+    for(const [ya,yb] of rm.segments){
+      unit(ya,yb,rm.baseLevel,rm.solidTop);
+      const rows=Math.max(1,Math.round((rm.topLevel-rm.solidTop)/rm.blockHeight)),cols=Math.max(1,Math.round((yb-ya)/rm.blockWidth)),rowHeight=(rm.topLevel-rm.solidTop)/rows,colWidth=(yb-ya)/cols;
+      // Short .28 x .08 m slots are an explicit photo-fit default, NOT a measured
+      // brick product. Substantial solid faces distinguish masonry from the gate.
+      const slotWidth=Math.min(rm.openingWidth??.28,colWidth-rm.web),slotHeight=Math.min(rm.openingHeight??.08,rowHeight-rm.web),horizontalWeb=rowHeight-slotHeight,verticalWeb=colWidth-slotWidth;
+      for(let row=0;row<=rows;row++){const z=rm.solidTop+row*rowHeight;unit(ya,yb,Math.max(rm.solidTop,z-horizontalWeb/2),Math.min(rm.topLevel,z+horizontalWeb/2));}
+      for(let col=0;col<=cols;col++){const y=ya+col*colWidth;unit(Math.max(ya,y-verticalWeb/2),Math.min(yb,y+verticalWeb/2),rm.solidTop,rm.topLevel);}
+    }
+    const blocks=new T.InstancedMesh(new T.BoxGeometry(1,1,1),[outside,inside,outside,outside,outside,outside],units.length);units.forEach((matrix,i)=>blocks.setMatrixAt(i,matrix));blocks.instanceMatrix.needsUpdate=true;blocks.castShadow=blocks.receiveShadow=true;blocks.name='WORKSHOP-ROADSIDE-MASONRY-UNITS';blocks.userData={paintedFace:'negative-X-only',insideFaceX:rm.insideFaceX,thicknessDirection:'positive-X-outward',dimensionsMeasured:false};masonry.add(blocks);
+  }
+  const passageRoof=surface([[aw.xMin,aw.yMin,aw.wallHeight],[aw.xMax,aw.yMin,aw.outerHeight],[aw.xMax,aw.yMax,aw.outerHeight],[aw.xMin,aw.yMax,aw.wallHeight]],metal,workshopRoof);passageRoof.name='WORKSHOP-LOW-CROSS-PASSAGE-CANOPY';passageRoof.userData={...aw,distinctFromMainRoof:true,dimensionsMeasured:false};
   for(let y=aw.yMin;y<=aw.yMax;y+=6){planBox(aw.xMax,y,.09,.09,aw.outerHeight-w.floorLevel,M.steel,w.floorLevel,workshop);tube([aw.xMin,aw.wallHeight,-y],[aw.xMax,aw.outerHeight,-y],.045,M.steel,workshopRoof);}
   wall([aw.xMax,aw.yMin],[aw.xMax,aw.yMax],aw.outerHeight-.14,.23,metal,workshopRoof,.05);
-  // A real front-end fascia supports the proposed care mark, pending service-point approval.
+  // Retained lower cross-passage fascia; SC1 stays on the roadside fence datum.
   wall([aw.xMin,aw.yMin],[aw.xMax,aw.yMin],3.18,.36,metal,workshopRoof,.05);
   // Owner daytime photos confirm the low full-length rear parking cover. It is separate
-  // from the unchanged side awning; all member sizes and roof levels are visual
+  // from the lower cross-passage canopy; all member sizes and roof levels are visual
   // proxies, not a structural proposal or a measured headroom certificate.
   const rc=w.rearCanopy;
   if(rc?.render){

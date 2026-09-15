@@ -1,5 +1,12 @@
 {
-  "revision": "v13-owner-r7",
+  "revision": "v14-owner-r8",
+  "followupR8": {
+    "date": "2026-09-15",
+    "items": ["Only Client Comment Log rows40 and41: English High Voltage Station wall plaque and M/E Station at existing empty marked workbay", "Workshop architectural side mass reaches roadside columns; roadside breeze-block brick fence, not a second inset wall", "Dark-grey workshop-facing masonry beneath roof only; smart care stays at existing roadside fence position", "Samet–Ang Sila six lanes, three each direction; Thailand left-hand traffic: building-side carriageway away from Sukhumvit and opposite carriageway toward Sukhumvit"],
+    "status": "Model and all eight artist views reviewed for r8. Road widths, masonry dimensions and roof member sizes are visual fits, not surveyed or engineered. Dark-grey paint is owner-directed; final Mercedes colour/coating approval pending. English signs are design representations; supplier artwork and fixing details remain unverified.",
+    "sheetScope": {"sheet":"Comments","rows":[40,41]},
+    "ownerClarification": "Breeze-block means brick ventilation fence at roadside, not a second inset interior wall. The inset column line is mostly open and connects through to the workshop; photo-supported opening Y22–42 is retained with columns and beams. Keep smart care at its current roadside fence anchor between MB-D02/MB-D03 facing workshop."
+  },
   "module3BBackdrop": {
     "shape": "rounded-trapezoid-elevation",
     "bottomWidth": 5.3,
@@ -85,7 +92,8 @@
           40.5
         ]
       ],
-      "sideFenceContinueToY": 30,
+      "sideFenceContinueToY": 42,
+      "continuationStatus": "Roadside fence continuation beneath the workshop roof follows new owner photos; Y endpoint is a visual context crop, not a cadastral boundary.",
       "rearYIsBoundary": false
     },
     "pylon": {
@@ -349,10 +357,18 @@
     },
     "road": {
       "topology": "T-junction: Sukhumvit continuous along local X on south/front side; Samet-Ang Sila branch runs along local Y beside eastern fence and continues past rear crop",
+      "sametAngSila": {"lanesPerDirection":3,"totalLanes":6,"laneWidth":3.25,"medianWidth":2.0,"drivingSide":"left","nearCarriagewayPlanYDirection":1,"farCarriagewayPlanYDirection":-1,"trafficDirectionSource":"Owner correction15Sep2026: Thailand left-hand traffic. Building-side carriageway travels away from Sukhumvit (+planY); opposite carriageway travels toward Sukhumvit (-planY).","countSource":"Owner confirmation15Sep2026 and supplied June2024 Street View","dimensionStatus":"Six-lane count confirmed by owner. Lane widths, median width and marking spacing are unmeasured visual context fits, not a road design or survey."},
       "doNot": "Do not render Samet-Ang Sila as dead end, fabricate side curb opening, attach roads to old boundary, or use tower roof outline as property edge"
     }
   },
   "workshop": {
+    "innerConnection": {"mostlyOpen":true,"columnLineX":40,"photoFitOpenY":[22,42],"retainColumnsAndBeams":true,"notASecondWall":true,"unverifiedTransitionY":[16,22],"status":"Owner confirms recessed inner line is mostly open between workshop and side area. Photos support open connection across main working span; CS/lounge transition requires plan-to-photo alignment before changing."},
+    "roadsideShell": {"enabled":true,"xMax":49.2,"yMin":22,"yMax":42,"columnYs":[22,28.5,35.5,42],"columnSize":0.30,"status":"Owner photos show main workshop mass reaching roadside columns. X matches retained photo-fit fence datum; Y extents, member sizes and heights remain unmeasured visual proxies. Operational grid X0–40 and rear canopy are unchanged."},
+    "roadsideMasonry": {"enabled":true,"insideFaceX":49.2,"thickness":0.18,"baseLevel":-0.8,"solidTop":0.4,"topLevel":3.55,"segments":[[22,42]],"interiorColor":"#45494b","exteriorColor":"#d7d8d1","blockWidth":0.40,"blockHeight":0.20,"web":0.04,"paintScope":"Workshop-facing brick ventilation fence surface under roof only; no second inset wall, no paint change to outer face, mesh gates, upper metal cladding or roof structure.","colourBasis":"Owner-directed dark-grey proposal; PT03/05 background concept in MB RetailManual PDF231 informs visual tone but does not approve this workshop substrate or exact colour.","brandColourApproval":false,"dimensionStatus":"Masonry module, heights, thickness and transition Y22 are photo-fit, not surveyed. Inside surface retains existing fence datum and exact smart care position."},
+    "ownerCommentSignage": [
+      {"id":"SMART-HV-ENGLISH-ROW40","label":"High Voltage Station","station":"HV","xy":[34,41.85],"height":3.0,"width":1.0,"signHeight":0.28,"rotationRadians":0,"mount":"wall","source":"Owner Client Comment Log row40; D01 PDF27 item26","commentPin":[33.95,41.79],"status":"English artwork/reference proportions adopted; supplier vectors, fixings and substrate coordination pending."},
+      {"id":"SMART-ME-ENGLISH-ROW41","label":"M/E Station","station":"M/E","xy":[10.32,22.07],"height":2.84,"width":1.0,"signHeight":0.28,"rotationRadians":3.141592653589793,"mount":"hanging","source":"Owner Client Comment Log row41; D01 PDF27 item26","commentPin":[10.32,22.07],"status":"Sign at existing empty workbay, no equipment added. Bottom3.30m above workshop floor per reference; hanger details require site/supplier confirmation."}
+    ],
     "equipment": {
       "ownerExisting": [
         {

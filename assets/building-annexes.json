@@ -1,58 +1,295 @@
 {
   "revision": "v09",
-  "iteration": "r7",
+  "iteration": "r8",
   "status": "Owner-confirmed uses and attachment; legacy grids recovered, exterior faces/photo-fit NOT measured as-built",
   "units": "metres, local plan X,Y to world X,height,-Y",
   "sources": [
-    {"id":"R2-01","date":"2024-06","role":"south curved-glass corner"},
-    {"id":"R2-02","date":"2023-10","role":"corner and workshop connection, historical support"},
-    {"id":"R2-03","date":"2024-06","role":"attached workshop side elevation"},
-    {"id":"R2-04","date":"2019-02","role":"historical rear workshop form only"},
-    {"id":"A02","file":"LINE_ALBUM_Showroom_260912_11.jpg","role":"legacy whole plan, issue/date unresolved"},
-    {"id":"R3-DRAWINGS","file":"LINE_ALBUM_Showroom_260913_1.jpg","role":"42m A–H / 48m numeric grid chain with closeup corroboration"},
-    {"id":"R3-NIGHT","file":"S__78577753_0.jpg","role":"owner-supplied current condition, capture date unverified; recessed glazing and fence-adjacent flags"},
-    {"id":"R6-REAR-DAY","file":"ที่จอดรถ 10 คันหลังอู่ซ่อม.jpg","role":"owner-supplied rear ten-space parking photograph; observed low metal lean-to canopy, slender supports and open frontage; metric dimensions unmeasured"},
-    {"id":"R6-REVERSE-SIDE-DAY","file":"ถ่ายจากหลังอาคารมาหาถนนสุขุมวิทอาคารอยู่ขวามือของภาพนี้.jpg","role":"owner-supplied reverse side-passage photograph; existing rear/side canopy connection, not measured structural details"}
+    {
+      "id": "R2-01",
+      "date": "2024-06",
+      "role": "south curved-glass corner"
+    },
+    {
+      "id": "R2-02",
+      "date": "2023-10",
+      "role": "corner and workshop connection, historical support"
+    },
+    {
+      "id": "R2-03",
+      "date": "2024-06",
+      "role": "attached workshop side elevation"
+    },
+    {
+      "id": "R2-04",
+      "date": "2019-02",
+      "role": "historical rear workshop form only"
+    },
+    {
+      "id": "A02",
+      "file": "LINE_ALBUM_Showroom_260912_11.jpg",
+      "role": "legacy whole plan, issue/date unresolved"
+    },
+    {
+      "id": "R3-DRAWINGS",
+      "file": "LINE_ALBUM_Showroom_260913_1.jpg",
+      "role": "42m A–H / 48m numeric grid chain with closeup corroboration"
+    },
+    {
+      "id": "R3-NIGHT",
+      "file": "S__78577753_0.jpg",
+      "role": "owner-supplied current condition, capture date unverified; recessed glazing and fence-adjacent flags"
+    },
+    {
+      "id": "R6-REAR-DAY",
+      "file": "ที่จอดรถ 10 คันหลังอู่ซ่อม.jpg",
+      "role": "owner-supplied rear ten-space parking photograph; observed low metal lean-to canopy, slender supports and open frontage; metric dimensions unmeasured"
+    },
+    {
+      "id": "R6-REVERSE-SIDE-DAY",
+      "file": "ถ่ายจากหลังอาคารมาหาถนนสุขุมวิทอาคารอยู่ขวามือของภาพนี้.jpg",
+      "role": "owner-supplied reverse side-passage photograph; existing rear/side canopy connection, not measured structural details"
+    }
   ],
   "meeting": {
-    "id":"EXISTING-SOUTH-MEETING",
-    "use":"Small meeting room, separate from Sales, confirmed by owner",
-    "frontArc":{"center":[-1.9,0],"radius":1.9,"startRadians":3.141592653589793,"endRadians":6.283185307179586,"segments":32},
-    "rearPoints":[[0,8],[-2.3,8],[-3.8,5.7]],
-    "sharedSalesEdge":{"x":0,"yMin":0,"yMax":8,"doorYMin":6.2,"doorYMax":7.3},
-    "floorLevel":0,"ceilingHeight":3.2,"upperBandTop":7.2,
-    "masterTowerCorner":{"center":[-1.9,0],"radius":1.9,"leftX":-3.8,"frontY":-1.9,"status":"Shared quarter-circle upper profile and semicircular ground pocket; photo/plan-fit, not printed radius"},
-    "fitEnvelope":{"xMin":-3.8,"xMax":0,"yMin":-1.9,"yMax":8},
-    "geometryStatus":"Outer envelope only; radius, taper, heights, internal subdivisions and door position approximate. Not certified net room area or egress width.",
-    "furnitureStatus":"Six meeting seats illustrate use, not surveyed furniture or certified capacity"
+    "id": "EXISTING-SOUTH-MEETING",
+    "use": "Small meeting room, separate from Sales, confirmed by owner",
+    "frontArc": {
+      "center": [
+        -1.9,
+        0
+      ],
+      "radius": 1.9,
+      "startRadians": 3.141592653589793,
+      "endRadians": 6.283185307179586,
+      "segments": 32
+    },
+    "rearPoints": [
+      [
+        0,
+        8
+      ],
+      [
+        -2.3,
+        8
+      ],
+      [
+        -3.8,
+        5.7
+      ]
+    ],
+    "sharedSalesEdge": {
+      "x": 0,
+      "yMin": 0,
+      "yMax": 8,
+      "doorYMin": 6.2,
+      "doorYMax": 7.3
+    },
+    "floorLevel": 0,
+    "ceilingHeight": 3.2,
+    "upperBandTop": 7.2,
+    "masterTowerCorner": {
+      "center": [
+        -1.9,
+        0
+      ],
+      "radius": 1.9,
+      "leftX": -3.8,
+      "frontY": -1.9,
+      "status": "Shared quarter-circle upper profile and semicircular ground pocket; photo/plan-fit, not printed radius"
+    },
+    "fitEnvelope": {
+      "xMin": -3.8,
+      "xMax": 0,
+      "yMin": -1.9,
+      "yMax": 8
+    },
+    "geometryStatus": "Outer envelope only; radius, taper, heights, internal subdivisions and door position approximate. Not certified net room area or egress width.",
+    "furnitureStatus": "Six meeting seats illustrate use, not surveyed furniture or certified capacity"
   },
   "workshop": {
-    "id":"EXISTING-ATTACHED-WORKSHOP",
-    "footprint":{"xMin":0,"xMax":40,"yMin":16,"yMax":42},
-    "gridEnvelope":[[0,16],[40,16],[40,42],[2.02,42],[1.11,35.5],[0,28.5],[0,22]],
-    "attachment":{"edge":"showroom rear / E","y":16,"status":"Attachment confirmed by owner and side photographs; openings not measured"},
-    "floorLevel":-0.6,"floorDatumStatus":"Legacy +0.90 relative to showroom +1.50; current levels require survey",
-    "eavesHeight":6.2,"ridgeHeight":8.2,"ridgeY":29,
-    "awning":{"xMin":40,"xMax":49.2,"yMin":16,"yMax":42,"wallHeight":3.55,"outerHeight":3.35,"status":"Broad cross-passage roof front confirmed by current photos50/51; width and rear continuation are editable trials"},
-    "rearCanopy":{
-      "id":"EXISTING-REAR-PARKING-CANOPY",
-      "render":true,
-      "kind":"existing low metal lean-to spanning full rear workshop elevation",
-      "roofScope":"full-rear-workshop-elevation",
-      "xMin":2.02,"xMax":40,"wallY":42,"outerY":48.3,
-      "wallHeight":3.55,"outerHeight":3.2,"floorLevel":-0.8,
-      "trussDepth":0.28,"supportY":48.1,"supportXs":[2.5,10,17.5,25,32.5,40],
-      "supportGrid":{"anchorX":40,"bayWidth":2.5,"baysPerSpan":3,"nominalSpacing":7.5,"regularSupportXs":[2.5,10,17.5,25,32.5,40],"leftEndOverhang":0.48,"rightEndOverhang":0,"terminalPostAdded":false},
-      "coveredParkingBounds":[15,43,40,48],
-      "evidence":["R6-REAR-DAY","R6-REVERSE-SIDE-DAY"],
-      "status":"15Sep owner: roof extends along full rear workshop elevation, 37.98m in current legacy-plan model; painted ten-space bank is independent. Posts every three 2.5m bays (7.5m). Heights, projection, terminal overhang and member sizes remain photo-fit proxies, not measured or engineered.",
-      "measuredDimensions":false,"structuralApproval":false,
-      "supportStatus":"Visual support rhythm only; posts placed just beyond parking paint so no parked-car envelope is intersected. Verify actual supports, drainage and manoeuvring on site."
+    "id": "EXISTING-ATTACHED-WORKSHOP",
+    "footprint": {
+      "xMin": 0,
+      "xMax": 40,
+      "yMin": 16,
+      "yMax": 42
     },
-    "sideGate":{"xMin":40.2,"xMax":49,"y":16.4,"height":2.35,"status":"Existing internal cross-passage mesh gate, photo-fit; NOT an opening in road fence"},
-    "material":"Light warm-grey corrugated metal, blue-grey ribbon windows, dark open/screened lower bays, steel awning",
-    "geometryStatus":"E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Separate workshop layer distinguishes owner-reported existing equipment from proposed smart use, without certified as-built or installation claims."
+    "gridEnvelope": [
+      [
+        0,
+        16
+      ],
+      [
+        40,
+        16
+      ],
+      [
+        40,
+        42
+      ],
+      [
+        2.02,
+        42
+      ],
+      [
+        1.11,
+        35.5
+      ],
+      [
+        0,
+        28.5
+      ],
+      [
+        0,
+        22
+      ]
+    ],
+    "attachment": {
+      "edge": "showroom rear / E",
+      "y": 16,
+      "status": "Attachment confirmed by owner and side photographs; openings not measured"
+    },
+    "floorLevel": -0.6,
+    "floorDatumStatus": "Legacy +0.90 relative to showroom +1.50; current levels require survey",
+    "eavesHeight": 6.2,
+    "ridgeHeight": 8.2,
+    "ridgeY": 29,
+    "awning": {
+      "xMin": 40,
+      "xMax": 49.2,
+      "yMin": 16,
+      "yMax": 22,
+      "wallHeight": 3.55,
+      "outerHeight": 3.35,
+      "status": "Existing low cross-passage canopy; large workshop mass continues beside it to roadside columns. Dimensions photo-fit."
+    },
+    "rearCanopy": {
+      "id": "EXISTING-REAR-PARKING-CANOPY",
+      "render": true,
+      "kind": "existing low metal lean-to spanning full rear workshop elevation",
+      "roofScope": "full-rear-workshop-elevation",
+      "xMin": 2.02,
+      "xMax": 40,
+      "wallY": 42,
+      "outerY": 48.3,
+      "wallHeight": 3.55,
+      "outerHeight": 3.2,
+      "floorLevel": -0.8,
+      "trussDepth": 0.28,
+      "supportY": 48.1,
+      "supportXs": [
+        2.5,
+        10,
+        17.5,
+        25,
+        32.5,
+        40
+      ],
+      "supportGrid": {
+        "anchorX": 40,
+        "bayWidth": 2.5,
+        "baysPerSpan": 3,
+        "nominalSpacing": 7.5,
+        "regularSupportXs": [
+          2.5,
+          10,
+          17.5,
+          25,
+          32.5,
+          40
+        ],
+        "leftEndOverhang": 0.48,
+        "rightEndOverhang": 0,
+        "terminalPostAdded": false
+      },
+      "coveredParkingBounds": [
+        15,
+        43,
+        40,
+        48
+      ],
+      "evidence": [
+        "R6-REAR-DAY",
+        "R6-REVERSE-SIDE-DAY"
+      ],
+      "status": "15Sep owner: roof extends along full rear workshop elevation, 37.98m in current legacy-plan model; painted ten-space bank is independent. Posts every three 2.5m bays (7.5m). Heights, projection, terminal overhang and member sizes remain photo-fit proxies, not measured or engineered.",
+      "measuredDimensions": false,
+      "structuralApproval": false,
+      "supportStatus": "Visual support rhythm only; posts placed just beyond parking paint so no parked-car envelope is intersected. Verify actual supports, drainage and manoeuvring on site."
+    },
+    "sideGate": {
+      "xMin": 40.2,
+      "xMax": 49,
+      "y": 16.4,
+      "height": 2.35,
+      "status": "Existing internal cross-passage mesh gate, photo-fit; NOT an opening in road fence"
+    },
+    "material": "Light warm-grey corrugated metal, blue-grey ribbon windows, dark open/screened lower bays, steel awning",
+    "geometryStatus": "E–A26m grid envelope and tapered west control recovered from legacy plan; wall/eave offsets and roof height remain approximate. Separate workshop layer distinguishes owner-reported existing equipment from proposed smart use, without certified as-built or installation claims.",
+    "roadsideShell": {
+      "enabled": true,
+      "xMax": 49.2,
+      "yMin": 22,
+      "yMax": 42,
+      "columnYs": [
+        22,
+        28.5,
+        35.5,
+        42
+      ],
+      "columnSize": 0.3,
+      "status": "Owner photos show main workshop mass reaching roadside columns. X matches retained photo-fit fence datum; Y extents, member sizes and heights remain unmeasured visual proxies. Operational grid X0–40 and rear canopy are unchanged."
+    },
+    "roadsideMasonry": {
+      "enabled": true,
+      "insideFaceX": 49.2,
+      "thickness": 0.18,
+      "baseLevel": -0.8,
+      "solidTop": 0.4,
+      "topLevel": 3.55,
+      "segments": [
+        [
+          22,
+          42
+        ]
+      ],
+      "interiorColor": "#45494b",
+      "exteriorColor": "#d7d8d1",
+      "blockWidth": 0.4,
+      "blockHeight": 0.2,
+      "web": 0.04,
+      "paintScope": "Workshop-facing brick ventilation fence surface under roof only; no second inset wall, no paint change to outer face, mesh gates, upper metal cladding or roof structure.",
+      "colourBasis": "Owner-directed dark-grey proposal; PT03/05 background concept in MB RetailManual PDF231 informs visual tone but does not approve this workshop substrate or exact colour.",
+      "brandColourApproval": false,
+      "dimensionStatus": "Masonry module, heights, thickness and transition Y22 are photo-fit, not surveyed. Inside surface retains existing fence datum and exact smart care position."
+    },
+    "rearStair": {
+      "id": "EXISTING-REAR-STEEL-STAIR",
+      "bounds": [
+        36,
+        38.75,
+        40,
+        42
+      ],
+      "material": "steel",
+      "floorLevel": -0.6,
+      "upperLandingLevel": 3,
+      "flightWidth": 1.1,
+      "landingDepth": 0.85,
+      "risersPerFlight": 9,
+      "arrangement": "compact return-stair visual proxy",
+      "floorDestination": "second floor",
+      "ownerConfirmed": "Existing steel stair occupies roughly the rear half of the former top-right study cell; no hoist in this cell",
+      "status": "Extent and stair use confirmed by owner. Exact direction, tread/riser dimensions, landing elevation and guard details are provisional visual geometry, not measured access or structural approval. No second-floor room or new door inferred.",
+      "measuredDimensions": false,
+      "render": true
+    }
   },
-  "contextCropY":50,
-  "limitations":["Legacy A–H42m grid chain is not a current surveyed external wall dimension","Workshop roof slopes, levels and setbacks need field survey","Historical 2019 image supports form only, not current detail","No property or public road boundary certified"]
+  "contextCropY": 50,
+  "limitations": [
+    "Legacy A–H42m grid chain is not a current surveyed external wall dimension",
+    "Workshop roof slopes, levels and setbacks need field survey",
+    "Historical 2019 image supports form only, not current detail",
+    "No property or public road boundary certified"
+  ]
 }

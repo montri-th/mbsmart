@@ -62,6 +62,8 @@
   for(const c of dataset.site.exteriorParking.cars){const o=mercedes.car({...c,height:c.heightCap},parkedCars);o.position.y=dataset.site.exteriorParking.level;}
   function updateContext(){contextRoot.visible=contextOn;exterior.upper.visible=upperOn;site.occluders.visible=occludersOn;site.guides.visible=labelsOn;smartExterior.proposed.visible=exteriorScheme==='proposed';handoverGuide.visible=mode==='handover';
     annexes.workshopRoof.visible=upperOn;annexes.guides.visible=labelsOn;
+    const masonry=annexes.workshop.getObjectByName('WORKSHOP-ROADSIDE-MASONRY-UNITS'),masonrySpec=dataset.site.annexes.workshop.roadsideMasonry;
+    if(masonry&&masonrySpec)masonry.material[1].color.set(exteriorScheme==='proposed'?masonrySpec.interiorColor:masonrySpec.exteriorColor);
     workshopStudy.proposed.visible=exteriorScheme==='proposed';workshopStudy.overhead.visible=upperOn&&exteriorScheme==='proposed';workshopStudy.guides.visible=labelsOn&&exteriorScheme==='proposed';
     for(const o of dynamic.children)if(o.userData.type==='window-logo')o.visible=exteriorScheme==='proposed'||!['site','siteplan','frontage'].includes(activeView);
     document.getElementById('exterior-scheme').value=exteriorScheme;document.getElementById('exterior-status').textContent=exteriorScheme==='proposed'?'ข้อเสนอ smart / WiW HV + M/E · รอ MB/smart และวิศวกรอนุมัติ':'อาคารเดิม · ห้องประชุมใต้ tower เดียวกัน · กริดจากแบบเก่า / ผิวอาคารเทียบภาพ';

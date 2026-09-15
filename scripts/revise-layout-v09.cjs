@@ -93,8 +93,10 @@ d.limitations=d.limitations.filter(q=>!q.startsWith('Street View is historical')
 d.limitations.push('v09 separates reconstructed existing exterior from proposed smart additions. Proposed items are not compliance, engineering or supplier approvals.');
 require('./apply-owner-review-v12.cjs')(d,JSON.parse(fs.readFileSync(path.join(root,'assets/owner-review-v12.json'),'utf8')));
 fs.writeFileSync(path.join(root,'assets/site-context.json'),JSON.stringify(s,null,2)+'\n');
+fs.writeFileSync(path.join(root,'assets/building-annexes.json'),JSON.stringify(s.annexes,null,2)+'\n');
+fs.writeFileSync(path.join(root,'assets/geometry-register.json'),JSON.stringify(require('./export-geometry.cjs')(d),null,2)+'\n');
 fs.writeFileSync(path.join(root,'assets/parking-photo-fit.json'),JSON.stringify(s.exteriorParking,null,2)+'\n');
 fs.writeFileSync(path.join(root,'assets/workshop-study.json'),JSON.stringify(s.workshopStudy,null,2)+'\n');
 fs.writeFileSync(path.join(root,'assets/exterior-proposal.json'),JSON.stringify(d.exterior,null,2)+'\n');
-fs.writeFileSync(path.join(root,'layout.js'),'/* v09-r7 / v13 owner review adoption; v11 comment contract and archived coordinates preserved. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
+fs.writeFileSync(path.join(root,'layout.js'),'/* v09-r8 / v14 owner review adoption; v11 comment contract and archived coordinates preserved. */\nwindow.BC_LAYOUT = '+JSON.stringify(d,null,2)+';\n');
 console.log('v09 layout generated; existing inventory separated from smart proposal');
