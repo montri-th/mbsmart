@@ -10,6 +10,7 @@
   <link rel="icon" type="image/vnd.microsoft.icon" href="./assets/mercedes-benz-87f46117.ico">
   <link rel="stylesheet" href="./viewer.css">
   <link rel="stylesheet" href="./experience.css">
+ <link rel="stylesheet" href="./application-details.css">
   <script>if(new URLSearchParams(location.search).get('capture')==='1')document.documentElement.classList.add('capture');</script>
 </head>
 <body>
@@ -25,7 +26,33 @@
 
     <div class="review-workspace"><div class="model-pane">
     <div class="medium-nav" role="group" aria-label="รูปแบบการแสดงผล"><button type="button" data-medium="artist-impression" aria-pressed="true">Artist impressions</button><button type="button" data-medium="plan" aria-pressed="false">ผัง · Smart SiS</button><button type="button" data-medium="model" aria-pressed="false">สำรวจโมเดล 3D</button></div>
-    <div id="impression-gallery" aria-label="ภาพแนวคิดในส่วนนี้"></div>
+    <nav id="application-detail-jumps" class="application-detail-jumps" aria-label="รายละเอียดประกอบการนำเสนอ" hidden><!-- APPLICATION_DETAIL_JUMPS -->
+<div data-detail-section="showroom" hidden><p>รายละเอียดประกอบการนำเสนอ</p><ul><li><a href="#detail-smart-type4-detail">ป้าย smart Type 4 ที่กระจกห้องส่งมอบ</a></li></ul></div><div data-detail-section="exterior" hidden><p>รายละเอียดประกอบการนำเสนอ</p><ul><li><a href="#detail-smart-front-parking">จุดจอด smart ด้านหน้าอาคาร</a></li><li><a href="#detail-smart-rear-parking">จุดจอดรถทดลองขับด้านหลัง Workshop</a></li></ul></div><div data-detail-section="workshop" hidden><p>รายละเอียดประกอบการนำเสนอ</p><ul><li><a href="#detail-smart-me-station">M/E Station บนพื้นที่ทำงานเดิม</a></li><li><a href="#detail-smart-care-position">ป้าย smart care ด้านในรั้ว Workshop</a></li></ul></div>
+<!-- /APPLICATION_DETAIL_JUMPS --></nav>
+ <div id="impression-gallery" aria-label="ภาพแนวคิดในส่วนนี้"></div>
+ <section id="application-details" class="application-details" aria-labelledby="application-details-title" hidden><!-- APPLICATION_DETAILS -->
+<h2 id="application-details-title">ภาพรายละเอียดประกอบข้อเสนอ</h2><p class="application-details-intro">ภาพประกอบจากชุดนำเสนอ แยกให้เห็นการจัดพื้นที่ ป้าย และจุดบริการ เชื่อมกลับไปยังผังเดิมเพื่ออ่านตำแหน่งร่วมกัน</p><div data-detail-section="showroom" hidden><figure id="detail-smart-type4-detail" class="application-detail">
+<a class="application-detail-image" href="./assets/application-details/smart-type4-detail-20260915.png" target="_blank" rel="noopener" aria-label="เปิดภาพขยาย: ป้าย smart Type 4 ที่กระจกห้องส่งมอบ"><img src="./assets/application-details/smart-type4-detail-20260915.jpg" alt="ป้าย smart สีขาวบนกระจกห้องส่งมอบ มีรถคูเป้ Mercedes-Benz สองประตูสีดำด้านใน" width="1671" height="941" loading="lazy" decoding="async"></a>
+<p class="application-detail-image-error" hidden>แสดงภาพตัวอย่างไม่ได้ กรุณาใช้ลิงก์เปิดภาพขยายหรือดาวน์โหลดด้านล่าง</p>
+<figcaption><h3>ป้าย smart Type 4 ที่กระจกห้องส่งมอบ</h3><p class="application-detail-caption">มองจากภายนอกเห็นป้าย smart Type 4 Illuminated ด้านในกระจกห้องส่งมอบ หันออกถนนและเชื่อมกับพื้นที่ Mercedes-Benz เดิม</p><p class="application-detail-status">Artist impression · ติดตั้งด้านในกระจก หันหน้าป้ายสู่ภายนอก</p>
+<div class="application-detail-actions"><a href="./assets/application-details/smart-type4-detail-20260915.png" target="_blank" rel="noopener">เปิดภาพขยาย</a><a href="./assets/application-details/smart-type4-detail-20260915.png" download>ดาวน์โหลดภาพ · 1,671 × 941 px</a><button type="button" data-detail-plan="showroom-plan">เปิดผังอ้างอิง</button></div></figcaption></figure></div><div data-detail-section="exterior" hidden><figure id="detail-smart-front-parking" class="application-detail">
+<a class="application-detail-image" href="./assets/application-details/smart-front-parking-20260915.png" target="_blank" rel="noopener" aria-label="เปิดภาพขยาย: จุดจอด smart ด้านหน้าอาคาร"><img src="./assets/application-details/smart-front-parking-20260915.jpg" alt="ช่องจอดว่างหน้าโชว์รูมสองช่อง ป้าย S-D-01 Test Drive 1 และ S-S-01 For Customers" width="1672" height="941" loading="lazy" decoding="async"></a>
+<p class="application-detail-image-error" hidden>แสดงภาพตัวอย่างไม่ได้ กรุณาใช้ลิงก์เปิดภาพขยายหรือดาวน์โหลดด้านล่าง</p>
+<figcaption><h3>จุดจอด smart ด้านหน้าอาคาร</h3><p class="application-detail-caption">แยกช่อง S-D-01 สำหรับรถทดลองขับคันที่ 1 และ S-S-01 สำหรับลูกค้า ให้จดจำได้ตั้งแต่หน้าโชว์รูม</p><p class="application-detail-status">Artist impression · S-D-01 สำหรับทดลองขับ · S-S-01 สำหรับลูกค้า</p>
+<div class="application-detail-actions"><a href="./assets/application-details/smart-front-parking-20260915.png" target="_blank" rel="noopener">เปิดภาพขยาย</a><a href="./assets/application-details/smart-front-parking-20260915.png" download>ดาวน์โหลดภาพ · 1,672 × 941 px</a><button type="button" data-detail-plan="groundfloor-site-plan">เปิดผังอ้างอิง</button></div></figcaption></figure><figure id="detail-smart-rear-parking" class="application-detail">
+<a class="application-detail-image" href="./assets/application-details/smart-rear-parking-20260915.png" target="_blank" rel="noopener" aria-label="เปิดภาพขยาย: จุดจอดรถทดลองขับด้านหลัง Workshop"><img src="./assets/application-details/smart-rear-parking-20260915.jpg" alt="ช่อง S-D-02 Test Drive 2 ใต้หลังคาด้านหลัง Workshop พร้อมช่องจอด Mercedes-Benz ข้างเคียง" width="1672" height="941" loading="lazy" decoding="async"></a>
+<p class="application-detail-image-error" hidden>แสดงภาพตัวอย่างไม่ได้ กรุณาใช้ลิงก์เปิดภาพขยายหรือดาวน์โหลดด้านล่าง</p>
+<figcaption><h3>จุดจอดรถทดลองขับด้านหลัง Workshop</h3><p class="application-detail-caption">ช่อง S-D-02 รองรับรถทดลองขับคันที่ 2 ในแถวจอดด้านหลัง Workshop โดยใช้พื้นที่ใต้หลังคาเดิมร่วมกับรถ Mercedes-Benz</p><p class="application-detail-status">Artist impression · S-D-02 อยู่ปลายแนวจอดด้านหลังอู่</p>
+<div class="application-detail-actions"><a href="./assets/application-details/smart-rear-parking-20260915.png" target="_blank" rel="noopener">เปิดภาพขยาย</a><a href="./assets/application-details/smart-rear-parking-20260915.png" download>ดาวน์โหลดภาพ · 1,672 × 941 px</a><button type="button" data-detail-plan="groundfloor-site-plan">เปิดผังอ้างอิง</button></div></figcaption></figure></div><div data-detail-section="workshop" hidden><figure id="detail-smart-me-station" class="application-detail">
+<a class="application-detail-image" href="./assets/application-details/smart-me-station-20260915.png" target="_blank" rel="noopener" aria-label="เปิดภาพขยาย: M/E Station บนพื้นที่ทำงานเดิม"><img src="./assets/application-details/smart-me-station-20260915.jpg" alt="พื้นที่สี่เหลี่ยมเส้นสีเหลืองว่างหน้าป้าย M/E Station มีลิฟต์เดิมอยู่ช่องข้างเคียง" width="1672" height="941" loading="lazy" decoding="async"></a>
+<p class="application-detail-image-error" hidden>แสดงภาพตัวอย่างไม่ได้ กรุณาใช้ลิงก์เปิดภาพขยายหรือดาวน์โหลดด้านล่าง</p>
+<figcaption><h3>M/E Station บนพื้นที่ทำงานเดิม</h3><p class="application-detail-caption">กำหนดช่อง M/E Station ด้วยเส้นพื้นและป้าย เพื่อให้เห็นขอบเขตงาน smart ชัดเจน พื้นที่ช่องนี้คงว่างและไม่เพิ่มลิฟต์หรืออุปกรณ์</p><p class="application-detail-status">Artist impression · พื้นที่ว่างตีเส้น พร้อมป้ายแขวนเหนือช่องงาน</p>
+<div class="application-detail-actions"><a href="./assets/application-details/smart-me-station-20260915.png" target="_blank" rel="noopener">เปิดภาพขยาย</a><a href="./assets/application-details/smart-me-station-20260915.png" download>ดาวน์โหลดภาพ · 1,672 × 941 px</a><button type="button" data-detail-plan="workshop-plan">เปิดผังอ้างอิง</button></div></figcaption></figure><figure id="detail-smart-care-position" class="application-detail">
+<a class="application-detail-image" href="./assets/application-details/smart-care-position-20260915.png" target="_blank" rel="noopener" aria-label="เปิดภาพขยาย: ป้าย smart care ด้านในรั้ว Workshop"><img src="./assets/application-details/smart-care-position-20260915.jpg" alt="ป้าย smart care บนผิวด้านในรั้วอิฐช่องลมสีเทาเข้ม ระหว่างเสาคอนกรีตริม Workshop" width="1672" height="941" loading="lazy" decoding="async"></a>
+<p class="application-detail-image-error" hidden>แสดงภาพตัวอย่างไม่ได้ กรุณาใช้ลิงก์เปิดภาพขยายหรือดาวน์โหลดด้านล่าง</p>
+<figcaption><h3>ป้าย smart care ด้านในรั้ว Workshop</h3><p class="application-detail-caption">ติดป้าย smart care ที่ผิวด้านในรั้วระหว่าง MB-D02 กับ MB-D03 หันเข้าหา Workshop ตามตำแหน่งที่เจ้าของยืนยัน</p><p class="application-detail-status">Artist impression · ป้ายเดียว หันเข้าหาอู่ กึ่งกลางระหว่าง MB-D02 และ MB-D03</p>
+<div class="application-detail-actions"><a href="./assets/application-details/smart-care-position-20260915.png" target="_blank" rel="noopener">เปิดภาพขยาย</a><a href="./assets/application-details/smart-care-position-20260915.png" download>ดาวน์โหลดภาพ · 1,672 × 941 px</a><button type="button" data-detail-plan="workshop-plan">เปิดผังอ้างอิง</button></div></figcaption></figure></div><p class="application-detail-provenance"><a href="./assets/application-details-20260915.json">ข้อมูลภาพและแหล่งอ้างอิง</a></p>
+<!-- /APPLICATION_DETAILS --></section>
     <div id="model-content">
     <div class="exterior-switch"><label for="exterior-scheme">เปรียบเทียบภายนอก</label><select id="exterior-scheme"><option value="proposed">ข้อเสนอ smart เพิ่มเติม</option><option value="existing">ภายนอกเดิม · อ้างอิงภาพ</option></select><p id="exterior-status" role="status">ข้อเสนอรอ smart / เจ้าของ / supplier ตรวจ · ภายในคงแบบเดิม</p></div>
     <nav class="toolbar" aria-label="มุมมอง 3 มิติ">
@@ -218,5 +245,6 @@
   <script src="./feedback-config.js?v=14-r8"></script>
   <script src="./feedback.js?v=14-r8"></script>
   <script src="./review-guide.js?v=14-r8"></script>
+ <script src="./application-details.js?v=slides-20260915"></script>
 </body>
 </html>
